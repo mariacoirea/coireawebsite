@@ -1,0 +1,118 @@
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Brain, Leaf, Target, Heart, Compass } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Brain,
+    title: "Conscious Leadership",
+    description: "Empowering leaders with courage, clarity, and embodied authenticity.",
+    badge: "Leadership"
+  },
+  {
+    icon: Leaf,
+    title: "Regenerative Intelligence", 
+    description: "Rooted growth guided by the wisdom of nature and systems.",
+    badge: "Growth"
+  },
+  {
+    icon: Target,
+    title: "Coherence",
+    description: "Long-term clarity aligned with your organization's soul and strategy.",
+    badge: "Alignment"
+  },
+  {
+    icon: Heart,
+    title: "Integrating Well-Being",
+    description: "Workplace wellness as the foundation of regenerative success.",
+    badge: "Wellness"
+  },
+  {
+    icon: Compass,
+    title: "Inner Wisdom",
+    description: "Intuition and presence woven into culture and collaboration.",
+    badge: "Wisdom"
+  }
+];
+
+const PillarsSection = () => {
+  return (
+    <section className="py-24 bg-gradient-subtle">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 rounded-full border-2 border-primary-foreground/40 flex items-center justify-center">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+            The Structural Foundations of
+            <span className="block italic">Regenerative Business</span>
+          </h2>
+          
+          <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
+            Leadership, Culture & Coherence
+          </p>
+          
+          <div className="w-24 h-0.5 bg-gradient-warm mx-auto mb-8"></div>
+          
+          <p className="text-lg text-foreground/80 font-body max-w-2xl mx-auto">
+            These five systems restore coherence in organization evolution.
+          </p>
+        </div>
+
+        {/* Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {pillars.map((pillar, index) => (
+            <Card 
+              key={index} 
+              className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/80 backdrop-blur-sm hover:scale-[1.02]"
+            >
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <pillar.icon className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-0 font-medium">
+                  {pillar.badge}
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-display font-semibold text-primary mb-4 group-hover:text-primary-light transition-colors">
+                {pillar.title}
+              </h3>
+              
+              <p className="text-muted-foreground font-body leading-relaxed">
+                {pillar.description}
+              </p>
+            </Card>
+          ))}
+
+          {/* Feature Card - 5-Pillar Framework */}
+          <Card className="md:col-span-2 lg:col-span-1 p-8 bg-gradient-hero text-primary-foreground border-0 hover:shadow-warm hover:scale-[1.02] transition-all duration-300">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/30 rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                <div className="text-2xl font-display font-bold text-accent">5</div>
+              </div>
+              
+              <h3 className="text-2xl font-display font-semibold mb-4">
+                5-Pillar Framework
+              </h3>
+              
+              <p className="text-primary-foreground/90 font-body mb-6 leading-relaxed">
+                These five systems form the backbone of our integrated approach to organizational transformation.
+              </p>
+              
+              <div className="w-16 h-0.5 bg-accent mx-auto"></div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PillarsSection;

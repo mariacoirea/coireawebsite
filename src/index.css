@@ -2,57 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* COIREA Design System - Regenerative & Professional Aesthetics */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Sage Green & Earth Tones */
+    --background: 44 23% 95%;
+    --foreground: 160 25% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 44 23% 98%;
+    --card-foreground: 160 25% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 44 23% 98%;
+    --popover-foreground: 160 25% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Sage Green */
+    --primary: 160 25% 35%;
+    --primary-foreground: 44 23% 98%;
+    --primary-light: 160 25% 45%;
+    --primary-lighter: 160 15% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Earth Tone */
+    --secondary: 44 23% 90%;
+    --secondary-foreground: 160 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Tones */
+    --muted: 44 15% 88%;
+    --muted-foreground: 160 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden Accents */
+    --accent: 42 88% 75%;
+    --accent-foreground: 160 25% 25%;
+    --accent-warm: 42 65% 55%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warm Neutrals */
+    --neutral-warm: 35 15% 85%;
+    --neutral-cool: 160 10% 75%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Status Colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 44 23% 98%;
+    --success: 120 40% 45%;
+    --success-foreground: 44 23% 98%;
 
-    --radius: 0.5rem;
+    /* Borders & Inputs */
+    --border: 160 15% 80%;
+    --input: 160 15% 85%;
+    --ring: 160 25% 35%;
 
-    --sidebar-background: 0 0% 98%;
+    /* Design Elements */
+    --radius: 0.75rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-warm)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 8px 40px -12px hsl(var(--primary) / 0.2);
+    --shadow-warm: 0 6px 30px -10px hsl(var(--accent) / 0.3);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Typography Scale */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .dark {
