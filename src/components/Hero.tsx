@@ -42,7 +42,7 @@ const Hero = () => {
         {/* Enhanced decorative logo */}
         <div className="flex items-center justify-center mb-12">
           <img 
-            src="/lovable-uploads/188d727f-2381-424b-b769-afa51a6f1137.png" 
+            src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
             alt="COIREA Logo" 
             className="w-20 h-20"
           />
