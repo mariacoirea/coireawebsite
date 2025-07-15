@@ -8,57 +8,58 @@
 
 @layer base {
   :root {
-    /* Core Colors - Sage Green & Earth Tones */
-    --background: 44 23% 95%;
-    --foreground: 160 25% 25%;
+    /* COIREA Color Palette */
+    /* Aura Pearl - Background */
+    --background: 48 15% 97%;
+    --foreground: 180 45% 15%;
 
-    --card: 44 23% 98%;
-    --card-foreground: 160 25% 25%;
+    --card: 48 15% 99%;
+    --card-foreground: 180 45% 15%;
 
-    --popover: 44 23% 98%;
-    --popover-foreground: 160 25% 25%;
+    --popover: 48 15% 99%;
+    --popover-foreground: 180 45% 15%;
 
-    /* Primary - Sage Green */
-    --primary: 160 25% 35%;
-    --primary-foreground: 44 23% 98%;
-    --primary-light: 160 25% 45%;
-    --primary-lighter: 160 15% 85%;
+    /* Galactic Teal - Primary */
+    --primary: 183 48% 21%;
+    --primary-foreground: 48 15% 97%;
+    --primary-light: 183 40% 35%;
+    --primary-lighter: 183 25% 85%;
 
-    /* Secondary - Warm Earth Tone */
-    --secondary: 44 23% 90%;
-    --secondary-foreground: 160 25% 25%;
+    /* Olive Green - Secondary */
+    --secondary: 82 18% 35%;
+    --secondary-foreground: 48 15% 97%;
 
     /* Muted Tones */
-    --muted: 44 15% 88%;
-    --muted-foreground: 160 15% 45%;
+    --muted: 48 10% 88%;
+    --muted-foreground: 180 25% 45%;
 
-    /* Golden Accents */
-    --accent: 42 88% 75%;
-    --accent-foreground: 160 25% 25%;
-    --accent-warm: 42 65% 55%;
+    /* Soft Copper - Accent */
+    --accent: 18 43% 52%;
+    --accent-foreground: 48 15% 97%;
+    --accent-warm: 18 60% 45%;
 
-    /* Warm Neutrals */
-    --neutral-warm: 35 15% 85%;
-    --neutral-cool: 160 10% 75%;
+    /* Warm Sand - Neutral */
+    --neutral-warm: 33 35% 83%;
+    --neutral-cool: 180 15% 75%;
 
     /* Status Colors */
     --destructive: 0 65% 55%;
-    --destructive-foreground: 44 23% 98%;
+    --destructive-foreground: 48 15% 97%;
     --success: 120 40% 45%;
-    --success-foreground: 44 23% 98%;
+    --success-foreground: 48 15% 97%;
 
     /* Borders & Inputs */
-    --border: 160 15% 80%;
-    --input: 160 15% 85%;
-    --ring: 160 25% 35%;
+    --border: 180 20% 80%;
+    --input: 180 15% 85%;
+    --ring: 183 48% 21%;
 
     /* Design Elements */
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--neutral-warm)) 0%, hsl(var(--background)) 100%);
     --gradient-warm: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-warm)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--neutral-warm)) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -8px hsl(var(--primary) / 0.15);

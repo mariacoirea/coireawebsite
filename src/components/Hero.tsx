@@ -8,7 +8,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, hsl(var(--primary) / 0.85) 0%, hsl(var(--primary-light) / 0.75) 100%), url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, hsl(var(--neutral-warm) / 0.9) 0%, hsl(var(--background) / 0.8) 100%), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -29,48 +29,43 @@ const Hero = () => {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary-foreground mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 leading-tight">
           <span className="italic block mb-2">Transform Your</span>
           <span className="block">Organization from</span>
           <span className="block">the Inside Out</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-primary-foreground/90 font-body font-light max-w-3xl mx-auto mb-8 leading-relaxed">
+        <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-3xl mx-auto mb-8 leading-relaxed">
           Where Purpose Meets Performance, Organizations Evolve
         </p>
 
         {/* Enhanced decorative logo */}
         <div className="flex items-center justify-center mb-12">
-          <div className="relative">
-            <div className="w-20 h-20 bg-accent/30 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-accent/50">
-              <div className="w-12 h-12 rounded-full border-2 border-primary-foreground/40 flex items-center justify-center">
-                <div className="w-4 h-4 bg-primary-foreground rounded-full"></div>
-              </div>
-            </div>
-            <div className="absolute -top-1 -right-1 w-6 h-6 bg-accent rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-accent-foreground rounded-full"></div>
-            </div>
-          </div>
+          <img 
+            src="/lovable-uploads/188d727f-2381-424b-b769-afa51a6f1137.png" 
+            alt="COIREA Logo" 
+            className="w-20 h-20"
+          />
         </div>
 
         <div className="max-w-4xl mx-auto mb-12">
-          <p className="text-lg md:text-xl text-primary-foreground/80 font-body leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed mb-8">
             COIREA is a regenerative consultancy helping organizations realign their systems, culture, and leadership. 
             We guide purpose-driven companies through structural and human transformation—restoring coherence, 
             improving performance, and integrating well-being.
           </p>
           
-          <p className="text-lg text-primary-foreground/70 font-body">
+          <p className="text-lg text-primary/60 font-body">
             From team retreats to long-term programs, we support the evolution toward resilient, future-ready organizations.
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="accent" size="xl" className="group">
+          <Button variant="default" size="xl" className="group bg-primary hover:bg-primary/90">
             Discover Our Approach
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" size="xl" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
+          <Button variant="outline" size="xl" className="text-primary border-primary/30 hover:bg-primary/10">
             Begin the Journey
           </Button>
         </div>
@@ -78,8 +73,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-primary-foreground/40 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-primary/40 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-primary/60 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

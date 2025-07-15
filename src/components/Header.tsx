@@ -11,29 +11,29 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-hero rounded-full flex items-center justify-center">
-              <div className="w-6 h-6 rounded-full border-2 border-primary-foreground/30 flex items-center justify-center">
-                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/188d727f-2381-424b-b769-afa51a6f1137.png" 
+              alt="COIREA Logo" 
+              className="w-12 h-12"
+            />
             <span className="text-2xl font-display font-semibold text-primary">COIREA</span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            <a href="/" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               HOME
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            <a href="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               OFFERINGS
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            <a href="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               ABOUT
             </a>
-            <a href="#insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            <a href="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               INSIGHTS
             </a>
-            <Button variant="hero" size="default">
+            <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Begin the Journey
             </Button>
           </nav>
@@ -50,19 +50,19 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6 space-y-4">
-            <a href="#home" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            <a href="/" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               HOME
             </a>
-            <a href="#services" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            <a href="/offerings" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               OFFERINGS
             </a>
-            <a href="#about" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            <a href="/about" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               ABOUT
             </a>
-            <a href="#insights" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            <a href="/insights" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               INSIGHTS
             </a>
-            <Button variant="hero" size="lg" className="w-full mt-4">
+            <Button variant="outline" size="lg" className="w-full mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Begin the Journey
             </Button>
           </nav>
