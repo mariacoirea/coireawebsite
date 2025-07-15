@@ -10,13 +10,12 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
               alt="COIREA Logo" 
               className="w-12 h-12"
             />
-            <span className="text-2xl font-display font-semibold text-primary">COIREA</span>
           </div>
 
           {/* Desktop Navigation */}
