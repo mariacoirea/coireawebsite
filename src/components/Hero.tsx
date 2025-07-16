@@ -8,7 +8,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, hsl(var(--neutral-warm) / 0.9) 0%, hsl(var(--background) / 0.8) 100%), url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, rgba(91, 108, 73, 0.85) 0%, rgba(134, 158, 134, 0.75) 100%), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -61,11 +61,11 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="default" size="xl" className="group bg-[#5B6C49]/80 hover:bg-[#5B6C49]/90 text-white border-none rounded-full px-12 py-4 transition-all duration-300">
+          <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-12 py-4 transition-all duration-300 shadow-lg">
             Discover Our Approach
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
           </Button>
-          <Button variant="outline" size="xl" className="text-[#5B6C49] border-[#5B6C49]/30 hover:bg-[#5B6C49]/10 rounded-full px-12 py-4 transition-all duration-300">
+          <Button variant="outline" size="xl" className="text-[#4A7C7A] border-[#4A7C7A]/40 hover:bg-[#4A7C7A]/10 bg-white/20 backdrop-blur-sm rounded-full px-12 py-4 transition-all duration-300">
             Begin the Journey
           </Button>
         </div>
