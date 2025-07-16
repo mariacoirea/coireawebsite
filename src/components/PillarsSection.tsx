@@ -37,7 +37,7 @@ const pillars = [
 
 const PillarsSection = () => {
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="py-24 bg-gradient-to-br from-[#6B8D6B]/10 to-[#8FB4A0]/5">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -49,9 +49,9 @@ const PillarsSection = () => {
             </div>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-semibold text-[#4A7C7A] mb-6 leading-tight">
             The Structural Foundations of
-            <span className="block italic">Regenerative Business</span>
+            <span className="block italic text-[#6B8D6B]">Regenerative Business</span>
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
@@ -92,21 +92,35 @@ const PillarsSection = () => {
           ))}
 
           {/* Feature Card - 5-Pillar Framework */}
-          <Card className="md:col-span-2 lg:col-span-1 p-8 bg-gradient-hero text-primary-foreground border-0 hover:shadow-warm hover:scale-[1.02] transition-all duration-300">
+          <Card className="md:col-span-2 lg:col-span-1 p-8 bg-gradient-to-br from-[#6B8D6B] to-[#4A7C7A] text-white border-0 hover:shadow-warm hover:scale-[1.02] transition-all duration-300">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/30 rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
-                <div className="text-2xl font-display font-bold text-accent">5</div>
+              <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                <div className="text-2xl font-display font-bold text-white">5</div>
               </div>
               
-              <h3 className="text-2xl font-display font-semibold mb-4">
+              <h3 className="text-2xl font-display font-semibold mb-4 text-white">
                 5-Pillar Framework
               </h3>
               
-              <p className="text-primary-foreground/90 font-body mb-6 leading-relaxed">
+              <p className="text-white/90 font-body mb-6 leading-relaxed">
                 These five systems form the backbone of our integrated approach to organizational transformation.
               </p>
               
-              <div className="w-16 h-0.5 bg-accent mx-auto"></div>
+              <div className="w-16 h-0.5 bg-white/60 mx-auto mb-6"></div>
+              
+              {/* Framework Images */}
+              <div className="space-y-4">
+                <img 
+                  src="/lovable-uploads/48bc734b-38e8-4e99-8c8c-816a8195bdb8.png"
+                  alt="5 Pillar Framework Cards"
+                  className="w-full rounded-lg shadow-lg"
+                />
+                <img 
+                  src="/lovable-uploads/0d457cbb-8503-4597-930d-dd4961a39829.png"
+                  alt="5 Pillar Framework Symbols"
+                  className="w-full rounded-lg"
+                />
+              </div>
             </div>
           </Card>
         </div>
