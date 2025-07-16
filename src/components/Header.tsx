@@ -12,7 +12,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
+              src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
               alt="COIREA Logo" 
               className="h-12 w-auto"
             />
@@ -32,7 +32,7 @@ const Header = () => {
             <a href="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               INSIGHTS
             </a>
-            <Button variant="outline" size="default" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
               Begin the Journey
             </Button>
           </nav>
@@ -61,7 +61,7 @@ const Header = () => {
             <a href="/insights" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               INSIGHTS
             </a>
-            <Button variant="outline" size="lg" className="w-full mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="lg" className="w-full mt-4 border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full">
               Begin the Journey
             </Button>
           </nav>

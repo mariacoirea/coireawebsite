@@ -42,7 +42,7 @@ const Hero = () => {
         {/* Enhanced decorative logo */}
         <div className="flex items-center justify-center mb-12">
           <img 
-            src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
+            src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
             alt="COIREA Logo" 
             className="h-20 w-auto"
           />
@@ -61,11 +61,11 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="default" size="xl" className="group bg-primary hover:bg-primary/90">
+          <Button variant="default" size="xl" className="group bg-[#5B6C49]/80 hover:bg-[#5B6C49]/90 text-white border-none rounded-full px-12 py-4 transition-all duration-300">
             Discover Our Approach
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
           </Button>
-          <Button variant="outline" size="xl" className="text-primary border-primary/30 hover:bg-primary/10">
+          <Button variant="outline" size="xl" className="text-[#5B6C49] border-[#5B6C49]/30 hover:bg-[#5B6C49]/10 rounded-full px-12 py-4 transition-all duration-300">
             Begin the Journey
           </Button>
         </div>
