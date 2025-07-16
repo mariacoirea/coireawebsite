@@ -8,7 +8,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(91, 108, 73, 0.3) 0%, rgba(134, 158, 134, 0.2) 100%), url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, rgba(210, 195, 175, 0.4) 0%, rgba(225, 215, 200, 0.3) 100%), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -42,7 +42,7 @@ const Hero = () => {
         {/* Enhanced decorative logo */}
         <div className="flex items-center justify-center mb-12">
           <img 
-            src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
+            src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
             alt="COIREA Logo" 
             className="h-20 w-auto"
           />

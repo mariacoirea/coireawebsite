@@ -12,7 +12,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
+              src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
               alt="COIREA Logo" 
               className="h-12 w-auto"
             />
