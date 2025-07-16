@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Leaf, Target, Heart, Compass } from "lucide-react";
+import frameworkImage from "@/assets/5-pillar-framework.png";
 
 const pillars = [
   {
@@ -37,7 +38,7 @@ const pillars = [
 
 const PillarsSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-[#6B8D6B]/10 to-[#8FB4A0]/5">
+    <section className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -49,9 +50,9 @@ const PillarsSection = () => {
             </div>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-display font-semibold text-[#4A7C7A] mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
             The Structural Foundations of
-            <span className="block italic text-[#6B8D6B]">Regenerative Business</span>
+            <span className="block italic">Regenerative Business</span>
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
@@ -66,11 +67,11 @@ const PillarsSection = () => {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
           {pillars.map((pillar, index) => (
             <Card 
               key={index} 
-              className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/80 backdrop-blur-sm hover:scale-[1.02]"
+              className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/80 backdrop-blur-sm hover:scale-[1.02] h-full flex flex-col"
             >
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -92,8 +93,8 @@ const PillarsSection = () => {
           ))}
 
           {/* Feature Card - 5-Pillar Framework */}
-          <Card className="md:col-span-2 lg:col-span-1 p-8 bg-gradient-to-br from-[#6B8D6B] to-[#4A7C7A] text-white border-0 hover:shadow-warm hover:scale-[1.02] transition-all duration-300">
-            <div className="text-center">
+          <Card className="md:col-span-2 lg:col-span-1 p-8 bg-gradient-to-br from-[#6B8D6B] to-[#4A7C7A] text-white border-0 hover:shadow-warm hover:scale-[1.02] transition-all duration-300 h-full flex flex-col">
+            <div className="text-center flex-1 flex flex-col">
               <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
                 <div className="text-2xl font-display font-bold text-white">5</div>
               </div>
@@ -108,17 +109,12 @@ const PillarsSection = () => {
               
               <div className="w-16 h-0.5 bg-white/60 mx-auto mb-6"></div>
               
-              {/* Framework Images */}
-              <div className="space-y-4">
+              {/* Framework Image */}
+              <div className="flex-1 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/48bc734b-38e8-4e99-8c8c-816a8195bdb8.png"
-                  alt="5 Pillar Framework Cards"
-                  className="w-full rounded-lg shadow-lg"
-                />
-                <img 
-                  src="/lovable-uploads/0d457cbb-8503-4597-930d-dd4961a39829.png"
-                  alt="5 Pillar Framework Symbols"
-                  className="w-full rounded-lg"
+                  src={frameworkImage}
+                  alt="5 Pillar Framework"
+                  className="w-full max-w-md rounded-lg"
                 />
               </div>
             </div>
