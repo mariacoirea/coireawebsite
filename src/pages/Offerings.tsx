@@ -589,6 +589,30 @@ const Offerings = () => {
           </div>
         </section>
 
+        {/* Transformational Offerings Section */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-6xl">
+            {/* Header */}
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-12 leading-tight">
+                Transformational Offerings for<br />
+                <span className="text-primary/80">Regenerative Growth</span>
+              </h2>
+              
+              <div className="max-w-4xl mx-auto space-y-6">
+                <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed">
+                  We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
+                </p>
+                <p className="text-lg text-primary font-body leading-relaxed">
+                  Whether you're redesigning your entire organizational architecture or starting with a team-building retreat, our offerings are intentionally crafted to restore coherence, vitality, and purpose in your company.
+                </p>
+              </div>
+              
+              <div className="w-32 h-1 bg-copper mx-auto rounded-full mt-12"></div>
+            </div>
+          </div>
+        </section>
+
         {/* Individual Offerings Section */}
         <section className="py-20 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
