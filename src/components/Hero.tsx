@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden py-20"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(210, 195, 175, 0.4) 0%, rgba(225, 215, 200, 0.3) 100%), url(${heroImage})`,
         backgroundSize: 'cover',
@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
           <span className="italic block mb-2">Transform Your</span>
           <span className="block">Organization from</span>
           <span className="block">the Inside Out</span>
