@@ -23,7 +23,7 @@ const FivePillarFrameworkSection = () => {
 
         {/* Main Content - rebalanced typography */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-secondary max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
             Sustainable growth rooted in the{' '}
             <span className="italic relative text-accent">
               5 Pillars of Regenerative
