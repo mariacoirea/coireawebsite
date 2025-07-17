@@ -109,103 +109,92 @@ const Offerings = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-6" style={{ backgroundColor: '#F0E6D6' }}>
-          <div className="container mx-auto max-w-6xl text-center">
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-primary mb-8 leading-tight">
-              Transformational Offerings for Regenerative Growth
-            </h1>
-            <p className="text-xl md:text-2xl text-primary/80 font-body leading-relaxed max-w-5xl mx-auto mb-8">
-              We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
-            </p>
-            <div className="w-32 h-1 bg-copper mx-auto rounded-full"></div>
-          </div>
-        </section>
-
-        {/* Secondary Message */}
-        <section className="py-16 px-6 bg-background">
-          <div className="container mx-auto max-w-5xl text-center">
-            <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
-              Whether you're redesigning your entire organizational architecture or starting with a team-building retreat, our 
-              offerings are intentionally crafted to restore coherence, vitality, and purpose in your company.
-            </p>
+        <section className="py-32 px-6" style={{ backgroundColor: '#F0E6D6' }}>
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-20">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-12 leading-[1.1]">
+                We Don't Offer Quick Fixes —<br />
+                <span className="italic text-primary/80">We lead Systemic Transformation</span>
+              </h1>
+              
+              <div className="max-w-5xl mx-auto space-y-8">
+                <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed">
+                  Rooted in Regenerative Intelligence and Conscious Leadership, COIREA equips organizations to 
+                  evolve from the inside out — rebuilding their internal systems with clarity, cultural integrity, and long-term vision.
+                </p>
+                <p className="text-lg md:text-xl text-primary font-body font-medium leading-relaxed">
+                  Our proprietary <span className="font-semibold">5-Pillar Framework</span> combines purpose-driven leadership, organizational diagnostics, 
+                  Organic Intelligence, and data-backed strategy — guiding companies through deep structural renewal 
+                  and measurable cultural transformation.
+                </p>
+              </div>
+              
+              <div className="w-32 h-1 bg-copper mx-auto rounded-full mt-12"></div>
+            </div>
           </div>
         </section>
 
         {/* Framework Section */}
-        <section className="py-20 px-6" style={{ backgroundColor: '#F0E6D6' }}>
+        <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-8">
-                We Don't Offer Quick Fixes —<br />
-                <span className="italic">We lead Systemic Transformation</span>
-              </h2>
-              
-              <div className="max-w-4xl mx-auto mb-12">
-                <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
-                  Rooted in Regenerative Intelligence and Conscious Leadership, COIREA equips organizations to 
-                  evolve from the inside out — rebuilding their internal systems with clarity, cultural integrity, and long-term vision.
-                </p>
-                <p className="text-lg text-primary font-body font-semibold">
-                  Our proprietary 5-Pillar Framework combines purpose-driven leadership, organizational diagnostics, 
-                  organic intelligence and data-backed strategy — guiding companies through deep structural renewal 
-                  and measurable cultural transformation.
-                </p>
-              </div>
-            </div>
-
             {/* 5 Pillars Visual */}
-            <div className="flex justify-center items-end gap-8 mb-16">
+            <div className="flex justify-center items-end gap-6 md:gap-8 mb-20">
               {pillars.map((pillar, index) => (
                 <div key={index} className="text-center group">
-                  <div className={`w-16 h-32 ${pillar.color === 'text-sage' ? 'bg-sage' : pillar.color === 'text-copper' ? 'bg-copper' : 'bg-primary'} rounded-t-full mb-4 group-hover:scale-105 transition-transform duration-300`}></div>
-                  <p className="text-sm font-display font-semibold text-primary">{pillar.title}</p>
+                  <div className={`w-12 h-24 md:w-16 md:h-32 ${pillar.color === 'text-sage' ? 'bg-sage' : pillar.color === 'text-copper' ? 'bg-copper' : 'bg-primary'} rounded-t-full mb-4 group-hover:scale-105 transition-transform duration-300 shadow-lg`}></div>
+                  <p className="text-xs md:text-sm font-display font-semibold text-primary">{pillar.title}</p>
                 </div>
               ))}
             </div>
 
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-8">
-                The COIREA 5-Pillar Framework: Real Strategy, Human Depth.
+              <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-12">
+                The COIREA 5-Pillar Framework:<br />
+                <span className="text-primary/80">Real Strategy, Human Depth.</span>
               </h3>
               
-              <div className="text-left max-w-4xl mx-auto space-y-6">
-                <p className="text-muted-foreground font-body leading-relaxed">
-                  <span className="font-semibold">At the heart of every transformation lies this 5-dimensional framework.</span><br />
+              <div className="text-left max-w-4xl mx-auto space-y-8">
+                <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                  <span className="font-semibold text-primary">At the heart of every transformation lies this 5-dimensional framework.</span><br />
                   COIREA's 5-Pillar Framework merges the foundational systems of any organization — enabling executive teams to:
                 </p>
                 
-                <ul className="space-y-3 text-muted-foreground font-body">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                    <span>Cultivate purpose-driven clarity and renewed focus</span>
+                <ul className="space-y-4 text-muted-foreground font-body">
+                  <li className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                    <span className="text-lg">Cultivate purpose-driven clarity and renewed focus</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
-                    <span>Strengthen leadership accountability across levels</span>
+                  <li className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-sage rounded-full mt-1.5 flex-shrink-0"></div>
+                    <span className="text-lg">Strengthen leadership accountability across levels</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-copper rounded-full mt-2"></div>
-                    <span>Build adaptive, high-performing, and connected teams</span>
+                  <li className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-copper rounded-full mt-1.5 flex-shrink-0"></div>
+                    <span className="text-lg">Build adaptive, high-performing, and connected teams</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                    <span>Unlock culture into cultural as a strategic asset</span>
+                  <li className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                    <span className="text-lg">Unlock culture as a strategic asset</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
-                    <span>Integrate well-being into the core business rhythm for long-term impact</span>
+                  <li className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-sage rounded-full mt-1.5 flex-shrink-0"></div>
+                    <span className="text-lg">Integrate well-being into the core business rhythm for long-term impact</span>
                   </li>
                 </ul>
 
-                <div className="bg-background/60 border border-primary/20 rounded-xl p-6 mt-8">
-                  <p className="text-primary font-body leading-relaxed">
-                    <span className="font-semibold">Last pillar includes:</span> Tailored KPIs to measure progress and ROI<br />
-                    <span className="font-semibold">Team Performance Data:</span> Identify the productivity, cohesion, and outcomes<br />
-                    <span className="font-semibold">Retention & Renewal Risk:</span> Proactive indicators for employment sustainability<br />
-                    <span className="font-semibold">Leadership Maturity Index:</span> Gracing growth on decision making and ownership<br />
-                    <span className="font-semibold">Long-Term Evolution Maps:</span> Value trajectories for structural and cultural milestones<br />
-                    <span className="font-semibold">Strategic Investment in Human Capital:</span> connecting people initiatives to business outcomes
-                  </p>
+                <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 mt-12">
+                  <div className="grid md:grid-cols-2 gap-6 text-primary font-body leading-relaxed">
+                    <div>
+                      <p className="mb-3"><span className="font-semibold">Tailored KPIs:</span> Measure progress and ROI</p>
+                      <p className="mb-3"><span className="font-semibold">Team Performance Data:</span> Productivity, cohesion, and outcomes</p>
+                      <p><span className="font-semibold">Retention & Renewal Risk:</span> Proactive employment indicators</p>
+                    </div>
+                    <div>
+                      <p className="mb-3"><span className="font-semibold">Leadership Maturity Index:</span> Decision-making growth tracking</p>
+                      <p className="mb-3"><span className="font-semibold">Long-Term Evolution Maps:</span> Structural and cultural milestones</p>
+                      <p><span className="font-semibold">Strategic Investment:</span> People initiatives to business outcomes</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
