@@ -423,19 +423,21 @@ const Offerings = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* CTA */}
-                <div className="bg-white/90 border border-primary/20 rounded-xl p-6 shadow-lg">
-                  <h3 className="text-lg font-display font-bold text-primary mb-3">
-                    Want to see your organization's evolution in real-time?
-                  </h3>
-                  <p className="text-sm text-primary/70 font-body mb-4">
-                    All offerings are tailored and tracked through our Regenerative Evolution System.
-                  </p>
-                  <Button className="bg-primary hover:bg-primary/90 text-white w-full shadow-md hover:shadow-lg transition-all duration-200">
-                    Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
+              </div>
+            </div>
+            
+            {/* Centered CTA */}
+            <div className="flex justify-center mt-12">
+              <div className="bg-white/90 border border-primary/20 rounded-xl p-8 shadow-lg max-w-md w-full text-center">
+                <h3 className="text-xl font-display font-bold text-primary mb-4">
+                  Want to see your organization's evolution in real-time?
+                </h3>
+                <p className="text-sm text-primary/70 font-body mb-6">
+                  All offerings are tailored and tracked through our Regenerative Evolution System.
+                </p>
+                <Button className="bg-primary hover:bg-primary/90 text-white w-full shadow-md hover:shadow-lg transition-all duration-200">
+                  Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
             </div>
           </div>
