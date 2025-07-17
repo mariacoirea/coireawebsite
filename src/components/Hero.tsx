@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 mt-12 leading-tight">
           <span className="italic block mb-2">Transform Your</span>
           <span className="block">Organization from</span>
           <span className="block">the Inside Out</span>
