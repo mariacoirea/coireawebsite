@@ -203,153 +203,227 @@ const Offerings = () => {
         {/* Dashboard Insights Section */}
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Dashboard Visual */}
-              <div className="order-2 lg:order-1">
-                <div className="bg-gradient-to-br from-sage/10 to-primary/5 p-8 rounded-3xl shadow-xl border border-primary/10">
-                  <div className="bg-background rounded-2xl shadow-2xl overflow-hidden">
-                    {/* Dashboard Header */}
-                    <div className="bg-gradient-to-r from-sage/20 to-primary/10 p-6 border-b border-primary/10">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">C</span>
-                          </div>
-                          <div>
-                            <h4 className="font-display font-bold text-primary">COIREA Evolution Dashboard</h4>
-                            <p className="text-sm text-muted-foreground">Elevating business through human-centered transformation</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-3 h-3 bg-sage rounded-full"></div>
-                          <span className="text-sm text-muted-foreground">Vitality: High</span>
-                        </div>
+            <div className="flex gap-12">
+              {/* Left Navigation Sidebar */}
+              <div className="hidden lg:block w-64 flex-shrink-0">
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden sticky top-8">
+                  <div className="p-6 border-b border-gray-200">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span className="text-white font-bold">C</span>
                       </div>
-                    </div>
-
-                    {/* Dashboard Content */}
-                    <div className="p-6">
-                      <div className="mb-6">
-                        <h5 className="text-lg font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h5>
-                        <p className="text-sm text-muted-foreground mb-4">Real-time pulse of organizational health</p>
-                        
-                        {/* Main Score Circle */}
-                        <div className="flex justify-center mb-8">
-                          <div className="relative w-32 h-32">
-                            <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 36 36">
-                              <path className="text-muted-foreground/20" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                              <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">52.6</div>
-                                <div className="text-xs text-muted-foreground">Vitality Score</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* 5 Pillars Metrics */}
-                      <div className="grid grid-cols-5 gap-4">
-                        {[
-                          { name: "Purpose", score: 46, color: "text-copper", description: "Clarity and storytelling coherence" },
-                          { name: "Leadership", score: 52, color: "text-sage", description: "Presence and compassionate feedback" },
-                          { name: "Collaboration", score: 50, color: "text-copper", description: "Energy, trust, and communication flow" },
-                          { name: "Culture", score: 54, color: "text-sage", description: "Values alignment and team energy" },
-                          { name: "Well-Being", score: 61, color: "text-primary", description: "Energy levels and mindfulness adoption" }
-                        ].map((pillar, index) => (
-                          <div key={index} className="text-center">
-                            <div className="relative w-16 h-16 mx-auto mb-2">
-                              <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
-                                <path className="text-muted-foreground/20" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path className={pillar.color} strokeWidth="3" strokeDasharray={`${pillar.score}, 100`} strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                              </svg>
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-sm font-bold text-primary">{pillar.score}</span>
-                              </div>
-                            </div>
-                            <div className="text-xs font-medium text-primary">{pillar.name}</div>
-                            <div className="text-xs text-muted-foreground mt-1 leading-tight">{pillar.description}</div>
-                          </div>
-                        ))}
+                      <div>
+                        <h4 className="font-display font-bold text-primary text-sm">COIREA</h4>
+                        <p className="text-xs text-muted-foreground">Regenerative Consultancy</p>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="text-center mt-6">
-                  <p className="text-sm text-muted-foreground font-body">
-                    🔍 COIREA Evolution Dashboard | Organizational Vitality in Real-Time
-                  </p>
+                  
+                  <nav className="p-4">
+                    <div className="space-y-2">
+                      {[
+                        { 
+                          icon: <div className="w-4 h-4 bg-sage rounded-full flex items-center justify-center"><div className="w-2 h-2 bg-white rounded-full"></div></div>, 
+                          label: "Health Overview", 
+                          active: true 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "KPI Tracking" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "Survey Insights" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "Check-Ins & Pulse" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "1:1 & Coaching" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "Meeting Insights" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "Evolution Journal" 
+                        },
+                        { 
+                          icon: <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center"><div className="w-2 h-2 bg-muted-foreground rounded"></div></div>, 
+                          label: "Strategic Planning" 
+                        }
+                      ].map((item, index) => (
+                        <div key={index} className={`flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer transition-colors ${
+                          item.active 
+                            ? 'bg-primary text-white' 
+                            : 'text-muted-foreground hover:bg-muted/50'
+                        }`}>
+                          {item.icon}
+                          <span className="text-sm font-medium">{item.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </nav>
+                  
+                  <div className="p-4 border-t border-gray-200">
+                    <div className="flex items-center gap-3 px-3 py-2">
+                      <div className="w-4 h-4 bg-muted-foreground/20 rounded flex items-center justify-center">
+                        <div className="w-2 h-2 bg-muted-foreground rounded"></div>
+                      </div>
+                      <span className="text-sm font-medium text-muted-foreground">Platform v1.0</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Messaging Content */}
-              <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
-                  A Living System,<br />
-                  <span className="text-primary/80 italic">Not a Static Report</span>
-                </h2>
-                
-                <div className="space-y-6 text-lg text-muted-foreground font-body leading-relaxed">
-                  <p>
-                    All our programs are designed as <span className="font-semibold text-primary">living systems</span> — continuously tracked through our proprietary dashboard.
-                  </p>
-                  <p>
-                    We don't just deliver experiences; we deliver <span className="font-semibold text-primary">measurable evolution</span>.
-                  </p>
-                  
-                  <div className="my-8">
-                    <p className="text-primary font-semibold mb-4">You'll gain real-time insight into your organization's vitality through key indicators:</p>
-                    
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-6 h-6 bg-sage/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-sage text-sm">📍</span>
+              {/* Main Dashboard Content */}
+              <div className="flex-1">
+                <div className="grid lg:grid-cols-3 gap-12 items-start">
+                  {/* Dashboard Visual */}
+                  <div className="lg:col-span-2">
+                    <div className="bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
+                      {/* Dashboard Header */}
+                      <div className="bg-gray-50 p-6 border-b border-gray-200">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-display font-bold text-primary">COIREA Evolution Dashboard</h3>
+                            <p className="text-muted-foreground">Elevating business through human-centered transformation</p>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <input 
+                              type="text" 
+                              placeholder="Search insights..." 
+                              className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm w-48"
+                            />
+                            <div className="flex items-center gap-2">
+                              <div className="w-3 h-3 bg-sage rounded-full"></div>
+                              <span className="text-sm text-muted-foreground">Vitality: High</span>
+                            </div>
+                          </div>
                         </div>
-                        <span><span className="font-semibold text-primary">Organizational Vitality Index (OVI)</span></span>
                       </div>
-                      
-                      <div className="flex items-start gap-4">
-                        <div className="w-6 h-6 bg-copper/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-copper text-sm">🧭</span>
+
+                      {/* Dashboard Content */}
+                      <div className="p-8">
+                        <div className="mb-8">
+                          <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
+                          <p className="text-muted-foreground mb-6">Real-time pulse of organizational health</p>
+                          
+                          {/* Main Score Circle */}
+                          <div className="flex justify-center mb-8">
+                            <div className="relative w-40 h-40">
+                              <svg className="w-40 h-40 transform -rotate-90" viewBox="0 0 36 36">
+                                <path className="text-gray-200" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                              </svg>
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="text-center">
+                                  <div className="text-3xl font-bold text-primary">52.6</div>
+                                  <div className="text-sm text-muted-foreground">Vitality Score</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <span><span className="font-semibold text-primary">Purpose, Leadership, Collaboration, Culture, and Well-Being</span> metrics</span>
-                      </div>
-                      
-                      <div className="flex items-start gap-4">
-                        <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-primary text-sm">🧘</span>
+
+                        {/* 5 Pillars Metrics */}
+                        <div className="grid grid-cols-5 gap-6">
+                          {[
+                            { name: "Purpose", score: 46, color: "#D2691E", description: "Clarity and storytelling coherence" },
+                            { name: "Leadership", score: 52, color: "#8FBC8F", description: "Presence and compassionate feedback" },
+                            { name: "Collaboration", score: 50, color: "#CD853F", description: "Energy, trust, and communication flow" },
+                            { name: "Culture", score: 54, color: "#2F4F4F", description: "Values alignment and team energy" },
+                            { name: "Well-Being", score: 61, color: "#5F8A5F", description: "Energy levels and mindfulness adoption" }
+                          ].map((pillar, index) => (
+                            <div key={index} className="text-center">
+                              <div className="relative w-20 h-20 mx-auto mb-3">
+                                <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
+                                  <path className="text-gray-200" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                  <path style={{ color: pillar.color }} strokeWidth="3" strokeDasharray={`${pillar.score}, 100`} strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                  <span className="text-lg font-bold text-primary">{pillar.score}</span>
+                                </div>
+                              </div>
+                              <div className="text-sm font-semibold text-primary mb-1">{pillar.name}</div>
+                              <div className="text-xs text-muted-foreground leading-tight">{pillar.description}</div>
+                            </div>
+                          ))}
                         </div>
-                        <span><span className="font-semibold text-primary">Check-ins, pulse data, and team sentiment</span></span>
-                      </div>
-                      
-                      <div className="flex items-start gap-4">
-                        <div className="w-6 h-6 bg-sage/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-sage text-sm">📈</span>
-                        </div>
-                        <span><span className="font-semibold text-primary">Strategic evolution maps</span> for long-term growth</span>
                       </div>
                     </div>
+                    
+                    <div className="text-center mt-6">
+                      <p className="text-sm text-muted-foreground font-body">
+                        COIREA Evolution Dashboard | Organizational Vitality in Real-Time
+                      </p>
+                    </div>
                   </div>
-                  
-                  <p className="text-primary border-l-4 border-copper pl-6 italic">
-                    Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
-                  </p>
-                </div>
 
-                {/* CTA */}
-                <div className="mt-12 bg-primary/5 border border-primary/20 rounded-2xl p-8">
-                  <h3 className="text-xl font-display font-bold text-primary mb-4">
-                    🎯 Want to see your organization's evolution in real-time?
-                  </h3>
-                  <p className="text-muted-foreground font-body mb-6">
-                    All offerings are tailored and tracked through our Regenerative Evolution System.
-                  </p>
-                  <Button className="bg-primary hover:bg-primary/90 text-white">
-                    Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  {/* Messaging Content */}
+                  <div className="lg:col-span-1">
+                    <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
+                      A Living System,<br />
+                      <span className="text-primary/80 italic">Not a Static Report</span>
+                    </h2>
+                    
+                    <div className="space-y-4 text-base text-muted-foreground font-body leading-relaxed">
+                      <p>
+                        All our programs are designed as <span className="font-semibold text-primary">living systems</span> — continuously tracked through our proprietary dashboard.
+                      </p>
+                      <p>
+                        We don't just deliver experiences; we deliver <span className="font-semibold text-primary">measurable evolution</span>.
+                      </p>
+                      
+                      <div className="my-6">
+                        <p className="text-primary font-semibold mb-4">You'll gain real-time insight into your organization's vitality through key indicators:</p>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-sage rounded-full mt-2 flex-shrink-0"></div>
+                            <span><span className="font-semibold text-primary">Organizational Vitality Index (OVI)</span></span>
+                          </div>
+                          
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-copper rounded-full mt-2 flex-shrink-0"></div>
+                            <span><span className="font-semibold text-primary">Purpose, Leadership, Collaboration, Culture, and Well-Being</span> metrics</span>
+                          </div>
+                          
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <span><span className="font-semibold text-primary">Check-ins, pulse data, and team sentiment</span></span>
+                          </div>
+                          
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-sage rounded-full mt-2 flex-shrink-0"></div>
+                            <span><span className="font-semibold text-primary">Strategic evolution maps</span> for long-term growth</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-primary/5 border-l-4 border-copper p-4 rounded-r-lg">
+                        <p className="text-primary italic text-sm">
+                          Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="mt-8 bg-primary/5 border border-primary/20 rounded-xl p-6">
+                      <h3 className="text-lg font-display font-bold text-primary mb-3">
+                        Want to see your organization's evolution in real-time?
+                      </h3>
+                      <p className="text-sm text-muted-foreground font-body mb-4">
+                        All offerings are tailored and tracked through our Regenerative Evolution System.
+                      </p>
+                      <Button className="bg-primary hover:bg-primary/90 text-white w-full">
+                        Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
