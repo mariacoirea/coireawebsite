@@ -384,27 +384,25 @@ const Offerings = () => {
                       </p>
                       
                       <div className="my-6">
-                        <p className="text-primary font-semibold mb-4">You'll gain real-time insight into your organization's vitality through key indicators:</p>
+                        <p className="text-primary font-semibold mb-6">You'll gain real-time insight into your organization's vitality through key indicators:</p>
                         
-                        <div className="space-y-3">
-                          <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-sage rounded-full mt-2 flex-shrink-0"></div>
-                            <span><span className="font-semibold text-primary">Organizational Vitality Index (OVI)</span></span>
+                        <div className="space-y-4">
+                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
+                            <h4 className="font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
                           </div>
                           
-                          <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-copper rounded-full mt-2 flex-shrink-0"></div>
-                            <span><span className="font-semibold text-primary">Purpose, Leadership, Collaboration, Culture, and Well-Being</span> metrics</span>
+                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
+                            <h4 className="font-semibold text-primary mb-2">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
+                            <p className="text-sm text-primary/70">metrics</p>
                           </div>
                           
-                          <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span><span className="font-semibold text-primary">Check-ins, pulse data, and team sentiment</span></span>
+                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
+                            <h4 className="font-semibold text-primary mb-1">Check-ins, pulse data, and team sentiment</h4>
                           </div>
                           
-                          <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-sage rounded-full mt-2 flex-shrink-0"></div>
-                            <span><span className="font-semibold text-primary">Strategic evolution maps</span> for long-term growth</span>
+                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
+                            <h4 className="font-semibold text-primary mb-1">Strategic evolution maps</h4>
+                            <p className="text-sm text-primary/70">for long-term growth</p>
                           </div>
                         </div>
                       </div>
