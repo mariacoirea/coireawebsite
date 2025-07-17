@@ -386,23 +386,23 @@ const Offerings = () => {
                       <div className="my-6">
                         <p className="text-primary font-semibold mb-6">You'll gain real-time insight into your organization's vitality through key indicators:</p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
-                            <h4 className="font-semibold text-primary">Organizational Vitality Index (OVI)</h4>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-white/90 border border-primary/10 rounded-lg p-5 shadow-sm">
+                            <h4 className="font-semibold text-primary text-base">Organizational Vitality Index (OVI)</h4>
                           </div>
                           
-                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
-                            <h4 className="font-semibold text-primary mb-1">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
-                            <p className="text-sm text-primary/70">metrics</p>
+                          <div className="bg-white/90 border border-primary/10 rounded-lg p-5 shadow-sm">
+                            <h4 className="font-semibold text-primary text-base mb-1">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
+                            <p className="text-sm text-primary/60">metrics</p>
                           </div>
                           
-                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
-                            <h4 className="font-semibold text-primary">Check-ins, pulse data, and team sentiment</h4>
+                          <div className="bg-white/90 border border-primary/10 rounded-lg p-5 shadow-sm">
+                            <h4 className="font-semibold text-primary text-base">Check-ins, pulse data, and team sentiment</h4>
                           </div>
                           
-                          <div className="bg-white/80 border border-primary/10 rounded-lg p-4 shadow-sm">
-                            <h4 className="font-semibold text-primary mb-1">Strategic evolution maps</h4>
-                            <p className="text-sm text-primary/70">for long-term growth</p>
+                          <div className="bg-white/90 border border-primary/10 rounded-lg p-5 shadow-sm">
+                            <h4 className="font-semibold text-primary text-base mb-1">Strategic evolution maps</h4>
+                            <p className="text-sm text-primary/60">for long-term growth</p>
                           </div>
                         </div>
                       </div>
