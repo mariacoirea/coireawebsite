@@ -3,66 +3,136 @@ import { ChevronDown } from "lucide-react";
 
 const FivePillarFrameworkSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#F5F3F0' }}>
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
+    <section className="py-40 relative overflow-hidden bg-gradient-to-b from-neutral-warm/30 to-background">
+      {/* Subtle sacred geometry background pattern - softened */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent))_0%,transparent_50%)] opacity-20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--secondary))_0%,transparent_50%)] opacity-20 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        {/* Decorative chevrons - enhanced */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center space-y-1 flex-col items-center mb-12">
-            <ChevronDown className="w-5 h-5 opacity-40" style={{ color: '#1C4D4F' }} />
-            <ChevronDown className="w-6 h-6 opacity-60 -mt-2" style={{ color: '#1C4D4F' }} />
-            <ChevronDown className="w-5 h-5 opacity-40 -mt-2" style={{ color: '#1C4D4F' }} />
+        {/* Decorative chevrons - refined */}
+        <div className="text-center mb-20">
+          <div className="flex justify-center space-y-1 flex-col items-center mb-16">
+            <ChevronDown className="w-4 h-4 text-primary/40" />
+            <ChevronDown className="w-5 h-5 text-primary/60 -mt-2" />
+            <ChevronDown className="w-4 h-4 text-primary/40 -mt-2" />
           </div>
         </div>
 
-        {/* Main Content - enhanced typography */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold mb-12 leading-[1.1] tracking-tight" style={{ color: '#1C4D4F' }}>
+        {/* Main Content - rebalanced typography */}
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
             Sustainable growth rooted in the{' '}
-            <span className="italic relative">
+            <span className="italic relative text-accent">
               5 Pillars of Regenerative
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-20"></div>
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
             </span>{' '}
             Transformation.
           </h2>
         </div>
 
-        {/* Supporting Text - enhanced layout */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
-            <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
-                Every offering is anchored in COIREA's 5-Pillar Framework — <strong className="font-semibold">Purpose, Leadership, Collaboration, Culture, and Well-Being</strong> — activating organizational transformation from the inside out.
+        {/* Supporting Text - equal width columns with proper spacing */}
+        <div className="max-w-7xl mx-auto mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
+            <div className="px-4">
+              <p className="text-lg leading-[1.7] font-body text-primary/90">
+                Every offering is anchored in COIREA's 5-Pillar Framework — <strong className="font-semibold text-primary">Purpose, Leadership, Collaboration, Culture, and Well-Being</strong> — activating organizational transformation from the inside out.
               </p>
             </div>
             
-            <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
-                Each pillar is assessed through <strong className="font-semibold">customized measurement systems</strong> — including qualitative insights, performance metrics, and well-being indicators — to ensure a data-informed, system-wide transformation journey.
+            <div className="px-4">
+              <p className="text-lg leading-[1.7] font-body text-primary/90">
+                Each pillar is assessed through <strong className="font-semibold text-primary">customized measurement systems</strong> — including qualitative insights, performance metrics, and well-being indicators — to ensure a data-informed, system-wide transformation journey.
               </p>
             </div>
             
-            <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
+            <div className="px-4">
+              <p className="text-lg leading-[1.7] font-body text-primary/90">
                 Trusted by visionary CEOs and HR leaders seeking to align high performance with human-centered, systemic evolution.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Framework Image - enhanced presentation */}
+        {/* Soft divider */}
+        <div className="flex justify-center mb-16">
+          <div className="flex space-x-2 items-center">
+            <div className="w-2 h-2 rounded-full bg-primary/30"></div>
+            <div className="w-2 h-2 rounded-full bg-primary/50"></div>
+            <div className="w-2 h-2 rounded-full bg-primary/30"></div>
+          </div>
+        </div>
+
+        {/* Framework Image - enhanced with transparent background and brand colors */}
         <div className="flex justify-center">
           <div className="relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-            <img 
-              src={frameworkImage}
-              alt="5 Pillars Framework - Purpose, Leadership, Collaboration, Culture, Well-Being"
-              className="relative w-full max-w-5xl rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-white/20"
-            />
+            {/* Soft shadow beneath */}
+            <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+            
+            {/* Framework container */}
+            <div className="relative bg-gradient-to-br from-background/80 via-background/90 to-background/80 backdrop-blur-sm rounded-3xl p-12 border border-primary/10 shadow-elegant">
+              {/* Custom 5-Pillar Framework Design */}
+              <div className="grid grid-cols-5 gap-8 max-w-4xl mx-auto">
+                
+                {/* Purpose Pillar */}
+                <div className="flex flex-col items-center space-y-4 group/pillar cursor-pointer transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-20 h-20 rounded-full bg-secondary/20 flex items-center justify-center border-2 border-secondary/30 group-hover/pillar:border-secondary group-hover/pillar:shadow-lg group-hover/pillar:shadow-secondary/25 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-secondary"></div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-display font-semibold text-secondary text-lg mb-1">Purpose</h3>
+                    <p className="text-xs text-secondary/70 font-body">Vision & Evolution</p>
+                  </div>
+                </div>
+
+                {/* Leadership Pillar */}
+                <div className="flex flex-col items-center space-y-4 group/pillar cursor-pointer transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center border-2 border-accent/30 group-hover/pillar:border-accent group-hover/pillar:shadow-lg group-hover/pillar:shadow-accent/25 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-accent"></div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-display font-semibold text-accent text-lg mb-1">Leadership</h3>
+                    <p className="text-xs text-accent/70 font-body">Brave Embodiment</p>
+                  </div>
+                </div>
+
+                {/* Collaboration Pillar */}
+                <div className="flex flex-col items-center space-y-4 group/pillar cursor-pointer transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-20 h-20 rounded-full bg-neutral-warm/40 flex items-center justify-center border-2 border-neutral-warm/50 group-hover/pillar:border-neutral-warm group-hover/pillar:shadow-lg group-hover/pillar:shadow-neutral-warm/25 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-neutral-warm"></div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-display font-semibold text-neutral-warm text-lg mb-1" style={{ color: 'hsl(33, 35%, 60%)' }}>Collaboration</h3>
+                    <p className="text-xs font-body" style={{ color: 'hsl(33, 35%, 50%)' }}>Sacred Partnership</p>
+                  </div>
+                </div>
+
+                {/* Culture Pillar */}
+                <div className="flex flex-col items-center space-y-4 group/pillar cursor-pointer transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-20 h-20 rounded-full bg-secondary/25 flex items-center justify-center border-2 border-secondary/35 group-hover/pillar:border-secondary group-hover/pillar:shadow-lg group-hover/pillar:shadow-secondary/25 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-secondary/80"></div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-display font-semibold text-secondary/90 text-lg mb-1">Culture</h3>
+                    <p className="text-xs text-secondary/60 font-body">Living Systems</p>
+                  </div>
+                </div>
+
+                {/* Well-Being Pillar */}
+                <div className="flex flex-col items-center space-y-4 group/pillar cursor-pointer transition-all duration-300 hover:-translate-y-2">
+                  <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center border-2 border-accent/30 group-hover/pillar:border-accent group-hover/pillar:shadow-lg group-hover/pillar:shadow-accent/25 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-accent/90"></div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-display font-semibold text-accent/90 text-lg mb-1">Well-Being</h3>
+                    <p className="text-xs text-accent/60 font-body">Holistic Thriving</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
