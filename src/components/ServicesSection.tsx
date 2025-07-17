@@ -43,8 +43,16 @@ const shortTermOfferings = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24" style={{ backgroundColor: '#F6F0E9' }}>
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#F6F0E9' }}>
+      {/* Subtle decorative elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-8">
+        <div className="absolute top-20 left-10 w-6 h-6 rounded-full bg-gradient-nature opacity-20"></div>
+        <div className="absolute top-40 right-20 w-4 h-4 rounded-full bg-gradient-hero opacity-15"></div>
+        <div className="absolute bottom-40 left-20 w-5 h-5 rounded-full bg-gradient-warm opacity-25"></div>
+        <div className="absolute bottom-20 right-10 w-3 h-3 rounded-full bg-accent/20"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
