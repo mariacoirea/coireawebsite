@@ -2,28 +2,42 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Brain, Leaf, Target, Heart, Compass, ArrowRight } from "lucide-react";
 
 const Offerings = () => {
-  const services = [
+  const pillars = [
     {
-      title: "Conscious Leadership Development",
-      description: "Empowering leaders with courage, clarity, and embodied authenticity through immersive programs and coaching.",
-      features: ["Executive coaching", "Leadership retreats", "Authentic presence training", "Decision-making clarity"]
+      icon: Target,
+      title: "Purpose",
+      description: "Clarity-driven leadership that embodies your organization's deepest calling.",
+      color: "text-sage"
     },
     {
-      title: "Regenerative Intelligence Systems",
-      description: "Rooted growth guided by the wisdom of nature and systems thinking for sustainable business evolution.",
-      features: ["Biomimicry principles", "Systems mapping", "Natural cycles integration", "Regenerative strategy"]
+      icon: Brain,
+      title: "Leadership", 
+      description: "Conscious leaders who inspire through authentic presence and wisdom.",
+      color: "text-primary"
     },
     {
-      title: "Organizational Coherence",
-      description: "Long-term clarity aligned with your organization's soul and strategic objectives.",
-      features: ["Purpose alignment", "Values integration", "Culture transformation", "Strategic coherence"]
+      icon: Compass,
+      title: "Collaboration",
+      description: "Synergistic teamwork that amplifies collective intelligence and creativity.",
+      color: "text-copper"
     },
     {
-      title: "Well-Being Integration",
-      description: "Workplace wellness as the foundation of regenerative success and high performance.",
-      features: ["Wellness programs", "Stress management", "Work-life harmony", "Mindfulness practices"]
+      icon: Target,
+      title: "Culture",
+      description: "Regenerative organizational culture that nurtures growth and innovation.",
+      color: "text-sage"
+    },
+    {
+      icon: Heart,
+      title: "Well-Being",
+      description: "Holistic wellness as the foundation for sustainable high performance.",
+      color: "text-primary"
     }
   ];
 
@@ -32,64 +46,193 @@ const Offerings = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-6">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-              Our Offerings
+        <section className="py-20 px-6" style={{ backgroundColor: '#F0E6D6' }}>
+          <div className="container mx-auto max-w-6xl text-center">
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-primary mb-8 leading-tight">
+              Transformational Offerings for Regenerative Growth
             </h1>
-            <p className="text-xl text-muted-foreground font-body leading-relaxed">
-              Comprehensive solutions for organizational transformation, from individual leadership 
-              development to systemic change programs.
+            <p className="text-xl md:text-2xl text-primary/80 font-body leading-relaxed max-w-5xl mx-auto mb-8">
+              We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
+            </p>
+            <div className="w-32 h-1 bg-copper mx-auto rounded-full"></div>
+          </div>
+        </section>
+
+        {/* Secondary Message */}
+        <section className="py-16 px-6 bg-background">
+          <div className="container mx-auto max-w-5xl text-center">
+            <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
+              Whether you're redesigning your entire organizational architecture or starting with a team-building retreat, our 
+              offerings are intentionally crafted to restore coherence, vitality, and purpose in your company.
             </p>
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-16 px-6">
+        {/* Framework Section */}
+        <section className="py-20 px-6" style={{ backgroundColor: '#F0E6D6' }}>
           <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="bg-card shadow-soft hover:shadow-elegant transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-display text-primary">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/80 font-body mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          <span className="text-foreground/70 font-body">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-8">
+                We Don't Offer Quick Fixes —<br />
+                <span className="italic">We lead Systemic Transformation</span>
+              </h2>
+              
+              <div className="max-w-4xl mx-auto mb-12">
+                <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
+                  Rooted in Regenerative Intelligence and Conscious Leadership, COIREA equips organizations to 
+                  evolve from the inside out — rebuilding their internal systems with clarity, cultural integrity, and long-term vision.
+                </p>
+                <p className="text-lg text-primary font-body font-semibold">
+                  Our proprietary 5-Pillar Framework combines purpose-driven leadership, organizational diagnostics, 
+                  organic intelligence and data-backed strategy — guiding companies through deep structural renewal 
+                  and measurable cultural transformation.
+                </p>
+              </div>
+            </div>
+
+            {/* 5 Pillars Visual */}
+            <div className="flex justify-center items-end gap-8 mb-16">
+              {pillars.map((pillar, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-32 ${pillar.color === 'text-sage' ? 'bg-sage' : pillar.color === 'text-copper' ? 'bg-copper' : 'bg-primary'} rounded-t-full mb-4 group-hover:scale-105 transition-transform duration-300`}></div>
+                  <p className="text-sm font-display font-semibold text-primary">{pillar.title}</p>
+                </div>
               ))}
+            </div>
+
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-8">
+                The COIREA 5-Pillar Framework: Real Strategy, Human Depth.
+              </h3>
+              
+              <div className="text-left max-w-4xl mx-auto space-y-6">
+                <p className="text-muted-foreground font-body leading-relaxed">
+                  <span className="font-semibold">At the heart of every transformation lies this 5-dimensional framework.</span><br />
+                  COIREA's 5-Pillar Framework merges the foundational systems of any organization — enabling executive teams to:
+                </p>
+                
+                <ul className="space-y-3 text-muted-foreground font-body">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Cultivate purpose-driven clarity and renewed focus</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
+                    <span>Strengthen leadership accountability across levels</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-copper rounded-full mt-2"></div>
+                    <span>Build adaptive, high-performing, and connected teams</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span>Unlock culture into cultural as a strategic asset</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-sage rounded-full mt-2"></div>
+                    <span>Integrate well-being into the core business rhythm for long-term impact</span>
+                  </li>
+                </ul>
+
+                <div className="bg-background/60 border border-primary/20 rounded-xl p-6 mt-8">
+                  <p className="text-primary font-body leading-relaxed">
+                    <span className="font-semibold">Last pillar includes:</span> Tailored KPIs to measure progress and ROI<br />
+                    <span className="font-semibold">Team Performance Data:</span> Identify the productivity, cohesion, and outcomes<br />
+                    <span className="font-semibold">Retention & Renewal Risk:</span> Proactive indicators for employment sustainability<br />
+                    <span className="font-semibold">Leadership Maturity Index:</span> Gracing growth on decision making and ownership<br />
+                    <span className="font-semibold">Long-Term Evolution Maps:</span> Value trajectories for structural and cultural milestones<br />
+                    <span className="font-semibold">Strategic Investment in Human Capital:</span> connecting people initiatives to business outcomes
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient-subtle">
+        {/* Contact Form Section */}
+        <section className="py-20 px-6 bg-background">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
+                  Ready to explore what's possible for your team?
+                </h2>
+                <p className="text-lg text-muted-foreground font-body leading-relaxed mb-6">
+                  Whether you're just beginning or already deep in your journey, we'd love to connect 
+                  and co-create what comes next.
+                </p>
+                <p className="text-primary font-body">
+                  Let's start with a <span className="font-semibold underline">simple conversation</span>.
+                </p>
+              </div>
+              
+              <div className="bg-background border border-primary/20 rounded-2xl p-8 shadow-lg">
+                <form className="space-y-6">
+                  <div>
+                    <label className="text-sm text-copper font-body font-medium mb-2 block">
+                      Name <span className="text-copper/60">(Required)</span>
+                    </label>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-xs text-muted-foreground font-body mb-1 block">First Name</label>
+                        <Input className="border-primary/20 focus:border-primary" />
+                      </div>
+                      <div>
+                        <label className="text-xs text-muted-foreground font-body mb-1 block">Last Name</label>
+                        <Input className="border-primary/20 focus:border-primary" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm text-copper font-body font-medium mb-2 block">
+                      Email <span className="text-copper/60">(Required)</span>
+                    </label>
+                    <Input type="email" className="border-primary/20 focus:border-primary" />
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="newsletter" />
+                    <label htmlFor="newsletter" className="text-sm text-muted-foreground font-body">
+                      Sign up for news and updates
+                    </label>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm text-copper font-body font-medium mb-2 block">Company Name</label>
+                    <Input className="border-primary/20 focus:border-primary" />
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm text-copper font-body font-medium mb-2 block">
+                      What are you exploring right now? <span className="text-copper/60">(Required)</span>
+                    </label>
+                    <Textarea 
+                      className="border-primary/20 focus:border-primary min-h-[120px]" 
+                      placeholder="Tell us about your current challenges, goals, or what brought you here..."
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group py-3"
+                  >
+                    Let's start with a conversation!
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom Quote */}
+        <section className="py-16 px-6" style={{ backgroundColor: '#F0E6D6' }}>
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-6">
-              Ready to Transform Your Organization?
-            </h2>
-            <p className="text-lg text-foreground/80 font-body mb-8 leading-relaxed">
-              Let's explore how our 5-Pillar Framework can guide your organization's evolution 
-              toward regenerative success.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Begin the Journey
-            </Button>
+            <blockquote className="text-xl md:text-2xl font-body italic text-primary leading-relaxed mb-6">
+              "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+            </blockquote>
+            <cite className="text-lg font-display font-semibold text-primary">— Harvard Business Review</cite>
           </div>
         </section>
       </main>
