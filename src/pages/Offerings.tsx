@@ -279,158 +279,162 @@ const Offerings = () => {
                 </div>
               </div>
 
-              {/* Main Dashboard Content */}
+              {/* Main Dashboard Visual - Full Width */}
               <div className="flex-1">
-                <div className="grid lg:grid-cols-3 gap-12 items-start">
-                  {/* Dashboard Visual */}
-                  <div className="lg:col-span-2">
-                    <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden">
-                      {/* Dashboard Header */}
-                      <div className="p-6 border-b border-primary/10" style={{ backgroundColor: '#FAF8F6' }}>
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="text-2xl font-display font-bold text-primary">COIREA Evolution Dashboard</h3>
-                            <p className="text-primary/70">Elevating business through human-centered transformation</p>
-                          </div>
-                          <div className="flex items-center gap-4">
-                            <input 
-                              type="text" 
-                              placeholder="Search insights..." 
-                              className="bg-white border border-primary/20 rounded-lg px-4 py-2 text-sm w-48 focus:border-primary focus:outline-none"
-                            />
-                            <div className="flex items-center gap-2">
-                              <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
-                              <span className="text-sm text-primary/60">Vitality: High</span>
-                            </div>
-                          </div>
+                <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden">
+                  {/* Dashboard Header */}
+                  <div className="p-6 border-b border-primary/10" style={{ backgroundColor: '#FAF8F6' }}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-2xl font-display font-bold text-primary">COIREA Evolution Dashboard</h3>
+                        <p className="text-primary/70">Elevating business through human-centered transformation</p>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <input 
+                          type="text" 
+                          placeholder="Search insights..." 
+                          className="bg-white border border-primary/20 rounded-lg px-4 py-2 text-sm w-48 focus:border-primary focus:outline-none"
+                        />
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
+                          <span className="text-sm text-primary/60">Vitality: High</span>
                         </div>
                       </div>
-
-                      {/* Dashboard Content */}
-                      <div className="p-8">
-                        <div className="mb-8">
-                          <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
-                          <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
-                          
-                          {/* Main Score Circle */}
-                          <div className="flex justify-center mb-8">
-                            <div className="relative w-40 h-40">
-                              <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
-                              <svg className="w-40 h-40 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
-                                <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                              </svg>
-                              <div className="absolute inset-0 flex items-center justify-center z-20">
-                                <div className="text-center">
-                                  <div className="text-3xl font-bold text-primary">52.6</div>
-                                  <div className="text-sm text-primary/60">Vitality Score</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* 5 Pillars Metrics */}
-                        <div className="grid grid-cols-5 gap-6">
-                          {[
-                            { name: "Purpose", score: 46, color: "#D2691E", bgColor: "bg-copper/10", description: "Clarity and storytelling coherence" },
-                            { name: "Leadership", score: 52, color: "#8FBC8F", bgColor: "bg-sage/10", description: "Presence and compassionate feedback" },
-                            { name: "Collaboration", score: 50, color: "#CD853F", bgColor: "bg-copper/10", description: "Energy, trust, and communication flow" },
-                            { name: "Culture", score: 54, color: "#2F4F4F", bgColor: "bg-primary/10", description: "Values alignment and team energy" },
-                            { name: "Well-Being", score: 61, color: "#5F8A5F", bgColor: "bg-sage/10", description: "Energy levels and mindfulness adoption" }
-                          ].map((pillar, index) => (
-                            <div key={index} className="text-center">
-                              <div className={`relative w-20 h-20 mx-auto mb-3 rounded-full ${pillar.bgColor} p-2`}>
-                                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                                  <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                  <path style={{ color: pillar.color }} strokeWidth="3" strokeDasharray={`${pillar.score}, 100`} strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                </svg>
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                  <span className="text-lg font-bold text-primary">{pillar.score}</span>
-                                </div>
-                              </div>
-                              <div className="text-sm font-semibold text-primary mb-1">{pillar.name}</div>
-                              <div className="text-xs text-primary/60 leading-tight">{pillar.description}</div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="text-center mt-6">
-                      <p className="text-sm text-primary/60 font-body">
-                        COIREA Evolution Dashboard | Organizational Vitality in Real-Time
-                      </p>
                     </div>
                   </div>
 
-                  {/* Messaging Content */}
-                  <div className="lg:col-span-1">
-                    <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
-                      A Living System,<br />
-                      <span className="text-primary/80 italic">Not a Static Report</span>
-                    </h2>
-                    
-                    <div className="space-y-6 text-base text-primary/70 font-body leading-relaxed">
-                      <p className="text-lg font-medium text-primary">
-                        We combine <span className="font-bold">Organic and Artificial Intelligence</span> to track your company's evolution in real time — blending data with intuition, metrics with meaning.
-                      </p>
+                  {/* Dashboard Content */}
+                  <div className="p-8">
+                    <div className="mb-8">
+                      <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
+                      <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
                       
-                      <p>
-                        All our programs are designed as <span className="font-semibold text-primary">living systems</span> — continuously tracked through our proprietary dashboard.
-                      </p>
-                      <p>
-                        We don't just deliver experiences; we deliver <span className="font-semibold text-primary">measurable evolution</span>.
-                      </p>
-                      
-                      <div className="my-6">
-                        <p className="text-primary font-semibold mb-6">You'll gain real-time insight into your organization's vitality through key indicators:</p>
-                        
-                        <div className="space-y-3">
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="bg-white/90 border border-primary/10 rounded-lg p-4 shadow-sm">
-                              <h4 className="font-semibold text-primary text-sm">Organizational Vitality Index (OVI)</h4>
-                            </div>
-                            
-                            <div className="bg-white/90 border border-primary/10 rounded-lg p-4 shadow-sm">
-                              <h4 className="font-semibold text-primary text-sm mb-1">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
-                              <p className="text-xs text-primary/60">metrics</p>
-                            </div>
-                          </div>
-                          
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="bg-white/90 border border-primary/10 rounded-lg p-4 shadow-sm">
-                              <h4 className="font-semibold text-primary text-sm">Check-ins, pulse data, and team sentiment</h4>
-                            </div>
-                            
-                            <div className="bg-white/90 border border-primary/10 rounded-lg p-4 shadow-sm">
-                              <h4 className="font-semibold text-primary text-sm mb-1">Strategic evolution maps</h4>
-                              <p className="text-xs text-primary/60">for long-term growth</p>
+                      {/* Main Score Circle */}
+                      <div className="flex justify-center mb-8">
+                        <div className="relative w-40 h-40">
+                          <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
+                          <svg className="w-40 h-40 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
+                            <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center z-20">
+                            <div className="text-center">
+                              <div className="text-3xl font-bold text-primary">52.6</div>
+                              <div className="text-sm text-primary/60">Vitality Score</div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      
-                      <div className="bg-white/60 border-l-4 border-copper p-4 rounded-r-lg shadow-sm">
-                        <p className="text-primary italic text-sm font-medium">
-                          Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
-                        </p>
-                      </div>
                     </div>
 
-                    {/* CTA */}
-                    <div className="mt-8 bg-white/80 border border-primary/20 rounded-xl p-6 shadow-lg">
-                      <h3 className="text-lg font-display font-bold text-primary mb-3">
-                        Want to see your organization's evolution in real-time?
-                      </h3>
-                      <p className="text-sm text-primary/70 font-body mb-4">
-                        All offerings are tailored and tracked through our Regenerative Evolution System.
-                      </p>
-                      <Button className="bg-primary hover:bg-primary/90 text-white w-full shadow-md hover:shadow-lg transition-all duration-200">
-                        Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                    {/* 5 Pillars Metrics */}
+                    <div className="grid grid-cols-5 gap-6">
+                      {[
+                        { name: "Purpose", score: 46, color: "#D2691E", bgColor: "bg-copper/10", description: "Clarity and storytelling coherence" },
+                        { name: "Leadership", score: 52, color: "#8FBC8F", bgColor: "bg-sage/10", description: "Presence and compassionate feedback" },
+                        { name: "Collaboration", score: 50, color: "#CD853F", bgColor: "bg-copper/10", description: "Energy, trust, and communication flow" },
+                        { name: "Culture", score: 54, color: "#2F4F4F", bgColor: "bg-primary/10", description: "Values alignment and team energy" },
+                        { name: "Well-Being", score: 61, color: "#5F8A5F", bgColor: "bg-sage/10", description: "Energy levels and mindfulness adoption" }
+                      ].map((pillar, index) => (
+                        <div key={index} className="text-center">
+                          <div className={`relative w-20 h-20 mx-auto mb-3 rounded-full ${pillar.bgColor} p-2`}>
+                            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                              <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                              <path style={{ color: pillar.color }} strokeWidth="3" strokeDasharray={`${pillar.score}, 100`} strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            </svg>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <span className="text-lg font-bold text-primary">{pillar.score}</span>
+                            </div>
+                          </div>
+                          <div className="text-sm font-semibold text-primary mb-1">{pillar.name}</div>
+                          <div className="text-xs text-primary/60 leading-tight">{pillar.description}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
+                </div>
+                
+                <div className="text-center mt-6">
+                  <p className="text-sm text-primary/60 font-body">
+                    COIREA Evolution Dashboard | Organizational Vitality in Real-Time
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Horizontal Content Block Below Dashboard */}
+        <section className="py-12 px-6" style={{ backgroundColor: '#F6F0E9' }}>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-3 gap-12 items-start">
+              {/* Left Column - Main Text */}
+              <div className="lg:col-span-2">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
+                  A Living System,<br />
+                  <span className="text-primary/80 italic">Not a Static Report</span>
+                </h2>
+                
+                <div className="space-y-6 text-lg text-primary/70 font-body leading-relaxed">
+                  <p className="text-xl font-medium text-primary">
+                    We merge <span className="font-bold">Organic & Artificial Intelligence</span> to track your company's evolution in real time — blending data with intuition, metrics with meaning.
+                  </p>
+                  
+                  <p>
+                    All our programs are designed as <span className="font-semibold text-primary">living systems</span>, continuously monitored through our proprietary dashboard.
+                  </p>
+                  
+                  <p>
+                    We don't just deliver experiences — we deliver <span className="font-semibold text-primary">measurable evolution</span>.
+                  </p>
+                  
+                  <div className="bg-white/60 border-l-4 border-copper p-6 rounded-r-lg shadow-sm mt-8">
+                    <p className="text-primary italic font-medium">
+                      Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Insight Cards */}
+              <div className="lg:col-span-1">
+                <div className="bg-white/80 border border-primary/20 rounded-xl p-6 shadow-lg mb-8">
+                  <h3 className="text-lg font-display font-bold text-primary mb-4">
+                    You'll gain real-time insight into your organization's vitality through key indicators:
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
+                      <h4 className="font-semibold text-primary text-sm">Organizational Vitality Index (OVI)</h4>
+                    </div>
+                    
+                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
+                      <h4 className="font-semibold text-primary text-sm mb-1">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
+                      <p className="text-xs text-primary/60">metrics</p>
+                    </div>
+                    
+                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
+                      <h4 className="font-semibold text-primary text-sm">Check-ins, pulse data, and team sentiment</h4>
+                    </div>
+                    
+                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
+                      <h4 className="font-semibold text-primary text-sm mb-1">Strategic evolution maps</h4>
+                      <p className="text-xs text-primary/60">for long-term growth</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="bg-white/90 border border-primary/20 rounded-xl p-6 shadow-lg">
+                  <h3 className="text-lg font-display font-bold text-primary mb-3">
+                    Want to see your organization's evolution in real-time?
+                  </h3>
+                  <p className="text-sm text-primary/70 font-body mb-4">
+                    All offerings are tailored and tracked through our Regenerative Evolution System.
+                  </p>
+                  <Button className="bg-primary hover:bg-primary/90 text-white w-full shadow-md hover:shadow-lg transition-all duration-200">
+                    Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
                 </div>
               </div>
             </div>
