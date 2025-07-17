@@ -451,32 +451,60 @@ const Offerings = () => {
                       {[
                         { 
                           title: "Organizational Vitality Index (OVI)", 
-                          color: "bg-primary", 
-                          icon: "📊" 
+                          color: "bg-sage", 
+                          icon: (
+                            <svg className="w-5 h-5 text-sage" viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
+                              <path d="M8 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.2"/>
+                            </svg>
+                          )
                         },
                         { 
                           title: "Purpose, Leadership, Collaboration, Culture, and Well-Being", 
                           subtitle: "metrics", 
                           color: "bg-sage", 
-                          icon: "🎯" 
+                          icon: (
+                            <svg className="w-5 h-5 text-sage" viewBox="0 0 24 24" fill="none">
+                              <circle cx="12" cy="8" r="2" stroke="currentColor" strokeWidth="1.5"/>
+                              <circle cx="6" cy="16" r="2" stroke="currentColor" strokeWidth="1.5"/>
+                              <circle cx="18" cy="16" r="2" stroke="currentColor" strokeWidth="1.5"/>
+                              <circle cx="6" cy="12" r="1" fill="currentColor"/>
+                              <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                              <path d="m12 10-4 4m8-4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                            </svg>
+                          )
                         },
                         { 
                           title: "Check-ins, pulse data, and team sentiment", 
-                          color: "bg-copper", 
-                          icon: "💬" 
+                          color: "bg-sage", 
+                          icon: (
+                            <svg className="w-5 h-5 text-sage" viewBox="0 0 24 24" fill="none">
+                              <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              <circle cx="12" cy="12" r="2" fill="currentColor" fillOpacity="0.3"/>
+                            </svg>
+                          )
                         },
                         { 
                           title: "Strategic evolution maps", 
                           subtitle: "for long-term growth", 
-                          color: "bg-primary", 
-                          icon: "🗺️" 
+                          color: "bg-sage", 
+                          icon: (
+                            <svg className="w-5 h-5 text-sage" viewBox="0 0 24 24" fill="none">
+                              <path d="M3 7l5-5 4 4 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M16 2h6v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                              <circle cx="8" cy="6" r="1.5" fill="currentColor" fillOpacity="0.4"/>
+                              <circle cx="12" cy="10" r="1.5" fill="currentColor" fillOpacity="0.4"/>
+                              <circle cx="19" cy="3" r="1.5" fill="currentColor" fillOpacity="0.4"/>
+                            </svg>
+                          )
                         }
                       ].map((item, index) => (
                         <div key={index} className="group">
-                          <div className="bg-white border border-primary/10 rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+                          <div className="bg-white border border-primary/10 rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:border-sage/30 relative overflow-hidden">
                             <div className="flex items-start gap-4">
-                              <div className={`w-10 h-10 ${item.color}/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                                <span className="text-lg">{item.icon}</span>
+                              <div className={`w-12 h-12 bg-sage/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-sage/10 transition-all duration-300 border border-sage/10`}>
+                                {item.icon}
                               </div>
                               <div className="flex-1">
                                 <h4 className="font-semibold text-primary text-sm leading-snug">{item.title}</h4>
@@ -485,7 +513,7 @@ const Offerings = () => {
                                 )}
                               </div>
                             </div>
-                            <div className={`absolute bottom-0 left-0 h-1 ${item.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
+                            <div className={`absolute bottom-0 left-0 h-1 bg-sage transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
                           </div>
                         </div>
                       ))}
