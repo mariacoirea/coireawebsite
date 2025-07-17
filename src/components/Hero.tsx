@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
 
-        <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 leading-tight">
           <span className="italic block mb-2">Transform Your</span>
           <span className="block">Organization from</span>
           <span className="block">the Inside Out</span>
@@ -51,7 +51,7 @@ const Hero = () => {
 
         <div className="flex justify-center items-center mb-16">
           <Link to="/offerings">
-            <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-12 py-4 transition-all duration-300 shadow-lg">
+            <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-8 py-4 transition-all duration-300 shadow-lg">
               Discover Our Approach
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
             </Button>
