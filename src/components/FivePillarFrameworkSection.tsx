@@ -23,7 +23,7 @@ const FivePillarFrameworkSection = () => {
 
         {/* Main Content - rebalanced typography */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-secondary max-w-5xl mx-auto">
             Sustainable growth rooted in the{' '}
             <span className="italic relative text-accent">
               5 Pillars of Regenerative
@@ -105,7 +105,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-neutral-warm text-lg mb-1" style={{ color: 'hsl(33, 35%, 60%)' }}>Collaboration</h3>
-                    <p className="text-xs font-body" style={{ color: 'hsl(33, 35%, 50%)' }}>Sacred Partnership</p>
+                    <p className="text-xs font-body" style={{ color: 'hsl(33, 35%, 50%)' }}>Aligned Teams</p>
                   </div>
                 </div>
 
