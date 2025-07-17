@@ -365,79 +365,164 @@ const Offerings = () => {
         </section>
 
         {/* Horizontal Content Block Below Dashboard */}
-        <section className="py-12 px-6" style={{ backgroundColor: '#F6F0E9' }}>
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid lg:grid-cols-3 gap-12 items-start">
+        <section className="py-16 px-6 relative overflow-hidden" style={{ backgroundColor: '#F6F0E9' }}>
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-24 h-24 bg-copper rounded-full blur-2xl"></div>
+            <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-sage rounded-full blur-xl"></div>
+          </div>
+          
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="grid lg:grid-cols-12 gap-16 items-start">
               {/* Left Column - Main Text */}
-              <div className="lg:col-span-2">
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 leading-tight">
-                  A Living System,<br />
-                  <span className="text-primary/80 italic">Not a Static Report</span>
-                </h2>
-                
-                <div className="space-y-6 text-lg text-primary/70 font-body leading-relaxed">
-                  <p className="text-xl font-medium text-primary">
-                    We merge <span className="font-bold">Organic & Artificial Intelligence</span> to track your company's evolution in real time — blending data with intuition, metrics with meaning.
-                  </p>
+              <div className="lg:col-span-7">
+                <div className="space-y-8">
+                  {/* Enhanced Title */}
+                  <div className="relative">
+                    <div className="absolute -left-4 top-0 w-1 h-20 bg-gradient-to-b from-primary to-copper rounded-full"></div>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4 leading-tight">
+                      A Living System,<br />
+                      <span className="text-primary/80 italic bg-gradient-to-r from-sage to-copper bg-clip-text text-transparent">
+                        Not a Static Report
+                      </span>
+                    </h2>
+                  </div>
                   
-                  <p>
-                    All our programs are designed as <span className="font-semibold text-primary">living systems</span>, continuously monitored through our proprietary dashboard.
-                  </p>
-                  
-                  <p>
-                    We don't just deliver experiences — we deliver <span className="font-semibold text-primary">measurable evolution</span>.
-                  </p>
-                  
-                  <div className="bg-white/60 border-l-4 border-copper p-6 rounded-r-lg shadow-sm mt-8">
-                    <p className="text-primary italic font-medium">
-                      Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
-                    </p>
+                  {/* Enhanced Content Cards */}
+                  <div className="space-y-6">
+                    <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <p className="text-xl font-medium text-primary leading-relaxed">
+                        We merge <span className="font-bold bg-primary/10 px-2 py-1 rounded-lg">Organic & Artificial Intelligence</span> to track your company's evolution in real time — blending data with intuition, metrics with meaning.
+                      </p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white/80 backdrop-blur-sm border border-sage/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-sage/40">
+                        <div className="flex items-start gap-4">
+                          <div className="w-3 h-3 bg-sage rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-primary/80 font-body">
+                            All our programs are designed as <span className="font-semibold text-primary">living systems</span>, continuously monitored through our proprietary dashboard.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white/80 backdrop-blur-sm border border-copper/20 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-copper/40">
+                        <div className="flex items-start gap-4">
+                          <div className="w-3 h-3 bg-copper rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-primary/80 font-body">
+                            We don't just deliver experiences — we deliver <span className="font-semibold text-primary">measurable evolution</span>.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Enhanced Quote Block */}
+                    <div className="relative bg-white/70 backdrop-blur-sm border-l-4 border-copper rounded-r-xl p-8 shadow-lg">
+                      <div className="absolute top-4 left-4 text-4xl text-copper/20">"</div>
+                      <p className="text-primary italic font-medium text-lg pl-8 leading-relaxed">
+                        Each transformation is tracked so we can adjust interventions, surface blind spots, and amplify breakthroughs — with data-backed precision.
+                      </p>
+                      <div className="absolute bottom-4 right-4 text-4xl text-copper/20 rotate-180">"</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column - Insight Cards */}
-              <div className="lg:col-span-1">
-                <div className="bg-white/80 border border-primary/20 rounded-xl p-6 shadow-lg mb-8">
-                  <h3 className="text-lg font-display font-bold text-primary mb-4">
-                    You'll gain real-time insight into your organization's vitality through key indicators:
-                  </h3>
+              {/* Right Column - Enhanced Insight Cards */}
+              <div className="lg:col-span-5">
+                <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                  {/* Card Header with Gradient */}
+                  <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-sage to-copper"></div>
                   
-                  <div className="space-y-4">
-                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
-                      <h4 className="font-semibold text-primary text-sm">Organizational Vitality Index (OVI)</h4>
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                      <h3 className="text-xl font-display font-bold text-primary">
+                        Real-Time Organizational Insights
+                      </h3>
                     </div>
                     
-                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
-                      <h4 className="font-semibold text-primary text-sm mb-1">Purpose, Leadership, Collaboration, Culture, and Well-Being</h4>
-                      <p className="text-xs text-primary/60">metrics</p>
-                    </div>
+                    <p className="text-primary/70 font-body mb-8 leading-relaxed">
+                      You'll gain real-time insight into your organization's vitality through key indicators:
+                    </p>
                     
-                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
-                      <h4 className="font-semibold text-primary text-sm">Check-ins, pulse data, and team sentiment</h4>
-                    </div>
-                    
-                    <div className="bg-white border border-primary/10 rounded-lg p-4 shadow-sm">
-                      <h4 className="font-semibold text-primary text-sm mb-1">Strategic evolution maps</h4>
-                      <p className="text-xs text-primary/60">for long-term growth</p>
+                    <div className="space-y-4">
+                      {[
+                        { 
+                          title: "Organizational Vitality Index (OVI)", 
+                          color: "bg-primary", 
+                          icon: "📊" 
+                        },
+                        { 
+                          title: "Purpose, Leadership, Collaboration, Culture, and Well-Being", 
+                          subtitle: "metrics", 
+                          color: "bg-sage", 
+                          icon: "🎯" 
+                        },
+                        { 
+                          title: "Check-ins, pulse data, and team sentiment", 
+                          color: "bg-copper", 
+                          icon: "💬" 
+                        },
+                        { 
+                          title: "Strategic evolution maps", 
+                          subtitle: "for long-term growth", 
+                          color: "bg-primary", 
+                          icon: "🗺️" 
+                        }
+                      ].map((item, index) => (
+                        <div key={index} className="group">
+                          <div className="bg-white border border-primary/10 rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+                            <div className="flex items-start gap-4">
+                              <div className={`w-10 h-10 ${item.color}/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                <span className="text-lg">{item.icon}</span>
+                              </div>
+                              <div className="flex-1">
+                                <h4 className="font-semibold text-primary text-sm leading-snug">{item.title}</h4>
+                                {item.subtitle && (
+                                  <p className="text-xs text-primary/60 mt-1">{item.subtitle}</p>
+                                )}
+                              </div>
+                            </div>
+                            <div className={`absolute bottom-0 left-0 h-1 ${item.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Centered CTA */}
-            <div className="flex justify-center mt-12">
-              <div className="bg-white/90 border border-primary/20 rounded-xl p-8 shadow-lg max-w-md w-full text-center">
-                <h3 className="text-xl font-display font-bold text-primary mb-4">
-                  Want to see your organization's evolution in real-time?
-                </h3>
-                <p className="text-sm text-primary/70 font-body mb-6">
-                  All offerings are tailored and tracked through our Regenerative Evolution System.
-                </p>
-                <Button className="bg-primary hover:bg-primary/90 text-white w-full shadow-md hover:shadow-lg transition-all duration-200">
-                  Begin Your Journey <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+            {/* Enhanced Centered CTA */}
+            <div className="flex justify-center mt-20">
+              <div className="bg-white/95 backdrop-blur-sm border border-primary/20 rounded-2xl p-10 shadow-2xl max-w-lg w-full text-center relative overflow-hidden group hover:shadow-3xl transition-all duration-500">
+                {/* Animated Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-sage/5 to-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="w-2 h-2 bg-primary rounded-full animate-ping"></div>
+                    <h3 className="text-2xl font-display font-bold text-primary">
+                      Ready to Evolve?
+                    </h3>
+                    <div className="w-2 h-2 bg-sage rounded-full animate-ping animation-delay-200"></div>
+                  </div>
+                  
+                  <p className="text-lg text-primary font-medium mb-2">
+                    Want to see your organization's evolution in real-time?
+                  </p>
+                  
+                  <p className="text-primary/70 font-body mb-8 leading-relaxed">
+                    All offerings are tailored and tracked through our Regenerative Evolution System.
+                  </p>
+                  
+                  <Button className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group-hover:scale-110">
+                    Begin Your Journey 
+                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
