@@ -523,33 +523,66 @@ const Offerings = () => {
               </div>
             </div>
             
-            {/* Enhanced Centered CTA */}
-            <div className="flex justify-center mt-20">
-              <div className="bg-white/95 backdrop-blur-sm border border-primary/20 rounded-2xl p-10 shadow-2xl max-w-lg w-full text-center relative overflow-hidden group hover:shadow-3xl transition-all duration-500">
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-sage/5 to-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Enhanced Integrated CTA */}
+            <div className="mt-20">
+              <div className="relative">
+                {/* Background Gradient Blob */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-sage/5 to-primary/5 rounded-3xl blur-3xl transform scale-110"></div>
                 
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-ping"></div>
-                    <h3 className="text-2xl font-display font-bold text-primary">
-                      Ready to Evolve?
-                    </h3>
-                    <div className="w-2 h-2 bg-sage rounded-full animate-ping animation-delay-200"></div>
+                <div className="relative max-w-4xl mx-auto text-center py-16 px-8">
+                  {/* Decorative Elements */}
+                  <div className="absolute top-8 left-8 w-3 h-3 bg-sage/30 rounded-full animate-pulse"></div>
+                  <div className="absolute top-12 right-12 w-2 h-2 bg-copper/40 rounded-full animate-pulse animation-delay-300"></div>
+                  <div className="absolute bottom-8 left-16 w-4 h-4 bg-primary/20 rounded-full animate-pulse animation-delay-500"></div>
+                  
+                  <div className="space-y-8">
+                    {/* Header Section */}
+                    <div className="space-y-4">
+                      <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm">
+                        <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
+                        <span className="text-primary font-medium">Ready to Transform?</span>
+                        <div className="w-2 h-2 bg-primary rounded-full animate-ping animation-delay-200"></div>
+                      </div>
+                      
+                      <h3 className="text-3xl md:text-4xl font-display font-bold text-primary leading-tight">
+                        Want to see your organization's<br />
+                        <span className="bg-gradient-to-r from-sage to-primary bg-clip-text text-transparent">
+                          evolution in real-time?
+                        </span>
+                      </h3>
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="max-w-2xl mx-auto">
+                      <p className="text-lg text-primary/80 font-body leading-relaxed mb-8">
+                        All offerings are tailored and tracked through our 
+                        <span className="font-semibold text-primary"> Regenerative Evolution System</span>.
+                      </p>
+                      
+                      {/* CTA Button with Enhanced Design */}
+                      <div className="relative inline-block group">
+                        {/* Button Glow Effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-sage to-primary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                        
+                        <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
+                          <span className="flex items-center gap-3">
+                            Begin Your Journey
+                            <div className="relative">
+                              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                              <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                            </div>
+                          </span>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Subtle Footer Note */}
+                    <div className="pt-8">
+                      <p className="text-sm text-primary/50 font-body">
+                        Join organizations already transforming with data-driven precision
+                      </p>
+                    </div>
                   </div>
-                  
-                  <p className="text-lg text-primary font-medium mb-2">
-                    Want to see your organization's evolution in real-time?
-                  </p>
-                  
-                  <p className="text-primary/70 font-body mb-8 leading-relaxed">
-                    All offerings are tailored and tracked through our Regenerative Evolution System.
-                  </p>
-                  
-                  <Button className="bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-white px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group-hover:scale-110">
-                    Begin Your Journey 
-                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Button>
                 </div>
               </div>
             </div>
