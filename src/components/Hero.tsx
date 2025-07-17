@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png";
 
 const Hero = () => {
@@ -18,7 +19,6 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent/30 rounded-full animate-pulse"></div>
         <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent-warm/40 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-accent/20 rounded-full animate-pulse delay-500"></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -60,14 +60,13 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-12 py-4 transition-all duration-300 shadow-lg">
-            Discover Our Approach
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
-          </Button>
-          <Button variant="outline" size="xl" className="text-[#4A7C7A] border-[#4A7C7A]/40 hover:bg-[#4A7C7A]/10 bg-white/20 backdrop-blur-sm rounded-full px-12 py-4 transition-all duration-300">
-            Begin the Journey
-          </Button>
+        <div className="flex justify-center items-center">
+          <Link to="/offerings">
+            <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-12 py-4 transition-all duration-300 shadow-lg">
+              Discover Our Approach
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
 
