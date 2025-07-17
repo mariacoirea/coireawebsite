@@ -68,7 +68,7 @@
 
     /* Typography Scale */
     --font-display: 'Playfair Display', serif;
-    --font-body: 'Roboto', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
