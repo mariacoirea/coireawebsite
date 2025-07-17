@@ -1,12 +1,5 @@
+import frameworkImage from "/lovable-uploads/d1c36842-f054-4e55-99c1-3123f6306fe5.png";
 import { ChevronDown } from "lucide-react";
-
-const pillarsData = [
-  { name: "Purpose", color: "#6B8D6B", shape: "rounded-t-full" },
-  { name: "Leadership", color: "#D4A574", shape: "rounded-full" },
-  { name: "Collaboration", color: "#C9A876", shape: "oval" },
-  { name: "Culture", color: "#4A7C7A", shape: "rounded-t-full" },
-  { name: "Well-Being", color: "#D4A574", shape: "lotus" }
-];
 
 const FivePillarFrameworkSection = () => {
   return (
@@ -42,104 +35,34 @@ const FivePillarFrameworkSection = () => {
         <div className="max-w-6xl mx-auto mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
             <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-body" style={{ color: '#1C4D4F' }}>
+              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
                 Every offering is anchored in COIREA's 5-Pillar Framework — <strong className="font-semibold">Purpose, Leadership, Collaboration, Culture, and Well-Being</strong> — activating organizational transformation from the inside out.
               </p>
             </div>
             
             <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-body" style={{ color: '#1C4D4F' }}>
+              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
                 Each pillar is assessed through <strong className="font-semibold">customized measurement systems</strong> — including qualitative insights, performance metrics, and well-being indicators — to ensure a data-informed, system-wide transformation journey.
               </p>
             </div>
             
             <div className="space-y-2">
-              <p className="text-lg leading-relaxed font-body" style={{ color: '#1C4D4F' }}>
+              <p className="text-lg leading-relaxed font-medium" style={{ color: '#1C4D4F' }}>
                 Trusted by visionary CEOs and HR leaders seeking to align high performance with human-centered, systemic evolution.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Integrated 5 Pillars Visual */}
-        <div className="relative bg-white/40 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-white/20">
-          {/* Decorative background pattern */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #1C4D4F 2px, transparent 2px), radial-gradient(circle at 80% 50%, #1C4D4F 2px, transparent 2px)', backgroundSize: '50px 50px' }}></div>
-          
-          <div className="relative z-10">
-            {/* Pillars Visualization */}
-            <div className="flex justify-center items-end space-x-8 mb-16 overflow-x-auto">
-              {pillarsData.map((pillar, index) => (
-                <div key={pillar.name} className="flex flex-col items-center min-w-[120px]">
-                  {/* Pillar Shape */}
-                  <div className="relative mb-8 group">
-                    {pillar.name === "Purpose" && (
-                      <div 
-                        className="w-20 h-32 rounded-t-full transition-all duration-500 group-hover:scale-105 shadow-lg"
-                        style={{ backgroundColor: pillar.color }}
-                      />
-                    )}
-                    {pillar.name === "Leadership" && (
-                      <div className="relative">
-                        <div 
-                          className="w-20 h-32 rounded-full transition-all duration-500 group-hover:scale-105 shadow-lg"
-                          style={{ backgroundColor: pillar.color }}
-                        />
-                        <div 
-                          className="absolute inset-4 rounded-full bg-white/30"
-                        />
-                      </div>
-                    )}
-                    {pillar.name === "Collaboration" && (
-                      <div 
-                        className="w-20 h-32 transition-all duration-500 group-hover:scale-105 shadow-lg"
-                        style={{ 
-                          backgroundColor: pillar.color,
-                          borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%'
-                        }}
-                      />
-                    )}
-                    {pillar.name === "Culture" && (
-                      <div 
-                        className="w-20 h-32 rounded-t-full transition-all duration-500 group-hover:scale-105 shadow-lg"
-                        style={{ backgroundColor: pillar.color }}
-                      />
-                    )}
-                    {pillar.name === "Well-Being" && (
-                      <div className="relative">
-                        <div 
-                          className="w-20 h-24 transition-all duration-500 group-hover:scale-105 shadow-lg"
-                          style={{ 
-                            backgroundColor: pillar.color,
-                            borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%'
-                          }}
-                        />
-                        <div 
-                          className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-12"
-                          style={{ 
-                            backgroundColor: pillar.color,
-                            borderRadius: '50% 50% 50% 50% / 80% 80% 20% 20%'
-                          }}
-                        />
-                        <div 
-                          className="absolute -top-4 left-1/4 w-8 h-8 rounded-full"
-                          style={{ backgroundColor: pillar.color }}
-                        />
-                        <div 
-                          className="absolute -top-4 right-1/4 w-8 h-8 rounded-full"
-                          style={{ backgroundColor: pillar.color }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                  
-                  {/* Pillar Label */}
-                  <h3 className="text-xl font-display font-semibold text-center" style={{ color: '#1C4D4F' }}>
-                    {pillar.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
+        {/* Framework Image - enhanced presentation */}
+        <div className="flex justify-center">
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+            <img 
+              src={frameworkImage}
+              alt="5 Pillars Framework - Purpose, Leadership, Collaboration, Culture, Well-Being"
+              className="relative w-full max-w-5xl rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-white/20"
+            />
           </div>
         </div>
       </div>
