@@ -741,21 +741,11 @@ const Offerings = () => {
               ))}
             </div>
 
-            {/* Central Call to Action */}
+            {/* Transition Text */}
             <div className="text-center">
-              <div className="max-w-3xl mx-auto mb-8">
-                <p className="text-lg text-muted-foreground font-body leading-relaxed mb-4">
-                  All offerings are co-created based on your organization's needs and stage of evolution.
-                </p>
-                <p className="text-base text-muted-foreground/80 font-body leading-relaxed">
-                  Share your context and let's explore how we can support your next phase.
-                </p>
-              </div>
-              
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group px-8 py-4">
-                Begin Your Journey
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                All offerings are co-created based on your organization's needs and stage of evolution.
+              </p>
             </div>
           </div>
         </section>
