@@ -4,7 +4,7 @@ import { ArrowRight, TrendingUp, Users, Heart } from "lucide-react";
 
 const TestimonialsSection = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-background to-muted/30">
+    <section className="relative py-20 md:py-28" style={{ backgroundColor: '#F0E6D6' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
