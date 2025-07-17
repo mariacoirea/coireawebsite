@@ -1,14 +1,23 @@
 import frameworkImage from "/lovable-uploads/d1c36842-f054-4e55-99c1-3123f6306fe5.png";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, TreePine, Flower2, Mountain, Waves, Sun } from "lucide-react";
 
 const FivePillarFrameworkSection = () => {
   return (
-    <section className="py-40 relative overflow-hidden bg-gradient-to-b from-neutral-warm/30 to-background">
-      {/* Subtle sacred geometry background pattern - softened */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent))_0%,transparent_50%)] opacity-20 blur-3xl"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--secondary))_0%,transparent_50%)] opacity-20 blur-3xl"></div>
+    <section className="py-40 relative overflow-hidden bg-gradient-earth">
+      {/* Sacred temple elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-8">
+        <div className="absolute top-10 left-10">
+          <Mountain className="w-20 h-20 text-primary animate-pulse" style={{ animationDuration: '8s' }} />
+        </div>
+        <div className="absolute top-20 right-20">
+          <TreePine className="w-16 h-16 text-accent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        </div>
+        <div className="absolute bottom-20 left-20">
+          <Waves className="w-18 h-18 text-secondary animate-pulse" style={{ animationDuration: '7s', animationDelay: '1s' }} />
+        </div>
+        <div className="absolute bottom-10 right-10">
+          <Sun className="w-14 h-14 text-accent animate-pulse" style={{ animationDuration: '5s', animationDelay: '3s' }} />
+        </div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
