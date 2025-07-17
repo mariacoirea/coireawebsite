@@ -59,23 +59,15 @@
     /* Design Elements */
     --radius: 0.75rem;
 
-    /* Enhanced Gradients for Temple Aesthetic */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
-    --gradient-warm: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-    --gradient-nature: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%);
-    --gradient-sanctuary: linear-gradient(45deg, hsl(var(--neutral-warm)) 0%, hsl(var(--muted)) 50%, hsl(var(--background)) 100%);
-    --gradient-earth: linear-gradient(180deg, hsl(var(--accent) / 0.1) 0%, hsl(var(--neutral-warm) / 0.2) 100%);
-    
-    /* Enhanced Shadows for Depth */
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--neutral-warm)) 0%, hsl(var(--background)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-warm)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--neutral-warm)) 100%);
+
+    /* Shadows */
     --shadow-soft: 0 4px 20px -8px hsl(var(--primary) / 0.15);
     --shadow-elegant: 0 8px 40px -12px hsl(var(--primary) / 0.2);
     --shadow-warm: 0 6px 30px -10px hsl(var(--accent) / 0.3);
-    --shadow-sanctuary: 0 20px 40px -10px hsl(var(--primary) / 0.15);
-    
-    /* Sacred Geometry & Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-gentle: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Typography Scale */
     --font-display: 'Playfair Display', serif;

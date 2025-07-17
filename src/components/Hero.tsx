@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, TreePine, Leaf, Flower } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png";
 
@@ -9,32 +9,12 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden py-20"
       style={{
-        background: `linear-gradient(135deg, 
-          rgba(28, 77, 79, 0.05) 0%, 
-          rgba(91, 108, 73, 0.08) 30%, 
-          rgba(181, 109, 78, 0.06) 60%, 
-          rgba(233, 212, 192, 0.1) 100%), 
-          url(${heroImage})`,
+        backgroundImage: `linear-gradient(135deg, rgba(210, 195, 175, 0.4) 0%, rgba(225, 215, 200, 0.3) 100%), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Sacred geometry background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 opacity-10">
-          <TreePine className="w-16 h-16 text-primary animate-pulse" style={{ animationDuration: '4s' }} />
-        </div>
-        <div className="absolute top-40 right-20 opacity-15">
-          <Leaf className="w-12 h-12 text-accent animate-pulse" style={{ animationDuration: '3s', animationDelay: '1s' }} />
-        </div>
-        <div className="absolute bottom-40 left-20 opacity-12">
-          <Flower className="w-14 h-14 text-primary-light animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }} />
-        </div>
-        <div className="absolute bottom-60 right-10 opacity-10">
-          <Sparkles className="w-10 h-10 text-accent animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-        </div>
-      </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
 
