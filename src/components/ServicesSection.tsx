@@ -6,10 +6,10 @@ import { ArrowRight, Users, Building, Lightbulb, Target, Star } from "lucide-rea
 const coreOffering = {
   icon: Building,
   title: "Organizational Transformation",
-  description: "Comprehensive restructuring of systems, culture, and leadership for sustainable growth.",
-  features: ["Strategic Alignment", "Leadership Development", "Culture Design", "Change Management"],
+  description: "Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.",
+  features: ["Strategic Alignment", "Culture Architecture", "Conscious Leadership", "Change Implementation"],
   duration: "6–18 months",
-  type: "Long-Term Program",
+  type: "Long-Term Partnership",
   isSignature: true
 };
 
@@ -18,45 +18,45 @@ const shortTermOfferings = [
   {
     icon: Users,
     title: "Team Retreats & Workshops",
-    description: "Cohesive, high-impact experiences for trust, clarity, and aligned collaboration",
-    features: ["Team Building", "Vision Alignment", "Conflict Resolution", "Collaborative Tools"],
+    description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence.",
+    features: ["Team Bonding", "Vision Activation", "Conflict Healing", "Creative Co-Creation Tools"],
     duration: "2–5 days",
-    type: "Intensive Experience"
+    type: "Immersive Experiences"
   },
   {
     icon: Lightbulb,
     title: "Leadership Coaching",
-    description: "One-on-one support for regenerative, values-led leadership",
-    features: ["Executive Coaching", "Conscious Leadership", "Authentic Communication", "Decision-Making"],
+    description: "Deep inner work for executives & emerging leaders ready to lead with authenticity, alignment, and regenerative presence.",
+    features: ["Executive Presence", "Conscious Decision-Making", "Embodied Communication", "Inner Alignment"],
     duration: "3–12 months",
-    type: "Personal Development"
+    type: "1:1 Guidance"
   },
   {
     icon: Target,
     title: "Regenerative Strategy Consulting",
-    description: "Aligning purpose, performance, and planetary well-being into your strategy",
-    features: ["Purpose Integration", "Performance Optimization", "Well-being Strategies", "Future Planning"],
-    duration: "Project-based",
-    type: "Strategic Support"
+    description: "Strategy rooted in soul and sustainability — integrating purpose, performance, and well-being into long-term business design.",
+    features: ["Purpose Integration", "Future Planning", "Performance Systems", "Regenerative Metrics"],
+    duration: "Duration flexible",
+    type: "Project-Based Engagement"
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-neutral-warm">
+    <section id="services" className="py-24" style={{ backgroundColor: '#F6F0E9' }}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-            Our Transformational Offerings
+            Transformational Offerings for Regenerative Growth
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-            Comprehensive pathways for regenerative business evolution
+            We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
           </p>
 
           <p className="text-lg text-muted-foreground/80 font-body max-w-4xl mx-auto mb-8">
-            Whether you're starting small or ready for deep transformation, each of our services is custom-designed to meet your team where they are — and guide them where they're meant to grow.
+            Whether you're redesigning your entire organizational architecture or starting with a team-building retreat, our offerings are intentionally crafted to restore coherence, vitality, and purpose in your company.
           </p>
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
@@ -172,12 +172,18 @@ const ServicesSection = () => {
         {/* Central Call to Action */}
         <div className="text-center">
           <div className="max-w-3xl mx-auto mb-8">
-            <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
-              Begin Your Journey
-            </h3>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              All of our offerings are tailored to your organization's unique needs. Fill out the form and we'll co-create the right solution together.
-            </p>
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <span className="text-2xl">💫</span>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                All offerings are co-created based on your organization's needs and stage of evolution.
+              </p>
+            </div>
+            <div className="flex items-center justify-center space-x-2 mb-6">
+              <span className="text-xl">👉</span>
+              <p className="text-base text-muted-foreground/80 font-body leading-relaxed">
+                Share your context and let's explore how we can support your next phase.
+              </p>
+            </div>
           </div>
           
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group px-8 py-4">

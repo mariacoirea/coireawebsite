@@ -41,6 +41,9 @@
     /* Warm Sand - Neutral */
     --neutral-warm: 33 35% 83%;
     --neutral-cool: 180 15% 75%;
+    
+    /* Edenic Beige - Soft background */
+    --edenic-beige: 38 29% 95%;
 
     /* Status Colors */
     --destructive: 0 65% 55%;
