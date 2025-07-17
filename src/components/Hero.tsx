@@ -15,19 +15,8 @@ const Hero = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent-warm/40 rounded-full animate-pulse delay-1000"></div>
-      </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        {/* Decorative element */}
-        <div className="flex items-center justify-center mb-8">
-          <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-accent/30">
-            <Sparkles className="w-8 h-8 text-accent" />
-          </div>
-        </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 leading-tight">
           <span className="italic block mb-2">Transform Your</span>
@@ -60,7 +49,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mb-16">
           <Link to="/offerings">
             <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-12 py-4 transition-all duration-300 shadow-lg">
               Discover Our Approach
