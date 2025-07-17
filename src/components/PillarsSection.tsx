@@ -42,13 +42,6 @@ const PillarsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
-              <div className="w-6 h-6 rounded-full border-2 border-primary-foreground/40 flex items-center justify-center">
-                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-              </div>
-            </div>
-          </div>
           
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
             The Structural Foundations of
