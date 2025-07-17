@@ -21,38 +21,35 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Main Content - rebalanced typography */}
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-16 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
-            Sustainable growth rooted in the{' '}
-            <span className="italic relative text-accent">
-              5 Pillars of Regenerative
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
-            </span>{' '}
-            Transformation.
-          </h2>
+        {/* 1. Headline Block (H1 + H2) */}
+        <div className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
+            We Don't Offer Quick Fixes —{' '}
+            <br className="hidden md:block" />
+            We Lead Systemic Transformation
+          </h1>
+          
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl leading-[1.6] font-body text-primary/80 mb-4">
+              COIREA partners with conscious founders and leadership teams to evolve their businesses as living, regenerative systems.
+            </p>
+            <p className="text-lg leading-[1.7] font-body text-primary/70">
+              We help organizations rebuild from the inside out — with clarity, trust, cultural coherence, and long-term vision.
+            </p>
+          </div>
         </div>
 
-        {/* Supporting Text - equal width columns with proper spacing */}
-        <div className="max-w-7xl mx-auto mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
-            <div className="px-4">
-              <p className="text-lg leading-[1.7] font-body text-primary/90">
-                Every offering is anchored in COIREA's 5-Pillar Framework — <strong className="font-semibold text-primary">Purpose, Leadership, Collaboration, Culture, and Well-Being</strong> — activating organizational transformation from the inside out.
-              </p>
-            </div>
-            
-            <div className="px-4">
-              <p className="text-lg leading-[1.7] font-body text-primary/90">
-                Each pillar is assessed through <strong className="font-semibold text-primary">customized measurement systems</strong> — including qualitative insights, performance metrics, and well-being indicators — to ensure a data-informed, system-wide transformation journey.
-              </p>
-            </div>
-            
-            <div className="px-4">
-              <p className="text-lg leading-[1.7] font-body text-primary/90">
-                Trusted by visionary CEOs and HR leaders seeking to align high performance with human-centered, systemic evolution.
-              </p>
-            </div>
+        {/* 2. 5-Pillar Framework Intro (H3) */}
+        <div className="text-center mb-16">
+          <h3 className="text-3xl md:text-4xl font-display font-semibold mb-6 text-primary">
+            The COIREA 5-Pillar Framework:{' '}
+            <span className="italic text-accent">Real Strategy, Human Depth.</span>
+          </h3>
+          
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg leading-[1.7] font-body text-primary/80">
+              Our proprietary framework realigns the foundational systems of your organization — merging purpose, culture, leadership, and well-being into a strategy that grows with you.
+            </p>
           </div>
         </div>
 
