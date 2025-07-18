@@ -13,13 +13,13 @@ const About = () => {
         <section 
           className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
+            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.85) 0%, rgba(246, 240, 233, 0.8) 30%, rgba(255, 255, 255, 0.6) 70%, rgba(250, 248, 246, 0.7) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-aura-pearl/20 via-transparent to-primary/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-aura-pearl/40 to-warm-beige/30"></div>
           
           {/* Subtle decorative elements for visual consistency */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
@@ -31,12 +31,12 @@ const About = () => {
               <span className="text-primary font-medium">About COIREA</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-foreground mb-8 leading-tight drop-shadow-md">
               We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
               <span className="block mt-4">from the inside out.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
+            <p className="text-xl md:text-2xl text-foreground/90 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-md">
               COIREA equips purpose-driven organizations with the frameworks, tools, and insight to build regenerative, high-performing systems that thrive in complexity.
             </p>
 
