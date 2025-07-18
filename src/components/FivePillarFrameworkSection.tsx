@@ -21,59 +21,6 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Merged Headline and Framework Introduction */}
-        <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
-            We Don't Offer Quick Fixes —{' '}
-            <br className="hidden md:block" />
-            We Lead Systemic Transformation
-          </h1>
-          
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl leading-[1.6] font-body text-primary/80 mb-6">
-              Rooted in Regenerative Intelligence and Conscious Leadership, we partner with visionary founders to 
-              evolve from the inside out — rebuilding their inner foundations for sustainable, long-term growth.
-            </p>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6 text-primary">
-            Our proprietary{' '}
-            <span className="italic text-accent">5-Pillar Framework</span>{' '}
-            combines systems diagnostics, Organic Intelligence, and data-backed insights to drive 
-            structural renewal and measurable transformation.
-          </h2>
-          
-          <div className="max-w-4xl mx-auto mt-12">
-            <p className="text-lg leading-[1.7] font-body text-primary/80 mb-8">
-              At the heart of every transformation lies this 5-dimensional approach. 
-              COIREA's 5-Pillar Framework merges the foundational elements that enable leadership teams to:
-            </p>
-            
-            {/* What the Framework Enables */}
-            <div className="text-left max-w-3xl mx-auto space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Cultivate purpose-driven clarity and renewed focus</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Strengthen leadership accountability across levels</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Build adaptive, high-performing, and connected teams</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Unlock culture as a strategic asset</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Integrate well-being into the core business rhythm</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Soft divider */}
         <div className="flex justify-center mb-16">
