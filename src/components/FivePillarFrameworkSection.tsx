@@ -6,22 +6,23 @@ const FivePillarFrameworkSection = () => {
     <section className="py-40 relative overflow-hidden bg-gradient-to-b from-neutral-warm/20 via-background/95 to-background">
       {/* Organic mountain landscape background */}
       <div className="absolute inset-0">
-        {/* Layered mountain silhouettes with organic curves */}
-        <div className="absolute bottom-0 left-0 w-full h-2/5 bg-gradient-to-t from-primary/8 via-primary/4 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-4/5 h-1/3 bg-gradient-to-t from-secondary/6 via-secondary/3 to-transparent rounded-tl-[100px]"></div>
-        <div className="absolute bottom-0 left-1/4 w-3/5 h-1/4 bg-gradient-to-t from-accent/5 to-transparent rounded-tr-[80px]"></div>
+        {/* Layered mountain silhouettes with organic curves - more visible */}
+        <div className="absolute bottom-0 left-0 w-full h-2/5 bg-gradient-to-t from-primary/20 via-primary/10 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-4/5 h-1/3 bg-gradient-to-t from-secondary/15 via-secondary/8 to-transparent rounded-tl-[120px]"></div>
+        <div className="absolute bottom-0 left-1/4 w-3/5 h-1/4 bg-gradient-to-t from-accent/12 via-accent/6 to-transparent rounded-tr-[100px]"></div>
+        <div className="absolute bottom-0 right-1/3 w-2/5 h-1/5 bg-gradient-to-t from-neutral-warm/18 via-neutral-warm/9 to-transparent rounded-tl-[80px]"></div>
         
-        {/* Flowing organic shapes that blend with mountains */}
-        <div className="absolute top-1/3 left-0 w-2/3 h-1/2 bg-[radial-gradient(ellipse_90%_60%_at_30%_70%,hsl(var(--primary))_0%,transparent_70%)] opacity-12 blur-3xl transform rotate-12"></div>
-        <div className="absolute top-1/4 right-0 w-1/2 h-2/5 bg-[radial-gradient(ellipse_80%_50%_at_70%_60%,hsl(var(--secondary))_0%,transparent_65%)] opacity-10 blur-2xl transform -rotate-6"></div>
+        {/* Flowing organic shapes that blend with mountains - enhanced */}
+        <div className="absolute top-1/3 left-0 w-2/3 h-1/2 bg-[radial-gradient(ellipse_90%_60%_at_30%_70%,hsl(var(--primary))_0%,transparent_70%)] opacity-25 blur-3xl transform rotate-12"></div>
+        <div className="absolute top-1/4 right-0 w-1/2 h-2/5 bg-[radial-gradient(ellipse_80%_50%_at_70%_60%,hsl(var(--secondary))_0%,transparent_65%)] opacity-20 blur-2xl transform -rotate-6"></div>
         
-        {/* Soft flowing mist/cloud effects */}
-        <div className="absolute top-2/5 left-1/3 w-1/2 h-1/4 bg-[radial-gradient(ellipse_70%_40%_at_50%_80%,hsl(var(--neutral-warm))_0%,transparent_60%)] opacity-8 blur-xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-1/3 h-1/5 bg-[radial-gradient(ellipse_60%_30%_at_40%_70%,hsl(var(--accent))_0%,transparent_50%)] opacity-6 blur-xl"></div>
+        {/* Soft flowing mist/cloud effects - more visible */}
+        <div className="absolute top-2/5 left-1/3 w-1/2 h-1/4 bg-[radial-gradient(ellipse_70%_40%_at_50%_80%,hsl(var(--neutral-warm))_0%,transparent_60%)] opacity-15 blur-xl"></div>
+        <div className="absolute top-1/2 right-1/4 w-1/3 h-1/5 bg-[radial-gradient(ellipse_60%_30%_at_40%_70%,hsl(var(--accent))_0%,transparent_50%)] opacity-12 blur-xl"></div>
         
-        {/* Subtle horizon lines with organic curves */}
-        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-secondary/10 to-transparent transform rotate-1"></div>
+        {/* Subtle horizon lines with organic curves - enhanced */}
+        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent transform rotate-1"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
