@@ -23,11 +23,6 @@ const FivePillarFrameworkSection = () => {
 
         {/* Merged Headline and Framework Introduction */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 leading-[1.15] tracking-tight text-primary max-w-5xl mx-auto">
-            We Don't Offer Quick Fixes —{' '}
-            <br className="hidden md:block" />
-            We Lead Systemic Transformation
-          </h1>
           
 
           <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6 text-primary">
