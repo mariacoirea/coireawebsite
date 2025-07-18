@@ -13,36 +13,38 @@ const About = () => {
         <section 
           className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
+            backgroundImage: `linear-gradient(135deg, rgba(59, 108, 73, 0.75) 0%, rgba(46, 77, 76, 0.65) 30%, rgba(28, 46, 38, 0.55) 70%, rgba(18, 43, 52, 0.7) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-aura-pearl/20 via-transparent to-primary/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-olive-green/20 to-primary/40"></div>
           
           {/* Subtle decorative elements for visual consistency */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
           
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
-            <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
+            <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30 shadow-lg mb-8">
               <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
               <span className="text-primary font-medium">About COIREA</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-white mb-8 leading-tight drop-shadow-lg" 
+                style={{ textShadow: '2px 4px 12px rgba(0,0,0,0.6), 1px 2px 4px rgba(0,0,0,0.4)' }}>
               We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
               <span className="block mt-4">from the inside out.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
+            <p className="text-xl md:text-2xl text-white/95 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-lg"
+               style={{ textShadow: '1px 2px 8px rgba(0,0,0,0.5), 0px 1px 3px rgba(0,0,0,0.3)' }}>
               COIREA equips purpose-driven organizations with the frameworks, tools, and insight to build regenerative, high-performing systems that thrive in complexity.
             </p>
 
             {/* Logo with enhanced backdrop */}
             <div className="flex items-center justify-center mb-12">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft border border-primary/10">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-elegant border border-white/20">
                 <img 
                   src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
                   alt="COIREA Logo" 
