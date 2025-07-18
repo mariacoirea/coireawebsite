@@ -38,7 +38,7 @@ const FivePillarFrameworkSection = () => {
         {/* Section Title */}
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-display font-semibold mb-6 text-primary">
-            We Don't Build Static Structures —{' '}
+            🔄 We Don't Build Static Structures —{' '}
             <span className="block mt-2">We Design Living Frameworks for Regenerative Business</span>
           </h1>
           
