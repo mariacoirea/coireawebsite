@@ -13,7 +13,7 @@ const About = () => {
         <section 
           className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
+            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/d89caa92-390e-4cf9-af31-68c88044077a.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed'
