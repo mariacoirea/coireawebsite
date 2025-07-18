@@ -275,20 +275,20 @@ const About = () => {
         </section>
 
         {/* Enhanced CTA Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-primary to-sage">
+        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
           <div className="container mx-auto max-w-6xl text-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-                <h2 className="text-4xl md:text-6xl font-display font-semibold text-white mb-8 leading-tight">
-                  Ready to evolve your <span className="italic">organization?</span>
+              <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
+              <div className="relative bg-white/40 backdrop-blur-sm rounded-3xl p-12 border border-primary/20 shadow-elegant">
+                <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
+                  Ready to evolve your <span className="italic text-sage">organization?</span>
                 </h2>
                 
-                <p className="text-xl text-white/90 font-body mb-12 max-w-3xl mx-auto">
+                <p className="text-xl text-primary/80 font-body mb-12 max-w-3xl mx-auto">
                   Begin your transformation journey with COIREA's regenerative approach to organizational evolution.
                 </p>
                 
-                <Button className="bg-white text-primary hover:bg-white/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
+                <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
                   Begin the Journey
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
