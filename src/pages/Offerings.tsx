@@ -186,22 +186,22 @@ const Offerings = () => {
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             {/* Pillar Icons Horizontal Display - Equal Size */}
-            <div className="flex justify-center items-center gap-6 md:gap-8 mb-20">
+            <div className="grid grid-cols-5 gap-6 mb-20">
               {pillars.map((pillar, index) => {
                 const IconComponent = pillar.icon;
                 return (
-                  <div key={index} className="text-center group cursor-pointer flex-1 max-w-[160px]">
-                    <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${
+                  <div key={index} className="text-center group cursor-pointer">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${
                       pillar.color === 'text-olive-green' ? 'from-olive-green/20 to-olive-green' : 
                       pillar.color === 'text-sage' ? 'from-sage/20 to-sage' :
                       pillar.color === 'text-copper' ? 'from-copper/20 to-copper' :
                       'from-primary/20 to-primary'
                     } rounded-2xl mb-4 group-hover:scale-105 transition-all duration-300 shadow-lg relative overflow-hidden mx-auto flex items-center justify-center`}>
                       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/10"></div>
-                      <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-white relative z-10" />
+                      <IconComponent className="w-8 h-8 text-white relative z-10" />
                     </div>
-                    <p className="text-sm md:text-base font-display font-semibold text-primary mb-2">{pillar.title}</p>
-                    <p className="text-xs md:text-sm text-muted-foreground font-body leading-tight">{pillar.description}</p>
+                    <p className="text-base font-display font-semibold text-primary mb-2">{pillar.title}</p>
+                    <p className="text-sm text-muted-foreground font-body leading-tight">{pillar.description}</p>
                   </div>
                 );
               })}
@@ -461,26 +461,26 @@ const Offerings = () => {
               </Card>
             </div>
 
-            {/* Other Offerings Grid */}
+            {/* Other Offerings Grid - Fixed Alignment */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {offerings.slice(1).map((offering, index) => {
                 const IconComponent = offering.icon;
                 return (
-                  <Card key={offering.id} className="p-6 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                  <Card key={offering.id} className="p-6 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden h-full flex flex-col">
                     {/* Badge */}
                     <div className="absolute top-4 right-4">
-                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 rounded-full`}>
+                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 rounded-full whitespace-nowrap`}>
                         {offering.badge}
                       </span>
                     </div>
 
                     {/* Header */}
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className={`w-12 h-12 bg-${offering.accent}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="flex items-start space-x-3 mb-4 pr-20">
+                      <div className={`w-12 h-12 bg-${offering.accent}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                         <IconComponent className={`w-6 h-6 text-${offering.accent}`} />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-display font-semibold text-primary group-hover:text-primary-light transition-colors">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-display font-semibold text-primary group-hover:text-primary-light transition-colors leading-tight mb-1">
                           {offering.title}
                         </h3>
                         <p className="text-sm text-muted-foreground">{offering.duration}</p>
@@ -488,19 +488,19 @@ const Offerings = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed mb-4 text-sm">
+                    <p className="text-muted-foreground font-body leading-relaxed mb-6 text-sm flex-grow">
                       {offering.description}
                     </p>
 
                     {/* Features */}
-                    <div>
+                    <div className="mt-auto">
                       <h4 className="text-xs font-body font-semibold text-primary mb-3 uppercase tracking-wide">
                         Key Areas
                       </h4>
                       <div className="space-y-2">
                         {offering.keyAreas.map((area, idx) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <div className={`w-1.5 h-1.5 bg-${offering.accent} rounded-full`}></div>
+                            <div className={`w-1.5 h-1.5 bg-${offering.accent} rounded-full flex-shrink-0`}></div>
                             <span className="text-xs text-foreground/80 font-body">{area}</span>
                           </div>
                         ))}
@@ -510,65 +510,41 @@ const Offerings = () => {
                 );
               })}
             </div>
+          </div>
+        </section>
 
-            {/* Enhanced CTA Section */}
-            <div className="mt-20 text-center">
-              <div className="relative max-w-4xl mx-auto py-16 px-8">
+        {/* Combined CTA and Contact Form Section */}
+        <section className="py-24 px-6 bg-warm-beige">
+          <div className="container mx-auto max-w-4xl">
+            {/* Enhanced CTA Header */}
+            <div className="text-center mb-16">
+              <div className="relative max-w-4xl mx-auto py-8 px-8">
                 {/* Background Elements */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-sage/5 to-primary/5 rounded-3xl blur-3xl transform scale-110"></div>
                 
-                <div className="relative space-y-8">
+                <div className="relative space-y-6">
                   <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm">
                     <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
                     <span className="text-primary font-medium">Ready to Transform?</span>
                     <div className="w-2 h-2 bg-primary rounded-full animate-ping animation-delay-200"></div>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-display font-bold text-primary leading-tight">
-                    Want to see your organization's<br />
+                  <h2 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight">
+                    Let's Explore Your<br />
                     <span className="bg-gradient-to-r from-sage to-primary bg-clip-text text-transparent">
-                      evolution in real-time?
+                      Transformation Journey
                     </span>
-                  </h3>
+                  </h2>
                   
                   <p className="text-lg text-primary/80 font-body leading-relaxed max-w-2xl mx-auto">
-                    All offerings are tailored and tracked through our 
+                    Ready to begin? Share your vision and challenges with us, and we'll craft a path forward that honors your organization's unique evolution. All offerings are tailored and tracked through our 
                     <span className="font-semibold text-primary"> Regenerative Evolution System</span>.
-                  </p>
-                  
-                  {/* CTA Button */}
-                  <div className="relative inline-block group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-sage to-primary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
-                    
-                    <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                      <span className="flex items-center gap-3">
-                        Begin Your Journey
-                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </span>
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-primary/50 font-body">
-                    Join organizations already transforming with data-driven precision
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Contact Form Section */}
-        <section className="py-24 px-6 bg-warm-beige">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
-                Let's Explore Your Transformation Journey
-              </h2>
-              <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-                Ready to begin? Share your vision and challenges with us, and we'll craft a path forward that honors your organization's unique evolution.
-              </p>
-            </div>
-
+            {/* Contact Form */}
             <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-xl">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -639,15 +615,24 @@ const Offerings = () => {
                 </div>
 
                 <div className="text-center pt-4">
-                  <Button className="bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                    <span className="flex items-center gap-2">
-                      <Send className="w-5 h-5" />
-                      Send Message
-                    </span>
-                  </Button>
+                  <div className="relative inline-block group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-sage to-primary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
+                      <span className="flex items-center gap-3">
+                        <Send className="w-5 h-5" />
+                        Begin Your Journey
+                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </Button>
+                  </div>
                   
                   <p className="text-sm text-muted-foreground mt-4">
                     We'll respond within 24 hours to begin our conversation.
+                  </p>
+                  
+                  <p className="text-sm text-primary/50 font-body mt-2">
+                    Join organizations already transforming with data-driven precision
                   </p>
                 </div>
               </form>
