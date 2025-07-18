@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target } from "lucide-react";
 
 const About = () => {
   return (
@@ -46,28 +47,48 @@ const About = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Regenerative business strategy
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Leaf className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Regenerative business strategy
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">rooted in natural intelligence</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Conscious leadership capacity
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Conscious leadership capacity
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">embedded across all layers</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Organizational coherence
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Organizational coherence
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">of purpose, systems, and structure</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Well-being as a foundational pillar
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Well-being as a foundational pillar
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">for sustainable performance</p>
               </div>
             </div>
@@ -88,34 +109,59 @@ const About = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Clarity of Purpose
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Clarity of Purpose
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">Design begins with strategic intention.</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Human-Centered Systems
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <TreePine className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Human-Centered Systems
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">People shape performance.</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Reciprocity as Strategy
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Compass className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Reciprocity as Strategy
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">Regenerative rhythms build sustainable value.</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Leadership with Integrity
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Lightbulb className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Leadership with Integrity
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">Authentic leadership drives real results.</p>
               </div>
-              <div className="bg-card rounded-2xl p-8 shadow-soft md:col-span-2 lg:col-span-1">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  Coherence at Every Level
-                </h3>
+              <div className="bg-card rounded-2xl p-8 shadow-soft md:col-span-2 lg:col-span-1 group hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-primary">
+                    Coherence at Every Level
+                  </h3>
+                </div>
                 <p className="text-foreground/70 font-body">When the inner aligns with the outer, transformation lasts.</p>
               </div>
             </div>
