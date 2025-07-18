@@ -164,123 +164,44 @@ const Offerings = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Hero Section with Nature-Inspired Background */}
-        <section className="relative py-32 px-6 overflow-hidden bg-gradient-nature">
-          {/* Nature-Inspired Background Elements */}
-          <div className="absolute inset-0">
-            {/* Mountain Silhouettes */}
-            <div className="absolute bottom-0 left-0 w-full h-64">
-              <svg viewBox="0 0 1200 400" className="absolute bottom-0 w-full h-full">
-                {/* Back Mountains */}
-                <path 
-                  d="M0,400 L0,300 Q150,200 300,250 Q450,300 600,220 Q750,140 900,180 Q1050,220 1200,160 L1200,400 Z" 
-                  fill="hsl(var(--olive-green) / 0.15)"
-                />
-                {/* Middle Mountains */}
-                <path 
-                  d="M0,400 L0,350 Q200,280 400,320 Q600,360 800,300 Q1000,240 1200,280 L1200,400 Z" 
-                  fill="hsl(var(--olive-green) / 0.25)"
-                />
-                {/* Front Mountains */}
-                <path 
-                  d="M0,400 L0,380 Q300,340 600,370 Q900,400 1200,350 L1200,400 Z" 
-                  fill="hsl(var(--olive-green) / 0.35)"
-                />
-              </svg>
-            </div>
-
-            {/* Organic Flowing Shapes */}
-            <div className="absolute top-20 right-10 w-96 h-96 opacity-10">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <path 
-                  d="M50,100 C50,50 70,30 100,50 C130,30 150,50 150,100 C150,150 130,170 100,150 C70,170 50,150 50,100 Z" 
-                  fill="hsl(var(--sage))"
-                  className="animate-pulse"
-                />
-              </svg>
-            </div>
-
-            <div className="absolute top-40 left-20 w-64 h-64 opacity-10">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <path 
-                  d="M100,20 C140,40 160,80 140,120 C120,160 80,180 40,160 C20,140 20,100 40,80 C60,40 80,20 100,20 Z" 
-                  fill="hsl(var(--copper))"
-                  className="animate-pulse"
-                  style={{ animationDelay: '1s' }}
-                />
-              </svg>
-            </div>
-
-            {/* Leaf-like Patterns */}
-            <div className="absolute top-32 right-32 opacity-20">
-              <svg width="60" height="80" viewBox="0 0 60 80">
-                <path 
-                  d="M30,5 C45,15 55,35 50,55 C45,75 30,80 30,80 C30,80 15,75 10,55 C5,35 15,15 30,5 Z" 
-                  fill="hsl(var(--olive-green))"
-                />
-                <path 
-                  d="M30,10 L30,75" 
-                  stroke="hsl(var(--olive-green) / 0.5)" 
-                  strokeWidth="1"
-                />
-              </svg>
-            </div>
-
-            <div className="absolute bottom-32 left-32 opacity-20 transform rotate-45">
-              <svg width="40" height="60" viewBox="0 0 40 60">
-                <path 
-                  d="M20,5 C30,10 35,25 32,40 C29,55 20,60 20,60 C20,60 11,55 8,40 C5,25 10,10 20,5 Z" 
-                  fill="hsl(var(--sage))"
-                />
-              </svg>
-            </div>
-
-            {/* Soft Horizon Line */}
-            <div className="absolute bottom-16 left-0 w-full h-px bg-gradient-to-r from-transparent via-olive-green/30 to-transparent"></div>
-          </div>
-
-          {/* Content */}
-          <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-12 leading-[1.1]">
-                We Don't Build Static Structures —<br />
-                <span className="italic text-olive-green/80">We Design Living Frameworks for Regenerative Business</span>
-              </h1>
-              
-              <div className="max-w-5xl mx-auto space-y-8">
-                <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed">
-                  At the core of COIREA's work lies a dynamic framework that evolves with your company. 
-                  Our 5-Pillar System restores clarity, coherence, and long-term vitality from the inside out.
-                </p>
-              </div>
-              
-              <div className="w-32 h-1 bg-copper mx-auto rounded-full mt-12"></div>
-            </div>
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto px-6 text-center max-w-6xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-8 leading-tight">
+              We Don't Offer Quick Fixes —
+              <br />
+              <span className="text-olive-green">We Rewire Organizations from the Inside Out</span>
+            </h1>
+            <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
+              At the core of COIREA's work lies a dynamic framework that evolves with your company. 
+              Our 5-Pillar System restores clarity, coherence, and long-term vitality from the inside out.
+            </p>
+            <Button size="lg" className="bg-olive-green hover:bg-olive-green/90 text-white px-8 py-4 text-lg">
+              Discover Your Path Forward
+            </Button>
           </div>
         </section>
 
         {/* 5-Pillar Framework Section */}
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
-            {/* Pillar Icons Horizontal Display */}
-            <div className="flex justify-center items-end gap-6 md:gap-8 mb-20">
+            {/* Pillar Icons Horizontal Display - Equal Size */}
+            <div className="flex justify-center items-center gap-6 md:gap-8 mb-20">
               {pillars.map((pillar, index) => {
                 const IconComponent = pillar.icon;
                 return (
-                  <div key={index} className="text-center group cursor-pointer">
-                    <div className={`w-12 h-24 md:w-16 md:h-32 bg-gradient-to-t ${
+                  <div key={index} className="text-center group cursor-pointer flex-1 max-w-[160px]">
+                    <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${
                       pillar.color === 'text-olive-green' ? 'from-olive-green/20 to-olive-green' : 
                       pillar.color === 'text-sage' ? 'from-sage/20 to-sage' :
                       pillar.color === 'text-copper' ? 'from-copper/20 to-copper' :
                       'from-primary/20 to-primary'
-                    } rounded-t-full mb-4 group-hover:scale-105 transition-all duration-300 shadow-lg relative overflow-hidden`}>
+                    } rounded-2xl mb-4 group-hover:scale-105 transition-all duration-300 shadow-lg relative overflow-hidden mx-auto flex items-center justify-center`}>
                       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/10"></div>
-                      <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
-                        <IconComponent className="w-4 h-4 md:w-6 md:h-6 text-white" />
-                      </div>
+                      <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-white relative z-10" />
                     </div>
-                    <p className="text-xs md:text-sm font-display font-semibold text-primary mb-2">{pillar.title}</p>
-                    <p className="text-xs text-muted-foreground font-body max-w-20 mx-auto leading-tight">{pillar.description}</p>
+                    <p className="text-sm md:text-base font-display font-semibold text-primary mb-2">{pillar.title}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground font-body leading-tight">{pillar.description}</p>
                   </div>
                 );
               })}
@@ -346,90 +267,119 @@ const Offerings = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="text-center mt-16">
-              <div className="inline-flex items-center gap-3 bg-olive-green/10 px-6 py-3 rounded-full border border-olive-green/20">
-                <ArrowRight className="w-4 h-4 text-olive-green" />
-                <span className="text-primary font-medium">How do we track it in real time?</span>
-                <ArrowRight className="w-4 h-4 text-olive-green" />
-              </div>
-              <p className="text-sage font-semibold mt-2">See the COIREA Evolution Dashboard →</p>
-            </div>
           </div>
         </section>
 
-        {/* Dashboard Preview Section */}
+        {/* Dashboard Introduction Section */}
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
-                Real-Time Organizational Intelligence
+                How Do We Track It in Real Time?
               </h2>
-              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto">
-                Track your transformation through our proprietary COIREA Evolution Dashboard — 
-                where data meets wisdom for sustainable growth.
+              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
+                See the COIREA Evolution Dashboard — where data meets wisdom for sustainable growth. 
+                Track your transformation through real-time organizational intelligence.
               </p>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
 
-            {/* Dashboard Mockup */}
-            <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-5xl mx-auto">
-              {/* Dashboard Header */}
-              <div className="p-6 border-b border-primary/10 bg-aura-pearl">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-2xl font-display font-bold text-primary">COIREA Evolution Dashboard</h3>
-                    <p className="text-primary/70">Elevating business through human-centered transformation</p>
+            {/* Dashboard Mockup with Left Sidebar */}
+            <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
+              <div className="flex">
+                {/* Left Sidebar */}
+                <div className="w-64 bg-aura-pearl border-r border-primary/10 p-6">
+                  <div className="mb-8">
+                    <h3 className="text-lg font-display font-bold text-primary mb-2">COIREA</h3>
+                    <p className="text-sm text-primary/60">Evolution Dashboard</p>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
-                      <span className="text-sm text-primary/60">Vitality: High</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Dashboard Content */}
-              <div className="p-8">
-                <div className="mb-8">
-                  <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
-                  <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
                   
-                  {/* Main Score Circle */}
-                  <div className="flex justify-center mb-8">
-                    <div className="relative w-40 h-40">
-                      <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
-                      <svg className="w-40 h-40 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
-                        <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                      </svg>
-                      <div className="absolute inset-0 flex items-center justify-center z-20">
-                        <div className="text-center">
-                          <div className="text-3xl font-bold text-primary">52.6</div>
-                          <div className="text-sm text-primary/60">Vitality Score</div>
+                  <nav className="space-y-2">
+                    {[
+                      { name: "Overview", active: true, icon: BarChart3 },
+                      { name: "5 Pillars", active: false, icon: Target },
+                      { name: "Team Insights", active: false, icon: Users },
+                      { name: "Leadership", active: false, icon: Brain },
+                      { name: "Culture Metrics", active: false, icon: Heart },
+                      { name: "Well-being", active: false, icon: Shield },
+                      { name: "Reports", active: false, icon: TrendingUp }
+                    ].map((item, index) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <div key={index} className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${
+                          item.active 
+                            ? 'bg-sage/10 text-sage border border-sage/20' 
+                            : 'text-primary/60 hover:bg-primary/5'
+                        }`}>
+                          <IconComponent className="w-4 h-4" />
+                          <span className="text-sm font-medium">{item.name}</span>
+                        </div>
+                      );
+                    })}
+                  </nav>
+                </div>
+
+                {/* Main Dashboard Content */}
+                <div className="flex-1">
+                  {/* Dashboard Header */}
+                  <div className="p-6 border-b border-primary/10">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-2xl font-display font-bold text-primary">Overview</h3>
+                        <p className="text-primary/70">Real-time organizational health metrics</p>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
+                          <span className="text-sm text-primary/60">Vitality: High</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                {/* 5 Pillars Metrics */}
-                <div className="grid grid-cols-5 gap-4">
-                  {[
-                    { name: "Purpose", score: 46, color: "olive-green", description: "Clarity and storytelling coherence" },
-                    { name: "Leadership", score: 52, color: "sage", description: "Presence and compassionate feedback" },
-                    { name: "Collaboration", score: 50, color: "copper", description: "Energy, trust, and communication flow" },
-                    { name: "Culture", score: 54, color: "primary", description: "Values alignment and team energy" },
-                    { name: "Well-Being", score: 61, color: "sage", description: "Energy levels and mindfulness adoption" }
-                  ].map((pillar, index) => (
-                    <div key={index} className="text-center">
-                      <div className={`w-12 h-12 bg-${pillar.color}/10 rounded-lg mx-auto mb-3 flex items-center justify-center border border-${pillar.color}/20`}>
-                        <span className={`text-${pillar.color} font-bold text-lg`}>{pillar.score}</span>
+                  {/* Dashboard Content */}
+                  <div className="p-8">
+                    <div className="mb-8">
+                      <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
+                      <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
+                      
+                      {/* Main Score Circle */}
+                      <div className="flex justify-center mb-8">
+                        <div className="relative w-32 h-32">
+                          <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
+                          <svg className="w-32 h-32 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
+                            <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center z-20">
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-primary">52.6</div>
+                              <div className="text-xs text-primary/60">Vitality Score</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <h5 className="font-semibold text-primary text-sm mb-1">{pillar.name}</h5>
-                      <p className="text-xs text-muted-foreground leading-tight">{pillar.description}</p>
                     </div>
-                  ))}
+
+                    {/* 5 Pillars Metrics */}
+                    <div className="grid grid-cols-5 gap-3">
+                      {[
+                        { name: "Purpose", score: 46, color: "olive-green", description: "Clarity & storytelling" },
+                        { name: "Leadership", score: 52, color: "sage", description: "Presence & feedback" },
+                        { name: "Collaboration", score: 50, color: "copper", description: "Trust & flow" },
+                        { name: "Culture", score: 54, color: "primary", description: "Values alignment" },
+                        { name: "Well-Being", score: 61, color: "sage", description: "Energy & mindfulness" }
+                      ].map((pillar, index) => (
+                        <div key={index} className="text-center">
+                          <div className={`w-10 h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
+                            <span className={`text-${pillar.color} font-bold text-sm`}>{pillar.score}</span>
+                          </div>
+                          <h5 className="font-semibold text-primary text-xs mb-1">{pillar.name}</h5>
+                          <p className="text-xs text-muted-foreground leading-tight">{pillar.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
