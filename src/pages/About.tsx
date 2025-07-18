@@ -1,26 +1,23 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight } from "lucide-react";
+import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Enhanced Hero Section */}
-        <section 
-          className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(210, 195, 175, 0.4) 0%, rgba(225, 215, 200, 0.3) 100%), url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed'
-          }}
-        >
+        {/* Unique Hero Section - About focused */}
+        <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20 bg-gradient-to-br from-aura-pearl via-warm-beige to-background">
+          <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/5"></div>
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
+            <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
+              <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
+              <span className="text-primary font-medium">About COIREA</span>
+            </div>
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight">
               We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
               <span className="block mt-4">from the inside out.</span>
@@ -42,11 +39,11 @@ const About = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+        <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
-                <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
+              <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
+                <Mountain className="w-4 h-4 text-primary" />
                 <span className="text-primary font-medium">Our Mission</span>
               </div>
               
@@ -70,162 +67,121 @@ const About = () => {
           </div>
         </section>
 
-        {/* Strategic Approach Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                We bring <span className="text-copper">structure</span> to transformation.
-              </h2>
-              <p className="text-xl text-foreground/80 font-body leading-relaxed max-w-4xl mx-auto mb-8">
-                We don't offer quick fixes. We offer a strategic journey to full-system alignment. Our proprietary methodology integrates:
-              </p>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-copper to-primary mx-auto"></div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-center space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Leaf className="w-8 h-8 text-sage" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-2">
-                      Regenerative business strategy
-                    </h3>
-                    <p className="text-foreground/70 font-body">rooted in natural intelligence</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-center space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-2">
-                      Conscious leadership capacity
-                    </h3>
-                    <p className="text-foreground/70 font-body">embedded across all layers</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-center space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-8 h-8 text-copper" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-2">
-                      Organizational coherence
-                    </h3>
-                    <p className="text-foreground/70 font-body">of purpose, systems, and structure</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-center space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Heart className="w-8 h-8 text-olive-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-2">
-                      Well-being as a foundational pillar
-                    </h3>
-                    <p className="text-foreground/70 font-body">for sustainable performance</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <p className="text-xl text-foreground/80 font-body italic bg-white/60 backdrop-blur-sm px-8 py-6 rounded-2xl border border-primary/10 max-w-4xl mx-auto">
-                Every engagement is tailored to meet the realities of your leadership and company lifecycle.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
+        {/* Our Values Section */}
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
+                <Heart className="w-4 h-4 text-sage" />
+                <span className="text-primary font-medium">Our Values</span>
+              </div>
+              
               <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                Our Core <span className="text-sage">Principles</span>
+                What We <span className="text-sage">Stand For</span>
               </h2>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Eye className="w-10 h-10 text-sage" />
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Value 1 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="w-8 h-8 text-sage" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-primary mb-3">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
                       Clarity of Purpose
                     </h3>
-                    <p className="text-foreground/70 font-body">Design begins with strategic intention.</p>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We design from the inside out — anchored in strategic vision, soul truth, and long-term direction.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <TreePine className="w-10 h-10 text-primary" />
+              {/* Value 2 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-8 h-8 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-primary mb-3">
-                      Human-Centered Systems
-                    </h3>
-                    <p className="text-foreground/70 font-body">People shape performance.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Compass className="w-10 h-10 text-copper" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-primary mb-3">
-                      Reciprocity as Strategy
-                    </h3>
-                    <p className="text-foreground/70 font-body">Regenerative rhythms build sustainable value.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Lightbulb className="w-10 h-10 text-olive-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-primary mb-3">
-                      Leadership with Integrity
-                    </h3>
-                    <p className="text-foreground/70 font-body">Authentic leadership drives real results.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant group hover:scale-[1.02] transition-all duration-500 border border-primary/10 md:col-span-2 lg:col-span-1">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-10 h-10 text-sage" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-primary mb-3">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
                       Coherence at Every Level
                     </h3>
-                    <p className="text-foreground/70 font-body">When the inner aligns with the outer, transformation lasts.</p>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      Transformation lasts when purpose, leadership, and culture are aligned across systems, teams, and decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 3 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Lightbulb className="w-8 h-8 text-copper" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Leadership with Integrity
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We support bold, conscious leadership that prioritizes presence, responsibility, and aligned action.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 4 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-8 h-8 text-olive-green" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Human-Centered Systems
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      People are not separate from performance — they are the system. We design structures that support both.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 5 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Compass className="w-8 h-8 text-sage" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Reciprocity as Strategy
+                      <span className="block text-lg font-body font-normal text-primary/70 mt-1">(Inspired by Ayni)</span>
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We honor the natural flow of giving and receiving. Regeneration begins with how we relate — to ourselves, to others, to the system.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 6 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-8 h-8 text-copper" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Brave Evolution
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We invite companies to lead change from a place of courage — daring to disrupt, experiment, and evolve from truth.
+                    </p>
                   </div>
                 </div>
               </div>
