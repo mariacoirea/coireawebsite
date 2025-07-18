@@ -475,7 +475,7 @@ const Offerings = () => {
                     </div>
 
                     {/* Header */}
-                    <div className="flex items-start space-x-3 mb-4 pr-20">
+                    <div className="flex items-start space-x-3 mb-4 pr-20 mt-8">
                       <div className={`w-12 h-12 bg-${offering.accent}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                         <IconComponent className={`w-6 h-6 text-${offering.accent}`} />
                       </div>
