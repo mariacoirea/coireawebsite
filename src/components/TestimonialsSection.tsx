@@ -1,10 +1,10 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Heart } from "lucide-react";
 
-
 const TestimonialsSection = () => {
   return (
-    <section className="relative py-20 md:py-28" style={{ backgroundColor: '#F0E6D6' }}>
+    <section className="relative py-20 md:py-28 bg-gradient-to-br from-aura-pearl via-warm-beige/80 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

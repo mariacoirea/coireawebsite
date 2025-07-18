@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Leaf, Target, Heart, Compass } from "lucide-react";
@@ -37,7 +38,7 @@ const systems = [
 
 const StructuralFoundationsSection = () => {
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="py-24 bg-gradient-to-br from-aura-pearl to-warm-beige">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">

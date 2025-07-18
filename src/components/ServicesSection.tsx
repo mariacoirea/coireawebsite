@@ -43,7 +43,7 @@ const shortTermOfferings = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24" style={{ backgroundColor: '#F6F0E9' }}>
+    <section id="services" className="py-24 bg-gradient-to-br from-warm-beige to-aura-pearl">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
