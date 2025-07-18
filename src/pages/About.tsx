@@ -9,36 +9,46 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Unique Hero Section - About focused */}
-        <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/5"></div>
+        {/* Enhanced Hero Section with Landscape Background */}
+        <section 
+          className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/d89caa92-390e-4cf9-af31-68c88044077a.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-aura-pearl/20 via-transparent to-primary/10"></div>
           
           {/* Subtle decorative elements for visual consistency */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
           
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
-            <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
+            <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
               <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
               <span className="text-primary font-medium">About COIREA</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
               We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
               <span className="block mt-4">from the inside out.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
               COIREA equips purpose-driven organizations with the frameworks, tools, and insight to build regenerative, high-performing systems that thrive in complexity.
             </p>
 
-            {/* Logo */}
+            {/* Logo with enhanced backdrop */}
             <div className="flex items-center justify-center mb-12">
-              <img 
-                src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
-                alt="COIREA Logo" 
-                className="h-16 w-auto opacity-90"
-              />
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft border border-primary/10">
+                <img 
+                  src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
+                  alt="COIREA Logo" 
+                  className="h-16 w-auto opacity-95"
+                />
+              </div>
             </div>
           </div>
         </section>
