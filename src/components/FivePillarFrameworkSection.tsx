@@ -29,12 +29,6 @@ const FivePillarFrameworkSection = () => {
             We Lead Systemic Transformation
           </h1>
           
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl leading-[1.6] font-body text-primary/80 mb-6">
-              Rooted in Regenerative Intelligence and Conscious Leadership, we partner with visionary founders to 
-              evolve from the inside out — rebuilding their inner foundations for sustainable, long-term growth.
-            </p>
-          </div>
 
           <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6 text-primary">
             Our proprietary{' '}
