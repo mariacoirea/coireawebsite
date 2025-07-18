@@ -35,46 +35,18 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Merged Headline and Framework Introduction */}
+        {/* Section Title */}
         <div className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-display font-semibold mb-6 text-primary">
+            We Don't Build Static Structures —{' '}
+            <span className="block mt-2">We Design Living Frameworks for Regenerative Business</span>
+          </h1>
           
-
-          <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6 text-primary">
-            Our proprietary{' '}
-            <span className="italic text-accent">5-Pillar Framework</span>{' '}
-            combines systems diagnostics, Organic Intelligence, and data-backed insights to drive 
-            structural renewal and measurable transformation.
-          </h2>
-          
-          <div className="max-w-4xl mx-auto mt-12">
-            <p className="text-lg leading-[1.7] font-body text-primary/80 mb-8">
-              At the heart of every transformation lies this 5-dimensional approach. 
-              COIREA's 5-Pillar Framework merges the foundational elements that enable leadership teams to:
+          <div className="max-w-4xl mx-auto mt-8">
+            <p className="text-xl leading-[1.8] font-body text-primary/80">
+              At the core of COIREA's work lies a dynamic framework that evolves with your company. 
+              Our 5-Pillar System restores clarity, coherence, and long-term vitality from the inside out.
             </p>
-            
-            {/* What the Framework Enables */}
-            <div className="text-left max-w-3xl mx-auto space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Cultivate purpose-driven clarity and renewed focus</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Strengthen leadership accountability across levels</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Build adaptive, high-performing, and connected teams</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Unlock culture as a strategic asset</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-                <p className="text-lg font-body text-primary/90">Integrate well-being into the core business rhythm</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -105,7 +77,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-secondary text-lg mb-1">Purpose</h3>
-                    <p className="text-xs text-secondary/70 font-body">Vision & Evolution</p>
+                    <p className="text-xs text-secondary/70 font-body">Strategic clarity & narrative alignment</p>
                   </div>
                 </div>
 
@@ -116,7 +88,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-accent text-lg mb-1">Leadership</h3>
-                    <p className="text-xs text-accent/70 font-body">Brave Embodiment</p>
+                    <p className="text-xs text-accent/70 font-body">Conscious accountability & presence</p>
                   </div>
                 </div>
 
@@ -127,7 +99,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-neutral-warm text-lg mb-1" style={{ color: 'hsl(33, 35%, 60%)' }}>Collaboration</h3>
-                    <p className="text-xs font-body" style={{ color: 'hsl(33, 35%, 50%)' }}>Aligned Teams</p>
+                    <p className="text-xs font-body" style={{ color: 'hsl(33, 35%, 50%)' }}>Trust, flow & co-creation</p>
                   </div>
                 </div>
 
@@ -138,7 +110,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-secondary/90 text-lg mb-1">Culture</h3>
-                    <p className="text-xs text-secondary/60 font-body">Living Systems</p>
+                    <p className="text-xs text-secondary/60 font-body">Values activated in behavior</p>
                   </div>
                 </div>
 
@@ -149,7 +121,7 @@ const FivePillarFrameworkSection = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="font-display font-semibold text-accent/90 text-lg mb-1">Well-Being</h3>
-                    <p className="text-xs text-accent/60 font-body">Holistic Thriving</p>
+                    <p className="text-xs text-accent/60 font-body">Energy, resilience & sustainability</p>
                   </div>
                 </div>
 
@@ -157,6 +129,120 @@ const FivePillarFrameworkSection = () => {
             </div>
           </div>
         </div>
+
+        {/* What the Framework Enables */}
+        <div className="text-center mt-24 mb-20">
+          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-12 text-primary">
+            This framework empowers leadership teams to:
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <p className="text-lg font-body text-primary/90 text-left">Align company purpose with everyday decisions</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <p className="text-lg font-body text-primary/90 text-left">Develop accountable, values-driven leadership</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <p className="text-lg font-body text-primary/90 text-left">Build resilient, collaborative, high-performing teams</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <p className="text-lg font-body text-primary/90 text-left">Activate culture as a strategic growth driver</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+              <p className="text-lg font-body text-primary/90 text-left">Integrate well-being into long-term operational rhythm</p>
+            </div>
+          </div>
+        </div>
+
+        {/* KPI and Measurement Section */}
+        <div className="max-w-5xl mx-auto mt-24 mb-20">
+          <div className="bg-gradient-to-br from-background/90 via-background/95 to-background/90 backdrop-blur-sm rounded-2xl p-8 border border-primary/10">
+            <div className="grid md:grid-cols-2 gap-8">
+              
+              {/* Left Column */}
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">🧠</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Tailored KPIs</h3>
+                    <p className="text-sm text-primary/70 font-body">Custom metrics for each pillar</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">📊</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Team Performance Insights</h3>
+                    <p className="text-sm text-primary/70 font-body">Productivity, cohesion, outcomes</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-neutral-warm/30 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">🔄</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Leadership Maturity Index</h3>
+                    <p className="text-sm text-primary/70 font-body">Decision-making growth tracking</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-secondary/25 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">🧭</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Long-Term Evolution Maps</h3>
+                    <p className="text-sm text-primary/70 font-body">Structural & cultural milestones</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-accent/25 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">🧘</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Well-being & Retention Risk</h3>
+                    <p className="text-sm text-primary/70 font-body">Proactive burnout signals</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 rounded-full bg-neutral-warm/35 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm">💼</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-primary mb-1">Strategic Investment in People</h3>
+                    <p className="text-sm text-primary/70 font-body">Linking human capital to outcomes</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <div className="flex justify-center items-center space-x-4">
+            <span className="text-lg font-body text-primary/80">→ How do we track it in real time?</span>
+            <span className="text-lg font-display font-semibold text-accent">→ See the COIREA Evolution Dashboard →</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );
