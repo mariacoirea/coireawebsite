@@ -55,6 +55,12 @@ export default {
 					warm: 'hsl(var(--neutral-warm))',
 					cool: 'hsl(var(--neutral-cool))'
 				},
+				// COIREA Brand Colors
+				'aura-pearl': 'hsl(var(--aura-pearl))',
+				'warm-beige': 'hsl(var(--warm-beige))',
+				'olive-green': 'hsl(var(--olive-green))',
+				sage: 'hsl(var(--sage))',
+				copper: 'hsl(var(--copper))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -71,7 +77,9 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-warm': 'var(--gradient-warm)', 
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-nature': 'var(--gradient-nature)',
+				'gradient-mountain': 'var(--gradient-mountain)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
