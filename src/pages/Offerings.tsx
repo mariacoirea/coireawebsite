@@ -461,55 +461,67 @@ const Offerings = () => {
               </Card>
             </div>
 
-            {/* Other Offerings Grid - Fixed Alignment */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {offerings.slice(1).map((offering, index) => {
-                const IconComponent = offering.icon;
-                return (
-                  <Card key={offering.id} className="p-6 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden h-full flex flex-col">
-                    {/* Badge */}
-                    <div className="absolute top-4 right-4">
-                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 rounded-full whitespace-nowrap`}>
-                        {offering.badge}
-                      </span>
-                    </div>
+             {/* Other Offerings Grid - Fixed Alignment */}
+             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+               {offerings.slice(1).map((offering, index) => {
+                 const IconComponent = offering.icon;
+                 return (
+                   <Card key={offering.id} className="p-6 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden flex flex-col min-h-[440px]">
+                     {/* Badge */}
+                     <div className="absolute top-4 right-4 z-10">
+                       <span className={`text-xs font-medium px-3 py-1 rounded-full border whitespace-nowrap ${
+                         offering.accent === 'copper' ? 'bg-copper/10 text-copper border-copper/20' :
+                         offering.accent === 'primary' ? 'bg-primary/10 text-primary border-primary/20' :
+                         'bg-olive-green/10 text-olive-green border-olive-green/20'
+                       }`}>
+                         {offering.badge}
+                       </span>
+                     </div>
 
-                    {/* Header */}
-                    <div className="flex items-start space-x-3 mb-4 pr-20">
-                      <div className={`w-12 h-12 bg-${offering.accent}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                        <IconComponent className={`w-6 h-6 text-${offering.accent}`} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-display font-semibold text-primary group-hover:text-primary-light transition-colors leading-tight mb-1">
-                          {offering.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">{offering.duration}</p>
-                      </div>
-                    </div>
+                     {/* Header */}
+                     <div className="flex items-start space-x-4 mb-6 pr-24">
+                       <div className={`w-14 h-14 bg-gradient-to-br ${
+                         offering.accent === 'copper' ? 'from-copper/20 to-copper' :
+                         offering.accent === 'primary' ? 'from-primary/20 to-primary' :
+                         'from-olive-green/20 to-olive-green'
+                       } rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                         <IconComponent className="w-7 h-7 text-white" />
+                       </div>
+                       <div className="flex-1 min-w-0">
+                         <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors leading-tight mb-2 break-words">
+                           {offering.title}
+                         </h3>
+                         <p className="text-sm text-muted-foreground whitespace-nowrap">{offering.duration}</p>
+                       </div>
+                     </div>
 
-                    {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed mb-6 text-sm flex-grow">
-                      {offering.description}
-                    </p>
+                     {/* Description */}
+                     <p className="text-muted-foreground font-body leading-relaxed mb-6 text-sm flex-grow">
+                       {offering.description}
+                     </p>
 
-                    {/* Features */}
-                    <div className="mt-auto">
-                      <h4 className="text-xs font-body font-semibold text-primary mb-3 uppercase tracking-wide">
-                        Key Areas
-                      </h4>
-                      <div className="space-y-2">
-                        {offering.keyAreas.map((area, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <div className={`w-1.5 h-1.5 bg-${offering.accent} rounded-full flex-shrink-0`}></div>
-                            <span className="text-xs text-foreground/80 font-body">{area}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
+                     {/* Features */}
+                     <div className="mt-auto">
+                       <h4 className="text-xs font-body font-semibold text-primary mb-3 uppercase tracking-wide">
+                         Key Areas
+                       </h4>
+                       <div className="space-y-3">
+                         {offering.keyAreas.map((area, idx) => (
+                           <div key={idx} className="flex items-start space-x-3">
+                             <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${
+                               offering.accent === 'copper' ? 'bg-copper' :
+                               offering.accent === 'primary' ? 'bg-primary' :
+                               'bg-olive-green'
+                             }`}></div>
+                             <span className="text-xs text-foreground/80 font-body leading-relaxed">{area}</span>
+                           </div>
+                         ))}
+                       </div>
+                     </div>
+                   </Card>
+                 );
+               })}
+             </div>
           </div>
         </section>
 
