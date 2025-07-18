@@ -10,8 +10,13 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Unique Hero Section - About focused */}
-        <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20 bg-gradient-to-br from-aura-pearl via-warm-beige to-background">
+        <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20 bg-gradient-to-br from-aura-pearl to-warm-beige">
           <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/5"></div>
+          
+          {/* Subtle decorative elements for visual consistency */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
+          
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
             <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
               <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
