@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
@@ -9,11 +8,11 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Enhanced Hero Section with Landscape Background */}
+        {/* Enhanced Hero Section with New Landscape Background */}
         <section 
           className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/bd62b4e8-0d29-4274-a885-907109af76d8.png)`,
+            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/89ff8e1a-60af-4759-a3d4-8ced6e4b9784.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed'
@@ -26,30 +25,14 @@ const About = () => {
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
           
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
-            <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
-              <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
-              <span className="text-primary font-medium">About COIREA</span>
-            </div>
-
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
               We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
               <span className="block mt-4">from the inside out.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
+            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
               COIREA equips purpose-driven organizations with the frameworks, tools, and insight to build regenerative, high-performing systems that thrive in complexity.
             </p>
-
-            {/* Logo with enhanced backdrop */}
-            <div className="flex items-center justify-center mb-12">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft border border-primary/10">
-                <img 
-                  src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png" 
-                  alt="COIREA Logo" 
-                  className="h-16 w-auto opacity-95"
-                />
-              </div>
-            </div>
           </div>
         </section>
 
