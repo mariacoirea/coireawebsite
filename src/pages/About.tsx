@@ -26,12 +26,11 @@ const About = () => {
           
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
-              We partner with <span className="italic">forward-thinking leaders</span> to redesign how companies grow — 
-              <span className="block mt-4">from the inside out.</span>
+              The Future of Work Isn't a Trend — <span className="italic">It's a Transformation</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
-              COIREA equips purpose-driven organizations with the frameworks, tools, and insight to build regenerative, high-performing systems that thrive in complexity.
+              We founded COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being.
             </p>
           </div>
         </section>
@@ -46,7 +45,7 @@ const About = () => {
               </div>
               
               <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                Clarity. Coherence. <span className="text-sage">Regeneration.</span>
+                Purpose. People. <span className="text-sage">Performance.</span>
               </h2>
               
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
