@@ -266,6 +266,56 @@ const About = () => {
           </div>
         </section>
 
+        {/* From the Founder Section */}
+        <section className="py-24 px-6 bg-warm-beige">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-light text-primary mb-16 leading-tight">
+                From The Founder<span className="text-sage">...</span>
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Founder Image */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
+                    <img 
+                      src="/lovable-uploads/35080dca-964c-49c9-b4f3-7d3461223a1e.png" 
+                      alt="Maria Jose Figueroa - Founder of COIREA"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-sage/20 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
+                </div>
+              </div>
+              
+              {/* Founder Content */}
+              <div className="text-center lg:text-left">
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-6">
+                  Maria Jose Figueroa - <span className="text-sage">Conscious Leadership Catalyst</span>
+                </h3>
+                
+                <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
+                  <p>
+                    With a background in business and a calling rooted in soul, I created COIREA to help teams lead with clarity, coherence, and deeper purpose.
+                  </p>
+                  
+                  <p>
+                    My journey weaves together strategic leadership, regenerative wisdom, and intuitive intelligence — all in service of evolving the way we work.
+                  </p>
+                  
+                  <p className="text-xl font-medium text-primary italic">
+                    I believe transformation begins when we remember who we are — and choose to lead from that place.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Enhanced CTA Section */}
         <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
           <div className="container mx-auto max-w-6xl text-center">
@@ -286,6 +336,18 @@ const About = () => {
                 </Button>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Stress Statistics Section */}
+        <section className="py-16 px-6 bg-background border-t border-primary/10">
+          <div className="container mx-auto max-w-4xl text-center">
+            <blockquote className="text-lg md:text-xl text-foreground/70 font-body italic leading-relaxed">
+              "76% of employees report experiencing moderate to high levels of stress at work — and 1 in 3 say it affects their performance."
+            </blockquote>
+            <cite className="block mt-4 text-primary font-medium">
+              – American Institute of Stress
+            </cite>
           </div>
         </section>
       </main>
