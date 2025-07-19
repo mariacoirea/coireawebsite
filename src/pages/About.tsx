@@ -279,9 +279,9 @@ const About = () => {
               {/* Founder Image */}
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                  <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
+                  <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
                     <img 
-                      src="/lovable-uploads/35080dca-964c-49c9-b4f3-7d3461223a1e.png" 
+                      src="/lovable-uploads/2627835c-d411-47f1-abb6-99b92bd30341.png" 
                       alt="Maria Jose Figueroa - Founder of COIREA"
                       className="w-full h-full object-cover"
                     />
