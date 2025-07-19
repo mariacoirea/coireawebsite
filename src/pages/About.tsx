@@ -14,7 +14,7 @@ const About = () => {
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/8143fc2b-3b48-4a24-9ace-393341a0f118.png)`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center bottom',
             backgroundAttachment: 'fixed'
           }}
         >
