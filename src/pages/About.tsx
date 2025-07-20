@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
@@ -268,16 +269,16 @@ const About = () => {
 
         {/* From the Founder Section */}
         <section className="py-24 px-6 bg-warm-beige">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-display font-light text-primary mb-16 leading-tight">
                 From The Founder<span className="text-sage">...</span>
               </h2>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               {/* Founder Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center">
                 <div className="relative">
                   <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
                     <img 
@@ -293,7 +294,7 @@ const About = () => {
               </div>
               
               {/* Founder Content */}
-              <div className="text-center lg:text-left">
+              <div>
                 <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-6">
                   Maria Jose Figueroa - <span className="text-sage">Conscious Leadership Catalyst</span>
                 </h3>
