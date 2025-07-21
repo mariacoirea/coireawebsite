@@ -24,61 +24,14 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Enhanced Headline and Framework Introduction */}
-        <div className="text-center mb-28">
+        {/* Streamlined Headline */}
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 text-primary leading-tight">
             Our proprietary{' '}
             <span className="italic text-accent bg-gradient-to-r from-accent to-accent-warm bg-clip-text text-transparent">
               5-Pillar Framework
             </span>
           </h2>
-          
-          <p className="text-lg md:text-xl font-body text-primary/70 mb-6 max-w-4xl mx-auto leading-relaxed">
-            combines systems diagnostics, Organic Intelligence, and data-backed insights to drive 
-            structural renewal and measurable transformation.
-          </p>
-          
-          <div className="max-w-5xl mx-auto mt-16">
-            <p className="text-lg md:text-xl leading-[1.8] font-body text-primary/80 mb-12">
-              At the heart of every transformation lies this 5-dimensional approach. 
-              COIREA's 5-Pillar Framework merges the foundational elements that enable leadership teams to:
-            </p>
-            
-            {/* Enhanced What the Framework Enables */}
-            <div className="text-left max-w-4xl mx-auto space-y-6">
-              <div className="flex items-start space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-secondary mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                <p className="text-lg md:text-xl font-body text-primary/90 leading-relaxed">Cultivate purpose-driven clarity and renewed focus</p>
-              </div>
-              <div className="flex items-start space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-secondary to-accent mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                <p className="text-lg md:text-xl font-body text-primary/90 leading-relaxed">Strengthen leadership accountability across levels</p>
-              </div>
-              <div className="flex items-start space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-accent to-neutral-warm mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                <p className="text-lg md:text-xl font-body text-primary/90 leading-relaxed">Build adaptive, high-performing, and connected teams</p>
-              </div>
-              <div className="flex items-start space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-neutral-warm to-primary mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                <p className="text-lg md:text-xl font-body text-primary/90 leading-relaxed">Unlock culture as a strategic asset</p>
-              </div>
-              <div className="flex items-start space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-accent mt-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
-                <p className="text-lg md:text-xl font-body text-primary/90 leading-relaxed">Integrate well-being into the core business rhythm</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Enhanced divider */}
-        <div className="flex justify-center mb-20">
-          <div className="flex space-x-3 items-center">
-            <div className="w-2 h-2 rounded-full bg-primary/20 animate-pulse"></div>
-            <div className="w-3 h-3 rounded-full bg-primary/40"></div>
-            <div className="w-4 h-4 rounded-full bg-primary/60"></div>
-            <div className="w-3 h-3 rounded-full bg-primary/40"></div>
-            <div className="w-2 h-2 rounded-full bg-primary/20 animate-pulse"></div>
-          </div>
         </div>
 
         {/* Framework Image with Enhanced Design - Now Wider */}
