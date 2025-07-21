@@ -91,7 +91,7 @@ const FivePillarFrameworkSection = () => {
             {/* Main image container - made wider */}
             <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
               <img 
-                src="/lovable-uploads/b5745dcf-3184-45eb-940d-3a8c8bbe805f.png" 
+                src="/lovable-uploads/b65d766a-b93c-4b24-9673-05dcba542f19.png" 
                 alt="COIREA 5-Pillar Framework" 
                 className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
               />
