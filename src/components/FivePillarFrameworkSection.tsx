@@ -81,56 +81,68 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Framework Image with Enhanced Design */}
+        {/* Framework Image with Enhanced Design - Now Wider */}
         <div className="flex justify-center mb-16">
-          <div className="relative group max-w-6xl w-full">
+          <div className="relative group max-w-7xl w-full">
             {/* Enhanced shadow and glow effects */}
             <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
             <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
             
-            {/* Main image container */}
-            <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
+            {/* Main image container - made wider */}
+            <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
               <img 
                 src="/lovable-uploads/74ed0483-c5b0-47e0-a097-888a63c3df7b.png" 
                 alt="COIREA 5-Pillar Framework" 
                 className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
               />
-              
-              {/* Pillar Definitions Overlay */}
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
-                
-                {/* Purpose */}
-                <div className="text-center group">
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2 group-hover:text-primary-light transition-colors">Purpose</h3>
-                  <p className="text-sm text-primary/70 font-body leading-relaxed">Strategic Clarity & Narrative Alignment</p>
-                </div>
+            </div>
+          </div>
+        </div>
 
-                {/* Leadership */}
-                <div className="text-center group">
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2 group-hover:text-primary-light transition-colors">Leadership</h3>
-                  <p className="text-sm text-primary/70 font-body leading-relaxed">Conscious accountability & presence</p>
-                </div>
-
-                {/* Collaboration */}
-                <div className="text-center group">
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2 group-hover:text-primary-light transition-colors">Collaboration</h3>
-                  <p className="text-sm text-primary/70 font-body leading-relaxed">Trust, flow & co-creation</p>
-                </div>
-
-                {/* Culture */}
-                <div className="text-center group">
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2 group-hover:text-primary-light transition-colors">Culture</h3>
-                  <p className="text-sm text-primary/70 font-body leading-relaxed">Values activated in behavior</p>
-                </div>
-
-                {/* Well-Being */}
-                <div className="text-center group">
-                  <h3 className="font-display font-semibold text-primary text-lg mb-2 group-hover:text-primary-light transition-colors">Well-Being</h3>
-                  <p className="text-sm text-primary/70 font-body leading-relaxed">Regenerating the Human Core</p>
-                </div>
-
+        {/* Pillar Definitions - Aligned with Image Pillars */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-6">
+            
+            {/* Purpose - Left-most pillar */}
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-soft group-hover:shadow-warm transition-all duration-300 group-hover:scale-[1.02]">
+                <h3 className="font-display font-semibold text-primary text-xl mb-3 group-hover:text-primary-light transition-colors">Purpose</h3>
+                <p className="text-sm text-primary/70 font-body leading-relaxed">Strategic Clarity & Narrative Alignment</p>
               </div>
             </div>
+
+            {/* Leadership - Second pillar */}
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-soft group-hover:shadow-warm transition-all duration-300 group-hover:scale-[1.02]">
+                <h3 className="font-display font-semibold text-primary text-xl mb-3 group-hover:text-primary-light transition-colors">Leadership</h3>
+                <p className="text-sm text-primary/70 font-body leading-relaxed">Conscious accountability & presence</p>
+              </div>
+            </div>
+
+            {/* Collaboration - Center pillar */}
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-soft group-hover:shadow-warm transition-all duration-300 group-hover:scale-[1.02]">
+                <h3 className="font-display font-semibold text-primary text-xl mb-3 group-hover:text-primary-light transition-colors">Collaboration</h3>
+                <p className="text-sm text-primary/70 font-body leading-relaxed">Trust, flow & co-creation</p>
+              </div>
+            </div>
+
+            {/* Culture - Fourth pillar */}
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-soft group-hover:shadow-warm transition-all duration-300 group-hover:scale-[1.02]">
+                <h3 className="font-display font-semibold text-primary text-xl mb-3 group-hover:text-primary-light transition-colors">Culture</h3>
+                <p className="text-sm text-primary/70 font-body leading-relaxed">Values activated in behavior</p>
+              </div>
+            </div>
+
+            {/* Well-Being - Right-most pillar */}
+            <div className="text-center group">
+              <div className="bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-6 border border-primary/10 shadow-soft group-hover:shadow-warm transition-all duration-300 group-hover:scale-[1.02]">
+                <h3 className="font-display font-semibold text-primary text-xl mb-3 group-hover:text-primary-light transition-colors">Well-Being</h3>
+                <p className="text-sm text-primary/70 font-body leading-relaxed">Regenerating the Human Core</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
