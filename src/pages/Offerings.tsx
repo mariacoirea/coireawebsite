@@ -170,7 +170,7 @@ const Offerings = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-8 leading-tight">
               We Don't Offer Quick Fixes —
               <br />
-              <span className="text-olive-green">We Rewire Organizations from the Inside Out</span>
+              <span className="text-olive-green">We Rewire Organizations</span>
             </h1>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
               At the core of COIREA's work lies a dynamic framework that evolves with your company. 
@@ -194,7 +194,7 @@ const Offerings = () => {
 
             {/* Framework Image */}
             <div className="flex justify-center mb-16">
-              <div className="relative group max-w-7xl w-full">
+              <div className="relative group max-w-6xl w-full">
                 {/* Enhanced shadow and glow effects */}
                 <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
                 <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
@@ -242,7 +242,7 @@ const Offerings = () => {
               </div>
 
               {/* KPI Measurement Grid */}
-              <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg">
+              <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg max-w-6xl mx-auto">
                 <h4 className="text-xl font-display font-semibold text-primary mb-6">
                   Measurement + KPI Tracking
                 </h4>
@@ -271,7 +271,7 @@ const Offerings = () => {
 
         {/* Dashboard Introduction Section */}
         <section className="py-24 px-6 bg-warm-beige">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
                 How Do We Track It in Real Time?
