@@ -241,28 +241,6 @@ const Insights = () => {
           </div>
         </section>
 
-        {/* Newsletter Section */}
-        <section className="py-20 px-6 bg-gradient-subtle">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-6">
-              Stay Connected
-            </h2>
-            <p className="text-lg text-foreground/80 font-body mb-8 leading-relaxed">
-              Subscribe to receive our latest insights on regenerative business practices 
-              and conscious leadership.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1"
-              />
-              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-body font-medium">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
