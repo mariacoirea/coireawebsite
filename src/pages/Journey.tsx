@@ -116,9 +116,9 @@ const Journey = () => {
   }
 
   return (
-    <div id="journey-start" className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
+      <main id="journey-start" className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-6 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background">
           <div className="container mx-auto max-w-4xl text-center">
