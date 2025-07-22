@@ -172,6 +172,10 @@ const Offerings = () => {
               <br />
               <span className="text-olive-green">We Rewire Organizations</span>
             </h1>
+            <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-8">
+              Systems are misaligned. People are burned out. Leadership is ready to evolve.
+              This framework was designed to regenerate the heart of organizations by bridging purpose, culture, and human vitality — all while tracking what truly moves the needle.
+            </p>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
               At the core of COIREA's work lies a dynamic framework that evolves with your company. 
               Our 5-Pillar System restores clarity, coherence, and long-term vitality from the inside out.
