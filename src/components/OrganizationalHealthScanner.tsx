@@ -80,10 +80,10 @@ const OrganizationalHealthScanner = () => {
             
             <div className="bg-gradient-warm/10 rounded-xl p-6 mb-8">
               <p className="text-sm text-foreground/70 font-body mb-4">
-                ⏱️ Takes approximately 5-7 minutes to complete
+                Takes approximately 5-7 minutes to complete
               </p>
               <p className="text-sm text-foreground/70 font-body">
-                📊 Receive instant results with personalized insights
+                Receive instant results with personalized insights
               </p>
             </div>
 

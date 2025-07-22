@@ -122,7 +122,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             <div className="space-y-6">
               <div className="bg-card border border-accent/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-accent mb-3">
-                  🔍 Your Greatest Challenge: {painPoint}
+                  Your Greatest Challenge: {painPoint}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
                   {painPointMessages[painPoint as keyof typeof painPointMessages]}
@@ -131,7 +131,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
 
               <div className="bg-card border border-primary/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-primary mb-3">
-                  ✨ Your Greatest Strength: {strength}
+                  Your Greatest Strength: {strength}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
                   On the other hand, your highest pillar is {strength}. This is your current strength. 
@@ -141,7 +141,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
 
               <div className="bg-gradient-warm/10 rounded-lg p-6 text-center">
                 <h4 className="text-lg font-display font-semibold text-primary mb-3">
-                  🌀 COIREA Insight
+                  COIREA Insight
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed mb-4">
                   Pain in the {painPoint} area can result in decreased engagement, reduced innovation, 
@@ -151,49 +151,103 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="bg-primary/5 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                Curious how your team can evolve from here?
-              </h3>
-              <p className="text-lg text-foreground/80 font-body mb-6 leading-relaxed">
-                Book a Free Clarity Call with COIREA to explore a customized path toward conscious transformation.
-              </p>
+            {/* Sign Up Form */}
+            <div className="bg-primary/5 rounded-xl p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                  Ready to Transform Your Organization?
+                </h3>
+                <p className="text-lg text-foreground/80 font-body leading-relaxed">
+                  Let us reach out to discuss how COIREA can support your organization's conscious transformation.
+                </p>
+              </div>
               
-              <div className="space-y-4">
-                <Button variant="hero" size="lg" className="text-lg px-8 py-3">
-                  Book Your Free Clarity Call
-                </Button>
-                
-                {!isEmailSubmitted ? (
-                  <div className="max-w-md mx-auto">
-                    <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-2 block">
-                      Get your detailed results via email (optional)
-                    </Label>
-                    <div className="flex gap-2">
+              {!isEmailSubmitted ? (
+                <div className="max-w-2xl mx-auto space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName" className="text-sm font-body text-foreground/70 mb-1 block">
+                        First Name *
+                      </Label>
                       <Input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="flex-1"
+                        id="firstName"
+                        placeholder="Your first name"
+                        required
                       />
-                      <Button 
-                        onClick={handleEmailSubmit}
-                        variant="outline"
-                        disabled={!email}
-                      >
-                        Send Results
-                      </Button>
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName" className="text-sm font-body text-foreground/70 mb-1 block">
+                        Last Name *
+                      </Label>
+                      <Input
+                        id="lastName"
+                        placeholder="Your last name"
+                        required
+                      />
                     </div>
                   </div>
-                ) : (
-                  <p className="text-sm text-primary font-body">
-                    ✓ Results sent to {email}
+                  
+                  <div>
+                    <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-1 block">
+                      Email Address *
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your.email@company.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="company" className="text-sm font-body text-foreground/70 mb-1 block">
+                      Company Name *
+                    </Label>
+                    <Input
+                      id="company"
+                      placeholder="Your organization"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="role" className="text-sm font-body text-foreground/70 mb-1 block">
+                      Your Role *
+                    </Label>
+                    <Input
+                      id="role"
+                      placeholder="CEO, Manager, HR Director, etc."
+                      required
+                    />
+                  </div>
+                  
+                  <div className="text-center pt-4">
+                    <Button 
+                      onClick={handleEmailSubmit}
+                      variant="hero" 
+                      size="lg"
+                      className="text-lg px-8 py-3"
+                      disabled={!email}
+                    >
+                      Get Your Free Consultation
+                    </Button>
+                    <p className="text-xs text-foreground/60 font-body mt-2">
+                      We'll reach out within 24 hours to schedule your clarity call
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center">
+                  <p className="text-lg text-primary font-body mb-2">
+                    Thank you for your interest!
                   </p>
-                )}
-              </div>
+                  <p className="text-foreground/80 font-body">
+                    We'll reach out to {email} within 24 hours to schedule your free consultation.
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Retake Option */}
