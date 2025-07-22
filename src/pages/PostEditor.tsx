@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Save, Eye, X } from "lucide-react";
+import { ArrowLeft, Save, Eye, X, Upload, Image } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { User } from "@supabase/supabase-js";
 
@@ -51,6 +51,9 @@ const PostEditor = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [newTag, setNewTag] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   
   const [post, setPost] = useState<BlogPost>({
     title: "",
@@ -193,6 +196,69 @@ const PostEditor = () => {
     }
   };
 
+  const handleImageUpload = async (file: File) => {
+    if (!file.type.startsWith('image/')) {
+      setError('Please select an image file');
+      return;
+    }
+
+    setUploading(true);
+    setError('');
+
+    try {
+      // Create unique filename
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
+      const filePath = `blog-posts/${fileName}`;
+
+      // Upload to Supabase storage
+      const { error: uploadError } = await supabase.storage
+        .from('blog-images')
+        .upload(filePath, file);
+
+      if (uploadError) throw uploadError;
+
+      // Get public URL
+      const { data } = supabase.storage
+        .from('blog-images')
+        .getPublicUrl(filePath);
+
+      // Insert image tag at cursor position
+      const textarea = textareaRef.current;
+      if (textarea) {
+        const cursorPosition = textarea.selectionStart;
+        const imageTag = `\n\n<img src="${data.publicUrl}" alt="Blog post image" class="w-full max-w-2xl mx-auto rounded-lg shadow-lg my-6" />\n\n`;
+        
+        const newContent = 
+          post.body_content.slice(0, cursorPosition) + 
+          imageTag + 
+          post.body_content.slice(cursorPosition);
+
+        setPost(prev => ({ ...prev, body_content: newContent }));
+        
+        // Focus back to textarea and set cursor after the image tag
+        setTimeout(() => {
+          textarea.focus();
+          textarea.setSelectionRange(
+            cursorPosition + imageTag.length,
+            cursorPosition + imageTag.length
+          );
+        }, 100);
+      }
+    } catch (error: any) {
+      setError(`Upload failed: ${error.message}`);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      handleImageUpload(file);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -299,17 +365,49 @@ const PostEditor = () => {
 
             {/* Body Content */}
             <div className="space-y-2">
-              <Label htmlFor="content">Body Content *</Label>
+              <div className="flex items-center justify-between">
+                <Label htmlFor="content">Body Content *</Label>
+                <div className="flex gap-2">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploading}
+                    className="h-8"
+                  >
+                    {uploading ? (
+                      <>
+                        <Upload className="w-3 h-3 mr-2 animate-spin" />
+                        Uploading...
+                      </>
+                    ) : (
+                      <>
+                        <Image className="w-3 h-3 mr-2" />
+                        Add Image
+                      </>
+                    )}
+                  </Button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFileSelect}
+                    className="hidden"
+                  />
+                </div>
+              </div>
               <Textarea
+                ref={textareaRef}
                 id="content"
                 value={post.body_content}
                 onChange={(e) => setPost(prev => ({ ...prev, body_content: e.target.value }))}
-                placeholder="Write your post content here. You can use HTML tags for formatting."
+                placeholder="Write your post content here. You can use HTML tags for formatting. Click 'Add Image' to upload and insert images."
                 rows={15}
                 className="font-mono text-sm"
               />
               <p className="text-xs text-muted-foreground">
-                Supports HTML formatting (p, h2, h3, strong, em, ul, ol, li, a, blockquote)
+                Supports HTML formatting (p, h2, h3, strong, em, ul, ol, li, a, blockquote, img). Images are automatically inserted with responsive styling.
               </p>
             </div>
           </div>
