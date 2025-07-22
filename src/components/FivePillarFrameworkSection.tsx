@@ -32,6 +32,21 @@ const FivePillarFrameworkSection = () => {
               5-Pillar Framework
             </span>
           </h2>
+          
+          {/* Framework Introduction */}
+          <div className="max-w-4xl mx-auto mt-12 space-y-6">
+            <p className="text-xl md:text-2xl font-display text-primary/90 leading-relaxed italic">
+              A strategic system to grow aligned, resilient organizations — from the inside out.
+            </p>
+            
+            <p className="text-lg md:text-xl font-body text-primary/80 leading-relaxed">
+              COIREA's proprietary 5-Pillar Framework supports CEOs and leadership teams in evolving their company's operating model — integrating systems diagnostics, human-centered insight, and regenerative wisdom.
+            </p>
+            
+            <p className="text-lg md:text-xl font-body text-primary/75 leading-relaxed">
+              Rather than fixing surface-level issues, this framework reveals the core of what drives scalable, regenerative success — helping leaders move from reactive fire-fighting to coherent, purpose-led execution.
+            </p>
+          </div>
         </div>
 
         {/* Framework Image with Enhanced Design - Now Wider */}
