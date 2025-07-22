@@ -185,34 +185,33 @@ const Offerings = () => {
         {/* 5-Pillar Framework Section */}
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
-            {/* Pillar Icons Horizontal Display - Equal Size */}
-            <div className="grid grid-cols-5 gap-6 mb-20">
-              {pillars.map((pillar, index) => {
-                const IconComponent = pillar.icon;
-                return (
-                  <div key={index} className="text-center group cursor-pointer">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${
-                      pillar.color === 'text-olive-green' ? 'from-olive-green/20 to-olive-green' : 
-                      pillar.color === 'text-sage' ? 'from-sage/20 to-sage' :
-                      pillar.color === 'text-copper' ? 'from-copper/20 to-copper' :
-                      'from-primary/20 to-primary'
-                    } rounded-2xl mb-4 group-hover:scale-105 transition-all duration-300 shadow-lg relative overflow-hidden mx-auto flex items-center justify-center`}>
-                      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/10"></div>
-                      <IconComponent className="w-8 h-8 text-white relative z-10" />
-                    </div>
-                    <p className="text-base font-display font-semibold text-primary mb-2">{pillar.title}</p>
-                    <p className="text-sm text-muted-foreground font-body leading-tight">{pillar.description}</p>
-                  </div>
-                );
-              })}
+            {/* Framework Header */}
+            <div className="text-center mb-16">
+              <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-12">
+                The COIREA 5-Pillar Framework
+              </h3>
+            </div>
+
+            {/* Framework Image */}
+            <div className="flex justify-center mb-16">
+              <div className="relative group max-w-5xl w-full">
+                {/* Enhanced shadow and glow effects */}
+                <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+                <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
+                
+                {/* Main image container */}
+                <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
+                  <img 
+                    src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
+                    alt="COIREA 5-Pillar Framework" 
+                    className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Framework Description */}
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-12">
-                The COIREA 5-Pillar Framework
-              </h3>
-              
               <div className="text-left max-w-4xl mx-auto mb-12">
                 <h4 className="text-xl font-display font-semibold text-primary mb-6">
                   This framework empowers leadership teams to:
