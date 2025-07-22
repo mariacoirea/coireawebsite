@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -50,9 +51,9 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center items-center mb-16">
-          <Link to="/offerings">
+          <Link to="/journey">
             <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-8 py-4 transition-all duration-300 shadow-lg">
-              Discover Our Approach
+              Begin Your Journey
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
             </Button>
           </Link>

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,33 +13,37 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
-              alt="COIREA Logo" 
-              className="h-12 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
+                alt="COIREA Logo" 
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               HOME
-            </a>
-            <a href="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            </Link>
+            <Link to="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               OFFERINGS
-            </a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               ABOUT
-            </a>
-            <a href="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            </Link>
+            <Link to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               INSIGHTS
-            </a>
-            <a href="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+            </Link>
+            <Link to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               TOOLS
-            </a>
-            <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
-              Begin the Journey
-            </Button>
+            </Link>
+            <Link to="/journey">
+              <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
+                BEGIN JOURNEY
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -53,24 +58,26 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6 space-y-4">
-            <a href="/" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            <Link to="/" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               HOME
-            </a>
-            <a href="/offerings" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            </Link>
+            <Link to="/offerings" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               OFFERINGS
-            </a>
-            <a href="/about" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            </Link>
+            <Link to="/about" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               ABOUT
-            </a>
-            <a href="/insights" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            </Link>
+            <Link to="/insights" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               INSIGHTS
-            </a>
-            <a href="/tools" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+            </Link>
+            <Link to="/tools" className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               TOOLS
-            </a>
-            <Button variant="outline" size="lg" className="w-full mt-4 border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full">
-              Begin the Journey
-            </Button>
+            </Link>
+            <Link to="/journey">
+              <Button variant="outline" size="lg" className="w-full mt-4 border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full">
+                BEGIN JOURNEY
+              </Button>
+            </Link>
           </nav>
         )}
       </div>
