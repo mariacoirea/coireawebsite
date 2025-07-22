@@ -116,7 +116,7 @@ const Journey = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" id="journey-start">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

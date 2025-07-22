@@ -202,7 +202,7 @@ const ServicesSection = () => {
             </p>
           </div>
           
-          <Link to="/journey">
+          <Link to="/journey#journey-start">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group px-8 py-4">
               Begin Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
