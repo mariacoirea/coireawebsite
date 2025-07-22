@@ -51,7 +51,7 @@ const FivePillarFrameworkSection = () => {
 
         {/* Framework Image with Enhanced Design - Now Wider */}
         <div className="flex justify-center mb-16">
-          <div className="relative group max-w-7xl w-full">
+          <div className="relative group max-w-5xl w-full">
             {/* Enhanced shadow and glow effects */}
             <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
             <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
