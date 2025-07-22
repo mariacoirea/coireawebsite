@@ -332,7 +332,7 @@ const About = () => {
                   Begin your transformation journey with COIREA's regenerative approach to organizational evolution.
                 </p>
                 
-                <Link to="/journey">
+                <Link to="/journey#journey-start">
                   <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
                     Begin the Journey
                     <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
