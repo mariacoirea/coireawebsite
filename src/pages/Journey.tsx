@@ -117,8 +117,6 @@ const Journey = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Anchor at the very top of the page */}
-      <div id="journey-start" className="absolute top-0"></div>
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

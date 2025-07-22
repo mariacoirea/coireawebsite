@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
@@ -8,232 +9,326 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background overflow-hidden">
-        {/* Enhanced Background Layers */}
-        <div className="absolute inset-0">
-          {/* Organic flowing shapes */}
-          <div className="absolute top-16 left-8 w-80 h-80 rounded-full bg-gradient-to-br from-primary/[0.03] via-accent/[0.02] to-transparent blur-3xl"></div>
-          <div className="absolute bottom-20 right-12 w-96 h-96 rounded-full bg-gradient-to-br from-secondary/[0.02] via-sage/[0.03] to-transparent blur-3xl"></div>
+      <main className="pt-20">
+        {/* Enhanced Hero Section with New Landscape Background */}
+        <section 
+          className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/8143fc2b-3b48-4a24-9ace-393341a0f118.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center bottom',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-aura-pearl/20 via-transparent to-primary/10"></div>
           
-          {/* Subtle mesh gradient */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,hsl(var(--sage))_0%,transparent_60%)] opacity-[0.03]"></div>
-        </div>
-
-        <div className="container mx-auto px-6 text-center relative z-10">
-          {/* Section Header */}
-          <div className="mb-16">
-            <h1 className="text-5xl md:text-7xl font-display font-semibold text-primary mb-6 leading-tight">
-              Our Purpose: <span className="block italic">Regenerate Organizations</span>
+          {/* Subtle decorative elements for visual consistency */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
+          
+          <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
+              The Future of Work Isn't a Trend — <span className="italic">It's a Transformation</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-              We help purpose-driven companies realign their systems, culture, and leadership.
+            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              We founded COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being.
             </p>
+          </div>
+        </section>
 
-            <p className="text-lg text-muted-foreground/80 font-body max-w-4xl mx-auto mb-8">
-              From team retreats to long-term programs, we support the evolution toward resilient, future-ready organizations.
-            </p>
+        {/* Mission Section */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
+                <Mountain className="w-4 h-4 text-primary" />
+                <span className="text-primary font-medium">Our Mission</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
+                Purpose. People. <span className="text-sage">Performance.</span>
+              </h2>
+              
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-elegant border border-primary/10">
+              <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8 max-w-4xl mx-auto text-center">
+                Our mission is to guide organizations through deep structural and human transformation. We align purpose, people, and performance so that companies can evolve with integrity, strategic direction, and long-term success.
+              </p>
+              <div className="text-center">
+                <p className="text-2xl text-primary font-body font-medium italic">
+                  When purpose and leadership are in coherence, companies not only grow — they regenerate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Values Section */}
+        <section className="py-24 px-6 bg-warm-beige">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
+                <Heart className="w-4 h-4 text-sage" />
+                <span className="text-primary font-medium">Our Values</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
+                What We <span className="text-sage">Stand For</span>
+              </h2>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
+            </div>
             
-            <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
-          </div>
-        </div>
-
-        {/* Top wave separator */}
-        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-          <svg className="relative block w-full h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".3" fill="hsl(var(--aura-pearl))"></path>
-          </svg>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-6 leading-tight">
-              Our Core Values
-            </h2>
-            
-            <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-              These principles guide our work and relationships.
-            </p>
-          </div>
-
-          {/* 3-Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Value 1: Regeneration */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-sage/20 to-warm-beige/20 mb-6">
-                <Leaf className="w-8 h-8 text-sage" />
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Value 1 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="w-8 h-8 text-sage" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Clarity of Purpose
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We design from the inside out — anchored in strategic vision, soul truth, and long-term direction.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Regeneration
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We design for continuous renewal and growth, mirroring nature's cycles.
-              </p>
-            </div>
 
-            {/* Value 2: Coherence */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-aura-pearl/20 mb-6">
-                <Zap className="w-8 h-8 text-primary" />
+              {/* Value 2 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Coherence at Every Level
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      Transformation lasts when purpose, leadership, and culture are aligned across systems, teams, and decisions.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Coherence
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We align purpose, people, and performance for synergistic impact.
-              </p>
-            </div>
 
-            {/* Value 3: Well-being */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-warm-beige/20 mb-6">
-                <Heart className="w-8 h-8 text-accent" />
+              {/* Value 3 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Lightbulb className="w-8 h-8 text-copper" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Leadership with Integrity
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We support bold, conscious leadership that prioritizes presence, responsibility, and aligned action.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Well-being
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We prioritize holistic health as the foundation for sustainable success.
-              </p>
+
+              {/* Value 4 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-8 h-8 text-olive-green" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Human-Centered Systems
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      People are not separate from performance — they are the system. We design structures that support both.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 5 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Compass className="w-8 h-8 text-sage" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Reciprocity as Strategy
+                      <span className="block text-lg font-body font-normal text-primary/70 mt-1">(Inspired by Ayni)</span>
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We honor the natural flow of giving and receiving. Regeneration begins with how we relate — to ourselves, to others, to the system.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Value 6 */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-8 h-8 text-copper" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                      Brave Evolution
+                    </h3>
+                    <p className="text-foreground/70 font-body leading-relaxed">
+                      We invite companies to lead change from a place of courage — daring to disrupt, experiment, and evolve from truth.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Our Approach Section */}
-      <section className="py-20 bg-gradient-to-br from-aura-pearl/30 via-warm-beige/10 to-background">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-6 leading-tight">
-              Our Regenerative Approach
-            </h2>
-            
-            <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-              We integrate time-tested wisdom with modern science to unlock potential.
-            </p>
-          </div>
+        {/* Future of Work Section */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
+                  <Star className="w-4 h-4 text-primary" />
+                  <span className="text-primary font-medium">Real Partnership</span>
+                </div>
 
-          {/* 3-Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Pillar 1: Systems Thinking */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-warm-beige/20 mb-6">
-                <Eye className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Systems Thinking
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We see the interconnectedness of all parts, optimizing the whole.
-              </p>
-            </div>
-
-            {/* Pillar 2: Cultural Architecture */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-sage/20 to-aura-pearl/20 mb-6">
-                <TreePine className="w-8 h-8 text-sage" />
-              </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Cultural Architecture
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We design environments that foster trust, creativity, and purpose.
-              </p>
-            </div>
-
-            {/* Pillar 3: Conscious Leadership */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-warm-beige/20 mb-6">
-                <Compass className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-display font-semibold text-primary mb-3">
-                Conscious Leadership
-              </h3>
-              <p className="text-muted-foreground font-body leading-relaxed">
-                We cultivate leaders who inspire, empower, and serve.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-6 leading-tight">
-              Meet Our Team
-            </h2>
-            
-            <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-              We are a diverse group of consultants, coaches, and creatives.
-            </p>
-          </div>
-
-          {/* Team Member Grid (Example - Replace with actual team members) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1573496864061-c801f532e7fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-display font-semibold text-primary mb-2">
-                Jane Doe
-              </h3>
-              <p className="text-muted-foreground font-body">
-                Lead Consultant
-              </p>
-            </div>
-
-            {/* Team Member 2 */}
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1580489944761-15a19d674x?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-display font-semibold text-primary mb-2">
-                Alex Smith
-              </h3>
-              <p className="text-muted-foreground font-body">
-                Culture Architect
-              </p>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="text-center">
-              <img
-                src="https://images.unsplash.com/photo-1544006652-940e2aa74c58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-display font-semibold text-primary mb-2">
-                Chris Johnson
-              </h3>
-              <p className="text-muted-foreground font-body">
-                Leadership Coach
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-          {/* Call to Action Section */}
-          <div className="bg-gradient-to-br from-warm-beige/60 via-aura-pearl/40 to-background py-32">
-            <div className="container mx-auto px-6 text-center">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-5xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  Ready to Transform Your Organization?
+                <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-8 leading-tight">
+                  Real change requires <span className="text-copper">real partnership.</span>
                 </h2>
                 
-                <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-12 leading-relaxed">
+                <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8">
+                  At COIREA, you don't just work with a consulting firm. You enter a living ecosystem of transformational allies:
+                </p>
+                
+                <div className="space-y-4 mb-8">
+                  {[
+                    "Executive coaches",
+                    "Culture strategists", 
+                    "Regenerative business mentors",
+                    "Well-being and somatic practitioners",
+                    "Systems change facilitators"
+                  ].map((ally, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <div className="w-3 h-3 bg-gradient-to-r from-sage to-primary rounded-full"></div>
+                      <span className="text-foreground/70 font-body text-lg">{ally}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-elegant border border-primary/10">
+                <h3 className="text-3xl font-display font-semibold text-primary mb-8">
+                  Together, we help you:
+                </h3>
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-sage" />
+                    </div>
+                    <div>
+                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Rebuild internal systems</h4>
+                      <p className="text-foreground/70 font-body">with integrity and depth</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Target className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Align leadership and strategy</h4>
+                      <p className="text-foreground/70 font-body">through every layer</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-copper/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Heart className="w-6 h-6 text-copper" />
+                    </div>
+                    <div>
+                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Measure what matters</h4>
+                      <p className="text-foreground/70 font-body">purpose, culture, collaboration, and energy</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-10 pt-8 border-t border-primary/10">
+                  <p className="text-primary font-body font-medium text-xl text-center">
+                    We help you create the company your future needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* From the Founder Section */}
+        <section className="py-24 px-6 bg-warm-beige">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-light text-primary mb-16 leading-tight">
+                From The Founder<span className="text-sage">...</span>
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+              {/* Founder Image */}
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
+                    <img 
+                      src="/lovable-uploads/2627835c-d411-47f1-abb6-99b92bd30341.png" 
+                      alt="Maria Jose Figueroa - Founder of COIREA"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-4 -right-4 w-16 h-16 bg-sage/20 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
+                </div>
+              </div>
+              
+              {/* Founder Content */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-6">
+                  Maria Jose Figueroa - <span className="text-sage">Conscious Leadership Catalyst</span>
+                </h3>
+                
+                <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
+                  <p>
+                    With a background in business and a calling rooted in soul, I created COIREA to help teams lead with clarity, coherence, and deeper purpose.
+                  </p>
+                  
+                  <p>
+                    My journey weaves together strategic leadership, regenerative wisdom, and intuitive intelligence — all in service of evolving the way we work.
+                  </p>
+                  
+                  <p className="text-xl font-medium text-primary italic">
+                    I believe transformation begins when we remember who we are — and choose to lead from that place.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced CTA Section */}
+        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto max-w-6xl text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
+              <div className="relative bg-white/40 backdrop-blur-sm rounded-3xl p-12 border border-primary/20 shadow-elegant">
+                <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
+                  Ready to evolve your <span className="italic text-sage">organization?</span>
+                </h2>
+                
+                <p className="text-xl text-primary/80 font-body mb-12 max-w-3xl mx-auto">
                   Begin your transformation journey with COIREA's regenerative approach to organizational evolution.
                 </p>
                 
@@ -246,7 +341,20 @@ const About = () => {
               </div>
             </div>
           </div>
+        </section>
 
+        {/* Stress Statistics Section */}
+        <section className="py-16 px-6 bg-background border-t border-primary/10">
+          <div className="container mx-auto max-w-4xl text-center">
+            <blockquote className="text-lg md:text-xl text-foreground/70 font-body italic leading-relaxed">
+              "76% of employees report experiencing moderate to high levels of stress at work — and 1 in 3 say it affects their performance."
+            </blockquote>
+            <cite className="block mt-4 text-primary font-medium">
+              – American Institute of Stress
+            </cite>
+          </div>
+        </section>
+      </main>
       <Footer />
     </div>
   );
