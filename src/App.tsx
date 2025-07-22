@@ -9,8 +9,12 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Offerings from "./pages/Offerings";
 import Insights from "./pages/Insights";
+import BlogPost from "./pages/BlogPost";
 import Tools from "./pages/Tools";
 import Journey from "./pages/Journey";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
+import PostEditor from "./pages/PostEditor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
