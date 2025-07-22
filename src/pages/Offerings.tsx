@@ -196,26 +196,8 @@ const Offerings = () => {
               </h3>
             </div>
 
-            {/* Framework Image */}
-            <div className="flex justify-center mb-16">
-              <div className="relative group max-w-6xl w-full">
-                {/* Enhanced shadow and glow effects */}
-                <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
-                <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
-                
-                {/* Main image container */}
-                <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-2 md:p-4 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
-                  <img 
-                    src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
-                    alt="COIREA 5-Pillar Framework" 
-                    className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Framework Description */}
-            <div className="text-center mb-12">
+            {/* Framework Description - Moved before image */}
+            <div className="text-center mb-16">
               <div className="text-left max-w-4xl mx-auto mb-12">
                 <h4 className="text-xl font-display font-semibold text-primary mb-6">
                   This framework empowers leadership teams to:
@@ -244,7 +226,28 @@ const Offerings = () => {
                   </li>
                 </ul>
               </div>
+            </div>
 
+            {/* Framework Image */}
+            <div className="flex justify-center mb-16">
+              <div className="relative group max-w-6xl w-full">
+                {/* Enhanced shadow and glow effects */}
+                <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
+                <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
+                
+                {/* Main image container */}
+                <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-2 md:p-4 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
+                  <img 
+                    src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
+                    alt="COIREA 5-Pillar Framework" 
+                    className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* KPI Measurement Section */}
+            <div className="text-center">
               {/* KPI Measurement Grid */}
               <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg max-w-6xl mx-auto">
                 <h4 className="text-xl font-display font-semibold text-primary mb-6">
