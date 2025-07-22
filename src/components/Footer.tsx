@@ -12,11 +12,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-accent/30 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <div className="w-7 h-7 rounded-full border-2 border-primary-foreground/40 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/e067195f-6380-4731-875b-50e5cf44f94b.png" 
+                alt="COIREA Logo" 
+                className="w-12 h-12"
+              />
               <span className="text-3xl font-display font-semibold">COIREA</span>
             </div>
             
