@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -25,14 +26,15 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Linkedin className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Twitter className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Instagram className="w-5 h-5" />
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary-foreground/10"
+                asChild
+              >
+                <a href="https://www.linkedin.com/company/coirea" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </Button>
             </div>
           </div>
@@ -57,10 +59,6 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/80">hello@coirea.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/80">+1 (555) 123-4567</span>
-              </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5" />
                 <span className="text-primary-foreground/80">
@@ -71,41 +69,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-primary-foreground/20 mt-16 pt-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-display font-semibold mb-4">
-              Stay Connected to the Evolution
-            </h3>
-            <p className="text-primary-foreground/80 font-body mb-8">
-              Receive insights, frameworks, and updates on regenerative organizational practices.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-              />
-              <Button variant="accent" size="default" className="px-8">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/20">
         <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-center">
             <div className="text-sm text-primary-foreground/60 font-body">
               © 2024 COIREA. All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm text-primary-foreground/60 font-body">
-              <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
