@@ -284,8 +284,8 @@ const Offerings = () => {
                 How Do We Track It in Real Time?
               </h2>
               <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                See the COIREA Evolution Dashboard — where data meets wisdom for sustainable growth. 
-                Track your transformation through real-time organizational intelligence.
+                See the COIREA Evolution Dashboard — where insight meets action.
+                Track how your organization evolves in real time across the five core pillars of regenerative business. Using a blend of methodologies—including surveys, interviews, behavioral metrics, and well-being diagnostics—the dashboard translates qualitative and quantitative data into clear, actionable insights. It's more than a snapshot—it's a compass for sustainable, people-centered growth.
               </p>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
