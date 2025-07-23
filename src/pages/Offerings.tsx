@@ -470,47 +470,52 @@ const Offerings = () => {
               </Card>
             </div>
 
-            {/* Other Offerings Grid - Fixed Alignment */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Other Offerings Grid - Mobile Optimized */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
               {offerings.slice(1).map((offering, index) => {
                 const IconComponent = offering.icon;
                 return (
-                  <Card key={offering.id} className="p-6 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden h-full flex flex-col">
-                    {/* Badge */}
+                  <Card key={offering.id} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden h-full flex flex-col">
+                    {/* Badge - Mobile Optimized */}
                     <div className="absolute top-4 right-4">
-                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 rounded-full whitespace-nowrap`}>
+                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 md:px-3 md:py-1.5 rounded-full whitespace-nowrap`}>
                         {offering.badge}
                       </span>
                     </div>
 
-                    {/* Header */}
-                    <div className="flex items-start space-x-3 mb-4 pr-20 mt-8">
-                      <div className={`w-12 h-12 bg-${offering.accent}/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                        <IconComponent className={`w-6 h-6 text-${offering.accent}`} />
+                    {/* Header - Mobile Optimized */}
+                    <div className="mb-6 mt-8">
+                      <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4">
+                        <IconComponent className="w-8 h-8 text-primary-foreground" />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-display font-semibold text-primary group-hover:text-primary-light transition-colors leading-tight mb-1">
-                          {offering.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">{offering.duration}</p>
+                      <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors mb-3">
+                        {offering.title}
+                      </h3>
+                      <div className="flex flex-col space-y-2">
+                        <span className="text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full w-fit">
+                          {offering.badge}
+                        </span>
+                        <span className="text-sm text-muted-foreground">
+                          {offering.duration}
+                        </span>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed mb-6 text-sm flex-grow">
+                    <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow">
                       {offering.description}
                     </p>
 
                     {/* Features */}
                     <div className="mt-auto">
-                      <h4 className="text-xs font-body font-semibold text-primary mb-3 uppercase tracking-wide">
+                      <h4 className="text-sm font-body font-semibold text-primary mb-3 uppercase tracking-wide">
                         Key Areas
                       </h4>
                       <div className="space-y-2">
                         {offering.keyAreas.map((area, idx) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <div className={`w-1.5 h-1.5 bg-${offering.accent} rounded-full flex-shrink-0`}></div>
-                            <span className="text-xs text-foreground/80 font-body">{area}</span>
+                            <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
+                            <span className="text-sm text-foreground/80 font-body">{area}</span>
                           </div>
                         ))}
                       </div>
