@@ -131,10 +131,6 @@ const Journey = () => {
             </p>
             <div className="flex justify-center items-center space-x-8 mb-12">
               <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-foreground/70 font-body">500+ Leaders Served</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Target className="w-5 h-5 text-primary" />
                 <span className="text-foreground/70 font-body">Proven Framework</span>
               </div>
