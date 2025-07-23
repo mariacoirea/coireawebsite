@@ -16,7 +16,7 @@ import { User } from "@supabase/supabase-js";
 const CLUSTERS = [
   "Transformational Business Pillars",
   "Organizational Evolution", 
-  "Energy & Intelligence",
+  "Consciousness",
   "COIREA Stories"
 ];
 
