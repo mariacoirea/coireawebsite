@@ -29,6 +29,22 @@ const CLUSTERS = [
   "COIREA Stories"
 ];
 
+// Helper function to get shorter display names for mobile
+const getDisplayName = (cluster: string) => {
+  switch (cluster) {
+    case "Transformational Business Pillars":
+      return { full: cluster, short: "Business" };
+    case "Organizational Evolution":
+      return { full: cluster, short: "Evolution" };
+    case "Inner Work":
+      return { full: cluster, short: "Inner Work" };
+    case "COIREA Stories":
+      return { full: cluster, short: "Stories" };
+    default:
+      return { full: cluster, short: cluster };
+  }
+};
+
 const Insights = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
@@ -123,11 +139,15 @@ const Insights = () => {
             
             <Tabs value={activeCluster} onValueChange={setActiveCluster} className="w-full">
               <TabsList className="grid w-full grid-cols-5 mb-8">
-                {CLUSTERS.map((cluster) => (
-                  <TabsTrigger key={cluster} value={cluster}>
-                    {cluster === "All" ? "All" : cluster.split(" ")[0]}
-                  </TabsTrigger>
-                ))}
+                {CLUSTERS.map((cluster) => {
+                  const displayName = getDisplayName(cluster);
+                  return (
+                    <TabsTrigger key={cluster} value={cluster} className="text-xs sm:text-sm">
+                      <span className="hidden sm:inline">{displayName.full}</span>
+                      <span className="sm:hidden">{displayName.short}</span>
+                    </TabsTrigger>
+                  );
+                })}
               </TabsList>
             </Tabs>
           </div>
