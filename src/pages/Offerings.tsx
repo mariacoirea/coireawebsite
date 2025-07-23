@@ -582,7 +582,7 @@ const Offerings = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  onClick={() => navigate('/insights')}
+                  onClick={() => navigate('/tools')}
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold min-w-[200px]"
                 >
                   Try Our Tools
