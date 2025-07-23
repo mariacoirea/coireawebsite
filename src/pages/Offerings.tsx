@@ -408,33 +408,35 @@ const Offerings = () => {
               <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
             </div>
 
-            {/* Signature Program - Full Width */}
+            {/* Signature Program - Mobile Optimized */}
             <div className="mb-16 max-w-6xl mx-auto">
-              <Card className="p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
-                {/* Signature Badge */}
-                <div className="absolute top-6 right-6">
-                  <div className="flex items-center space-x-2 bg-sage/15 px-4 py-2 rounded-full">
-                    <Star className="w-4 h-4 text-sage" />
-                    <span className="text-sm font-medium text-sage">Signature Program</span>
+              <Card className="p-6 md:p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+                {/* Signature Badge - Mobile Optimized */}
+                <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                  <div className="flex items-center space-x-2 bg-sage/15 px-3 py-1.5 md:px-4 md:py-2 rounded-full">
+                    <Star className="w-3 h-3 md:w-4 md:h-4 text-sage" />
+                    <span className="text-xs md:text-sm font-medium text-sage">Signature Program</span>
                   </div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    {/* Header */}
-                    <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Building className="w-10 h-10 text-sage" />
+                {/* Mobile-First Stacked Layout */}
+                <div className="space-y-6 md:grid md:grid-cols-2 md:gap-8 md:items-center md:space-y-0">
+                  <div className="space-y-4 md:space-y-6">
+                    {/* Header - Mobile Optimized */}
+                    <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
+                        <Building className="w-8 h-8 md:w-10 md:h-10 text-sage" />
                       </div>
-                      <div>
-                        <h3 className="text-3xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors">
+                      <div className="text-center md:text-left">
+                        <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors">
                           Organizational Transformation
                         </h3>
-                        <div className="flex items-center space-x-2 mt-3">
-                          <span className="text-sm text-sage font-medium bg-sage/10 px-3 py-1 rounded-full">
+                        {/* Mobile-Optimized Badge Layout */}
+                        <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-3">
+                          <span className="text-sm text-sage font-medium bg-sage/10 px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
                             Long-Term Partnership
                           </span>
-                          <span className="text-sm text-muted-foreground">
+                          <span className="text-sm text-muted-foreground text-center md:text-left">
                             6–18 months
                           </span>
                         </div>
@@ -442,22 +444,23 @@ const Offerings = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed mb-6 text-lg">
+                    <p className="text-muted-foreground font-body leading-relaxed text-base md:text-lg text-center md:text-left">
                       Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.
                     </p>
                   </div>
 
                   <div>
-                    {/* Features */}
+                    {/* Features - Mobile Optimized */}
                     <div>
-                      <h4 className="text-sm font-body font-semibold text-primary mb-4 uppercase tracking-wide">
+                      <h4 className="text-sm font-body font-semibold text-primary mb-4 uppercase tracking-wide text-center md:text-left">
                         Key Areas
                       </h4>
-                      <div className="grid grid-cols-2 gap-3">
+                      {/* Single Column on Mobile, Two Columns on Desktop */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         {["Strategic Alignment", "Culture Architecture", "Conscious Leadership", "Change Implementation"].map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-sage rounded-full"></div>
-                            <span className="text-foreground/80 font-body">{feature}</span>
+                          <div key={idx} className="flex items-center space-x-3 justify-center md:justify-start">
+                            <div className="w-2 h-2 bg-sage rounded-full flex-shrink-0"></div>
+                            <span className="text-foreground/80 font-body text-sm md:text-base">{feature}</span>
                           </div>
                         ))}
                       </div>
