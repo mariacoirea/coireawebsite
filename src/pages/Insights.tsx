@@ -25,7 +25,7 @@ const CLUSTERS = [
   "All",
   "Transformational Business Pillars",
   "Organizational Evolution", 
-  "Energy & Intelligence",
+  "Inner Work",
   "COIREA Stories"
 ];
 
