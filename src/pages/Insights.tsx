@@ -25,7 +25,7 @@ const CLUSTERS = [
   "All",
   "Transformational Business Pillars",
   "Organizational Evolution", 
-  "Inner Work",
+  "Consciousness",
   "COIREA Stories"
 ];
 
@@ -36,8 +36,8 @@ const getDisplayName = (cluster: string) => {
       return { full: "Business", short: "Business" };
     case "Organizational Evolution":
       return { full: "Evolution", short: "Evolution" };
-    case "Inner Work":
-      return { full: "Inner Work", short: "Inner Work" };
+    case "Consciousness":
+      return { full: "Consciousness", short: "Consciousness" };
     case "COIREA Stories":
       return { full: "Stories", short: "Stories" };
     default:
