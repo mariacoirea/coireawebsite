@@ -290,11 +290,19 @@ const Offerings = () => {
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
 
-            {/* Dashboard Mockup with Left Sidebar */}
+            {/* Dashboard Mockup - Mobile Optimized */}
             <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
-              <div className="flex">
-                {/* Left Sidebar */}
-                <div className="w-64 bg-aura-pearl border-r border-primary/10 p-6">
+              {/* Mobile Header */}
+              <div className="lg:hidden p-4 border-b border-primary/10 bg-aura-pearl">
+                <div className="text-center">
+                  <h3 className="text-lg font-display font-bold text-primary mb-1">COIREA Dashboard</h3>
+                  <p className="text-sm text-primary/60">Evolution Overview</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row">
+                {/* Left Sidebar - Hidden on mobile, shown as top nav on tablet+ */}
+                <div className="hidden lg:block lg:w-64 bg-aura-pearl border-r border-primary/10 p-6">
                   <div className="mb-8">
                     <h3 className="text-lg font-display font-bold text-primary mb-2">COIREA</h3>
                     <p className="text-sm text-primary/60">Evolution Dashboard</p>
@@ -327,8 +335,8 @@ const Offerings = () => {
 
                 {/* Main Dashboard Content */}
                 <div className="flex-1">
-                  {/* Dashboard Header */}
-                  <div className="p-6 border-b border-primary/10">
+                  {/* Dashboard Header - Desktop only */}
+                  <div className="hidden lg:block p-6 border-b border-primary/10">
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-2xl font-display font-bold text-primary">Overview</h3>
@@ -344,22 +352,22 @@ const Offerings = () => {
                   </div>
 
                   {/* Dashboard Content */}
-                  <div className="p-8">
-                    <div className="mb-8">
-                      <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
-                      <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
+                  <div className="p-4 sm:p-6 lg:p-8">
+                    <div className="mb-6 sm:mb-8">
+                      <h4 className="text-lg sm:text-xl font-display font-semibold text-primary mb-2 text-center lg:text-left">Organizational Vitality Index (OVI)</h4>
+                      <p className="text-primary/60 mb-4 sm:mb-6 text-sm sm:text-base text-center lg:text-left">Real-time pulse of organizational health</p>
                       
                       {/* Main Score Circle */}
-                      <div className="flex justify-center mb-8">
-                        <div className="relative w-32 h-32">
+                      <div className="flex justify-center mb-6 sm:mb-8">
+                        <div className="relative w-24 h-24 sm:w-32 sm:h-32">
                           <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
-                          <svg className="w-32 h-32 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
+                          <svg className="w-24 h-24 sm:w-32 sm:h-32 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
                             <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                             <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                           </svg>
                           <div className="absolute inset-0 flex items-center justify-center z-20">
                             <div className="text-center">
-                              <div className="text-2xl font-bold text-primary">52.6</div>
+                              <div className="text-xl sm:text-2xl font-bold text-primary">52.6</div>
                               <div className="text-xs text-primary/60">Vitality Score</div>
                             </div>
                           </div>
@@ -367,8 +375,8 @@ const Offerings = () => {
                       </div>
                     </div>
 
-                    {/* 5 Pillars Metrics */}
-                    <div className="grid grid-cols-5 gap-3">
+                    {/* 5 Pillars Metrics - Mobile Optimized */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
                       {[
                         { name: "Purpose", score: 46, color: "olive-green", description: "Clarity & storytelling" },
                         { name: "Leadership", score: 52, color: "sage", description: "Presence & feedback" },
@@ -376,12 +384,12 @@ const Offerings = () => {
                         { name: "Culture", score: 54, color: "primary", description: "Values alignment" },
                         { name: "Well-Being", score: 61, color: "sage", description: "Energy & mindfulness" }
                       ].map((pillar, index) => (
-                        <div key={index} className="text-center">
-                          <div className={`w-10 h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
-                            <span className={`text-${pillar.color} font-bold text-sm`}>{pillar.score}</span>
+                        <div key={index} className="text-center p-2 sm:p-0">
+                          <div className={`w-8 h-8 sm:w-10 sm:h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-1 sm:mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
+                            <span className={`text-${pillar.color} font-bold text-xs sm:text-sm`}>{pillar.score}</span>
                           </div>
                           <h5 className="font-semibold text-primary text-xs mb-1">{pillar.name}</h5>
-                          <p className="text-xs text-muted-foreground leading-tight">{pillar.description}</p>
+                          <p className="text-xs text-muted-foreground leading-tight hidden sm:block">{pillar.description}</p>
                         </div>
                       ))}
                     </div>
@@ -542,29 +550,29 @@ const Offerings = () => {
         </section>
 
         {/* Combined CTA and Contact Form Section */}
-        <section className="py-24 px-6 bg-warm-beige">
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-warm-beige">
           <div className="container mx-auto max-w-4xl">
             {/* Enhanced CTA Header */}
-            <div className="text-center mb-16">
-              <div className="relative max-w-4xl mx-auto py-8 px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="relative max-w-4xl mx-auto py-6 sm:py-8 px-4 sm:px-8">
                 {/* Background Elements */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-sage/5 to-primary/5 rounded-3xl blur-3xl transform scale-110"></div>
                 
-                <div className="relative space-y-6">
-                  <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm">
+                <div className="relative space-y-4 sm:space-y-6">
+                  <div className="inline-flex items-center gap-2 sm:gap-3 bg-white/60 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-primary/10 shadow-sm">
                     <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
-                    <span className="text-primary font-medium">Ready to Transform?</span>
+                    <span className="text-primary font-medium text-sm sm:text-base">Ready to Transform?</span>
                     <div className="w-2 h-2 bg-primary rounded-full animate-ping animation-delay-200"></div>
                   </div>
                   
-                  <h2 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary leading-tight px-2">
                     Let's Explore Your<br />
                     <span className="bg-gradient-to-r from-sage to-primary bg-clip-text text-transparent">
                       Transformation Journey
                     </span>
                   </h2>
                   
-                  <p className="text-lg text-primary/80 font-body leading-relaxed max-w-2xl mx-auto">
+                  <p className="text-base sm:text-lg text-primary/80 font-body leading-relaxed max-w-2xl mx-auto px-2">
                     Ready to begin? Share your vision and challenges with us, and we'll craft a path forward that honors your organization's unique evolution. All offerings are tailored and tracked through our 
                     <span className="font-semibold text-primary"> Regenerative Evolution System</span>.
                   </p>
@@ -573,14 +581,14 @@ const Offerings = () => {
             </div>
 
             {/* Contact Form */}
-            <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-xl">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-4 sm:p-6 lg:p-8 bg-white/90 backdrop-blur-sm border-0 shadow-xl">
+              <form className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-primary mb-2">Name *</label>
                     <Input 
                       placeholder="Your full name" 
-                      className="border-primary/20 focus:border-sage transition-colors"
+                      className="border-primary/20 focus:border-sage transition-colors h-12 text-base"
                     />
                   </div>
                   <div>
@@ -588,31 +596,31 @@ const Offerings = () => {
                     <Input 
                       type="email" 
                       placeholder="your@email.com" 
-                      className="border-primary/20 focus:border-sage transition-colors"
+                      className="border-primary/20 focus:border-sage transition-colors h-12 text-base"
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-primary mb-2">Organization</label>
                     <Input 
                       placeholder="Company/Organization name" 
-                      className="border-primary/20 focus:border-sage transition-colors"
+                      className="border-primary/20 focus:border-sage transition-colors h-12 text-base"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-primary mb-2">Role/Title</label>
                     <Input 
                       placeholder="Your role or title" 
-                      className="border-primary/20 focus:border-sage transition-colors"
+                      className="border-primary/20 focus:border-sage transition-colors h-12 text-base"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">Areas of Interest</label>
-                  <div className="grid md:grid-cols-2 gap-4 mt-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-3">
                     {[
                       "Organizational Transformation",
                       "Team Retreats & Workshops", 
@@ -621,9 +629,9 @@ const Offerings = () => {
                       "5-Pillar Framework Assessment",
                       "COIREA Evolution Dashboard"
                     ].map((interest, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <Checkbox id={`interest-${index}`} className="border-primary/30" />
-                        <label htmlFor={`interest-${index}`} className="text-sm text-muted-foreground">
+                      <div key={index} className="flex items-center space-x-3 min-h-[44px] touch-manipulation">
+                        <Checkbox id={`interest-${index}`} className="border-primary/30 w-5 h-5" />
+                        <label htmlFor={`interest-${index}`} className="text-sm text-muted-foreground leading-tight cursor-pointer">
                           {interest}
                         </label>
                       </div>
@@ -637,8 +645,8 @@ const Offerings = () => {
                   </label>
                   <Textarea 
                     placeholder="What challenges are you facing? What transformation are you envisioning? What drew you to COIREA's approach?"
-                    rows={6}
-                    className="border-primary/20 focus:border-sage transition-colors"
+                    rows={4}
+                    className="border-primary/20 focus:border-sage transition-colors min-h-[120px] text-base"
                   />
                 </div>
 
@@ -646,20 +654,20 @@ const Offerings = () => {
                   <div className="relative inline-block group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-sage to-primary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
                     
-                    <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                      <span className="flex items-center gap-3">
-                        <Send className="w-5 h-5" />
+                    <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0 min-h-[48px] touch-manipulation">
+                      <span className="flex items-center gap-2 sm:gap-3">
+                        <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                         Begin Your Journey
-                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </span>
                     </Button>
                   </div>
                   
-                  <p className="text-sm text-muted-foreground mt-4">
+                  <p className="text-sm text-muted-foreground mt-4 px-2">
                     We'll respond within 24 hours to begin our conversation.
                   </p>
                   
-                  <p className="text-sm text-primary/50 font-body mt-2">
+                  <p className="text-sm text-primary/50 font-body mt-2 px-2">
                     Join organizations already transforming with data-driven precision
                   </p>
                 </div>
