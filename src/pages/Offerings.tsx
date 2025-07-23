@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useNavigate } from "react-router-dom";
 import { 
   Brain, 
   Leaf, 
@@ -23,10 +24,14 @@ import {
   Shield,
   Zap,
   Send,
-  Check
+  Check,
+  MessageCircle,
+  Calendar
 } from "lucide-react";
 
 const Offerings = () => {
+  const navigate = useNavigate();
+
   const pillars = [
     {
       icon: Target,
@@ -549,130 +554,54 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* Combined CTA and Contact Form Section */}
+        {/* New CTA Section */}
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-4xl">
-            {/* Enhanced CTA Header */}
-            <div className="text-center mb-16">
-              <div className="relative max-w-4xl mx-auto py-8 px-8">
-                {/* Background Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-sage/5 to-primary/5 rounded-3xl blur-3xl transform scale-110"></div>
+            <div className="text-center space-y-8">
+              {/* Header */}
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight">
+                  Ready to Transform Your Organization?
+                </h2>
                 
-                <div className="relative space-y-6">
-                  <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm">
-                    <div className="w-2 h-2 bg-sage rounded-full animate-ping"></div>
-                    <span className="text-primary font-medium">Ready to Transform?</span>
-                    <div className="w-2 h-2 bg-primary rounded-full animate-ping animation-delay-200"></div>
-                  </div>
-                  
-                  <h2 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight">
-                    Let's Explore Your<br />
-                    <span className="bg-gradient-to-r from-sage to-primary bg-clip-text text-transparent">
-                      Transformation Journey
-                    </span>
-                  </h2>
-                  
-                  <p className="text-lg text-primary/80 font-body leading-relaxed max-w-2xl mx-auto">
-                    Ready to begin? Share your vision and challenges with us, and we'll craft a path forward that honors your organization's unique evolution. All offerings are tailored and tracked through our 
-                    <span className="font-semibold text-primary"> Regenerative Evolution System</span>.
-                  </p>
+                <p className="text-lg md:text-xl text-primary/80 font-body leading-relaxed max-w-3xl mx-auto">
+                  Let's explore how COIREA can support your organization's unique journey toward regenerative success.
+                </p>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                <Button 
+                  size="lg" 
+                  onClick={() => navigate('/journey')}
+                  className="bg-sage hover:bg-sage/90 text-white px-8 py-4 text-lg font-semibold min-w-[200px]"
+                >
+                  Begin Your Journey
+                </Button>
+                
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => navigate('/insights')}
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold min-w-[200px]"
+                >
+                  Try Our Tools
+                </Button>
+              </div>
+
+              {/* Supporting Text */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 text-primary/70">
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="text-sm font-medium">Free consultation available</span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5" />
+                  <span className="text-sm font-medium">Flexible scheduling</span>
                 </div>
               </div>
             </div>
-
-            {/* Contact Form */}
-            <Card className="p-8 bg-white/90 backdrop-blur-sm border-0 shadow-xl">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Name *</label>
-                    <Input 
-                      placeholder="Your full name" 
-                      className="border-primary/20 focus:border-sage transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Email *</label>
-                    <Input 
-                      type="email" 
-                      placeholder="your@email.com" 
-                      className="border-primary/20 focus:border-sage transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Organization</label>
-                    <Input 
-                      placeholder="Company/Organization name" 
-                      className="border-primary/20 focus:border-sage transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-primary mb-2">Role/Title</label>
-                    <Input 
-                      placeholder="Your role or title" 
-                      className="border-primary/20 focus:border-sage transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-primary mb-2">Areas of Interest</label>
-                  <div className="grid md:grid-cols-2 gap-4 mt-3">
-                    {[
-                      "Organizational Transformation",
-                      "Team Retreats & Workshops", 
-                      "Leadership Coaching",
-                      "Regenerative Strategy Consulting",
-                      "5-Pillar Framework Assessment",
-                      "COIREA Evolution Dashboard"
-                    ].map((interest, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <Checkbox id={`interest-${index}`} className="border-primary/30" />
-                        <label htmlFor={`interest-${index}`} className="text-sm text-muted-foreground">
-                          {interest}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-primary mb-2">
-                    Tell us about your transformation vision
-                  </label>
-                  <Textarea 
-                    placeholder="What challenges are you facing? What transformation are you envisioning? What drew you to COIREA's approach?"
-                    rows={6}
-                    className="border-primary/20 focus:border-sage transition-colors"
-                  />
-                </div>
-
-                <div className="text-center pt-4">
-                  <div className="relative inline-block group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-sage to-primary rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
-                    
-                    <Button className="relative bg-gradient-to-r from-primary to-sage hover:from-sage hover:to-primary text-white px-12 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 border-0">
-                      <span className="flex items-center gap-3">
-                        <Send className="w-5 h-5" />
-                        Begin Your Journey
-                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </span>
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-muted-foreground mt-4">
-                    We'll respond within 24 hours to begin our conversation.
-                  </p>
-                  
-                  <p className="text-sm text-primary/50 font-body mt-2">
-                    Join organizations already transforming with data-driven precision
-                  </p>
-                </div>
-              </form>
-            </Card>
           </div>
         </section>
       </main>
