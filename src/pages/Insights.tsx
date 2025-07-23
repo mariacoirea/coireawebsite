@@ -33,13 +33,13 @@ const CLUSTERS = [
 const getDisplayName = (cluster: string) => {
   switch (cluster) {
     case "Transformational Business Pillars":
-      return { full: cluster, short: "Business" };
+      return { full: "Business", short: "Business" };
     case "Organizational Evolution":
-      return { full: cluster, short: "Evolution" };
+      return { full: "Evolution", short: "Evolution" };
     case "Inner Work":
-      return { full: cluster, short: "Inner Work" };
+      return { full: "Inner Work", short: "Inner Work" };
     case "COIREA Stories":
-      return { full: cluster, short: "Stories" };
+      return { full: "Stories", short: "Stories" };
     default:
       return { full: cluster, short: cluster };
   }
