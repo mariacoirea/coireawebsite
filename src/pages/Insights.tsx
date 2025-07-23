@@ -168,10 +168,7 @@ const Insights = () => {
                         <p className="text-foreground/80 font-body leading-relaxed mb-4">
                           {post.preview_snippet}
                         </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-body text-muted-foreground">
-                            By {post.author}
-                          </span>
+                        <div className="flex items-center justify-end">
                           <Badge className="bg-accent/20 text-accent border-accent/30">
                             Featured
                           </Badge>
@@ -227,11 +224,6 @@ const Insights = () => {
                         <p className="text-foreground/80 font-body leading-relaxed text-sm">
                           {post.preview_snippet}
                         </p>
-                        <div className="mt-4">
-                          <span className="text-xs font-body text-muted-foreground">
-                            By {post.author}
-                          </span>
-                        </div>
                       </CardContent>
                     </Card>
                   </Link>
