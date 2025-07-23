@@ -245,13 +245,13 @@ const BlogPost = () => {
 
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t border-border">
-                <h3 className="text-sm font-body font-semibold text-muted-foreground mb-4 uppercase tracking-wide">
+              <div className="mt-12 pt-8 border-t border-border mb-12">
+                <h3 className="text-sm font-body font-semibold text-muted-foreground mb-6 uppercase tracking-wide">
                   Tags
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {post.tags.map((tag, index) => (
-                    <Badge key={index} variant="outline" className="text-xs">
+                    <Badge key={index} variant="outline" className="text-xs px-3 py-1">
                       {tag}
                     </Badge>
                   ))}
