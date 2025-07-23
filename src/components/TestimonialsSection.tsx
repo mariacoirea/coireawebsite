@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -92,6 +91,13 @@ const TestimonialsSection = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Attribution Text */}
+        <div className="text-center mb-16">
+          <p className="text-sm text-muted-foreground/80 font-body italic">
+            Based on COIREA's 2024 Organizational Health Survey across multiple companies.
+          </p>
         </div>
 
         {/* 3-Column Insight Grid */}
