@@ -171,8 +171,6 @@ const BlogPost = () => {
             {/* Meta Information */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-8 border-b border-border">
               <div className="flex items-center gap-4 mb-4 sm:mb-0">
-                <span className="text-foreground font-body">By {post.author}</span>
-                <span className="text-muted-foreground">•</span>
                 <span className="text-muted-foreground font-body">{formatDate(post.created_at)}</span>
               </div>
               
@@ -261,20 +259,6 @@ const BlogPost = () => {
               </div>
             )}
 
-            {/* Author Bio */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <div className="bg-gradient-subtle rounded-lg p-6">
-                <h3 className="text-lg font-display font-semibold text-primary mb-2">
-                  About the Author
-                </h3>
-                <p className="text-foreground/80 font-body leading-relaxed">
-                  {post.author} is the founder of COIREA, specializing in regenerative organizational 
-                  transformation and multidimensional leadership. Through integrative approaches that 
-                  honor both practical wisdom and deeper intelligence, María José guides organizations 
-                  toward sustainable success that serves all stakeholders.
-                </p>
-              </div>
-            </div>
           </div>
         </article>
       </main>
