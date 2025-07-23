@@ -14,6 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      journey_submissions: {
+        Row: {
+          additional_context: string | null
+          budget: string | null
+          challenges: string[] | null
+          company: string
+          created_at: string
+          custom_challenge: string | null
+          email: string
+          first_name: string
+          found_us: string | null
+          goals: string
+          id: string
+          last_name: string
+          phone: string | null
+          role: string
+          team_size: string | null
+          timeline: string | null
+        }
+        Insert: {
+          additional_context?: string | null
+          budget?: string | null
+          challenges?: string[] | null
+          company: string
+          created_at?: string
+          custom_challenge?: string | null
+          email: string
+          first_name: string
+          found_us?: string | null
+          goals: string
+          id?: string
+          last_name: string
+          phone?: string | null
+          role: string
+          team_size?: string | null
+          timeline?: string | null
+        }
+        Update: {
+          additional_context?: string | null
+          budget?: string | null
+          challenges?: string[] | null
+          company?: string
+          created_at?: string
+          custom_challenge?: string | null
+          email?: string
+          first_name?: string
+          found_us?: string | null
+          goals?: string
+          id?: string
+          last_name?: string
+          phone?: string | null
+          role?: string
+          team_size?: string | null
+          timeline?: string | null
+        }
+        Relationships: []
+      }
       posts: {
         Row: {
           author: string | null
