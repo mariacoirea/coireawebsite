@@ -13,17 +13,6 @@ const FivePillarFrameworkSection = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        {/* Refined decorative chevrons */}
-        <div className="text-center mb-24">
-          <div className="flex justify-center space-y-1 flex-col items-center mb-20">
-            <ChevronDown className="w-3 h-3 text-primary/30 animate-pulse" />
-            <ChevronDown className="w-4 h-4 text-primary/50 -mt-1" />
-            <ChevronDown className="w-5 h-5 text-primary/70 -mt-1" />
-            <ChevronDown className="w-4 h-4 text-primary/50 -mt-1" />
-            <ChevronDown className="w-3 h-3 text-primary/30 animate-pulse" />
-          </div>
-        </div>
-
         {/* Streamlined Headline */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 text-primary leading-tight">
@@ -49,19 +38,18 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Framework Image with Enhanced Design - Now Wider */}
+        {/* Framework Image with Optimized Design - Larger and Clearer */}
         <div className="flex justify-center mb-16">
           <div className="relative group max-w-5xl w-full">
-            {/* Enhanced shadow and glow effects */}
-            <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
-            <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
+            {/* Reduced shadow effects */}
+            <div className="absolute -inset-8 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-2xl blur-2xl opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
             
-            {/* Main image container - made wider */}
-            <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
+            {/* Main image container - reduced padding and border radius */}
+            <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-2 md:p-4 border border-primary/15 shadow-soft group-hover:shadow-elegant transition-all duration-700">
               <img 
                 src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
                 alt="COIREA 5-Pillar Framework" 
-                className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
+                className="w-full h-auto rounded-lg shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
               />
             </div>
           </div>
