@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
         {/* Attribution Text */}
         <div className="text-center mb-16">
           <p className="text-sm text-muted-foreground/80 font-body italic">
-            Based on COIREA's 2024 Organizational Health Survey across multiple companies.
+            Based on COIREA's 2025 Organizational Health Survey across multiple companies.
           </p>
         </div>
 
