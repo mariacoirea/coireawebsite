@@ -519,6 +519,28 @@ const Offerings = () => {
           </div>
         </section>
 
+        {/* Quote Section */}
+        <section className="py-16 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center">
+              <div className="relative max-w-3xl mx-auto">
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-primary/5 to-sage/5 rounded-2xl blur-xl transform scale-110"></div>
+                
+                <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-primary/10 shadow-elegant">
+                  <blockquote className="text-2xl md:text-3xl font-display font-semibold text-primary leading-tight mb-6">
+                    "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+                  </blockquote>
+                  
+                  <cite className="text-lg font-body text-primary/70 not-italic">
+                    — Harvard Business Review
+                  </cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Combined CTA and Contact Form Section */}
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-4xl">
