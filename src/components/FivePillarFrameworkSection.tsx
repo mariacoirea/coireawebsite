@@ -47,7 +47,7 @@ const FivePillarFrameworkSection = () => {
             {/* Main image container - reduced padding and border radius */}
             <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-2 md:p-4 border border-primary/15 shadow-soft group-hover:shadow-elegant transition-all duration-700">
               <img 
-                src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png?v=10&cache=false" 
+                src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
                 alt="COIREA 5-Pillar Framework" 
                 className="w-full h-auto rounded-lg shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
               />
