@@ -285,16 +285,27 @@ const Offerings = () => {
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-12">
                 How Do We Track It in Real Time?
               </h2>
-              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                Welcome to the COIREA Evolution Dashboard — where AI meets Human Intelligence, and insight becomes action.
-                Track how your organization evolves across the five core pillars of regenerative business. Blending methodologies like surveys, interviews, behavioral metrics, and well-being diagnostics, this dashboard turns qualitative and quantitative data into clear, strategic guidance.
-              </p>
-              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                It's more than a snapshot — it's a living compass for sustainable, people-centered growth.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+                <div className="text-left">
+                  <p className="text-lg text-muted-foreground font-body mb-6">
+                    Welcome to the COIREA Evolution Dashboard — where AI meets Human Intelligence, and insight becomes action.
+                  </p>
+                  <p className="text-lg text-muted-foreground font-body">
+                    Track how your organization evolves across the five core pillars of regenerative business.
+                  </p>
+                </div>
+                <div className="text-left">
+                  <p className="text-lg text-muted-foreground font-body mb-6">
+                    Blending methodologies like surveys, interviews, behavioral metrics, and well-being diagnostics, this dashboard turns qualitative and quantitative data into clear, strategic guidance.
+                  </p>
+                  <p className="text-lg text-muted-foreground font-body">
+                    It's more than a snapshot — it's a living compass for sustainable, people-centered growth.
+                  </p>
+                </div>
+              </div>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
 
