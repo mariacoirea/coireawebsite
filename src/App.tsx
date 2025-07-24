@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Offerings from "./pages/Offerings";
@@ -25,7 +26,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-          <Routes>
+        <ScrollToTop />
+        <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/offerings" element={<Offerings />} />
