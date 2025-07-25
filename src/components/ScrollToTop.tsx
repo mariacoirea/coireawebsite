@@ -5,16 +5,23 @@ const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Use setTimeout to ensure the page has rendered before scrolling
-    const scrollTimer = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      });
-    }, 0);
+    // Prevent scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
 
-    return () => clearTimeout(scrollTimer);
+    // Use requestAnimationFrame for better timing
+    const scrollToTop = () => {
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant'
+        });
+      });
+    };
+
+    scrollToTop();
   }, [location.pathname]);
 
   return null;
