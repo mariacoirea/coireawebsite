@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -20,7 +20,15 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  // Set scroll restoration to manual at app level
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
       <Toaster />
@@ -44,6 +52,7 @@ const App = () => (
       </BrowserRouter>
     </HelmetProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

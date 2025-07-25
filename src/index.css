@@ -134,9 +134,7 @@
     font-display: swap;
   }
   
-  html {
-    scroll-behavior: smooth;
-  }
+  /* Scroll behavior controlled by ScrollToTop component */
 
   /* Font loading optimization */
   @font-face {
