@@ -5,27 +5,47 @@ const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Only scroll if not already at top
-    if (window.pageYOffset > 0 || document.documentElement.scrollTop > 0) {
-      // Use requestAnimationFrame to ensure DOM is ready
-      requestAnimationFrame(() => {
-        // Delay slightly to ensure route transition is complete
-        setTimeout(() => {
-          try {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: 'instant'
-            });
-          } catch (error) {
-            // Fallback for older browsers
-            window.scrollTo(0, 0);
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-          }
-        }, 50);
-      });
-    }
+    // Always scroll on route change for production reliability
+    const scrollToTop = () => {
+      // Method 1: Immediate scroll
+      try {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      } catch (error) {
+        // Silent fallback
+      }
+      
+      // Method 2: Delayed scroll for DOM completion
+      setTimeout(() => {
+        try {
+          window.scrollTo(0, 0);
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        } catch (error) {
+          // Silent fallback
+        }
+      }, 100);
+      
+      // Method 3: Secondary fallback for stubborn cases
+      setTimeout(() => {
+        try {
+          window.scrollTo(0, 0);
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        } catch (error) {
+          // Silent fallback
+        }
+      }, 200);
+    };
+
+    // Execute immediately
+    scrollToTop();
+    
+    // Also execute after DOM is ready
+    requestAnimationFrame(() => {
+      scrollToTop();
+    });
   }, [location.pathname]);
 
   return null;
