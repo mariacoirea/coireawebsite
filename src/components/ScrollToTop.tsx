@@ -5,46 +5,74 @@ const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Always scroll on route change for production reliability
-    const scrollToTop = () => {
-      // Method 1: Immediate scroll
-      try {
-        window.scrollTo(0, 0);
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      } catch (error) {
-        // Silent fallback
-      }
-      
-      // Method 2: Delayed scroll for DOM completion
-      setTimeout(() => {
+    console.log('[ScrollToTop] Route changed to:', location.pathname);
+    
+    const attemptScroll = (attempt: number = 1, maxAttempts: number = 3): Promise<boolean> => {
+      return new Promise((resolve) => {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        console.log('[ScrollToTop] Attempt', attempt, '- Current scroll position:', scrollY);
+        
         try {
+          // Use the most compatible scroll method
           window.scrollTo(0, 0);
           document.documentElement.scrollTop = 0;
           document.body.scrollTop = 0;
+          
+          // Verify scroll worked after a brief delay
+          setTimeout(() => {
+            const newScrollY = window.pageYOffset || document.documentElement.scrollTop;
+            console.log('[ScrollToTop] After scroll attempt', attempt, '- New position:', newScrollY);
+            
+            if (newScrollY === 0) {
+              console.log('[ScrollToTop] Success on attempt', attempt);
+              resolve(true);
+            } else if (attempt < maxAttempts) {
+              console.log('[ScrollToTop] Retrying... attempt', attempt + 1);
+              // Exponential backoff: 150ms, 300ms, 600ms
+              const delay = 150 * Math.pow(2, attempt - 1);
+              setTimeout(() => {
+                attemptScroll(attempt + 1, maxAttempts).then(resolve);
+              }, delay);
+            } else {
+              console.warn('[ScrollToTop] Failed after', maxAttempts, 'attempts');
+              resolve(false);
+            }
+          }, 50);
         } catch (error) {
-          // Silent fallback
+          console.error('[ScrollToTop] Error on attempt', attempt, ':', error);
+          if (attempt < maxAttempts) {
+            const delay = 150 * Math.pow(2, attempt - 1);
+            setTimeout(() => {
+              attemptScroll(attempt + 1, maxAttempts).then(resolve);
+            }, delay);
+          } else {
+            resolve(false);
+          }
         }
-      }, 100);
-      
-      // Method 3: Secondary fallback for stubborn cases
-      setTimeout(() => {
-        try {
-          window.scrollTo(0, 0);
-          document.documentElement.scrollTop = 0;
-          document.body.scrollTop = 0;
-        } catch (error) {
-          // Silent fallback
-        }
-      }, 200);
+      });
     };
 
-    // Execute immediately
-    scrollToTop();
+    // Wait for DOM to be ready, then attempt scroll
+    const startScrollAttempt = () => {
+      if (document.readyState === 'complete') {
+        console.log('[ScrollToTop] DOM ready, starting scroll attempt');
+        attemptScroll();
+      } else {
+        console.log('[ScrollToTop] Waiting for DOM to be ready...');
+        window.addEventListener('load', () => {
+          console.log('[ScrollToTop] Window loaded, starting scroll attempt');
+          attemptScroll();
+        }, { once: true });
+      }
+    };
+
+    // Start immediately
+    startScrollAttempt();
     
-    // Also execute after DOM is ready
+    // Also try after requestAnimationFrame for React Router transitions
     requestAnimationFrame(() => {
-      scrollToTop();
+      console.log('[ScrollToTop] requestAnimationFrame callback, attempting scroll');
+      attemptScroll();
     });
   }, [location.pathname]);
 

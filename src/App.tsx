@@ -21,10 +21,36 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Set scroll restoration to manual at app level
+  // Enhanced scroll restoration management for production
   useEffect(() => {
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
+    console.log('[App] Setting up scroll restoration');
+    
+    // Set scroll restoration to manual with multiple checks
+    const setScrollRestoration = () => {
+      try {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+          console.log('[App] Scroll restoration set to manual');
+        }
+        
+        // Also try on window.history as fallback
+        if (window.history && 'scrollRestoration' in window.history) {
+          window.history.scrollRestoration = 'manual';
+          console.log('[App] Window history scroll restoration set to manual');
+        }
+      } catch (error) {
+        console.error('[App] Error setting scroll restoration:', error);
+      }
+    };
+    
+    setScrollRestoration();
+    
+    // Re-apply after a short delay for production environments
+    setTimeout(setScrollRestoration, 100);
+    
+    // Also apply when the page is fully loaded
+    if (document.readyState !== 'complete') {
+      window.addEventListener('load', setScrollRestoration, { once: true });
     }
   }, []);
 
