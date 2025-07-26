@@ -3,17 +3,17 @@
   "short_name": "COIREA",
   "icons": [
     {
-      "src": "/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png",
+      "src": "/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png",
+      "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/lovable-uploads/e067195f-6380-4731-875b-50e5cf44f94b.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
