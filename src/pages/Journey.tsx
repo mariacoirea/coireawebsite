@@ -123,11 +123,11 @@ const Journey = () => {
         <section className="py-20 px-6 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-              Begin Your Transformation Journey
+              Book Your Free 30-Minute Strategy Call
             </h1>
             <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8 max-w-3xl mx-auto">
               Every meaningful transformation starts with a single step. Share your context with us, 
-              and let's co-create a pathway toward organizational coherence, vitality, and purpose.
+              and let's co-create a pathway toward organizational coherence, vitality, and purpose through a personalized strategy session.
             </p>
             <div className="flex justify-center items-center space-x-8 mb-12">
               <div className="flex items-center space-x-2">
