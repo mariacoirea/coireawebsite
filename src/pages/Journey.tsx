@@ -10,26 +10,27 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 
 const Journey = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
-    company: "",
+    organization: "",
     role: "",
-    teamSize: "",
     challenges: [] as string[],
     customChallenge: "",
     goals: "",
+    urgency: "",
+    vision: "",
+    additionalContext: "",
     timeline: "",
-    budget: "",
-    foundUs: "",
-    additionalContext: ""
+    budget: ""
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const challenges = [
     "Lack of organizational clarity and purpose",
@@ -53,10 +54,28 @@ const Journey = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-journey-form', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      console.log('Form submitted successfully:', data);
+      setIsSubmitted(true);
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      setSubmitError('There was an error submitting your form. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -157,36 +176,22 @@ const Journey = () => {
               
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Personal Information */}
+                  {/* Contact Information */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Personal Information</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">Contact Information</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="firstName" className="text-sm font-body text-foreground/70 mb-1 block">
-                          First Name *
+                        <Label htmlFor="name" className="text-sm font-body text-foreground/70 mb-1 block">
+                          Your Name *
                         </Label>
                         <Input
-                          id="firstName"
-                          value={formData.firstName}
-                          onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                          placeholder="Your first name"
+                          id="name"
+                          value={formData.name}
+                          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                          placeholder="Your full name"
                           required
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="lastName" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Last Name *
-                        </Label>
-                        <Input
-                          id="lastName"
-                          value={formData.lastName}
-                          onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                          placeholder="Your last name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-1 block">
                           Email Address *
@@ -200,34 +205,17 @@ const Journey = () => {
                           required
                         />
                       </div>
-                      <div>
-                        <Label htmlFor="phone" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Phone Number
-                        </Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                          placeholder="(555) 123-4567"
-                        />
-                      </div>
                     </div>
-                  </div>
-
-                  {/* Organization Information */}
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Organization Details</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="company" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Company Name *
+                        <Label htmlFor="organization" className="text-sm font-body text-foreground/70 mb-1 block">
+                          Organization *
                         </Label>
                         <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                          placeholder="Your organization"
+                          id="organization"
+                          value={formData.organization}
+                          onChange={(e) => setFormData(prev => ({ ...prev, organization: e.target.value }))}
+                          placeholder="Your organization name"
                           required
                         />
                       </div>
@@ -243,23 +231,6 @@ const Journey = () => {
                           required
                         />
                       </div>
-                    </div>
-                    <div>
-                      <Label htmlFor="teamSize" className="text-sm font-body text-foreground/70 mb-1 block">
-                        Team/Organization Size
-                      </Label>
-                      <Select value={formData.teamSize} onValueChange={(value) => setFormData(prev => ({ ...prev, teamSize: value }))}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select team size" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1-10">1-10 people</SelectItem>
-                          <SelectItem value="11-50">11-50 people</SelectItem>
-                          <SelectItem value="51-200">51-200 people</SelectItem>
-                          <SelectItem value="201-500">201-500 people</SelectItem>
-                          <SelectItem value="500+">500+ people</SelectItem>
-                        </SelectContent>
-                      </Select>
                     </div>
                   </div>
 
@@ -297,9 +268,9 @@ const Journey = () => {
                     </div>
                   </div>
 
-                  {/* Goals and Outcomes */}
+                  {/* Goals and Vision */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Desired Outcomes</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">Goals & Vision</h3>
                     <div>
                       <Label htmlFor="goals" className="text-sm font-body text-foreground/70 mb-1 block">
                         What are your main goals for this transformation? *
@@ -309,9 +280,37 @@ const Journey = () => {
                         value={formData.goals}
                         onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
                         placeholder="Describe what success looks like for your organization..."
-                        rows={4}
+                        rows={3}
                         required
                       />
+                    </div>
+                    <div>
+                      <Label htmlFor="vision" className="text-sm font-body text-foreground/70 mb-1 block">
+                        Describe your vision for the future state *
+                      </Label>
+                      <Textarea
+                        id="vision"
+                        value={formData.vision}
+                        onChange={(e) => setFormData(prev => ({ ...prev, vision: e.target.value }))}
+                        placeholder="Paint a picture of where you want your organization to be..."
+                        rows={3}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="urgency" className="text-sm font-body text-foreground/70 mb-1 block">
+                        How urgent is this transformation?
+                      </Label>
+                      <Select value={formData.urgency} onValueChange={(value) => setFormData(prev => ({ ...prev, urgency: value }))}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select urgency level" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="high">High - We need to act immediately</SelectItem>
+                          <SelectItem value="medium">Medium - Important but can plan ahead</SelectItem>
+                          <SelectItem value="low">Low - Exploring for future planning</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
@@ -360,26 +359,6 @@ const Journey = () => {
                   {/* Additional Context */}
                   <div className="space-y-4">
                     <h3 className="text-xl font-display font-semibold text-primary">Additional Information</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="foundUs" className="text-sm font-body text-foreground/70 mb-1 block">
-                          How did you find COIREA?
-                        </Label>
-                        <Select value={formData.foundUs} onValueChange={(value) => setFormData(prev => ({ ...prev, foundUs: value }))}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select source" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="search">Google search</SelectItem>
-                            <SelectItem value="referral">Referral from colleague</SelectItem>
-                            <SelectItem value="social">Social media</SelectItem>
-                            <SelectItem value="event">Event or conference</SelectItem>
-                            <SelectItem value="content">Blog or content</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
                     <div>
                       <Label htmlFor="additionalContext" className="text-sm font-body text-foreground/70 mb-1 block">
                         Anything else you'd like us to know?
@@ -396,14 +375,18 @@ const Journey = () => {
 
                   {/* Submit Button */}
                   <div className="text-center pt-6">
+                    {submitError && (
+                      <div className="text-destructive text-sm mb-4 p-3 bg-destructive/10 rounded-md">
+                        {submitError}
+                      </div>
+                    )}
                     <Button 
                       type="submit"
-                      variant="hero" 
-                      size="lg"
-                      className="text-lg px-12 py-4 group"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
                     >
-                      Begin My Transformation Journey
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                      {isSubmitting ? "Submitting..." : "Begin Our Journey Together"}
+                      <ArrowRight className="w-5 h-5" />
                     </Button>
                     <p className="text-xs text-foreground/60 font-body mt-4">
                       We'll reach out within 24 hours to schedule your complimentary clarity call
