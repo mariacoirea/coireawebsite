@@ -1,38 +1,38 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Leaf, Target, Heart, Compass } from "lucide-react";
+import { Brain, Leaf, Target, Heart, Cog } from "lucide-react";
 
 const systems = [
   {
     icon: Brain,
     title: "Conscious Leadership",
-    description: "Empowering leaders with courage, clarity, and embodied authenticity.",
+    description: "Empowering leaders with clarity, courage, and presence to guide transformation.",
     badge: "Leadership"
   },
   {
     icon: Leaf,
-    title: "Regenerative Intelligence", 
-    description: "Rooted growth guided by the wisdom of nature and systems.",
-    badge: "Growth"
+    title: "Regenerative Systems", 
+    description: "Designing adaptive structures rooted in nature's logic — to grow with resilience.",
+    badge: "Systems"
   },
   {
     icon: Target,
-    title: "Coherence",
-    description: "Long-term clarity aligned with your organization's soul and strategy.",
+    title: "Strategic Alignment",
+    description: "Bridging vision, operations, and people to ensure clarity of direction and execution.",
     badge: "Alignment"
   },
   {
-    icon: Heart,
-    title: "Integrating Well-Being",
-    description: "Workplace wellness as the foundation of regenerative success.",
-    badge: "Wellness"
+    icon: Cog,
+    title: "Automated Operations",
+    description: "Implementing smart, self-sustaining processes that free your team to focus on what matters.",
+    badge: "Efficiency"
   },
   {
-    icon: Compass,
-    title: "Inner Wisdom",
-    description: "Intuition and presence woven into culture and collaboration.",
-    badge: "Wisdom"
+    icon: Heart,
+    title: "Embodied Strategy",
+    description: "Where intuition meets performance — transforming values into consistent action.",
+    badge: "Execution"
   }
 ];
 
@@ -68,13 +68,13 @@ const StructuralFoundationsSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-            Leadership, Culture & Coherence
+            Leadership, Culture & Strategic Execution
           </p>
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto mb-8"></div>
           
           <p className="text-lg text-foreground/80 font-body max-w-2xl mx-auto">
-            These five systems restore coherence in organization evolution.
+            These five systems activate intelligent growth across your organization — restoring integrity, adaptability, and purpose at every level.
           </p>
         </div>
 
