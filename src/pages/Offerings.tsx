@@ -89,7 +89,7 @@ const Offerings = () => {
       badge: "Immersive Experiences",
       duration: "2-5 days",
       timeframe: "",
-      description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence.",
+      description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence. Each experience is fully tailored to your team's context and can be delivered in person or online, depending on your needs and goals.",
       keyAreas: [
         "Team Bonding",
         "Vision Activation",

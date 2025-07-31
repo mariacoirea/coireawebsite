@@ -19,7 +19,7 @@ const shortTermOfferings = [
   {
     icon: Users,
     title: "Team Retreats & Workshops",
-    description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence.",
+    description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence. Each experience is fully tailored to your team's context and can be delivered in person or online, depending on your needs and goals.",
     features: ["Team Bonding", "Vision Activation", "Conflict Healing", "Creative Co-Creation Tools"],
     duration: "2–5 days",
     type: "Immersive Experiences"
