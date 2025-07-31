@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Building, Lightbulb, Target, Star } from "lucide-react";
+import { ArrowRight, Users, Building, Lightbulb, Settings, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Tier 1 - Core Offering
@@ -33,12 +33,12 @@ const shortTermOfferings = [
     type: "1:1 Guidance"
   },
   {
-    icon: Target,
-    title: "Regenerative Strategy Consulting",
-    description: "Strategy rooted in soul and sustainability — integrating purpose, performance, and well-being into long-term business design.",
-    features: ["Purpose Integration", "Future Planning", "Performance Systems", "Regenerative Metrics"],
-    duration: "Duration flexible",
-    type: "Project-Based Engagement"
+    icon: Settings,
+    title: "Fractional Operations",
+    description: "Hands-on strategic support for mission-driven founders and leadership teams. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
+    features: ["Operational Architecture", "Team & Rhythm Design", "Strategic Execution", "Regenerative KPIs & Accountability"],
+    duration: "1–6 months",
+    type: "Embedded Partnership"
   }
 ];
 

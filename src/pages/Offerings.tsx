@@ -20,6 +20,7 @@ import {
   BarChart3,
   Eye,
   Activity,
+  Settings,
   TrendingUp,
   Shield,
   Zap,
@@ -116,18 +117,18 @@ const Offerings = () => {
     },
     {
       id: 4,
-      title: "Regenerative Strategy Consulting",
-      badge: "Project-Based Engagement",
-      duration: "Duration flexible",
+      title: "Fractional Operations",
+      badge: "Embedded Partnership",
+      duration: "1–6 months",
       timeframe: "",
-      description: "Strategy rooted in soul and sustainability — integrating values, purpose, performance, and well-being into long-term business design.",
+      description: "Hands-on strategic support for mission-driven founders and leadership teams. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
       keyAreas: [
-        "Purpose Integration",
-        "Future Planning",
-        "Performance Systems", 
-        "Regenerative Metrics"
+        "Operational Architecture",
+        "Team & Rhythm Design",
+        "Strategic Execution", 
+        "Regenerative KPIs & Accountability"
       ],
-      icon: TrendingUp,
+      icon: Settings,
       accent: "olive-green"
     }
   ];
