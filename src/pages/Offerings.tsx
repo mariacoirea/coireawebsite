@@ -121,7 +121,7 @@ const Offerings = () => {
       badge: "Embedded Partnership",
       duration: "1–6 months",
       timeframe: "",
-      description: "Hands-on strategic support for mission-driven founders and leadership teams. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
+      description: "Hands-on strategic support. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
       keyAreas: [
         "Operational Architecture",
         "Team & Rhythm Design",

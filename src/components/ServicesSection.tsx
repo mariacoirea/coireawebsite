@@ -35,7 +35,7 @@ const shortTermOfferings = [
   {
     icon: Settings,
     title: "Fractional Operations",
-    description: "Hands-on strategic support for mission-driven founders and leadership teams. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
+    description: "Hands-on strategic support. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
     features: ["Operational Architecture", "Team & Rhythm Design", "Strategic Execution", "Regenerative KPIs & Accountability"],
     duration: "1–6 months",
     type: "Embedded Partnership"
