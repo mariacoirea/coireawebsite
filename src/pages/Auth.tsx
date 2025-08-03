@@ -84,6 +84,29 @@ const Auth = () => {
     setUser(null);
   };
 
+  const handleBypassAuth = async () => {
+    setIsLoading(true);
+    setError("");
+    
+    try {
+      // Try to reset password for immediate access
+      const { error } = await supabase.auth.resetPasswordForEmail(
+        'maria@coirea.com',
+        {
+          redirectTo: `${window.location.origin}/admin`
+        }
+      );
+      
+      if (error) throw error;
+      
+      setMessage("Password reset email sent! Check your email to set a new password and gain access.");
+    } catch (error: any) {
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   if (user) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center px-6">
@@ -168,6 +191,27 @@ const Auth = () => {
               {isLoading ? "Loading..." : (isSignUp ? "Create Account" : "Sign In")}
             </Button>
           </form>
+
+          <div className="mt-4 space-y-3">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">Or</span>
+              </div>
+            </div>
+            
+            <Button 
+              type="button"
+              onClick={handleBypassAuth}
+              disabled={isLoading}
+              variant="outline"
+              className="w-full"
+            >
+              Get Immediate Access (maria@coirea.com)
+            </Button>
+          </div>
 
           <div className="mt-6 text-center">
             <button
