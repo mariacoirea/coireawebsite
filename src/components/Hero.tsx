@@ -45,21 +45,15 @@ const Hero = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-12">
-          <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed mb-8">
-            COIREA is a regenerative consultancy helping organizations realign their systems, culture, and leadership. 
-            We guide purpose-driven companies through structural and human transformation—restoring coherence, 
-            improving performance, and integrating well-being.
-          </p>
-          
-          <p className="text-lg text-primary/60 font-body">
-            From team retreats to long-term programs, we support the evolution toward resilient, future-ready organizations.
+          <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed">
+            COIREA is a regenerative consultancy helping organizations evolve into adaptive, self-managed systems. We create the conditions for decentralized leadership, collective intelligence, and cultural coherence—activating what's already alive within.
           </p>
         </div>
 
         <div className="flex justify-center items-center mb-16">
-          <Link to="/journey" aria-label="Begin your organizational transformation journey">
+          <Link to="/journey" aria-label="Let's explore your organization together">
             <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-8 py-4 transition-all duration-300 shadow-lg">
-              Begin Your Journey
+              Let's Explore Your Organization Together
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" aria-hidden="true" />
             </Button>
           </Link>
