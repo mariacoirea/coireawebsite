@@ -37,7 +37,7 @@ const FivePillarFrameworkSection = () => {
               <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/4f832602-0af2-4829-ba69-be63313daf67.png" 
+                    src="/lovable-uploads/0d457cbb-8503-4597-930d-dd4961a39829.png" 
                     alt="Culture pillar icon" 
                     className="w-full h-full object-contain"
                   />
@@ -48,7 +48,7 @@ const FivePillarFrameworkSection = () => {
               <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/78eec0a6-674a-4165-bb69-fb134e500f23.png" 
+                    src="/lovable-uploads/188d727f-2381-424b-b769-afa51a6f1137.png" 
                     alt="Leadership pillar icon" 
                     className="w-full h-full object-contain"
                   />
@@ -59,7 +59,7 @@ const FivePillarFrameworkSection = () => {
               <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/94c97da1-6331-4df3-bec7-9d9302e44548.png" 
+                    src="/lovable-uploads/2627835c-d411-47f1-abb6-99b92bd30341.png" 
                     alt="Collaboration pillar icon" 
                     className="w-full h-full object-contain"
                   />
@@ -70,7 +70,7 @@ const FivePillarFrameworkSection = () => {
               <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/bd08b3d1-f067-4696-950e-f7dca140dc53.png" 
+                    src="/lovable-uploads/35080dca-964c-49c9-b4f3-7d3461223a1e.png" 
                     alt="Well-Being pillar icon" 
                     className="w-full h-full object-contain"
                   />
@@ -81,7 +81,7 @@ const FivePillarFrameworkSection = () => {
               <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/97fcd540-250d-4c8a-9e7e-7d99f5885670.png" 
+                    src="/lovable-uploads/48bc734b-38e8-4e99-8c8c-816a8195bdb8.png" 
                     alt="Purpose pillar icon" 
                     className="w-full h-full object-contain"
                   />
