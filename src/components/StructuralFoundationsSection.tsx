@@ -7,31 +7,31 @@ const systems = [
   {
     icon: Brain,
     title: "Conscious Leadership",
-    description: "Empowering leaders with clarity, courage, and presence to guide transformation.",
+    description: "Leading with courage, presence, and integrity.",
     badge: "Leadership"
   },
   {
     icon: Leaf,
     title: "Regenerative Systems", 
-    description: "Designing adaptive structures rooted in nature's logic — to grow with resilience.",
+    description: "Designing structures that evolve with life.",
     badge: "Systems"
   },
   {
     icon: Target,
     title: "Strategic Alignment",
-    description: "Bridging vision, operations, and people to ensure clarity of direction and execution.",
+    description: "Uniting vision, execution, and direction.",
     badge: "Alignment"
   },
   {
     icon: Cog,
     title: "Automated Operations",
-    description: "Implementing smart, self-sustaining processes that free your team to focus on what matters.",
+    description: "Freeing energy for what truly matters.",
     badge: "Efficiency"
   },
   {
     icon: Heart,
     title: "Embodied Strategy",
-    description: "Where intuition meets performance — transforming values into consistent action.",
+    description: "Turning values into consistent action.",
     badge: "Execution"
   }
 ];
@@ -68,13 +68,13 @@ const StructuralFoundationsSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-            Leadership, Culture & Strategic Execution
+            Build the architecture for long-term resilience, clarity, and flow.
           </p>
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto mb-8"></div>
           
           <p className="text-lg text-foreground/80 font-body max-w-2xl mx-auto">
-            These five systems activate intelligent growth across your organization — restoring integrity, adaptability, and purpose at every level.
+            These five foundations support organizations in designing adaptive, values-led systems—grounded in clarity, autonomy, and regenerative logic.
           </p>
         </div>
 

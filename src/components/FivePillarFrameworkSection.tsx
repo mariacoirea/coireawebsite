@@ -16,24 +16,48 @@ const FivePillarFrameworkSection = () => {
         {/* Streamlined Headline */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 text-primary leading-tight">
-            Our proprietary{' '}
+            The{' '}
             <span className="italic text-accent bg-gradient-to-r from-accent to-accent-warm bg-clip-text text-transparent">
-              5-Pillar Framework
+              5 Pillars of Organizational Well-Being
             </span>
           </h2>
           
           {/* Framework Introduction */}
           <div className="max-w-4xl mx-auto mt-12 space-y-6">
             <p className="text-xl md:text-2xl font-display text-primary/90 leading-relaxed italic">
-              A strategic system to grow aligned, resilient organizations — from the inside out.
+              Reveal what's alive, what's blocked, and what's ready to evolve.
             </p>
             
             <p className="text-lg md:text-xl font-body text-primary/80 leading-relaxed">
-              COIREA's proprietary 5-Pillar Framework supports CEOs and leadership teams in evolving their company's operating model — integrating systems diagnostics, human-centered insight, and regenerative wisdom.
+              Before building structures, we tune into the inner state of your organization—its people, energy, and culture. The 5 Pillars help us sense where disconnection may live.
             </p>
             
-            <p className="text-lg md:text-xl font-body text-primary/75 leading-relaxed">
-              Rather than fixing surface-level issues, this framework reveals the core of what drives scalable, regenerative success — helping leaders move from reactive fire-fighting to coherent, purpose-led execution.
+            {/* 5 Pillars List */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+                <h3 className="font-display font-semibold text-primary mb-2">Culture</h3>
+                <p className="text-sm text-primary/70 font-body">Values in action</p>
+              </div>
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+                <h3 className="font-display font-semibold text-primary mb-2">Leadership</h3>
+                <p className="text-sm text-primary/70 font-body">Presence + accountability</p>
+              </div>
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+                <h3 className="font-display font-semibold text-primary mb-2">Collaboration</h3>
+                <p className="text-sm text-primary/70 font-body">Trust + co-creation</p>
+              </div>
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+                <h3 className="font-display font-semibold text-primary mb-2">Well-Being</h3>
+                <p className="text-sm text-primary/70 font-body">The resourced human core</p>
+              </div>
+              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+                <h3 className="font-display font-semibold text-primary mb-2">Purpose</h3>
+                <p className="text-sm text-primary/70 font-body">The felt sense of why</p>
+              </div>
+            </div>
+            
+            <p className="text-lg md:text-xl font-body text-primary/75 leading-relaxed mt-8">
+              Together, these frameworks guide transformation: The Pillars reveal where energy is leaking. The Foundations rebuild systems that support what matters most.
             </p>
           </div>
         </div>
