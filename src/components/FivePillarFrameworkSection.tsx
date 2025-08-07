@@ -34,23 +34,58 @@ const FivePillarFrameworkSection = () => {
             
             {/* 5 Pillars List */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
-              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/4f832602-0af2-4829-ba69-be63313daf67.png" 
+                    alt="Culture pillar icon" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Culture</h3>
                 <p className="text-sm text-primary/70 font-body">Values in action</p>
               </div>
-              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/78eec0a6-674a-4165-bb69-fb134e500f23.png" 
+                    alt="Leadership pillar icon" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Leadership</h3>
                 <p className="text-sm text-primary/70 font-body">Presence + accountability</p>
               </div>
-              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/94c97da1-6331-4df3-bec7-9d9302e44548.png" 
+                    alt="Collaboration pillar icon" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Collaboration</h3>
                 <p className="text-sm text-primary/70 font-body">Trust + co-creation</p>
               </div>
-              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/bd08b3d1-f067-4696-950e-f7dca140dc53.png" 
+                    alt="Well-Being pillar icon" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Well-Being</h3>
                 <p className="text-sm text-primary/70 font-body">The resourced human core</p>
               </div>
-              <div className="text-center p-4 bg-background/50 rounded-lg border border-primary/10">
+              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/97fcd540-250d-4c8a-9e7e-7d99f5885670.png" 
+                    alt="Purpose pillar icon" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Purpose</h3>
                 <p className="text-sm text-primary/70 font-body">The felt sense of why</p>
               </div>
@@ -62,22 +97,6 @@ const FivePillarFrameworkSection = () => {
           </div>
         </div>
 
-        {/* Framework Image with Optimized Design - Larger and Clearer */}
-        <div className="flex justify-center mb-16">
-          <div className="relative group max-w-5xl w-full">
-            {/* Reduced shadow effects */}
-            <div className="absolute -inset-8 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-2xl blur-2xl opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
-            
-            {/* Main image container - reduced padding and border radius */}
-            <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-xl p-2 md:p-4 border border-primary/15 shadow-soft group-hover:shadow-elegant transition-all duration-700">
-              <img 
-                src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
-                alt="COIREA 5-Pillar Framework" 
-                className="w-full h-auto rounded-lg shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
-              />
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
