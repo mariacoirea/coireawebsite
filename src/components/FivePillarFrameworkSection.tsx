@@ -1,5 +1,5 @@
 
-import { ChevronDown } from "lucide-react";
+import { Target, Crown, Users, Heart, Layers } from "lucide-react";
 
 const FivePillarFrameworkSection = () => {
   return (
@@ -34,61 +34,70 @@ const FivePillarFrameworkSection = () => {
             
             {/* 5 Pillars List */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
-              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/4f832602-0af2-4829-ba69-be63313daf67.png" 
-                    alt="Culture pillar icon" 
-                    className="w-full h-full object-contain"
-                  />
+              <article className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
+                  <Target className="w-16 h-16" aria-hidden="true" />
                 </div>
-                <h3 className="font-display font-semibold text-primary mb-2">Culture</h3>
-                <p className="text-sm text-primary/70 font-body">Values in action</p>
-              </div>
-              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/78eec0a6-674a-4165-bb69-fb134e500f23.png" 
-                    alt="Leadership pillar icon" 
-                    className="w-full h-full object-contain"
-                  />
+                <h3 className="font-display font-semibold text-primary mb-2">Purpose & Culture</h3>
+                <p className="text-sm text-primary/80 font-body mb-2">Turn vision into a company people believe in</p>
+                <p className="text-sm text-primary/70 font-body">
+                  Your purpose isn’t a slide deck — it’s the fuel for growth. We help you weave it into everyday decisions, so culture becomes your competitive edge.
+                </p>
+                <p className="text-xs text-primary/70 font-body mt-4"><span className="font-semibold text-primary">Drives:</span> Team alignment, talent retention, brand trust.</p>
+                <p className="text-xs text-primary/70 font-body"><span className="font-semibold text-primary">Activation:</span> Strategic Alignment + Regenerative Systems + Embodied Strategy</p>
+              </article>
+
+              <article className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
+                  <Crown className="w-16 h-16" aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Leadership</h3>
-                <p className="text-sm text-primary/70 font-body">Presence + accountability</p>
-              </div>
-              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/94c97da1-6331-4df3-bec7-9d9302e44548.png" 
-                    alt="Collaboration pillar icon" 
-                    className="w-full h-full object-contain"
-                  />
+                <p className="text-sm text-primary/80 font-body mb-2">Build leaders people want to follow</p>
+                <p className="text-sm text-primary/70 font-body">
+                  A company rises or falls on the quality of its leadership. We help you shape leaders who are decisive, values-led, and able to inspire through change.
+                </p>
+                <p className="text-xs text-primary/70 font-body mt-4"><span className="font-semibold text-primary">Drives:</span> Strategic execution, trust, innovation.</p>
+                <p className="text-xs text-primary/70 font-body"><span className="font-semibold text-primary">Activation:</span> Conscious Leadership + Embodied Strategy</p>
+              </article>
+
+              <article className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
+                  <Users className="w-16 h-16" aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Collaboration</h3>
-                <p className="text-sm text-primary/70 font-body">Trust + co-creation</p>
-              </div>
-              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/bd08b3d1-f067-4696-950e-f7dca140dc53.png" 
-                    alt="Well-Being pillar icon" 
-                    className="w-full h-full object-contain"
-                  />
+                <p className="text-sm text-primary/80 font-body mb-2">Unlock the power of your teams</p>
+                <p className="text-sm text-primary/70 font-body">
+                  When trust and clarity are in place, collaboration becomes a growth engine. We create the structures and habits that turn silos into synergy.
+                </p>
+                <p className="text-xs text-primary/70 font-body mt-4"><span className="font-semibold text-primary">Drives:</span> Faster problem-solving, better ideas, stronger execution.</p>
+                <p className="text-xs text-primary/70 font-body"><span className="font-semibold text-primary">Activation:</span> Regenerative Systems + Team Strategy</p>
+              </article>
+
+              <article className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
+                  <Heart className="w-16 h-16" aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-semibold text-primary mb-2">Well-Being</h3>
-                <p className="text-sm text-primary/70 font-body">The resourced human core</p>
-              </div>
-              <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/97fcd540-250d-4c8a-9e7e-7d99f5885670.png" 
-                    alt="Purpose pillar icon" 
-                    className="w-full h-full object-contain"
-                  />
+                <p className="text-sm text-primary/80 font-body mb-2">Keep your top talent at their best</p>
+                <p className="text-sm text-primary/70 font-body">
+                  Burnout costs far more than wellness ever will. We design systems that protect your people’s energy and creativity while keeping performance high.
+                </p>
+                <p className="text-xs text-primary/70 font-body mt-4"><span className="font-semibold text-primary">Drives:</span> Productivity, retention, sustainable growth.</p>
+                <p className="text-xs text-primary/70 font-body"><span className="font-semibold text-primary">Activation:</span> Automated Operations + Embodied Strategy</p>
+              </article>
+
+              <article className="text-center p-6 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
+                  <Layers className="w-16 h-16" aria-hidden="true" />
                 </div>
-                <h3 className="font-display font-semibold text-primary mb-2">Purpose</h3>
-                <p className="text-sm text-primary/70 font-body">The felt sense of why</p>
-              </div>
+                <h3 className="font-display font-semibold text-primary mb-2">Organizational Strategy</h3>
+                <p className="text-sm text-primary/80 font-body mb-2">Make your business adaptable — and unstoppable</p>
+                <p className="text-sm text-primary/70 font-body">
+                  Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale — without burning out people or breaking your culture.
+                </p>
+                <p className="text-xs text-primary/70 font-body mt-4"><span className="font-semibold text-primary">Drives:</span> Scalability, efficiency, resilience.</p>
+                <p className="text-xs text-primary/70 font-body"><span className="font-semibold text-primary">Activation:</span> Regenerative Systems + Automated Operations + Strategic Alignment</p>
+              </article>
             </div>
             
             <p className="text-lg md:text-xl font-body text-primary/75 leading-relaxed mt-8">
