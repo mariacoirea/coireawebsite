@@ -3,7 +3,7 @@ import { Target, Crown, Users, Heart, Layers, type LucideIcon } from "lucide-rea
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-const pillars: {
+export const pillars: {
   title: string;
   subtitle: string;
   description: string;
@@ -49,7 +49,7 @@ const pillars: {
   },
   {
     title: "Organizational Strategy",
-    subtitle: "Make your business adaptable — and unstoppable",
+    subtitle: "Make your business adaptable",
     description:
       "Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale — without burning out people or breaking your culture.",
     drives: "Scalability, efficiency, resilience.",
@@ -60,7 +60,7 @@ const pillars: {
 
 const FivePillarFrameworkSection = () => {
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-b from-background to-muted/30">
+    <section className="relative overflow-hidden py-24 bg-gradient-to-b from-aura-pearl to-warm-beige">
       {/* subtle background accents using semantic tokens */}
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_10%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
@@ -70,7 +70,7 @@ const FivePillarFrameworkSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <header className="mx-auto max-w-4xl text-center animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-foreground">
+          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
             The 5 Pillars of Regenerative Growth
           </h1>
           <h2 className="mt-4 text-base md:text-lg text-muted-foreground">

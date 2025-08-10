@@ -30,6 +30,8 @@ import {
   Calendar
 } from "lucide-react";
 
+import { pillars as corePillars } from "@/components/FivePillarFrameworkSection";
+
 const Offerings = () => {
   const navigate = useNavigate();
 
@@ -234,21 +236,28 @@ const Offerings = () => {
               </div>
             </div>
 
-            {/* Framework Image */}
-            <div className="flex justify-center mb-16">
-              <div className="relative group max-w-6xl w-full">
-                {/* Enhanced shadow and glow effects */}
-                <div className="absolute -inset-12 bg-gradient-to-r from-primary/5 via-accent/10 to-secondary/5 rounded-3xl blur-3xl opacity-60 group-hover:opacity-80 transition-all duration-700"></div>
-                <div className="absolute -inset-6 bg-gradient-to-br from-background/60 via-neutral-warm/30 to-background/60 rounded-2xl blur-xl"></div>
-                
-                {/* Main image container */}
-                <div className="relative bg-gradient-to-br from-background/95 via-background/98 to-background/95 backdrop-blur-sm rounded-2xl p-2 md:p-4 border border-primary/15 shadow-elegant group-hover:shadow-warm transition-all duration-700">
-                  <img 
-                    src="/lovable-uploads/ca4817cc-5cf5-4d9a-bee8-380ad36d9386.png" 
-                    alt="COIREA 5-Pillar Framework" 
-                    className="w-full h-auto rounded-xl shadow-soft group-hover:scale-[1.02] transition-transform duration-700"
-                  />
-                </div>
+            {/* Framework Pillars Grid (replaces image) */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                {corePillars.map(({ title, subtitle, description, Icon }, i) => (
+                  <Card
+                    key={title}
+                    className="h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5"
+                  >
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center justify-center">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 flex items-center justify-center">
+                          <Icon className="h-6 w-6" aria-hidden="true" />
+                        </div>
+                      </div>
+                      <CardTitle className="mt-4 text-center text-lg text-foreground">{title}</CardTitle>
+                      <p className="text-center text-sm text-muted-foreground">{subtitle}</p>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
 
