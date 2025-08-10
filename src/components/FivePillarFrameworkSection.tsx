@@ -71,7 +71,7 @@ const FivePillarFrameworkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <header className="mx-auto max-w-4xl text-center animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
-            The 5 Pillars of Regenerative Growth
+            The COIREA Core Framework™
           </h1>
           <h2 className="mt-4 text-base md:text-lg text-muted-foreground">
             Growth creates complexity — priorities compete, alignment slips, and energy drains. These pillars focus on the five forces that shape a thriving organization: a purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Our Structural Foundations turn these into practical systems that keep your company aligned, resilient, and ready to grow with integrity.

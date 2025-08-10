@@ -200,7 +200,7 @@ const Offerings = () => {
             {/* Framework Header */}
             <div className="text-center mb-16">
               <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-12">
-                The COIREA 5-Pillar Framework
+                The COIREA Core Framework™
               </h3>
             </div>
 
