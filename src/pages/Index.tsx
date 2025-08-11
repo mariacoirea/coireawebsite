@@ -1,6 +1,7 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ReflectionCheckpoint from "@/components/ReflectionCheckpoint";
 
 import FivePillarFrameworkSection from "@/components/FivePillarFrameworkSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -24,7 +25,7 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          
+          <ReflectionCheckpoint />
           <FivePillarFrameworkSection />
           <ServicesSection />
           <TestimonialsSection />
