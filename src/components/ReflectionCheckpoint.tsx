@@ -30,15 +30,22 @@ const ReflectionCheckpoint = () => {
             <header className="mb-8 md:mb-10">
               <h2
                 id="reflection-heading"
-                className="text-4xl md:text-6xl font-display font-semibold text-primary leading-tight"
+                className="text-4xl md:text-6xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
               >
-                Before You Build, Check Your Foundation…
+                Before You Lead Forward, Is Your Core Aligned?
+              </h2>
+              <h2 className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
+                Great strategies collapse without a solid foundation. Here are the questions that reveal whether yours is ready for what’s next.
               </h2>
             </header>
 
             <div className="space-y-5 md:space-y-6">
               {leftQuestions.map(({ icon: Icon, text }, idx) => (
-                <div key={idx} className="flex items-start gap-4 animate-fade-in">
+                <div
+                  key={idx}
+                  className="flex items-start gap-4 animate-fade-in"
+                  style={{ animationDelay: `${idx * 80}ms` }}
+                >
                   <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
                     <Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
@@ -54,7 +61,11 @@ const ReflectionCheckpoint = () => {
           <div className="space-y-8">
             <div className="space-y-5 md:space-y-6">
               {rightQuestions.map(({ icon: Icon, text }, idx) => (
-                <div key={idx} className="flex items-start gap-4 animate-fade-in">
+                <div
+                  key={idx}
+                  className="flex items-start gap-4 animate-fade-in"
+                  style={{ animationDelay: `${idx * 80}ms` }}
+                >
                   <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
                     <Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
@@ -74,7 +85,7 @@ const ReflectionCheckpoint = () => {
               </div>
 
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                If any of these gave you pause, your organization might be running on less capacity, clarity, and connection than it could.
+                If you hesitated on any of these, your organization might be running on less capacity, clarity, and connection than it could.
               </p>
               <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
                 That’s where the <span className="text-primary font-semibold">COIREA Core Framework™</span> comes in.
