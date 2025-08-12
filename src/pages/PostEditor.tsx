@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Save, Eye, X, Upload, Image } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { User } from "@supabase/supabase-js";
+import DOMPurify from 'dompurify';
 
 const CLUSTERS = [
   "Transformational Business Pillars",
@@ -136,8 +137,10 @@ const PostEditor = () => {
     setError("");
 
     try {
+      const sanitizedBody = DOMPurify.sanitize(post.body_content, { USE_PROFILES: { html: true } });
       const postData = {
         ...post,
+        body_content: sanitizedBody,
         published: publishNow || post.published,
         tags: post.tags.length > 0 ? post.tags : null
       };

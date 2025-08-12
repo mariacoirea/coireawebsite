@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Share2, Linkedin, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import DOMPurify from 'dompurify';
 
 interface BlogPost {
   id: string;
@@ -240,7 +241,7 @@ const BlogPost = () => {
                 prose-table:w-full prose-table:border-collapse prose-table:my-6
                 prose-th:border prose-th:border-border prose-th:bg-muted prose-th:px-4 prose-th:py-2 prose-th:text-left prose-th:font-semibold
                 prose-td:border prose-td:border-border prose-td:px-4 prose-td:py-2"
-              dangerouslySetInnerHTML={{ __html: post.body_content }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.body_content, { USE_PROFILES: { html: true } }) }}
             />
 
             {/* Tags */}

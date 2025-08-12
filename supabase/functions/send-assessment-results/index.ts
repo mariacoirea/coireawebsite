@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
+import { z } from "npm:zod@3.23.8";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -30,6 +31,35 @@ interface AssessmentFormData {
   };
 }
 
+const AssessmentSchema = z.object({
+  firstName: z.string().max(200),
+  lastName: z.string().max(200),
+  email: z.string().email().max(320),
+  company: z.string().max(200),
+  role: z.string().max(200),
+  assessmentResults: z.object({
+    pillarScores: z.object({
+      purpose: z.number().min(0).max(25),
+      culture: z.number().min(0).max(25),
+      wellBeing: z.number().min(0).max(25),
+      collaboration: z.number().min(0).max(25),
+      leadership: z.number().min(0).max(25),
+    }),
+    totalScore: z.number().min(0).max(125),
+    organizationalStatus: z.string().max(200),
+    painPoint: z.string().max(100),
+    strength: z.string().max(100),
+  }),
+});
+
+const escapeHtml = (str: string) =>
+  str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -37,8 +67,16 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const formData: AssessmentFormData = await req.json();
-    console.log("Received assessment results submission:", formData);
+    const raw = await req.json();
+    const parsed = AssessmentSchema.safeParse(raw);
+    if (!parsed.success) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Invalid payload" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+    const formData: AssessmentFormData = parsed.data as AssessmentFormData;
+    console.log("Received assessment results submission:", { ...formData, email: "[redacted]" });
 
     const { assessmentResults } = formData;
     const overallPercentage = Math.round((assessmentResults.totalScore / 125) * 100);
@@ -69,10 +107,10 @@ const handler = async (req: Request): Promise<Response> => {
       <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <h3>📋 Contact Information:</h3>
         <ul>
-          <li><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</li>
-          <li><strong>Email:</strong> ${formData.email}</li>
-          <li><strong>Company:</strong> ${formData.company}</li>
-          <li><strong>Role:</strong> ${formData.role}</li>
+          <li><strong>Name:</strong> ${escapeHtml(formData.firstName)} ${escapeHtml(formData.lastName)}</li>
+          <li><strong>Email:</strong> ${escapeHtml(formData.email)}</li>
+          <li><strong>Company:</strong> ${escapeHtml(formData.company)}</li>
+          <li><strong>Role:</strong> ${escapeHtml(formData.role)}</li>
         </ul>
       </div>
 
@@ -80,9 +118,9 @@ const handler = async (req: Request): Promise<Response> => {
         <h3>📊 Assessment Overview:</h3>
         <ul>
           <li><strong>Overall Score:</strong> ${overallPercentage}% (${assessmentResults.totalScore}/125 points)</li>
-          <li><strong>Organizational Status:</strong> <em>${assessmentResults.organizationalStatus}</em></li>
-          <li><strong>Greatest Challenge:</strong> ${assessmentResults.painPoint}</li>
-          <li><strong>Greatest Strength:</strong> ${assessmentResults.strength}</li>
+          <li><strong>Organizational Status:</strong> <em>${escapeHtml(assessmentResults.organizationalStatus)}</em></li>
+          <li><strong>Greatest Challenge:</strong> ${escapeHtml(assessmentResults.painPoint)}</li>
+          <li><strong>Greatest Strength:</strong> ${escapeHtml(assessmentResults.strength)}</li>
         </ul>
       </div>
 
@@ -113,7 +151,7 @@ const handler = async (req: Request): Promise<Response> => {
       from: "COIREA Health Scanner <assessment@coirea.com>",
       to: ["maria@coirea.com"],
       replyTo: formData.email,
-      subject: `🎯 New Assessment + Consultation: ${formData.firstName} ${formData.lastName} (${formData.company}) - ${assessmentResults.organizationalStatus}`,
+      subject: `🎯 New Assessment + Consultation: ${escapeHtml(formData.firstName)} ${escapeHtml(formData.lastName)} (${escapeHtml(formData.company)}) - ${escapeHtml(assessmentResults.organizationalStatus)}`,
       html: emailContent,
     });
 

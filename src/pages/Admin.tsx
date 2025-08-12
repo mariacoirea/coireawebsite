@@ -37,6 +37,22 @@ const Admin = () => {
     }
     
     setUser(session.user);
+    // Verify admin role via RPC (RLS-backed)
+    const { data: isAdmin, error: roleErr } = await (supabase as any).rpc('has_role', {
+      _user_id: session.user.id,
+      _role: 'admin',
+    });
+
+    if (roleErr) {
+      console.error('Error checking admin role:', roleErr);
+    }
+
+    if (!isAdmin) {
+      setLoading(false);
+      navigate('/');
+      return;
+    }
+    
     await fetchPosts();
     setLoading(false);
 
