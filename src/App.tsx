@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Offerings from "./pages/Offerings";
 import Insights from "./pages/Insights";
 import BlogPost from "./pages/BlogPost";
+import Events from "./pages/Events";
 import Tools from "./pages/Tools";
 import Journey from "./pages/Journey";
 import Auth from "./pages/Auth";
@@ -67,6 +68,7 @@ const App = () => {
             <Route path="/offerings" element={<Offerings />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/insights/:slug" element={<BlogPost />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/auth" element={<Auth />} />

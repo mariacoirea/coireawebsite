@@ -38,6 +38,9 @@ const Header = () => {
             <Link to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               INSIGHTS
             </Link>
+            <Link to="/events" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              EVENTS
+            </Link>
             <Link to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               TOOLS
             </Link>
@@ -71,6 +74,9 @@ const Header = () => {
             </Link>
             <Link to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               INSIGHTS
+            </Link>
+            <Link to="/events" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              EVENTS
             </Link>
             <Link to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               TOOLS
