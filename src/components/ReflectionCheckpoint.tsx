@@ -59,6 +59,8 @@ const ReflectionCheckpoint = () => {
 
           {/* Right: 2 Questions + Closing Prompt */}
           <div className="space-y-8">
+            {/* Add top spacing to align with left column questions */}
+            <div className="mb-8 md:mb-10" aria-hidden="true"></div>
             <div className="space-y-5 md:space-y-6">
               {rightQuestions.map(({ icon: Icon, text }, idx) => (
                 <div
