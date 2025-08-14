@@ -18,13 +18,25 @@ const Events = () => {
         <Header />
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="py-16 md:py-24 px-6 bg-gradient-subtle">
-            <div className="container mx-auto max-w-4xl text-center">
+          <section 
+            className="relative py-16 md:py-24 px-6 min-h-[70vh] flex items-center justify-center overflow-hidden"
+            style={{
+              backgroundImage: `url('/lovable-uploads/e1245c87-e916-4502-8adf-fb8970e5bb4c.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+            
+            {/* Content */}
+            <div className="container mx-auto max-w-4xl text-center relative z-10">
               <header>
-                <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-display font-semibold text-white mb-6 leading-tight drop-shadow-lg">
                   COIREA Community Events
                 </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground font-body leading-relaxed">
+                <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed drop-shadow">
                   Live Conversations, Workshops, and Panels for Founders and Teams shaping the Future of Work.
                 </p>
               </header>
