@@ -21,22 +21,19 @@ const Events = () => {
           <section 
             className="relative py-16 md:py-24 px-6 min-h-[70vh] flex items-center justify-center overflow-hidden"
             style={{
-              backgroundImage: `url('/lovable-uploads/e1245c87-e916-4502-8adf-fb8970e5bb4c.png')`,
+              backgroundImage: `linear-gradient(135deg, rgba(210, 195, 175, 0.3) 0%, rgba(225, 215, 200, 0.2) 100%), url('/lovable-uploads/e1245c87-e916-4502-8adf-fb8970e5bb4c.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
             }}
           >
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
-            
             {/* Content */}
             <div className="container mx-auto max-w-4xl text-center relative z-10">
               <header>
-                <h1 className="text-4xl md:text-6xl font-display font-semibold text-white mb-6 leading-tight drop-shadow-lg">
+                <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
                   COIREA Community Events
                 </h1>
-                <p className="text-xl md:text-2xl text-white/90 font-body leading-relaxed drop-shadow">
+                <p className="text-xl md:text-2xl text-primary/80 font-body leading-relaxed">
                   Live Conversations, Workshops, and Panels for Founders and Teams shaping the Future of Work.
                 </p>
               </header>
