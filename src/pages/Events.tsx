@@ -85,9 +85,9 @@ const Events = () => {
                     </div>
                   </div>
                   
-                  {/* Enhanced Calendar Embed - Testing different URL parameters for past events */}
+                  {/* Enhanced Calendar Embed */}
                   <iframe
-                    src="https://lu.ma/embed/calendar/cal-LBFjaY9cu5vzxD9"
+                    src="https://lu.ma/embed/calendar/cal-LBFjaY9cu5vzxD9/events?show=all"
                     className="w-full border-none rounded-t-xl"
                     style={{ 
                       height: '1200px',
