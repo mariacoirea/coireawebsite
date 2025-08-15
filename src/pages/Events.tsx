@@ -61,54 +61,114 @@ const Events = () => {
           <section className="py-12 md:py-16 px-6 bg-accent/5">
             <div className="container mx-auto max-w-4xl text-center">
               <h2 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
-                Reserve your spot for the next session
+                Explore Our Event Community
               </h2>
-              <p className="text-lg text-muted-foreground font-body mb-8">
-                Browse upcoming events below and RSVP for free.
+              <p className="text-lg text-muted-foreground font-body mb-6">
+                Browse upcoming events, watch replays of past sessions, and join our growing community of conscious leaders.
+              </p>
+              <p className="text-base text-muted-foreground/80 font-body mb-8">
+                From inspiring keynotes to practical workshops — discover content that transforms how you think about leadership and organizational growth.
               </p>
               <div className="w-8 h-0.5 bg-primary mx-auto"></div>
             </div>
           </section>
 
-          {/* Luma Calendar Section */}
+          {/* Enhanced Luma Calendar Section */}
           <section className="py-16 md:py-20 px-6">
             <div className="container mx-auto max-w-6xl">
-              <div className="bg-card border border-border rounded-lg overflow-hidden shadow-sm">
-                {/* Calendar Embed */}
-                <div className="relative w-full" style={{ minHeight: '900px' }}>
+              {/* Section Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
+                  Event Calendar
+                </h2>
+                <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
+                  Join live sessions, access past event recordings, and connect with like-minded leaders from around the world.
+                </p>
+              </div>
+              
+              {/* Enhanced Calendar Container */}
+              <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                {/* Loading State */}
+                <div className="relative w-full bg-gradient-to-br from-muted/30 to-muted/10">
+                  <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm z-10 transition-opacity duration-500" id="calendar-loading">
+                    <div className="text-center">
+                      <div className="animate-pulse flex space-x-2 justify-center mb-4">
+                        <div className="w-3 h-3 bg-primary/60 rounded-full animate-bounce"></div>
+                        <div className="w-3 h-3 bg-primary/60 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-3 h-3 bg-primary/60 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Loading events...</p>
+                    </div>
+                  </div>
+                  
+                  {/* Enhanced Calendar Embed */}
                   <iframe
-                    src="https://lu.ma/embed/calendar/cal-LBFjaY9cu5vzxD9/events"
-                    className="w-full h-full absolute inset-0"
+                    src="https://lu.ma/embed/calendar/cal-LBFjaY9cu5vzxD9/events?show=all"
+                    className="w-full border-none rounded-t-xl"
                     style={{ 
-                      minHeight: '900px',
-                      border: 'none',
-                      borderRadius: '8px'
+                      height: '1200px',
+                      minHeight: '1200px'
                     }}
                     frameBorder="0"
                     allowFullScreen
-                    aria-label="COIREA Events Calendar"
-                    title="COIREA Community Events on Luma"
+                    aria-label="COIREA Events Calendar - Past and Upcoming Events"
+                    title="COIREA Community Events Calendar"
+                    onLoad={() => {
+                      const loadingElement = document.getElementById('calendar-loading');
+                      if (loadingElement) {
+                        loadingElement.style.opacity = '0';
+                        setTimeout(() => loadingElement.style.display = 'none', 500);
+                      }
+                    }}
                   />
                 </div>
                 
-                {/* View on Luma Button */}
-                <div className="p-6 border-t border-border bg-muted/20 text-center">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300"
-                    asChild
-                  >
-                    <a 
-                      href="https://lu.ma/coirea?k=c" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2"
-                    >
-                      View on Luma
-                      <ExternalLink size={16} />
-                    </a>
-                  </Button>
+                {/* Enhanced Action Footer */}
+                <div className="p-8 border-t border-border bg-gradient-to-r from-accent/5 to-accent/10">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-center sm:text-left">
+                      <h3 className="font-display font-semibold text-primary mb-2">
+                        Can't find what you're looking for?
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        View our complete event archive and upcoming schedule on Luma
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button 
+                        variant="outline" 
+                        size="lg" 
+                        className="border-primary/30 text-primary hover:bg-primary/10 transition-all duration-300"
+                        asChild
+                      >
+                        <a 
+                          href="https://lu.ma/coirea" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2"
+                        >
+                          View All Events
+                          <ExternalLink size={16} />
+                        </a>
+                      </Button>
+                      <Button 
+                        variant="default" 
+                        size="lg" 
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300"
+                        asChild
+                      >
+                        <a 
+                          href="https://lu.ma/coirea?k=c" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2"
+                        >
+                          Subscribe for Updates
+                          <ExternalLink size={16} />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
