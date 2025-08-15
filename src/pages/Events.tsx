@@ -57,22 +57,6 @@ const Events = () => {
             </div>
           </section>
 
-          {/* Call-to-Action Section */}
-          <section className="py-12 md:py-16 px-6 bg-accent/5">
-            <div className="container mx-auto max-w-4xl text-center">
-              <h2 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
-                Explore Our Event Community
-              </h2>
-              <p className="text-lg text-muted-foreground font-body mb-6">
-                Browse upcoming events, watch replays of past sessions, and join our growing community of conscious leaders.
-              </p>
-              <p className="text-base text-muted-foreground/80 font-body mb-8">
-                From inspiring keynotes to practical workshops — discover content that transforms how you think about leadership and organizational growth.
-              </p>
-              <div className="w-8 h-0.5 bg-primary mx-auto"></div>
-            </div>
-          </section>
-
           {/* Enhanced Luma Calendar Section */}
           <section className="py-16 md:py-20 px-6">
             <div className="container mx-auto max-w-6xl">
@@ -82,7 +66,7 @@ const Events = () => {
                   Event Calendar
                 </h2>
                 <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-                  Join live sessions, access past event recordings, and connect with like-minded leaders from around the world.
+                  Browse upcoming events, watch replays of past sessions, and join our community of conscious leaders.
                 </p>
               </div>
               
@@ -174,33 +158,6 @@ const Events = () => {
             </div>
           </section>
 
-          {/* Evergreen Footer Section */}
-          <section className="py-16 md:py-20 px-6 bg-gradient-subtle">
-            <div className="container mx-auto max-w-4xl text-center">
-              <h2 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-6">
-                Never Miss an Event
-              </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
-                Join our Luma community to get notified about upcoming sessions, replays, and special workshops.
-              </p>
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 rounded-full px-8"
-                asChild
-              >
-                <a 
-                  href="https://lu.ma/coirea" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
-                >
-                  Subscribe on Luma
-                  <ExternalLink size={16} />
-                </a>
-              </Button>
-            </div>
-          </section>
         </main>
         <Footer />
       </div>
