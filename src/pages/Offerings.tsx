@@ -394,7 +394,7 @@ const Offerings = () => {
                         { name: "Leadership", score: 52, color: "sage", description: "Presence & feedback" },
                         { name: "Collaboration", score: 50, color: "copper", description: "Trust & flow" },
                         { name: "Culture", score: 54, color: "primary", description: "Values alignment" },
-                        { name: "Well-Being", score: 61, color: "sage", description: "Energy & mindfulness" }
+                        { name: "Well-Being", score: 59, color: "olive-green", description: "Energy & resilience" }
                       ].map((pillar, index) => (
                         <div key={index} className="text-center">
                           <div className={`w-10 h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
@@ -408,6 +408,240 @@ const Offerings = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 90-Day Transformational Programs Section */}
+        <section className="py-24 bg-gradient-to-br from-warm-beige to-aura-pearl">
+          <div className="container mx-auto px-6 max-w-6xl">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
+                90-Day Transformational Programs
+              </h2>
+              <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
+                Two focused, founder-ready pathways to reset and realign your organization in one quarter — with every shift tracked in real time.
+              </p>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg text-muted-foreground font-body mb-4">
+                  Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations.
+                </p>
+                <p className="text-lg text-muted-foreground font-body">
+                  In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard — so you know exactly what's working, and where to focus next.
+                </p>
+              </div>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mt-8"></div>
+            </div>
+
+            {/* Two Program Cards */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              
+              {/* Culture & Leadership Reset */}
+              <Card className="p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Heart className="w-8 h-8 text-sage" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display font-bold text-primary mb-2">
+                      Culture & Leadership Reset
+                    </h3>
+                    <p className="text-lg text-copper font-medium">
+                      Reset your culture. Upgrade your leadership.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground font-body mb-6">
+                  Ideal for: CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.
+                </p>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Outcomes:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Reset team trust and collaboration.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Upgrade leadership decision-making and communication.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Embed culture habits that survive scale-up stress.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Core Elements:</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Culture & leadership workshops and assessment</li>
+                    <li>• Executive mentoring for the leadership team</li>
+                    <li>• Pre/post culture health score + leadership alignment index</li>
+                  </ul>
+                </div>
+
+                <Button 
+                  variant="outline" 
+                  className="w-full border-sage text-sage hover:bg-sage hover:text-white transition-all duration-300"
+                  onClick={() => navigate('/journey')}
+                >
+                  Explore Culture & Leadership Reset
+                </Button>
+              </Card>
+
+              {/* Strategic Ops & Leadership Partnership */}
+              <Card className="p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Zap className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display font-bold text-primary mb-2">
+                      Strategic Ops & Leadership Partnership
+                    </h3>
+                    <p className="text-lg text-copper font-medium">
+                      Fix the bottlenecks. Scale with clarity.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground font-body mb-6">
+                  Ideal for: CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.
+                </p>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Outcomes:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Align leadership priorities with operational reality.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Implement high-leverage operational systems.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Strengthen execution and accountability culture.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Core Elements:</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Organizational & operational bottleneck audit</li>
+                    <li>• Fractional COO-style implementation support</li>
+                    <li>• Pre/post operational efficiency benchmarks</li>
+                  </ul>
+                </div>
+
+                <Button 
+                  variant="outline" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                  onClick={() => navigate('/journey')}
+                >
+                  Explore Strategic Ops & Leadership Partnership
+                </Button>
+              </Card>
+            </div>
+
+            {/* How it Works Section */}
+            <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 mb-16 shadow-lg">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
+                  How it Works: 3 Phases, 12 Weeks
+                </h3>
+                <p className="text-muted-foreground font-body">Simple flow → Seed → Reflect → Align</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Phase 1: Seed */}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-sage" />
+                  </div>
+                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 1–2: Seed</h4>
+                  <p className="text-muted-foreground">Deep-dive assessment + alignment workshops.</p>
+                </div>
+
+                {/* Phase 2: Reflect */}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-copper" />
+                  </div>
+                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 3–8: Reflect</h4>
+                  <p className="text-muted-foreground">Implement leadership/ops upgrades + mentoring.</p>
+                </div>
+
+                {/* Phase 3: Align */}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Compass className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 9–12: Align</h4>
+                  <p className="text-muted-foreground">Measurable change report + 6–12 month roadmap.</p>
+                </div>
+              </div>
+
+              {/* Arrow flow visual */}
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <div className="w-3 h-3 bg-sage rounded-full"></div>
+                <ArrowRight className="w-4 h-4 text-sage" />
+                <div className="w-3 h-3 bg-copper rounded-full"></div>
+                <ArrowRight className="w-4 h-4 text-copper" />
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Measurement & Proof Section */}
+            <div className="text-center mb-16">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-6">
+                Every shift is measurable.
+              </h3>
+              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
+                From day one, we establish clear baselines. At the end of 90 days, you'll see exactly how your organization has shifted — across culture, leadership, and operations — all tracked through the COIREA Dashboard.
+              </p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  { icon: Heart, title: "Culture Health Score", color: "sage" },
+                  { icon: Brain, title: "Leadership Alignment Index", color: "primary" },
+                  { icon: Settings, title: "Operational Efficiency Benchmarks", color: "copper" },
+                  { icon: TrendingUp, title: "Decision-making Speed & Accountability", color: "olive-green" }
+                ].map((metric, index) => {
+                  const IconComponent = metric.icon;
+                  return (
+                    <div key={index} className="p-6 bg-card/60 backdrop-blur-sm rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
+                      <div className={`w-12 h-12 bg-${metric.color}/10 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                        <IconComponent className={`w-6 h-6 text-${metric.color}`} />
+                      </div>
+                      <h4 className="font-display font-semibold text-primary text-lg mb-2">{metric.title}</h4>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Closing CTA */}
+            <div className="text-center bg-gradient-to-br from-primary/5 to-sage/5 rounded-2xl p-12">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
+                One quarter from now, your business could feel completely different.
+              </h3>
+              <p className="text-xl text-muted-foreground font-body mb-8 max-w-2xl mx-auto">
+                Ready to reset, realign, and prove measurable transformation in just 90 days?
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
+                onClick={() => navigate('/journey')}
+              >
+                Book a 30-Min Alignment Call
+              </Button>
             </div>
           </div>
         </section>
