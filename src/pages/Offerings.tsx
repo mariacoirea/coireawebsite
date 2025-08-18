@@ -394,6 +394,25 @@ const Offerings = () => {
               </div>
             </div>
           </div>
+
+          {/* Harvard Quote */}
+          <div className="text-center mt-16">
+            <div className="max-w-4xl mx-auto">
+              {/* Simple border accent */}
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+              
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
+                "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+              </blockquote>
+              
+              <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
+                — Harvard Business Review
+              </cite>
+              
+              {/* Simple border accent */}
+              <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
+            </div>
+          </div>
         </section>
 
         {/* 90-Day Transformational Programs Section */}
@@ -544,40 +563,6 @@ const Offerings = () => {
             </div>
 
             {/* Closing CTA */}
-            <div className="text-center bg-gradient-to-br from-primary/5 to-sage/5 rounded-2xl p-12 mb-16">
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
-                One quarter from now, your business could feel completely different.
-              </h3>
-              <p className="text-xl text-muted-foreground font-body mb-8 max-w-2xl mx-auto">
-                Ready to reset, realign, and prove measurable transformation in just 90 days?
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg"
-                onClick={() => navigate('/journey')}
-              >
-                Book a 30-Min Alignment Call
-              </Button>
-            </div>
-
-            {/* Harvard Quote */}
-            <div className="text-center">
-              <div className="max-w-4xl mx-auto">
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
-                
-                <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
-                  "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
-                </blockquote>
-                
-                <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
-                  — Harvard Business Review
-                </cite>
-                
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
-              </div>
-            </div>
           </div>
         </section>
 
