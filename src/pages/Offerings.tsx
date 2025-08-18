@@ -630,88 +630,43 @@ const Offerings = () => {
               <div className="w-32 h-0.5 bg-gradient-to-r from-sage to-copper mx-auto"></div>
             </div>
 
-            {/* Signature Program - Premium Design */}
-            <div className="mb-20 max-w-6xl mx-auto">
-              <Card className="p-8 md:p-12 bg-white/80 backdrop-blur-sm border border-sage/20 shadow-2xl hover:shadow-sage/20 transition-all duration-700 group relative overflow-hidden">
-                {/* Premium Background Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-copper/5 opacity-50"></div>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-sage/10 to-transparent rounded-bl-3xl"></div>
-                
-                {/* Signature Badge */}
-                <div className="absolute top-6 right-6 z-10">
-                  <div className="flex items-center space-x-2 bg-gradient-to-r from-sage to-sage/80 px-4 py-2 rounded-full shadow-lg">
-                    <Star className="w-4 h-4 text-white" />
-                    <span className="text-sm font-semibold text-white">Signature Partnership</span>
-                  </div>
-                </div>
-
-                <div className="relative z-10">
-                  <div className="mb-8">
-                    {/* Icon & Header */}
-                    <div className="flex items-start space-x-6 mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-sage to-sage/80 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                        <Building className="w-10 h-10 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-3">
-                          Organizational Transformation
-                        </h3>
-                        <div className="flex items-center space-x-3">
-                          <span className="text-sage font-semibold bg-sage/15 px-4 py-1.5 rounded-full">
-                            6–18 months
-                          </span>
-                          <span className="text-muted-foreground">
-                            Deep Partnership
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
-                      Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.
-                    </p>
-
-                    {/* Key Areas - Elegant Grid */}
-                    <div>
-                      <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
-                        Partnership Focus Areas
-                      </h4>
-                      <div className="grid grid-cols-2 gap-4">
-                        {["Strategic Alignment", "Conscious Leadership", "Culture Architecture", "Change Implementation"].map((area, idx) => (
-                          <div key={idx} className="flex items-center space-x-3 p-3 bg-sage/5 rounded-xl border border-sage/10">
-                            <div className="w-3 h-3 bg-gradient-to-r from-sage to-copper rounded-full flex-shrink-0"></div>
-                            <span className="text-foreground font-medium">{area}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-
-            {/* Partnership Programs Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-              {longTermOfferings.slice(1).map((offering, index) => {
+            {/* Partnership Programs - 3 Column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+              {longTermOfferings.map((offering, index) => {
                 const IconComponent = offering.icon;
                 const accentColor = offering.accent === 'primary' ? 'primary' : offering.accent === 'copper' ? 'copper' : 'sage';
+                const isSignature = offering.badge === 'Signature Program';
+                
                 return (
-                  <Card key={offering.id} className="p-8 bg-white/90 backdrop-blur-sm border border-primary/10 hover:border-sage/30 shadow-lg hover:shadow-xl transition-all duration-500 group relative overflow-hidden h-full">
+                  <Card key={offering.id} className={`p-8 bg-white/90 backdrop-blur-sm border hover:border-sage/30 shadow-lg hover:shadow-xl transition-all duration-500 group relative overflow-hidden h-full ${
+                    isSignature ? 'border-sage/20 shadow-2xl' : 'border-primary/10'
+                  }`}>
                     {/* Subtle Background Pattern */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/3 to-sage/3 opacity-50"></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br opacity-50 ${
+                      isSignature ? 'from-sage/5 via-transparent to-copper/5' : 'from-primary/3 to-sage/3'
+                    }`}></div>
+                    
+                    {/* Signature Badge */}
+                    {isSignature && (
+                      <div className="absolute top-4 right-4 z-10">
+                        <div className="flex items-center space-x-2 bg-gradient-to-r from-sage to-sage/80 px-3 py-1.5 rounded-full shadow-lg">
+                          <Star className="w-3 h-3 text-white" />
+                          <span className="text-xs font-semibold text-white">Signature</span>
+                        </div>
+                      </div>
+                    )}
                     
                     <div className="relative z-10 h-full flex flex-col">
                       {/* Header */}
                       <div className="mb-6">
                         <div className={`w-16 h-16 bg-gradient-to-br from-${accentColor}/20 to-${accentColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 mb-4`}>
-                          <IconComponent className="w-8 h-8 text-primary" />
+                          <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                        <h3 className="text-xl font-display font-bold text-primary mb-3">
                           {offering.title}
                         </h3>
-                        <div className="flex items-center space-x-3">
-                          <span className={`text-sm font-semibold text-${accentColor} bg-${accentColor}/10 px-3 py-1.5 rounded-full`}>
+                        <div className="flex flex-col space-y-2">
+                          <span className={`text-sm font-semibold text-${accentColor} bg-${accentColor}/10 px-3 py-1.5 rounded-full w-fit`}>
                             {offering.duration}
                           </span>
                           <span className="text-sm text-muted-foreground">
@@ -721,20 +676,20 @@ const Offerings = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow">
+                      <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow text-sm">
                         {offering.description}
                       </p>
 
                       {/* Key Areas */}
                       <div className="mt-auto">
-                        <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
+                        <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-xs">
                           Key Areas
                         </h4>
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                           {offering.keyAreas.map((area, idx) => (
                             <div key={idx} className="flex items-center space-x-3 p-2 bg-primary/5 rounded-lg">
                               <div className={`w-2 h-2 bg-${accentColor} rounded-full flex-shrink-0`}></div>
-                              <span className="text-foreground font-medium text-sm">{area}</span>
+                              <span className="text-foreground font-medium text-xs">{area}</span>
                             </div>
                           ))}
                         </div>
