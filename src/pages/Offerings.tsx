@@ -442,7 +442,7 @@ const Offerings = () => {
                 </div>
 
                 {/* Ideal For Section */}
-                <div className="bg-sage/5 border border-sage/10 rounded-xl p-6 mb-8">
+                <div className="mb-8">
                   <h4 className="text-sm font-semibold text-sage mb-3 uppercase tracking-wider">Ideal For</h4>
                   <p className="text-muted-foreground font-body">
                     CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.
@@ -452,18 +452,18 @@ const Offerings = () => {
                 {/* Outcomes Section */}
                 <div className="mb-8">
                   <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
-                  <div className="grid gap-3">
-                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
-                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Reset team trust and collaboration</span>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Reset team trust and collaboration</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
-                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Upgrade leadership decision-making</span>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Upgrade leadership decision-making</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
-                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Embed culture habits that scale</span>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Embed culture habits that scale</span>
                     </div>
                   </div>
                 </div>
@@ -504,7 +504,7 @@ const Offerings = () => {
                 </div>
 
                 {/* Ideal For Section */}
-                <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-8">
+                <div className="mb-8">
                   <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Ideal For</h4>
                   <p className="text-muted-foreground font-body">
                     CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.
@@ -514,18 +514,18 @@ const Offerings = () => {
                 {/* Outcomes Section */}
                 <div className="mb-8">
                   <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
-                  <div className="grid gap-3">
-                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Align leadership priorities with reality</span>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Align leadership priorities with reality</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Implement high-leverage systems</span>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Implement high-leverage systems</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm font-medium text-muted-foreground">Strengthen execution culture</span>
+                    <div className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Strengthen execution culture</span>
                     </div>
                   </div>
                 </div>
