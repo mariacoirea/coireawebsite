@@ -105,7 +105,7 @@ const Offerings = () => {
       id: 3,
       title: "Fractional Operations",
       badge: "Embedded Partnership",
-      duration: "1–6 months",
+      duration: "3–12 months",
       timeframe: "",
       description: "Hands-on strategic support. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
       keyAreas: [
