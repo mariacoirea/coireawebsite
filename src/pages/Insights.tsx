@@ -6,6 +6,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { 
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { supabase } from "@/integrations/supabase/client";
 import { Search } from "lucide-react";
 
@@ -51,6 +59,9 @@ const Insights = () => {
   const [activeCluster, setActiveCluster] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const postsPerPage = 6;
 
   useEffect(() => {
     fetchPosts();
@@ -59,6 +70,10 @@ const Insights = () => {
   useEffect(() => {
     filterPosts();
   }, [posts, activeCluster, searchTerm]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCluster, searchTerm]);
 
   const fetchPosts = async () => {
     try {
@@ -104,6 +119,13 @@ const Insights = () => {
 
   const featuredPosts = filteredPosts.filter(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
+  
+  // Pagination calculations
+  const totalRegularPosts = regularPosts.length;
+  const totalPages = Math.ceil(totalRegularPosts / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const paginatedPosts = regularPosts.slice(startIndex, endIndex);
 
   return (
     <div className="min-h-screen bg-background">
@@ -214,41 +236,85 @@ const Insights = () => {
                 <p className="text-muted-foreground">No insights found matching your criteria.</p>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {regularPosts.map((post) => (
-                  <Link key={post.id} to={`/insights/${post.slug}`}>
-                    <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group h-full">
-                      {post.featured_image && (
-                        <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                          <img 
-                            src={post.featured_image} 
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+              <>
+                {/* Posts count info */}
+                {totalRegularPosts > 0 && (
+                  <div className="mb-6 text-sm text-muted-foreground">
+                    Showing {startIndex + 1}-{Math.min(endIndex, totalRegularPosts)} of {totalRegularPosts} posts
+                  </div>
+                )}
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {paginatedPosts.map((post) => (
+                    <Link key={post.id} to={`/insights/${post.slug}`}>
+                      <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group h-full">
+                        {post.featured_image && (
+                          <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img 
+                              src={post.featured_image} 
+                              alt={post.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                            />
+                          </div>
+                        )}
+                        <CardHeader>
+                          <div className="flex items-center justify-between mb-3">
+                            <Badge variant="secondary" className="bg-accent/10 text-accent">
+                              {post.cluster}
+                            </Badge>
+                            <span className="text-sm font-body text-muted-foreground">
+                              {formatDate(post.created_at)}
+                            </span>
+                          </div>
+                          <CardTitle className="text-xl font-display text-primary group-hover:text-primary/80 transition-colors">
+                            {post.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-foreground/80 font-body leading-relaxed text-sm">
+                            {post.preview_snippet}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="mt-12">
+                    <Pagination>
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious 
+                            onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                            className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                           />
-                        </div>
-                      )}
-                      <CardHeader>
-                        <div className="flex items-center justify-between mb-3">
-                          <Badge variant="secondary" className="bg-accent/10 text-accent">
-                            {post.cluster}
-                          </Badge>
-                          <span className="text-sm font-body text-muted-foreground">
-                            {formatDate(post.created_at)}
-                          </span>
-                        </div>
-                        <CardTitle className="text-xl font-display text-primary group-hover:text-primary/80 transition-colors">
-                          {post.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80 font-body leading-relaxed text-sm">
-                          {post.preview_snippet}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                ))}
-              </div>
+                        </PaginationItem>
+                        
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                          <PaginationItem key={page}>
+                            <PaginationLink
+                              onClick={() => setCurrentPage(page)}
+                              isActive={currentPage === page}
+                              className="cursor-pointer"
+                            >
+                              {page}
+                            </PaginationLink>
+                          </PaginationItem>
+                        ))}
+                        
+                        <PaginationItem>
+                          <PaginationNext 
+                            onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                            className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                          />
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </section>
