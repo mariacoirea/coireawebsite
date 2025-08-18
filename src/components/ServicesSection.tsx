@@ -78,48 +78,48 @@ const ServicesSection = () => {
         </div>
 
         {/* Two 90-Day Programs */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
           {transformationalPrograms.map((program, index) => {
             const IconComponent = program.icon;
             return (
-              <Card key={index} className="p-8 md:p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+              <Card key={index} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
                 {/* Header Section */}
-                <div className="text-center mb-8">
-                  <div className={`w-20 h-20 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border border-${program.iconColor}/20`}>
-                    <IconComponent className={`w-10 h-10 text-${program.iconColor}`} />
+                <div className="text-center mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-${program.iconColor}/20`}>
+                    <IconComponent className={`w-8 h-8 text-${program.iconColor}`} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                  <h3 className="text-xl font-display font-bold text-primary mb-3">
                     {program.title}
                   </h3>
-                  <p className="text-lg text-copper font-medium mb-4">
+                  <p className="text-base text-copper font-medium mb-4">
                     {program.subtitle}
                   </p>
-                  <div className="flex items-center justify-center gap-4 mb-6">
-                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-4 py-2 rounded-full text-sm font-semibold border border-${program.badgeColor}/20`}>
+                  <div className="flex items-center justify-center gap-3 mb-5">
+                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-3 py-1.5 rounded-full text-xs font-semibold border border-${program.badgeColor}/20`}>
                       90 Days
                     </div>
-                    <div className="bg-copper/10 text-copper px-4 py-2 rounded-full text-sm font-semibold border border-copper/20">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
                       3 Phases
                     </div>
                   </div>
                 </div>
 
                 {/* Ideal For Section */}
-                <div className="mb-8">
-                  <h4 className={`text-sm font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
-                  <p className="text-muted-foreground font-body">
+                <div className="mb-6">
+                  <h4 className={`text-xs font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
+                  <p className="text-muted-foreground font-body text-sm">
                     {program.idealFor}
                   </p>
                 </div>
 
                 {/* Outcomes Section */}
-                <div className="mb-8">
-                  <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
-                  <div className="space-y-3">
+                <div className="mb-6">
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="space-y-2.5">
                     {program.outcomes.map((outcome, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <Check className={`w-5 h-5 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
-                        <span className="text-muted-foreground">{outcome}</span>
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <Check className={`w-4 h-4 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
+                        <span className="text-muted-foreground text-sm">{outcome}</span>
                       </div>
                     ))}
                   </div>
@@ -127,10 +127,10 @@ const ServicesSection = () => {
 
                 {/* Core Elements as Tags */}
                 <div className="mt-auto">
-                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
+                  <div className="flex flex-wrap gap-1.5">
                     {program.coreElements.map((element, idx) => (
-                      <span key={idx} className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">
+                      <span key={idx} className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">
                         {element}
                       </span>
                     ))}
@@ -157,24 +157,6 @@ const ServicesSection = () => {
           </Link>
         </div>
 
-        {/* Harvard Quote */}
-        <div className="text-center">
-          <div className="max-w-4xl mx-auto">
-            {/* Simple border accent */}
-            <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
-            
-            <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
-              "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
-            </blockquote>
-            
-            <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
-              — Harvard Business Review
-            </cite>
-            
-            {/* Simple border accent */}
-            <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom wave separator */}
