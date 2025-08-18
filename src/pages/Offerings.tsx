@@ -68,13 +68,13 @@ const Offerings = () => {
     }
   ];
 
-  const offerings = [
+  const longTermOfferings = [
     {
       id: 1,
       title: "Organizational Transformation",
       badge: "Signature Program",
-      duration: "Long-Term Partnership",
-      timeframe: "6-18 months",
+      duration: "6–18 months",
+      timeframe: "",
       description: "Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.",
       keyAreas: [
         "Strategic Alignment",
@@ -87,25 +87,9 @@ const Offerings = () => {
     },
     {
       id: 2,
-      title: "Team Retreats & Workshops",
-      badge: "Immersive Experiences",
-      duration: "2-5 days",
-      timeframe: "",
-      description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence. Each experience is fully tailored to your team's context and can be delivered in person or online, depending on your needs and goals.",
-      keyAreas: [
-        "Team Bonding",
-        "Vision Activation",
-        "Conflict Healing", 
-        "Creative Co-Creation Tools"
-      ],
-      icon: Users,
-      accent: "copper"
-    },
-    {
-      id: 3,
       title: "Leadership Coaching",
       badge: "1:1 Guidance", 
-      duration: "3-12 months",
+      duration: "3–12 months",
       timeframe: "",
       description: "Deep inner work for executives & emerging leaders ready to lead with authenticity, alignment, and regenerative presence.",
       keyAreas: [
@@ -118,7 +102,7 @@ const Offerings = () => {
       accent: "primary"
     },
     {
-      id: 4,
+      id: 3,
       title: "Fractional Operations",
       badge: "Embedded Partnership",
       duration: "1–6 months",
@@ -131,7 +115,7 @@ const Offerings = () => {
         "Regenerative KPIs & Accountability"
       ],
       icon: Settings,
-      accent: "olive-green"
+      accent: "copper"
     }
   ];
 
@@ -646,75 +630,74 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* Transformational Offerings Section */}
-        <section className="py-24 bg-background">
+        {/* Long-Term Partnerships Section */}
+        <section className="py-24 bg-gradient-to-br from-sage/5 to-primary/5">
           <div className="container mx-auto px-6">
             {/* Section Header */}
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-                Transformational Offerings for Regenerative Growth
+              <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
+                Long-Term Partnerships
               </h2>
               
-              <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
+              <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
+                Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance.
               </p>
               
-              <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
+              <div className="w-32 h-0.5 bg-gradient-to-r from-sage to-copper mx-auto"></div>
             </div>
 
-            {/* Signature Program - Mobile Optimized */}
-            <div className="mb-16 max-w-6xl mx-auto">
-              <Card className="p-6 md:p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
-                {/* Signature Badge - Mobile Optimized */}
-                <div className="absolute top-4 right-4 md:top-6 md:right-6">
-                  <div className="flex items-center space-x-2 bg-sage/15 px-3 py-1.5 md:px-4 md:py-2 rounded-full">
-                    <Star className="w-3 h-3 md:w-4 md:h-4 text-sage" />
-                    <span className="text-xs md:text-sm font-medium text-sage">Signature Program</span>
+            {/* Signature Program - Premium Design */}
+            <div className="mb-20 max-w-6xl mx-auto">
+              <Card className="p-8 md:p-12 bg-white/80 backdrop-blur-sm border border-sage/20 shadow-2xl hover:shadow-sage/20 transition-all duration-700 group relative overflow-hidden">
+                {/* Premium Background Pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-copper/5 opacity-50"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-sage/10 to-transparent rounded-bl-3xl"></div>
+                
+                {/* Signature Badge */}
+                <div className="absolute top-6 right-6 z-10">
+                  <div className="flex items-center space-x-2 bg-gradient-to-r from-sage to-sage/80 px-4 py-2 rounded-full shadow-lg">
+                    <Star className="w-4 h-4 text-white" />
+                    <span className="text-sm font-semibold text-white">Signature Partnership</span>
                   </div>
                 </div>
 
-                {/* Mobile-First Stacked Layout */}
-                <div className="space-y-6 md:grid md:grid-cols-2 md:gap-8 md:items-center md:space-y-0">
-                  <div className="space-y-4 md:space-y-6">
-                    {/* Header - Mobile Optimized */}
-                    <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
-                        <Building className="w-8 h-8 md:w-10 md:h-10 text-sage" />
+                <div className="relative z-10">
+                  <div className="mb-8">
+                    {/* Icon & Header */}
+                    <div className="flex items-start space-x-6 mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-sage to-sage/80 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        <Building className="w-10 h-10 text-white" />
                       </div>
-                      <div className="text-center md:text-left">
-                        <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors">
+                      <div className="flex-1">
+                        <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-3">
                           Organizational Transformation
                         </h3>
-                        {/* Mobile-Optimized Badge Layout */}
-                        <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-3">
-                          <span className="text-sm text-sage font-medium bg-sage/10 px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
-                            Long-Term Partnership
-                          </span>
-                          <span className="text-sm text-muted-foreground text-center md:text-left">
+                        <div className="flex items-center space-x-3">
+                          <span className="text-sage font-semibold bg-sage/15 px-4 py-1.5 rounded-full">
                             6–18 months
+                          </span>
+                          <span className="text-muted-foreground">
+                            Deep Partnership
                           </span>
                         </div>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed text-base md:text-lg text-center md:text-left">
+                    <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                       Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.
                     </p>
-                  </div>
 
-                  <div>
-                    {/* Features - Mobile Optimized */}
+                    {/* Key Areas - Elegant Grid */}
                     <div>
-                      <h4 className="text-sm font-body font-semibold text-primary mb-4 uppercase tracking-wide text-center md:text-left">
-                        Key Areas
+                      <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
+                        Partnership Focus Areas
                       </h4>
-                      {/* Single Column on Mobile, Two Columns on Desktop */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                        {["Strategic Alignment", "Culture Architecture", "Conscious Leadership", "Change Implementation"].map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-3 justify-center md:justify-start">
-                            <div className="w-2 h-2 bg-sage rounded-full flex-shrink-0"></div>
-                            <span className="text-foreground/80 font-body text-sm md:text-base">{feature}</span>
+                      <div className="grid grid-cols-2 gap-4">
+                        {["Strategic Alignment", "Conscious Leadership", "Culture Architecture", "Change Implementation"].map((area, idx) => (
+                          <div key={idx} className="flex items-center space-x-3 p-3 bg-sage/5 rounded-xl border border-sage/10">
+                            <div className="w-3 h-3 bg-gradient-to-r from-sage to-copper rounded-full flex-shrink-0"></div>
+                            <span className="text-foreground font-medium">{area}</span>
                           </div>
                         ))}
                       </div>
@@ -724,59 +707,79 @@ const Offerings = () => {
               </Card>
             </div>
 
-            {/* Other Offerings Grid - Mobile Optimized */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-              {offerings.slice(1).map((offering, index) => {
+            {/* Partnership Programs Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+              {longTermOfferings.slice(1).map((offering, index) => {
                 const IconComponent = offering.icon;
+                const accentColor = offering.accent === 'primary' ? 'primary' : offering.accent === 'copper' ? 'copper' : 'sage';
                 return (
-                  <Card key={offering.id} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden h-full flex flex-col">
-                    {/* Badge - Mobile Optimized */}
-                    <div className="absolute top-4 right-4">
-                      <span className={`text-xs font-medium bg-${offering.accent}/10 text-${offering.accent} px-2 py-1 md:px-3 md:py-1.5 rounded-full whitespace-nowrap`}>
-                        {offering.badge}
-                      </span>
-                    </div>
-
-                    {/* Header - Mobile Optimized */}
-                    <div className="mb-6 mt-8">
-                      <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4">
-                        <IconComponent className="w-8 h-8 text-primary-foreground" />
+                  <Card key={offering.id} className="p-8 bg-white/90 backdrop-blur-sm border border-primary/10 hover:border-sage/30 shadow-lg hover:shadow-xl transition-all duration-500 group relative overflow-hidden h-full">
+                    {/* Subtle Background Pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/3 to-sage/3 opacity-50"></div>
+                    
+                    <div className="relative z-10 h-full flex flex-col">
+                      {/* Header */}
+                      <div className="mb-6">
+                        <div className={`w-16 h-16 bg-gradient-to-br from-${accentColor}/20 to-${accentColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 mb-4`}>
+                          <IconComponent className="w-8 h-8 text-primary" />
+                        </div>
+                        <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                          {offering.title}
+                        </h3>
+                        <div className="flex items-center space-x-3">
+                          <span className={`text-sm font-semibold text-${accentColor} bg-${accentColor}/10 px-3 py-1.5 rounded-full`}>
+                            {offering.duration}
+                          </span>
+                          <span className="text-sm text-muted-foreground">
+                            {offering.badge}
+                          </span>
+                        </div>
                       </div>
-                      <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors mb-3">
-                        {offering.title}
-                      </h3>
-                      <div className="flex flex-col space-y-2">
-                        <span className="text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full w-fit">
-                          {offering.badge}
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          {offering.duration}
-                        </span>
-                      </div>
-                    </div>
 
-                    {/* Description */}
-                    <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow">
-                      {offering.description}
-                    </p>
+                      {/* Description */}
+                      <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow">
+                        {offering.description}
+                      </p>
 
-                    {/* Features */}
-                    <div className="mt-auto">
-                      <h4 className="text-sm font-body font-semibold text-primary mb-3 uppercase tracking-wide">
-                        Key Areas
-                      </h4>
-                      <div className="space-y-2">
-                        {offering.keyAreas.map((area, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></div>
-                            <span className="text-sm text-foreground/80 font-body">{area}</span>
-                          </div>
-                        ))}
+                      {/* Key Areas */}
+                      <div className="mt-auto">
+                        <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-sm">
+                          Key Areas
+                        </h4>
+                        <div className="space-y-3">
+                          {offering.keyAreas.map((area, idx) => (
+                            <div key={idx} className="flex items-center space-x-3 p-2 bg-primary/5 rounded-lg">
+                              <div className={`w-2 h-2 bg-${accentColor} rounded-full flex-shrink-0`}></div>
+                              <span className="text-foreground font-medium text-sm">{area}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </Card>
                 );
               })}
+            </div>
+
+            {/* Add-ons Section */}
+            <div className="max-w-4xl mx-auto">
+              <Card className="p-8 bg-gradient-to-r from-copper/5 to-sage/5 border border-copper/20 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-copper to-sage"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-display font-bold text-primary mb-4">
+                    Add-ons available upon request
+                  </h3>
+                  <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                    Team retreats, workshops, and team-building experiences can be designed and tailored to your organization's needs. 
+                    These can also be integrated into any of our 90-Day Programs or Long-Term Partnerships.
+                  </p>
+                  <div className="flex items-center space-x-2 mt-4">
+                    <Users className="w-5 h-5 text-copper" />
+                    <MessageCircle className="w-5 h-5 text-sage" />
+                    <Calendar className="w-5 h-5 text-primary" />
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </section>
