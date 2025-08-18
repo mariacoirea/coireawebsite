@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useNavigate } from "react-router-dom";
+import offeringsHeroBg from "@/assets/offerings-hero-bg.jpg";
 import { 
   Brain, 
   Leaf, 
@@ -157,8 +158,14 @@ const Offerings = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto px-6 text-center max-w-6xl">
+        <section 
+          className="py-20 relative bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${offeringsHeroBg})` }}
+        >
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px]"></div>
+          
+          <div className="container mx-auto px-6 text-center max-w-6xl relative z-10">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-8 leading-tight">
               We Don't Offer Quick Fixes —
               <br />
