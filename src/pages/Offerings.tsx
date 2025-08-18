@@ -397,7 +397,7 @@ const Offerings = () => {
         </section>
 
         {/* 90-Day Transformational Programs Section */}
-        <section className="py-24 bg-gradient-to-br from-warm-beige to-aura-pearl">
+        <section className="py-24 bg-[#f8f8f8]">
           <div className="container mx-auto px-6 max-w-6xl">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -409,10 +409,7 @@ const Offerings = () => {
               </p>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg text-muted-foreground font-body mb-4">
-                  Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations.
-                </p>
-                <p className="text-lg text-muted-foreground font-body">
-                  In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard — so you know exactly what's working, and where to focus next.
+                  Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations. In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard, so you know exactly what's working, and where to focus next.
                 </p>
               </div>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mt-8"></div>
@@ -468,13 +465,6 @@ const Offerings = () => {
                   </ul>
                 </div>
 
-                <Button 
-                  variant="outline" 
-                  className="w-full border-sage text-sage hover:bg-sage hover:text-white transition-all duration-300"
-                  onClick={() => navigate('/journey')}
-                >
-                  Explore Culture & Leadership Reset
-                </Button>
               </Card>
 
               {/* Strategic Ops & Leadership Partnership */}
@@ -524,13 +514,6 @@ const Offerings = () => {
                   </ul>
                 </div>
 
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
-                  onClick={() => navigate('/journey')}
-                >
-                  Explore Strategic Ops & Leadership Partnership
-                </Button>
               </Card>
             </div>
 
@@ -588,7 +571,8 @@ const Offerings = () => {
                 Every shift is measurable.
               </h3>
               <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                From day one, we establish clear baselines. At the end of 90 days, you'll see exactly how your organization has shifted — across culture, leadership, and operations — all tracked through the COIREA Dashboard.
+                From day one, we establish clear baselines. At the end of 90 days, you'll see exactly<br />
+                how your organization has shifted — across culture, leadership, and operations — all tracked through the COIREA Dashboard.
               </p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
