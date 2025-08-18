@@ -746,46 +746,20 @@ const Offerings = () => {
             </div>
 
             {/* Add-ons Section */}
-            <div className="max-w-4xl mx-auto">
-              <Card className="p-8 bg-gradient-to-r from-copper/5 to-sage/5 border border-copper/20 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-copper to-sage"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-display font-bold text-primary mb-4">
-                    Add-ons available upon request
-                  </h3>
-                  <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                    Team retreats, workshops, and team-building experiences can be designed and tailored to your organization's needs. 
-                    These can also be integrated into any of our 90-Day Programs or Long-Term Partnerships.
-                  </p>
-                  <div className="flex items-center space-x-2 mt-4">
-                    <Users className="w-5 h-5 text-copper" />
-                    <MessageCircle className="w-5 h-5 text-sage" />
-                    <Calendar className="w-5 h-5 text-primary" />
-                  </div>
+            <div className="max-w-4xl mx-auto mt-16">
+              <div className="border-l-4 border-gradient-to-b border-copper pl-8">
+                <h3 className="text-2xl font-display font-bold text-primary mb-4">
+                  Add-ons available upon request
+                </h3>
+                <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                  Team retreats, workshops, and team-building experiences can be designed and tailored to your organization's needs. 
+                  These can also be integrated into any of our 90-Day Programs or Long-Term Partnerships.
+                </p>
+                <div className="flex items-center space-x-2 mt-4">
+                  <Users className="w-5 h-5 text-copper" />
+                  <MessageCircle className="w-5 h-5 text-sage" />
+                  <Calendar className="w-5 h-5 text-primary" />
                 </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Quote Section */}
-        <section className="py-16 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto max-w-5xl">
-            <div className="text-center">
-              <div className="max-w-4xl mx-auto">
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
-                
-                <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
-                  "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
-                </blockquote>
-                
-                <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
-                  — Harvard Business Review
-                </cite>
-                
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
               </div>
             </div>
           </div>
@@ -837,6 +811,29 @@ const Offerings = () => {
                   <Calendar className="w-5 h-5" />
                   <span className="text-sm font-medium">Flexible scheduling</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote Section - Moved to last */}
+        <section className="py-16 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto max-w-5xl">
+            <div className="text-center">
+              <div className="max-w-4xl mx-auto">
+                {/* Simple border accent */}
+                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+                
+                <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
+                  "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+                </blockquote>
+                
+                <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
+                  — Harvard Business Review
+                </cite>
+                
+                {/* Simple border accent */}
+                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
               </div>
             </div>
           </div>
