@@ -543,86 +543,8 @@ const Offerings = () => {
               </Card>
             </div>
 
-            {/* How it Works Section */}
-            <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 mb-16 shadow-lg">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
-                  How it Works: 3 Phases, 12 Weeks
-                </h3>
-                <p className="text-muted-foreground font-body">Simple flow → Seed → Reflect → Align</p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* Phase 1: Seed */}
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-8 h-8 text-sage" />
-                  </div>
-                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 1–2: Seed</h4>
-                  <p className="text-muted-foreground">Deep-dive assessment + alignment workshops.</p>
-                </div>
-
-                {/* Phase 2: Reflect */}
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-8 h-8 text-copper" />
-                  </div>
-                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 3–8: Reflect</h4>
-                  <p className="text-muted-foreground">Implement leadership/ops upgrades + mentoring.</p>
-                </div>
-
-                {/* Phase 3: Align */}
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Compass className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-display font-bold text-primary mb-3">Weeks 9–12: Align</h4>
-                  <p className="text-muted-foreground">Measurable change report + 6–12 month roadmap.</p>
-                </div>
-              </div>
-
-              {/* Arrow flow visual */}
-              <div className="flex items-center justify-center gap-4 mt-8">
-                <div className="w-3 h-3 bg-sage rounded-full"></div>
-                <ArrowRight className="w-4 h-4 text-sage" />
-                <div className="w-3 h-3 bg-copper rounded-full"></div>
-                <ArrowRight className="w-4 h-4 text-copper" />
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-              </div>
-            </div>
-
-            {/* Measurement & Proof Section */}
-            <div className="text-center mb-16">
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-6">
-                Every shift is measurable.
-              </h3>
-              <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-                From day one, we establish clear baselines. At the end of 90 days, you'll see exactly<br />
-                how your organization has shifted — across culture, leadership, and operations — all tracked through the COIREA Dashboard.
-              </p>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { icon: Heart, title: "Culture Health Score", color: "sage" },
-                  { icon: Brain, title: "Leadership Alignment Index", color: "primary" },
-                  { icon: Settings, title: "Operational Efficiency Benchmarks", color: "copper" },
-                  { icon: TrendingUp, title: "Decision-making Speed & Accountability", color: "olive-green" }
-                ].map((metric, index) => {
-                  const IconComponent = metric.icon;
-                  return (
-                    <div key={index} className="p-6 bg-card/60 backdrop-blur-sm rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
-                      <div className={`w-12 h-12 bg-${metric.color}/10 rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                        <IconComponent className={`w-6 h-6 text-${metric.color}`} />
-                      </div>
-                      <h4 className="font-display font-semibold text-primary text-lg mb-2">{metric.title}</h4>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Closing CTA */}
-            <div className="text-center bg-gradient-to-br from-primary/5 to-sage/5 rounded-2xl p-12">
+            <div className="text-center bg-gradient-to-br from-primary/5 to-sage/5 rounded-2xl p-12 mb-16">
               <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
                 One quarter from now, your business could feel completely different.
               </h3>
@@ -636,6 +558,25 @@ const Offerings = () => {
               >
                 Book a 30-Min Alignment Call
               </Button>
+            </div>
+
+            {/* Harvard Quote */}
+            <div className="text-center">
+              <div className="max-w-4xl mx-auto">
+                {/* Simple border accent */}
+                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+                
+                <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
+                  "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+                </blockquote>
+                
+                <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
+                  — Harvard Business Review
+                </cite>
+                
+                {/* Simple border accent */}
+                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -797,28 +738,6 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* Quote Section - Moved to last */}
-        <section className="py-16 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto max-w-5xl">
-            <div className="text-center">
-              <div className="max-w-4xl mx-auto">
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
-                
-                <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
-                  "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
-                </blockquote>
-                
-                <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
-                  — Harvard Business Review
-                </cite>
-                
-                {/* Simple border accent */}
-                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
