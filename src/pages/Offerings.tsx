@@ -419,99 +419,125 @@ const Offerings = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               
               {/* Culture & Leadership Reset */}
-              <Card className="p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Heart className="w-8 h-8 text-sage" />
+              <Card className="p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                {/* Header Section */}
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-sage/10 to-sage/20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border border-sage/20">
+                    <Heart className="w-10 h-10 text-sage" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-bold text-primary mb-2">
-                      Culture & Leadership Reset
-                    </h3>
-                    <p className="text-lg text-copper font-medium">
-                      Reset your culture. Upgrade your leadership.
-                    </p>
+                  <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                    Culture & Leadership Reset
+                  </h3>
+                  <p className="text-lg text-copper font-medium mb-4">
+                    Reset your culture. Upgrade your leadership.
+                  </p>
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <div className="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-semibold border border-sage/20">
+                      90 Days
+                    </div>
+                    <div className="bg-copper/10 text-copper px-4 py-2 rounded-full text-sm font-semibold border border-copper/20">
+                      3 Phases
+                    </div>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground font-body mb-6">
-                  Ideal for: CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.
-                </p>
-
-                <div className="mb-8">
-                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Outcomes:</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Reset team trust and collaboration.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Upgrade leadership decision-making and communication.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Embed culture habits that survive scale-up stress.</span>
-                    </li>
-                  </ul>
+                {/* Ideal For Section */}
+                <div className="bg-sage/5 border border-sage/10 rounded-xl p-6 mb-8">
+                  <h4 className="text-sm font-semibold text-sage mb-3 uppercase tracking-wider">Ideal For</h4>
+                  <p className="text-muted-foreground font-body">
+                    CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.
+                  </p>
                 </div>
 
+                {/* Outcomes Section */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Core Elements:</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Culture & leadership workshops and assessment</li>
-                    <li>• Executive mentoring for the leadership team</li>
-                    <li>• Pre/post culture health score + leadership alignment index</li>
-                  </ul>
+                  <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="grid gap-3">
+                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
+                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Reset team trust and collaboration</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
+                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Upgrade leadership decision-making</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-sage/5 rounded-lg p-4 border border-sage/10">
+                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Embed culture habits that scale</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Core Elements as Tags */}
+                <div className="mt-auto">
+                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Culture Assessment</span>
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Leadership Workshops</span>
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Executive Mentoring</span>
+                  </div>
                 </div>
 
               </Card>
 
               {/* Strategic Ops & Leadership Partnership */}
-              <Card className="p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-8 h-8 text-primary" />
+              <Card className="p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                {/* Header Section */}
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border border-primary/20">
+                    <Zap className="w-10 h-10 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-display font-bold text-primary mb-2">
-                      Strategic Ops & Leadership Partnership
-                    </h3>
-                    <p className="text-lg text-copper font-medium">
-                      Fix the bottlenecks. Scale with clarity.
-                    </p>
+                  <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                    Strategic Ops & Leadership Partnership
+                  </h3>
+                  <p className="text-lg text-copper font-medium mb-4">
+                    Fix the bottlenecks. Scale with clarity.
+                  </p>
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20">
+                      90 Days
+                    </div>
+                    <div className="bg-copper/10 text-copper px-4 py-2 rounded-full text-sm font-semibold border border-copper/20">
+                      3 Phases
+                    </div>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground font-body mb-6">
-                  Ideal for: CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.
-                </p>
-
-                <div className="mb-8">
-                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Outcomes:</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Align leadership priorities with operational reality.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Implement high-leverage operational systems.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Strengthen execution and accountability culture.</span>
-                    </li>
-                  </ul>
+                {/* Ideal For Section */}
+                <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mb-8">
+                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Ideal For</h4>
+                  <p className="text-muted-foreground font-body">
+                    CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.
+                  </p>
                 </div>
 
+                {/* Outcomes Section */}
                 <div className="mb-8">
-                  <h4 className="text-lg font-display font-semibold text-primary mb-4">Core Elements:</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Organizational & operational bottleneck audit</li>
-                    <li>• Fractional COO-style implementation support</li>
-                    <li>• Pre/post operational efficiency benchmarks</li>
-                  </ul>
+                  <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="grid gap-3">
+                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Align leadership priorities with reality</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Implement high-leverage systems</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-4 border border-primary/10">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm font-medium text-muted-foreground">Strengthen execution culture</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Core Elements as Tags */}
+                <div className="mt-auto">
+                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Bottleneck Audit</span>
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Fractional COO Support</span>
+                    <span className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">Efficiency Benchmarks</span>
+                  </div>
                 </div>
 
               </Card>
