@@ -1,44 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Building, Lightbulb, Settings, Star } from "lucide-react";
+import { ArrowRight, Heart, Zap, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Tier 1 - Core Offering
-const coreOffering = {
-  icon: Building,
-  title: "Organizational Transformation",
-  description: "Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.",
-  features: ["Strategic Alignment", "Culture Architecture", "Conscious Leadership", "Change Implementation"],
-  duration: "6–18 months",
-  type: "Long-Term Partnership",
-  isSignature: true
-};
-
-// Tier 2 - Short-Term Entry Points
-const shortTermOfferings = [
+// 90-Day Transformational Programs
+const transformationalPrograms = [
   {
-    icon: Users,
-    title: "Team Retreats & Workshops",
-    description: "Transformative gatherings designed to awaken clarity, cohesion, and collaborative intelligence. Each experience is fully tailored to your team's context and can be delivered in person or online, depending on your needs and goals.",
-    features: ["Team Bonding", "Vision Activation", "Conflict Healing", "Creative Co-Creation Tools"],
-    duration: "2–5 days",
-    type: "Immersive Experiences"
+    icon: Heart,
+    title: "Culture & Leadership Reset",
+    subtitle: "Reset your culture. Upgrade your leadership.",
+    idealFor: "CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.",
+    outcomes: [
+      "Reset team trust and collaboration",
+      "Upgrade leadership decision-making", 
+      "Embed culture habits that scale"
+    ],
+    coreElements: ["Culture Assessment", "Leadership Workshops", "Executive Mentoring"],
+    iconColor: "sage",
+    badgeColor: "sage"
   },
   {
-    icon: Lightbulb,
-    title: "Leadership Coaching",
-    description: "Deep inner work for executives & emerging leaders ready to lead with authenticity, alignment, and regenerative presence.",
-    features: ["Executive Presence", "Conscious Decision-Making", "Embodied Communication", "Inner Alignment"],
-    duration: "3–12 months",
-    type: "1:1 Guidance"
-  },
-  {
-    icon: Settings,
-    title: "Fractional Operations",
-    description: "Hands-on strategic support. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
-    features: ["Operational Architecture", "Team & Rhythm Design", "Strategic Execution", "Regenerative KPIs & Accountability"],
-    duration: "3–12 months",
-    type: "Embedded Partnership"
+    icon: Zap,
+    title: "Strategic Ops & Leadership Partnership",
+    subtitle: "Fix the bottlenecks. Scale with clarity.",
+    idealFor: "CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.",
+    outcomes: [
+      "Align leadership priorities with reality",
+      "Implement high-leverage systems",
+      "Strengthen execution culture"
+    ],
+    coreElements: ["Bottleneck Audit", "Fractional COO Support", "Efficiency Benchmarks"],
+    iconColor: "primary",
+    badgeColor: "primary"
   }
 ];
 
@@ -70,138 +63,89 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-            Transformational Offerings for Regenerative Growth
+            90-Day Transformational Programs
           </h2>
           
-          <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-8">
-            We co-create regenerative pathways tailored to your organization's unique rhythm and evolution.
+          <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
+            Two focused, founder-ready pathways to reset and realign your organization in one quarter — with every shift tracked in real time.
           </p>
 
           <p className="text-lg text-muted-foreground/80 font-body max-w-4xl mx-auto mb-8">
-            Whether you're redesigning your entire organizational architecture or starting with a team-building retreat, our offerings are intentionally crafted to restore coherence, vitality, and purpose in your company.
+            Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations. In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard, so you know exactly what's working, and where to focus next.
           </p>
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
         </div>
 
-        {/* Tier 1 - Core Offering (Mobile Optimized) */}
-        <div className="mb-16 max-w-6xl mx-auto">
-          <Card className="p-6 md:p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative">
-            {/* Signature Badge - Mobile Optimized */}
-            <div className="absolute top-4 right-4 md:top-6 md:right-6">
-              <div className="flex items-center space-x-2 bg-accent/15 px-3 py-1.5 md:px-4 md:py-2 rounded-full">
-                <Star className="w-3 h-3 md:w-4 md:h-4 text-accent" />
-                <span className="text-xs md:text-sm font-medium text-accent">Signature Program</span>
-              </div>
-            </div>
-
-            {/* Mobile-First Stacked Layout */}
-            <div className="space-y-6 md:grid md:grid-cols-2 md:gap-8 md:items-center md:space-y-0">
-              <div className="space-y-4 md:space-y-6">
-                {/* Header */}
-                <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
-                    <coreOffering.icon className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground" />
+        {/* Two 90-Day Programs */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          {transformationalPrograms.map((program, index) => {
+            const IconComponent = program.icon;
+            return (
+              <Card key={index} className="p-8 md:p-10 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02] relative overflow-hidden">
+                {/* Header Section */}
+                <div className="text-center mb-8">
+                  <div className={`w-20 h-20 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border border-${program.iconColor}/20`}>
+                    <IconComponent className={`w-10 h-10 text-${program.iconColor}`} />
                   </div>
-                  <div className="text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors">
-                      {coreOffering.title}
-                    </h3>
-                    {/* Mobile-Optimized Badge Layout */}
-                    <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-3">
-                      <span className="text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
-                        {coreOffering.type}
-                      </span>
-                      <span className="text-sm text-muted-foreground text-center md:text-left">
-                        {coreOffering.duration}
-                      </span>
+                  <h3 className="text-2xl font-display font-bold text-primary mb-3">
+                    {program.title}
+                  </h3>
+                  <p className="text-lg text-copper font-medium mb-4">
+                    {program.subtitle}
+                  </p>
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-4 py-2 rounded-full text-sm font-semibold border border-${program.badgeColor}/20`}>
+                      90 Days
+                    </div>
+                    <div className="bg-copper/10 text-copper px-4 py-2 rounded-full text-sm font-semibold border border-copper/20">
+                      3 Phases
                     </div>
                   </div>
                 </div>
 
-                {/* Description */}
-                <p className="text-muted-foreground font-body leading-relaxed text-base md:text-lg text-center md:text-left">
-                  {coreOffering.description}
-                </p>
-              </div>
+                {/* Ideal For Section */}
+                <div className="mb-8">
+                  <h4 className={`text-sm font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
+                  <p className="text-muted-foreground font-body">
+                    {program.idealFor}
+                  </p>
+                </div>
 
-              <div>
-                {/* Features - Mobile Optimized */}
-                <div>
-                  <h4 className="text-sm font-body font-semibold text-primary mb-4 uppercase tracking-wide text-center md:text-left">
-                    Key Areas
-                  </h4>
-                  {/* Single Column on Mobile, Two Columns on Desktop */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                    {coreOffering.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3 justify-center md:justify-start">
-                        <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
-                        <span className="text-foreground/80 font-body text-sm md:text-base">{feature}</span>
+                {/* Outcomes Section */}
+                <div className="mb-8">
+                  <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="space-y-3">
+                    {program.outcomes.map((outcome, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <Check className={`w-5 h-5 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
+                        <span className="text-muted-foreground">{outcome}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
-          </Card>
+
+                {/* Core Elements as Tags */}
+                <div className="mt-auto">
+                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {program.coreElements.map((element, idx) => (
+                      <span key={idx} className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-xs font-medium border border-primary/20">
+                        {element}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
-        {/* Tier 2 - Short-Term Entry Points */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-16">
-          {shortTermOfferings.map((service, index) => (
-            <Card 
-              key={index} 
-              className="p-6 md:p-8 hover:shadow-elegant transition-all duration-500 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.02]"
-            >
-              {/* Header */}
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-4">
-                  <service.icon className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary-light transition-colors mb-3">
-                  {service.title}
-                </h3>
-                <div className="flex flex-col space-y-2">
-                  <span className="text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full w-fit">
-                    {service.type}
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    {service.duration}
-                  </span>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                {service.description}
-              </p>
-
-              {/* Features */}
-              <div className="mb-6">
-                <h4 className="text-sm font-body font-semibold text-primary mb-3 uppercase tracking-wide">
-                  Key Areas
-                </h4>
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                      <span className="text-sm text-foreground/80 font-body">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Central Call to Action - Mobile Optimized */}
-        <div className="text-center">
+        {/* Central Call to Action */}
+        <div className="text-center mb-16">
           <div className="max-w-3xl mx-auto mb-8 px-4">
             <p className="text-base md:text-lg text-muted-foreground font-body leading-relaxed mb-4">
-              All offerings are co-created based on your organization's needs and stage of evolution.
-            </p>
-            <p className="text-sm md:text-base text-muted-foreground/80 font-body leading-relaxed">
-              Share your context and let's explore how we can support your next phase.
+              Ready to reset, realign, and prove measurable transformation in just 90 days?
             </p>
           </div>
           
@@ -211,6 +155,25 @@ const ServicesSection = () => {
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
+        </div>
+
+        {/* Harvard Quote */}
+        <div className="text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* Simple border accent */}
+            <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+            
+            <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
+              "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+            </blockquote>
+            
+            <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
+              — Harvard Business Review
+            </cite>
+            
+            {/* Simple border accent */}
+            <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
+          </div>
         </div>
       </div>
 
