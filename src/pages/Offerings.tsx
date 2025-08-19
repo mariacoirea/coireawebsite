@@ -191,37 +191,6 @@ const Offerings = () => {
               </p>
             </div>
 
-            {/* Framework Description - Moved before image */}
-            <div className="text-center mb-16">
-              <div className="text-left max-w-4xl mx-auto mb-12">
-                <h4 className="text-xl font-display font-semibold text-primary mb-6">
-                  This framework empowers leadership teams to:
-                </h4>
-                
-                <ul className="space-y-4 text-muted-foreground font-body">
-                  <li className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-sage mt-1 flex-shrink-0" />
-                    <span className="text-lg">Align company purpose with everyday decisions</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-copper mt-1 flex-shrink-0" />
-                    <span className="text-lg">Develop accountable, values-driven leadership</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-lg">Build resilient, collaborative, high-performing teams</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-olive-green mt-1 flex-shrink-0" />
-                    <span className="text-lg">Activate culture as a strategic growth driver</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-sage mt-1 flex-shrink-0" />
-                    <span className="text-lg">Integrate well-being into long-term operational rhythm</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
 
             {/* Framework Pillars Grid (replaces image) */}
             <div className="mb-16">
