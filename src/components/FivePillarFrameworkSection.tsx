@@ -71,35 +71,31 @@ const FivePillarFrameworkSection = () => {
           </h2>
         </header>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {pillars.map(({ title, subtitle, description, drives, Icon }, i) => (
-            <Card
-              key={title}
-              className="group h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 animate-fade-in"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-center">
+        <div className="mt-14 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pillars.map(({ title, subtitle, description, drives, Icon }, i) => (
+              <div
+                key={title}
+                className="group text-center animate-fade-in"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <div className="flex items-center justify-center mb-4">
                   <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 group-hover:ring-primary/30 transition-all flex items-center justify-center">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                 </div>
-                <CardTitle className="mt-4 text-center text-lg text-foreground">{title}</CardTitle>
-                <CardDescription className="text-center text-sm">{subtitle}</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{subtitle}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   {description}
                 </p>
-                <div className="mt-4">
-                  <div className="flex items-start gap-2">
-                    <Badge variant="secondary" className="shrink-0">Drives</Badge>
-                    <span className="text-xs text-muted-foreground">{drives}</span>
-                  </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Badge variant="secondary" className="shrink-0">Drives</Badge>
+                  <span className="text-xs text-muted-foreground">{drives}</span>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
