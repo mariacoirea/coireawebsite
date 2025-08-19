@@ -45,7 +45,7 @@ export const pillars: {
     title: "Organizational Strategy",
     subtitle: "Make your business adaptable",
     description:
-      "Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale — without burning out people or breaking your culture.",
+      "Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale.",
     drives: "Scalability, efficiency, resilience.",
     Icon: Layers,
   },
