@@ -1,4 +1,3 @@
-
 import { Target, Crown, Users, Heart, Layers, type LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,16 +7,14 @@ export const pillars: {
   subtitle: string;
   description: string;
   drives: string;
-  activation: string;
   Icon: LucideIcon;
 }[] = [
   {
     title: "Purpose & Culture",
     subtitle: "Turn vision into a company people believe in",
     description:
-      "Your purpose isn’t a slide deck — it’s the fuel for growth. We help you weave it into everyday decisions, so culture becomes your competitive edge.",
+      "Your purpose isn't a slide deck — it's the fuel for growth. We help you weave it into everyday decisions, so culture becomes your competitive edge.",
     drives: "Team alignment, talent retention, brand trust.",
-    activation: "Strategic Alignment + Regenerative Systems + Embodied Strategy",
     Icon: Target,
   },
   {
@@ -26,7 +23,6 @@ export const pillars: {
     description:
       "A company rises or falls on the quality of its leadership. We help you shape leaders who are decisive, values-led, and able to inspire through change.",
     drives: "Strategic execution, trust, innovation.",
-    activation: "Conscious Leadership + Embodied Strategy",
     Icon: Crown,
   },
   {
@@ -35,16 +31,14 @@ export const pillars: {
     description:
       "When trust and clarity are in place, collaboration becomes a growth engine. We create the structures and habits that turn silos into synergy.",
     drives: "Faster problem-solving, better ideas, stronger execution.",
-    activation: "Regenerative Systems + Team Strategy",
     Icon: Users,
   },
   {
     title: "Well-Being",
     subtitle: "Keep your top talent at their best",
     description:
-      "Burnout costs far more than wellness ever will. We design systems that protect your people’s energy and creativity while keeping performance high.",
+      "Burnout costs far more than wellness ever will. We design systems that protect your people's energy and creativity while keeping performance high.",
     drives: "Productivity, retention, sustainable growth.",
-    activation: "Automated Operations + Embodied Strategy",
     Icon: Heart,
   },
   {
@@ -53,7 +47,6 @@ export const pillars: {
     description:
       "Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale — without burning out people or breaking your culture.",
     drives: "Scalability, efficiency, resilience.",
-    activation: "Regenerative Systems + Automated Operations + Strategic Alignment",
     Icon: Layers,
   },
 ];
@@ -74,12 +67,12 @@ const FivePillarFrameworkSection = () => {
             The COIREA Core Framework™
           </h1>
           <h2 className="mt-4 text-base md:text-lg text-muted-foreground">
-            Growth creates complexity — priorities compete, alignment slips, and energy drains. These pillars focus on the five forces that shape a thriving organization: a purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Our Structural Foundations turn these into practical systems that keep your company aligned, resilient, and ready to grow with integrity.
+            As organizations grow, complexity rises — priorities compete, alignment slips, and momentum is lost. The COIREA Core Framework™ addresses these challenges by focusing on five forces that define a thriving company: purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Through Structural Foundations, these forces are transformed into practical systems that keep your business aligned, resilient, and positioned to grow with integrity.
           </h2>
         </header>
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {pillars.map(({ title, subtitle, description, drives, activation, Icon }, i) => (
+          {pillars.map(({ title, subtitle, description, drives, Icon }, i) => (
             <Card
               key={title}
               className="group h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 animate-fade-in"
@@ -98,14 +91,10 @@ const FivePillarFrameworkSection = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {description}
                 </p>
-                <div className="mt-4 space-y-2">
+                <div className="mt-4">
                   <div className="flex items-start gap-2">
                     <Badge variant="secondary" className="shrink-0">Drives</Badge>
                     <span className="text-xs text-muted-foreground">{drives}</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Badge variant="outline" className="shrink-0">Activation</Badge>
-                    <span className="text-xs text-muted-foreground">{activation}</span>
                   </div>
                 </div>
               </CardContent>
@@ -118,4 +107,3 @@ const FivePillarFrameworkSection = () => {
 };
 
 export default FivePillarFrameworkSection;
-
