@@ -53,7 +53,7 @@ export const pillars: {
 
 const FivePillarFrameworkSection = () => {
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-b from-aura-pearl to-warm-beige">
+    <section className="relative overflow-hidden py-24" style={{backgroundImage: "url('/lovable-uploads/a2132690-3657-43fd-9280-c318fd590fa4.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
       {/* subtle background accents using semantic tokens */}
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_10%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
