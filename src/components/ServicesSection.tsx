@@ -8,28 +8,58 @@ const transformationalPrograms = [
   {
     icon: Heart,
     title: "Culture & Leadership Reset",
-    subtitle: "Reset your culture. Upgrade your leadership.",
-    idealFor: "CEOs/Founders whose teams feel disconnected, trust is slipping, or leadership isn't fully aligned.",
-    outcomes: [
-      "Reset team trust and collaboration",
-      "Upgrade leadership decision-making", 
-      "Embed culture habits that scale"
+    subtitle: "When your team feels disconnected, performance slips.",
+    idealFor: "Founders/CEOs who sense their team is losing trust, collaboration is weak, or leadership isn't aligned — and it's starting to cost results.",
+    painPoints: [
+      "Silent tension in meetings or lack of open dialogue",
+      "New hires not fully integrating into the culture",
+      "Roles and responsibilities unclear → accountability gaps",
+      "Leadership sending mixed signals, slowing decisions",
+      "Performance reviews inconsistent or missing"
     ],
-    coreElements: ["Culture Assessment", "Leadership Workshops", "Executive Mentoring"],
+    outcomes: [
+      "Rebuild trust and collaboration across the team",
+      "Clarify leadership roles and decision-making authority",
+      "Establish cultural practices and habits that scale",
+      "Design a performance system that drives growth",
+      "Measurable before/after shift in culture & leadership alignment"
+    ],
+    coreElements: [
+      "Culture & Leadership Assessment", 
+      "Role & Responsibility Mapping", 
+      "Leadership Mentoring", 
+      "Culture Workshops", 
+      "Performance Review Framework"
+    ],
     iconColor: "sage",
     badgeColor: "sage"
   },
   {
     icon: Zap,
-    title: "Strategic Ops & Leadership Partnership",
-    subtitle: "Fix the bottlenecks. Scale with clarity.",
-    idealFor: "CEOs/Founders whose operations are messy, priorities compete, and execution lags behind vision.",
-    outcomes: [
-      "Align leadership priorities with reality",
-      "Implement high-leverage systems",
-      "Strengthen execution culture"
+    title: "Scale with Purpose",
+    subtitle: "When structure and purpose don't align, scaling turns to chaos.",
+    idealFor: "Founders/CEOs whose company is growing fast but struggling with messy operations, unclear priorities, or a vision that feels diluted.",
+    painPoints: [
+      "Leadership team not aligned on purpose or direction",
+      "Priorities keep shifting, goals rarely hit",
+      "No clear meeting cadence → slow decisions",
+      "Everyone is busy, but execution feels scattered",
+      "Scaling fast but losing the company's original DNA"
     ],
-    coreElements: ["Bottleneck Audit", "Fractional COO Support", "Efficiency Benchmarks"],
+    outcomes: [
+      "Define or refine company purpose, vision, and strategic priorities",
+      "Align leadership on one clear playbook",
+      "Redesign org structure & workflows to support growth",
+      "Set and track EOS-style quarterly Rocks with accountability",
+      "Measurable efficiency gains in decision-making and execution"
+    ],
+    coreElements: [
+      "Purpose & Vision Workshop", 
+      "Operational & Bottleneck Audit", 
+      "Structure & Workflow Design", 
+      "Quarterly Projects", 
+      "Efficiency & Execution Benchmarks"
+    ],
     iconColor: "primary",
     badgeColor: "primary"
   }
@@ -107,9 +137,22 @@ const ServicesSection = () => {
                 {/* Ideal For Section */}
                 <div className="mb-6">
                   <h4 className={`text-xs font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
-                  <p className="text-muted-foreground font-body text-sm">
+                  <p className="text-muted-foreground font-body text-sm mb-4">
                     {program.idealFor}
                   </p>
+                  
+                  {/* Pain Points */}
+                  <div className="mt-4">
+                    <h5 className="text-xs font-semibold text-primary/70 mb-2 uppercase tracking-wider">Pain Points</h5>
+                    <ul className="space-y-1.5">
+                      {program.painPoints.map((point, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-muted-foreground text-xs">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 {/* Outcomes Section */}
