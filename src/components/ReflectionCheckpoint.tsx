@@ -9,8 +9,6 @@ const questions = [
 ];
 
 const ReflectionCheckpoint = () => {
-  const leftQuestions = questions.slice(0, 3);
-  const rightQuestions = questions.slice(3);
   return (
     <section
       id="reflection-checkpoint"
@@ -24,77 +22,53 @@ const ReflectionCheckpoint = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
-          {/* Left: Headline + 3 Questions */}
-          <div>
-            <header className="mb-8 md:mb-10">
-              <h2
-                id="reflection-heading"
-                className="text-4xl md:text-6xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
-              >
-                Before You Lead Forward, Is Your Core Aligned?
-              </h2>
-              <h2 className="mt-4 text-lg md:text-xl text-muted-foreground max-w-2xl">
-                Great strategies collapse without a solid foundation. Here are the questions that reveal whether yours is ready for what’s next.
-              </h2>
-            </header>
+        {/* Header */}
+        <header className="text-center mb-12 md:mb-16">
+          <h2
+            id="reflection-heading"
+            className="text-4xl md:text-6xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
+          >
+            Before You Lead Forward, Is Your Core Aligned?
+          </h2>
+          <h2 className="mt-4 text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
+            Great strategies collapse without a solid foundation. Here are the questions that reveal whether yours is ready for what's next.
+          </h2>
+        </header>
 
-            <div className="space-y-5 md:space-y-6">
-              {leftQuestions.map(({ icon: Icon, text }, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-4 animate-fade-in"
-                  style={{ animationDelay: `${idx * 80}ms` }}
-                >
-                  <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
-                    <Icon className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-body">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: 2 Questions + Closing Prompt */}
-          <div className="space-y-8">
-            {/* Add top spacing to align with left column questions */}
-            <div className="mb-8 md:mb-10" aria-hidden="true"></div>
-            <div className="space-y-5 md:space-y-6">
-              {rightQuestions.map(({ icon: Icon, text }, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-4 animate-fade-in"
-                  style={{ animationDelay: `${idx * 80}ms` }}
-                >
-                  <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
-                    <Icon className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-body">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <aside className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 md:p-8 shadow-soft">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-9 w-9 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Compass className="h-5 w-5 text-accent" aria-hidden="true" />
-                </div>
-                <span className="text-sm tracking-wide uppercase text-muted-foreground">Reflection</span>
-              </div>
-
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                If you hesitated on any of these, your organization might be running on less capacity, clarity, and connection than it could.
+        {/* Questions Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+          {questions.map(({ icon: Icon, text }, idx) => (
+            <div
+              key={idx}
+              className="flex items-start gap-4 animate-fade-in"
+              style={{ animationDelay: `${idx * 80}ms` }}
+            >
+              <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
+                <Icon className="h-4 w-4" aria-hidden="true" />
+              </span>
+              <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-body">
+                {text}
               </p>
-              <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
-                That’s where the <span className="text-primary font-semibold">COIREA Core Framework™</span> comes in.
-              </p>
-            </aside>
-          </div>
+            </div>
+          ))}
         </div>
+
+        {/* Reflection Box - Horizontal at Bottom */}
+        <aside className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 md:p-8 shadow-soft max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-9 w-9 rounded-full bg-accent/10 flex items-center justify-center">
+              <Compass className="h-5 w-5 text-accent" aria-hidden="true" />
+            </div>
+            <span className="text-sm tracking-wide uppercase text-muted-foreground">Reflection</span>
+          </div>
+
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+            If you hesitated on any of these, your organization might be running on less capacity, clarity, and connection than it could.
+          </p>
+          <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
+            That's where the <span className="text-primary font-semibold">COIREA Core Framework™</span> comes in.
+          </p>
+        </aside>
       </div>
 
       {/* Bottom fading gradient to lead into the framework section */}
