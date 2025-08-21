@@ -1,11 +1,12 @@
-import { Lightbulb, Users, Activity, Heart, Compass } from "lucide-react";
+import { Lightbulb, Users, Activity, Heart, Compass, Workflow } from "lucide-react";
 
 const questions = [
-  { icon: Lightbulb, text: "Is your team’s creativity driving real breakthroughs — or are you stuck in the comfort zone?" },
+  { icon: Lightbulb, text: "Is your team's creativity driving real breakthroughs — or are you stuck in the comfort zone?" },
   { icon: Users, text: "Do you keep losing great people faster than you can onboard them?" },
   { icon: Activity, text: "How much value is slipping away every time a trained employee walks out the door?" },
   { icon: Heart, text: "Does your culture inspire loyalty across generations — especially Gen Z?" },
   { icon: Compass, text: "When priorities clash, do you have a shared compass to guide the way?" },
+  { icon: Workflow, text: "Is decision-making in your organization stuck at the top, creating bottlenecks and slowing everything down?" },
 ];
 
 const ReflectionCheckpoint = () => {
