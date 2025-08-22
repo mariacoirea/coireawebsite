@@ -90,8 +90,9 @@ const Events = () => {
                     src="https://lu.ma/embed/calendar/cal-LBFjaY9cu5vzxD9/events?show=all"
                     className="w-full border-none rounded-t-xl"
                     style={{ 
-                      height: '1200px',
-                      minHeight: '1200px'
+                      height: '600px',
+                      minHeight: '400px',
+                      maxHeight: '800px'
                     }}
                     frameBorder="0"
                     allowFullScreen
