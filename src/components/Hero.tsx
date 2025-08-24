@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-3xl mx-auto mb-8 leading-relaxed">
-            Where Purpose Meets Collaboration, Organizations Evolve
+            Where Purpose, Performance, and People Meet, Organizations Evolve.
           </p>
         </header>
 
