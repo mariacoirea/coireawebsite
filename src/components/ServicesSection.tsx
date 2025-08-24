@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const transformationalPrograms = [
   {
     icon: Heart,
-    title: "Culture & Leadership Reset",
+    title: "Collaboration & Leadership Reset",
     subtitle: "When your team feels disconnected, performance slips.",
     idealFor: "Founders/CEOs who sense their team is losing trust, collaboration is weak, or leadership isn't aligned — and it's starting to cost results.",
     painPoints: [
@@ -22,13 +22,13 @@ const transformationalPrograms = [
       "Clarify leadership roles and decision-making authority",
       "Establish cultural practices and habits that scale",
       "Design a performance system that drives growth",
-      "Measurable before/after shift in culture & leadership alignment"
+      "Measurable before/after shift in collaboration & leadership alignment"
     ],
     coreElements: [
       "Culture & Leadership Assessment", 
       "Role & Responsibility Mapping", 
       "Leadership Mentoring", 
-      "Culture Workshops", 
+      "Team Collaboration Workshops", 
       "Performance Review Framework"
     ],
     iconColor: "sage",

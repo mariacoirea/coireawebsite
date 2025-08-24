@@ -417,7 +417,7 @@ const Offerings = () => {
                     <Heart className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
-                    Culture & Leadership Reset
+                    Collaboration & Leadership Reset
                   </h3>
                   <p className="text-base text-copper font-medium mb-4">
                     When your team feels disconnected, performance slips.
@@ -489,7 +489,7 @@ const Offerings = () => {
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Measurable before/after shift in culture & leadership alignment</span>
+                      <span className="text-muted-foreground text-sm">Measurable before/after shift in collaboration & leadership alignment</span>
                     </div>
                   </div>
                 </div>
@@ -501,7 +501,7 @@ const Offerings = () => {
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Culture & Leadership Assessment</span>
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Role & Responsibility Mapping</span>
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Leadership Mentoring</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Culture Workshops</span>
+                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Team Collaboration Workshops</span>
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Performance Review Framework</span>
                   </div>
                 </div>
