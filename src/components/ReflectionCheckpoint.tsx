@@ -14,7 +14,7 @@ const ReflectionCheckpoint = () => {
     <section
       id="reflection-checkpoint"
       aria-labelledby="reflection-heading"
-      className="relative bg-aura-pearl py-20 md:py-28 overflow-hidden"
+      className="relative bg-aura-pearl py-16 md:py-20 overflow-hidden"
     >
       {/* Subtle background accents */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
@@ -24,30 +24,30 @@ const ReflectionCheckpoint = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <header className="text-center mb-12 md:mb-16">
+        <header className="text-center mb-8 md:mb-12">
           <h2
             id="reflection-heading"
-            className="text-4xl md:text-6xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
+            className="text-3xl md:text-5xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
           >
             Before You Lead Forward, Is Your Core Aligned?
           </h2>
-          <h2 className="mt-4 text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
+          <h2 className="mt-3 text-base md:text-lg text-muted-foreground max-w-4xl mx-auto">
             Great strategies collapse without a solid foundation. Here are the questions that reveal whether yours is ready for what's next.
           </h2>
         </header>
 
         {/* Questions Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
           {questions.map(({ icon: Icon, text }, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-4 animate-fade-in"
+              className="flex items-start gap-3 animate-fade-in"
               style={{ animationDelay: `${idx * 80}ms` }}
             >
-              <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
-                <Icon className="h-4 w-4" aria-hidden="true" />
+              <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/5 text-primary/80">
+                <Icon className="h-3.5 w-3.5" aria-hidden="true" />
               </span>
-              <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-body">
+              <p className="text-lg md:text-xl leading-relaxed text-foreground/90 font-body">
                 {text}
               </p>
             </div>
