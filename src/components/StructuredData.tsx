@@ -2,57 +2,95 @@
 import { Helmet } from 'react-helmet-async';
 
 interface StructuredDataProps {
-  type?: 'organization' | 'article' | 'service';
+  type?: 'organization' | 'article' | 'service' | 'faq';
   data?: any;
 }
 
 const StructuredData = ({ type = 'organization', data }: StructuredDataProps) => {
   const getStructuredData = () => {
+    const baseOrganization = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "COIREA",
+      "description": "Regenerative consultancy helping purpose-driven organizations through structural and human transformation.",
+      "url": "https://coirea.com",
+      "logo": "https://coirea.com/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png",
+      "image": "https://coirea.com/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png",
+      "foundingDate": "2023",
+      "founder": {
+        "@type": "Person",
+        "name": "Maria Jose Figueroa",
+        "jobTitle": "Founder & Conscious Leadership Catalyst"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://coirea.com/journey",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/coirea"
+      ],
+      "industry": "Management Consulting",
+      "keywords": "organizational transformation, regenerative business, conscious leadership, team retreats, organizational development, purpose-driven companies",
+      "services": [
+        "Organizational Transformation",
+        "Leadership Coaching", 
+        "Culture Development",
+        "Regenerative Business Consulting",
+        "Team Retreats",
+        "Fractional Operations"
+      ]
+    };
+
     switch (type) {
       case 'organization':
+        return baseOrganization;
+      
+      case 'service':
         return {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "COIREA",
-          "description": "Regenerative consultancy helping organizations realign their systems, culture, and leadership through structural and human transformation.",
-          "url": "https://coirea.com",
-          "logo": "https://coirea.com/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png",
-          "image": "https://coirea.com/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png",
-          "sameAs": [
-            "https://www.linkedin.com/company/coirea"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": "English"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-          },
-          "foundingDate": "2024",
-          "numberOfEmployees": "1-10",
-          "industry": "Management Consulting",
-          "keywords": "organizational transformation, regenerative business, conscious leadership, team retreats, organizational development",
-          "services": [
-            {
-              "@type": "Service",
-              "name": "Organizational Transformation",
-              "description": "Comprehensive organizational transformation programs focusing on structural and human elements."
-            },
-            {
-              "@type": "Service", 
-              "name": "Team Retreats",
-              "description": "Transformative team retreats designed to enhance collaboration and purpose alignment."
-            },
-            {
-              "@type": "Service",
-              "name": "Leadership Development",
-              "description": "Conscious leadership development programs for purpose-driven organizations."
-            }
-          ]
+          "@type": "Service",
+          "serviceType": "Organizational Transformation Consulting",
+          "provider": baseOrganization,
+          "description": "Comprehensive organizational transformation services including leadership coaching, culture development, and regenerative business programs.",
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "COIREA Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Organizational Transformation",
+                  "description": "6-18 month comprehensive partnership for holistic restructuring"
+                }
+              },
+              {
+                "@type": "Offer", 
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Leadership Coaching",
+                  "description": "1:1 guidance for conscious leadership development"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service", 
+                  "name": "Fractional Operations",
+                  "description": "Embedded strategic support for growing organizations"
+                }
+              }
+            ]
+          }
         };
-      
+
       case 'article':
         return {
           "@context": "https://schema.org",
@@ -64,14 +102,7 @@ const StructuredData = ({ type = 'organization', data }: StructuredDataProps) =>
             "@type": "Organization",
             "name": "COIREA"
           },
-          "publisher": {
-            "@type": "Organization",
-            "name": "COIREA",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://coirea.com/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"
-            }
-          },
+          "publisher": baseOrganization,
           "datePublished": data?.publishedTime,
           "dateModified": data?.modifiedTime,
           "mainEntityOfPage": {
@@ -79,9 +110,23 @@ const StructuredData = ({ type = 'organization', data }: StructuredDataProps) =>
             "@id": data?.url
           }
         };
+
+      case 'faq':
+        return {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": data?.questions?.map((q: any) => ({
+            "@type": "Question",
+            "name": q.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": q.answer
+            }
+          })) || []
+        };
       
       default:
-        return {};
+        return baseOrganization;
     }
   };
 

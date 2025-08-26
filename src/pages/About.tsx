@@ -1,12 +1,24 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
+    <>
+      <SEOHead
+        title="About COIREA - Conscious Leadership & Regenerative Business Transformation"
+        description="Meet the team behind COIREA's regenerative organizational transformation. Learn about our mission, values, and approach to conscious leadership and purpose-driven business evolution."
+        keywords="conscious leadership, regenerative business, organizational transformation team, purpose-driven leadership, business transformation consultants, sustainable business practices"
+        url="/about"
+      />
+      <StructuredData type="organization" />
+      
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
@@ -318,6 +330,56 @@ const About = () => {
           </div>
         </section>
 
+        {/* FAQ Section for SEO */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
+                About COIREA - Frequently Asked Questions
+              </h2>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
+                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                  What makes COIREA different from other organizational consultancies?
+                </h3>
+                <p className="text-foreground/80 font-body leading-relaxed">
+                  COIREA combines regenerative business principles with practical systems design. We don't just consult—we embed as partners to co-create sustainable transformation through our proven 5-Pillar Framework, focusing on purpose, leadership, collaboration, culture, and well-being.
+                </p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
+                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                  How long does organizational transformation typically take?
+                </h3>
+                <p className="text-foreground/80 font-body leading-relaxed">
+                  Our transformation programs range from 90-day intensive resets to 6-18 month comprehensive partnerships. The timeline depends on your organization's size, complexity, and transformation goals. We also offer ongoing fractional support for sustained evolution.
+                </p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
+                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                  What is regenerative business and how does it apply to my organization?
+                </h3>
+                <p className="text-foreground/80 font-body leading-relaxed">
+                  Regenerative business goes beyond sustainability to create systems that actively restore and revitalize. For organizations, this means building cultures and practices that strengthen both people and performance, creating positive impact while achieving business results.
+                </p>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
+                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                  How do you measure the success of organizational transformation?
+                </h3>
+                <p className="text-foreground/80 font-body leading-relaxed">
+                  We use our COIREA Evolution Dashboard to track both quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership maturity, cultural coherence, well-being) across our 5-Pillar Framework, providing real-time insights into your organization's transformation progress.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Enhanced CTA Section */}
         <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
           <div className="container mx-auto max-w-6xl text-center">
@@ -354,9 +416,13 @@ const About = () => {
             </cite>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+
+        {/* Related Content for Internal Linking */}
+        <RelatedContent currentPage="about" />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

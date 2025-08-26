@@ -10,6 +10,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, CheckCircle, Users, Lightbulb, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { supabase } from "@/integrations/supabase/client";
 
 const Journey = () => {
@@ -80,6 +83,15 @@ const Journey = () => {
 
   if (isSubmitted) {
     return (
+      <>
+        <SEOHead
+          title="Thank You - Organizational Transformation Journey Started | COIREA"
+          description="Thank you for starting your organizational transformation journey with COIREA. We'll be in touch within 24 hours to schedule your complimentary clarity call."
+          keywords="organizational transformation, business coaching consultation, leadership development, thank you"
+          url="/journey"
+        />
+        <StructuredData type="organization" />
+        
       <div className="min-h-screen bg-background">
         <Header />
         <main className="pt-20">
@@ -131,10 +143,20 @@ const Journey = () => {
         </main>
         <Footer />
       </div>
+      </>
     );
   }
 
   return (
+    <>
+      <SEOHead
+        title="Start Your Organizational Transformation Journey - Free Strategy Call | COIREA"
+        description="Book your free 30-minute strategy call to begin your organizational transformation journey. Co-create a tailored approach for regenerative business evolution with COIREA's proven framework."
+        keywords="organizational transformation consultation, free strategy call, business coaching, leadership development, regenerative business transformation, team development consultation"
+        url="/journey"
+      />
+      <StructuredData type="organization" />
+      
     <div className="min-h-screen bg-background">
       <Header />
       <main id="journey-start" className="pt-20">
@@ -392,14 +414,20 @@ const Journey = () => {
                       We'll reach out within 24 hours to schedule your complimentary clarity call
                     </p>
                   </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </main>
+                  </form>
+                </CardContent>
+              </Card>
+
+              {/* Related Content for Internal Linking */}
+              <div className="mt-16">
+                <RelatedContent currentPage="journey" />
+              </div>
+            </div>
+          </section>
+        </main>
       <Footer />
     </div>
+    </>
   );
 };
 
