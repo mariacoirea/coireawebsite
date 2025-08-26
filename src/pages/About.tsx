@@ -346,7 +346,7 @@ const About = () => {
                   What makes COIREA different from other organizational consultancies?
                 </h3>
                 <p className="text-foreground/80 font-body leading-relaxed">
-                  COIREA combines regenerative business principles with practical systems design. We don't just consult—we embed as partners to co-create sustainable transformation through our proven 5-Pillar Framework, focusing on purpose, leadership, collaboration, culture, and well-being.
+                  COIREA integrates regenerative business principles with practical systems design. We don't just consult, we embed as partners to co-create sustainable transformation. Guided by our 5-Pillar Framework — purpose, leadership, collaboration, culture, well-being, and organizational strategy — we help organizations evolve into resilient, purpose-driven, self-managing systems.
                 </p>
               </div>
 
