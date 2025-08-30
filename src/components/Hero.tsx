@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-3xl mx-auto mb-8 leading-relaxed">
-            When Purpose, Performance, and People Align, Organizations Evolve.
+            At COIREA, we help organizations grow into adaptive, self-managed systems by aligning purpose, performance, and people. Through decentralized leadership, collective intelligence, and cultural coherence, we activate what's already alive within — guiding organizations into their next stage of evolution.
           </p>
         </header>
 
@@ -42,12 +42,6 @@ const Hero = () => {
             height={80}
             priority={true}
           />
-        </div>
-
-        <div className="max-w-4xl mx-auto mb-12">
-          <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed">
-            COIREA is a regenerative consultancy helping organizations evolve into adaptive, self-managed systems. We create the conditions for decentralized leadership, collective intelligence, and cultural coherence—activating what's already alive within.
-          </p>
         </div>
 
         <div className="flex justify-center items-center mb-16">
