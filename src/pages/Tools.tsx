@@ -3,13 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationalHealthScanner from "@/components/OrganizationalHealthScanner";
 import SEOHead from "@/components/SEOHead";
+import { useTranslation } from "react-i18next";
 
 const Tools = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <SEOHead
-        title="Free Organizational Health Diagnostic Tools"
-        description="Discover where your organization stands with our free diagnostic tools. Identify key areas for conscious transformation and organizational development."
+        title={t('tools.title')}
+        description={t('tools.description')}
         keywords="organizational health assessment, diagnostic tools, organizational transformation, team assessment, business health scanner, organizational development tools"
         url="/tools"
       />
@@ -22,11 +25,10 @@ const Tools = () => {
             <div className="container mx-auto max-w-4xl text-center">
               <header>
                 <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  Free Diagnostic Tools
+                  {t('tools.title')}
                 </h1>
                 <p className="text-xl text-muted-foreground font-body leading-relaxed mb-8">
-                  Discover where your organization stands and identify key areas for 
-                  conscious transformation.
+                  {t('tools.description')}
                 </p>
               </header>
             </div>

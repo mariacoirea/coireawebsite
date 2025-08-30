@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "offerings": "Offerings",
+    "insights": "Insights",
+    "events": "Events",
+    "tools": "Tools",
+    "journey": "Journey",
+    "begin_journey": "BEGIN JOURNEY"
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español",
+    "switch_to": "Switch to {{language}}"
+  },
+  "hero": {
+    "title": "COIREA",
+    "subtitle": "Transform Your Organization from the Inside Out",
+    "description": "When Purpose, Performance, and People Align, Organizations Evolve.",
+    "cta_primary": "Let's Explore Your Organization Together",
+    "cta_secondary": "Explore Our Approach"
+  },
+  "about": {
+    "title": "About COIREA",
+    "mission_title": "Our Mission",
+    "mission_text": "COIREA exists to support organizations in becoming regenerative forces—entities that create more value than they consume, that contribute to the healing of our world while thriving economically.",
+    "values_title": "Our Values",
+    "values": {
+      "clarity": {
+        "title": "Clarity of Purpose",
+        "description": "We help organizations discover and align with their deeper purpose, creating coherence between values and actions."
+      },
+      "coherence": {
+        "title": "Coherence",
+        "description": "We foster alignment between individual, team, and organizational systems for maximum effectiveness."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We champion authentic leadership and transparent practices that build trust and sustainable relationships."
+      },
+      "human_centered": {
+        "title": "Human-Centered Systems",
+        "description": "We design organizational structures that honor human dignity and enable people to thrive."
+      },
+      "reciprocity": {
+        "title": "Reciprocity",
+        "description": "We believe in mutually beneficial relationships with all stakeholders and the living systems we're part of."
+      },
+      "evolution": {
+        "title": "Brave Evolution",
+        "description": "We support leaders in making courageous choices that serve the greater good and future generations."
+      }
+    }
+  },
+  "offerings": {
+    "title": "We Don't Offer Quick Fixes —",
+    "subtitle": "We Support Deep Evolution",
+    "description": "True transformation requires more than surface-level changes. We work with organizations ready to evolve their fundamental structures, cultures, and ways of being.",
+    "approach_title": "Our Approach",
+    "approach_subtitle": "Regenerative Transformation Framework",
+    "pillars": {
+      "structural": "Structural Foundations",
+      "cultural": "Cultural Evolution", 
+      "leadership": "Leadership Development",
+      "systems": "Systems Thinking",
+      "purpose": "Purpose Alignment"
+    },
+    "services_title": "Our Services",
+    "services": {
+      "assessment": {
+        "title": "Organizational Health Assessment",
+        "description": "Comprehensive evaluation of your organization's current state and transformation readiness."
+      },
+      "retreat": {
+        "title": "Team Transformation Retreats", 
+        "description": "Immersive experiences designed to catalyze deep shifts in consciousness and collaboration."
+      },
+      "program": {
+        "title": "Long-term Evolution Programs",
+        "description": "Multi-phase journeys supporting sustained organizational transformation over 6-24 months."
+      }
+    }
+  },
+  "tools": {
+    "title": "Free Diagnostic Tools",
+    "description": "Discover where your organization stands and identify key areas for conscious transformation.",
+    "scanner_title": "Organizational Health Scanner",
+    "scanner_description": "A comprehensive assessment to evaluate your organization's readiness for transformation."
+  },
+  "journey": {
+    "title": "Begin Your Transformation Journey",
+    "description": "Every transformation begins with a single step. Let's explore how we can support your organization's evolution.",
+    "form_title": "Tell Us About Your Organization",
+    "form_description": "Help us understand your current situation and transformation goals."
+  },
+  "footer": {
+    "description": "Supporting purpose-driven organizations in their evolution toward regenerative business models.",
+    "links": {
+      "quick_links": "Quick Links",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "email": "hello@coirea.com"
+    },
+    "copyright": "© 2024 COIREA. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "try_again": "Try Again",
+    "contact_us": "Contact Us",
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "read_more": "Read More",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete"
+  }
+}
