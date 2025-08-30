@@ -165,11 +165,19 @@ const Offerings = () => {
       />
       <StructuredData type="service" />
       
+      {/* Critical rendering optimization added via CSS performance utilities */}
+      
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-nature">
+        <section className="py-20 bg-gradient-nature will-change-transform contain-layout"
+          style={{
+            /* Optimize critical rendering path */
+            contentVisibility: 'auto',
+            containIntrinsicSize: '100vw 600px'
+          }}
+        >
           <div className="container mx-auto px-6 text-center max-w-6xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-8 leading-tight">
               We Don't Offer Quick Fixes —
@@ -278,8 +286,14 @@ const Offerings = () => {
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
 
-            {/* Dashboard Mockup with Left Sidebar */}
-            <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
+            {/* Dashboard Mockup with Left Sidebar - Performance optimized */}
+            <div 
+              className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto will-change-transform contain-layout"
+              style={{
+                contentVisibility: 'auto',
+                containIntrinsicSize: '100% 600px'
+              }}
+            >
               <div className="flex">
                 {/* Left Sidebar */}
                 <div className="w-64 bg-aura-pearl border-r border-primary/10 p-6">
