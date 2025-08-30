@@ -51,6 +51,67 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://coirea.com" />
     
+    <!-- Critical CSS inlined for faster first paint -->
+    <style>
+      :root {
+        --background: 45 29% 97%;
+        --foreground: 77 19% 29%;
+        --primary: 183 48% 21%;
+        --primary-foreground: 45 29% 97%;
+        --secondary: 77 19% 35%;
+        --muted-foreground: 77 15% 45%;
+        --font-display: 'Playfair Display', serif;
+        --font-body: 'Roboto', sans-serif;
+      }
+      
+      * { box-sizing: border-box; }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        font-family: var(--font-body), sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 1000;
+      }
+      
+      .skip-link:focus {
+        top: 6px;
+      }
+      
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+      
+      /* Hide content until CSS loads to prevent FOUC */
+      .app-loading #root {
+        visibility: hidden;
+      }
+    </style>
+    
+    <!-- Preload main CSS file -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -68,12 +129,25 @@
     </script>
   </head>
 
-  <body>
+  <body class="app-loading">
     <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- CSS loading optimization -->
+    <script>
+      // Remove loading class once CSS is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.remove('app-loading');
+      });
+      
+      // Fallback for CSS loading
+      window.addEventListener('load', function() {
+        document.body.classList.remove('app-loading');
+      });
+    </script>
     
     <!-- Performance monitoring (placeholder for future analytics) -->
     <script>
