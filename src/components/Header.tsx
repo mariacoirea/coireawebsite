@@ -3,14 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/hooks/useLanguage";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
-  const { getLocalizedPath } = useLanguage();
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -30,29 +25,28 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link to={getLocalizedPath("/")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.home')}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              HOME
             </Link>
-            <Link to={getLocalizedPath("/offerings")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.offerings')}
+            <Link to="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              OFFERINGS
             </Link>
-            <Link to={getLocalizedPath("/about")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.about')}
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              ABOUT
             </Link>
-            <Link to={getLocalizedPath("/insights")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.insights')}
+            <Link to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              INSIGHTS
             </Link>
-            <Link to={getLocalizedPath("/events")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.events')}
+            <Link to="/events" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              EVENTS
             </Link>
-            <Link to={getLocalizedPath("/tools")} className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('nav.tools')}
+            <Link to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              TOOLS
             </Link>
-            <LanguageSwitcher />
-            <Link to={getLocalizedPath("/journey")}>
+            <Link to="/journey">
               <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
-                {t('nav.begin_journey')}
+                BEGIN JOURNEY
               </Button>
             </Link>
           </nav>
@@ -69,30 +63,27 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6 space-y-4">
-            <Link to={getLocalizedPath("/")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.home')}
+            <Link to="/" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              HOME
             </Link>
-            <Link to={getLocalizedPath("/offerings")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.offerings')}
+            <Link to="/offerings" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              OFFERINGS
             </Link>
-            <Link to={getLocalizedPath("/about")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.about')}
+            <Link to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              ABOUT
             </Link>
-            <Link to={getLocalizedPath("/insights")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.insights')}
+            <Link to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              INSIGHTS
             </Link>
-            <Link to={getLocalizedPath("/events")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.events')}
+            <Link to="/events" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              EVENTS
             </Link>
-            <Link to={getLocalizedPath("/tools")} onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('nav.tools')}
+            <Link to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              TOOLS
             </Link>
-            <div className="pt-2 border-t border-border mt-4">
-              <LanguageSwitcher />
-            </div>
-            <Link to={getLocalizedPath("/journey")} onClick={closeMenu}>
+            <Link to="/journey" onClick={closeMenu}>
               <Button variant="outline" size="lg" className="w-full mt-4 border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full">
-                {t('nav.begin_journey')}
+                BEGIN JOURNEY
               </Button>
             </Link>
           </nav>
