@@ -32,14 +32,14 @@ const Hero = () => {
           </p>
         </header>
 
-        {/* Enhanced decorative logo */}
-        <div className="flex items-center justify-center mb-12">
+        {/* Centered decorative logo */}
+        <div className="flex items-center justify-center my-16">
           <OptimizedImage
             src="/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"
             alt="COIREA Logo - Regenerative Organizational Transformation"
-            className="h-20 w-auto"
-            width={80}
-            height={80}
+            className="h-24 w-auto"
+            width={96}
+            height={96}
             priority={true}
           />
         </div>
