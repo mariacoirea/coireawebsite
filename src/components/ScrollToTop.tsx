@@ -7,73 +7,44 @@ const ScrollToTop = () => {
   useEffect(() => {
     console.log('[ScrollToTop] Route changed to:', location.pathname);
     
-    const attemptScroll = (attempt: number = 1, maxAttempts: number = 3): Promise<boolean> => {
-      return new Promise((resolve) => {
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        console.log('[ScrollToTop] Attempt', attempt, '- Current scroll position:', scrollY);
-        
+    // Use requestAnimationFrame to avoid forced reflow during DOM updates
+    const performScroll = () => {
+      requestAnimationFrame(() => {
         try {
-          // Use the most compatible scroll method
-          window.scrollTo(0, 0);
+          // Use the most compatible and performant scroll method
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant' // Instant to avoid animation conflicts
+          });
+          
+          // Fallback for older browsers - but avoid reading scroll position
           document.documentElement.scrollTop = 0;
           document.body.scrollTop = 0;
           
-          // Verify scroll worked after a brief delay
-          setTimeout(() => {
-            const newScrollY = window.pageYOffset || document.documentElement.scrollTop;
-            console.log('[ScrollToTop] After scroll attempt', attempt, '- New position:', newScrollY);
-            
-            if (newScrollY === 0) {
-              console.log('[ScrollToTop] Success on attempt', attempt);
-              resolve(true);
-            } else if (attempt < maxAttempts) {
-              console.log('[ScrollToTop] Retrying... attempt', attempt + 1);
-              // Exponential backoff: 150ms, 300ms, 600ms
-              const delay = 150 * Math.pow(2, attempt - 1);
-              setTimeout(() => {
-                attemptScroll(attempt + 1, maxAttempts).then(resolve);
-              }, delay);
-            } else {
-              console.warn('[ScrollToTop] Failed after', maxAttempts, 'attempts');
-              resolve(false);
-            }
-          }, 50);
+          console.log('[ScrollToTop] Scroll completed');
         } catch (error) {
-          console.error('[ScrollToTop] Error on attempt', attempt, ':', error);
-          if (attempt < maxAttempts) {
-            const delay = 150 * Math.pow(2, attempt - 1);
-            setTimeout(() => {
-              attemptScroll(attempt + 1, maxAttempts).then(resolve);
-            }, delay);
-          } else {
-            resolve(false);
+          console.error('[ScrollToTop] Error:', error);
+          // Fallback method
+          try {
+            window.scrollTo(0, 0);
+          } catch (fallbackError) {
+            console.error('[ScrollToTop] Fallback error:', fallbackError);
           }
         }
       });
     };
 
-    // Wait for DOM to be ready, then attempt scroll
-    const startScrollAttempt = () => {
-      if (document.readyState === 'complete') {
-        console.log('[ScrollToTop] DOM ready, starting scroll attempt');
-        attemptScroll();
-      } else {
-        console.log('[ScrollToTop] Waiting for DOM to be ready...');
-        window.addEventListener('load', () => {
-          console.log('[ScrollToTop] Window loaded, starting scroll attempt');
-          attemptScroll();
-        }, { once: true });
-      }
-    };
-
-    // Start immediately
-    startScrollAttempt();
+    // For immediate scroll on route change
+    performScroll();
     
-    // Also try after requestAnimationFrame for React Router transitions
-    requestAnimationFrame(() => {
-      console.log('[ScrollToTop] requestAnimationFrame callback, attempting scroll');
-      attemptScroll();
-    });
+    // Additional attempt after a short delay to handle React Router transitions
+    // Use requestIdleCallback if available for better performance
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(performScroll, { timeout: 100 });
+    } else {
+      setTimeout(performScroll, 50);
+    }
   }, [location.pathname]);
 
   return null;
