@@ -271,12 +271,12 @@ const ConsciousLeadershipResults = ({ results, onRetake }: ConsciousLeadershipRe
             </CardContent>
           </Card>
         ) : (
-          <Card className="bg-success/10 border-success/30">
+          <Card className="bg-sage/10 border-sage/30">
             <CardContent className="text-center py-8">
-              <h3 className="text-xl font-semibold text-success mb-4">
+              <h3 className="text-xl font-semibold text-sage mb-4">
                 Results Sent Successfully!
               </h3>
-              <p className="text-success/80 mb-6">
+              <p className="text-sage/80 mb-6">
                 Your detailed leadership assessment results have been sent to {email}
               </p>
             </CardContent>
@@ -284,20 +284,20 @@ const ConsciousLeadershipResults = ({ results, onRetake }: ConsciousLeadershipRe
         )}
 
         {/* Call to Action */}
-        <Card className="bg-success/5 border-success/20">
+        <Card className="bg-sage/5 border-sage/20">
           <CardContent className="text-center py-8">
-            <h3 className="text-2xl font-display font-semibold text-success mb-4">
+            <h3 className="text-2xl font-display font-semibold text-sage mb-4">
               Ready to Evolve Your Leadership?
             </h3>
-            <p className="text-success/80 font-body leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-sage/80 font-body leading-relaxed mb-6 max-w-2xl mx-auto">
               Transform insights into action with personalized guidance. Book a free clarity call 
               to explore your unique leadership evolution path.
             </p>
             <div className="space-y-4">
-              <Button variant="accent" size="lg" className="mr-4 bg-success hover:bg-success/90 text-success-foreground border-success">
+              <Button variant="accent" size="lg" className="mr-4 bg-sage hover:bg-sage/90 text-white border-sage">
                 Book Your Free Clarity Call
               </Button>
-              <Button variant="outline" size="lg" onClick={onRetake} className="border-success text-success hover:bg-success/10">
+              <Button variant="outline" size="lg" onClick={onRetake} className="border-sage text-sage hover:bg-sage/10">
                 Retake Assessment
               </Button>
             </div>
