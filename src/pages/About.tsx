@@ -234,8 +234,7 @@ const About = () => {
                 </div>
               </div>
               
-              
-              <div className="py-8">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-elegant border border-primary/10">
                 <h3 className="text-3xl font-display font-semibold text-primary mb-8">
                   Together, we help you:
                 </h3>
