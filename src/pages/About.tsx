@@ -95,7 +95,7 @@ const About = () => {
             
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Value 1 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Eye className="w-8 h-8 text-sage" />
@@ -112,7 +112,7 @@ const About = () => {
               </div>
 
               {/* Value 2 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Target className="w-8 h-8 text-primary" />
@@ -129,7 +129,7 @@ const About = () => {
               </div>
 
               {/* Value 3 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Lightbulb className="w-8 h-8 text-copper" />
@@ -146,7 +146,7 @@ const About = () => {
               </div>
 
               {/* Value 4 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Users className="w-8 h-8 text-olive-green" />
@@ -163,7 +163,7 @@ const About = () => {
               </div>
 
               {/* Value 5 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Compass className="w-8 h-8 text-sage" />
@@ -181,7 +181,7 @@ const About = () => {
               </div>
 
               {/* Value 6 */}
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
                 <div className="flex items-start space-x-6 mb-3">
                   <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-8 h-8 text-copper" />
