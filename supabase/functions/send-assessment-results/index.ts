@@ -18,13 +18,15 @@ interface AssessmentFormData {
   role: string;
   assessmentResults: {
     pillarScores: {
-      purpose: number;
-      culture: number;
-      wellBeing: number;
+      purposeCulture: number;
       collaboration: number;
       leadership: number;
+      wellBeing: number;
+      organizationalStrategy: number;
+      interconnectivity: number;
     };
     totalScore: number;
+    interconnectivityScore: number;
     organizationalStatus: string;
     painPoint: string;
     strength: string;
@@ -39,13 +41,15 @@ const AssessmentSchema = z.object({
   role: z.string().max(200),
   assessmentResults: z.object({
     pillarScores: z.object({
-      purpose: z.number().min(0).max(25),
-      culture: z.number().min(0).max(25),
-      wellBeing: z.number().min(0).max(25),
-      collaboration: z.number().min(0).max(25),
-      leadership: z.number().min(0).max(25),
+      purposeCulture: z.number().min(0).max(35),
+      collaboration: z.number().min(0).max(35),
+      leadership: z.number().min(0).max(35),
+      wellBeing: z.number().min(0).max(35),
+      organizationalStrategy: z.number().min(0).max(35),
+      interconnectivity: z.number().min(0).max(35),
     }),
-    totalScore: z.number().min(0).max(125),
+    totalScore: z.number().min(0).max(175),
+    interconnectivityScore: z.number().min(0).max(35),
     organizationalStatus: z.string().max(200),
     painPoint: z.string().max(100),
     strength: z.string().max(100),
@@ -79,23 +83,28 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Received assessment results submission:", { ...formData, email: "[redacted]" });
 
     const { assessmentResults } = formData;
-    const overallPercentage = Math.round((assessmentResults.totalScore / 125) * 100);
+    const overallPercentage = Math.round((assessmentResults.totalScore / 175) * 100);
+    const interconnectivityPercentage = Math.round((assessmentResults.interconnectivityScore / 35) * 100);
 
     // Format pillar scores for email
     const formatPillarScores = () => {
       const pillars = [
-        { name: 'Purpose', score: assessmentResults.pillarScores.purpose },
-        { name: 'Culture', score: assessmentResults.pillarScores.culture },
-        { name: 'Well-Being', score: assessmentResults.pillarScores.wellBeing },
+        { name: 'Purpose & Culture', score: assessmentResults.pillarScores.purposeCulture },
         { name: 'Collaboration', score: assessmentResults.pillarScores.collaboration },
-        { name: 'Leadership', score: assessmentResults.pillarScores.leadership }
+        { name: 'Leadership', score: assessmentResults.pillarScores.leadership },
+        { name: 'Well-Being', score: assessmentResults.pillarScores.wellBeing },
+        { name: 'Organizational Strategy', score: assessmentResults.pillarScores.organizationalStrategy },
+        { name: 'Interconnectivity', score: assessmentResults.pillarScores.interconnectivity }
       ];
 
       return pillars.map(pillar => {
-        const percentage = Math.round((pillar.score / 25) * 100);
+        const percentage = Math.round((pillar.score / 35) * 100);
         const isLowest = pillar.name === assessmentResults.painPoint;
         const isHighest = pillar.name === assessmentResults.strength;
-        const indicator = isLowest ? ' 🔴 (Pain Point)' : isHighest ? ' 🟢 (Strength)' : '';
+        const isInterconnectivity = pillar.name === 'Interconnectivity';
+        const indicator = isInterconnectivity ? ' 🔄 (System Flow)' : 
+                         isLowest ? ' 🔴 (Pain Point)' : 
+                         isHighest ? ' 🟢 (Strength)' : '';
         return `<li><strong>${pillar.name}:</strong> ${percentage}%${indicator}</li>`;
       }).join('\n');
     };
@@ -117,7 +126,8 @@ const handler = async (req: Request): Promise<Response> => {
       <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <h3>📊 Assessment Overview:</h3>
         <ul>
-          <li><strong>Overall Score:</strong> ${overallPercentage}% (${assessmentResults.totalScore}/125 points)</li>
+          <li><strong>Overall Score:</strong> ${overallPercentage}% (${assessmentResults.totalScore}/175 points)</li>
+          <li><strong>Interconnectivity Score:</strong> ${interconnectivityPercentage}% (${assessmentResults.interconnectivityScore}/35 points)</li>
           <li><strong>Organizational Status:</strong> <em>${escapeHtml(assessmentResults.organizationalStatus)}</em></li>
           <li><strong>Greatest Challenge:</strong> ${escapeHtml(assessmentResults.painPoint)}</li>
           <li><strong>Greatest Strength:</strong> ${escapeHtml(assessmentResults.strength)}</li>

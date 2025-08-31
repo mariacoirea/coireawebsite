@@ -23,26 +23,26 @@ interface AssessmentResultsProps {
 }
 
 const statusMessages = {
-  'Misaligned': 'There is deep misalignment across your organization. This is a call to pause, realign, and begin an intentional transformation.',
-  'Emerging': 'Your organization is at the start of a conscious transformation. While cracks are showing, the desire to evolve is present.',
-  'Stabilizing': 'You\'re stabilizing — your foundation is forming, but key gaps must be addressed for sustainable culture and well-being.',
-  'Evolving': 'You\'re in the evolution stage — things are working, but deeper coherence and leadership alignment can unlock your next level.',
-  'Thriving': 'Your organization is thriving with a strong inner ecosystem. You\'re ready to scale, deepen impact, and sustain success consciously.'
+  'Misaligned': 'There is deep misalignment across your system. This is a signal to pause and realign from the roots.',
+  'Emerging': 'You\'re in the early stages of conscious transformation. There\'s awareness building — and that\'s the first step.',
+  'Stabilizing': 'You\'re laying a solid foundation, but some structural elements need care for long-term coherence.',
+  'Evolving': 'You\'re in a phase of conscious growth. Keep nurturing the flow between strategy, leadership, and team dynamics.',
+  'Thriving': 'Your organization is thriving — rooted in purpose, balanced in leadership, and aligned in its structure and well-being.'
 };
 
 const painPointMessages = {
-  'Purpose': 'Your lowest score is in Purpose. This usually means there\'s a disconnect between daily operations and the deeper "why" of the organization. This misalignment can result in disengagement and lack of motivation across teams.',
-  'Culture': 'Your lowest score is in Culture. This suggests your people may not feel safe, seen, or truly part of something meaningful. When culture is weak, innovation and trust suffer.',
-  'Well-Being': 'Your lowest score is in Well-Being. High stress, burnout, or emotional disconnection may be present in your team. Without well-being, even high-performing teams eventually collapse.',
-  'Collaboration': 'Your lowest score is in Collaboration. Silos, distrust, or poor communication might be blocking your team from achieving their potential. Connection is the foundation of high-functioning teams.',
-  'Leadership': 'Your lowest score is in Leadership. When leadership lacks clarity, integrity, or inspiration, the ripple effect touches the entire organization. Without strong leadership, transformation is impossible.'
+  'Purpose & Culture': 'Your lowest score is in Purpose & Culture. This signals a misalignment between your values and day-to-day behaviors. When people don\'t feel emotionally connected to a shared mission, or the culture doesn\'t reflect the stated purpose, energy and trust begin to erode. This weakens belonging, motivation, and long-term alignment.',
+  'Collaboration': 'Your lowest score is in Collaboration. This suggests friction or fragmentation in how people work together. Poor communication, silos, or lack of shared ownership can quietly drain momentum. Without strong collaboration, teams lose their creative and connective power.',
+  'Leadership': 'Your lowest score is in Leadership. This means leadership may not be offering clarity, inspiration, or trust. When leadership feels distant, reactive, or disconnected, it affects every other layer of the organization. Healing begins with presence, transparency, and relational trust.',
+  'Well-Being': 'Your lowest score is in Well-Being. This points to burnout, fatigue, or emotional disconnection. Well-being is not a luxury — it\'s the energetic baseline of a regenerative organization. Without it, purpose fades and performance suffers. This is a call to slow down and recalibrate.',
+  'Organizational Strategy': 'Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning.'
 };
 
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-  const { pillarScores, totalScore, organizationalStatus, painPoint, strength } = results;
+  const { pillarScores, totalScore, interconnectivityScore, organizationalStatus, painPoint, strength } = results;
 
   const {
     register,
@@ -62,6 +62,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
         assessmentResults: {
           pillarScores,
           totalScore,
+          interconnectivityScore,
           organizationalStatus,
           painPoint,
           strength
@@ -100,7 +101,21 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   };
 
   const getPillarPercentage = (score: number) => {
-    return Math.round((score / 25) * 100);
+    return Math.round((score / 35) * 100);
+  };
+
+  const getInterconnectivityMessage = () => {
+    if (interconnectivityScore < 21) {
+      return {
+        title: "Systemic Misalignment Detected",
+        message: "Your interconnectivity score suggests that even if individual pillars are strong, they may not be working together as one ecosystem. Strategy may not flow into collaboration. Leadership may not reinforce well-being. A regenerative system thrives not just through strong parts — but through coherence. Right now, your organization may be operating more in parts than as a whole."
+      };
+    } else {
+      return {
+        title: "Systemic Coherence is Emerging",
+        message: "Your interconnectivity score shows encouraging signs that your organizational system is beginning to breathe as one. The connection between purpose, people, and performance is forming a regenerative rhythm. Keep nurturing this ecosystem through aligned practices and conscious leadership."
+      };
+    }
   };
 
   const getStatusColor = (status: string) => {
@@ -125,7 +140,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4">
                 <span className="text-2xl font-display font-bold text-primary">
-                  {Math.round((totalScore / 125) * 100)}%
+                  {Math.round((totalScore / 175) * 100)}%
                 </span>
               </div>
               <h2 className={`text-2xl font-display font-semibold mb-2 ${getStatusColor(organizationalStatus)}`}>
@@ -143,18 +158,27 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               <h3 className="text-xl font-display font-semibold text-primary mb-6 text-center">
                 Pillar Breakdown
               </h3>
-              <div className="grid md:grid-cols-5 gap-4">
+              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {Object.entries(pillarScores).map(([pillar, score]) => {
-                  const pillarName = pillar === 'wellBeing' ? 'Well-Being' : 
-                                   pillar.charAt(0).toUpperCase() + pillar.slice(1);
+                  const pillarDisplayNames = {
+                    purposeCulture: 'Purpose & Culture',
+                    collaboration: 'Collaboration',
+                    leadership: 'Leadership',
+                    wellBeing: 'Well-Being',
+                    organizationalStrategy: 'Organizational Strategy',
+                    interconnectivity: 'Interconnectivity'
+                  };
+                  const pillarName = pillarDisplayNames[pillar as keyof typeof pillarDisplayNames];
                   const percentage = getPillarPercentage(score);
                   const isLowest = pillarName === painPoint;
                   const isHighest = pillarName === strength;
+                  const isInterconnectivity = pillar === 'interconnectivity';
                   
                   return (
                     <div 
                       key={pillar} 
                       className={`text-center p-4 rounded-lg border-2 ${
+                        isInterconnectivity ? 'border-purple-400 bg-purple-50 dark:bg-purple-950/20' :
                         isLowest ? 'border-accent bg-accent/5' : 
                         isHighest ? 'border-primary bg-primary/5' : 
                         'border-border bg-background'
@@ -166,10 +190,13 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                       <div className="text-sm font-body text-foreground/80">
                         {pillarName}
                       </div>
-                      {isLowest && (
+                      {isInterconnectivity && (
+                        <div className="text-xs text-purple-600 font-medium mt-1">System Flow</div>
+                      )}
+                      {!isInterconnectivity && isLowest && (
                         <div className="text-xs text-accent font-medium mt-1">Pain Point</div>
                       )}
-                      {isHighest && (
+                      {!isInterconnectivity && isHighest && (
                         <div className="text-xs text-primary font-medium mt-1">Strength</div>
                       )}
                     </div>
@@ -194,19 +221,17 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                   Your Greatest Strength: {strength}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
-                  On the other hand, your highest pillar is {strength}. This is your current strength. 
-                  Building on this area can give you the momentum needed to evolve other parts of your system.
+                  On the other hand, your strongest area is {strength}. This is your current source of power and stability. Building on this strength can create momentum and inspire evolution across other areas. It's where your organization is already aligned — and it can become the anchor for transformation.
                 </p>
               </div>
 
+              {/* Interconnectivity Insight */}
               <div className="bg-gradient-warm/10 rounded-lg p-6 text-center">
-                <h4 className="text-lg font-display font-semibold text-primary mb-3">
-                  COIREA Insight
+                <h4 className="text-lg font-display font-semibold text-purple-600 mb-3">
+                  🔄 {getInterconnectivityMessage().title}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed mb-4">
-                  Pain in the {painPoint} area can result in decreased engagement, reduced innovation, 
-                  and disconnection from company values. However, your strength in {strength} provides 
-                  a solid foundation for conscious transformation.
+                  {getInterconnectivityMessage().message}
                 </p>
               </div>
             </div>
@@ -218,7 +243,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                   Ready to Transform Your Organization?
                 </h3>
                 <p className="text-lg text-foreground/80 font-body leading-relaxed">
-                  Let us reach out to discuss how COIREA can support your organization's conscious transformation.
+                  Want to turn insight into action? Book a Free Clarity Call with COIREA to explore a personalized regenerative roadmap for your team.
                 </p>
               </div>
               

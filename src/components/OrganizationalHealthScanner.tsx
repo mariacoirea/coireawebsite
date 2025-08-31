@@ -7,13 +7,15 @@ import AssessmentResults from "./AssessmentResults";
 
 export interface AssessmentResult {
   pillarScores: {
-    purpose: number;
-    culture: number;
-    wellBeing: number;
+    purposeCulture: number;
     collaboration: number;
     leadership: number;
+    wellBeing: number;
+    organizationalStrategy: number;
+    interconnectivity: number;
   };
   totalScore: number;
+  interconnectivityScore: number;
   organizationalStatus: string;
   painPoint: string;
   strength: string;
@@ -59,7 +61,7 @@ const OrganizationalHealthScanner = () => {
                 well-being across five critical pillars.
               </p>
               <p>
-                Answer 25 questions (5 per pillar) to receive an instant diagnostic of your 
+                Answer 42 questions (7 per pillar + interconnectivity assessment) to receive an instant diagnostic of your 
                 organization's health, pain points, and strengths.
               </p>
             </div>
@@ -69,10 +71,10 @@ const OrganizationalHealthScanner = () => {
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
                 Assessment Pillars:
               </h3>
-              <div className="grid md:grid-cols-5 gap-4 mb-8">
-                {['Purpose', 'Culture', 'Well-Being', 'Collaboration', 'Leadership'].map((pillar) => (
+              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                {['Purpose & Culture', 'Collaboration', 'Leadership', 'Well-Being', 'Organizational Strategy', 'Interconnectivity'].map((pillar) => (
                   <div key={pillar} className="bg-primary/5 rounded-lg p-4">
-                    <span className="text-primary font-body font-medium">{pillar}</span>
+                    <span className="text-primary font-body font-medium text-sm">{pillar}</span>
                   </div>
                 ))}
               </div>
@@ -80,7 +82,7 @@ const OrganizationalHealthScanner = () => {
             
             <div className="bg-gradient-warm/10 rounded-xl p-6 mb-8">
               <p className="text-sm text-foreground/70 font-body mb-4">
-                Takes approximately 5-7 minutes to complete
+                Takes approximately 8-10 minutes to complete
               </p>
               <p className="text-sm text-foreground/70 font-body">
                 Receive instant results with personalized insights
