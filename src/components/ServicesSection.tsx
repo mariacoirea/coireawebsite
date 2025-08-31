@@ -149,35 +149,32 @@ const ServicesSection = () => {
                 {/* Pain → Outcome Section */}
                 <div className="mb-6">
                   <h4 className={`text-xs font-semibold text-${program.iconColor} mb-4 uppercase tracking-wider`}>Pain → Outcome</h4>
-                  <div className="space-y-3">
+                  <ul className="space-y-2">
                     {program.painToOutcome.map((item, idx) => (
-                      <div key={idx} className="bg-background/30 rounded-lg p-3 border border-primary/10">
-                        <div className="text-xs text-muted-foreground mb-1 font-medium">
-                          {item.pain}
-                        </div>
-                        <ArrowRight className="w-3 h-3 text-primary/60 mx-auto my-1" />
-                        <div className="text-xs text-primary font-medium">
-                          {item.outcome}
-                        </div>
-                      </div>
+                      <li key={idx} className="flex items-start gap-2 text-xs">
+                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-muted-foreground">
+                          <span className="font-medium">{item.pain}</span> → <span className="text-primary">{item.outcome}</span>
+                        </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 {/* Strategic Impact Section */}
                 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Strategic Impact</h4>
-                  <div className="space-y-2">
+                  <ul className="space-y-2">
                     {program.strategicImpact.map((impact, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <Check className={`w-3 h-3 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
+                      <li key={idx} className="flex items-start gap-2">
+                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-muted-foreground text-xs">{impact}</span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   
                   <div className="mt-4 p-3 bg-destructive/5 rounded-lg border border-destructive/10">
-                    <p className="text-xs text-destructive/80 font-medium">
+                    <p className="text-xs text-destructive/80">
                       <span className="font-semibold">Without this:</span> {program.withoutThis}
                     </p>
                   </div>
