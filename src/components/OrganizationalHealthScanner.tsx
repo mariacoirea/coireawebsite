@@ -61,7 +61,7 @@ const OrganizationalHealthScanner = () => {
                 well-being across five critical pillars.
               </p>
               <p>
-                Answer 42 questions (7 per pillar + interconnectivity assessment) to receive an instant diagnostic of your 
+                Answer 42 questions across five critical pillars plus a system interconnectivity assessment to receive an instant diagnostic of your 
                 organization's health, pain points, and strengths.
               </p>
             </div>
@@ -71,8 +71,8 @@ const OrganizationalHealthScanner = () => {
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
                 Assessment Pillars:
               </h3>
-              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-                {['Purpose & Culture', 'Collaboration', 'Leadership', 'Well-Being', 'Organizational Strategy', 'Interconnectivity'].map((pillar) => (
+              <div className="grid md:grid-cols-5 gap-4 mb-8">
+                {['Purpose & Culture', 'Collaboration', 'Leadership', 'Well-Being', 'Organizational Strategy'].map((pillar) => (
                   <div key={pillar} className="bg-primary/5 rounded-lg p-4">
                     <span className="text-primary font-body font-medium text-sm">{pillar}</span>
                   </div>
