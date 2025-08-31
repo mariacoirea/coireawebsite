@@ -271,12 +271,12 @@ const ConsciousLeadershipResults = ({ results, onRetake }: ConsciousLeadershipRe
             </CardContent>
           </Card>
         ) : (
-          <Card className="bg-green-50 border-green-200 dark:bg-green-950/20 dark:border-green-800/30">
+          <Card className="bg-success/10 border-success/30">
             <CardContent className="text-center py-8">
-              <h3 className="text-xl font-semibold text-green-700 dark:text-green-400 mb-4">
+              <h3 className="text-xl font-semibold text-success mb-4">
                 Results Sent Successfully!
               </h3>
-              <p className="text-green-600 dark:text-green-300 mb-6">
+              <p className="text-success/80 mb-6">
                 Your detailed leadership assessment results have been sent to {email}
               </p>
             </CardContent>
@@ -284,20 +284,20 @@ const ConsciousLeadershipResults = ({ results, onRetake }: ConsciousLeadershipRe
         )}
 
         {/* Call to Action */}
-        <Card className="bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/20 border-green-300 dark:border-green-700/50">
+        <Card className="bg-success/5 border-success/20">
           <CardContent className="text-center py-8">
-            <h3 className="text-2xl font-display font-semibold text-green-800 dark:text-green-300 mb-4">
+            <h3 className="text-2xl font-display font-semibold text-success mb-4">
               Ready to Evolve Your Leadership?
             </h3>
-            <p className="text-green-700 dark:text-green-400 font-body leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-success/80 font-body leading-relaxed mb-6 max-w-2xl mx-auto">
               Transform insights into action with personalized guidance. Book a free clarity call 
               to explore your unique leadership evolution path.
             </p>
             <div className="space-y-4">
-              <Button variant="accent" size="lg" className="mr-4 bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700">
+              <Button variant="accent" size="lg" className="mr-4 bg-success hover:bg-success/90 text-success-foreground border-success">
                 Book Your Free Clarity Call
               </Button>
-              <Button variant="outline" size="lg" onClick={onRetake} className="border-green-600 text-green-700 hover:bg-green-50 dark:border-green-400 dark:text-green-400 dark:hover:bg-green-950/30">
+              <Button variant="outline" size="lg" onClick={onRetake} className="border-success text-success hover:bg-success/10">
                 Retake Assessment
               </Button>
             </div>
