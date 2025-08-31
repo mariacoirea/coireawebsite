@@ -42,7 +42,7 @@ const transformationalPrograms = [
   },
   {
     icon: Zap,
-    title: "Scale with Purpose (Strategic Ops & Leadership Partnership)",
+    title: "Scale with Purpose",
     subtitle: "When structure and purpose don't align, scaling turns to chaos.",
     painToOutcome: [
       {
@@ -124,60 +124,62 @@ const ServicesSection = () => {
           {transformationalPrograms.map((program, index) => {
             const IconComponent = program.icon;
             return (
-              <Card key={index} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+              <Card key={index} className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
                 {/* Header Section */}
-                <div className="text-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-${program.iconColor}/20`}>
+                <div className="text-center mb-8">
+                  <div className={`w-16 h-16 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 border border-${program.iconColor}/20`}>
                     <IconComponent className={`w-8 h-8 text-${program.iconColor}`} />
                   </div>
-                  <h3 className="text-xl font-display font-bold text-primary mb-3">
+                  <h3 className="text-2xl font-display font-bold text-primary mb-3">
                     {program.title}
                   </h3>
-                  <p className="text-base text-copper font-medium mb-4">
+                  <p className="text-muted-foreground font-medium mb-6 text-lg">
                     {program.subtitle}
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-3 py-1.5 rounded-full text-xs font-semibold border border-${program.badgeColor}/20`}>
+                  <div className="flex items-center justify-center gap-3">
+                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-4 py-2 rounded-full text-sm font-semibold border border-${program.badgeColor}/20`}>
                       90 Days
-                    </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
-                      3 Phases
                     </div>
                   </div>
                 </div>
 
                 {/* Pain → Outcome Section */}
-                <div className="mb-6">
-                  <h4 className={`text-xs font-semibold text-${program.iconColor} mb-4 uppercase tracking-wider`}>Pain → Outcome</h4>
-                  <ul className="space-y-2">
+                <div className="mb-8">
+                  <h4 className={`text-sm font-semibold text-${program.iconColor} mb-5 uppercase tracking-wider`}>Pain → Outcome</h4>
+                  <div className="space-y-4">
                     {program.painToOutcome.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground">
-                          <span className="font-medium">{item.pain}</span> → <span className="text-primary">{item.outcome}</span>
-                        </span>
-                      </li>
+                      <div key={idx} className="group/item">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="w-2 h-2 bg-muted-foreground/40 rounded-full"></div>
+                          <span className="text-muted-foreground font-medium text-sm">{item.pain}</span>
+                        </div>
+                        <div className="flex items-center gap-3 ml-5">
+                          <ArrowRight className="w-4 h-4 text-primary/60" />
+                          <span className="text-primary font-medium text-sm">{item.outcome}</span>
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
                 {/* Strategic Impact Section */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Strategic Impact</h4>
-                  <ul className="space-y-2">
+                <div className="mb-8">
+                  <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">Strategic Impact</h4>
+                  <div className="space-y-3">
                     {program.strategicImpact.map((impact, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">{impact}</span>
-                      </li>
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-muted-foreground text-sm leading-relaxed">{impact}</span>
+                      </div>
                     ))}
-                  </ul>
-                  
-                  <div className="mt-4 p-3 bg-destructive/5 rounded-lg border border-destructive/10">
-                    <p className="text-xs text-destructive/80">
-                      <span className="font-semibold">Without this:</span> {program.withoutThis}
-                    </p>
                   </div>
+                </div>
+
+                {/* Without This Warning */}
+                <div className="p-4 bg-amber-50/50 rounded-lg border border-amber-200/50">
+                  <p className="text-sm text-amber-800/90 leading-relaxed">
+                    <span className="font-semibold">Without this:</span> {program.withoutThis}
+                  </p>
                 </div>
               </Card>
             );
