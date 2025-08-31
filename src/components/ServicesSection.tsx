@@ -7,71 +7,59 @@ import { Link } from "react-router-dom";
 const transformationalPrograms = [
   {
     icon: Heart,
-    title: "Team Collaboration & Leadership Reset",
-    subtitle: "When collaboration breaks down, performance slips.",
-    painToOutcome: [
-      {
-        pain: "Silent tension in meetings",
-        outcome: "Trust rebuilt and psychological safety restored"
-      },
-      {
-        pain: "Roles unclear",
-        outcome: "Clear responsibilities and accountability across the team"
-      },
-      {
-        pain: "Leadership sending mixed signals",
-        outcome: "Aligned leadership making faster, more confident decisions"
-      },
-      {
-        pain: "Culture slipping under growth pressure",
-        outcome: "Habits and practices embedded that sustain scale-up stress"
-      },
-      {
-        pain: "Inconsistent or missing performance reviews",
-        outcome: "Upgraded system that drives growth and fairness"
-      }
+    title: "Collaboration & Leadership Reset",
+    subtitle: "When your team feels disconnected, performance slips.",
+    idealFor: "Founders/CEOs who sense their team is losing trust, collaboration is weak, or leadership isn't aligned — and it's starting to cost results.",
+    painPoints: [
+      "Silent tension in meetings or lack of open dialogue",
+      "New hires not fully integrating into the culture",
+      "Roles and responsibilities unclear → accountability gaps",
+      "Leadership sending mixed signals, slowing decisions",
+      "Performance reviews inconsistent or missing"
     ],
-    strategicImpact: [
-      "Reduce wasted time in miscommunication and role confusion",
-      "Retain talent by creating a culture people want to stay in",
-      "Leadership becomes a source of clarity, not friction"
+    outcomes: [
+      "Rebuild trust and collaboration across the team",
+      "Clarify leadership roles and decision-making authority",
+      "Establish cultural practices and habits that scale",
+      "Design a performance system that drives growth",
+      "Measurable before/after shift in collaboration & leadership alignment"
     ],
-    withoutThis: "you spend far more time in conflict, misunderstandings, and repeated mistakes — energy that could be fueling growth",
+    coreElements: [
+      "Culture & Leadership Assessment", 
+      "Role & Responsibility Mapping", 
+      "Leadership Mentoring", 
+      "Team Collaboration Workshops", 
+      "Performance Review Framework"
+    ],
     iconColor: "sage",
     badgeColor: "sage"
   },
   {
     icon: Zap,
-    title: "Scale with Purpose (Strategic Ops & Leadership Partnership)",
+    title: "Scale with Purpose",
     subtitle: "When structure and purpose don't align, scaling turns to chaos.",
-    painToOutcome: [
-      {
-        pain: "Leadership not aligned on direction",
-        outcome: "Purpose & vision defined/refined into one clear playbook"
-      },
-      {
-        pain: "Priorities shifting, goals rarely hit",
-        outcome: "Quarterly Rocks set, tracked, and consistently achieved"
-      },
-      {
-        pain: "No clear meeting cadence",
-        outcome: "Leadership rhythm established for faster decisions and less drag"
-      },
-      {
-        pain: "Execution scattered across teams",
-        outcome: "Workflows and structure redesigned for smoother execution"
-      },
-      {
-        pain: "Scaling fast but losing company DNA",
-        outcome: "Purpose embedded directly into strategy and operations"
-      }
+    idealFor: "Founders/CEOs whose company is growing fast but struggling with messy operations, unclear priorities, or a vision that feels diluted.",
+    painPoints: [
+      "Leadership team not aligned on purpose or direction",
+      "Priorities keep shifting, goals rarely hit",
+      "No clear meeting cadence → slow decisions",
+      "Everyone is busy, but execution feels scattered",
+      "Scaling fast but losing the company's original DNA"
     ],
-    strategicImpact: [
-      "Leaders stop losing time searching for data and chasing scattered tasks",
-      "Projects complete faster with clearer ownership",
-      "Scale with purpose — growth that strengthens, not dilutes, the company's DNA"
+    outcomes: [
+      "Define or refine company purpose, vision, and strategic priorities",
+      "Align leadership on one clear playbook",
+      "Redesign org structure & workflows to support growth",
+      "Set and track EOS-style quarterly Rocks with accountability",
+      "Measurable efficiency gains in decision-making and execution"
     ],
-    withoutThis: "leadership spends countless hours in confusion and firefighting, slowing growth and burning out key talent",
+    coreElements: [
+      "Purpose & Vision Workshop", 
+      "Operational & Bottleneck Audit", 
+      "Structure & Workflow Design", 
+      "Quarterly Projects", 
+      "Efficiency & Execution Benchmarks"
+    ],
     iconColor: "primary",
     badgeColor: "primary"
   }
@@ -146,40 +134,49 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                {/* Pain → Outcome Section */}
+                {/* Ideal For Section */}
                 <div className="mb-6">
-                  <h4 className={`text-xs font-semibold text-${program.iconColor} mb-4 uppercase tracking-wider`}>Pain → Outcome</h4>
-                  <div className="space-y-3">
-                    {program.painToOutcome.map((item, idx) => (
-                      <div key={idx} className="bg-background/30 rounded-lg p-3 border border-primary/10">
-                        <div className="text-xs text-muted-foreground mb-1 font-medium">
-                          {item.pain}
-                        </div>
-                        <ArrowRight className="w-3 h-3 text-primary/60 mx-auto my-1" />
-                        <div className="text-xs text-primary font-medium">
-                          {item.outcome}
-                        </div>
+                  <h4 className={`text-xs font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
+                  <p className="text-muted-foreground font-body text-sm mb-4">
+                    {program.idealFor}
+                  </p>
+                  
+                  {/* Pain Points */}
+                  <div className="mt-4">
+                    <h5 className="text-xs font-semibold text-primary/70 mb-2 uppercase tracking-wider">Pain Points</h5>
+                    <ul className="space-y-1.5">
+                      {program.painPoints.map((point, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-muted-foreground text-xs">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Outcomes Section */}
+                <div className="mb-6">
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="space-y-2.5">
+                    {program.outcomes.map((outcome, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5">
+                        <Check className={`w-4 h-4 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
+                        <span className="text-muted-foreground text-sm">{outcome}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Strategic Impact Section */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Strategic Impact</h4>
-                  <div className="space-y-2">
-                    {program.strategicImpact.map((impact, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <Check className={`w-3 h-3 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
-                        <span className="text-muted-foreground text-xs">{impact}</span>
-                      </div>
+                {/* Core Elements as Tags */}
+                <div className="mt-auto">
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
+                  <div className="flex flex-wrap gap-1.5">
+                    {program.coreElements.map((element, idx) => (
+                      <span key={idx} className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">
+                        {element}
+                      </span>
                     ))}
-                  </div>
-                  
-                  <div className="mt-4 p-3 bg-destructive/5 rounded-lg border border-destructive/10">
-                    <p className="text-xs text-destructive/80 font-medium">
-                      <span className="font-semibold">Without this:</span> {program.withoutThis}
-                    </p>
                   </div>
                 </div>
               </Card>
