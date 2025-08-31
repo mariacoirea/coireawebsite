@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationalHealthScanner from "@/components/OrganizationalHealthScanner";
+import ConsciousLeadershipAssessment from "@/components/ConsciousLeadershipAssessment";
 import SEOHead from "@/components/SEOHead";
 
 const Tools = () => {
@@ -34,6 +35,9 @@ const Tools = () => {
 
           {/* Organizational Health Scanner */}
           <OrganizationalHealthScanner />
+          
+          {/* Conscious Leadership Assessment */}
+          <ConsciousLeadershipAssessment />
         </main>
         <Footer />
       </div>
