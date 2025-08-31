@@ -385,7 +385,7 @@ const About = () => {
           <div className="container mx-auto max-w-6xl text-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-background/40 backdrop-blur-sm rounded-3xl p-12 border border-primary/20 shadow-elegant">
+              <div className="relative p-12">
                 <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
                   Ready to evolve your <span className="italic text-sage">organization?</span>
                 </h2>
