@@ -36,7 +36,8 @@ const questions: Question[] = [
   { id: 'col6', text: 'I feel trust among team members is high.', pillar: 'collaboration' },
   { id: 'col7', text: 'We regularly co-create solutions together.', pillar: 'collaboration' },
   
-  // Leadership (7 questions)
+  // Leadership & Conscious Leadership (14 questions)
+  // Organizational Leadership (external experience)
   { id: 'l1', text: 'Our leaders inspire through example, not just words.', pillar: 'leadership' },
   { id: 'l2', text: 'Leadership listens, adapts, and evolves.', pillar: 'leadership' },
   { id: 'l3', text: 'There is accountability at all levels.', pillar: 'leadership' },
@@ -44,6 +45,14 @@ const questions: Question[] = [
   { id: 'l5', text: 'Leaders empower us rather than control us.', pillar: 'leadership' },
   { id: 'l6', text: 'I feel encouraged to step into my own leadership.', pillar: 'leadership' },
   { id: 'l7', text: 'Our leaders operate with clarity, courage, and presence.', pillar: 'leadership' },
+  // Self-Leadership (internal reflection)
+  { id: 'l8', text: 'I am aware of how my emotions affect my leadership.', pillar: 'leadership' },
+  { id: 'l9', text: 'I recognize when I\'m leading from fear, control, or urgency.', pillar: 'leadership' },
+  { id: 'l10', text: 'I pause and choose how to respond, even under pressure.', pillar: 'leadership' },
+  { id: 'l11', text: 'I lead with emotional presence, not performance.', pillar: 'leadership' },
+  { id: 'l12', text: 'I prioritize coherence over productivity when needed.', pillar: 'leadership' },
+  { id: 'l13', text: 'I make space for others\' emotions without needing to fix or manage them.', pillar: 'leadership' },
+  { id: 'l14', text: 'I lead from purpose and long-term vision, not just immediate demands.', pillar: 'leadership' },
   
   // Well-Being (7 questions)
   { id: 'w1', text: 'I feel supported in managing stress and energy.', pillar: 'wellBeing' },
@@ -76,7 +85,7 @@ const questions: Question[] = [
 const pillarNames = {
   purposeCulture: 'Purpose & Culture',
   collaboration: 'Collaboration',
-  leadership: 'Leadership',
+  leadership: 'Leadership & Conscious Leadership',
   wellBeing: 'Well-Being',
   organizationalStrategy: 'Organizational Strategy',
   interconnectivity: 'Interconnectivity'
@@ -176,7 +185,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
                 {pillarNames[currentPillar]} Assessment
               </CardTitle>
               <span className="text-sm text-muted-foreground font-body">
-                {totalAnswered}/42 questions answered
+                {totalAnswered}/55 questions answered
               </span>
             </div>
             <Progress value={progress} className="w-full" />

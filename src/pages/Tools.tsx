@@ -2,16 +2,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationalHealthScanner from "@/components/OrganizationalHealthScanner";
-import ConsciousLeadershipAssessment from "@/components/ConsciousLeadershipAssessment";
+
 import SEOHead from "@/components/SEOHead";
 
 const Tools = () => {
   return (
     <>
       <SEOHead
-        title="Free Organizational Health Diagnostic Tools"
-        description="Discover where your organization stands with our free diagnostic tools. Identify key areas for conscious transformation and organizational development."
-        keywords="organizational health assessment, diagnostic tools, organizational transformation, team assessment, business health scanner, organizational development tools"
+        title="COIREA Integrated Organizational & Leadership Diagnostic"
+        description="Comprehensive assessment combining organizational health with conscious leadership insights. Diagnose your organization across 5 pillars and leadership effectiveness in one integrated tool."
+        keywords="organizational health assessment, conscious leadership diagnostic, organizational transformation, leadership assessment, business health scanner, integrated diagnostic tool"
         url="/tools"
       />
       
@@ -23,60 +23,60 @@ const Tools = () => {
             <div className="container mx-auto max-w-6xl text-center">
               <header>
                 <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  Free Diagnostic Tools
+                  Integrated Diagnostic Tool
                 </h1>
                 <p className="text-xl text-muted-foreground font-body leading-relaxed mb-12">
-                  Transform your organization with our comprehensive assessment suite. 
-                  Two powerful tools to unlock conscious leadership and organizational health.
+                  Transform your organization with our comprehensive COIREA Integrated Organizational & Leadership Diagnostic. 
+                  One powerful assessment combining organizational health with conscious leadership insights.
                 </p>
               </header>
 
-              {/* Tools Overview Grid */}
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* Single Tool Overview */}
+              <div className="max-w-4xl mx-auto mb-16">
                 <div className="bg-card border border-primary/20 rounded-xl p-8 shadow-elegant hover:shadow-warm transition-all duration-300">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                    Organizational Health Scanner
+                  <h3 className="text-3xl font-display font-semibold text-primary mb-6">
+                    COIREA Integrated Organizational & Leadership Diagnostic
                   </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Comprehensive assessment across 5 pillars to diagnose your organization's health, 
-                    pain points, and growth opportunities.
+                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                    A comprehensive assessment combining organizational health evaluation with conscious leadership insights. 
+                    Diagnose your organization across 5 regenerative pillars plus interconnectivity, while evaluating 
+                    leadership effectiveness and consciousness.
                   </p>
-                  <div className="text-sm text-accent font-medium">
-                    ⏱️ 8-10 minutes • 42 questions • Instant results
+                  <div className="grid md:grid-cols-3 gap-4 mb-6">
+                    <div className="text-accent font-medium">
+                      ⏱️ 12-15 minutes
+                    </div>
+                    <div className="text-accent font-medium">
+                      📊 55 questions total
+                    </div>
+                    <div className="text-accent font-medium">
+                      🎯 Instant comprehensive results
+                    </div>
                   </div>
-                </div>
-
-                <div className="bg-card border border-sage/20 rounded-xl p-8 shadow-elegant hover:shadow-warm transition-all duration-300">
-                  <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-display font-semibold text-sage mb-4">
-                    Conscious Leadership Assessment
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Discover whether you're leading from above or below the line with insights 
-                    into your emotional and regenerative intelligence.
-                  </p>
-                  <div className="text-sm text-sage font-medium">
-                    ⏱️ 12-15 minutes • 84 questions • Personal evolution map
+                  
+                  <div className="bg-gradient-warm/10 rounded-xl p-6 mt-8">
+                    <h4 className="font-display font-semibold text-primary mb-4">Assessment Covers:</h4>
+                    <div className="grid md:grid-cols-2 gap-3 text-sm text-foreground/80">
+                      <div>• Purpose & Culture (7 questions)</div>
+                      <div>• Collaboration (7 questions)</div>
+                      <div>• Leadership & Conscious Leadership (14 questions)</div>
+                      <div>• Well-Being (7 questions)</div>
+                      <div>• Organizational Strategy (7 questions)</div>
+                      <div>• Interconnectivity (7 questions)</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Organizational Health Scanner */}
+          {/* COIREA Integrated Diagnostic */}
           <OrganizationalHealthScanner />
-          
-          {/* Conscious Leadership Assessment */}
-          <ConsciousLeadershipAssessment />
         </main>
         <Footer />
       </div>
