@@ -53,7 +53,7 @@ const OrganizationalHealthScanner = () => {
         <Card className="bg-card shadow-elegant border-primary/10">
           <CardHeader className="text-center pb-8">
             <CardTitle className="text-3xl md:text-4xl font-display font-semibold text-primary mb-6">
-              COIREA Integrated Organizational & Leadership Diagnostic
+              COIREA Organizational Health Scanner
             </CardTitle>
             <div className="space-y-4 text-foreground/80 font-body text-lg leading-relaxed">
               <p>
@@ -95,7 +95,7 @@ const OrganizationalHealthScanner = () => {
               size="lg"
               className="text-lg px-12 py-6"
             >
-              Start Your Integrated Diagnostic
+              Start Your Organizational Health Scan
             </Button>
           </CardContent>
         </Card>
