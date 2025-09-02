@@ -57,8 +57,7 @@ const OrganizationalHealthScanner = () => {
             </CardTitle>
             <div className="space-y-4 text-foreground/80 font-body text-lg leading-relaxed">
               <p>
-                A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars 
-                while evaluating leadership effectiveness and consciousness.
+                A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars.
               </p>
               <p>
                 Answer 55 questions covering organizational health, leadership dynamics, and system interconnectivity to receive an instant diagnostic of your 
@@ -72,7 +71,7 @@ const OrganizationalHealthScanner = () => {
                 Assessment Pillars:
               </h3>
               <div className="grid md:grid-cols-3 gap-4 mb-8">
-                {['Purpose & Culture (7)', 'Collaboration (7)', 'Leadership & Conscious Leadership (14)', 'Well-Being (7)', 'Organizational Strategy (7)', 'Interconnectivity (7)'].map((pillar) => (
+                {['Purpose & Culture (7)', 'Collaboration (7)', 'Leadership (14)', 'Well-Being (7)', 'Organizational Strategy (7)'].map((pillar) => (
                   <div key={pillar} className="bg-primary/5 rounded-lg p-4">
                     <span className="text-primary font-body font-medium text-sm">{pillar}</span>
                   </div>
