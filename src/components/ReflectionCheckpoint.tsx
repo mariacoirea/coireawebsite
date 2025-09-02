@@ -67,7 +67,7 @@ const ReflectionCheckpoint = () => {
             If you hesitated on any of these, your organization might be running on less capacity, clarity, and connection than it could.
           </p>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
-            That's where the <span className="text-primary font-semibold">COIREA Core Framework™</span> comes in.
+            That's where the <span className="text-primary font-semibold">COIREA Core Framework</span> comes in.
           </p>
         </aside>
       </div>

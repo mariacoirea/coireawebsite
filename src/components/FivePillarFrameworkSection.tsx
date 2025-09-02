@@ -64,10 +64,10 @@ const FivePillarFrameworkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <header className="mx-auto max-w-4xl text-center animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
-            The COIREA Core Framework™
+            The COIREA Core Framework
           </h1>
           <h2 className="mt-4 text-base md:text-lg text-muted-foreground">
-            As organizations grow, complexity rises — priorities compete, alignment slips, and momentum is lost. The COIREA Core Framework™ addresses these challenges by focusing on five forces that define a thriving company: purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Through Structural Foundations, these forces are transformed into practical systems that keep your business aligned, resilient, and positioned to grow with integrity.
+            As organizations grow, complexity rises — priorities compete, alignment slips, and momentum is lost. The COIREA Core Framework addresses these challenges by focusing on five forces that define a thriving company: purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Through Structural Foundations, these forces are transformed into practical systems that keep your business aligned, resilient, and positioned to grow with integrity.
           </h2>
         </header>
 
