@@ -14,7 +14,7 @@ interface AssessmentFormProps {
 interface Question {
   id: string;
   text: string;
-  pillar: 'purposeCulture' | 'collaboration' | 'leadership' | 'wellBeing' | 'organizationalStrategy' | 'interconnectivity';
+  pillar: 'purposeCulture' | 'collaboration' | 'leadership' | 'selfLeadership' | 'wellBeing' | 'organizationalStrategy' | 'interconnectivity';
 }
 
 const questions: Question[] = [
@@ -46,13 +46,13 @@ const questions: Question[] = [
   { id: 'l6', text: 'I feel encouraged to step into my own leadership.', pillar: 'leadership' },
   { id: 'l7', text: 'Our leaders operate with clarity, courage, and presence.', pillar: 'leadership' },
   // Self-Leadership (internal reflection)
-  { id: 'l8', text: 'I am aware of how my emotions affect my leadership.', pillar: 'leadership' },
-  { id: 'l9', text: 'I recognize when I\'m leading from fear, control, or urgency.', pillar: 'leadership' },
-  { id: 'l10', text: 'I pause and choose how to respond, even under pressure.', pillar: 'leadership' },
-  { id: 'l11', text: 'I lead with emotional presence, not performance.', pillar: 'leadership' },
-  { id: 'l12', text: 'I prioritize coherence over productivity when needed.', pillar: 'leadership' },
-  { id: 'l13', text: 'I make space for others\' emotions without needing to fix or manage them.', pillar: 'leadership' },
-  { id: 'l14', text: 'I lead from purpose and long-term vision, not just immediate demands.', pillar: 'leadership' },
+  { id: 'l8', text: 'I am aware of how my emotions affect my leadership.', pillar: 'selfLeadership' },
+  { id: 'l9', text: 'I recognize when I\'m leading from fear, control, or urgency.', pillar: 'selfLeadership' },
+  { id: 'l10', text: 'I pause and choose how to respond, even under pressure.', pillar: 'selfLeadership' },
+  { id: 'l11', text: 'I lead with emotional presence, not performance.', pillar: 'selfLeadership' },
+  { id: 'l12', text: 'I prioritize coherence over productivity when needed.', pillar: 'selfLeadership' },
+  { id: 'l13', text: 'I make space for others\' emotions without needing to fix or manage them.', pillar: 'selfLeadership' },
+  { id: 'l14', text: 'I lead from purpose and long-term vision, not just immediate demands.', pillar: 'selfLeadership' },
   
   // Well-Being (7 questions)
   { id: 'w1', text: 'I feel supported in managing stress and energy.', pillar: 'wellBeing' },
@@ -85,7 +85,8 @@ const questions: Question[] = [
 const pillarNames = {
   purposeCulture: 'Purpose & Culture',
   collaboration: 'Collaboration',
-  leadership: 'Leadership & Conscious Leadership',
+  leadership: 'Leadership',
+  selfLeadership: 'Self-Leadership',
   wellBeing: 'Well-Being',
   organizationalStrategy: 'Organizational Strategy',
   interconnectivity: 'Interconnectivity'
@@ -129,6 +130,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       purposeCulture: 0,
       collaboration: 0,
       leadership: 0,
+      selfLeadership: 0,
       wellBeing: 0,
       organizationalStrategy: 0,
       interconnectivity: 0
@@ -140,12 +142,16 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       pillarScores[question.pillar] += score;
     });
 
-    // Calculate total score (excluding interconnectivity for main score)
+    // Calculate organizational health total (5 main pillars)
     const mainPillars = ['purposeCulture', 'collaboration', 'leadership', 'wellBeing', 'organizationalStrategy'] as const;
     const totalScore = mainPillars.reduce((sum, pillar) => sum + pillarScores[pillar], 0);
+    
+    // Separate interconnectivity and self-leadership scores
     const interconnectivityScore = pillarScores.interconnectivity;
+    const selfLeadershipScore = pillarScores.selfLeadership;
+    const selfLeadershipPercent = Math.round((selfLeadershipScore / 35) * 100);
 
-    // Determine organizational status based on new tiers
+    // Determine organizational status based on new tiers (out of 175 total)
     let organizationalStatus = '';
     if (totalScore <= 60) organizationalStatus = 'Misaligned';
     else if (totalScore <= 100) organizationalStatus = 'Emerging';
@@ -169,6 +175,8 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       pillarScores,
       totalScore,
       interconnectivityScore,
+      selfLeadershipScore,
+      selfLeadershipPercent,
       organizationalStatus,
       painPoint,
       strength

@@ -38,11 +38,18 @@ const painPointMessages = {
   'Organizational Strategy': 'Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning.'
 };
 
+const selfLeadershipMessages = {
+  'Below the Line': 'You are likely operating in reactive leadership patterns (urgency, fear, control), and your organization reflects that disconnection.',
+  'In Transition': 'You\'re awakening. Both your leadership and your org are shifting — but full embodiment and consistency are still maturing.',
+  'Conscious Leadership Emerging': 'You are leading with emotional intelligence and holding relational trust — but there\'s still growth to stabilize the culture around you.',
+  'Regenerative Leadership Embodied': 'You and your organization are operating from clarity, trust, and integrity. You are modeling regenerative leadership that inspires transformation.'
+};
+
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-  const { pillarScores, totalScore, interconnectivityScore, organizationalStatus, painPoint, strength } = results;
+  const { pillarScores, totalScore, interconnectivityScore, selfLeadershipScore, selfLeadershipPercent, organizationalStatus, painPoint, strength } = results;
 
   const {
     register,
@@ -63,6 +70,8 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
           pillarScores,
           totalScore,
           interconnectivityScore,
+          selfLeadershipScore,
+          selfLeadershipPercent,
           organizationalStatus,
           painPoint,
           strength
@@ -108,7 +117,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
     if (interconnectivityScore < 21) {
       return {
         title: "Systemic Misalignment Detected",
-        message: "Your interconnectivity score suggests that even if individual pillars are strong, they may not be working together as one ecosystem. Strategy may not flow into collaboration. Leadership may not reinforce well-being. A regenerative system thrives not just through strong parts — but through coherence. Right now, your organization may be operating more in parts than as a whole."
+        message: "Your interconnectivity score suggests that even if individual pillars are strong, they may not be working together as one ecosystem. Strategy may not flow into collaboration. Leadership may not reinforce well-being. A regenerative system thrives not just through strong parts — but through coherence."
       };
     } else {
       return {
@@ -116,6 +125,13 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
         message: "Your interconnectivity score shows encouraging signs that your organizational system is beginning to breathe as one. The connection between purpose, people, and performance is forming a regenerative rhythm. Keep nurturing this ecosystem through aligned practices and conscious leadership."
       };
     }
+  };
+
+  const getSelfLeadershipStatus = () => {
+    if (selfLeadershipPercent <= 39) return 'Below the Line';
+    if (selfLeadershipPercent <= 59) return 'In Transition';
+    if (selfLeadershipPercent <= 79) return 'Conscious Leadership Emerging';
+    return 'Regenerative Leadership Embodied';
   };
 
   const getStatusColor = (status: string) => {
@@ -158,27 +174,24 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               <h3 className="text-xl font-display font-semibold text-primary mb-6 text-center">
                 Pillar Breakdown
               </h3>
-              <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {Object.entries(pillarScores).map(([pillar, score]) => {
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {Object.entries(pillarScores).filter(([pillar]) => pillar !== 'interconnectivity' && pillar !== 'selfLeadership').map(([pillar, score]) => {
                   const pillarDisplayNames = {
                     purposeCulture: 'Purpose & Culture',
                     collaboration: 'Collaboration',
                     leadership: 'Leadership',
                     wellBeing: 'Well-Being',
-                    organizationalStrategy: 'Organizational Strategy',
-                    interconnectivity: 'Interconnectivity'
+                    organizationalStrategy: 'Organizational Strategy'
                   };
                   const pillarName = pillarDisplayNames[pillar as keyof typeof pillarDisplayNames];
                   const percentage = getPillarPercentage(score);
                   const isLowest = pillarName === painPoint;
                   const isHighest = pillarName === strength;
-                  const isInterconnectivity = pillar === 'interconnectivity';
                   
                   return (
                     <div 
                       key={pillar} 
                       className={`text-center p-4 rounded-lg border-2 ${
-                        isInterconnectivity ? 'border-purple-400 bg-purple-50 dark:bg-purple-950/20' :
                         isLowest ? 'border-accent bg-accent/5' : 
                         isHighest ? 'border-primary bg-primary/5' : 
                         'border-border bg-background'
@@ -190,18 +203,35 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                       <div className="text-sm font-body text-foreground/80">
                         {pillarName}
                       </div>
-                      {isInterconnectivity && (
-                        <div className="text-xs text-purple-600 font-medium mt-1">System Flow</div>
-                      )}
-                      {!isInterconnectivity && isLowest && (
+                      {isLowest && (
                         <div className="text-xs text-accent font-medium mt-1">Pain Point</div>
                       )}
-                      {!isInterconnectivity && isHighest && (
+                      {isHighest && (
                         <div className="text-xs text-primary font-medium mt-1">Strength</div>
                       )}
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Self-Leadership Assessment */}
+            <div className="bg-gradient-warm/10 rounded-xl p-6">
+              <h3 className="text-xl font-display font-semibold text-primary mb-6 text-center">
+                Self-Leadership Assessment
+              </h3>
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-4">
+                  <span className="text-xl font-display font-bold text-primary">
+                    {selfLeadershipPercent}%
+                  </span>
+                </div>
+                <h4 className="text-lg font-display font-semibold text-primary mb-2">
+                  {getSelfLeadershipStatus()}
+                </h4>
+                <p className="text-foreground/80 font-body leading-relaxed">
+                  {selfLeadershipMessages[getSelfLeadershipStatus() as keyof typeof selfLeadershipMessages]}
+                </p>
               </div>
             </div>
 
@@ -226,11 +256,16 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               </div>
 
               {/* Interconnectivity Insight */}
-              <div className="bg-gradient-warm/10 rounded-lg p-6 text-center">
+              <div className="bg-purple-50 dark:bg-purple-950/20 rounded-lg p-6 text-center border border-purple-200 dark:border-purple-800">
                 <h4 className="text-lg font-display font-semibold text-purple-600 mb-3">
                   🔄 {getInterconnectivityMessage().title}
                 </h4>
-                <p className="text-foreground/80 font-body leading-relaxed mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 mb-3">
+                  <span className="text-lg font-display font-bold text-purple-600">
+                    {Math.round((interconnectivityScore / 35) * 100)}%
+                  </span>
+                </div>
+                <p className="text-foreground/80 font-body leading-relaxed">
                   {getInterconnectivityMessage().message}
                 </p>
               </div>

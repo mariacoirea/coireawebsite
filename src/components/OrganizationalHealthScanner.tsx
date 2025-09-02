@@ -16,6 +16,8 @@ export interface AssessmentResult {
   };
   totalScore: number;
   interconnectivityScore: number;
+  selfLeadershipScore: number;
+  selfLeadershipPercent: number;
   organizationalStatus: string;
   painPoint: string;
   strength: string;
