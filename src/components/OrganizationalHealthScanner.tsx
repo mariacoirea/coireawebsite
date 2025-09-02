@@ -1,15 +1,16 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AssessmentForm from "./AssessmentForm";
 import AssessmentResults from "./AssessmentResults";
+import EmailCollectionStep from "./EmailCollectionStep";
 
 export interface AssessmentResult {
   pillarScores: {
     purposeCulture: number;
     collaboration: number;
     leadership: number;
+    selfLeadership: number;
     wellBeing: number;
     organizationalStrategy: number;
     interconnectivity: number;
@@ -24,29 +25,37 @@ export interface AssessmentResult {
 }
 
 const OrganizationalHealthScanner = () => {
-  const [currentStep, setCurrentStep] = useState<'intro' | 'assessment' | 'results'>('intro');
-  const [results, setResults] = useState<AssessmentResult | null>(null);
+  const [currentStep, setCurrentStep] = useState<'intro' | 'assessment' | 'email' | 'results'>('intro');
+  const [assessmentResults, setAssessmentResults] = useState<AssessmentResult | null>(null);
 
   const handleStartAssessment = () => {
     setCurrentStep('assessment');
   };
 
-  const handleAssessmentComplete = (assessmentResults: AssessmentResult) => {
-    setResults(assessmentResults);
+  const handleAssessmentComplete = (results: AssessmentResult) => {
+    setAssessmentResults(results);
+    setCurrentStep('email');
+  };
+
+  const handleEmailSubmitted = () => {
     setCurrentStep('results');
   };
 
   const handleRetakeAssessment = () => {
-    setResults(null);
-    setCurrentStep('assessment');
+    setCurrentStep('intro');
+    setAssessmentResults(null);
   };
 
   if (currentStep === 'assessment') {
     return <AssessmentForm onComplete={handleAssessmentComplete} />;
   }
 
-  if (currentStep === 'results' && results) {
-    return <AssessmentResults results={results} onRetake={handleRetakeAssessment} />;
+  if (currentStep === 'email' && assessmentResults) {
+    return <EmailCollectionStep results={assessmentResults} onEmailSubmitted={handleEmailSubmitted} />;
+  }
+
+  if (currentStep === 'results' && assessmentResults) {
+    return <AssessmentResults results={assessmentResults} onRetake={handleRetakeAssessment} />;
   }
 
   return (

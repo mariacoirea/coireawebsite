@@ -1,21 +1,6 @@
-
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
 import { AssessmentResult } from "./OrganizationalHealthScanner";
-
-interface ConsultationFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  company: string;
-  role: string;
-}
 
 interface AssessmentResultsProps {
   results: AssessmentResult;
@@ -46,68 +31,7 @@ const selfLeadershipMessages = {
 };
 
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
   const { pillarScores, totalScore, interconnectivityScore, selfLeadershipScore, selfLeadershipPercent, organizationalStatus, painPoint, strength } = results;
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid },
-    watch
-  } = useForm<ConsultationFormData>({
-    mode: "onChange"
-  });
-
-  const handleFormSubmit = async (formData: ConsultationFormData) => {
-    setIsSubmitting(true);
-    
-    try {
-      const payload = {
-        ...formData,
-        assessmentResults: {
-          pillarScores,
-          totalScore,
-          interconnectivityScore,
-          selfLeadershipScore,
-          selfLeadershipPercent,
-          organizationalStatus,
-          painPoint,
-          strength
-        }
-      };
-
-      const { error } = await supabase.functions.invoke('send-assessment-results', {
-        body: payload
-      });
-
-      if (error) {
-        console.error('Error sending assessment results:', error);
-        toast({
-          title: "Error",
-          description: "There was an issue submitting your request. Please try again.",
-          variant: "destructive"
-        });
-        return;
-      }
-
-      setIsSubmitted(true);
-      toast({
-        title: "Success!",
-        description: "Your consultation request has been submitted. We'll contact you within 24 hours."
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast({
-        title: "Error",
-        description: "There was an issue submitting your request. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const getPillarPercentage = (score: number) => {
     return Math.round((score / 35) * 100);
@@ -271,122 +195,18 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               </div>
             </div>
 
-            {/* Sign Up Form */}
-            <div className="bg-primary/5 rounded-xl p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                  Ready to Transform Your Organization?
-                </h3>
-                <p className="text-lg text-foreground/80 font-body leading-relaxed">
-                  Want to turn insight into action? Book a Free Clarity Call with COIREA to explore a personalized regenerative roadmap for your team.
-                </p>
-              </div>
-              
-              {!isSubmitted ? (
-                <form onSubmit={handleSubmit(handleFormSubmit)} className="max-w-2xl mx-auto space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="firstName" className="text-sm font-body text-foreground/70 mb-1 block">
-                        First Name *
-                      </Label>
-                      <Input
-                        id="firstName"
-                        placeholder="Your first name"
-                        {...register("firstName", { required: "First name is required" })}
-                      />
-                      {errors.firstName && (
-                        <p className="text-xs text-destructive mt-1">{errors.firstName.message}</p>
-                      )}
-                    </div>
-                    <div>
-                      <Label htmlFor="lastName" className="text-sm font-body text-foreground/70 mb-1 block">
-                        Last Name *
-                      </Label>
-                      <Input
-                        id="lastName"
-                        placeholder="Your last name"
-                        {...register("lastName", { required: "Last name is required" })}
-                      />
-                      {errors.lastName && (
-                        <p className="text-xs text-destructive mt-1">{errors.lastName.message}</p>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-1 block">
-                      Email Address *
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your.email@company.com"
-                      {...register("email", { 
-                        required: "Email is required",
-                        pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                          message: "Invalid email address"
-                        }
-                      })}
-                    />
-                    {errors.email && (
-                      <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
-                    )}
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="company" className="text-sm font-body text-foreground/70 mb-1 block">
-                      Company Name *
-                    </Label>
-                    <Input
-                      id="company"
-                      placeholder="Your organization"
-                      {...register("company", { required: "Company name is required" })}
-                    />
-                    {errors.company && (
-                      <p className="text-xs text-destructive mt-1">{errors.company.message}</p>
-                    )}
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="role" className="text-sm font-body text-foreground/70 mb-1 block">
-                      Your Role *
-                    </Label>
-                    <Input
-                      id="role"
-                      placeholder="CEO, Manager, HR Director, etc."
-                      {...register("role", { required: "Role is required" })}
-                    />
-                    {errors.role && (
-                      <p className="text-xs text-destructive mt-1">{errors.role.message}</p>
-                    )}
-                  </div>
-                  
-                  <div className="text-center pt-4">
-                    <Button 
-                      type="submit"
-                      variant="hero" 
-                      size="lg"
-                      className="text-lg px-8 py-3"
-                      disabled={!isValid || isSubmitting}
-                    >
-                      {isSubmitting ? "Submitting..." : "Get Your Free Consultation"}
-                    </Button>
-                    <p className="text-xs text-foreground/60 font-body mt-2">
-                      We'll reach out within 24 hours to schedule your clarity call
-                    </p>
-                  </div>
-                </form>
-              ) : (
-                <div className="text-center">
-                  <p className="text-lg text-primary font-body mb-2">
-                    Thank you for your interest!
-                  </p>
-                  <p className="text-foreground/80 font-body">
-                    We'll reach out to {watch("email")} within 24 hours to schedule your free consultation.
-                  </p>
-                </div>
-              )}
+            {/* Success Message */}
+            <div className="bg-primary/5 rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                Your Results Have Been Sent!
+              </h3>
+              <p className="text-lg text-foreground/80 font-body leading-relaxed mb-4">
+                A comprehensive copy of your organizational health assessment has been sent to your email. 
+                We'll be in touch within 24 hours to discuss your personalized transformation roadmap.
+              </p>
+              <p className="text-sm text-foreground/60 font-body">
+                Check your inbox for your detailed results and next steps.
+              </p>
             </div>
 
             {/* Retake Option */}
