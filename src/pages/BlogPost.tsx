@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Share2, Linkedin, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import DOMPurify from 'dompurify';
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 
 interface BlogPost {
   id: string;
@@ -141,8 +143,32 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <SEOHead
+        title={post.seo_title || `${post.title} | COIREA Insights`}
+        description={post.meta_description || post.preview_snippet}
+        keywords={`${post.cluster.toLowerCase()}, regenerative business, conscious leadership, organizational transformation, ${post.tags?.join(', ') || ''}`}
+        url={`/insights/${post.slug}`}
+        image={post.featured_image || "/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"}
+        type="article"
+        publishedTime={post.created_at}
+        modifiedTime={post.updated_at}
+        author="COIREA"
+      />
+      <StructuredData 
+        type="article"
+        data={{
+          title: post.title,
+          description: post.preview_snippet,
+          image: post.featured_image,
+          url: `https://coirea.com/insights/${post.slug}`,
+          publishedTime: post.created_at,
+          modifiedTime: post.updated_at
+        }}
+      />
+      
+      <div className="min-h-screen bg-background">
+        <Header />
       <main className="pt-20">
         {/* Back Navigation */}
         <section className="py-8 px-6">
@@ -264,7 +290,8 @@ const BlogPost = () => {
         </article>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

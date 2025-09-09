@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/pagination";
 import { supabase } from "@/integrations/supabase/client";
 import { Search } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 
 interface BlogPost {
   id: string;
@@ -128,8 +130,17 @@ const Insights = () => {
   const paginatedPosts = regularPosts.slice(startIndex, endIndex);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <SEOHead
+        title="Insights - Regenerative Organizational Transformation | COIREA"
+        description="Discover insights on regenerative business, conscious leadership, organizational transformation, and purpose-driven company culture. Expert frameworks and real-world discoveries from COIREA's transformational work."
+        keywords="regenerative business insights, conscious leadership, organizational transformation, company culture, purpose-driven business, transformation frameworks, leadership development, sustainable business practices, team culture, organizational health"
+        url="/insights"
+      />
+      <StructuredData type="organization" />
+      
+      <div className="min-h-screen bg-background">
+        <Header />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-6">
@@ -321,7 +332,8 @@ const Insights = () => {
 
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
