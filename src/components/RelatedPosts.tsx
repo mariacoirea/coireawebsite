@@ -74,39 +74,33 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
   }
 
   return (
-    <section className="mt-16 pt-12 border-t border-border mb-16">
-      <div className="max-w-2xl">
-        <h2 className="text-3xl font-display font-bold text-primary mb-4">
+    <section className="mt-12 pt-8 border-t border-border mb-16">
+      <div className="bg-accent/5 rounded-lg p-6 border border-border/50">
+        <h2 className="text-xl font-display font-semibold text-primary mb-4">
           Related Insights
         </h2>
-        <p className="text-muted-foreground mb-8 text-lg">
-          More insights on organizational transformation and leadership
-        </p>
         
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {relatedPosts.map((post, index) => (
-            <article key={post.id} className="group">
-              <Link 
-                to={`/insights/${post.slug}`}
-                className="block"
-              >
-                <div className="flex items-start gap-4 p-6 rounded-lg border border-border/50 hover:border-primary/20 hover:bg-accent/5 transition-all duration-300 hover:shadow-soft">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                    <span className="text-sm font-bold text-primary">{index + 1}</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary/80 transition-colors leading-tight mb-2 pr-4">
-                      {post.title}
-                    </h3>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <span className="px-2 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
-                        {post.cluster}
-                      </span>
-                    </div>
-                  </div>
+            <Link 
+              key={post.id}
+              to={`/insights/${post.slug}`}
+              className="group"
+            >
+              <div className="p-4 bg-background rounded-md border border-border/30 hover:border-primary/30 hover:shadow-soft transition-all duration-300">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary">
+                    {index + 1}
+                  </span>
+                  <span className="px-2 py-0.5 bg-accent/10 text-accent rounded text-xs font-medium">
+                    {post.cluster}
+                  </span>
                 </div>
-              </Link>
-            </article>
+                <h3 className="text-sm font-display font-medium text-primary group-hover:text-primary/80 transition-colors leading-tight line-clamp-3">
+                  {post.title}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
