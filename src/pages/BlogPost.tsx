@@ -147,7 +147,7 @@ const BlogPost = () => {
       <SEOHead
         title={post.seo_title || `${post.title} | COIREA Insights`}
         description={post.meta_description || post.preview_snippet}
-        keywords={`${post.cluster.toLowerCase()}, regenerative business, conscious leadership, organizational transformation, ${post.tags?.join(', ') || ''}`}
+        keywords={`business insights, ${post.cluster.toLowerCase()}, conscious leadership, organizational transformation, leadership development, ${post.tags?.join(', ') || ''}`}
         url={`/insights/${post.slug}`}
         image={post.featured_image || "/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"}
         type="article"

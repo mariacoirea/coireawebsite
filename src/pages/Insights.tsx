@@ -132,9 +132,9 @@ const Insights = () => {
   return (
     <>
       <SEOHead
-        title="Insights - Regenerative Organizational Transformation | COIREA"
-        description="Discover insights on regenerative business, conscious leadership, organizational transformation, and purpose-driven company culture. Expert frameworks and real-world discoveries from COIREA's transformational work."
-        keywords="regenerative business insights, conscious leadership, organizational transformation, company culture, purpose-driven business, transformation frameworks, leadership development, sustainable business practices, team culture, organizational health"
+        title="Business Insights - Organizational Transformation & Leadership | COIREA"
+        description="Expert business insights on organizational transformation, conscious leadership, company culture, and team development. Proven frameworks and strategies from COIREA's transformational work with purpose-driven businesses."
+        keywords="business insights, organizational transformation, conscious leadership, company culture, leadership development, team transformation, business strategy, organizational health, purpose-driven business, workplace culture"
         url="/insights"
       />
       <StructuredData type="organization" />
@@ -146,11 +146,11 @@ const Insights = () => {
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-              Insights
+              Business Insights
             </h1>
             <p className="text-xl text-muted-foreground font-body leading-relaxed">
-              Thoughts, frameworks, and discoveries from our work in regenerative 
-              organizational transformation.
+              Expert frameworks, strategies, and discoveries from our work in 
+              organizational transformation and conscious leadership.
             </p>
           </div>
         </section>
