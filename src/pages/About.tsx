@@ -3,7 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import OptimizedImage from "@/components/OptimizedImage";
+import SEOFAQSection from "@/components/SEOFAQSection";
 import { RelatedContent } from "@/components/InternalLinkingStrategy";
+import { aboutFAQs } from "@/data/faqData";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -294,10 +297,13 @@ const About = () => {
               <div className="flex justify-center">
                 <div className="relative">
                   <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
-                    <img 
+                    <OptimizedImage 
                       src="/lovable-uploads/2627835c-d411-47f1-abb6-99b92bd30341.png" 
-                      alt="Maria Jose Figueroa - Founder of COIREA"
+                      alt="Maria Jose Figueroa - Founder and Conscious Leadership Catalyst of COIREA - Expert in regenerative business transformation and organizational development"
                       className="w-full h-full object-cover"
+                      width={256}
+                      height={256}
+                      priority={false}
                     />
                   </div>
                   {/* Decorative elements */}

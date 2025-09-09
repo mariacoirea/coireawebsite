@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -12,10 +13,13 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/e067195f-6380-4731-875b-50e5cf44f94b.png" 
-                alt="COIREA Logo" 
+                alt="COIREA Logo - Regenerative Business Transformation Consultancy" 
                 className="w-12 h-12"
+                width={48}
+                height={48}
+                priority={true}
               />
               <span className="text-3xl font-display font-semibold">COIREA</span>
             </div>

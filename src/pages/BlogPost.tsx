@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Share2, Linkedin, Mail, Clock } from "lucide-react";
@@ -246,10 +247,13 @@ const BlogPost = () => {
             {/* Featured Image */}
             {post.featured_image && (
               <div className="mb-12">
-                <img
+                <OptimizedImage
                   src={post.featured_image}
-                  alt={post.title}
+                  alt={`${post.title} - COIREA business insights on organizational transformation and conscious leadership`}
                   className="w-full rounded-lg shadow-soft"
+                  width={800}
+                  height={400}
+                  priority={true}
                 />
               </div>
             )}

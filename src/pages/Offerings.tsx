@@ -2,7 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import OptimizedImage from "@/components/OptimizedImage";
+import SEOFAQSection from "@/components/SEOFAQSection";
 import { RelatedContent } from "@/components/InternalLinkingStrategy";
+import { offeringsFAQs } from "@/data/faqData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -795,8 +798,17 @@ const Offerings = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <SEOFAQSection 
+          title="Frequently Asked Questions About Our Transformation Services"
+          faqs={offeringsFAQs}
+        />
+        
         {/* Related Content for Internal Linking */}
-        <RelatedContent currentPage="offerings" />
+        <RelatedContent 
+          currentPage="offerings" 
+          suggestions={["about", "tools", "insights"]}
+        />
 
       </main>
       <Footer />

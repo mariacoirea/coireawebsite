@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Brain, Leaf, Target, Heart, Compass } from "lucide-react";
 import frameworkImage from "@/assets/5-pillar-framework.png";
 
@@ -104,10 +105,13 @@ const PillarsSection = () => {
               
               {/* Framework Image */}
               <div className="flex-1 flex items-center justify-center">
-                <img 
+                <OptimizedImage 
                   src={frameworkImage}
-                  alt="5 Pillar Framework"
+                  alt="COIREA 5 Pillar Framework for Organizational Transformation - Purpose, Leadership, Collaboration, Culture, Well-Being"
                   className="w-full max-w-md rounded-lg"
+                  width={384}
+                  height={288}
+                  priority={false}
                 />
               </div>
             </div>

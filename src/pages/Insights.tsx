@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -197,11 +198,14 @@ const Insights = () => {
                     <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group">
                       {post.featured_image && (
                         <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                          <img 
-                            src={post.featured_image} 
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                          />
+                <OptimizedImage
+                  src={post.featured_image}
+                  alt={`Featured image for ${post.title} - COIREA business insights and organizational transformation`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  width={400}
+                  height={225}
+                  priority={false}
+                />
                         </div>
                       )}
                       <CardHeader>
@@ -261,10 +265,13 @@ const Insights = () => {
                       <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group h-full">
                         {post.featured_image && (
                           <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                            <img 
+                            <OptimizedImage 
                               src={post.featured_image} 
-                              alt={post.title}
+                              alt={`${post.title} - Business insights and organizational transformation by COIREA`}
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                              width={400}
+                              height={225}
+                              priority={false}
                             />
                           </div>
                         )}

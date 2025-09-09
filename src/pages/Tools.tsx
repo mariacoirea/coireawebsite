@@ -2,8 +2,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationalHealthScanner from "@/components/OrganizationalHealthScanner";
-
 import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
+import SEOFAQSection from "@/components/SEOFAQSection";
+import { RelatedContent } from "@/components/InternalLinkingStrategy";
+import { toolsFAQs } from "@/data/faqData";
 
 const Tools = () => {
   return (
@@ -35,6 +38,19 @@ const Tools = () => {
 
           {/* Organizational Health Scanner */}
           <OrganizationalHealthScanner />
+          
+          {/* FAQ Section */}
+          <SEOFAQSection 
+            title="Frequently Asked Questions About Our Assessment Tools"
+            faqs={toolsFAQs}
+            className="bg-warm-beige"
+          />
+          
+          {/* Related Content */}
+          <RelatedContent 
+            currentPage="tools" 
+            suggestions={["offerings", "about", "insights"]}
+          />
         </main>
         <Footer />
       </div>
