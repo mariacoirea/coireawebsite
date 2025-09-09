@@ -22,7 +22,9 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchRelatedPosts();
+    if (currentPostId && currentCluster) {
+      fetchRelatedPosts();
+    }
   }, [currentPostId, currentCluster]);
 
   const fetchRelatedPosts = async () => {
@@ -77,14 +79,14 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
         Related Insights
       </h2>
       
-      <div className="space-y-3">
+      <div className="space-y-4">
         {relatedPosts.map((post) => (
           <Link 
             key={post.id} 
             to={`/insights/${post.slug}`}
-            className="block hover:text-primary/80 transition-colors group"
+            className="block group"
           >
-            <h3 className="text-lg font-display font-medium text-primary group-hover:underline leading-relaxed">
+            <h3 className="text-lg font-display font-medium text-primary hover:text-primary/80 group-hover:underline leading-relaxed transition-colors">
               {post.title}
             </h3>
           </Link>
