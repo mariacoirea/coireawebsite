@@ -11,6 +11,7 @@ import DOMPurify from 'dompurify';
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 
 interface BlogPost {
@@ -283,7 +284,7 @@ const BlogPost = () => {
 
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t border-border mb-12">
+              <div className="mt-12 pt-8 border-t border-border">
                 <h3 className="text-sm font-body font-semibold text-muted-foreground mb-6 uppercase tracking-wide">
                   Tags
                 </h3>
@@ -296,6 +297,13 @@ const BlogPost = () => {
                 </div>
               </div>
             )}
+
+            {/* Related Posts */}
+            <RelatedPosts 
+              currentPostId={post.id}
+              currentCluster={post.cluster}
+              currentTags={post.tags}
+            />
 
           </div>
         </article>
