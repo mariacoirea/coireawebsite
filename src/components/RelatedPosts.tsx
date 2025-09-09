@@ -27,7 +27,7 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
 
   useEffect(() => {
     fetchRelatedPosts();
-  }, [currentPostId, currentCluster, currentTags]);
+  }, [currentPostId, currentCluster]);
 
   const fetchRelatedPosts = async () => {
     try {
@@ -79,51 +79,80 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
     });
   };
 
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + '...';
+  };
+
   if (loading || relatedPosts.length === 0) {
     return null;
   }
 
   return (
-    <section className="mt-16 pt-8 border-t border-border">
-      <div className="mb-8">
-        <h2 className="text-2xl font-display font-semibold text-primary mb-2">
+    <section className="mt-16 pt-12 border-t border-border">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
           Related Insights
         </h2>
-        <p className="text-muted-foreground">
-          More insights on organizational transformation and leadership
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          More insights on organizational transformation and leadership development
         </p>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relatedPosts.map((post) => (
-          <Link key={post.id} to={`/insights/${post.slug}`}>
-            <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group h-full">
-              {post.featured_image && (
-                <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {relatedPosts.map((post, index) => (
+          <Link key={post.id} to={`/insights/${post.slug}`} className="group">
+            <Card className="bg-card shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer h-full border-0 overflow-hidden group-hover:-translate-y-1">
+              {post.featured_image ? (
+                <div className="aspect-[16/9] bg-muted overflow-hidden relative">
                   <img 
                     src={post.featured_image} 
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              ) : (
+                <div className="aspect-[16/9] bg-gradient-to-br from-primary/5 to-accent/10 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <div className="w-6 h-6 bg-primary/20 rounded-full" />
+                    </div>
+                    <p className="text-xs text-muted-foreground font-medium">Insight</p>
+                  </div>
                 </div>
               )}
-              <CardHeader className="pb-3">
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="secondary" className="bg-accent/10 text-accent text-xs">
+              
+              <CardHeader className="pb-4 pt-6 px-6">
+                <div className="flex items-center justify-between mb-3">
+                  <Badge 
+                    variant="secondary" 
+                    className="bg-primary/8 text-primary border-primary/20 text-xs font-medium px-2 py-1"
+                  >
                     {post.cluster}
                   </Badge>
-                  <span className="text-xs text-muted-foreground">
+                  <time className="text-xs text-muted-foreground font-medium" dateTime={post.created_at}>
                     {formatDate(post.created_at)}
-                  </span>
+                  </time>
                 </div>
-                <CardTitle className="text-lg font-display text-primary group-hover:text-primary/80 transition-colors line-clamp-2">
-                  {post.title}
+                <CardTitle className="text-xl font-display font-semibold text-primary group-hover:text-primary/90 transition-colors line-height-tight leading-tight mb-3">
+                  {truncateText(post.title, 60)}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-foreground/80 font-body leading-relaxed line-clamp-3">
-                  {post.preview_snippet}
+              
+              <CardContent className="px-6 pb-6 pt-0">
+                <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                  {truncateText(post.preview_snippet, 120)}
                 </p>
+                
+                <div className="mt-4 pt-4 border-t border-border/50">
+                  <span className="inline-flex items-center text-xs font-medium text-primary group-hover:text-primary/80 transition-colors">
+                    Read more
+                    <svg className="ml-1 w-3 h-3 transition-transform group-hover:translate-x-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
               </CardContent>
             </Card>
           </Link>
