@@ -89,9 +89,6 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
             >
               <div className="p-4 bg-background rounded-md border border-border/30 hover:border-primary/30 hover:shadow-soft transition-all duration-300">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary">
-                    {index + 1}
-                  </span>
                   <span className="px-2 py-0.5 bg-accent/10 text-accent rounded text-xs font-medium">
                     {post.cluster}
                   </span>
