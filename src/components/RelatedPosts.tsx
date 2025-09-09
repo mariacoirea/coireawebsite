@@ -17,7 +17,7 @@ interface RelatedPostsProps {
   limit?: number;
 }
 
-const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit = 5 }: RelatedPostsProps) => {
+const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit = 3 }: RelatedPostsProps) => {
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -74,23 +74,41 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
   }
 
   return (
-    <section className="mt-12 pt-8 border-t border-border mb-16">
-      <h2 className="text-2xl font-display font-semibold text-primary mb-6">
-        Related Insights
-      </h2>
-      
-      <div className="space-y-4">
-        {relatedPosts.map((post) => (
-          <Link 
-            key={post.id} 
-            to={`/insights/${post.slug}`}
-            className="block group"
-          >
-            <h3 className="text-lg font-display font-medium text-primary hover:text-primary/80 group-hover:underline leading-relaxed transition-colors">
-              {post.title}
-            </h3>
-          </Link>
-        ))}
+    <section className="mt-16 pt-12 border-t border-border mb-16">
+      <div className="max-w-2xl">
+        <h2 className="text-3xl font-display font-bold text-primary mb-4">
+          Related Insights
+        </h2>
+        <p className="text-muted-foreground mb-8 text-lg">
+          More insights on organizational transformation and leadership
+        </p>
+        
+        <div className="space-y-6">
+          {relatedPosts.map((post, index) => (
+            <article key={post.id} className="group">
+              <Link 
+                to={`/insights/${post.slug}`}
+                className="block"
+              >
+                <div className="flex items-start gap-4 p-6 rounded-lg border border-border/50 hover:border-primary/20 hover:bg-accent/5 transition-all duration-300 hover:shadow-soft">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
+                    <span className="text-sm font-bold text-primary">{index + 1}</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-display font-semibold text-primary group-hover:text-primary/80 transition-colors leading-tight mb-2 pr-4">
+                      {post.title}
+                    </h3>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <span className="px-2 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
+                        {post.cluster}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
