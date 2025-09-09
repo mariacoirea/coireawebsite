@@ -5,11 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Share2, Linkedin, Mail } from "lucide-react";
+import { ArrowLeft, Share2, Linkedin, Mail, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import DOMPurify from 'dompurify';
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedPosts from "@/components/RelatedPosts";
+import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 
 interface BlogPost {
   id: string;
@@ -32,6 +35,7 @@ const BlogPost = () => {
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+  const [readingTime, setReadingTime] = useState<number>(0);
 
   useEffect(() => {
     if (slug) {
@@ -56,6 +60,10 @@ const BlogPost = () => {
         }
       } else {
         setPost(data);
+        // Calculate reading time
+        const estimatedTime = calculateReadingTime(data.body_content);
+        setReadingTime(estimatedTime);
+        
         // Update document title and meta description
         if (data.seo_title) {
           document.title = data.seo_title;
@@ -145,9 +153,9 @@ const BlogPost = () => {
   return (
     <>
       <SEOHead
-        title={post.seo_title || `${post.title} | COIREA Insights`}
-        description={post.meta_description || post.preview_snippet}
-        keywords={`business insights, ${post.cluster.toLowerCase()}, conscious leadership, organizational transformation, leadership development, ${post.tags?.join(', ') || ''}`}
+        title={post.seo_title || `${post.title} | Expert Business Insights | COIREA`}
+        description={post.meta_description || `${post.preview_snippet.substring(0, 140)}... | ${formatReadingTime(readingTime)} | Expert insights on ${post.cluster.toLowerCase()}`}
+        keywords={`business insights, ${post.cluster.toLowerCase()}, conscious leadership, organizational transformation, leadership development, business strategy, ${post.tags?.join(', ') || ''}`}
         url={`/insights/${post.slug}`}
         image={post.featured_image || "/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"}
         type="article"
@@ -170,15 +178,15 @@ const BlogPost = () => {
       <div className="min-h-screen bg-background">
         <Header />
       <main className="pt-20">
-        {/* Back Navigation */}
+        {/* Breadcrumbs */}
         <section className="py-8 px-6">
           <div className="container mx-auto max-w-4xl">
-            <Link to="/insights">
-              <Button variant="ghost" className="mb-8">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Insights
-              </Button>
-            </Link>
+            <Breadcrumbs 
+              items={[
+                { label: "Business Insights", href: "/insights" },
+                { label: post.title }
+              ]} 
+            />
           </div>
         </section>
 
@@ -199,6 +207,10 @@ const BlogPost = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-8 border-b border-border">
               <div className="flex items-center gap-4 mb-4 sm:mb-0">
                 <span className="text-muted-foreground font-body">{formatDate(post.created_at)}</span>
+                <div className="flex items-center gap-1 text-muted-foreground">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm font-body">{formatReadingTime(readingTime)}</span>
+                </div>
               </div>
               
               {/* Share Buttons */}
@@ -272,7 +284,7 @@ const BlogPost = () => {
 
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t border-border mb-12">
+              <div className="mt-12 pt-8 border-t border-border">
                 <h3 className="text-sm font-body font-semibold text-muted-foreground mb-6 uppercase tracking-wide">
                   Tags
                 </h3>
@@ -285,6 +297,13 @@ const BlogPost = () => {
                 </div>
               </div>
             )}
+
+            {/* Related Posts */}
+            <RelatedPosts 
+              currentPostId={post.id}
+              currentCluster={post.cluster}
+              currentTags={post.tags}
+            />
 
           </div>
         </article>
