@@ -8,9 +8,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
-import SEOFAQSection from "@/components/SEOFAQSection";
-import { RelatedContent } from "@/components/InternalLinkingStrategy";
-import { homepageFAQs } from "@/data/faqData";
 
 const Index = () => {
   return (
@@ -22,7 +19,6 @@ const Index = () => {
         url="/"
       />
       <StructuredData type="organization" />
-      <StructuredData type="faq" data={{ questions: homepageFAQs }} />
       
       <div className="min-h-screen bg-background">
         <Header />
@@ -32,19 +28,6 @@ const Index = () => {
           <FivePillarFrameworkSection />
           <ServicesSection />
           <TestimonialsSection />
-          
-          {/* FAQ Section for Homepage */}
-          <SEOFAQSection 
-            title="Frequently Asked Questions About Organizational Transformation"
-            faqs={homepageFAQs}
-            className="bg-gradient-subtle"
-          />
-          
-          {/* Related Content */}
-          <RelatedContent 
-            currentPage="home" 
-            suggestions={["offerings", "tools", "about"]}
-          />
         </main>
         <Footer />
       </div>
