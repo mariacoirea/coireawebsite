@@ -21,9 +21,10 @@ const Header = () => {
                 src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
                 alt="COIREA - Conscious Leadership & Regenerative Business Transformation Logo" 
                 className="h-12 w-auto"
-                width={180}
+                width={150}
                 height={48}
                 priority={true}
+                sizes="150px"
               />
             </Link>
           </div>

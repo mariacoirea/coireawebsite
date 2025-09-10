@@ -41,6 +41,7 @@ const Hero = () => {
             width={96}
             height={96}
             priority={true}
+            sizes="96px"
           />
         </div>
 
