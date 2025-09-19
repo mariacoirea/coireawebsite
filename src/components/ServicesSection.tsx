@@ -50,7 +50,7 @@ const transformationalPrograms = [
       "Define or refine company purpose, vision, and strategic priorities",
       "Align leadership on one clear playbook",
       "Redesign org structure & workflows to support growth",
-      "Set and track EOS-style quarterly Rocks with accountability",
+      "Set and track quarterly Projects with accountability",
       "Measurable efficiency gains in decision-making and execution"
     ],
     coreElements: [

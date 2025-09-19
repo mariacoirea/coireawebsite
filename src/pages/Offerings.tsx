@@ -610,7 +610,7 @@ const Offerings = () => {
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Set and track EOS-style quarterly Rocks with accountability</span>
+                      <span className="text-muted-foreground text-sm">Set and track quarterly Projects with accountability</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
