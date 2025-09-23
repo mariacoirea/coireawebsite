@@ -62,6 +62,13 @@ const FivePillarFrameworkSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Intro Text from Assessment */}
+        <div className="text-center mb-8 animate-fade-in">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            If you hesitated on the questions and see yourself in the numbers, your organization is likely running on less capacity and clarity than it could.
+          </p>
+        </div>
+
         <header className="mx-auto max-w-4xl text-center animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
             The Regenerative Operating System (ROS)
