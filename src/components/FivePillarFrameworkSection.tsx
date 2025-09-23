@@ -62,7 +62,7 @@ const FivePillarFrameworkSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <header className="mx-auto max-w-4xl text-center animate-fade-in">
+        <header className="mx-auto max-w-6xl text-center animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
             The Regenerative Operating System (ROS)
           </h1>
