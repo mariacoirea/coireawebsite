@@ -198,229 +198,6 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* 5-Pillar Framework Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-6 max-w-6xl">
-            {/* Framework Header */}
-            <div className="text-center mb-16">
-              <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-6">
-                 The Regenerative Operating System (ROS)
-              </h3>
-              <div className="space-y-4 text-muted-foreground max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl leading-relaxed">
-                  Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
-                </p>
-                <p className="text-base md:text-lg leading-relaxed">
-                  Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
-                </p>
-              </div>
-            </div>
-
-
-            {/* Framework Pillars Grid (replaces image) */}
-            <div className="mb-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                {corePillars.map(({ title, subtitle, description, Icon }, i) => (
-                  <Card
-                    key={title}
-                    className="h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5"
-                  >
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center justify-center">
-                        <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 flex items-center justify-center">
-                          <Icon className="h-6 w-6" aria-hidden="true" />
-                        </div>
-                      </div>
-                      <CardTitle className="mt-4 text-center text-lg text-foreground">{title}</CardTitle>
-                      <p className="text-center text-sm text-muted-foreground">{subtitle}</p>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* KPI Measurement Section */}
-            <div className="text-center">
-              {/* KPI Measurement Grid */}
-              <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg max-w-6xl mx-auto">
-                <h4 className="text-xl font-display font-semibold text-primary mb-6">
-                  Measurement + KPI Tracking
-                </h4>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {kpiMetrics.map((metric, index) => {
-                    const IconComponent = metric.icon;
-                    return (
-                      <div key={index} className="flex items-start gap-4 p-4 bg-background/50 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300">
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <IconComponent className="w-5 h-5 text-primary" />
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-primary text-sm mb-1">{metric.title}</h5>
-                          <p className="text-xs text-muted-foreground">{metric.description}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Dashboard Introduction Section */}
-        <section className="py-24 bg-warm-beige">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-12">
-                How Do We Track It in Real Time?
-              </h2>
-              <div className="max-w-6xl mx-auto mb-12">
-                <p className="text-lg text-muted-foreground font-body mb-6">
-                  Welcome to the COIREA Evolution Dashboard — where AI meets Human Intelligence, and insight becomes action.
-                  Track how your organization evolves across the five core pillars of regenerative business. Blending methodologies like surveys, interviews, behavioral metrics, and well-being diagnostics, this dashboard turns qualitative and quantitative data into clear, strategic guidance.
-                </p>
-                <p className="text-lg text-muted-foreground font-body">
-                  It's more than a snapshot — it's a living compass for sustainable, people-centered growth.
-                </p>
-              </div>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
-            </div>
-
-            {/* Dashboard Mockup with Left Sidebar - Performance optimized */}
-            <div 
-              className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto will-change-transform contain-layout"
-              style={{
-                contentVisibility: 'auto',
-                containIntrinsicSize: '100% 600px'
-              }}
-            >
-              <div className="flex">
-                {/* Left Sidebar */}
-                <div className="w-64 bg-aura-pearl border-r border-primary/10 p-6">
-                  <div className="mb-8">
-                    <h3 className="text-lg font-display font-bold text-primary mb-2">COIREA</h3>
-                    <p className="text-sm text-primary/60">Evolution Dashboard</p>
-                  </div>
-                  
-                  <nav className="space-y-2">
-                    {[
-                      { name: "Overview", active: true, icon: BarChart3 },
-                      { name: "5 Pillars", active: false, icon: Target },
-                      { name: "Team Insights", active: false, icon: Users },
-                      { name: "Leadership", active: false, icon: Brain },
-                      { name: "Culture Metrics", active: false, icon: Heart },
-                      { name: "Well-being", active: false, icon: Shield },
-                      { name: "Reports", active: false, icon: TrendingUp }
-                    ].map((item, index) => {
-                      const IconComponent = item.icon;
-                      return (
-                        <div key={index} className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${
-                          item.active 
-                            ? 'bg-sage/10 text-sage border border-sage/20' 
-                            : 'text-primary/60 hover:bg-primary/5'
-                        }`}>
-                          <IconComponent className="w-4 h-4" />
-                          <span className="text-sm font-medium">{item.name}</span>
-                        </div>
-                      );
-                    })}
-                  </nav>
-                </div>
-
-                {/* Main Dashboard Content */}
-                <div className="flex-1">
-                  {/* Dashboard Header */}
-                  <div className="p-6 border-b border-primary/10">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-2xl font-display font-bold text-primary">Overview</h3>
-                        <p className="text-primary/70">Real-time organizational health metrics</p>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-2">
-                          <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
-                          <span className="text-sm text-primary/60">Vitality: High</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Dashboard Content */}
-                  <div className="p-8">
-                    <div className="mb-8">
-                      <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
-                      <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
-                      
-                      {/* Main Score Circle */}
-                      <div className="flex justify-center mb-8">
-                        <div className="relative w-32 h-32">
-                          <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
-                          <svg className="w-32 h-32 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
-                            <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                          </svg>
-                          <div className="absolute inset-0 flex items-center justify-center z-20">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-primary">52.6</div>
-                              <div className="text-xs text-primary/60">Vitality Score</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* 5 Pillars Metrics */}
-                    <div className="grid grid-cols-5 gap-3">
-                      {[
-                        { name: "Purpose", score: 46, color: "olive-green", description: "Clarity & storytelling" },
-                        { name: "Leadership", score: 52, color: "sage", description: "Presence & feedback" },
-                        { name: "Collaboration", score: 50, color: "copper", description: "Trust & flow" },
-                        { name: "Culture", score: 54, color: "primary", description: "Values alignment" },
-                        { name: "Well-Being", score: 59, color: "olive-green", description: "Energy & resilience" }
-                      ].map((pillar, index) => (
-                        <div key={index} className="text-center">
-                          <div className={`w-10 h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
-                            <span className={`text-${pillar.color} font-bold text-sm`}>{pillar.score}</span>
-                          </div>
-                          <h5 className="font-semibold text-primary text-xs mb-1">{pillar.name}</h5>
-                          <p className="text-xs text-muted-foreground leading-tight">{pillar.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Harvard Quote */}
-          <div className="text-center mt-16">
-            <div className="max-w-4xl mx-auto">
-              {/* Simple border accent */}
-              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
-              
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
-                "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
-              </blockquote>
-              
-              <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
-                — Harvard Business Review
-              </cite>
-              
-              {/* Simple border accent */}
-              <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
-            </div>
-          </div>
-        </section>
-
         {/* 90-Day Reset Programs Section */}
         <section className="py-24 bg-[#f8f8f8]">
           <div className="container mx-auto px-6 max-w-6xl">
@@ -650,9 +427,80 @@ const Offerings = () => {
               <div className="w-32 h-0.5 bg-gradient-to-r from-sage to-copper mx-auto"></div>
             </div>
 
+            {/* 5-Pillar Framework Integration */}
+            <div className="mb-20">
+              <div className="text-center mb-16">
+                <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-6">
+                   The Regenerative Operating System (ROS)
+                </h3>
+                <div className="space-y-4 text-muted-foreground max-w-4xl mx-auto">
+                  <p className="text-lg md:text-xl leading-relaxed">
+                    Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed">
+                    Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
+                  </p>
+                </div>
+              </div>
+
+              {/* Framework Pillars Grid */}
+              <div className="mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                  {corePillars.map(({ title, subtitle, description, Icon }, i) => (
+                    <Card
+                      key={title}
+                      className="h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5"
+                    >
+                      <CardHeader className="pb-4">
+                        <div className="flex items-center justify-center">
+                          <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 flex items-center justify-center">
+                            <Icon className="h-6 w-6" aria-hidden="true" />
+                          </div>
+                        </div>
+                        <CardTitle className="mt-4 text-center text-lg text-foreground">{title}</CardTitle>
+                        <p className="text-center text-sm text-muted-foreground">{subtitle}</p>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* KPI Measurement Section */}
+              <div className="text-center">
+                <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-8 shadow-lg max-w-6xl mx-auto">
+                  <h4 className="text-xl font-display font-semibold text-primary mb-6">
+                    Measurement + KPI Tracking
+                  </h4>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {kpiMetrics.map((metric, index) => {
+                      const IconComponent = metric.icon;
+                      return (
+                        <div key={index} className="flex items-start gap-4 p-4 bg-background/50 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300">
+                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <IconComponent className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <h5 className="font-semibold text-primary text-sm mb-1">{metric.title}</h5>
+                            <p className="text-xs text-muted-foreground">{metric.description}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Key Areas Section */}
             <div className="max-w-6xl mx-auto">
-              <h3 className="text-2xl font-display font-bold text-primary mb-8 text-center">Key Areas</h3>
+              <h3 className="text-2xl font-display font-bold text-primary mb-8 text-center">Key Areas of Integration</h3>
               
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-sage/10 hover:border-sage/20 transition-all duration-300">
@@ -682,6 +530,144 @@ const Offerings = () => {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* Dashboard Introduction Section */}
+        <section className="py-24 bg-warm-beige">
+          <div className="container mx-auto px-6 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-12">
+                How Do We Track It in Real Time?
+              </h2>
+              <div className="max-w-6xl mx-auto mb-12">
+                <p className="text-lg text-muted-foreground font-body mb-6">
+                  Welcome to the COIREA Evolution Dashboard — where AI meets Human Intelligence, and insight becomes action.
+                  Track how your organization evolves across the five core pillars of regenerative business. Blending methodologies like surveys, interviews, behavioral metrics, and well-being diagnostics, this dashboard turns qualitative and quantitative data into clear, strategic guidance.
+                </p>
+                <p className="text-lg text-muted-foreground font-body">
+                  It's more than a snapshot — it's a living compass for sustainable, people-centered growth.
+                </p>
+              </div>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
+            </div>
+
+            {/* Dashboard Mockup with Left Sidebar */}
+            <div className="bg-white border border-primary/10 rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
+              <div className="flex">
+                {/* Left Sidebar */}
+                <div className="w-64 bg-aura-pearl border-r border-primary/10 p-6">
+                  <div className="mb-8">
+                    <h3 className="text-lg font-display font-bold text-primary mb-2">COIREA</h3>
+                    <p className="text-sm text-primary/60">Evolution Dashboard</p>
+                  </div>
+                  
+                  <nav className="space-y-2">
+                    {[
+                      { name: "Overview", active: true, icon: BarChart3 },
+                      { name: "5 Pillars", active: false, icon: Target },
+                      { name: "Team Insights", active: false, icon: Users },
+                      { name: "Leadership", active: false, icon: Brain },
+                      { name: "Culture Metrics", active: false, icon: Heart },
+                      { name: "Well-being", active: false, icon: Shield },
+                      { name: "Reports", active: false, icon: TrendingUp }
+                    ].map((item, index) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <div key={index} className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${
+                          item.active 
+                            ? 'bg-sage/10 text-sage border border-sage/20' 
+                            : 'text-primary/60 hover:bg-primary/5'
+                        }`}>
+                          <IconComponent className="w-4 h-4" />
+                          <span className="text-sm font-medium">{item.name}</span>
+                        </div>
+                      );
+                    })}
+                  </nav>
+                </div>
+
+                {/* Main Dashboard Content */}
+                <div className="flex-1">
+                  {/* Dashboard Header */}
+                  <div className="p-6 border-b border-primary/10">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-2xl font-display font-bold text-primary">Overview</h3>
+                        <p className="text-primary/70">Real-time organizational health metrics</p>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 bg-sage rounded-full animate-pulse"></div>
+                          <span className="text-sm text-primary/60">Vitality: High</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Dashboard Content */}
+                  <div className="p-8">
+                    <div className="mb-8">
+                      <h4 className="text-xl font-display font-semibold text-primary mb-2">Organizational Vitality Index (OVI)</h4>
+                      <p className="text-primary/60 mb-6">Real-time pulse of organizational health</p>
+                      
+                      {/* Main Score Circle */}
+                      <div className="flex justify-center mb-8">
+                        <div className="relative w-32 h-32">
+                          <div className="absolute inset-0 bg-gradient-to-br from-sage/10 to-primary/5 rounded-full"></div>
+                          <svg className="w-32 h-32 transform -rotate-90 relative z-10" viewBox="0 0 36 36">
+                            <path className="text-primary/10" strokeWidth="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path className="text-sage" strokeWidth="3" strokeDasharray="52.6, 100" strokeLinecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                          </svg>
+                          <div className="absolute inset-0 flex items-center justify-center z-20">
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-primary">52.6</div>
+                              <div className="text-xs text-primary/60">Vitality Score</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 5 Pillars Metrics */}
+                    <div className="grid grid-cols-5 gap-3">
+                      {[
+                        { name: "Purpose", score: 46, color: "olive-green", description: "Clarity & storytelling" },
+                        { name: "Leadership", score: 52, color: "sage", description: "Presence & feedback" },
+                        { name: "Collaboration", score: 50, color: "copper", description: "Trust & flow" },
+                        { name: "Culture", score: 54, color: "primary", description: "Values alignment" },
+                        { name: "Well-Being", score: 59, color: "olive-green", description: "Energy & resilience" }
+                      ].map((pillar, index) => (
+                        <div key={index} className="text-center">
+                          <div className={`w-10 h-10 bg-${pillar.color}/10 rounded-lg mx-auto mb-2 flex items-center justify-center border border-${pillar.color}/20`}>
+                            <span className={`text-${pillar.color} font-bold text-sm`}>{pillar.score}</span>
+                          </div>
+                          <h5 className="font-semibold text-primary text-xs mb-1">{pillar.name}</h5>
+                          <p className="text-xs text-muted-foreground leading-tight">{pillar.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Harvard Quote */}
+          <div className="text-center mt-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
+              
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-primary leading-tight mb-6 italic">
+                "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years."
+              </blockquote>
+              
+              <cite className="text-base md:text-lg font-body text-primary/70 not-italic font-medium">
+                — Harvard Business Review
+              </cite>
+              
+              <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-sage mx-auto mt-8"></div>
+            </div>
           </div>
         </section>
 
