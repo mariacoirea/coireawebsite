@@ -11,41 +11,41 @@ export const pillars: {
 }[] = [
   {
     title: "Purpose & Culture",
-    subtitle: "Turn vision into a company people believe in",
+    subtitle: "The Compass & Field",
     description:
-      "Your purpose isn't a slide deck — it's the fuel for growth. We help you weave it into everyday decisions, so culture becomes your competitive edge.",
+      "Turn vision into belonging. Purpose and culture set the tone for everything: why you exist and what it feels like to work here. We weave your values and vision into daily practices, creating a coherent field that people trust and want to belong to.",
     drives: "Team alignment, talent retention, brand trust.",
     Icon: Target,
   },
   {
     title: "Leadership",
-    subtitle: "Build leaders people want to follow",
+    subtitle: "The Tone Setter",
     description:
-      "A company rises or falls on the quality of its leadership. We help you shape leaders who are decisive, values-led, and able to inspire through change.",
-    drives: "Strategic execution, trust, innovation.",
+      "Build leaders who inspire through change. Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
+    drives: "Strategic execution, innovation, cultural trust.",
     Icon: Crown,
   },
   {
     title: "Collaboration",
-    subtitle: "Unlock the power of your teams",
+    subtitle: "The Flow",
     description:
-      "When trust and clarity are in place, collaboration becomes a growth engine. We create the structures and habits that turn silos into synergy.",
+      "Unlock collective intelligence. When trust and clarity are present, collaboration becomes effortless flow. We create systems that remove silos, foster psychological safety, and turn conflict into creativity.",
     drives: "Faster problem-solving, better ideas, stronger execution.",
     Icon: Users,
   },
   {
     title: "Well-Being",
-    subtitle: "Keep your top talent at their best",
+    subtitle: "The Vitality Engine",
     description:
-      "Burnout costs far more than wellness ever will. We design systems that protect your people's energy and creativity while keeping performance high.",
+      "Protect human energy as a strategic asset. Well-being is not a perk—it's the foundation of performance. We embed regenerative practices that sustain focus, creativity, and resilience across the whole team.",
     drives: "Productivity, retention, sustainable growth.",
     Icon: Heart,
   },
   {
     title: "Organizational Strategy",
-    subtitle: "Make your business adaptable",
+    subtitle: "The Backbone",
     description:
-      "Markets shift. Teams grow. Priorities compete. We design the adaptive structures, clear decision pathways, and self-organizing operations that give you the backbone to scale.",
+      "Turn vision into reality. Strategy is the structural spine of your business. We design adaptive systems, regenerative KPIs, and decision-making architectures that keep your organization agile and aligned with its deeper purpose.",
     drives: "Scalability, efficiency, resilience.",
     Icon: Layers,
   },
@@ -64,11 +64,20 @@ const FivePillarFrameworkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <header className="mx-auto max-w-4xl text-center animate-fade-in">
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
-            The COIREA Core Framework
+            The Regenerative Operating System (ROS)
           </h1>
           <h2 className="mt-4 text-base md:text-lg text-muted-foreground">
-            As organizations grow, complexity rises — priorities compete, alignment slips, and momentum is lost. The COIREA Core Framework addresses these challenges by focusing on five forces that define a thriving company: purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Through Structural Foundations, these forces are transformed into practical systems that keep your business aligned, resilient, and positioned to grow with integrity.
+            Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
           </h2>
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            Built on five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+          </p>
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
+          </p>
+          <h3 className="mt-8 text-xl md:text-2xl font-medium text-foreground">
+            The Five Core Functions of the ROS
+          </h3>
         </header>
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
