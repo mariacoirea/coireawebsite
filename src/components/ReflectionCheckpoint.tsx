@@ -39,7 +39,7 @@ const ReflectionCheckpoint = () => {
           >
             Is Your Core Aligned Enough to Grow?
           </h2>
-          <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-6xl mx-auto leading-relaxed">
             Growth collapses when Purpose, People, and Performance drift apart. When organizations lose sight of their why, when teams become disconnected, and when results no longer reflect values, even the most promising businesses can stagnate. Before you move forward with ambitious plans, it's critical to check your core:
           </p>
         </header>
