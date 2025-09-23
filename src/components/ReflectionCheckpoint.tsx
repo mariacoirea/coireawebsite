@@ -8,11 +8,12 @@ const questions = [
 ];
 
 const dataPoints = [
-  { stat: "72%", description: "higher engagement with strong culture" },
-  { stat: "40%", description: "lower turnover with strong culture" },
-  { stat: "72%", description: "of leaders lack clarity on purpose" },
-  { stat: "39%", description: "of employees say well-being isn't prioritized" },
-  { stat: "60%", description: "of teams report weak trust" },
+  { stat: "77%", description: "of employees are disengaged at work", source: "Gallup 2024" },
+  { stat: "$8.9T", description: "global economic cost of low engagement", source: "Gallup 2024" },
+  { stat: "72%", description: "higher engagement with strong culture", source: "Deloitte" },
+  { stat: "40%", description: "lower turnover with strong culture", source: "Deloitte" },
+  { stat: "72%", description: "of leaders lack clarity on purpose", source: "COIREA" },
+  { stat: "33%", description: "of employees are thriving in well-being", source: "Gallup 2024" },
 ];
 
 const ReflectionCheckpoint = () => {
@@ -66,13 +67,13 @@ const ReflectionCheckpoint = () => {
             <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
               The Data Speaks:
             </h3>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Companies with strong culture see 72% higher engagement and 40% lower turnover (Deloitte).
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+              Low engagement costs the global economy $8.9 trillion annually—that's 9% of global GDP lost to stagnation, turnover, and burnout.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {dataPoints.map(({ stat, description }, idx) => (
+            {dataPoints.map(({ stat, description, source }, idx) => (
               <div
                 key={idx}
                 className="text-center p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 animate-fade-in"
@@ -81,8 +82,11 @@ const ReflectionCheckpoint = () => {
                 <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">
                   {stat}
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-1">
                   {description}
+                </p>
+                <p className="text-xs text-muted-foreground/70 italic">
+                  {source}
                 </p>
               </div>
             ))}
