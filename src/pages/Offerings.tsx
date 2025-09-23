@@ -78,7 +78,7 @@ const Offerings = () => {
       badge: "Signature Program",
       duration: "6–18 months",
       timeframe: "",
-      description: "A complete upgrade for your organization. We embed the Regenerative Operating System across all five core functions, transforming complexity into coherence. The result: a business designed to thrive, scale, and grow without extraction.",
+      description: "A complete upgrade for your organization. We embed the ROS across all five core functions, transforming complexity into coherence so your business can thrive, scale, and grow without extraction.\n\nWe offer strategic support by stepping in as fractional leaders to co-design and implement systems that lasts.",
       keyAreas: [
         "Purpose & Culture Integration",
         "Conscious & Values-Driven Leadership", 
