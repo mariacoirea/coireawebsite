@@ -187,11 +187,8 @@ const Offerings = () => {
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-8">
               Most companies scale by draining their people and diluting their purpose. We believe growth can happen differently: regenerative, coherent, and human-centered.
             </p>
-            <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-8">
-              Systems today are misaligned. People are burned out. Leadership is ready to evolve. The COIREA Operating System regenerates the heart of organizations while tracking what truly moves the needle.
-            </p>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
-              At the core of COIREA's work lies a living operating system that evolves with your company. It restores clarity, coherence, and long-term vitality from the inside out — proving that regenerative growth is not only possible, but measurable.
+              Systems today are misaligned. People are burned out. Leadership is ready to evolve. At the core of COIREA's work lies a living operating system that evolves with your company. It restores People, Performance and Purpose from the inside out — proving that regenerative growth is not only possible, but measurable.
             </p>
             <Button size="lg" className="bg-olive-green hover:bg-olive-green/90 text-white px-8 py-4 text-lg">
               Discover Your Path Forward
