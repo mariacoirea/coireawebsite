@@ -180,17 +180,18 @@ const Offerings = () => {
         >
           <div className="container mx-auto px-6 text-center max-w-6xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary mb-8 leading-tight">
-              We Don't Offer Quick Fixes —
+              We Rewire Organizations —
               <br />
-              <span className="text-olive-green">We Rewire Organizations</span>
+              <span className="text-olive-green">Growth Can Be Non-Extractive</span>
             </h1>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-8">
-              Systems are misaligned. People are burned out. Leadership is ready to evolve.
-              This framework was designed to regenerate the heart of organizations by bridging purpose, culture, and human vitality — all while tracking what truly moves the needle.
+              Most companies scale by draining their people and diluting their purpose. We believe growth can happen differently: regenerative, coherent, and human-centered.
+            </p>
+            <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-8">
+              Systems today are misaligned. People are burned out. Leadership is ready to evolve. The COIREA Operating System regenerates the heart of organizations while tracking what truly moves the needle.
             </p>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
-              At the core of COIREA's work lies a dynamic framework that evolves with your company. 
-              Our 5-Pillar System restores clarity, coherence, and long-term vitality from the inside out.
+              At the core of COIREA's work lies a living operating system that evolves with your company. It restores clarity, coherence, and long-term vitality from the inside out — proving that regenerative growth is not only possible, but measurable.
             </p>
             <Button size="lg" className="bg-olive-green hover:bg-olive-green/90 text-white px-8 py-4 text-lg">
               Discover Your Path Forward
