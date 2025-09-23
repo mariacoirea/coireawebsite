@@ -90,7 +90,7 @@ const Offerings = () => {
     },
     {
       id: 2,
-      title: "Leadership Coaching",
+      title: "Supportive Leadership Coaching",
       badge: "1:1 Guidance", 
       duration: "3–12 months",
       timeframe: "",
