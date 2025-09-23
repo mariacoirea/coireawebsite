@@ -3,33 +3,19 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Heart, Zap, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// 90-Day Transformational Programs
-const transformationalPrograms = [
+// 90-Day Reset Programs
+const resetPrograms = [
   {
     icon: Heart,
-    title: "Collaboration & Leadership Reset",
-    subtitle: "When your team feels disconnected, performance slips.",
-    idealFor: "Founders/CEOs who sense their team is losing trust, collaboration is weak, or leadership isn't aligned — and it's starting to cost results.",
-    painPoints: [
-      "Silent tension in meetings or lack of open dialogue",
-      "New hires not fully integrating into the culture",
-      "Roles and responsibilities unclear → accountability gaps",
-      "Leadership sending mixed signals, slowing decisions",
-      "Performance reviews inconsistent or missing"
-    ],
+    title: "Collaboration Reset",
+    subtitle: "When teams lose connection, performance suffers.",
+    idealFor: "Founders/CEOs sensing their team is misaligned, collaboration feels heavy, roles and responsibilities are not clear.",
     outcomes: [
-      "Rebuild trust and collaboration across the team",
+      "Rebuild trust and collaboration across teams",
       "Clarify leadership roles and decision-making authority",
       "Establish cultural practices and habits that scale",
       "Design a performance system that drives growth",
-      "Measurable before/after shift in collaboration & leadership alignment"
-    ],
-    coreElements: [
-      "Culture & Leadership Assessment", 
-      "Role & Responsibility Mapping", 
-      "Leadership Mentoring", 
-      "Team Collaboration Workshops", 
-      "Performance Review Framework"
+      "Measure shifts in collaboration and leadership alignment before/after"
     ],
     iconColor: "sage",
     badgeColor: "sage"
@@ -37,31 +23,32 @@ const transformationalPrograms = [
   {
     icon: Zap,
     title: "Scale with Purpose",
-    subtitle: "When structure and purpose don't align, scaling turns to chaos.",
-    idealFor: "Founders/CEOs whose company is growing fast but struggling with messy operations, unclear priorities, or a vision that feels diluted.",
-    painPoints: [
-      "Leadership team not aligned on purpose or direction",
-      "Priorities keep shifting, goals rarely hit",
-      "No clear meeting cadence → slow decisions",
-      "Everyone is busy, but execution feels scattered",
-      "Scaling fast but losing the company's original DNA"
-    ],
+    subtitle: "When structure and purpose don't align, growth turns chaotic.",
+    idealFor: "Founders/CEOs whose company is scaling fast but struggling with messy operations, unclear priorities, or a diluted vision.",
     outcomes: [
       "Define or refine company purpose, vision, and strategic priorities",
       "Align leadership on one clear playbook",
       "Redesign org structure & workflows to support growth",
-      "Set and track quarterly Projects with accountability",
-      "Measurable efficiency gains in decision-making and execution"
-    ],
-    coreElements: [
-      "Purpose & Vision Workshop", 
-      "Operational & Bottleneck Audit", 
-      "Structure & Workflow Design", 
-      "Quarterly Projects", 
-      "Efficiency & Execution Benchmarks"
+      "Set and track quarterly projects with accountability",
+      "Gain measurable efficiency in decision-making and execution"
     ],
     iconColor: "primary",
     badgeColor: "primary"
+  },
+  {
+    icon: Heart,
+    title: "Leadership Reset",
+    subtitle: "When leaders aren't supportive, teams lose direction.",
+    idealFor: "Founders/CEOs who see their leaders struggling with clarity, confidence, or consistency and want to cultivate a culture of conscious and supportive leadership.",
+    outcomes: [
+      "Build executive presence rooted in authenticity and trust",
+      "Strengthen conscious decision-making under pressure",
+      "Develop embodied communication that inspires alignment",
+      "Reconnect leaders with inner clarity to lead with confidence",
+      "Measurable shifts in leadership trust and effectiveness tracked over 90 days"
+    ],
+    iconColor: "copper",
+    badgeColor: "copper"
   }
 ];
 
@@ -93,23 +80,23 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-            90-Day Transformational Programs
+            90-Day Reset Programs
           </h2>
           
           <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
-            Two focused, founder-ready pathways to reset and realign your organization in one quarter — with every shift tracked in real time.
+            Three founder-ready pathways to realign your organization in one quarter, with every shift measured in real time.
           </p>
 
           <p className="text-lg text-muted-foreground/80 font-body max-w-4xl mx-auto mb-8">
-            Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations. In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard, so you know exactly what's working, and where to focus next.
+            Scaling doesn't have to mean losing clarity or culture. Our 90-day resets are designed for founders and CEOs who need fast but meaningful change in leadership, collaboration, and strategy. In just one quarter, we help you reset your organization's core dynamics and track progress through the COIREA Dashboard, so you see exactly what's shifting, and where to focus next.
           </p>
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
         </div>
 
-        {/* Two 90-Day Programs */}
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
-          {transformationalPrograms.map((program, index) => {
+        {/* Three 90-Day Programs */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          {resetPrograms.map((program, index) => {
             const IconComponent = program.icon;
             return (
               <Card key={index} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
@@ -137,22 +124,9 @@ const ServicesSection = () => {
                 {/* Ideal For Section */}
                 <div className="mb-6">
                   <h4 className={`text-xs font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
-                  <p className="text-muted-foreground font-body text-sm mb-4">
+                  <p className="text-muted-foreground font-body text-sm">
                     {program.idealFor}
                   </p>
-                  
-                  {/* Pain Points */}
-                  <div className="mt-4">
-                    <h5 className="text-xs font-semibold text-primary/70 mb-2 uppercase tracking-wider">Pain Points</h5>
-                    <ul className="space-y-1.5">
-                      {program.painPoints.map((point, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-muted-foreground text-xs">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
 
                 {/* Outcomes Section */}
@@ -164,18 +138,6 @@ const ServicesSection = () => {
                         <Check className={`w-4 h-4 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
                         <span className="text-muted-foreground text-sm">{outcome}</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Core Elements as Tags */}
-                <div className="mt-auto">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {program.coreElements.map((element, idx) => (
-                      <span key={idx} className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">
-                        {element}
-                      </span>
                     ))}
                   </div>
                 </div>
