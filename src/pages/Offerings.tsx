@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
-import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -788,9 +787,6 @@ const Offerings = () => {
             </div>
           </div>
         </section>
-
-        {/* Related Content for Internal Linking */}
-        <RelatedContent currentPage="offerings" />
 
       </main>
       <Footer />
