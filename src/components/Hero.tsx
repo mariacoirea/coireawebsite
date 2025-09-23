@@ -27,7 +27,7 @@ const Hero = () => {
             <span className="block">the Inside Out</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-6xl mx-auto mb-8 leading-relaxed">
             At COIREA, we help organizations grow into adaptive, self-managed systems by aligning purpose, performance, and people. Through decentralized leadership, collective intelligence, and cultural coherence, we activate what's already alive within — guiding organizations into their next stage of evolution.
           </p>
         </header>
