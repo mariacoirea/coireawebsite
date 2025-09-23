@@ -199,8 +199,8 @@ const Offerings = () => {
         </section>
 
         {/* 5-Pillar Framework Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-6 max-w-6xl">
             {/* Framework Header */}
             <div className="text-center mb-16">
               <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-6">
@@ -276,8 +276,8 @@ const Offerings = () => {
         </section>
 
         {/* Dashboard Introduction Section */}
-        <section className="py-24 px-6 bg-warm-beige">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-24 bg-warm-beige">
+          <div className="container mx-auto px-6 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-12">
                 How Do We Track It in Real Time?
@@ -627,7 +627,7 @@ const Offerings = () => {
 
         {/* Long-Term Partnership Section */}
         <section className="py-24 bg-gradient-to-br from-sage/5 to-primary/5">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-6 max-w-6xl">
             {/* Section Header */}
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
