@@ -62,35 +62,62 @@ const ReflectionCheckpoint = () => {
           ))}
         </div>
 
-        {/* Data Section */}
+        {/* Data Section with Full Context */}
         <div className="mb-8 md:mb-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
               The Data Speaks:
             </h3>
-            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
-              Low engagement costs the global economy $8.9 trillion annually—that's 9% of global GDP lost to stagnation, turnover, and burnout.
-            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {dataPoints.map(({ stat, description, source }, idx) => (
-              <div
-                key={idx}
-                className="text-center p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 animate-fade-in"
-                style={{ animationDelay: `${(idx + 4) * 80}ms` }}
-              >
-                <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">
-                  {stat}
-                </div>
-                <p className="text-sm text-muted-foreground mb-1">
-                  {description}
-                </p>
-                <p className="text-xs text-muted-foreground/70 italic">
-                  {source}
+          <div className="space-y-6 max-w-4xl mx-auto">
+            {/* Main Problem Statement */}
+            <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-primary">Only 23% of employees are engaged at work</span>, meaning 77% are not giving their full energy or alignment. 
+                <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
+              </p>
+            </div>
+
+            {/* Global Impact */}
+            <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-primary">Low engagement costs the global economy $8.9 trillion annually</span>—that's 9% of global GDP lost to stagnation, turnover, and burnout.
+                <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
+              </p>
+            </div>
+
+            {/* Leadership & Trust Issues */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">72% of leaders lack clarity on purpose</span>, creating confusion and misalignment throughout organizations.
+                  <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
               </div>
-            ))}
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">60% of teams report weak trust</span>, undermining collaboration and psychological safety.
+                  <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Well-being Crisis */}
+            <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-primary">Only 33% of employees are thriving in their overall well-being</span>. When people don't feel well, they can't perform well.
+                <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
+              </p>
+            </div>
+
+            {/* The Solution */}
+            <div className="text-center p-6 rounded-xl bg-primary/5 backdrop-blur-sm border border-primary/20">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-primary">Companies with strong culture see 72% higher engagement and 40% lower turnover</span>, proving that intentional culture transformation delivers measurable results.
+                <span className="text-sm block mt-2 italic">Source: Deloitte</span>
+              </p>
+            </div>
           </div>
         </div>
 
