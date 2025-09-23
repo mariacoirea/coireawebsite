@@ -1,12 +1,18 @@
-import { Lightbulb, Users, Activity, Heart, Compass, Workflow } from "lucide-react";
+import { Users, Activity, Heart, Compass, Workflow, TrendingUp } from "lucide-react";
 
 const questions = [
-  { icon: Lightbulb, text: "Is your team's creativity driving real breakthroughs — or are you stuck in the comfort zone?" },
-  { icon: Users, text: "Do you keep losing great people faster than you can onboard them?" },
-  { icon: Activity, text: "How much value is slipping away every time a trained employee walks out the door?" },
-  { icon: Heart, text: "Does your culture inspire loyalty across generations — especially Gen Z?" },
-  { icon: Compass, text: "When priorities clash, do you have a shared compass to guide the way?" },
-  { icon: Workflow, text: "Is decision-making in your organization stuck at the top, creating bottlenecks and slowing everything down?" },
+  { icon: Workflow, text: "Are decisions bottlenecked at the top?" },
+  { icon: Activity, text: "Do priorities clash faster than execution?" },
+  { icon: Users, text: "Are you losing great people faster than you can onboard them?" },
+  { icon: Heart, text: "Does your culture inspire loyalty across generations, especially Gen Z?" },
+];
+
+const dataPoints = [
+  { stat: "72%", description: "higher engagement with strong culture" },
+  { stat: "40%", description: "lower turnover with strong culture" },
+  { stat: "72%", description: "of leaders lack clarity on purpose" },
+  { stat: "39%", description: "of employees say well-being isn't prioritized" },
+  { stat: "60%", description: "of teams report weak trust" },
 ];
 
 const ReflectionCheckpoint = () => {
@@ -29,15 +35,15 @@ const ReflectionCheckpoint = () => {
             id="reflection-heading"
             className="text-3xl md:text-5xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
           >
-            Before You Lead Forward, Is Your Core Aligned?
+            Is Your Core Aligned Enough to Grow?
           </h2>
-          <h2 className="mt-3 text-base md:text-lg text-muted-foreground max-w-4xl mx-auto">
-            Great strategies collapse without a solid foundation. Here are the questions that reveal whether yours is ready for what's next.
-          </h2>
+          <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Growth collapses when Purpose, People, and Performance drift apart. Before you move forward, check your core:
+          </p>
         </header>
 
         {/* Questions Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-12 md:mb-16">
           {questions.map(({ icon: Icon, text }, idx) => (
             <div
               key={idx}
@@ -54,20 +60,46 @@ const ReflectionCheckpoint = () => {
           ))}
         </div>
 
+        {/* Data Section */}
+        <div className="mb-8 md:mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
+              The Data Speaks:
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              Companies with strong culture see 72% higher engagement and 40% lower turnover (Deloitte).
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {dataPoints.map(({ stat, description }, idx) => (
+              <div
+                key={idx}
+                className="text-center p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50 animate-fade-in"
+                style={{ animationDelay: `${(idx + 4) * 80}ms` }}
+              >
+                <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">
+                  {stat}
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Reflection Box - Horizontal at Bottom */}
         <aside className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 md:p-8 shadow-soft max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div className="h-9 w-9 rounded-full bg-accent/10 flex items-center justify-center">
-              <Compass className="h-5 w-5 text-accent" aria-hidden="true" />
+              <TrendingUp className="h-5 w-5 text-accent" aria-hidden="true" />
             </div>
-            <span className="text-sm tracking-wide uppercase text-muted-foreground">Reflection</span>
+            <span className="text-sm tracking-wide uppercase text-muted-foreground">Assessment</span>
           </div>
 
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-            If you hesitated on any of these, your organization might be running on less capacity, clarity, and connection than it could.
-          </p>
-          <p className="text-base md:text-lg text-foreground/90 leading-relaxed font-medium">
-            That's where the <span className="text-primary font-semibold">COIREA Core Framework</span> comes in.
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            If you hesitated on the questions and see yourself in the numbers, your organization is likely running on less capacity and clarity than it could.
           </p>
         </aside>
       </div>
