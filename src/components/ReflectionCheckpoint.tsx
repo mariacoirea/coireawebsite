@@ -64,86 +64,58 @@ const ReflectionCheckpoint = () => {
 
         {/* Data Section with Horizontal Layout */}
         <div className="mb-8 md:mb-12">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
               The Data Speaks:
             </h3>
           </div>
           
-          <div className="space-y-8 max-w-7xl mx-auto">
+          <div className="space-y-6 max-w-6xl mx-auto">
             {/* Main Problem - Single Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="text-center p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">23%</div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  of employees are engaged at work
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">Only 23% of employees are engaged at work</span>, meaning 77% are not giving their full energy or alignment.
+                  <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  meaning <span className="font-semibold text-primary">77%</span> are not giving their full energy or alignment.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: Gallup, 2024</span>
               </div>
-              <div className="text-center p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">$8.9T</div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  annual cost to global economy
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">Low engagement costs the global economy $8.9 trillion annually</span>—that's 9% of global GDP lost to stagnation, turnover, and burnout.
+                  <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  that's <span className="font-semibold text-primary">9%</span> of global GDP lost to stagnation, turnover, and burnout.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: Gallup, 2024</span>
               </div>
             </div>
 
             {/* Leadership & Trust Issues - Side by Side */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="text-center p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">72%</div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  of leaders lack clarity on purpose
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">72% of leaders lack clarity on purpose</span>, creating confusion and misalignment throughout organizations.
+                  <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  creating confusion and misalignment throughout organizations.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: COIREA survey</span>
               </div>
-              <div className="text-center p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">60%</div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  of teams report weak trust
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">60% of teams report weak trust</span>, undermining collaboration and psychological safety.
+                  <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  undermining collaboration and psychological safety.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: COIREA survey</span>
               </div>
             </div>
 
             {/* Well-being & Solution - Side by Side */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="text-center p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-4">33%</div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  of employees are thriving in well-being
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">Only 33% of employees are thriving in their overall well-being</span>. When people don't feel well, they can't perform well.
+                  <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  When people don't feel well, they can't perform well.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: Gallup, 2024</span>
               </div>
-              <div className="text-center p-8 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/20 hover:border-primary/30 transition-colors">
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">72%</div>
-                  <span className="text-muted-foreground">higher engagement &</span>
-                  <div className="text-3xl md:text-4xl font-bold text-primary">40%</div>
-                </div>
-                <p className="text-lg md:text-xl text-foreground mb-2 font-medium">
-                  lower turnover with strong culture
+              <div className="text-center p-6 rounded-xl bg-primary/5 backdrop-blur-sm border border-primary/20">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-primary">Companies with strong culture see 72% higher engagement and 40% lower turnover</span>, proving that intentional culture transformation delivers measurable results.
+                  <span className="text-sm block mt-2 italic">Source: Deloitte</span>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  proving that intentional culture transformation delivers measurable results.
-                </p>
-                <span className="text-sm text-muted-foreground italic">Source: Deloitte</span>
               </div>
             </div>
           </div>
