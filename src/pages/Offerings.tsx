@@ -702,9 +702,6 @@ const Offerings = () => {
                           <span className={`text-sm font-semibold text-${accentColor} bg-${accentColor}/10 px-3 py-1.5 rounded-full w-fit`}>
                             {offering.duration}
                           </span>
-                          <span className="text-sm text-muted-foreground">
-                            {offering.badge}
-                          </span>
                         </div>
                       </div>
 
