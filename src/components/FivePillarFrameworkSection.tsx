@@ -66,18 +66,17 @@ const FivePillarFrameworkSection = () => {
           <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
             The Regenerative Operating System (ROS)
           </h1>
-          <h2 className="mt-4 text-base md:text-lg text-muted-foreground">
-            Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
-          </h2>
-          <p className="mt-4 text-sm md:text-base text-muted-foreground">
-            Built on five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
-          </p>
-          <p className="mt-4 text-sm md:text-base text-muted-foreground">
-            Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
-          </p>
-          <h3 className="mt-8 text-xl md:text-2xl font-medium text-foreground">
-            The Five Core Functions of the ROS
-          </h3>
+          <div className="mt-6 space-y-4 text-muted-foreground">
+            <p className="text-lg md:text-xl leading-relaxed">
+              Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
+            </p>
+          </div>
         </header>
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
