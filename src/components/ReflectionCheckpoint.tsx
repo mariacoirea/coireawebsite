@@ -71,8 +71,8 @@ const ReflectionCheckpoint = () => {
           </div>
           
           <div className="space-y-6 max-w-6xl mx-auto">
-            {/* Main Problem - Single Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* First Row - 3 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-primary">Only 23% of employees are engaged at work</span>, meaning 77% are not giving their full energy or alignment.
@@ -85,26 +85,22 @@ const ReflectionCheckpoint = () => {
                   <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
               </div>
-            </div>
-
-            {/* Leadership & Trust Issues - Side by Side */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-primary">72% of leaders lack clarity on purpose</span>, creating confusion and misalignment throughout organizations.
                   <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
               </div>
+            </div>
+
+            {/* Second Row - 3 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-primary">60% of teams report weak trust</span>, undermining collaboration and psychological safety.
                   <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
               </div>
-            </div>
-
-            {/* Well-being & Solution - Side by Side */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-primary">Only 33% of employees are thriving in their overall well-being</span>. When people don't feel well, they can't perform well.
