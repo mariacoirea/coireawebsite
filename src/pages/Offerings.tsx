@@ -204,11 +204,19 @@ const Offerings = () => {
             {/* Framework Header */}
             <div className="text-center mb-16">
               <h3 className="text-2xl md:text-4xl font-display font-bold text-primary mb-6">
-                 The COIREA Core Framework
+                 The Regenerative Operating System (ROS)
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto">
-                As organizations grow, complexity rises — priorities compete, alignment slips, and momentum is lost. The COIREA Core Framework addresses these challenges by focusing on five forces that define a thriving company: purpose-led culture, values-driven leadership, high-trust collaboration, human-centered well-being, and adaptive strategy. Through Structural Foundations, these forces are transformed into practical systems that keep your business aligned, resilient, and positioned to grow with integrity.
-              </p>
+              <div className="space-y-4 text-muted-foreground max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+                </p>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
+                </p>
+              </div>
             </div>
 
 
