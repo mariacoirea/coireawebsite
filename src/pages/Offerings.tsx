@@ -686,51 +686,103 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* New CTA Section */}
-        <section className="py-24 px-6 bg-warm-beige">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center space-y-8">
-              {/* Header */}
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-primary leading-tight">
-                  Ready to Transform Your Organization?
+        {/* Enhanced CTA Section */}
+        <section className="py-32 px-6 relative overflow-hidden">
+          {/* Background with gradient and pattern */}
+          <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-primary/3 to-copper/5"></div>
+          <div className="absolute inset-0 opacity-[0.02]">
+            <div className="absolute inset-0" 
+                 style={{
+                   backgroundImage: `radial-gradient(circle at 25% 25%, hsl(var(--sage)) 2px, transparent 2px),
+                                     radial-gradient(circle at 75% 75%, hsl(var(--primary)) 1px, transparent 1px)`,
+                   backgroundSize: '60px 60px, 40px 40px'
+                 }}>
+            </div>
+          </div>
+          
+          {/* Floating decorative elements */}
+          <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-gradient-to-br from-sage/10 to-transparent blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-xl"></div>
+          
+          <div className="container mx-auto max-w-5xl relative z-10">
+            <div className="text-center space-y-12">
+              {/* Header with enhanced typography */}
+              <div className="space-y-8">
+                <div className="inline-flex items-center justify-center p-3 bg-sage/10 rounded-full mb-6">
+                  <div className="w-2 h-2 bg-sage rounded-full animate-pulse"></div>
+                  <span className="text-sage text-sm font-semibold ml-3 uppercase tracking-wider">Transform Your Organization</span>
+                </div>
+                
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary leading-tight">
+                  Ready to Transform Your 
+                  <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage to-primary">Organization?</span>
                 </h2>
                 
-                <p className="text-lg md:text-xl text-primary/80 font-body leading-relaxed max-w-3xl mx-auto">
-                  Let's explore how COIREA can support your organization's unique journey toward regenerative success.
+                <p className="text-xl md:text-2xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto">
+                  Let's explore how COIREA can support your organization's unique journey toward 
+                  <span className="text-sage font-semibold"> regenerative success</span>.
                 </p>
               </div>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+              {/* Enhanced Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
                 <Button 
                   size="lg" 
                   onClick={() => navigate('/journey')}
-                  className="bg-sage hover:bg-sage/90 text-white px-8 py-4 text-lg font-semibold min-w-[200px]"
+                  className="group bg-gradient-to-r from-sage to-sage hover:from-sage/90 hover:to-sage/90 text-white px-10 py-6 text-xl font-semibold min-w-[250px] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Begin Your Journey
+                  <span className="flex items-center gap-3">
+                    Begin Your Journey
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
                 
                 <Button 
                   size="lg" 
                   variant="outline"
                   onClick={() => navigate('/tools')}
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold min-w-[200px]"
+                  className="group border-2 border-primary/30 text-primary hover:bg-primary hover:text-white px-10 py-6 text-xl font-semibold min-w-[250px] rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Try Our Tools
+                  <span className="flex items-center gap-3">
+                    Try Our Tools
+                    <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  </span>
                 </Button>
               </div>
 
-              {/* Supporting Text */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 text-primary/70">
-                <div className="flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  <span className="text-sm font-medium">Free consultation available</span>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  <span className="text-sm font-medium">Flexible scheduling</span>
+              {/* Enhanced Supporting Features */}
+              <div className="pt-12">
+                <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+                  <div className="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-primary/10 hover:border-sage/30 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-sage/20 to-sage/10 rounded-xl flex items-center justify-center">
+                      <MessageCircle className="w-6 h-6 text-sage" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-semibold text-primary">Free Consultation</div>
+                      <div className="text-sm text-primary/60">Available upon request</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-primary/10 hover:border-copper/30 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-copper/20 to-copper/10 rounded-xl flex items-center justify-center">
+                      <Calendar className="w-6 h-6 text-copper" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-semibold text-primary">Flexible Scheduling</div>
+                      <div className="text-sm text-primary/60">Fits your timeline</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-semibold text-primary">Proven Framework</div>
+                      <div className="text-sm text-primary/60">5-pillar system</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
