@@ -422,7 +422,7 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* 90-Day Transformational Programs Section */}
+        {/* 90-Day Reset Programs Section */}
         <section className="py-24 bg-[#f8f8f8]">
           <div className="container mx-auto px-6 max-w-6xl">
             {/* Section Header */}
@@ -441,14 +441,14 @@ const Offerings = () => {
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mt-8"></div>
             </div>
 
-            {/* Three Program Cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+            {/* Three Program Cards - Clean Structure */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
               
-              {/* Culture & Leadership Reset */}
-              <Card className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+              {/* Collaboration Reset */}
+              <Card className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm">
                 {/* Header Section */}
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-sage/20">
+                  <div className="w-16 h-16 bg-sage/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                     <Heart className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
@@ -457,11 +457,11 @@ const Offerings = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     When teams lose connection, performance suffers.
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <div className="bg-sage/10 text-sage px-3 py-1.5 rounded-full text-xs font-semibold border border-sage/20">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="bg-sage/10 text-sage px-3 py-1.5 rounded-full text-xs font-semibold">
                       90 Days
                     </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
                       3 Phases
                     </div>
                   </div>
@@ -470,45 +470,18 @@ const Offerings = () => {
                 {/* Ideal For Section */}
                 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-sage mb-3 uppercase tracking-wider">Ideal For</h4>
-                  <p className="text-muted-foreground font-body text-sm mb-4">
+                  <p className="text-muted-foreground font-body text-sm">
                     Founders/CEOs sensing their team is misaligned, collaboration feels heavy, roles and responsibilities are not clear.
                   </p>
-                  
-                  {/* Pain Points */}
-                  <div className="mt-4">
-                    <h5 className="text-xs font-semibold text-primary/70 mb-2 uppercase tracking-wider">Pain Points</h5>
-                    <ul className="space-y-1.5">
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-sage/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Silent tension in meetings or lack of open dialogue</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-sage/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">New hires not fully integrating into the culture</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-sage/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Roles and responsibilities unclear → accountability gaps</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-sage/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Leadership sending mixed signals, slowing decisions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-sage/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Performance reviews inconsistent or missing</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
 
-                {/* Outcomes Section */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                {/* Key Outcomes Section */}
+                <div>
+                  <h4 className="text-xs font-semibold text-sage mb-3 uppercase tracking-wider">Key Outcomes</h4>
                   <div className="space-y-2.5">
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Rebuild trust and collaboration across the team</span>
+                      <span className="text-muted-foreground text-sm">Rebuild trust and collaboration across teams</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-sage mt-0.5 flex-shrink-0" />
@@ -524,30 +497,17 @@ const Offerings = () => {
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-sage mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Measurable before/after shift in collaboration & leadership alignment</span>
+                      <span className="text-muted-foreground text-sm">Measure shifts in collaboration and leadership alignment before/after</span>
                     </div>
                   </div>
                 </div>
-
-                {/* Core Elements as Tags */}
-                <div className="mt-auto">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Culture & Leadership Assessment</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Role & Responsibility Mapping</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Leadership Mentoring</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Team Collaboration Workshops</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Performance Review Framework</span>
-                  </div>
-                </div>
-
               </Card>
 
               {/* Scale with Purpose */}
-              <Card className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+              <Card className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm">
                 {/* Header Section */}
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-primary/20">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                     <Zap className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
@@ -556,11 +516,11 @@ const Offerings = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     When structure and purpose don't align, growth turns chaotic.
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <div className="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold border border-primary/20">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold">
                       90 Days
                     </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
                       3 Phases
                     </div>
                   </div>
@@ -574,8 +534,8 @@ const Offerings = () => {
                   </p>
                 </div>
 
-                {/* Outcomes Section */}
-                <div className="mb-6">
+                {/* Key Outcomes Section */}
+                <div>
                   <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
                   <div className="space-y-2.5">
                     <div className="flex items-start gap-2.5">
@@ -600,26 +560,13 @@ const Offerings = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Core Elements as Tags */}
-                <div className="mt-auto">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Core Elements</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Purpose & Vision Workshop</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Operational & Bottleneck Audit</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Structure & Workflow Design</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Quarterly Projects</span>
-                    <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Efficiency & Execution Benchmarks</span>
-                  </div>
-                </div>
-
               </Card>
 
               {/* Leadership Reset */}
-              <Card className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+              <Card className="p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm">
                 {/* Header Section */}
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-copper/10 to-copper/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-copper/20">
+                  <div className="w-16 h-16 bg-copper/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                     <Heart className="w-8 h-8 text-copper" />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
@@ -628,11 +575,11 @@ const Offerings = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     When leaders aren't supportive, teams lose direction.
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
                       90 Days
                     </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
                       3 Phases
                     </div>
                   </div>
@@ -646,9 +593,9 @@ const Offerings = () => {
                   </p>
                 </div>
 
-                {/* Outcomes Section */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                {/* Key Outcomes Section */}
+                <div>
+                  <h4 className="text-xs font-semibold text-copper mb-3 uppercase tracking-wider">Key Outcomes</h4>
                   <div className="space-y-2.5">
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
@@ -672,7 +619,6 @@ const Offerings = () => {
                     </div>
                   </div>
                 </div>
-
               </Card>
             </div>
 
