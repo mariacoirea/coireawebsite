@@ -68,13 +68,13 @@ const FivePillarFrameworkSection = () => {
           </h1>
           <div className="mt-6 space-y-4 text-muted-foreground">
             <p className="text-lg md:text-xl leading-relaxed">
-              Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System transforms these challenges into coherence.
+              Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms these challenges into coherence.
             </p>
             <p className="text-base md:text-lg leading-relaxed">
-              Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+              Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The COIREA OS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
             </p>
             <p className="text-base md:text-lg leading-relaxed">
-              Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
+              Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
             </p>
           </div>
         </header>

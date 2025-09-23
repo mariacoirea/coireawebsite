@@ -73,11 +73,11 @@ const Offerings = () => {
   const longTermOfferings = [
     {
       id: 1,
-      title: "Regenerative Operating System (ROS) Integration",
+      title: "COIREA Operating System Integration",
       badge: "Signature Program",
       duration: "6–18 months",
       timeframe: "",
-      description: "A complete upgrade for your organization. We embed the ROS across all five core functions, transforming complexity into coherence so your business can thrive, scale, and grow without extraction.\n\nWe offer strategic support by stepping in as fractional leaders to co-design and implement systems that lasts.",
+      description: "A complete upgrade for your organization. We embed the COIREA OS across all five core functions, transforming complexity into coherence so your business can thrive, scale, and grow without extraction.\n\nWe offer strategic support by stepping in as fractional leaders to co-design and implement systems that lasts.",
       keyAreas: [
         "Purpose & Culture Integration",
         "Conscious & Values-Driven Leadership", 
@@ -417,13 +417,13 @@ const Offerings = () => {
               
               <div className="max-w-5xl mx-auto mb-8">
                 <p className="text-lg text-muted-foreground font-body mb-6">
-                  Growth brings complexity; competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System (ROS) transforms this complexity into coherence by embedding five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy — into one living architecture.
+                  Growth brings complexity; competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms this complexity into coherence by embedding five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy — into one living architecture.
                 </p>
                 <p className="text-lg text-muted-foreground font-body mb-6">
                   Over 6–18 months, we co-design the structures, metrics, and practices that ensure your organization not only scales, but does so regeneratively.
                 </p>
                 <p className="text-lg text-muted-foreground font-body">
-                  Unlike static frameworks, the ROS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: an organization designed to grow with integrity and built to last.
+                  Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: an organization designed to grow with integrity and built to last.
                 </p>
               </div>
               
