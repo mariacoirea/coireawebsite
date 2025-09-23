@@ -411,11 +411,11 @@ const Offerings = () => {
                 The Regenerative Operating System (ROS)
               </h2>
               
-              <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
+              <p className="text-xl text-muted-foreground font-body max-w-5xl mx-auto mb-8">
                 Our signature long-term partnership for organizations ready to embed lasting transformation.
               </p>
               
-              <div className="max-w-4xl mx-auto mb-8">
+              <div className="max-w-5xl mx-auto mb-8">
                 <p className="text-lg text-muted-foreground font-body mb-6">
                   Growth brings complexity; competing priorities, misaligned teams, and stalled momentum. The Regenerative Operating System (ROS) transforms this complexity into coherence by embedding five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy — into one living architecture.
                 </p>
