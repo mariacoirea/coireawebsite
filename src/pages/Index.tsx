@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import ReflectionCheckpoint from "@/components/ReflectionCheckpoint";
 import FivePillarFrameworkSection from "@/components/FivePillarFrameworkSection";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
@@ -27,7 +27,7 @@ const Index = () => {
           <ReflectionCheckpoint />
           <FivePillarFrameworkSection />
           <ServicesSection />
-          <TestimonialsSection />
+          
         </main>
         <Footer />
       </div>
