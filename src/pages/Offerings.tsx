@@ -428,21 +428,21 @@ const Offerings = () => {
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
-                90-Day Transformational Programs
+                90-Day Reset Programs
               </h2>
               <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
-                Two focused, founder-ready pathways to reset and realign your organization in one quarter — with every shift tracked in real time.
+                Three founder-ready pathways to realign your organization in one quarter, with every shift measured in real time.
               </p>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg text-muted-foreground font-body mb-4">
-                  Scaling shouldn't mean chaos. Our 90-day programs are designed for founders and CEOs who need fast, measurable change in leadership, culture, and operations. In just one quarter, we help you reset your organization's core dynamics and prove impact through our COIREA Dashboard, so you know exactly what's working, and where to focus next.
+                  Scaling doesn't have to mean losing clarity or culture. Our 90-day resets are designed for founders and CEOs who need fast but meaningful change in leadership, collaboration, and strategy. In just one quarter, we help you reset your organization's core dynamics and track progress through the COIREA Dashboard, so you see exactly what's shifting, and where to focus next.
                 </p>
               </div>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mt-8"></div>
             </div>
 
-            {/* Two Program Cards */}
-            <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
+            {/* Three Program Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
               
               {/* Culture & Leadership Reset */}
               <Card className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
@@ -452,10 +452,10 @@ const Offerings = () => {
                     <Heart className="w-8 h-8 text-sage" />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
-                    Collaboration & Leadership Reset
+                    Collaboration Reset
                   </h3>
                   <p className="text-base text-copper font-medium mb-4">
-                    When your team feels disconnected, performance slips.
+                    When teams lose connection, performance suffers.
                   </p>
                   <div className="flex items-center justify-center gap-3 mb-5">
                     <div className="bg-sage/10 text-sage px-3 py-1.5 rounded-full text-xs font-semibold border border-sage/20">
@@ -471,7 +471,7 @@ const Offerings = () => {
                 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-sage mb-3 uppercase tracking-wider">Ideal For</h4>
                   <p className="text-muted-foreground font-body text-sm mb-4">
-                    Founders/CEOs who sense their team is losing trust, collaboration is weak, or leadership isn't aligned — and it's starting to cost results.
+                    Founders/CEOs sensing their team is misaligned, collaboration feels heavy, roles and responsibilities are not clear.
                   </p>
                   
                   {/* Pain Points */}
@@ -554,7 +554,7 @@ const Offerings = () => {
                     Scale with Purpose
                   </h3>
                   <p className="text-base text-copper font-medium mb-4">
-                    When structure and purpose don't align, scaling turns to chaos.
+                    When structure and purpose don't align, growth turns chaotic.
                   </p>
                   <div className="flex items-center justify-center gap-3 mb-5">
                     <div className="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold border border-primary/20">
@@ -569,36 +569,9 @@ const Offerings = () => {
                 {/* Ideal For Section */}
                 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Ideal For</h4>
-                  <p className="text-muted-foreground font-body text-sm mb-4">
-                    Founders/CEOs whose company is growing fast but struggling with messy operations, unclear priorities, or a vision that feels diluted.
+                  <p className="text-muted-foreground font-body text-sm">
+                    Founders/CEOs whose company is scaling fast but struggling with messy operations, unclear priorities, or a diluted vision.
                   </p>
-                  
-                  {/* Pain Points */}
-                  <div className="mt-4">
-                    <h5 className="text-xs font-semibold text-primary/70 mb-2 uppercase tracking-wider">Pain Points</h5>
-                    <ul className="space-y-1.5">
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Leadership team not aligned on purpose or direction</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Priorities keep shifting, goals rarely hit</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">No clear meeting cadence → slow decisions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Everyone is busy, but execution feels scattered</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-1 h-1 bg-primary/60 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-xs">Scaling fast but losing the company's original DNA</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
 
                 {/* Outcomes Section */}
@@ -619,11 +592,11 @@ const Offerings = () => {
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Set and track quarterly Projects with accountability</span>
+                      <span className="text-muted-foreground text-sm">Set and track quarterly projects with accountability</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">Measurable efficiency gains in decision-making and execution</span>
+                      <span className="text-muted-foreground text-sm">Gain measurable efficiency in decision-making and execution</span>
                     </div>
                   </div>
                 </div>
@@ -637,6 +610,66 @@ const Offerings = () => {
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Structure & Workflow Design</span>
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Quarterly Projects</span>
                     <span className="bg-primary/10 text-primary px-2.5 py-1.5 rounded-lg text-xs font-medium border border-primary/20">Efficiency & Execution Benchmarks</span>
+                  </div>
+                </div>
+
+              </Card>
+
+              {/* Leadership Reset */}
+              <Card className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-white/90 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
+                {/* Header Section */}
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-copper/10 to-copper/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-copper/20">
+                    <Heart className="w-8 h-8 text-copper" />
+                  </div>
+                  <h3 className="text-xl font-display font-bold text-primary mb-3">
+                    Leadership Reset
+                  </h3>
+                  <p className="text-base text-copper font-medium mb-4">
+                    When leaders aren't supportive, teams lose direction.
+                  </p>
+                  <div className="flex items-center justify-center gap-3 mb-5">
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                      90 Days
+                    </div>
+                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                      3 Phases
+                    </div>
+                  </div>
+                </div>
+
+                {/* Ideal For Section */}
+                <div className="mb-6">
+                  <h4 className="text-xs font-semibold text-copper mb-3 uppercase tracking-wider">Ideal For</h4>
+                  <p className="text-muted-foreground font-body text-sm">
+                    Founders/CEOs who see their leaders struggling with clarity, confidence, or consistency and want to cultivate a culture of conscious and supportive leadership.
+                  </p>
+                </div>
+
+                {/* Outcomes Section */}
+                <div className="mb-6">
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                  <div className="space-y-2.5">
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Build executive presence rooted in authenticity and trust</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Strengthen conscious decision-making under pressure</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Develop embodied communication that inspires alignment</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Reconnect leaders with inner clarity to lead with confidence</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="w-4 h-4 text-copper mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">Measurable shifts in leadership trust and effectiveness tracked over 90 days</span>
+                    </div>
                   </div>
                 </div>
 
