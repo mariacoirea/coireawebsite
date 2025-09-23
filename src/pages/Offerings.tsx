@@ -498,38 +498,6 @@ const Offerings = () => {
               </div>
             </div>
 
-            {/* Key Areas Section */}
-            <div className="max-w-6xl mx-auto">
-              <h3 className="text-2xl font-display font-bold text-primary mb-8 text-center">Key Areas of Integration</h3>
-              
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-sage/10 hover:border-sage/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-sage rounded-full flex-shrink-0"></div>
-                  <h4 className="font-semibold text-primary">Purpose & Culture Integration</h4>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-primary/10 hover:border-primary/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-primary rounded-full flex-shrink-0"></div>
-                  <h4 className="font-semibold text-primary">Conscious & Values-Driven Leadership</h4>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-copper/10 hover:border-copper/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-copper rounded-full flex-shrink-0"></div>
-                  <h4 className="font-semibold text-primary">Collaboration Flow Design</h4>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-olive-green/10 hover:border-olive-green/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-olive-green rounded-full flex-shrink-0"></div>
-                  <h4 className="font-semibold text-primary">Well-Being as Strategy</h4>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-sage/10 hover:border-sage/20 transition-all duration-300">
-                  <div className="w-3 h-3 bg-sage rounded-full flex-shrink-0"></div>
-                  <h4 className="font-semibold text-primary">Adaptive Organizational Backbone</h4>
-                </div>
-              </div>
-            </div>
-
           </div>
         </section>
 
