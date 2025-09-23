@@ -206,10 +206,10 @@ const Offerings = () => {
               <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">
                 90-Day Reset Programs
               </h2>
-              <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
+              <p className="text-xl text-muted-foreground font-body max-w-6xl mx-auto mb-8">
                 Three founder-ready pathways to realign your organization in one quarter, with every shift measured in real time.
               </p>
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-6xl mx-auto">
                 <p className="text-lg text-muted-foreground font-body mb-4">
                   Scaling doesn't have to mean losing clarity or culture. Our 90-day resets are designed for founders and CEOs who need fast but meaningful change in leadership, collaboration, and strategy. In just one quarter, we help you reset your organization's core dynamics and track progress through the COIREA Dashboard, so you see exactly what's shifting, and where to focus next.
                 </p>
