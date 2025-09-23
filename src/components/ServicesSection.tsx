@@ -111,14 +111,14 @@ const ServicesSection = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     {program.subtitle}
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <div className={`bg-${program.badgeColor}/10 text-${program.badgeColor} px-3 py-1.5 rounded-full text-xs font-semibold border border-${program.badgeColor}/20`}>
-                      90 Days
-                    </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
-                      3 Phases
-                    </div>
-                  </div>
+                   <div className="flex items-center justify-center gap-3 mb-5">
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                       90 Days
+                     </div>
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
+                       3 Phases
+                     </div>
+                   </div>
                 </div>
 
                 {/* Ideal For Section */}

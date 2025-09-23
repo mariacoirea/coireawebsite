@@ -233,14 +233,14 @@ const Offerings = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     When teams lose connection, performance suffers.
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="bg-sage/10 text-sage px-3 py-1.5 rounded-full text-xs font-semibold">
-                      90 Days
-                    </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
-                      3 Phases
-                    </div>
-                  </div>
+                   <div className="flex items-center justify-center gap-3 mb-6">
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
+                       90 Days
+                     </div>
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
+                       3 Phases
+                     </div>
+                   </div>
                 </div>
 
                 {/* Ideal For Section */}
@@ -292,14 +292,14 @@ const Offerings = () => {
                   <p className="text-base text-copper font-medium mb-4">
                     When structure and purpose don't align, growth turns chaotic.
                   </p>
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-semibold">
-                      90 Days
-                    </div>
-                    <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
-                      3 Phases
-                    </div>
-                  </div>
+                   <div className="flex items-center justify-center gap-3 mb-6">
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
+                       90 Days
+                     </div>
+                     <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold">
+                       3 Phases
+                     </div>
+                   </div>
                 </div>
 
                 {/* Ideal For Section */}
