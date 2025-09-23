@@ -95,7 +95,7 @@ const Offerings = () => {
       badge: "1:1 Guidance", 
       duration: "3–12 months",
       timeframe: "",
-      description: "Deep inner work for executives & emerging leaders ready to lead with authenticity, alignment, and regenerative presence.",
+      description: "Deep leadership begins within. This coaching journey supports executives and emerging leaders in cultivating the inner clarity, presence, and resilience needed to lead with authenticity.",
       keyAreas: [
         "Executive Presence",
         "Conscious Decision-Making",
