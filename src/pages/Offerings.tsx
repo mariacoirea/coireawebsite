@@ -432,13 +432,6 @@ const Offerings = () => {
 
             {/* 5-Pillar Framework Integration */}
             <div className="mb-20">
-              <div className="text-center mb-16">
-                <div className="space-y-4 text-muted-foreground max-w-4xl mx-auto">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The ROS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
-                  </p>
-                </div>
-              </div>
 
               {/* Framework Pillars Grid */}
               <div className="mb-16">
