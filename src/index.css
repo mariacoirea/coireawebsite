@@ -35,9 +35,9 @@
     --muted-foreground: 77 15% 45%;
 
     /* Soft Copper - Accent */
-    --accent: 18 43% 52%;
+    --accent: 18 35% 50%; /* Sovereign Soft Copper #B56D4E */
     --accent-foreground: 45 29% 97%;
-    --accent-warm: 18 60% 45%;
+    --accent-warm: 18 30% 40%;
 
     /* Warm Sand - Neutral */
     --neutral-warm: 33 35% 83%;
@@ -48,10 +48,10 @@
     --warm-beige: 33 35% 94%; /* #F6F0E9 */
     --olive-green: 77 19% 35%; /* #5B6C49 */
     --sage: 82 25% 45%;
-    --copper: 18 43% 52%;
+    --copper: 18 35% 50%; /* Sovereign Soft Copper #B56D4E */
 
     /* Status Colors */
-    --destructive: 18 43% 52%; /* Sovereign Soft Copper #B56D4E */
+    --destructive: 18 35% 50%; /* Sovereign Soft Copper #B56D4E */
     --destructive-foreground: 48 15% 97%;
     --success: 120 40% 45%;
     --success-foreground: 48 15% 97%;
