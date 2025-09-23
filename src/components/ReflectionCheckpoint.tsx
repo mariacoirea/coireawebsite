@@ -75,19 +75,19 @@ const ReflectionCheckpoint = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-copper">Only 23% of employees are engaged at work</span>, meaning 77% are not giving their full energy or alignment.
+                  <span className="font-semibold text-primary">Only 23% of employees are engaged at work</span>, meaning 77% are not giving their full energy or alignment.
                   <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
               </div>
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-copper">Low engagement costs the global economy $8.9 trillion annually</span>—that's 9% of global GDP lost to stagnation, turnover, and burnout.
+                  <span className="font-semibold text-primary">Low engagement costs the global economy $8.9 trillion annually</span>—that's 9% of global GDP lost to stagnation, turnover, and burnout.
                   <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
               </div>
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-copper">72% of leaders lack clarity on purpose</span>, creating confusion and misalignment throughout organizations.
+                  <span className="font-semibold text-primary">72% of leaders lack clarity on purpose</span>, creating confusion and misalignment throughout organizations.
                   <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
               </div>
@@ -97,13 +97,13 @@ const ReflectionCheckpoint = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-copper">60% of teams report weak trust</span>, undermining collaboration and psychological safety.
+                  <span className="font-semibold text-primary">60% of teams report weak trust</span>, undermining collaboration and psychological safety.
                   <span className="text-sm block mt-2 italic">Source: COIREA survey</span>
                 </p>
               </div>
               <div className="text-center p-6 rounded-xl bg-card/40 backdrop-blur-sm border border-border/50">
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-copper">Only 33% of employees are thriving in their overall well-being</span>. When people don't feel well, they can't perform well.
+                  <span className="font-semibold text-primary">Only 33% of employees are thriving in their overall well-being</span>. When people don't feel well, they can't perform well.
                   <span className="text-sm block mt-2 italic">Source: Gallup, 2024</span>
                 </p>
               </div>
