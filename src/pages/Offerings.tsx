@@ -408,7 +408,7 @@ const Offerings = () => {
             {/* Section Header */}
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
-                The Regenerative Operating System (ROS)
+                The COIREA Operating System (Regenerative OS)
               </h2>
               
               <p className="text-xl text-muted-foreground font-body max-w-5xl mx-auto mb-8">
