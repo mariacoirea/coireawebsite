@@ -11,7 +11,7 @@ export const pillars: {
 }[] = [
   {
     title: "Purpose & Culture",
-    subtitle: "The Compass & Field",
+    subtitle: "Clarity & storytelling",
     description:
       "Turn vision into belonging. Purpose and culture set the tone for everything: why you exist and what it feels like to work here. We weave your values and vision into daily practices, creating a coherent field that people trust and want to belong to.",
     drives: "Team alignment, talent retention, brand trust.",
@@ -19,7 +19,7 @@ export const pillars: {
   },
   {
     title: "Leadership",
-    subtitle: "The Tone Setter",
+    subtitle: "Presence & feedback",
     description:
       "Build leaders who inspire through change. Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
     drives: "Strategic execution, innovation, cultural trust.",
@@ -27,7 +27,7 @@ export const pillars: {
   },
   {
     title: "Collaboration",
-    subtitle: "The Flow",
+    subtitle: "Trust & flow",
     description:
       "Unlock collective intelligence. When trust and clarity are present, collaboration becomes effortless flow. We create systems that remove silos, foster psychological safety, and turn conflict into creativity.",
     drives: "Faster problem-solving, better ideas, stronger execution.",
@@ -35,7 +35,7 @@ export const pillars: {
   },
   {
     title: "Well-Being",
-    subtitle: "The Vitality Engine",
+    subtitle: "Energy & resilience",
     description:
       "Protect human energy as a strategic asset. Well-being is not a perk—it's the foundation of performance. We embed regenerative practices that sustain focus, creativity, and resilience across the whole team.",
     drives: "Productivity, retention, sustainable growth.",
@@ -43,7 +43,7 @@ export const pillars: {
   },
   {
     title: "Organizational Strategy",
-    subtitle: "The Backbone",
+    subtitle: "Systems & alignment",
     description:
       "Turn vision into reality. Strategy is the structural spine of your business. We design adaptive systems, regenerative KPIs, and decision-making architectures that keep your organization agile and aligned with its deeper purpose.",
     drives: "Scalability, efficiency, resilience.",
