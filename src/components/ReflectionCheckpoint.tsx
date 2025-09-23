@@ -8,12 +8,12 @@ const questions = [
 ];
 
 const dataPoints = [
-  { stat: "77%", description: "of employees are disengaged at work", source: "Gallup 2024" },
-  { stat: "$8.9T", description: "global economic cost of low engagement", source: "Gallup 2024" },
-  { stat: "72%", description: "higher engagement with strong culture", source: "Deloitte" },
-  { stat: "40%", description: "lower turnover with strong culture", source: "Deloitte" },
-  { stat: "72%", description: "of leaders lack clarity on purpose", source: "COIREA" },
-  { stat: "33%", description: "of employees are thriving in well-being", source: "Gallup 2024" },
+  { stat: "77%", description: "employees disengaged", source: "Gallup 2024" },
+  { stat: "$8.9T", description: "annual cost to global economy", source: "Gallup 2024" },
+  { stat: "72%", description: "leaders lack clear purpose", source: "COIREA" },
+  { stat: "72%", description: "higher engagement (strong culture)", source: "Deloitte" },
+  { stat: "40%", description: "lower turnover (strong culture)", source: "Deloitte" },
+  { stat: "33%", description: "employees thriving at work", source: "Gallup 2024" },
 ];
 
 const ReflectionCheckpoint = () => {
