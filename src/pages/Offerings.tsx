@@ -626,106 +626,75 @@ const Offerings = () => {
           </div>
         </section>
 
-        {/* Long-Term Partnerships Section */}
+        {/* Long-Term Partnership Section */}
         <section className="py-24 bg-gradient-to-br from-sage/5 to-primary/5">
           <div className="container mx-auto px-6">
             {/* Section Header */}
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight">
-                Long-Term Partnerships
+                Long-Term Partnership
               </h2>
               
               <p className="text-xl text-muted-foreground font-body max-w-4xl mx-auto mb-8">
-                Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance.
+                For organizations ready to embed lasting transformation.
               </p>
+              
+              <div className="max-w-4xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground font-body mb-6">
+                  The Regenerative Operating System (ROS) Integration is our signature long-term program. Over 6–18 months, we embed the ROS across all five core functions — Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy — creating a living architecture that turns complexity into coherence.
+                </p>
+                <p className="text-lg text-muted-foreground font-body">
+                  This is where short-term resets evolve into full-system transformation. Together, we co-design structures, metrics, and practices that ensure your organization not only scales, but does so regeneratively — aligned, resilient, and built to last.
+                </p>
+              </div>
               
               <div className="w-32 h-0.5 bg-gradient-to-r from-sage to-copper mx-auto"></div>
             </div>
 
-            {/* Partnership Programs - 3 Column Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-              {longTermOfferings.map((offering, index) => {
-                const IconComponent = offering.icon;
-                const accentColor = offering.accent === 'primary' ? 'primary' : offering.accent === 'copper' ? 'copper' : 'sage';
-                const isSignature = offering.badge === 'Signature Program';
+            {/* Key Areas Section */}
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-display font-bold text-primary mb-8 text-center">Key Areas</h3>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-sage/10 hover:border-sage/20 transition-all duration-300">
+                  <div className="w-3 h-3 bg-sage rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Purpose & Culture Integration</h4>
+                  </div>
+                </div>
                 
-                return (
-                  <Card key={offering.id} className={`p-8 bg-white/90 backdrop-blur-sm border hover:border-sage/30 shadow-lg hover:shadow-xl transition-all duration-500 group relative overflow-hidden h-full ${
-                    isSignature ? 'border-sage/20 shadow-2xl' : 'border-primary/10'
-                  }`}>
-                    {/* Subtle Background Pattern */}
-                    <div className={`absolute inset-0 bg-gradient-to-br opacity-50 ${
-                      isSignature ? 'from-sage/5 via-transparent to-copper/5' : 'from-primary/3 to-sage/3'
-                    }`}></div>
-                    
-                    {/* Signature Badge */}
-                    {isSignature && (
-                      <div className="absolute top-4 right-4 z-10">
-                        <div className="flex items-center space-x-2 bg-gradient-to-r from-sage to-sage/80 px-3 py-1.5 rounded-full shadow-lg">
-                          <Star className="w-3 h-3 text-white" />
-                          <span className="text-xs font-semibold text-white">Signature</span>
-                        </div>
-                      </div>
-                    )}
-                    
-                    <div className="relative z-10 h-full flex flex-col">
-                      {/* Header */}
-                      <div className="mb-6">
-                        <div className={`w-16 h-16 bg-gradient-to-br from-${accentColor}/20 to-${accentColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 mb-4`}>
-                          <IconComponent className="w-8 h-8 text-white" />
-                        </div>
-                        <h3 className="text-xl font-display font-bold text-primary mb-3">
-                          {offering.title}
-                        </h3>
-                        <div className="flex flex-col space-y-2">
-                          <span className={`text-sm font-semibold text-${accentColor} bg-${accentColor}/10 px-3 py-1.5 rounded-full w-fit`}>
-                            {offering.duration}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground font-body leading-relaxed mb-6 flex-grow text-sm">
-                        {offering.description}
-                      </p>
-
-                      {/* Key Areas */}
-                      <div className="mt-auto">
-                        <h4 className="text-primary font-semibold mb-4 uppercase tracking-wider text-xs">
-                          Key Areas
-                        </h4>
-                        <div className="space-y-2">
-                          {offering.keyAreas.map((area, idx) => (
-                            <div key={idx} className="flex items-center space-x-3 p-2 bg-primary/5 rounded-lg">
-                              <div className={`w-2 h-2 bg-${accentColor} rounded-full flex-shrink-0`}></div>
-                              <span className="text-foreground font-medium text-xs">{area}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                <div className="flex items-start gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-primary/10 hover:border-primary/20 transition-all duration-300">
+                  <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Conscious & Values-Driven Leadership</h4>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-copper/10 hover:border-copper/20 transition-all duration-300">
+                  <div className="w-3 h-3 bg-copper rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Collaboration Flow Design</h4>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-olive-green/10 hover:border-olive-green/20 transition-all duration-300">
+                  <div className="w-3 h-3 bg-olive-green rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Well-Being as Strategy</h4>
+                  </div>
+                </div>
+                
+                <div className="md:col-span-2">
+                  <div className="flex items-start gap-4 p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-sage/10 hover:border-sage/20 transition-all duration-300">
+                    <div className="w-3 h-3 bg-sage rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Adaptive Organizational Backbone</h4>
                     </div>
-                  </Card>
-                );
-              })}
-            </div>
-
-            {/* Add-ons Section */}
-            <div className="max-w-4xl mx-auto mt-16">
-              <div className="border-l-4 border-gradient-to-b border-copper pl-8">
-                <h3 className="text-2xl font-display font-bold text-primary mb-4">
-                  Add-ons available upon request
-                </h3>
-                <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                  Team retreats, workshops, and team-building experiences can be designed and tailored to your organization's needs. 
-                  These can also be integrated into any of our 90-Day Programs or Long-Term Partnerships.
-                </p>
-                <div className="flex items-center space-x-2 mt-4">
-                  <Users className="w-5 h-5 text-copper" />
-                  <MessageCircle className="w-5 h-5 text-sage" />
-                  <Calendar className="w-5 h-5 text-primary" />
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
