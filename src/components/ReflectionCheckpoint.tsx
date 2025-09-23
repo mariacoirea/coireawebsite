@@ -120,6 +120,20 @@ const ReflectionCheckpoint = () => {
             </div>
           </div>
         </div>
+
+        {/* Reflection Box - Horizontal at Bottom */}
+        <aside className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 md:p-8 shadow-soft max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-9 w-9 rounded-full bg-accent/10 flex items-center justify-center">
+              <TrendingUp className="h-5 w-5 text-accent" aria-hidden="true" />
+            </div>
+            <span className="text-sm tracking-wide uppercase text-muted-foreground">Assessment</span>
+          </div>
+
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            If you hesitated on the questions and see yourself in the numbers, your organization is likely running on less capacity and clarity than it could.
+          </p>
+        </aside>
       </div>
 
       {/* Bottom fading gradient to lead into the framework section */}
