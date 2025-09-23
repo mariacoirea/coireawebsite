@@ -74,16 +74,17 @@ const Offerings = () => {
   const longTermOfferings = [
     {
       id: 1,
-      title: "Organizational Transformation",
+      title: "Regenerative Operating System (ROS) Integration",
       badge: "Signature Program",
       duration: "6–18 months",
       timeframe: "",
-      description: "Holistic restructuring of systems, culture, and leadership — aligned with your organization's purpose, people, and performance. We build systems that scale and last.",
+      description: "A full-system upgrade for your organization. We embed the Regenerative Operating System across all five core functions — aligning purpose, leadership, collaboration, well-being, and strategy into one living architecture. This integration transforms complexity into coherence and equips your business to thrive with resilience and integrity.",
       keyAreas: [
-        "Strategic Alignment",
-        "Conscious Leadership", 
-        "Culture Architecture",
-        "Change Implementation"
+        "Purpose & Culture Integration",
+        "Conscious & Values-Driven Leadership", 
+        "Collaboration Flow Design",
+        "Well-Being as Strategy",
+        "Adaptive Organizational Backbone"
       ],
       icon: Building,
       accent: "sage"
