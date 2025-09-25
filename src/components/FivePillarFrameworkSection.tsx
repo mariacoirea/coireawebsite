@@ -43,7 +43,7 @@ export const pillars: {
   },
   {
     title: "Organizational Strategy",
-    subtitle: "Systems & alignment",
+    subtitle: "System Design & Backbone",
     description:
       "Turn vision into reality. Strategy is the structural spine of your business. We design adaptive systems, regenerative KPIs, and decision-making architectures that keep your organization agile and aligned with its deeper purpose.",
     drives: "Scalability, efficiency, resilience.",
