@@ -171,7 +171,7 @@ const Offerings = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-nature will-change-transform contain-layout"
+        <section className="py-20 bg-gradient-to-br from-white via-sage/5 to-primary/10 will-change-transform contain-layout"
           style={{
             /* Optimize critical rendering path */
             contentVisibility: 'auto',
