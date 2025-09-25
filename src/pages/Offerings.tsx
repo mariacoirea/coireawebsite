@@ -46,7 +46,7 @@ const Offerings = () => {
     },
     {
       icon: Brain,
-      title: "Leadership", 
+      title: "Supportive Leadership", 
       description: "Conscious accountability & presence",
       color: "text-primary"
     },
@@ -80,7 +80,7 @@ const Offerings = () => {
       description: "A complete upgrade for your organization. We embed the COIREA OS across all five core functions, transforming complexity into coherence so your business can thrive, scale, and grow without extraction.\n\nWe offer strategic support by stepping in as fractional leaders to co-design and implement systems that lasts.",
       keyAreas: [
         "Purpose & Culture Integration",
-        "Conscious & Values-Driven Leadership", 
+        "Conscious & Values-Driven Supportive Leadership", 
         "Collaboration Flow Design",
         "Well-Being as Strategy",
         "Adaptive Organizational Backbone"

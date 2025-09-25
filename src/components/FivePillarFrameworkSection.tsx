@@ -18,10 +18,10 @@ export const pillars: {
     Icon: Target,
   },
   {
-    title: "Leadership",
+    title: "Supportive Leadership",
     subtitle: "Presence & feedback",
     description:
-      "Build leaders who inspire through change. Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
+      "Build leaders who inspire through change. Supportive Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
     drives: "Strategic execution, innovation, cultural trust.",
     Icon: Crown,
   },
@@ -71,7 +71,7 @@ const FivePillarFrameworkSection = () => {
               Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms these challenges into coherence.
             </p>
             <p className="text-base md:text-lg leading-relaxed">
-              Built on five core functions: Purpose & Culture, Leadership, Collaboration, Well-Being, and Organizational Strategy. The COIREA OS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
+              Built on five core functions: Purpose & Culture, Supportive Leadership, Collaboration, Well-Being, and Organizational Strategy. The COIREA OS is a living architecture that aligns Purpose, People, and Performance into one holistic system.
             </p>
             <p className="text-base md:text-lg leading-relaxed">
               Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity.
