@@ -694,7 +694,7 @@ const Offerings = () => {
         </section>
 
         {/* Enhanced CTA Section */}
-        <section className="py-32 px-6 relative overflow-hidden">
+        <section className="py-32 px-6 relative overflow-hidden bg-gradient-to-br from-warm-beige via-aura-pearl to-warm-beige/80">
           {/* Background with gradient and pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-primary/3 to-copper/5"></div>
           <div className="absolute inset-0 opacity-[0.02]">
