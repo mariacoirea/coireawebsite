@@ -188,7 +188,7 @@ const Offerings = () => {
               Most companies scale by draining their people and diluting their purpose. We believe growth can happen differently: regenerative, coherent, and human-centered.
             </p>
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
-              Systems today are misaligned. People are burned out. Leadership is ready to evolve. At the core of COIREA's work lies a living operating system that evolves with your company. It restores People, Performance and Purpose from the inside out — proving that regenerative growth is not only possible, but measurable.
+              At COIREA, we help organizations grow into Adaptive, Self-Managed Systems by aligning Purpose, Performance, and People. Through Supportive Leadership, Collective Intelligence, and Cultural Coherence, we activate what's already alive within — guiding organizations into their next stage of evolution.
             </p>
             <Button size="lg" className="bg-olive-green hover:bg-olive-green/90 text-white px-8 py-4 text-lg">
               Discover Your Path Forward
