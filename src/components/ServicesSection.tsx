@@ -94,35 +94,75 @@ const ServicesSection = () => {
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
         </div>
 
-        {/* 3-Phase Cycle */}
-        <div className="max-w-5xl mx-auto mb-20">
-          <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary text-center mb-12">
-            Every Reset Follows Our 3-Phase Cycle
-          </h3>
+        {/* 3-Phase Cycle - Enhanced Design */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 bg-sage/10 text-sage text-sm font-semibold rounded-full border border-sage/20 mb-6">
+              <span className="w-2 h-2 rounded-full bg-sage mr-2"></span>
+              OUR PROVEN METHODOLOGY
+            </div>
+            <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-4">
+              Every Reset Follows Our 3-Phase Cycle
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A structured approach that ensures deep transformation and sustainable results
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-sage/10 to-sage/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-sage/20">
-                <span className="text-sage font-bold text-lg">1</span>
+          <div className="relative">
+            {/* Connection lines */}
+            <div className="hidden md:block absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+              <div className="flex justify-between items-center px-16">
+                <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary"></div>
+                <div className="w-24 h-0.5 bg-gradient-to-r from-primary to-copper"></div>
               </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 1: Reflect & Attune</h4>
-              <p className="text-muted-foreground text-sm">Listen deeply. Surface truths. Sense where the organization is stuck or flowing.</p>
             </div>
             
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20">
-                <span className="text-primary font-bold text-lg">2</span>
+            <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+              <div className="text-center group relative">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-sage/20 to-sage/10 rounded-2xl flex items-center justify-center mx-auto border border-sage/30 group-hover:scale-105 transition-all duration-300 shadow-lg">
+                    <span className="text-sage font-bold text-2xl">1</span>
+                  </div>
+                </div>
+                <h4 className="text-xl font-display font-semibold text-primary mb-4">Reflect & Attune</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Listen deeply. Surface truths. Sense where the organization is stuck or flowing.
+                </p>
+                <div className="mt-4 text-sage text-sm font-medium">
+                  Deep Listening Phase
+                </div>
               </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 2: Seed & Design</h4>
-              <p className="text-muted-foreground text-sm">Plant new practices, roles, and structures aligned with your chosen Reset.</p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-copper/10 to-copper/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-copper/20">
-                <span className="text-copper font-bold text-lg">3</span>
+              
+              <div className="text-center group relative">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto border border-primary/30 group-hover:scale-105 transition-all duration-300 shadow-lg">
+                    <span className="text-primary font-bold text-2xl">2</span>
+                  </div>
+                </div>
+                <h4 className="text-xl font-display font-semibold text-primary mb-4">Seed & Design</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Plant new practices, roles, and structures aligned with your chosen Reset.
+                </p>
+                <div className="mt-4 text-primary text-sm font-medium">
+                  Strategic Implementation
+                </div>
               </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 3: Integrate & Grow</h4>
-              <p className="text-muted-foreground text-sm">Embed the changes into daily rhythms. Track COIREA KPIs as the system adapts.</p>
+              
+              <div className="text-center group relative">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-copper/20 to-copper/10 rounded-2xl flex items-center justify-center mx-auto border border-copper/30 group-hover:scale-105 transition-all duration-300 shadow-lg">
+                    <span className="text-copper font-bold text-2xl">3</span>
+                  </div>
+                </div>
+                <h4 className="text-xl font-display font-semibold text-primary mb-4">Integrate & Grow</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Embed the changes into daily rhythms. Track COIREA KPIs as the system adapts.
+                </p>
+                <div className="mt-4 text-copper text-sm font-medium">
+                  Sustainable Evolution
+                </div>
+              </div>
             </div>
           </div>
         </div>
