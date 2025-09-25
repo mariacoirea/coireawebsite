@@ -190,9 +190,45 @@ const Offerings = () => {
             <p className="text-lg md:text-xl text-primary/70 font-body leading-relaxed max-w-4xl mx-auto mb-12">
               Systems today are misaligned. People are burned out. Leadership is ready to evolve. At the core of COIREA's work lies a living operating system that evolves with your company. It restores People, Performance and Purpose from the inside out — proving that regenerative growth is not only possible, but measurable.
             </p>
-            <Button size="lg" className="bg-olive-green hover:bg-olive-green/90 text-white px-8 py-4 text-lg">
-              Discover Your Path Forward
-            </Button>
+            <div className="flex flex-col items-center gap-8 pt-4">
+              {/* Enhanced CTA Button */}
+              <Button 
+                size="lg" 
+                onClick={() => navigate('/journey')}
+                className="group relative bg-gradient-to-r from-olive-green to-sage hover:from-olive-green/90 hover:to-sage/90 text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[280px]"
+              >
+                <span className="flex items-center gap-3 relative z-10">
+                  Discover Your Path Forward
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </span>
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-olive-green/20 to-sage/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+              </Button>
+
+              {/* Trust indicators */}
+              <div className="flex flex-col sm:flex-row gap-6 items-center text-center">
+                <div className="flex items-center gap-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-sage/20 to-sage/10 rounded-lg flex items-center justify-center">
+                    <Check className="w-4 h-4 text-sage" />
+                  </div>
+                  <span className="text-sm font-medium text-primary">90-Day Programs</span>
+                </div>
+                
+                <div className="flex items-center gap-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                    <BarChart3 className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-primary">Measurable Results</span>
+                </div>
+                
+                <div className="flex items-center gap-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-copper/20 to-copper/10 rounded-lg flex items-center justify-center">
+                    <Heart className="w-4 h-4 text-copper" />
+                  </div>
+                  <span className="text-sm font-medium text-primary">Human-Centered</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
