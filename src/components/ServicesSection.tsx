@@ -94,6 +94,39 @@ const ServicesSection = () => {
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
         </div>
 
+        {/* 3-Phase Cycle */}
+        <div className="max-w-5xl mx-auto mb-20">
+          <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary text-center mb-12">
+            Every Reset Follows Our 3-Phase Cycle
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center group">
+              <div className="w-12 h-12 bg-gradient-to-br from-sage/10 to-sage/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-sage/20">
+                <span className="text-sage font-bold text-lg">1</span>
+              </div>
+              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 1: Reflect & Attune</h4>
+              <p className="text-muted-foreground text-sm">Listen deeply. Surface truths. Sense where the organization is stuck or flowing.</p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20">
+                <span className="text-primary font-bold text-lg">2</span>
+              </div>
+              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 2: Seed & Design</h4>
+              <p className="text-muted-foreground text-sm">Plant new practices, roles, and structures aligned with your chosen Reset.</p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-12 h-12 bg-gradient-to-br from-copper/10 to-copper/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-copper/20">
+                <span className="text-copper font-bold text-lg">3</span>
+              </div>
+              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 3: Integrate & Grow</h4>
+              <p className="text-muted-foreground text-sm">Embed the changes into daily rhythms. Track COIREA KPIs as the system adapts.</p>
+            </div>
+          </div>
+        </div>
+
         {/* Three 90-Day Programs */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {resetPrograms.map((program, index) => {
