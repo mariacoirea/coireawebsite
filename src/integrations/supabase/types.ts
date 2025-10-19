@@ -75,58 +75,90 @@ export type Database = {
         Row: {
           author: string | null
           body_content: string
+          body_content_es: string | null
           cluster: string
           created_at: string
           featured: boolean | null
           featured_image: string | null
           id: string
+          language: string | null
           meta_description: string | null
+          meta_description_es: string | null
           preview_snippet: string
+          preview_snippet_es: string | null
           published: boolean | null
           seo_keywords: string[] | null
+          seo_keywords_es: string[] | null
           seo_title: string | null
+          seo_title_es: string | null
           slug: string
           tags: string[] | null
           title: string
+          title_es: string | null
+          translation_group: string | null
           updated_at: string
         }
         Insert: {
           author?: string | null
           body_content: string
+          body_content_es?: string | null
           cluster: string
           created_at?: string
           featured?: boolean | null
           featured_image?: string | null
           id?: string
+          language?: string | null
           meta_description?: string | null
+          meta_description_es?: string | null
           preview_snippet: string
+          preview_snippet_es?: string | null
           published?: boolean | null
           seo_keywords?: string[] | null
+          seo_keywords_es?: string[] | null
           seo_title?: string | null
+          seo_title_es?: string | null
           slug: string
           tags?: string[] | null
           title: string
+          title_es?: string | null
+          translation_group?: string | null
           updated_at?: string
         }
         Update: {
           author?: string | null
           body_content?: string
+          body_content_es?: string | null
           cluster?: string
           created_at?: string
           featured?: boolean | null
           featured_image?: string | null
           id?: string
+          language?: string | null
           meta_description?: string | null
+          meta_description_es?: string | null
           preview_snippet?: string
+          preview_snippet_es?: string | null
           published?: boolean | null
           seo_keywords?: string[] | null
+          seo_keywords_es?: string[] | null
           seo_title?: string | null
+          seo_title_es?: string | null
           slug?: string
           tags?: string[] | null
           title?: string
+          title_es?: string | null
+          translation_group?: string | null
           updated_at?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "fk_posts_translation_group"
+            columns: ["translation_group"]
+            isOneToOne: false
+            referencedRelation: "posts"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       user_roles: {
         Row: {
