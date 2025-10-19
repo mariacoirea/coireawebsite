@@ -5,7 +5,94 @@
     "keywords": "about COIREA, regenerative consultancy, organizational transformation, conscious leadership, María José Figueroa"
   },
   "hero": {
-    "title": "About COIREA",
-    "subtitle": "Catalyzing regenerative transformation in organizations"
+    "title": "The Future of Work Isn't a Trend —",
+    "titleEmphasis": "It's a Transformation",
+    "subtitle": "We founded COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being."
+  },
+  "mission": {
+    "badge": "Our Mission",
+    "title": "Purpose. People.",
+    "titleEmphasis": "Performance.",
+    "description": "Our mission is to guide organizations through deep structural and human transformation. We align purpose, people, and performance so that companies can evolve with integrity, strategic direction, and long-term success.",
+    "quote": "When purpose and leadership are in coherence, companies not only grow — they regenerate."
+  },
+  "values": {
+    "badge": "Our Values",
+    "title": "What We",
+    "titleEmphasis": "Stand For",
+    "items": [
+      {
+        "title": "Clarity of Purpose",
+        "description": "We design from the inside out — anchored in strategic vision, soul truth, and long-term direction."
+      },
+      {
+        "title": "Coherence at Every Level",
+        "description": "Transformation lasts when purpose, leadership, and culture are aligned across systems, teams, and decisions."
+      },
+      {
+        "title": "Leadership with Integrity",
+        "description": "We support bold, conscious leadership that prioritizes presence, responsibility, and aligned action."
+      },
+      {
+        "title": "Human-Centered Systems",
+        "description": "People are not separate from performance — they are the system. We design structures that support both."
+      },
+      {
+        "title": "Reciprocity as Strategy",
+        "subtitle": "(Inspired by Ayni)",
+        "description": "We honor the natural flow of giving and receiving. Regeneration begins with how we relate — to ourselves, to others, to the system."
+      },
+      {
+        "title": "Brave Evolution",
+        "description": "We invite companies to lead change from a place of courage — daring to disrupt, experiment, and evolve from truth."
+      }
+    ]
+  },
+  "partnership": {
+    "badge": "Real Partnership",
+    "title": "Real change requires",
+    "titleEmphasis": "real partnership.",
+    "intro": "At COIREA, you don't just work with a consulting firm. You enter a living ecosystem of transformational allies:",
+    "allies": [
+      "Executive coaches",
+      "Culture strategists",
+      "Regenerative business mentors",
+      "Well-being and somatic practitioners",
+      "Systems change facilitators"
+    ],
+    "helpTitle": "Together, we help you:",
+    "helpItems": [
+      {
+        "title": "Align Your Leadership Team",
+        "description": "So they operate from shared values and authentic presence"
+      },
+      {
+        "title": "Design Regenerative Systems",
+        "description": "That prioritize people, planet, and performance"
+      },
+      {
+        "title": "Navigate Transition",
+        "description": "With strategic clarity and embodied support"
+      }
+    ],
+    "commitment": "We're not here to give you a playbook. We're here to co-create a living organization with you."
+  },
+  "founder": {
+    "badge": "Founder & CEO",
+    "name": "María José Figueroa",
+    "role": "Founder & CEO",
+    "bio": [
+      "María José is a systems thinker, transformational consultant, and regenerative business strategist with deep experience in human-centered organizational design.",
+      "After years working with growth-stage startups, she witnessed firsthand how rapid scaling and misaligned structures led to burnout, culture breakdowns, and leadership drift — even in purpose-driven companies.",
+      "COIREA was born from this observation: organizations need more than better processes. They need a complete reimagining of how work, leadership, and purpose come together.",
+      "Trained in conscious leadership, somatic practices, and regenerative design, María José brings a holistic approach that integrates strategic consulting with soul-deep inquiry.",
+      "She has guided leadership teams, coached founders, and facilitated retreats for companies navigating complexity, culture transformation, and intentional growth."
+    ],
+    "quote": "The future belongs to organizations that can hold both structure and soul, efficiency and essence. We're here to help you build that."
+  },
+  "cta": {
+    "title": "Ready to Transform Your Organization?",
+    "subtitle": "Whether you're ready to begin or still exploring, we're here for the conversation.",
+    "button": "Let's Connect"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "title": "COIREA Community Events - Live Conversations for Conscious Leaders",
+    "description": "Join our free monthly events featuring global speakers, forward-thinking leaders, and startup teams building thriving cultures and regenerative growth.",
+    "keywords": "COIREA events, conscious leadership workshops, startup community events, future of work panels, organizational transformation, live conversations"
+  },
+  "hero": {
+    "title": "COIREA Community Events",
+    "subtitle": "Live Conversations, Workshops, and Panels for Founders and Teams shaping the Future of Work."
+  },
+  "intro": [
+    "At COIREA, we believe transformation happens in community.",
+    "Our events bring together global speakers, forward-thinking leaders, and startup teams who care about building thriving cultures, conscious leadership, and regenerative growth.",
+    "Each month, we host a free, live session — part inspiration, part practical insight — designed to help you scale without losing your team's well-being or purpose."
+  ],
+  "calendar": {
+    "title": "Event Calendar",
+    "description": "Browse upcoming events, watch replays of past sessions, and join our community of conscious leaders.",
+    "loading": "Loading events..."
+  },
+  "cta": {
+    "title": "Want to Stay Connected?",
+    "description": "Sign up for event updates and exclusive resources for conscious leaders.",
+    "button": "Join Community"
+  }
+}

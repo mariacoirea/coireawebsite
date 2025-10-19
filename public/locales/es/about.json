@@ -5,7 +5,94 @@
     "keywords": "acerca de COIREA, consultoría regenerativa, transformación organizacional, liderazgo consciente, María José Figueroa"
   },
   "hero": {
-    "title": "Acerca de COIREA",
-    "subtitle": "Catalizando la transformación regenerativa en organizaciones"
+    "title": "El Futuro del Trabajo No Es una Tendencia —",
+    "titleEmphasis": "Es una Transformación",
+    "subtitle": "Fundamos COIREA para desafiar sistemas obsoletos y liderar el cambio hacia organizaciones de alto rendimiento, centradas en las personas y construidas sobre coherencia, claridad y bienestar."
+  },
+  "mission": {
+    "badge": "Nuestra Misión",
+    "title": "Propósito. Personas.",
+    "titleEmphasis": "Rendimiento.",
+    "description": "Nuestra misión es guiar a las organizaciones a través de una transformación estructural y humana profunda. Alineamos propósito, personas y rendimiento para que las empresas puedan evolucionar con integridad, dirección estratégica y éxito a largo plazo.",
+    "quote": "Cuando el propósito y el liderazgo están en coherencia, las empresas no solo crecen — se regeneran."
+  },
+  "values": {
+    "badge": "Nuestros Valores",
+    "title": "Lo Que",
+    "titleEmphasis": "Defendemos",
+    "items": [
+      {
+        "title": "Claridad de Propósito",
+        "description": "Diseñamos desde adentro hacia afuera — anclados en visión estratégica, verdad del alma y dirección a largo plazo."
+      },
+      {
+        "title": "Coherencia en Todos los Niveles",
+        "description": "La transformación perdura cuando el propósito, el liderazgo y la cultura están alineados a través de sistemas, equipos y decisiones."
+      },
+      {
+        "title": "Liderazgo con Integridad",
+        "description": "Apoyamos el liderazgo audaz y consciente que prioriza la presencia, la responsabilidad y la acción alineada."
+      },
+      {
+        "title": "Sistemas Centrados en las Personas",
+        "description": "Las personas no están separadas del rendimiento — son el sistema. Diseñamos estructuras que apoyan ambos."
+      },
+      {
+        "title": "Reciprocidad como Estrategia",
+        "subtitle": "(Inspirado en Ayni)",
+        "description": "Honramos el flujo natural de dar y recibir. La regeneración comienza con cómo nos relacionamos — con nosotros mismos, con los demás, con el sistema."
+      },
+      {
+        "title": "Evolución Valiente",
+        "description": "Invitamos a las empresas a liderar el cambio desde un lugar de coraje — atreviéndose a interrumpir, experimentar y evolucionar desde la verdad."
+      }
+    ]
+  },
+  "partnership": {
+    "badge": "Colaboración Real",
+    "title": "El cambio real requiere",
+    "titleEmphasis": "colaboración real.",
+    "intro": "En COIREA, no solo trabajas con una consultora. Entras en un ecosistema vivo de aliados transformacionales:",
+    "allies": [
+      "Coaches ejecutivos",
+      "Estrategas de cultura",
+      "Mentores de negocios regenerativos",
+      "Profesionales de bienestar y somática",
+      "Facilitadores de cambio sistémico"
+    ],
+    "helpTitle": "Juntos, te ayudamos a:",
+    "helpItems": [
+      {
+        "title": "Alinear Tu Equipo de Liderazgo",
+        "description": "Para que operen desde valores compartidos y presencia auténtica"
+      },
+      {
+        "title": "Diseñar Sistemas Regenerativos",
+        "description": "Que prioricen personas, planeta y rendimiento"
+      },
+      {
+        "title": "Navegar la Transición",
+        "description": "Con claridad estratégica y apoyo encarnado"
+      }
+    ],
+    "commitment": "No estamos aquí para darte un manual. Estamos aquí para co-crear una organización viva contigo."
+  },
+  "founder": {
+    "badge": "Fundadora y CEO",
+    "name": "María José Figueroa",
+    "role": "Fundadora y CEO",
+    "bio": [
+      "María José es una pensadora sistémica, consultora transformacional y estratega de negocios regenerativos con profunda experiencia en diseño organizacional centrado en las personas.",
+      "Después de años trabajando con startups en fase de crecimiento, fue testigo de primera mano de cómo el escalamiento rápido y las estructuras desalineadas conducían al agotamiento, rupturas culturales y deriva del liderazgo — incluso en empresas con propósito.",
+      "COIREA nació de esta observación: las organizaciones necesitan más que mejores procesos. Necesitan una reimaginación completa de cómo se unen el trabajo, el liderazgo y el propósito.",
+      "Formada en liderazgo consciente, prácticas somáticas y diseño regenerativo, María José aporta un enfoque holístico que integra consultoría estratégica con indagación profunda del alma.",
+      "Ha guiado equipos de liderazgo, entrenado a fundadores y facilitado retiros para empresas que navegan la complejidad, la transformación cultural y el crecimiento intencional."
+    ],
+    "quote": "El futuro pertenece a organizaciones que pueden sostener tanto estructura como alma, eficiencia y esencia. Estamos aquí para ayudarte a construir eso."
+  },
+  "cta": {
+    "title": "¿Listo para Transformar Tu Organización?",
+    "subtitle": "Ya sea que estés listo para comenzar o aún explorando, estamos aquí para la conversación.",
+    "button": "Conectemos"
   }
 }

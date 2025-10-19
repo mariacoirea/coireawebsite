@@ -47,11 +47,11 @@ const About = () => {
           
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
-              The Future of Work Isn't a Trend — <span className="italic">It's a Transformation</span>
+              {t('hero.title')} <span className="italic">{t('hero.titleEmphasis')}</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
-              We founded COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being.
+              {t('hero.subtitle')}
             </p>
           </div>
         </section>
@@ -62,11 +62,11 @@ const About = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
                 <Mountain className="w-4 h-4 text-primary" />
-                <span className="text-primary font-medium">Our Mission</span>
+                <span className="text-primary font-medium">{t('mission.badge')}</span>
               </div>
               
               <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                Purpose. People. <span className="text-sage">Performance.</span>
+                {t('mission.title')} <span className="text-sage">{t('mission.titleEmphasis')}</span>
               </h2>
               
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
@@ -74,11 +74,11 @@ const About = () => {
 
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-elegant border border-primary/10">
               <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8 max-w-4xl mx-auto text-center">
-                Our mission is to guide organizations through deep structural and human transformation. We align purpose, people, and performance so that companies can evolve with integrity, strategic direction, and long-term success.
+                {t('mission.description')}
               </p>
               <div className="text-center">
                 <p className="text-2xl text-primary font-body font-medium italic">
-                  When purpose and leadership are in coherence, companies not only grow — they regenerate.
+                  {t('mission.quote')}
                 </p>
               </div>
             </div>
@@ -91,11 +91,11 @@ const About = () => {
             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
                 <Heart className="w-4 h-4 text-sage" />
-                <span className="text-primary font-medium">Our Values</span>
+                <span className="text-primary font-medium">{t('values.badge')}</span>
               </div>
               
               <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                What We <span className="text-sage">Stand For</span>
+                {t('values.title')} <span className="text-sage">{t('values.titleEmphasis')}</span>
               </h2>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>

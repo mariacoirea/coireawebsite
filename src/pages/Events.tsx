@@ -7,15 +7,15 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Events = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('events');
   const { currentLanguage } = useLanguage();
   
   return (
     <>
       <SEOHead
-        title="COIREA Community Events - Live Conversations for Conscious Leaders"
-        description="Join our free monthly events featuring global speakers, forward-thinking leaders, and startup teams building thriving cultures and regenerative growth."
-        keywords="COIREA events, conscious leadership workshops, startup community events, future of work panels, organizational transformation, live conversations"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
         url={currentLanguage === 'es' ? '/es/events' : '/events'}
       />
       
@@ -36,10 +36,10 @@ const Events = () => {
             <div className="container mx-auto max-w-4xl text-center relative z-10">
               <header>
                 <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-                  COIREA Community Events
+                  {t('hero.title')}
                 </h1>
                 <p className="text-xl md:text-2xl text-primary/80 font-body leading-relaxed">
-                  Live Conversations, Workshops, and Panels for Founders and Teams shaping the Future of Work.
+                  {t('hero.subtitle')}
                 </p>
               </header>
             </div>
@@ -49,15 +49,11 @@ const Events = () => {
           <section className="py-16 md:py-20 px-6">
             <div className="container mx-auto max-w-4xl">
               <div className="prose prose-lg max-w-none text-center">
-                <p className="text-lg md:text-xl text-foreground font-body leading-relaxed mb-6">
-                  At COIREA, we believe transformation happens in community.
-                </p>
-                <p className="text-lg md:text-xl text-foreground font-body leading-relaxed mb-6">
-                  Our events bring together global speakers, forward-thinking leaders, and startup teams who care about building thriving cultures, conscious leadership, and regenerative growth.
-                </p>
-                <p className="text-lg md:text-xl text-foreground font-body leading-relaxed">
-                  Each month, we host a free, live session — part inspiration, part practical insight — designed to help you scale without losing your team's well-being or purpose.
-                </p>
+                {(t('intro', { returnObjects: true }) as string[]).map((paragraph: string, idx: number) => (
+                  <p key={idx} className="text-lg md:text-xl text-foreground font-body leading-relaxed mb-6">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </section>
@@ -68,10 +64,10 @@ const Events = () => {
               {/* Section Header */}
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
-                  Event Calendar
+                  {t('calendar.title')}
                 </h2>
                 <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-                  Browse upcoming events, watch replays of past sessions, and join our community of conscious leaders.
+                  {t('calendar.description')}
                 </p>
               </div>
               

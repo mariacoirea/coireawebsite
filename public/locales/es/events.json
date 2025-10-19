@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "title": "Eventos de la Comunidad COIREA - Conversaciones en Vivo para Líderes Conscientes",
+    "description": "Únete a nuestros eventos mensuales gratuitos con oradores globales, líderes visionarios y equipos de startups construyendo culturas prósperas y crecimiento regenerativo.",
+    "keywords": "eventos COIREA, talleres de liderazgo consciente, eventos comunitarios para startups, paneles sobre el futuro del trabajo, transformación organizacional, conversaciones en vivo"
+  },
+  "hero": {
+    "title": "Eventos de la Comunidad COIREA",
+    "subtitle": "Conversaciones en Vivo, Talleres y Paneles para Fundadores y Equipos dando forma al Futuro del Trabajo."
+  },
+  "intro": [
+    "En COIREA, creemos que la transformación sucede en comunidad.",
+    "Nuestros eventos reúnen a oradores globales, líderes visionarios y equipos de startups que se preocupan por construir culturas prósperas, liderazgo consciente y crecimiento regenerativo.",
+    "Cada mes, organizamos una sesión gratuita en vivo — parte inspiración, parte conocimiento práctico — diseñada para ayudarte a escalar sin perder el bienestar o el propósito de tu equipo."
+  ],
+  "calendar": {
+    "title": "Calendario de Eventos",
+    "description": "Explora los próximos eventos, mira repeticiones de sesiones anteriores y únete a nuestra comunidad de líderes conscientes.",
+    "loading": "Cargando eventos..."
+  },
+  "cta": {
+    "title": "¿Quieres Mantenerte Conectado?",
+    "description": "Regístrate para recibir actualizaciones de eventos y recursos exclusivos para líderes conscientes.",
+    "button": "Únete a la Comunidad"
+  }
+}
