@@ -8,32 +8,18 @@ interface AssessmentResultsProps {
   onRetake: () => void;
 }
 
-const statusMessages = {
-  'Misaligned': 'There is deep misalignment across your system. This is a signal to pause and realign from the roots.',
-  'Emerging': 'You\'re in the early stages of conscious transformation. There\'s awareness building — and that\'s the first step.',
-  'Stabilizing': 'You\'re laying a solid foundation, but some structural elements need care for long-term coherence.',
-  'Evolving': 'You\'re in a phase of conscious growth. Keep nurturing the flow between strategy, leadership, and team dynamics.',
-  'Thriving': 'Your organization is thriving — rooted in purpose, balanced in leadership, and aligned in its structure and well-being.'
-};
-
-const painPointMessages = {
-  'Purpose & Culture': 'Your lowest score is in Purpose & Culture. This signals a misalignment between your values and day-to-day behaviors. When people don\'t feel emotionally connected to a shared mission, or the culture doesn\'t reflect the stated purpose, energy and trust begin to erode. This weakens belonging, motivation, and long-term alignment.',
-  'Collaboration': 'Your lowest score is in Collaboration. This suggests friction or fragmentation in how people work together. Poor communication, silos, or lack of shared ownership can quietly drain momentum. Without strong collaboration, teams lose their creative and connective power.',
-  'Leadership': 'Your lowest score is in Leadership. This means leadership may not be offering clarity, inspiration, or trust. When leadership feels distant, reactive, or disconnected, it affects every other layer of the organization. Healing begins with presence, transparency, and relational trust.',
-  'Well-Being': 'Your lowest score is in Well-Being. This points to burnout, fatigue, or emotional disconnection. Well-being is not a luxury — it\'s the energetic baseline of a regenerative organization. Without it, purpose fades and performance suffers. This is a call to slow down and recalibrate.',
-  'Organizational Strategy': 'Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning.'
-};
-
-const selfLeadershipMessages = {
-  'Below the Line': 'You are likely operating in reactive leadership patterns (urgency, fear, control), and your organization reflects that disconnection.',
-  'In Transition': 'You\'re awakening. Both your leadership and your org are shifting — but full embodiment and consistency are still maturing.',
-  'Conscious Leadership Emerging': 'You are leading with emotional intelligence and holding relational trust — but there\'s still growth to stabilize the culture around you.',
-  'Regenerative Leadership Embodied': 'You and your organization are operating from clarity, trust, and integrity. You are modeling regenerative leadership that inspires transformation.'
-};
 
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   const { t } = useTranslation('results');
   const { pillarScores, totalScore, interconnectivityScore, selfLeadershipScore, selfLeadershipPercent, organizationalStatus, painPoint, strength } = results;
+
+  const pillarKeys: Record<string, string> = {
+    'Purpose & Culture': 'purposeCulture',
+    'Collaboration': 'collaboration',
+    'Leadership': 'leadership',
+    'Well-Being': 'wellBeing',
+    'Organizational Strategy': 'organizationalStrategy'
+  };
 
   const getPillarPercentage = (score: number) => {
     return Math.round((score / 35) * 100);
@@ -102,17 +88,13 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {Object.entries(pillarScores).filter(([pillar]) => pillar !== 'interconnectivity' && pillar !== 'selfLeadership').map(([pillar, score]) => {
-                  const pillarDisplayNames = {
-                    purposeCulture: 'Purpose & Culture',
-                    collaboration: 'Collaboration',
-                    leadership: 'Leadership',
-                    wellBeing: 'Well-Being',
-                    organizationalStrategy: 'Organizational Strategy'
-                  };
-                  const pillarName = pillarDisplayNames[pillar as keyof typeof pillarDisplayNames];
                   const percentage = getPillarPercentage(score);
-                  const isLowest = pillarName === painPoint;
-                  const isHighest = pillarName === strength;
+                  const pillarKey = pillar as keyof typeof pillarScores;
+                  const pillarName = t(`assessment:pillars.${pillarKey}`);
+                  const painPointKey = pillarKeys[painPoint];
+                  const strengthKey = pillarKeys[strength];
+                  const isLowest = pillar === painPointKey;
+                  const isHighest = pillar === strengthKey;
                   
                   return (
                     <div 
@@ -165,7 +147,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             <div className="space-y-6">
               <div className="bg-card border border-accent/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-accent mb-3">
-                  {t('organizational.greatestChallenge')}: {painPoint}
+                  {t('organizational.greatestChallenge')}: {t(`assessment:pillars.${pillarKeys[painPoint]}`)}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
                   {t(`organizational.painPointMessages.${painPoint}`)}
@@ -174,10 +156,10 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
 
               <div className="bg-card border border-primary/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-primary mb-3">
-                  {t('organizational.greatestStrength')}: {strength}
+                  {t('organizational.greatestStrength')}: {t(`assessment:pillars.${pillarKeys[strength]}`)}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
-                  On the other hand, your strongest area is {strength}. This is your current source of power and stability. Building on this strength can create momentum and inspire evolution across other areas. It's where your organization is already aligned — and it can become the anchor for transformation.
+                  {t(`organizational.strengthMessage`, { strength: t(`assessment:pillars.${pillarKeys[strength]}`) })}
                 </p>
               </div>
 
@@ -203,11 +185,10 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                 {t('organizational.resultsSent')}
               </h3>
               <p className="text-lg text-foreground/80 font-body leading-relaxed mb-4">
-                A comprehensive copy of your organizational health assessment has been sent to your email. 
-                We'll be in touch within 24 hours to discuss your personalized transformation roadmap.
+                {t('organizational.resultsSentDescription')}
               </p>
               <p className="text-sm text-foreground/60 font-body">
-                Check your inbox for your detailed results and next steps.
+                {t('organizational.checkInbox')}
               </p>
             </div>
 
