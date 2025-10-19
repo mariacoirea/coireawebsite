@@ -101,7 +101,7 @@ const About = () => {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-8">
-              {(t('values.items', { returnObjects: true }) as Array<{ title: string; subtitle?: string; description: string }>).map((value, index) => {
+              {Array.isArray(t('values.items', { returnObjects: true })) && (t('values.items', { returnObjects: true }) as Array<{ title: string; subtitle?: string; description: string }>).map((value, index) => {
                 const icons = [Eye, Target, Lightbulb, Users, Compass, Zap];
                 const colors = [
                   { from: 'from-sage/20', to: 'to-sage', text: 'text-sage' },
@@ -158,7 +158,7 @@ const About = () => {
                 </p>
                 
                 <div className="space-y-4 mb-8">
-                  {(t('partnership.allies', { returnObjects: true }) as string[]).map((ally, index) => (
+                  {Array.isArray(t('partnership.allies', { returnObjects: true })) && (t('partnership.allies', { returnObjects: true }) as string[]).map((ally, index) => (
                     <div key={index} className="flex items-center space-x-4">
                       <div className="w-3 h-3 bg-gradient-to-r from-sage to-primary rounded-full"></div>
                       <span className="text-foreground/70 font-body text-lg">{ally}</span>
@@ -172,7 +172,7 @@ const About = () => {
                   {t('partnership.helpTitle')}
                 </h3>
                 <div className="space-y-8">
-                  {(t('partnership.helpItems', { returnObjects: true }) as Array<{ title: string; description: string }>).map((item, index) => {
+                  {Array.isArray(t('partnership.helpItems', { returnObjects: true })) && (t('partnership.helpItems', { returnObjects: true }) as Array<{ title: string; description: string }>).map((item, index) => {
                     const icons = [Zap, Target, Heart];
                     const colors = ['bg-sage/10 text-sage', 'bg-primary/10 text-primary', 'bg-copper/10 text-copper'];
                     const Icon = icons[index];
@@ -241,7 +241,7 @@ const About = () => {
                 </h3>
                 
                 <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
-                  {(t('founder.bio', { returnObjects: true }) as string[]).map((paragraph, index) => {
+                  {Array.isArray(t('founder.bio', { returnObjects: true })) && (t('founder.bio', { returnObjects: true }) as string[]).map((paragraph, index) => {
                     if (index === (t('founder.bio', { returnObjects: true }) as string[]).length - 1) {
                       return (
                         <p key={index} className="text-xl font-medium text-primary italic">
@@ -268,7 +268,7 @@ const About = () => {
             </div>
 
             <div className="space-y-8">
-              {(t('faq.items', { returnObjects: true }) as Array<{ question: string; answer: string }>).map((faq, index) => (
+              {Array.isArray(t('faq.items', { returnObjects: true })) && (t('faq.items', { returnObjects: true }) as Array<{ question: string; answer: string }>).map((faq, index) => (
                 <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
                   <h3 className="text-xl font-display font-semibold text-primary mb-4">
                     {faq.question}
