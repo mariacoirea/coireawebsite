@@ -10,6 +10,17 @@
     "readMore": "Leer más",
     "readingTime": "{{minutes}} min de lectura",
     "noPostsAvailable": "No se encontraron perspectivas que coincidan con tus criterios.",
-    "searchPlaceholder": "Buscar perspectivas..."
+    "searchPlaceholder": "Buscar perspectivas...",
+    "featured": "Destacado",
+    "showingPosts": "Mostrando {{start}}-{{end}} de {{total}} artículos",
+    "loadingInsights": "Cargando perspectivas...",
+    "backToInsights": "Volver a Perspectivas"
+  },
+  "post": {
+    "share": "Compartir:",
+    "tags": "Etiquetas",
+    "relatedPosts": "Artículos Relacionados",
+    "postNotFound": "Artículo No Encontrado",
+    "postNotFoundDescription": "El artículo que buscas no existe."
   }
 }

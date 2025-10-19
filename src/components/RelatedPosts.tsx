@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { useLanguage } from "@/hooks/useLanguage";
+import LocalizedLink from "./LocalizedLink";
 
 interface BlogPost {
   id: string;
@@ -8,6 +9,7 @@ interface BlogPost {
   slug: string;
   cluster: string;
   created_at: string;
+  title_es?: string;
 }
 
 interface RelatedPostsProps {
@@ -20,6 +22,15 @@ interface RelatedPostsProps {
 const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit = 3 }: RelatedPostsProps) => {
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const { currentLanguage } = useLanguage();
+
+  // Helper function to get translated field
+  const getTranslatedField = (post: BlogPost, field: 'title') => {
+    if (currentLanguage === 'es' && post.title_es) {
+      return post.title_es;
+    }
+    return post.title;
+  };
 
   useEffect(() => {
     if (currentPostId && currentCluster) {
@@ -32,7 +43,7 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
       // First try to find posts in the same cluster
       let { data: clusterPosts, error: clusterError } = await supabase
         .from('posts')
-        .select('id, title, slug, cluster, created_at')
+        .select('id, title, slug, cluster, created_at, title_es')
         .eq('published', true)
         .eq('cluster', currentCluster)
         .neq('id', currentPostId)
@@ -49,7 +60,7 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
         
         let { data: otherPosts, error: otherError } = await supabase
           .from('posts')
-          .select('id, title, slug, cluster, created_at')
+          .select('id, title, slug, cluster, created_at, title_es')
           .eq('published', true)
           .neq('cluster', currentCluster)
           .neq('id', currentPostId)
@@ -82,7 +93,7 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {relatedPosts.map((post, index) => (
-            <Link 
+            <LocalizedLink 
               key={post.id}
               to={`/insights/${post.slug}`}
               className="group"
@@ -94,10 +105,10 @@ const RelatedPosts = ({ currentPostId, currentCluster, currentTags = [], limit =
                   </span>
                 </div>
                 <h3 className="text-sm font-display font-medium text-primary group-hover:text-primary/80 transition-colors leading-tight line-clamp-3">
-                  {post.title}
+                  {getTranslatedField(post, 'title')}
                 </h3>
               </div>
-            </Link>
+            </LocalizedLink>
           ))}
         </div>
       </div>

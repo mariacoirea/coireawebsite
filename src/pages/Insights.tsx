@@ -32,6 +32,8 @@ interface BlogPost {
   author: string;
   featured: boolean;
   created_at: string;
+  title_es?: string;
+  preview_snippet_es?: string;
 }
 
 const CLUSTERS = [
@@ -82,13 +84,20 @@ const Insights = () => {
     setCurrentPage(1);
   }, [activeCluster, searchTerm]);
 
+  // Helper function to get translated field
+  const getTranslatedField = (post: BlogPost, field: 'title' | 'preview_snippet') => {
+    if (currentLanguage === 'es' && post[`${field}_es`]) {
+      return post[`${field}_es`];
+    }
+    return post[field];
+  };
+
   const fetchPosts = async () => {
     try {
       const { data, error } = await supabase
         .from('posts')
-        .select('*')
+        .select('id, title, slug, cluster, preview_snippet, featured_image, author, featured, created_at, title_es, preview_snippet_es')
         .eq('published', true)
-        .eq('language', currentLanguage) // Filter by current language
         .order('featured', { ascending: false })
         .order('created_at', { ascending: false });
       
@@ -109,10 +118,12 @@ const Insights = () => {
     }
     
     if (searchTerm) {
-      filtered = filtered.filter(post => 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.preview_snippet.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      filtered = filtered.filter(post => {
+        const title = getTranslatedField(post, 'title');
+        const snippet = getTranslatedField(post, 'preview_snippet');
+        return title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+               snippet.toLowerCase().includes(searchTerm.toLowerCase());
+      });
     }
     
     setFilteredPosts(filtered);
@@ -222,12 +233,12 @@ const Insights = () => {
                           </span>
                         </div>
                         <CardTitle className="text-2xl font-display text-primary group-hover:text-primary/80 transition-colors">
-                          {post.title}
+                          {getTranslatedField(post, 'title')}
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
                         <p className="text-foreground/80 font-body leading-relaxed mb-4">
-                          {post.preview_snippet}
+                          {getTranslatedField(post, 'preview_snippet')}
                         </p>
                         <div className="flex items-center justify-end">
                           <Badge className="bg-accent/20 text-accent border-accent/30">
@@ -289,12 +300,12 @@ const Insights = () => {
                             </span>
                           </div>
                           <CardTitle className="text-xl font-display text-primary group-hover:text-primary/80 transition-colors">
-                            {post.title}
+                            {getTranslatedField(post, 'title')}
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
                           <p className="text-foreground/80 font-body leading-relaxed text-sm">
-                            {post.preview_snippet}
+                            {getTranslatedField(post, 'preview_snippet')}
                           </p>
                         </CardContent>
                       </Card>

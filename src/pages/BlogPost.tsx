@@ -14,6 +14,8 @@ import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedPosts from "@/components/RelatedPosts";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
+import { useLanguage } from "@/hooks/useLanguage";
+import LocalizedLink from "@/components/LocalizedLink";
 
 interface BlogPost {
   id: string;
@@ -29,6 +31,12 @@ interface BlogPost {
   author: string;
   created_at: string;
   updated_at: string;
+  title_es?: string;
+  body_content_es?: string;
+  preview_snippet_es?: string;
+  meta_description_es?: string;
+  seo_title_es?: string;
+  seo_keywords_es?: string[];
 }
 
 const BlogPost = () => {
@@ -37,6 +45,7 @@ const BlogPost = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [readingTime, setReadingTime] = useState<number>(0);
+  const { currentLanguage, getLocalizedPath } = useLanguage();
 
   useEffect(() => {
     if (slug) {
@@ -51,33 +60,30 @@ const BlogPost = () => {
         .select('*')
         .eq('slug', postSlug)
         .eq('published', true)
-        .single();
+        .maybeSingle();
       
-      if (error) {
-        if (error.code === 'PGRST116') {
-          setNotFound(true);
-        } else {
-          throw error;
-        }
-      } else {
+      if (error) throw error;
+      
+      if (data) {
         setPost(data);
-        // Calculate reading time
-        const estimatedTime = calculateReadingTime(data.body_content);
+        // Calculate reading time using the appropriate language
+        const bodyContent = currentLanguage === 'es' && data.body_content_es ? data.body_content_es : data.body_content;
+        const estimatedTime = calculateReadingTime(bodyContent);
         setReadingTime(estimatedTime);
         
         // Update document title and meta description
-        if (data.seo_title) {
-          document.title = data.seo_title;
-        } else {
-          document.title = `${data.title} | COIREA Insights`;
-        }
+        const title = currentLanguage === 'es' && data.title_es ? data.title_es : data.title;
+        const seoTitle = currentLanguage === 'es' && data.seo_title_es ? data.seo_title_es : data.seo_title;
+        const metaDesc = currentLanguage === 'es' && data.meta_description_es ? data.meta_description_es : data.meta_description;
         
-        if (data.meta_description) {
-          const metaDescription = document.querySelector('meta[name="description"]');
-          if (metaDescription) {
-            metaDescription.setAttribute('content', data.meta_description);
-          }
+        document.title = seoTitle || `${title} | COIREA Insights`;
+        
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription && metaDesc) {
+          metaDescription.setAttribute('content', metaDesc);
         }
+      } else {
+        setNotFound(true);
       }
     } catch (error) {
       console.error('Error fetching post:', error);
@@ -137,12 +143,12 @@ const BlogPost = () => {
             <div className="text-center">
               <h1 className="text-4xl font-display font-semibold text-primary mb-4">Post Not Found</h1>
               <p className="text-muted-foreground mb-8">The blog post you're looking for doesn't exist.</p>
-              <Link to="/insights">
+              <LocalizedLink to="/insights">
                 <Button variant="outline">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Insights
                 </Button>
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </main>
@@ -154,10 +160,10 @@ const BlogPost = () => {
   return (
     <>
       <SEOHead
-        title={post.seo_title || `${post.title} | Expert Business Insights | COIREA`}
-        description={post.meta_description || `${post.preview_snippet.substring(0, 140)}... | ${formatReadingTime(readingTime)} | Expert insights on ${post.cluster.toLowerCase()}`}
+        title={(currentLanguage === 'es' && post.seo_title_es) || post.seo_title || `${(currentLanguage === 'es' && post.title_es) || post.title} | Expert Business Insights | COIREA`}
+        description={(currentLanguage === 'es' && post.meta_description_es) || post.meta_description || `${((currentLanguage === 'es' && post.preview_snippet_es) || post.preview_snippet).substring(0, 140)}... | ${formatReadingTime(readingTime)} | Expert insights on ${post.cluster.toLowerCase()}`}
         keywords={`business insights, ${post.cluster.toLowerCase()}, conscious leadership, organizational transformation, leadership development, business strategy, ${post.tags?.join(', ') || ''}`}
-        url={`/insights/${post.slug}`}
+        url={`${getLocalizedPath('/insights')}/${post.slug}`}
         image={post.featured_image || "/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png"}
         type="article"
         publishedTime={post.created_at}
@@ -201,7 +207,7 @@ const BlogPost = () => {
 
             {/* Title */}
             <h1 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-6 leading-tight">
-              {post.title}
+              {(currentLanguage === 'es' && post.title_es) || post.title}
             </h1>
 
             {/* Meta Information */}
@@ -283,7 +289,7 @@ const BlogPost = () => {
                 prose-table:w-full prose-table:border-collapse prose-table:my-6
                 prose-th:border prose-th:border-border prose-th:bg-muted prose-th:px-4 prose-th:py-2 prose-th:text-left prose-th:font-semibold
                 prose-td:border prose-td:border-border prose-td:px-4 prose-td:py-2"
-              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.body_content, { USE_PROFILES: { html: true } }) }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize((currentLanguage === 'es' && post.body_content_es) || post.body_content, { USE_PROFILES: { html: true } }) }}
             />
 
             {/* Tags */}
