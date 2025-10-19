@@ -90,35 +90,9 @@
     ],
     "quote": "The future belongs to organizations that can hold both structure and soul, efficiency and essence. We're here to help you build that."
   },
-    "cta": {
-    "title": "Ready to evolve your",
-    "titleEmphasis": "organization?",
-    "subtitle": "Begin your transformation journey with COIREA's regenerative approach to organizational evolution.",
-    "button": "Begin the Journey"
-  },
-  "faq": {
-    "title": "About COIREA - Frequently Asked Questions",
-    "items": [
-      {
-        "question": "What makes COIREA different from other organizational consultancies?",
-        "answer": "COIREA integrates regenerative business principles with practical systems design. We don't just consult, we embed as partners to co-create sustainable transformation. Guided by our 5-Pillar Framework — purpose, leadership, collaboration, culture, well-being, and organizational strategy — we help organizations evolve into resilient, purpose-driven, self-managing systems."
-      },
-      {
-        "question": "How long does organizational transformation typically take?",
-        "answer": "Our transformation programs range from 90-day intensive resets to 6-18 month comprehensive partnerships. The timeline depends on your organization's size, complexity, and transformation goals. We also offer ongoing fractional support for sustained evolution."
-      },
-      {
-        "question": "What is regenerative business and how does it apply to my organization?",
-        "answer": "Regenerative business goes beyond sustainability to create systems that actively restore and revitalize. For organizations, this means building cultures and practices that strengthen both people and performance, creating positive impact while achieving business results."
-      },
-      {
-        "question": "How do you measure the success of organizational transformation?",
-        "answer": "We use our COIREA Evolution Dashboard to track both quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership maturity, cultural coherence, well-being) across our 5-Pillar Framework, providing real-time insights into your organization's transformation progress."
-      }
-    ]
-  },
-  "statistics": {
-    "quote": "76% of employees report experiencing moderate to high levels of stress at work — and 1 in 3 say it affects their performance.",
-    "source": "American Institute of Stress"
+  "cta": {
+    "title": "Ready to Transform Your Organization?",
+    "subtitle": "Whether you're ready to begin or still exploring, we're here for the conversation.",
+    "button": "Let's Connect"
   }
 }
