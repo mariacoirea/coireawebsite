@@ -3,5 +3,169 @@
     "title": "Nuestros Servicios - Transformación Organizacional | COIREA",
     "description": "Explora la gama de servicios de COIREA: retiros de equipo, programas de liderazgo, diseño organizacional y apoyo de transformación a largo plazo para empresas con propósito.",
     "keywords": "servicios de transformación organizacional, retiros de equipo, desarrollo de liderazgo, diseño organizacional, programas de transformación empresarial"
+  },
+  "hero": {
+    "title": "Recableamos Organizaciones —",
+    "titleEmphasis": "El Crecimiento Puede Ser No Extractivo",
+    "intro": [
+      "La mayoría de las empresas escalan drenando a su gente y diluyendo su propósito. Creemos que el crecimiento puede suceder de manera diferente: regenerativo, coherente y centrado en las personas.",
+      "Los sistemas actuales están desalineados. Las personas están agotadas. El liderazgo está listo para evolucionar. En el corazón del trabajo de COIREA yace un sistema operativo vivo que evoluciona con tu empresa. Restaura Personas, Desempeño y Propósito desde adentro hacia afuera — demostrando que el crecimiento regenerativo no solo es posible, sino medible."
+    ],
+    "cta": "Descubre Tu Camino",
+    "badges": {
+      "programs": "Programas de 90 Días",
+      "results": "Resultados Medibles",
+      "humanCentered": "Centrado en Personas"
+    }
+  },
+  "longTermPartnership": {
+    "title": "El Sistema Operativo COIREA (OS Regenerativo)",
+    "subtitle": "Nuestra asociación distintiva de largo plazo para organizaciones listas para integrar transformación duradera.",
+    "intro": [
+      "El crecimiento trae complejidad; prioridades en competencia, equipos desalineados y momentum estancado. El Sistema Operativo COIREA transforma esta complejidad en coherencia al integrar cinco funciones centrales; Propósito y Cultura, Liderazgo, Colaboración, Bienestar y Estrategia — en una arquitectura viva.",
+      "Durante 6–18 meses, co-diseñamos las estructuras, métricas y prácticas que aseguran que tu organización no solo escale, sino que lo haga de manera regenerativa.",
+      "A diferencia de los marcos estáticos, el OS COIREA integra estructura con alma: toma de decisiones que fluye, métricas que miden significado además de resultados, y prácticas que sostienen la vitalidad humana. El resultado: una organización diseñada para crecer con integridad y construida para durar."
+    ],
+    "offerings": [
+      {
+        "title": "Integración del Sistema Operativo COIREA",
+        "badge": "Programa Distintivo",
+        "duration": "6–18 meses",
+        "description": "Una actualización completa para tu organización. Integramos el OS COIREA a través de las cinco funciones centrales, transformando la complejidad en coherencia para que tu negocio pueda prosperar, escalar y crecer sin extracción.\n\nOfrecemos apoyo estratégico actuando como líderes fraccionarios para co-diseñar e implementar sistemas que perduren.",
+        "keyAreas": [
+          "Integración de Propósito y Cultura",
+          "Liderazgo de Apoyo Consciente y Basado en Valores",
+          "Diseño de Flujo de Colaboración",
+          "Bienestar como Estrategia",
+          "Columna Organizacional Adaptativa"
+        ]
+      },
+      {
+        "title": "Coaching de Liderazgo de Apoyo",
+        "badge": "Guía 1:1",
+        "duration": "3–12 meses",
+        "description": "El liderazgo profundo comienza desde adentro. Este viaje de coaching apoya a ejecutivos y líderes emergentes en cultivar la claridad interna, presencia y resiliencia necesarias para liderar con autenticidad.",
+        "keyAreas": [
+          "Presencia Ejecutiva",
+          "Toma de Decisiones Consciente",
+          "Comunicación Encarnada",
+          "Alineación Interior"
+        ]
+      },
+      {
+        "title": "Operaciones Fraccionarias",
+        "badge": "Asociación Integrada",
+        "duration": "3–12 meses",
+        "description": "Apoyo estratégico práctico. Nos integramos como líderes fraccionarios para co-diseñar e implementar sistemas que alineen tu cultura, propósito y desempeño. Ideal para startups y organizaciones en momentos de crecimiento, transición o complejidad.",
+        "keyAreas": [
+          "Arquitectura Operacional",
+          "Diseño de Equipo y Ritmo",
+          "Ejecución Estratégica",
+          "KPIs Regenerativos y Rendición de Cuentas"
+        ]
+      }
+    ]
+  },
+  "kpiMetrics": {
+    "title": "Medición + Seguimiento de KPIs",
+    "items": [
+      {
+        "title": "KPIs Personalizados",
+        "description": "Métricas personalizadas para cada pilar"
+      },
+      {
+        "title": "Perspectivas de Desempeño del Equipo",
+        "description": "Productividad, cohesión, resultados"
+      },
+      {
+        "title": "Índice de Madurez de Liderazgo",
+        "description": "Seguimiento del crecimiento en toma de decisiones"
+      },
+      {
+        "title": "Mapas de Evolución a Largo Plazo",
+        "description": "Hitos estructurales y culturales"
+      },
+      {
+        "title": "Bienestar y Riesgo de Retención",
+        "description": "Señales proactivas de agotamiento"
+      },
+      {
+        "title": "Inversión Estratégica en Personas",
+        "description": "Vinculando capital humano con resultados"
+      }
+    ]
+  },
+  "dashboard": {
+    "title": "¿Cómo Lo Rastreamos en Tiempo Real?",
+    "intro": [
+      "Bienvenido al Panel de Evolución COIREA — donde la IA se encuentra con la Inteligencia Humana, y la perspicacia se convierte en acción. Rastrea cómo tu organización evoluciona a través de los cinco pilares centrales del negocio regenerativo. Combinando metodologías como encuestas, entrevistas, métricas de comportamiento y diagnósticos de bienestar, este panel convierte datos cualitativos y cuantitativos en orientación estratégica clara.",
+      "Es más que una instantánea — es una brújula viva para el crecimiento sostenible y centrado en las personas."
+    ],
+    "brand": "COIREA",
+    "subtitle": "Panel de Evolución",
+    "navigation": {
+      "overview": "Vista General",
+      "pillars": "5 Pilares",
+      "teamInsights": "Perspectivas del Equipo",
+      "leadership": "Liderazgo",
+      "cultureMetrics": "Métricas Culturales",
+      "wellbeing": "Bienestar",
+      "reports": "Reportes"
+    },
+    "vitalityStatus": "Vitalidad: Alta",
+    "ovi": {
+      "title": "Índice de Vitalidad Organizacional (IVO)",
+      "subtitle": "Pulso en tiempo real de la salud organizacional",
+      "scoreLabel": "Puntuación de Vitalidad"
+    },
+    "pillarsMetrics": [
+      {
+        "name": "Propósito",
+        "description": "Claridad y narrativa"
+      },
+      {
+        "name": "Liderazgo",
+        "description": "Presencia y retroalimentación"
+      },
+      {
+        "name": "Colaboración",
+        "description": "Confianza y flujo"
+      },
+      {
+        "name": "Cultura",
+        "description": "Alineación de valores"
+      },
+      {
+        "name": "Bienestar",
+        "description": "Energía y resiliencia"
+      }
+    ]
+  },
+  "quote": {
+    "text": "Las empresas que priorizan el bienestar de los empleados superan al mercado de valores de 2 a 3 veces en 25 años.",
+    "source": "Harvard Business Review"
+  },
+  "cta": {
+    "badge": "Transforma Tu Organización",
+    "title": "¿Listo Para Transformar Tu",
+    "titleEmphasis": "Organización?",
+    "subtitle": "Exploremos cómo COIREA puede apoyar el viaje único de tu organización hacia el",
+    "subtitleEmphasis": "éxito regenerativo",
+    "primaryButton": "Comienza Tu Viaje",
+    "secondaryButton": "Prueba Nuestras Herramientas",
+    "features": [
+      {
+        "title": "Consulta Gratuita",
+        "description": "Disponible a solicitud"
+      },
+      {
+        "title": "Horarios Flexibles",
+        "description": "Se adapta a tu cronograma"
+      },
+      {
+        "title": "Marco Comprobado",
+        "description": "Sistema de 5 pilares"
+      }
+    ]
   }
 }

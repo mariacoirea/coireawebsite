@@ -3,5 +3,169 @@
     "title": "Our Offerings - Organizational Transformation Services | COIREA",
     "description": "Explore COIREA's range of services: team retreats, leadership programs, organizational design, and long-term transformation support for purpose-driven companies.",
     "keywords": "organizational transformation services, team retreats, leadership development, organizational design, business transformation programs"
+  },
+  "hero": {
+    "title": "We Rewire Organizations —",
+    "titleEmphasis": "Growth Can Be Non-Extractive",
+    "intro": [
+      "Most companies scale by draining their people and diluting their purpose. We believe growth can happen differently: regenerative, coherent, and human-centered.",
+      "Systems today are misaligned. People are burned out. Leadership is ready to evolve. At the core of COIREA's work lies a living operating system that evolves with your company. It restores People, Performance and Purpose from the inside out — proving that regenerative growth is not only possible, but measurable."
+    ],
+    "cta": "Discover Your Path Forward",
+    "badges": {
+      "programs": "90-Day Programs",
+      "results": "Measurable Results",
+      "humanCentered": "Human-Centered"
+    }
+  },
+  "longTermPartnership": {
+    "title": "The COIREA Operating System (Regenerative OS)",
+    "subtitle": "Our signature long-term partnership for organizations ready to embed lasting transformation.",
+    "intro": [
+      "Growth brings complexity; competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms this complexity into coherence by embedding five core functions; Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy — into one living architecture.",
+      "Over 6–18 months, we co-design the structures, metrics, and practices that ensure your organization not only scales, but does so regeneratively.",
+      "Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: an organization designed to grow with integrity and built to last."
+    ],
+    "offerings": [
+      {
+        "title": "COIREA Operating System Integration",
+        "badge": "Signature Program",
+        "duration": "6–18 months",
+        "description": "A complete upgrade for your organization. We embed the COIREA OS across all five core functions, transforming complexity into coherence so your business can thrive, scale, and grow without extraction.\n\nWe offer strategic support by stepping in as fractional leaders to co-design and implement systems that lasts.",
+        "keyAreas": [
+          "Purpose & Culture Integration",
+          "Conscious & Values-Driven Supportive Leadership",
+          "Collaboration Flow Design",
+          "Well-Being as Strategy",
+          "Adaptive Organizational Backbone"
+        ]
+      },
+      {
+        "title": "Supportive Leadership Coaching",
+        "badge": "1:1 Guidance",
+        "duration": "3–12 months",
+        "description": "Deep leadership begins within. This coaching journey supports executives and emerging leaders in cultivating the inner clarity, presence, and resilience needed to lead with authenticity.",
+        "keyAreas": [
+          "Executive Presence",
+          "Conscious Decision-Making",
+          "Embodied Communication",
+          "Inner Alignment"
+        ]
+      },
+      {
+        "title": "Fractional Operations",
+        "badge": "Embedded Partnership",
+        "duration": "3–12 months",
+        "description": "Hands-on strategic support. We embed as fractional leaders to co-design and implement systems that align your culture, purpose, and performance. Ideal for startups and organizations in moments of growth, transition, or complexity.",
+        "keyAreas": [
+          "Operational Architecture",
+          "Team & Rhythm Design",
+          "Strategic Execution",
+          "Regenerative KPIs & Accountability"
+        ]
+      }
+    ]
+  },
+  "kpiMetrics": {
+    "title": "Measurement + KPI Tracking",
+    "items": [
+      {
+        "title": "Tailored KPIs",
+        "description": "Custom metrics for each pillar"
+      },
+      {
+        "title": "Team Performance Insights",
+        "description": "Productivity, cohesion, outcomes"
+      },
+      {
+        "title": "Leadership Maturity Index",
+        "description": "Decision-making growth tracking"
+      },
+      {
+        "title": "Long-Term Evolution Maps",
+        "description": "Structural & cultural milestones"
+      },
+      {
+        "title": "Well-being & Retention Risk",
+        "description": "Proactive burnout signals"
+      },
+      {
+        "title": "Strategic Investment in People",
+        "description": "Linking human capital to outcomes"
+      }
+    ]
+  },
+  "dashboard": {
+    "title": "How Do We Track It in Real Time?",
+    "intro": [
+      "Welcome to the COIREA Evolution Dashboard — where AI meets Human Intelligence, and insight becomes action. Track how your organization evolves across the five core pillars of regenerative business. Blending methodologies like surveys, interviews, behavioral metrics, and well-being diagnostics, this dashboard turns qualitative and quantitative data into clear, strategic guidance.",
+      "It's more than a snapshot — it's a living compass for sustainable, people-centered growth."
+    ],
+    "brand": "COIREA",
+    "subtitle": "Evolution Dashboard",
+    "navigation": {
+      "overview": "Overview",
+      "pillars": "5 Pillars",
+      "teamInsights": "Team Insights",
+      "leadership": "Leadership",
+      "cultureMetrics": "Culture Metrics",
+      "wellbeing": "Well-being",
+      "reports": "Reports"
+    },
+    "vitalityStatus": "Vitality: High",
+    "ovi": {
+      "title": "Organizational Vitality Index (OVI)",
+      "subtitle": "Real-time pulse of organizational health",
+      "scoreLabel": "Vitality Score"
+    },
+    "pillarsMetrics": [
+      {
+        "name": "Purpose",
+        "description": "Clarity & storytelling"
+      },
+      {
+        "name": "Leadership",
+        "description": "Presence & feedback"
+      },
+      {
+        "name": "Collaboration",
+        "description": "Trust & flow"
+      },
+      {
+        "name": "Culture",
+        "description": "Values alignment"
+      },
+      {
+        "name": "Well-Being",
+        "description": "Energy & resilience"
+      }
+    ]
+  },
+  "quote": {
+    "text": "Companies that prioritize employee well-being outperform the stock market by 2 to 3 times over 25 years.",
+    "source": "Harvard Business Review"
+  },
+  "cta": {
+    "badge": "Transform Your Organization",
+    "title": "Ready to Transform Your",
+    "titleEmphasis": "Organization?",
+    "subtitle": "Let's explore how COIREA can support your organization's unique journey toward",
+    "subtitleEmphasis": "regenerative success",
+    "primaryButton": "Begin Your Journey",
+    "secondaryButton": "Try Our Tools",
+    "features": [
+      {
+        "title": "Free Consultation",
+        "description": "Available upon request"
+      },
+      {
+        "title": "Flexible Scheduling",
+        "description": "Fits your timeline"
+      },
+      {
+        "title": "Proven Framework",
+        "description": "5-pillar system"
+      }
+    ]
   }
 }
