@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AssessmentResult } from "./OrganizationalHealthScanner";
+import { useTranslation } from "react-i18next";
 
 interface AssessmentResultsProps {
   results: AssessmentResult;
@@ -31,6 +32,7 @@ const selfLeadershipMessages = {
 };
 
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
+  const { t } = useTranslation('results');
   const { pillarScores, totalScore, interconnectivityScore, selfLeadershipScore, selfLeadershipPercent, organizationalStatus, painPoint, strength } = results;
 
   const getPillarPercentage = (score: number) => {
@@ -40,13 +42,13 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   const getInterconnectivityMessage = () => {
     if (interconnectivityScore < 21) {
       return {
-        title: "Systemic Misalignment Detected",
-        message: "Your interconnectivity score suggests that even if individual pillars are strong, they may not be working together as one ecosystem. Strategy may not flow into collaboration. Leadership may not reinforce well-being. A regenerative system thrives not just through strong parts — but through coherence."
+        title: t('organizational.interconnectivityMessages.low.title'),
+        message: t('organizational.interconnectivityMessages.low.message')
       };
     } else {
       return {
-        title: "Systemic Coherence is Emerging",
-        message: "Your interconnectivity score shows encouraging signs that your organizational system is beginning to breathe as one. The connection between purpose, people, and performance is forming a regenerative rhythm. Keep nurturing this ecosystem through aligned practices and conscious leadership."
+        title: t('organizational.interconnectivityMessages.strong.title'),
+        message: t('organizational.interconnectivityMessages.strong.message')
       };
     }
   };
@@ -75,7 +77,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
         <Card className="bg-card shadow-elegant border-primary/10">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
-              Your Organizational Health Results
+              {t('organizational.title')}
             </CardTitle>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4">
@@ -87,7 +89,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                 {organizationalStatus}
               </h2>
               <p className="text-lg text-foreground/80 font-body leading-relaxed">
-                {statusMessages[organizationalStatus as keyof typeof statusMessages]}
+                {t(`organizational.statusMessages.${organizationalStatus}`)}
               </p>
             </div>
           </CardHeader>
@@ -96,7 +98,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             {/* Pillar Scores */}
             <div className="bg-gradient-subtle rounded-xl p-6">
               <h3 className="text-xl font-display font-semibold text-primary mb-6 text-center">
-                Pillar Breakdown
+                {t('organizational.pillarBreakdown')}
               </h3>
               <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {Object.entries(pillarScores).filter(([pillar]) => pillar !== 'interconnectivity' && pillar !== 'selfLeadership').map(([pillar, score]) => {
@@ -128,10 +130,10 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                         {pillarName}
                       </div>
                       {isLowest && (
-                        <div className="text-xs text-accent font-medium mt-1">Pain Point</div>
+                        <div className="text-xs text-accent font-medium mt-1">{t('organizational.painPoint')}</div>
                       )}
                       {isHighest && (
-                        <div className="text-xs text-primary font-medium mt-1">Strength</div>
+                        <div className="text-xs text-primary font-medium mt-1">{t('organizational.strength')}</div>
                       )}
                     </div>
                   );
@@ -142,7 +144,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             {/* Self-Leadership Assessment */}
             <div className="bg-gradient-warm/10 rounded-xl p-6">
               <h3 className="text-xl font-display font-semibold text-primary mb-6 text-center">
-                Self-Leadership Assessment
+                {t('organizational.selfLeadership')}
               </h3>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-4">
@@ -154,7 +156,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
                   {getSelfLeadershipStatus()}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
-                  {selfLeadershipMessages[getSelfLeadershipStatus() as keyof typeof selfLeadershipMessages]}
+                  {t(`organizational.selfLeadershipMessages.${getSelfLeadershipStatus()}`)}
                 </p>
               </div>
             </div>
@@ -163,16 +165,16 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             <div className="space-y-6">
               <div className="bg-card border border-accent/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-accent mb-3">
-                  Your Greatest Challenge: {painPoint}
+                  {t('organizational.greatestChallenge')}: {painPoint}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
-                  {painPointMessages[painPoint as keyof typeof painPointMessages]}
+                  {t(`organizational.painPointMessages.${painPoint}`)}
                 </p>
               </div>
 
               <div className="bg-card border border-primary/20 rounded-lg p-6">
                 <h4 className="text-lg font-display font-semibold text-primary mb-3">
-                  Your Greatest Strength: {strength}
+                  {t('organizational.greatestStrength')}: {strength}
                 </h4>
                 <p className="text-foreground/80 font-body leading-relaxed">
                   On the other hand, your strongest area is {strength}. This is your current source of power and stability. Building on this strength can create momentum and inspire evolution across other areas. It's where your organization is already aligned — and it can become the anchor for transformation.
@@ -198,7 +200,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             {/* Success Message */}
             <div className="bg-primary/5 rounded-xl p-8 text-center">
               <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                Your Results Have Been Sent!
+                {t('organizational.resultsSent')}
               </h3>
               <p className="text-lg text-foreground/80 font-body leading-relaxed mb-4">
                 A comprehensive copy of your organizational health assessment has been sent to your email. 
@@ -212,7 +214,7 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
             {/* Retake Option */}
             <div className="text-center pt-4">
               <Button variant="ghost" onClick={onRetake}>
-                Retake Assessment
+                {t('organizational.retakeButton')}
               </Button>
             </div>
           </CardContent>

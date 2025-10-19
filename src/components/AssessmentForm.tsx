@@ -6,6 +6,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { AssessmentResult } from "./OrganizationalHealthScanner";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface AssessmentFormProps {
   onComplete: (results: AssessmentResult) => void;
@@ -93,8 +95,14 @@ const pillarNames = {
 };
 
 const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
+  const { t } = useTranslation('assessment');
+  const { currentLanguage } = useLanguage();
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [currentPillarIndex, setCurrentPillarIndex] = useState(0);
+  // Get translated questions
+  const getQuestionText = (questionId: string) => {
+    return t(`questions.${questionId}`);
+  };
   
   const pillars = Object.keys(pillarNames) as Array<keyof typeof pillarNames>;
   const currentPillar = pillars[currentPillarIndex];
@@ -171,6 +179,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
     const painPoint = pillarNames[lowestPillar[0]];
     const strength = pillarNames[highestPillar[0]];
 
+    // Pass language to results
     onComplete({
       pillarScores,
       totalScore,
@@ -179,8 +188,9 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       selfLeadershipPercent,
       organizationalStatus,
       painPoint,
-      strength
-    });
+      strength,
+      language: currentLanguage
+    } as any);
   };
 
   return (
@@ -190,10 +200,10 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
           <CardHeader>
             <div className="flex justify-between items-center mb-4">
               <CardTitle className="text-2xl font-display font-semibold text-primary">
-                {pillarNames[currentPillar]} Assessment
+                {t(`pillars.${currentPillar}`)}
               </CardTitle>
               <span className="text-sm text-muted-foreground font-body">
-                {totalAnswered}/55 questions answered
+                {t('navigation.progress', { answered: totalAnswered, total: 55 })}
               </span>
             </div>
             <Progress value={progress} className="w-full" />
@@ -203,7 +213,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
             {currentQuestions.map((question, index) => (
               <div key={question.id} className="space-y-4">
                 <Label className="text-base font-body leading-relaxed text-foreground">
-                  {index + 1}. {question.text}
+                  {index + 1}. {getQuestionText(question.id)}
                 </Label>
                 
                 <RadioGroup
@@ -212,8 +222,8 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
                   className="flex flex-col space-y-2"
                 >
                   <div className="flex justify-between items-center text-sm text-muted-foreground mb-2">
-                    <span>Strongly Disagree</span>
-                    <span>Strongly Agree</span>
+                    <span>{t('scale.stronglyDisagree')}</span>
+                    <span>{t('scale.stronglyAgree')}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     {[0, 1, 2, 3, 4, 5].map((value) => (
@@ -235,7 +245,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
                 onClick={handlePrevious}
                 disabled={currentPillarIndex === 0}
               >
-                Previous
+                {t('navigation.previous')}
               </Button>
               
               <Button
@@ -243,7 +253,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
                 disabled={!isCurrentPillarComplete}
                 variant="hero"
               >
-                {currentPillarIndex === pillars.length - 1 ? 'Complete Assessment' : 'Next Section'}
+                {currentPillarIndex === pillars.length - 1 ? t('navigation.complete') : t('navigation.next')}
               </Button>
             </div>
           </CardContent>

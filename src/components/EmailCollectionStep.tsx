@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { AssessmentResult } from "./OrganizationalHealthScanner";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface EmailCollectionStepProps {
   results: AssessmentResult;
@@ -21,6 +23,8 @@ interface EmailFormData {
 }
 
 const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepProps) => {
+  const { t } = useTranslation('results');
+  const { currentLanguage } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -38,7 +42,8 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
     try {
       const payload = {
         ...formData,
-        assessmentResults: results
+        assessmentResults: results,
+        language: currentLanguage
       };
 
       const { error } = await supabase.functions.invoke('send-assessment-results', {
@@ -48,16 +53,16 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
       if (error) {
         console.error('Error sending assessment results:', error);
         toast({
-          title: "Error",
-          description: "There was an issue sending your results. Please try again.",
+          title: t('email.form.validation.emailRequired'),
+          description: t('email.form.error'),
           variant: "destructive"
         });
         return;
       }
 
       toast({
-        title: "Success!",
-        description: "Your results have been sent to your email. Check your inbox!"
+        title: t('email.form.success'),
+        description: t('email.form.success')
       });
       
       onEmailSubmitted();
@@ -65,7 +70,7 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
       console.error('Error submitting form:', error);
       toast({
         title: "Error",
-        description: "There was an issue sending your results. Please try again.",
+        description: t('email.form.error'),
         variant: "destructive"
       });
     } finally {
@@ -79,10 +84,10 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
         <Card className="bg-card shadow-elegant border-primary/10">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
-              Get Your Results
+              {t('email.form.title')}
             </CardTitle>
             <p className="text-lg text-foreground/80 font-body leading-relaxed">
-              Enter your details below to receive your comprehensive organizational health assessment results.
+              {t('email.form.description')}
             </p>
           </CardHeader>
 
@@ -91,12 +96,12 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName" className="text-sm font-body text-foreground/70 mb-1 block">
-                    First Name *
+                    {t('email.form.firstName')} *
                   </Label>
                   <Input
                     id="firstName"
-                    placeholder="Your first name"
-                    {...register("firstName", { required: "First name is required" })}
+                    placeholder={t('email.form.firstNamePlaceholder')}
+                    {...register("firstName", { required: t('email.form.validation.firstNameRequired') })}
                   />
                   {errors.firstName && (
                     <p className="text-xs text-destructive mt-1">{errors.firstName.message}</p>
@@ -104,12 +109,12 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
                 </div>
                 <div>
                   <Label htmlFor="lastName" className="text-sm font-body text-foreground/70 mb-1 block">
-                    Last Name *
+                    {t('email.form.lastName')} *
                   </Label>
                   <Input
                     id="lastName"
-                    placeholder="Your last name"
-                    {...register("lastName", { required: "Last name is required" })}
+                    placeholder={t('email.form.lastNamePlaceholder')}
+                    {...register("lastName", { required: t('email.form.validation.lastNameRequired') })}
                   />
                   {errors.lastName && (
                     <p className="text-xs text-destructive mt-1">{errors.lastName.message}</p>
@@ -119,17 +124,17 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
               
               <div>
                 <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-1 block">
-                  Email Address *
+                  {t('email.form.email')} *
                 </Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="your.email@company.com"
+                  placeholder={t('email.form.emailPlaceholder')}
                   {...register("email", { 
-                    required: "Email is required",
+                    required: t('email.form.validation.emailRequired'),
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address"
+                      message: t('email.form.validation.emailInvalid')
                     }
                   })}
                 />
@@ -140,12 +145,12 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
               
               <div>
                 <Label htmlFor="company" className="text-sm font-body text-foreground/70 mb-1 block">
-                  Company Name *
+                  {t('email.form.company')} *
                 </Label>
                 <Input
                   id="company"
-                  placeholder="Your organization"
-                  {...register("company", { required: "Company name is required" })}
+                  placeholder={t('email.form.companyPlaceholder')}
+                  {...register("company", { required: t('email.form.validation.companyRequired') })}
                 />
                 {errors.company && (
                   <p className="text-xs text-destructive mt-1">{errors.company.message}</p>
@@ -160,10 +165,10 @@ const EmailCollectionStep = ({ results, onEmailSubmitted }: EmailCollectionStepP
                   className="text-lg px-8 py-3 w-full md:w-auto"
                   disabled={!isValid || isSubmitting}
                 >
-                  {isSubmitting ? "Sending Results..." : "Get My Results"}
+                  {isSubmitting ? t('email.form.submitting') : t('email.form.submitButton')}
                 </Button>
                 <p className="text-xs text-foreground/60 font-body mt-2">
-                  Your results will be sent to your email and displayed on the next screen
+                  {t('email.form.helperText')}
                 </p>
               </div>
             </form>

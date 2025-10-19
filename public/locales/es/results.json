@@ -1,0 +1,168 @@
+{
+  "organizational": {
+    "title": "Tus Resultados de Salud Organizacional",
+    "overallScore": "Puntuación General",
+    "status": "Estado Organizacional",
+    "pillarBreakdown": "Desglose por Pilares",
+    "selfLeadership": "Evaluación de Liderazgo Personal",
+    "greatestChallenge": "Mayor Desafío",
+    "greatestStrength": "Mayor Fortaleza",
+    "interconnectivity": "Interconectividad del Sistema",
+    "resultsSent": "¡Tus resultados detallados han sido enviados a tu correo electrónico!",
+    "retakeButton": "Repetir Evaluación",
+    "painPoint": "Punto Crítico",
+    "strength": "Fortaleza",
+    
+    "statusMessages": {
+      "Misaligned": "Tu organización muestra desalineación significativa en múltiples pilares. Los sistemas fundamentales requieren atención para crear una base de salud organizacional.",
+      "Emerging": "Tu organización está comenzando a establecer prácticas saludables. Hay conciencia de las áreas de mejora y se están tomando los primeros pasos hacia la alineación.",
+      "Stabilizing": "Tu organización ha establecido muchas prácticas fundamentales y está trabajando para hacer estas más consistentes. Hay claridad sobre la dirección y compromiso con la mejora continua.",
+      "Evolving": "Tu organización demuestra prácticas maduras en la mayoría de los pilares. Los sistemas están bien establecidos y hay un enfoque en el refinamiento continuo y la innovación.",
+      "Thriving": "Tu organización ejemplifica la excelencia en salud organizacional. Los sistemas están altamente alineados, las personas están comprometidas, y hay una cultura de mejora continua y evolución."
+    },
+    
+    "painPointMessages": {
+      "Purpose & Culture": "El propósito y la cultura de tu organización necesitan una mayor claridad y alineación. Enfócate en articular valores claros y crear rituales que refuercen la identidad compartida.",
+      "Collaboration": "Los equipos están trabajando de manera más aislada que integrada. Prioriza crear canales de comunicación más fuertes y fomentar una mentalidad colaborativa.",
+      "Leadership": "Las prácticas de liderazgo requieren desarrollo. Enfócate en construir confianza, aumentar la transparencia y crear un liderazgo más participativo e inclusivo.",
+      "Self-Leadership": "El liderazgo personal a nivel individual necesita fortalecerse. Invierte en capacidad de autoconocimiento y desarrolla prácticas que apoyen el crecimiento personal y la responsabilidad.",
+      "Well-Being": "El bienestar está comprometido en tu organización. Prioriza crear equilibrio sostenible, apoyar la salud mental y asegurar que las cargas de trabajo sean manejables.",
+      "Organizational Strategy": "La claridad y alineación estratégica necesitan mejora. Enfócate en comunicar la dirección de manera más efectiva y asegurar que los sistemas apoyen los objetivos estratégicos.",
+      "Interconnectivity": "El pensamiento sistémico y la interconectividad son débiles. Desarrolla una mayor conciencia de cómo las partes del sistema se impactan mutuamente y fortalece los ciclos de retroalimentación."
+    },
+    
+    "selfLeadershipMessages": {
+      "Below the Line": "Tu liderazgo personal actual está principalmente Por Debajo de la Línea, caracterizado por defensividad, culpa y perspectiva cerrada. El desarrollo en autoconocimiento y gestión emocional creará una base transformadora.",
+      "In Transition": "Estás en transición entre operación Por Debajo y Por Encima de la Línea. Continúa desarrollando prácticas de autoconocimiento y responsabilidad para moverte más consistentemente hacia el liderazgo consciente.",
+      "Conscious Leadership Emerging": "Estás operando principalmente Por Encima de la Línea con liderazgo consciente emergente. Tus prácticas de autoconocimiento son fuertes. Continúa profundizando en responsabilidad y apertura.",
+      "Regenerative Leadership Embodied": "Incorporas el liderazgo consciente y regenerativo, operando consistentemente Por Encima de la Línea con perspectiva sistémica. Tu liderazgo crea condiciones para que otros prosperen."
+    },
+    
+    "interconnectivityMessages": {
+      "low": {
+        "title": "Interconectividad Limitada",
+        "message": "Tu organización está operando de manera más fragmentada que sistémica. Desarrolla mayor conciencia de cómo las decisiones impactan todo el sistema y fortalece los ciclos de retroalimentación."
+      },
+      "emerging": {
+        "title": "Interconectividad Emergente",
+        "message": "Tu organización está comenzando a pensar de manera más sistémica. Continúa desarrollando conciencia de interconexiones y construye estructuras que apoyen el flujo de información."
+      },
+      "developing": {
+        "title": "Interconectividad en Desarrollo",
+        "message": "Tu organización demuestra buen pensamiento sistémico. Los equipos están considerando impactos más amplios y hay bucles de retroalimentación efectivos en su lugar."
+      },
+      "strong": {
+        "title": "Interconectividad Fuerte",
+        "message": "Tu organización opera con fuerte perspectiva sistémica. Las decisiones consideran impactos holísticos, los ciclos de retroalimentación son robustos, y hay conciencia de patrones interconectados."
+      }
+    }
+  },
+  
+  "leadership": {
+    "title": "Tus Resultados de Liderazgo Consciente",
+    "overallScore": "Puntuación General de Liderazgo",
+    "aboveTheLine": "Por Encima de la Línea",
+    "leadershipState": "Estado de Liderazgo",
+    "domainBreakdown": "Desglose por Dominios",
+    "primaryDevelopmentArea": "Área Principal de Desarrollo",
+    "currentStrength": "Fortaleza Actual",
+    "evolutionPath": "Tu Camino de Evolución",
+    "evolutionJourney": "Viaje de Evolución",
+    "from": "DESDE",
+    "to": "HACIA",
+    "emailResults": "Enviar Resultados por Correo",
+    "emailSent": "¡Resultados enviados exitosamente!",
+    "namePlaceholder": "Tu nombre completo",
+    "emailPlaceholder": "tu@email.com",
+    "sendButton": "Enviar Mis Resultados",
+    "sending": "Enviando...",
+    "readyToEvolve": "¿Listo/a para Evolucionar tu Liderazgo?",
+    "bookCall": "Agenda tu Llamada de Claridad Gratuita",
+    "retakeButton": "Repetir Evaluación",
+    
+    "stateMessages": {
+      "below": "Estás operando principalmente Por Debajo de la Línea. Este es un punto de partida poderoso para el crecimiento, indicando oportunidades significativas para desarrollar conciencia y transformar patrones de liderazgo.",
+      "transition": "Estás en transición entre operación Por Debajo y Por Encima de la Línea. Tu viaje hacia el liderazgo consciente está en marcha, con áreas de fortaleza emergente y oportunidades claras para un mayor desarrollo.",
+      "emerging": "Estás operando principalmente Por Encima de la Línea con liderazgo consciente emergente. Tus capacidades fundamentales son fuertes, con oportunidades para profundizar la consistencia y expandir tu impacto.",
+      "embodied": "Incorporas el liderazgo consciente y regenerativo. Operas consistentemente Por Encima de la Línea con perspectiva sistémica, creando condiciones para que otros y los sistemas prosperen."
+    },
+    
+    "domainInsights": {
+      "selfAwareness": {
+        "low": "Desarrollar autoconocimiento es tu fundamento. Enfócate en prácticas de reflexión, buscar retroalimentación regularmente y notar tus patrones de pensamiento y emocionales.",
+        "medium": "Tu autoconocimiento está desarrollándose. Continúa profundizando tu comprensión de patrones, desencadenantes y el impacto que tienes en otros.",
+        "high": "Demuestras fuerte autoconocimiento. Mantén estas prácticas y considera cómo puedes ayudar a desarrollar el autoconocimiento en otros."
+      },
+      "selfManagement": {
+        "low": "La autogestión es un área de crecimiento clave. Enfócate en desarrollar prácticas de regulación emocional, mantener compromisos y construir resiliencia.",
+        "medium": "Tu autogestión está mejorando. Continúa fortaleciendo tu capacidad para mantener la compostura bajo presión y responder conscientemente en lugar de reaccionar.",
+        "high": "Demuestras fuerte autogestión. Tu capacidad para regular emociones y mantener compromisos es una fortaleza de liderazgo."
+      },
+      "empathy": {
+        "low": "Desarrollar empatía expandirá tu efectividad de liderazgo. Practica la escucha profunda, busca entender antes de ser entendido/a, y considera perspectivas diversas.",
+        "medium": "Tu empatía está creciendo. Continúa desarrollando tu capacidad para comprender y conectar con las experiencias de otros.",
+        "high": "Demuestras fuerte empatía. Tu capacidad para comprender y conectar con otros es una fortaleza de liderazgo significativa."
+      },
+      "relationshipManagement": {
+        "low": "La gestión de relaciones es un área de desarrollo. Enfócate en construir confianza, mejorar la comunicación y navegar conflictos constructivamente.",
+        "medium": "Tu gestión de relaciones está desarrollándose. Continúa fortaleciendo tu capacidad para construir y mantener relaciones efectivas.",
+        "high": "Demuestras fuerte gestión de relaciones. Tu capacidad para construir confianza y navegar dinámicas complejas es una fortaleza clave."
+      },
+      "regenerativeLeadership": {
+        "low": "El liderazgo regenerativo es tu frontera de desarrollo. Comienza a considerar el impacto sistémico a más largo plazo y cómo crear condiciones para que otros prosperen.",
+        "medium": "Tu liderazgo regenerativo está emergiendo. Continúa expandiendo tu perspectiva para incluir impacto sistémico y sostenibilidad a largo plazo.",
+        "high": "Demuestras fuerte liderazgo regenerativo. Tu perspectiva sistémica y compromiso con crear valor duradero distingue tu liderazgo."
+      }
+    },
+    
+    "evolutionMaps": {
+      "selfAwareness": {
+        "from": "Reactivo y Inconsciente",
+        "to": "Consciente y Reflexivo"
+      },
+      "selfManagement": {
+        "from": "Impulsivo y Desregulado",
+        "to": "Compuesto y Resiliente"
+      },
+      "empathy": {
+        "from": "Auto-centrado",
+        "to": "Centrado en Otros y Compasivo"
+      },
+      "relationshipManagement": {
+        "from": "Conflictivo y Aislado",
+        "to": "Colaborativo y Conectado"
+      },
+      "regenerativeLeadership": {
+        "from": "Transaccional y Corto Plazo",
+        "to": "Regenerativo y Sistémico"
+      }
+    }
+  },
+  
+  "email": {
+    "form": {
+      "title": "Obtén Tus Resultados",
+      "description": "Ingresa tu información para recibir tu análisis completo",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "company": "Empresa",
+      "firstNamePlaceholder": "Juan",
+      "lastNamePlaceholder": "Pérez",
+      "emailPlaceholder": "juan@empresa.com",
+      "companyPlaceholder": "Tu Empresa",
+      "submitButton": "Enviar Mis Resultados",
+      "submitting": "Enviando...",
+      "helperText": "Recibirás un análisis detallado con recomendaciones personalizadas.",
+      "validation": {
+        "firstNameRequired": "El nombre es requerido",
+        "lastNameRequired": "El apellido es requerido",
+        "emailRequired": "El correo electrónico es requerido",
+        "emailInvalid": "El correo electrónico debe ser válido",
+        "companyRequired": "El nombre de la empresa es requerido"
+      },
+      "success": "¡Resultados enviados exitosamente!",
+      "error": "Error al enviar resultados. Por favor, inténtalo de nuevo."
+    }
+  }
+}

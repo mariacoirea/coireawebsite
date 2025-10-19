@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AssessmentForm from "./AssessmentForm";
 import AssessmentResults from "./AssessmentResults";
 import EmailCollectionStep from "./EmailCollectionStep";
+import { useTranslation } from "react-i18next";
 
 export interface AssessmentResult {
   pillarScores: {

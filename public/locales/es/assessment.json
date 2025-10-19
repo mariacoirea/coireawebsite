@@ -1,0 +1,93 @@
+{
+  "pillars": {
+    "purposeCulture": "Propósito y Cultura",
+    "collaboration": "Colaboración",
+    "leadership": "Liderazgo",
+    "selfLeadership": "Liderazgo Personal",
+    "wellBeing": "Bienestar",
+    "organizationalStrategy": "Estrategia Organizacional",
+    "interconnectivity": "Interconectividad"
+  },
+  "questions": {
+    "pc1": "Siento que mi trabajo contribuye a una misión significativa.",
+    "pc2": "Los valores de nuestra organización se reflejan claramente en nuestras acciones diarias.",
+    "pc3": "Hay un fuerte sentido de identidad y pertenencia compartida en nuestra organización.",
+    "pc4": "Nuestro propósito organizacional inspira pasión y compromiso entre los miembros del equipo.",
+    "pc5": "Los rituales y tradiciones dentro de nuestra organización refuerzan nuestra cultura.",
+    "pc6": "Me siento orgulloso/a de compartir sobre nuestra organización con otros.",
+    "pc7": "Nuestra cultura promueve la innovación y la asunción de riesgos calculados.",
+    
+    "col1": "Nuestros equipos trabajan bien juntos hacia objetivos comunes.",
+    "col2": "Existe comunicación abierta y transparente entre departamentos.",
+    "col3": "Las personas buscan activamente input de otros en decisiones importantes.",
+    "col4": "Los conflictos se resuelven de manera constructiva y oportuna.",
+    "col5": "Compartimos conocimientos y mejores prácticas de manera efectiva en toda la organización.",
+    "col6": "Se valoran y se buscan perspectivas diversas en la toma de decisiones.",
+    "col7": "Nuestros espacios físicos y virtuales facilitan la colaboración.",
+    
+    "lead1": "El liderazgo demuestra consistentemente los valores que predican.",
+    "lead2": "Los líderes crean un entorno donde las personas se sienten seguras para expresar sus opiniones.",
+    "lead3": "La toma de decisiones es participativa e incluye perspectivas de varios niveles.",
+    "lead4": "Los líderes invierten tiempo en desarrollar y mentorear a los miembros del equipo.",
+    "lead5": "Existe confianza entre el liderazgo y los empleados.",
+    "lead6": "Los líderes son responsables de sus acciones y decisiones.",
+    "lead7": "El estilo de liderazgo se adapta a las necesidades cambiantes de la organización.",
+    
+    "sl1": "Tengo una comprensión clara de mis fortalezas y áreas de crecimiento.",
+    "sl2": "Gestiono efectivamente mis emociones en situaciones desafiantes.",
+    "sl3": "Busco regularmente feedback para mejorar mi desempeño.",
+    "sl4": "Me responsabilizo de mis compromisos y resultados.",
+    "sl5": "Mantengo una mentalidad de crecimiento frente a los desafíos.",
+    "sl6": "Equilibro efectivamente mis necesidades personales con las de la organización.",
+    "sl7": "Invierto regularmente en mi desarrollo profesional y personal.",
+    
+    "wb1": "Puedo mantener un equilibrio saludable entre el trabajo y la vida personal.",
+    "wb2": "La organización proporciona recursos y apoyo para el bienestar de los empleados.",
+    "wb3": "Me siento energizado/a y motivado/a en el trabajo la mayoría del tiempo.",
+    "wb4": "Hay oportunidades para el descanso y la recuperación durante la jornada laboral.",
+    "wb5": "La carga de trabajo es manejable y se distribuye equitativamente.",
+    "wb6": "La salud mental es priorizada y apoyada abiertamente.",
+    "wb7": "Me siento cómodo/a tomando tiempo libre cuando lo necesito.",
+    
+    "os1": "Nuestra estrategia está claramente definida y bien comunicada.",
+    "os2": "Nuestras metas y objetivos están alineados en todos los niveles de la organización.",
+    "os3": "Revisamos y ajustamos regularmente nuestra estrategia basándonos en las condiciones cambiantes.",
+    "os4": "Los procesos de toma de decisiones son claros y eficientes.",
+    "os5": "Tenemos las estructuras y sistemas adecuados para apoyar nuestra estrategia.",
+    "os6": "Los recursos se asignan efectivamente para apoyar las prioridades estratégicas.",
+    "os7": "Medimos y rastreamos el progreso hacia nuestros objetivos estratégicos.",
+    
+    "ic1": "Entiendo cómo mi trabajo impacta a otras partes de la organización.",
+    "ic2": "Consideramos el impacto más amplio del sistema en nuestras decisiones.",
+    "ic3": "Hay flujos de retroalimentación efectivos que nos ayudan a aprender y adaptarnos.",
+    "ic4": "Equilibramos las necesidades a corto plazo con la sostenibilidad a largo plazo.",
+    "ic5": "Consideramos nuestro impacto en las partes interesadas externas y la comunidad.",
+    "ic6": "Mantenemos una perspectiva de pensamiento sistémico en la resolución de problemas.",
+    "ic7": "Reconocemos y abordamos patrones y dinámicas interconectadas en nuestro trabajo."
+  },
+  "scale": {
+    "stronglyDisagree": "Totalmente en desacuerdo",
+    "disagree": "En desacuerdo",
+    "somewhatDisagree": "Algo en desacuerdo",
+    "neutral": "Neutral",
+    "somewhatAgree": "Algo de acuerdo",
+    "agree": "De acuerdo",
+    "stronglyAgree": "Totalmente de acuerdo"
+  },
+  "navigation": {
+    "previous": "Anterior",
+    "next": "Siguiente Sección",
+    "complete": "Completar Evaluación",
+    "progress": "{{answered}}/{{total}} preguntas respondidas"
+  },
+  "intro": {
+    "title": "Escáner de Salud Organizacional de COIREA",
+    "description1": "Descubre el estado actual de la salud de tu organización a través de nuestro marco integral de evaluación.",
+    "description2": "Completa 55 preguntas en 7 pilares fundamentales para recibir un análisis detallado y recomendaciones personalizadas.",
+    "pillarsTitle": "Pilares de Evaluación:",
+    "timeEstimate": "Toma aproximadamente 12-15 minutos completar",
+    "scaleInfo": "Escala de respuesta: Totalmente en desacuerdo (0) a Totalmente de acuerdo (6)",
+    "resultsInfo": "Recibe tu mapa de salud organizacional personalizado y puntos de acción",
+    "startButton": "Iniciar tu Escáner de Salud Organizacional"
+  }
+}
