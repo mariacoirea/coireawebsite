@@ -90,9 +90,35 @@
     ],
     "quote": "El futuro pertenece a organizaciones que pueden sostener tanto estructura como alma, eficiencia y esencia. Estamos aquí para ayudarte a construir eso."
   },
-  "cta": {
-    "title": "¿Listo para Transformar Tu Organización?",
-    "subtitle": "Ya sea que estés listo para comenzar o aún explorando, estamos aquí para la conversación.",
-    "button": "Conectemos"
+    "cta": {
+    "title": "¿Listo para evolucionar tu",
+    "titleEmphasis": "organización?",
+    "subtitle": "Comienza tu viaje de transformación con el enfoque regenerativo de COIREA para la evolución organizacional.",
+    "button": "Comenzar el Viaje"
+  },
+  "faq": {
+    "title": "Acerca de COIREA - Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Qué hace diferente a COIREA de otras consultoras organizacionales?",
+        "answer": "COIREA integra principios de negocios regenerativos con diseño práctico de sistemas. No solo consultamos, nos integramos como socios para co-crear una transformación sostenible. Guiados por nuestro Marco de 5 Pilares — propósito, liderazgo, colaboración, cultura, bienestar y estrategia organizacional — ayudamos a las organizaciones a evolucionar hacia sistemas resilientes, impulsados por un propósito y autogestionados."
+      },
+      {
+        "question": "¿Cuánto tiempo suele tomar la transformación organizacional?",
+        "answer": "Nuestros programas de transformación van desde reinicios intensivos de 90 días hasta alianzas integrales de 6 a 18 meses. El cronograma depende del tamaño, complejidad y objetivos de transformación de tu organización. También ofrecemos soporte fraccional continuo para una evolución sostenida."
+      },
+      {
+        "question": "¿Qué es un negocio regenerativo y cómo se aplica a mi organización?",
+        "answer": "Los negocios regenerativos van más allá de la sostenibilidad para crear sistemas que activamente restauran y revitalizan. Para las organizaciones, esto significa construir culturas y prácticas que fortalecen tanto a las personas como el rendimiento, creando un impacto positivo mientras se logran resultados empresariales."
+      },
+      {
+        "question": "¿Cómo miden el éxito de la transformación organizacional?",
+        "answer": "Utilizamos nuestro Panel de Evolución COIREA para rastrear tanto métricas cuantitativas (productividad, retención, compromiso) como indicadores cualitativos (madurez de liderazgo, coherencia cultural, bienestar) a través de nuestro Marco de 5 Pilares, proporcionando información en tiempo real sobre el progreso de transformación de tu organización."
+      }
+    ]
+  },
+  "statistics": {
+    "quote": "El 76% de los empleados reportan experimentar niveles moderados a altos de estrés en el trabajo, y 1 de cada 3 dice que afecta su desempeño.",
+    "source": "Instituto Americano del Estrés"
   }
 }

@@ -101,108 +101,40 @@ const About = () => {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-8">
-              {/* Value 1 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Eye className="w-8 h-8 text-sage" />
+              {(t('values.items', { returnObjects: true }) as Array<{ title: string; subtitle?: string; description: string }>).map((value, index) => {
+                const icons = [Eye, Target, Lightbulb, Users, Compass, Zap];
+                const colors = [
+                  { from: 'from-sage/20', to: 'to-sage', text: 'text-sage' },
+                  { from: 'from-primary/20', to: 'to-primary', text: 'text-primary' },
+                  { from: 'from-copper/20', to: 'to-copper', text: 'text-copper' },
+                  { from: 'from-olive-green/20', to: 'to-olive-green', text: 'text-olive-green' },
+                  { from: 'from-sage/20', to: 'to-sage', text: 'text-sage' },
+                  { from: 'from-copper/20', to: 'to-copper', text: 'text-copper' },
+                ];
+                const Icon = icons[index];
+                const color = colors[index];
+                
+                return (
+                  <div key={index} className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
+                    <div className="flex items-start space-x-6 mb-3">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${color.from} ${color.to} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className={`w-8 h-8 ${color.text}`} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-display font-semibold text-primary mb-4">
+                          {value.title}
+                          {value.subtitle && (
+                            <span className="block text-lg font-body font-normal text-primary/70 mt-1">{value.subtitle}</span>
+                          )}
+                        </h3>
+                        <p className="text-foreground/70 font-body leading-relaxed">
+                          {value.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Clarity of Purpose
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      We design from the inside out — anchored in strategic vision, soul truth, and long-term direction.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Value 2 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Coherence at Every Level
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      Transformation lasts when purpose, leadership, and culture are aligned across systems, teams, and decisions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Value 3 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Lightbulb className="w-8 h-8 text-copper" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Leadership with Integrity
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      We support bold, conscious leadership that prioritizes presence, responsibility, and aligned action.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Value 4 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-olive-green/20 to-olive-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-olive-green" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Human-Centered Systems
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      People are not separate from performance — they are the system. We design structures that support both.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Value 5 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sage/20 to-sage rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Compass className="w-8 h-8 text-sage" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Reciprocity as Strategy
-                      <span className="block text-lg font-body font-normal text-primary/70 mt-1">(Inspired by Ayni)</span>
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      We honor the natural flow of giving and receiving. Regeneration begins with how we relate — to ourselves, to others, to the system.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Value 6 */}
-              <div className="bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-soft group hover:scale-[1.02] transition-all duration-500 border border-primary/10">
-                <div className="flex items-start space-x-6 mb-3">
-                  <div className="w-16 h-16 bg-gradient-to-br from-copper/20 to-copper rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-8 h-8 text-copper" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                      Brave Evolution
-                    </h3>
-                    <p className="text-foreground/70 font-body leading-relaxed">
-                      We invite companies to lead change from a place of courage — daring to disrupt, experiment, and evolve from truth.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -214,25 +146,19 @@ const About = () => {
               <div>
                 <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
                   <Star className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-medium">Real Partnership</span>
+                  <span className="text-primary font-medium">{t('partnership.badge')}</span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary mb-8 leading-tight">
-                  Real change requires <span className="text-copper">real partnership.</span>
+                  {t('partnership.title')} <span className="text-copper">{t('partnership.titleEmphasis')}</span>
                 </h2>
                 
                 <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8">
-                  At COIREA, you don't just work with a consulting firm. You enter a living ecosystem of transformational allies:
+                  {t('partnership.intro')}
                 </p>
                 
                 <div className="space-y-4 mb-8">
-                  {[
-                    "Executive coaches",
-                    "Culture strategists", 
-                    "Regenerative business mentors",
-                    "Well-being and somatic practitioners",
-                    "Systems change facilitators"
-                  ].map((ally, index) => (
+                  {(t('partnership.allies', { returnObjects: true }) as string[]).map((ally, index) => (
                     <div key={index} className="flex items-center space-x-4">
                       <div className="w-3 h-3 bg-gradient-to-r from-sage to-primary rounded-full"></div>
                       <span className="text-foreground/70 font-body text-lg">{ally}</span>
@@ -243,43 +169,31 @@ const About = () => {
               
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-elegant border border-primary/10">
                 <h3 className="text-3xl font-display font-semibold text-primary mb-8">
-                  Together, we help you:
+                  {t('partnership.helpTitle')}
                 </h3>
                 <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-sage" />
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Rebuild internal systems</h4>
-                      <p className="text-foreground/70 font-body">with integrity and depth</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Target className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Align leadership and strategy</h4>
-                      <p className="text-foreground/70 font-body">through every layer</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-copper/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Heart className="w-6 h-6 text-copper" />
-                    </div>
-                    <div>
-                      <h4 className="font-body font-semibold text-foreground mb-2 text-lg">Measure what matters</h4>
-                      <p className="text-foreground/70 font-body">purpose, culture, collaboration, and energy</p>
-                    </div>
-                  </div>
+                  {(t('partnership.helpItems', { returnObjects: true }) as Array<{ title: string; description: string }>).map((item, index) => {
+                    const icons = [Zap, Target, Heart];
+                    const colors = ['bg-sage/10 text-sage', 'bg-primary/10 text-primary', 'bg-copper/10 text-copper'];
+                    const Icon = icons[index];
+                    
+                    return (
+                      <div key={index} className="flex items-start space-x-4">
+                        <div className={`w-12 h-12 ${colors[index].split(' ')[0]} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                          <Icon className={`w-6 h-6 ${colors[index].split(' ')[1]}`} />
+                        </div>
+                        <div>
+                          <h4 className="font-body font-semibold text-foreground mb-2 text-lg">{item.title}</h4>
+                          <p className="text-foreground/70 font-body">{item.description}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
                 
                 <div className="mt-10 pt-8 border-t border-primary/10">
                   <p className="text-primary font-body font-medium text-xl text-center">
-                    We help you create the company your future needs.
+                    {t('partnership.commitment')}
                   </p>
                 </div>
               </div>
@@ -291,8 +205,12 @@ const About = () => {
         <section className="py-24 px-6 bg-warm-beige">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-light text-primary mb-16 leading-tight">
-                From The Founder<span className="text-sage">...</span>
+              <div className="inline-flex items-center gap-3 bg-primary/10 px-6 py-3 rounded-full border border-primary/20 shadow-sm mb-8">
+                <Mountain className="w-4 h-4 text-primary" />
+                <span className="text-primary font-medium">{t('founder.badge')}</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-display font-light text-primary leading-tight">
+                {t('founder.badge')}<span className="text-sage">...</span>
               </h2>
             </div>
             
@@ -303,7 +221,7 @@ const About = () => {
                   <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
                     <OptimizedImage 
                       src="/lovable-uploads/2627835c-d411-47f1-abb6-99b92bd30341.png" 
-                      alt="Maria Jose Figueroa - Founder and Conscious Leadership Catalyst of COIREA - Expert in regenerative business transformation and organizational development"
+                      alt={`${t('founder.name')} - ${t('founder.role')} - Expert in regenerative business transformation and organizational development`}
                       className="w-full h-full object-cover"
                       width={256}
                       height={256}
@@ -319,21 +237,20 @@ const About = () => {
               {/* Founder Content */}
               <div>
                 <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-6">
-                  Maria Jose Figueroa - <span className="text-sage">Conscious Leadership Catalyst</span>
+                  {t('founder.name')} - <span className="text-sage">{t('founder.role')}</span>
                 </h3>
                 
                 <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
-                  <p>
-                    With a background in business and a calling rooted in soul, I created COIREA to help teams lead with clarity, coherence, and deeper purpose.
-                  </p>
-                  
-                  <p>
-                    My journey weaves together strategic leadership, regenerative wisdom, and intuitive intelligence — all in service of evolving the way we work.
-                  </p>
-                  
-                  <p className="text-xl font-medium text-primary italic">
-                    I believe transformation begins when we remember who we are — and choose to lead from that place.
-                  </p>
+                  {(t('founder.bio', { returnObjects: true }) as string[]).map((paragraph, index) => {
+                    if (index === (t('founder.bio', { returnObjects: true }) as string[]).length - 1) {
+                      return (
+                        <p key={index} className="text-xl font-medium text-primary italic">
+                          {paragraph}
+                        </p>
+                      );
+                    }
+                    return <p key={index}>{paragraph}</p>;
+                  })}
                 </div>
               </div>
             </div>
@@ -345,47 +262,22 @@ const About = () => {
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
-                About COIREA - Frequently Asked Questions
+                {t('faq.title')}
               </h2>
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
             </div>
 
             <div className="space-y-8">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  What makes COIREA different from other organizational consultancies?
-                </h3>
-                <p className="text-foreground/80 font-body leading-relaxed">
-                  COIREA integrates regenerative business principles with practical systems design. We don't just consult, we embed as partners to co-create sustainable transformation. Guided by our 5-Pillar Framework — purpose, leadership, collaboration, culture, well-being, and organizational strategy — we help organizations evolve into resilient, purpose-driven, self-managing systems.
-                </p>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  How long does organizational transformation typically take?
-                </h3>
-                <p className="text-foreground/80 font-body leading-relaxed">
-                  Our transformation programs range from 90-day intensive resets to 6-18 month comprehensive partnerships. The timeline depends on your organization's size, complexity, and transformation goals. We also offer ongoing fractional support for sustained evolution.
-                </p>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  What is regenerative business and how does it apply to my organization?
-                </h3>
-                <p className="text-foreground/80 font-body leading-relaxed">
-                  Regenerative business goes beyond sustainability to create systems that actively restore and revitalize. For organizations, this means building cultures and practices that strengthen both people and performance, creating positive impact while achieving business results.
-                </p>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                  How do you measure the success of organizational transformation?
-                </h3>
-                <p className="text-foreground/80 font-body leading-relaxed">
-                  We use our COIREA Evolution Dashboard to track both quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership maturity, cultural coherence, well-being) across our 5-Pillar Framework, providing real-time insights into your organization's transformation progress.
-                </p>
-              </div>
+              {(t('faq.items', { returnObjects: true }) as Array<{ question: string; answer: string }>).map((faq, index) => (
+                <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
+                  <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                    {faq.question}
+                  </h3>
+                  <p className="text-foreground/80 font-body leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -397,16 +289,16 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
               <div className="relative p-12">
                 <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  Ready to evolve your <span className="italic text-sage">organization?</span>
+                  {t('cta.title')} <span className="italic text-sage">{t('cta.titleEmphasis')}</span>
                 </h2>
                 
                 <p className="text-xl text-primary/80 font-body mb-12 max-w-3xl mx-auto">
-                  Begin your transformation journey with COIREA's regenerative approach to organizational evolution.
+                  {t('cta.subtitle')}
                 </p>
                 
                 <LocalizedLink to="/journey#journey-start">
                   <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
-                    Begin the Journey
+                    {t('cta.button')}
                     <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </LocalizedLink>
@@ -419,10 +311,10 @@ const About = () => {
         <section className="py-16 px-6 bg-background border-t border-primary/10">
           <div className="container mx-auto max-w-4xl text-center">
             <blockquote className="text-lg md:text-xl text-foreground/70 font-body italic leading-relaxed">
-              "76% of employees report experiencing moderate to high levels of stress at work — and 1 in 3 say it affects their performance."
+              "{t('statistics.quote')}"
             </blockquote>
             <cite className="block mt-4 text-primary font-medium">
-              – American Institute of Stress
+              – {t('statistics.source')}
             </cite>
           </div>
         </section>
