@@ -9,7 +9,7 @@ export const generateSitemap = async () => {
     {
       loc: `${baseUrl}/`,
       lastmod: currentDate,
-      changefreq: 'monthly',
+      changefreq: 'weekly',
       priority: '1.0',
     },
     {
@@ -45,24 +45,26 @@ export const generateSitemap = async () => {
     {
       loc: `${baseUrl}/insights`,
       lastmod: currentDate,
-      changefreq: 'weekly',
+      changefreq: 'daily',
       priority: '0.8',
     },
   ];
 
-  // Fetch published blog posts and add them to sitemap
+  // Fetch all published blog posts with accurate dates
   try {
     const { data: posts, error } = await supabase
       .from('posts')
-      .select('slug, updated_at')
+      .select('slug, updated_at, created_at')
       .eq('published', true)
-      .order('created_at', { ascending: false });
+      .order('updated_at', { ascending: false });
     
     if (!error && posts) {
       posts.forEach(post => {
+        // Use updated_at if available, fallback to created_at
+        const lastModified = post.updated_at || post.created_at;
         urls.push({
           loc: `${baseUrl}/insights/${post.slug}`,
-          lastmod: new Date(post.updated_at).toISOString().split('T')[0],
+          lastmod: new Date(lastModified).toISOString().split('T')[0],
           changefreq: 'monthly',
           priority: '0.7',
         });

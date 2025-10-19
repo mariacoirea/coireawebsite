@@ -94,21 +94,35 @@ const StructuredData = ({ type = 'organization', data }: StructuredDataProps) =>
       case 'article':
         return {
           "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": data?.title,
-          "description": data?.description,
-          "image": data?.image,
-          "author": {
-            "@type": "Organization",
-            "name": "COIREA"
-          },
-          "publisher": baseOrganization,
+          "@type": "BlogPosting",
+          "headline": data?.title || "COIREA Insights",
+          "description": data?.description || "Expert insights on organizational transformation",
+          "image": data?.image || "https://coirea.com/lovable-uploads/5555f545-a4bb-46b7-9145-b8ae36a5d882.png",
           "datePublished": data?.publishedTime,
           "dateModified": data?.modifiedTime,
+          "author": {
+            "@type": "Person",
+            "name": "María José Figueroa",
+            "url": "https://coirea.com/about"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "COIREA",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://coirea.com/lovable-uploads/9bef76c3-5f6e-42a0-831c-3a54ef706f9b.png",
+              "width": "600",
+              "height": "60"
+            },
+            "url": "https://coirea.com"
+          },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": data?.url
-          }
+            "@id": data?.url || "https://coirea.com"
+          },
+          "articleBody": data?.bodyContent?.substring(0, 500) || data?.description,
+          "inLanguage": "en-US",
+          "isAccessibleForFree": "True"
         };
 
       case 'faq':
