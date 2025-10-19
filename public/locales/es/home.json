@@ -6,18 +6,167 @@
   },
   "hero": {
     "title": "Transforma Tu Organización Desde Adentro Hacia Afuera",
-    "subtitle": "Una consultoría regenerativa para organizaciones con propósito listas para evolucionar"
+    "subtitle": "Una consultoría regenerativa para organizaciones con propósito listas para evolucionar",
+    "description": "En COIREA, ayudamos a las organizaciones a crecer hacia Sistemas Adaptativos y Autodirigidos, alineando Propósito, Rendimiento y Personas. A través del Liderazgo Consciente, la Inteligencia Colectiva y la Coherencia Cultural, activamos lo que ya está vivo dentro — guiando a las organizaciones hacia su próxima etapa de evolución.",
+    "ctaButton": "Exploremos Tu Organización Juntos"
   },
   "reflection": {
-    "title": "¿Dónde Está Tu Organización Hoy?",
-    "subtitle": "Tómate un momento para reflexionar sobre tu realidad actual"
+    "heading": "¿Está Tu Núcleo Suficientemente Alineado Para Crecer?",
+    "intro": "El crecimiento colapsa cuando Propósito, Personas y Rendimiento se separan. Cuando las organizaciones pierden de vista su porqué, cuando los equipos se desconectan y cuando los resultados ya no reflejan los valores, incluso los negocios más prometedores pueden estancarse. Antes de avanzar con planes ambiciosos, es crucial verificar tu núcleo:",
+    "questions": [
+      "¿Las decisiones se estancan en la cúpula?",
+      "¿Las prioridades chocan más rápido que la ejecución?",
+      "¿Pierdes talento más rápido de lo que puedes incorporar?",
+      "¿Tu cultura inspira lealtad en todas las generaciones, especialmente Gen Z?"
+    ],
+    "dataTitle": "Los Datos Hablan:",
+    "dataPoints": [
+      {
+        "highlight": "Solo el 23% de los empleados está comprometido en el trabajo",
+        "description": "lo que significa que el 77% no está dando toda su energía o alineación.",
+        "source": "Fuente: Gallup, 2024"
+      },
+      {
+        "highlight": "El bajo compromiso cuesta a la economía mundial $8.9 billones anuales",
+        "description": "eso es el 9% del PIB mundial perdido en estancamiento, rotación y agotamiento.",
+        "source": "Fuente: Gallup, 2024"
+      },
+      {
+        "highlight": "El 72% de los líderes carecen de claridad sobre el propósito",
+        "description": "creando confusión y desalineación en toda la organización.",
+        "source": "Fuente: Encuesta COIREA"
+      },
+      {
+        "highlight": "El 60% de los equipos reportan confianza débil",
+        "description": "socavando la colaboración y la seguridad psicológica.",
+        "source": "Fuente: Encuesta COIREA"
+      },
+      {
+        "highlight": "Solo el 33% de los empleados prospera en su bienestar general",
+        "description": "Cuando las personas no se sienten bien, no pueden rendir bien.",
+        "source": "Fuente: Gallup, 2024"
+      },
+      {
+        "highlight": "Las empresas con cultura sólida ven un 72% más de compromiso y 40% menos rotación",
+        "description": "demostrando que la transformación cultural intencional genera resultados medibles.",
+        "source": "Fuente: Deloitte"
+      }
+    ],
+    "conclusion": "Si dudaste en las preguntas y te ves reflejado en los números, tu organización probablemente está operando con menos capacidad y claridad de la que podría."
   },
   "framework": {
-    "title": "El Marco de Cinco Pilares",
-    "subtitle": "Un enfoque holístico para la transformación organizacional"
+    "heading": "El Sistema Operativo COIREA (SO Regenerativo)",
+    "intro": [
+      "El crecimiento trae complejidad — prioridades en conflicto, equipos desalineados y momentum estancado. El Sistema Operativo COIREA transforma estos desafíos en coherencia.",
+      "Construido sobre cinco funciones clave: Propósito y Cultura, Liderazgo Consciente, Colaboración, Bienestar y Estrategia Organizacional. El SO COIREA es una arquitectura viva que alinea Propósito, Personas y Rendimiento en un sistema holístico.",
+      "A diferencia de marcos estáticos, el SO COIREA integra estructura con alma: toma de decisiones que fluye, métricas que miden significado además de resultados, y prácticas que sostienen la vitalidad humana. El resultado: organizaciones alineadas, adaptativas y resilientes — diseñadas para crecer con integridad."
+    ],
+    "pillars": [
+      {
+        "title": "Propósito y Cultura",
+        "subtitle": "Claridad y narrativa",
+        "description": "Convierte la visión en pertenencia. El propósito y la cultura establecen el tono para todo: por qué existes y cómo se siente trabajar aquí. Tejemos tus valores y visión en prácticas diarias, creando un campo coherente en el que las personas confían y desean pertenecer.",
+        "drives": "Alineación de equipo, retención de talento, confianza de marca."
+      },
+      {
+        "title": "Liderazgo Consciente",
+        "subtitle": "Presencia y retroalimentación",
+        "description": "Construye líderes que inspiran a través del cambio. El Liderazgo Consciente define la energía de una organización. Cultivamos líderes auténticos, impulsados por valores y capaces de guiar a otros con claridad, coraje y confianza.",
+        "drives": "Ejecución estratégica, innovación, confianza cultural."
+      },
+      {
+        "title": "Colaboración",
+        "subtitle": "Confianza y flujo",
+        "description": "Desbloquea la inteligencia colectiva. Cuando la confianza y la claridad están presentes, la colaboración se convierte en flujo sin esfuerzo. Creamos sistemas que eliminan silos, fomentan la seguridad psicológica y convierten el conflicto en creatividad.",
+        "drives": "Resolución más rápida de problemas, mejores ideas, ejecución más sólida."
+      },
+      {
+        "title": "Bienestar",
+        "subtitle": "Energía y resiliencia",
+        "description": "Protege la energía humana como un activo estratégico. El bienestar no es un beneficio — es la base del rendimiento. Integramos prácticas regenerativas que sostienen el enfoque, la creatividad y la resiliencia en todo el equipo.",
+        "drives": "Productividad, retención, crecimiento sostenible."
+      },
+      {
+        "title": "Estrategia Organizacional",
+        "subtitle": "Diseño de Sistema y Columna Vertebral",
+        "description": "Convierte la visión en realidad. La estrategia es la columna estructural de tu negocio. Diseñamos sistemas adaptativos, KPIs regenerativos y arquitecturas de toma de decisiones que mantienen tu organización ágil y alineada con su propósito más profundo.",
+        "drives": "Escalabilidad, eficiencia, resiliencia."
+      }
+    ]
   },
   "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Apoyo personalizado para tu viaje de transformación"
+    "heading": "Programas de Reinicio de 90 Días",
+    "intro": [
+      "Un único programa personalizado para realinear tu organización en un trimestre.",
+      "Escalar no tiene que costar tu cultura, claridad o energía. El Reinicio de 90 Días de COIREA está diseñado para fundadores y CEOs que sienten que su organización ha llegado a la complejidad: liderazgo desalineado, desafíos de colaboración o un sentido de propósito diluido. En solo un trimestre, diagnosticamos el problema raíz, activamos tu equipo de liderazgo y realineamos tu sistema operativo con progreso medible rastreado en tiempo real a través del Panel COIREA."
+    ],
+    "phaseTitle": "Cada Reinicio Sigue Nuestro Ciclo de 3 Fases",
+    "phases": [
+      {
+        "number": "1",
+        "title": "Fase 1: Reflexionar y Sintonizar",
+        "description": "Escucha profundamente. Revela verdades. Siente dónde la organización está estancada o fluyendo."
+      },
+      {
+        "number": "2",
+        "title": "Fase 2: Sembrar y Diseñar",
+        "description": "Planta nuevas prácticas, roles y estructuras alineadas con tu Reinicio elegido."
+      },
+      {
+        "number": "3",
+        "title": "Fase 3: Integrar y Crecer",
+        "description": "Integra los cambios en los ritmos diarios. Rastrea los KPIs de COIREA mientras el sistema se adapta."
+      }
+    ],
+    "programs": [
+      {
+        "title": "Reinicio de Colaboración",
+        "subtitle": "Cuando los equipos pierden conexión, el rendimiento sufre.",
+        "idealFor": "Fundadores/CEOs que sienten que su equipo está desalineado, la colaboración se siente pesada, los roles y responsabilidades no están claros.",
+        "idealForLabel": "Ideal Para",
+        "outcomesLabel": "Resultados Clave",
+        "outcomes": [
+          "Reconstruir confianza y colaboración entre equipos",
+          "Aclarar roles de liderazgo y autoridad de toma de decisiones",
+          "Establecer prácticas culturales y hábitos que escalan",
+          "Diseñar un sistema de rendimiento que impulse el crecimiento",
+          "Medir cambios en colaboración y alineación de liderazgo antes/después"
+        ]
+      },
+      {
+        "title": "Escalar con Propósito",
+        "subtitle": "Cuando estructura y propósito no se alinean, el crecimiento se vuelve caótico.",
+        "idealFor": "Fundadores/CEOs cuya empresa está escalando rápido pero luchando con operaciones desordenadas, prioridades poco claras o una visión diluida.",
+        "idealForLabel": "Ideal Para",
+        "outcomesLabel": "Resultados Clave",
+        "outcomes": [
+          "Definir o refinar propósito, visión y prioridades estratégicas de la empresa",
+          "Alinear al liderazgo en un manual claro",
+          "Rediseñar estructura organizacional y flujos de trabajo para apoyar el crecimiento",
+          "Establecer y rastrear proyectos trimestrales con responsabilidad",
+          "Obtener eficiencia medible en toma de decisiones y ejecución"
+        ]
+      },
+      {
+        "title": "Reinicio de Liderazgo",
+        "subtitle": "Cuando los líderes no son conscientes, los equipos pierden dirección.",
+        "idealFor": "Fundadores/CEOs que ven a sus líderes luchando con claridad, confianza o consistencia y quieren cultivar una cultura de liderazgo consciente.",
+        "idealForLabel": "Ideal Para",
+        "outcomesLabel": "Resultados Clave",
+        "outcomes": [
+          "Construir presencia ejecutiva arraigada en autenticidad y confianza",
+          "Fortalecer la toma de decisiones consciente bajo presión",
+          "Desarrollar comunicación encarnada que inspire alineación",
+          "Reconectar a los líderes con claridad interna para liderar con confianza",
+          "Cambios medibles en confianza y efectividad de liderazgo rastreados durante 90 días"
+        ]
+      }
+    ],
+    "ctaText": "¿Listo para reiniciar, realinear y demostrar transformación medible en solo 90 días?",
+    "ctaButton": "Comienza Tu Viaje",
+    "badges": {
+      "duration": "90 Días",
+      "phases": "3 Fases"
+    }
   }
 }

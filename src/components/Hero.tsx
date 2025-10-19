@@ -1,10 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import OptimizedImage from "./OptimizedImage";
+import { useTranslation } from "react-i18next";
+import LocalizedLink from "./LocalizedLink";
 
 const Hero = () => {
+  const { t } = useTranslation('home');
+  
   return (
     <section 
       id="home" 
@@ -22,13 +24,13 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <header>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 mt-12 leading-tight">
-            <span className="italic block mb-2">Transform Your</span>
-            <span className="block">Organization from</span>
-            <span className="block">the Inside Out</span>
+            <span className="italic block mb-2">{t('hero.title').split(' ')[0]} {t('hero.title').split(' ')[1]}</span>
+            <span className="block">{t('hero.title').split('from')[0].split('Organization')[1]?.trim() || 'Organization from'}</span>
+            <span className="block">{t('hero.title').split('from')[1]?.trim() || 'the Inside Out'}</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-6xl mx-auto mb-8 leading-relaxed">
-            At COIREA, we help organizations grow into Adaptive, Self-Managed Systems by aligning Purpose, Performance, and People. Through Supportive Leadership, Collective Intelligence, and Cultural Coherence, we activate what's already alive within — guiding organizations into their next stage of evolution.
+            {t('hero.description')}
           </p>
         </header>
 
@@ -45,12 +47,12 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center items-center mb-16">
-          <Link to="/journey" aria-label="Let's explore your organization together">
+          <LocalizedLink to="/journey" aria-label={t('hero.ctaButton')}>
             <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-8 py-4 transition-all duration-300 shadow-lg">
-              Let's Explore Your Organization Together
+              {t('hero.ctaButton')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" aria-hidden="true" />
             </Button>
-          </Link>
+          </LocalizedLink>
         </div>
       </div>
     </section>

@@ -6,18 +6,167 @@
   },
   "hero": {
     "title": "Transform Your Organization from the Inside Out",
-    "subtitle": "A regenerative consultancy for purpose-driven organizations ready to evolve"
+    "subtitle": "A regenerative consultancy for purpose-driven organizations ready to evolve",
+    "description": "At COIREA, we help organizations grow into Adaptive, Self-Managed Systems by aligning Purpose, Performance, and People. Through Supportive Leadership, Collective Intelligence, and Cultural Coherence, we activate what's already alive within — guiding organizations into their next stage of evolution.",
+    "ctaButton": "Let's Explore Your Organization Together"
   },
   "reflection": {
-    "title": "Where is Your Organization Today?",
-    "subtitle": "Take a moment to reflect on your current reality"
+    "heading": "Is Your Core Aligned Enough to Grow?",
+    "intro": "Growth collapses when Purpose, People, and Performance drift apart. When organizations lose sight of their why, when teams become disconnected, and when results no longer reflect values, even the most promising businesses can stagnate. Before you move forward with ambitious plans, it's critical to check your core:",
+    "questions": [
+      "Are decisions bottlenecked at the top?",
+      "Do priorities clash faster than execution?",
+      "Are you losing great people faster than you can onboard them?",
+      "Does your culture inspire loyalty across generations, especially Gen Z?"
+    ],
+    "dataTitle": "The Data Speaks:",
+    "dataPoints": [
+      {
+        "highlight": "Only 23% of employees are engaged at work",
+        "description": "meaning 77% are not giving their full energy or alignment.",
+        "source": "Source: Gallup, 2024"
+      },
+      {
+        "highlight": "Low engagement costs the global economy $8.9 trillion annually",
+        "description": "that's 9% of global GDP lost to stagnation, turnover, and burnout.",
+        "source": "Source: Gallup, 2024"
+      },
+      {
+        "highlight": "72% of leaders lack clarity on purpose",
+        "description": "creating confusion and misalignment throughout organizations.",
+        "source": "Source: COIREA survey"
+      },
+      {
+        "highlight": "60% of teams report weak trust",
+        "description": "undermining collaboration and psychological safety.",
+        "source": "Source: COIREA survey"
+      },
+      {
+        "highlight": "Only 33% of employees are thriving in their overall well-being",
+        "description": "When people don't feel well, they can't perform well.",
+        "source": "Source: Gallup, 2024"
+      },
+      {
+        "highlight": "Companies with strong culture see 72% higher engagement and 40% lower turnover",
+        "description": "proving that intentional culture transformation delivers measurable results.",
+        "source": "Source: Deloitte"
+      }
+    ],
+    "conclusion": "If you hesitated on the questions and see yourself in the numbers, your organization is likely running on less capacity and clarity than it could."
   },
   "framework": {
-    "title": "The Five-Pillar Framework",
-    "subtitle": "A holistic approach to organizational transformation"
+    "heading": "The COIREA Operating System (Regenerative OS)",
+    "intro": [
+      "Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms these challenges into coherence.",
+      "Built on five core functions: Purpose & Culture, Supportive Leadership, Collaboration, Well-Being, and Organizational Strategy. The COIREA OS is a living architecture that aligns Purpose, People, and Performance into one holistic system.",
+      "Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity."
+    ],
+    "pillars": [
+      {
+        "title": "Purpose & Culture",
+        "subtitle": "Clarity & storytelling",
+        "description": "Turn vision into belonging. Purpose and culture set the tone for everything: why you exist and what it feels like to work here. We weave your values and vision into daily practices, creating a coherent field that people trust and want to belong to.",
+        "drives": "Team alignment, talent retention, brand trust."
+      },
+      {
+        "title": "Supportive Leadership",
+        "subtitle": "Presence & feedback",
+        "description": "Build leaders who inspire through change. Supportive Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
+        "drives": "Strategic execution, innovation, cultural trust."
+      },
+      {
+        "title": "Collaboration",
+        "subtitle": "Trust & flow",
+        "description": "Unlock collective intelligence. When trust and clarity are present, collaboration becomes effortless flow. We create systems that remove silos, foster psychological safety, and turn conflict into creativity.",
+        "drives": "Faster problem-solving, better ideas, stronger execution."
+      },
+      {
+        "title": "Well-Being",
+        "subtitle": "Energy & resilience",
+        "description": "Protect human energy as a strategic asset. Well-being is not a perk—it's the foundation of performance. We embed regenerative practices that sustain focus, creativity, and resilience across the whole team.",
+        "drives": "Productivity, retention, sustainable growth."
+      },
+      {
+        "title": "Organizational Strategy",
+        "subtitle": "System Design & Backbone",
+        "description": "Turn vision into reality. Strategy is the structural spine of your business. We design adaptive systems, regenerative KPIs, and decision-making architectures that keep your organization agile and aligned with its deeper purpose.",
+        "drives": "Scalability, efficiency, resilience."
+      }
+    ]
   },
   "services": {
-    "title": "Our Offerings",
-    "subtitle": "Tailored support for your transformation journey"
+    "heading": "90-Day Reset Programs",
+    "intro": [
+      "A single, tailored program to realign your organization in one quarter.",
+      "Scaling doesn't have to cost your culture, clarity, or energy. The COIREA 90-Day Reset is designed for founders and CEOs who feel their organization has hit complexity: misaligned leadership, collaboration challenges, or a diluted sense of purpose. In just one quarter, we diagnose the root issue, activate your leadership team, and realign your operating system with measurable progress tracked in real time through the COIREA Dashboard."
+    ],
+    "phaseTitle": "Every Reset Follows Our 3-Phase Cycle",
+    "phases": [
+      {
+        "number": "1",
+        "title": "Phase 1: Reflect & Attune",
+        "description": "Listen deeply. Surface truths. Sense where the organization is stuck or flowing."
+      },
+      {
+        "number": "2",
+        "title": "Phase 2: Seed & Design",
+        "description": "Plant new practices, roles, and structures aligned with your chosen Reset."
+      },
+      {
+        "number": "3",
+        "title": "Phase 3: Integrate & Grow",
+        "description": "Embed the changes into daily rhythms. Track COIREA KPIs as the system adapts."
+      }
+    ],
+    "programs": [
+      {
+        "title": "Collaboration Reset",
+        "subtitle": "When teams lose connection, performance suffers.",
+        "idealFor": "Founders/CEOs sensing their team is misaligned, collaboration feels heavy, roles and responsibilities are not clear.",
+        "idealForLabel": "Ideal For",
+        "outcomesLabel": "Key Outcomes",
+        "outcomes": [
+          "Rebuild trust and collaboration across teams",
+          "Clarify leadership roles and decision-making authority",
+          "Establish cultural practices and habits that scale",
+          "Design a performance system that drives growth",
+          "Measure shifts in collaboration and leadership alignment before/after"
+        ]
+      },
+      {
+        "title": "Scale with Purpose",
+        "subtitle": "When structure and purpose don't align, growth turns chaotic.",
+        "idealFor": "Founders/CEOs whose company is scaling fast but struggling with messy operations, unclear priorities, or a diluted vision.",
+        "idealForLabel": "Ideal For",
+        "outcomesLabel": "Key Outcomes",
+        "outcomes": [
+          "Define or refine company purpose, vision, and strategic priorities",
+          "Align leadership on one clear playbook",
+          "Redesign org structure & workflows to support growth",
+          "Set and track quarterly projects with accountability",
+          "Gain measurable efficiency in decision-making and execution"
+        ]
+      },
+      {
+        "title": "Leadership Reset",
+        "subtitle": "When leaders aren't supportive, teams lose direction.",
+        "idealFor": "Founders/CEOs who see their leaders struggling with clarity, confidence, or consistency and want to cultivate a culture of conscious and supportive leadership.",
+        "idealForLabel": "Ideal For",
+        "outcomesLabel": "Key Outcomes",
+        "outcomes": [
+          "Build executive presence rooted in authenticity and trust",
+          "Strengthen conscious decision-making under pressure",
+          "Develop embodied communication that inspires alignment",
+          "Reconnect leaders with inner clarity to lead with confidence",
+          "Measurable shifts in leadership trust and effectiveness tracked over 90 days"
+        ]
+      }
+    ],
+    "ctaText": "Ready to reset, realign, and prove measurable transformation in just 90 days?",
+    "ctaButton": "Begin Your Journey",
+    "badges": {
+      "duration": "90 Days",
+      "phases": "3 Phases"
+    }
   }
 }

@@ -1,58 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Heart, Zap, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LocalizedLink from "./LocalizedLink";
 
-// 90-Day Reset Programs
-const resetPrograms = [
-  {
-    icon: Heart,
-    title: "Collaboration Reset",
-    subtitle: "When teams lose connection, performance suffers.",
-    idealFor: "Founders/CEOs sensing their team is misaligned, collaboration feels heavy, roles and responsibilities are not clear.",
-    outcomes: [
-      "Rebuild trust and collaboration across teams",
-      "Clarify leadership roles and decision-making authority",
-      "Establish cultural practices and habits that scale",
-      "Design a performance system that drives growth",
-      "Measure shifts in collaboration and leadership alignment before/after"
-    ],
-    iconColor: "sage",
-    badgeColor: "sage"
-  },
-  {
-    icon: Zap,
-    title: "Scale with Purpose",
-    subtitle: "When structure and purpose don't align, growth turns chaotic.",
-    idealFor: "Founders/CEOs whose company is scaling fast but struggling with messy operations, unclear priorities, or a diluted vision.",
-    outcomes: [
-      "Define or refine company purpose, vision, and strategic priorities",
-      "Align leadership on one clear playbook",
-      "Redesign org structure & workflows to support growth",
-      "Set and track quarterly projects with accountability",
-      "Gain measurable efficiency in decision-making and execution"
-    ],
-    iconColor: "primary",
-    badgeColor: "primary"
-  },
-  {
-    icon: Heart,
-    title: "Leadership Reset",
-    subtitle: "When leaders aren't supportive, teams lose direction.",
-    idealFor: "Founders/CEOs who see their leaders struggling with clarity, confidence, or consistency and want to cultivate a culture of conscious and supportive leadership.",
-    outcomes: [
-      "Build executive presence rooted in authenticity and trust",
-      "Strengthen conscious decision-making under pressure",
-      "Develop embodied communication that inspires alignment",
-      "Reconnect leaders with inner clarity to lead with confidence",
-      "Measurable shifts in leadership trust and effectiveness tracked over 90 days"
-    ],
-    iconColor: "copper",
-    badgeColor: "copper"
-  }
-];
+const programIcons = [Heart, Zap, Heart];
+const programColors = ["sage", "primary", "copper"];
 
 const ServicesSection = () => {
+  const { t } = useTranslation('home');
   return (
     <section id="services" className="relative py-24 bg-gradient-to-br from-warm-beige to-aura-pearl overflow-hidden">
       {/* Enhanced Background Layers */}
@@ -80,16 +36,14 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-            90-Day Reset Programs
+            {t('services.heading')}
           </h2>
           
-          <p className="text-xl text-muted-foreground font-body max-w-6xl mx-auto mb-8">
-            A single, tailored program to realign your organization in one quarter.
-          </p>
-
-          <p className="text-lg text-muted-foreground/80 font-body max-w-6xl mx-auto mb-8">
-            Scaling doesn't have to cost your culture, clarity, or energy. The COIREA 90-Day Reset is designed for founders and CEOs who feel their organization has hit complexity: misaligned leadership, collaboration challenges, or a diluted sense of purpose. In just one quarter, we diagnose the root issue, activate your leadership team, and realign your operating system with measurable progress tracked in real time through the COIREA Dashboard.
-          </p>
+          {(t('services.intro', { returnObjects: true }) as string[]).map((paragraph: string, idx: number) => (
+            <p key={idx} className={idx === 0 ? "text-xl text-muted-foreground font-body max-w-6xl mx-auto mb-8" : "text-lg text-muted-foreground/80 font-body max-w-6xl mx-auto mb-8"}>
+              {paragraph}
+            </p>
+          ))}
           
           <div className="w-24 h-0.5 bg-gradient-warm mx-auto"></div>
         </div>
@@ -97,46 +51,37 @@ const ServicesSection = () => {
         {/* 3-Phase Cycle */}
         <div className="max-w-5xl mx-auto mb-20">
           <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary text-center mb-12">
-            Every Reset Follows Our 3-Phase Cycle
+            {t('services.phaseTitle')}
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-sage/10 to-sage/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-sage/20">
-                <span className="text-sage font-bold text-lg">1</span>
-              </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 1: Reflect & Attune</h4>
-              <p className="text-muted-foreground text-sm">Listen deeply. Surface truths. Sense where the organization is stuck or flowing.</p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20">
-                <span className="text-primary font-bold text-lg">2</span>
-              </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 2: Seed & Design</h4>
-              <p className="text-muted-foreground text-sm">Plant new practices, roles, and structures aligned with your chosen Reset.</p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-12 h-12 bg-gradient-to-br from-copper/10 to-copper/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-copper/20">
-                <span className="text-copper font-bold text-lg">3</span>
-              </div>
-              <h4 className="text-lg font-display font-semibold text-primary mb-3">Phase 3: Integrate & Grow</h4>
-              <p className="text-muted-foreground text-sm">Embed the changes into daily rhythms. Track COIREA KPIs as the system adapts.</p>
-            </div>
+            {(t('services.phases', { returnObjects: true }) as any[]).map((phase: any, idx: number) => {
+              const colors = ['sage', 'primary', 'copper'];
+              const color = colors[idx];
+              return (
+                <div key={idx} className="text-center group">
+                  <div className={`w-12 h-12 bg-gradient-to-br from-${color}/10 to-${color}/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-${color}/20`}>
+                    <span className={`text-${color} font-bold text-lg`}>{phase.number}</span>
+                  </div>
+                  <h4 className="text-lg font-display font-semibold text-primary mb-3">{phase.title}</h4>
+                  <p className="text-muted-foreground text-sm">{phase.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Three 90-Day Programs */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-          {resetPrograms.map((program, index) => {
-            const IconComponent = program.icon;
+          {(t('services.programs', { returnObjects: true }) as any[]).map((program: any, index: number) => {
+            const IconComponent = programIcons[index];
+            const color = programColors[index];
             return (
               <Card key={index} className="p-6 md:p-8 hover:shadow-elegant transition-all duration-300 group border-0 bg-card/60 backdrop-blur-sm hover:scale-[1.01] relative overflow-hidden">
                 {/* Header Section */}
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br from-${program.iconColor}/10 to-${program.iconColor}/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-${program.iconColor}/20`}>
-                    <IconComponent className={`w-8 h-8 text-${program.iconColor}`} />
+                  <div className={`w-16 h-16 bg-gradient-to-br from-${color}/10 to-${color}/20 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-300 border border-${color}/20`}>
+                    <IconComponent className={`w-8 h-8 text-${color}`} />
                   </div>
                   <h3 className="text-xl font-display font-bold text-primary mb-3">
                     {program.title}
@@ -146,17 +91,17 @@ const ServicesSection = () => {
                   </p>
                    <div className="flex items-center justify-center gap-3 mb-5">
                      <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
-                       90 Days
+                       {t('services.badges.duration')}
                      </div>
                      <div className="bg-copper/10 text-copper px-3 py-1.5 rounded-full text-xs font-semibold border border-copper/20">
-                       3 Phases
+                       {t('services.badges.phases')}
                      </div>
                    </div>
                 </div>
 
                 {/* Ideal For Section */}
                 <div className="mb-6">
-                  <h4 className={`text-xs font-semibold text-${program.iconColor} mb-3 uppercase tracking-wider`}>Ideal For</h4>
+                  <h4 className={`text-xs font-semibold text-${color} mb-3 uppercase tracking-wider`}>{program.idealForLabel}</h4>
                   <p className="text-muted-foreground font-body text-sm">
                     {program.idealFor}
                   </p>
@@ -164,11 +109,11 @@ const ServicesSection = () => {
 
                 {/* Outcomes Section */}
                 <div className="mb-6">
-                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                  <h4 className="text-xs font-semibold text-primary mb-3 uppercase tracking-wider">{program.outcomesLabel}</h4>
                   <div className="space-y-2.5">
-                    {program.outcomes.map((outcome, idx) => (
+                    {program.outcomes.map((outcome: string, idx: number) => (
                       <div key={idx} className="flex items-start gap-2.5">
-                        <Check className={`w-4 h-4 text-${program.iconColor} mt-0.5 flex-shrink-0`} />
+                        <Check className={`w-4 h-4 text-${color} mt-0.5 flex-shrink-0`} />
                         <span className="text-muted-foreground text-sm">{outcome}</span>
                       </div>
                     ))}
@@ -183,16 +128,16 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <div className="max-w-3xl mx-auto mb-8 px-4">
             <p className="text-base md:text-lg text-muted-foreground font-body leading-relaxed mb-4">
-              Ready to reset, realign, and prove measurable transformation in just 90 days?
+              {t('services.ctaText')}
             </p>
           </div>
           
-          <Link to="/journey">
+          <LocalizedLink to="/journey">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group px-6 py-3 md:px-8 md:py-4 text-base md:text-lg">
-              Begin Your Journey
+              {t('services.ctaButton')}
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </LocalizedLink>
         </div>
 
       </div>
