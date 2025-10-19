@@ -1,0 +1,32 @@
+{
+  "header": {
+    "nav": {
+      "about": "Acerca de",
+      "offerings": "Servicios",
+      "insights": "Perspectivas",
+      "tools": "Herramientas",
+      "events": "Eventos"
+    },
+    "cta": "COMENZAR VIAJE"
+  },
+  "footer": {
+    "tagline": "Transforma tu organización desde adentro hacia afuera",
+    "contact": {
+      "title": "Contacto",
+      "email": "maria@coirea.com"
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "about": "Acerca de",
+      "offerings": "Servicios",
+      "insights": "Perspectivas",
+      "journey": "Comenzar Viaje"
+    },
+    "copyright": "© 2024 COIREA. Todos los derechos reservados."
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "switchTo": "Cambiar a {{language}}"
+  }
+}

@@ -1,5 +1,5 @@
-
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface SEOHeadProps {
   title?: string;
@@ -24,12 +24,20 @@ const SEOHead = ({
   publishedTime,
   modifiedTime
 }: SEOHeadProps) => {
+  const { currentLanguage } = useLanguage();
   const fullTitle = title.includes("COIREA") ? title : `${title} | COIREA`;
   const fullUrl = url.startsWith('http') ? url : `https://coirea.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://coirea.com${image}`;
+  
+  // Generate alternate language URLs for hreflang
+  const enUrl = fullUrl.replace('/es/', '/').replace('/es', '/');
+  const esUrl = fullUrl.includes('/es') ? fullUrl : fullUrl.replace('https://coirea.com/', 'https://coirea.com/es/');
 
   return (
     <Helmet>
+      {/* HTML Language */}
+      <html lang={currentLanguage} />
+      
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -39,6 +47,11 @@ const SEOHead = ({
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
       
+      {/* Hreflang Tags */}
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="es" href={esUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
+      
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -47,6 +60,8 @@ const SEOHead = ({
       <meta property="og:image" content={fullImage} />
       <meta property="og:image:alt" content="COIREA Logo" />
       <meta property="og:site_name" content="COIREA" />
+      <meta property="og:locale" content={currentLanguage === 'es' ? 'es_ES' : 'en_US'} />
+      <meta property="og:locale:alternate" content={currentLanguage === 'es' ? 'en_US' : 'es_ES'} />
       
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />

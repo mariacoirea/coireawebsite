@@ -1,0 +1,32 @@
+{
+  "header": {
+    "nav": {
+      "about": "About",
+      "offerings": "Offerings",
+      "insights": "Insights",
+      "tools": "Tools",
+      "events": "Events"
+    },
+    "cta": "BEGIN JOURNEY"
+  },
+  "footer": {
+    "tagline": "Transform your organization from the inside out",
+    "contact": {
+      "title": "Contact",
+      "email": "maria@coirea.com"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About",
+      "offerings": "Offerings",
+      "insights": "Insights",
+      "journey": "Begin Journey"
+    },
+    "copyright": "© 2024 COIREA. All rights reserved."
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "switchTo": "Switch to {{language}}"
+  }
+}

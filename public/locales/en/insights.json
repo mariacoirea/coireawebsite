@@ -1,0 +1,14 @@
+{
+  "seo": {
+    "title": "Insights - Organizational Transformation Blog | COIREA",
+    "description": "Read our latest insights on organizational transformation, conscious leadership, regenerative business practices, and the future of work.",
+    "keywords": "organizational transformation blog, conscious leadership insights, regenerative business, future of work"
+  },
+  "listing": {
+    "title": "Insights",
+    "subtitle": "Thoughts on organizational transformation and conscious leadership",
+    "readMore": "Read more",
+    "readingTime": "{{minutes}} min read",
+    "noPostsAvailable": "No posts available in this language yet."
+  }
+}

@@ -2,8 +2,12 @@
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Mail, MapPin, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LocalizedLink from "@/components/LocalizedLink";
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+  
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer Content */}
@@ -25,8 +29,7 @@ const Footer = () => {
             </div>
             
             <p className="text-primary-foreground/80 font-body leading-relaxed mb-6 max-w-md">
-              Regenerative consultancy helping organizations realign their systems, culture, and leadership 
-              for conscious evolution and sustainable growth.
+              {t('footer.tagline')}
             </p>
             
             <div className="flex space-x-4">
@@ -57,11 +60,11 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-display font-semibold mb-6">Contact</h3>
+            <h3 className="text-lg font-display font-semibold mb-6">{t('footer.contact.title')}</h3>
             <div className="space-y-4 font-body">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span className="text-primary-foreground/80">hello@coirea.com</span>
+                <span className="text-primary-foreground/80">{t('footer.contact.email')}</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5" />
@@ -80,7 +83,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="text-center">
             <div className="text-sm text-primary-foreground/60 font-body">
-              © 2024 COIREA. All rights reserved.
+              {t('footer.copyright')}
             </div>
           </div>
         </div>

@@ -1,22 +1,25 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ReflectionCheckpoint from "@/components/ReflectionCheckpoint";
 import FivePillarFrameworkSection from "@/components/FivePillarFrameworkSection";
 import ServicesSection from "@/components/ServicesSection";
-
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Index = () => {
+  const { t } = useTranslation('home');
+  const { currentLanguage } = useLanguage();
+  
   return (
     <>
       <SEOHead
-        title="COIREA - Transform Your Organization from the Inside Out"
-        description="Regenerative consultancy helping purpose-driven organizations through structural and human transformation. From team retreats to long-term programs, we support evolution toward resilient, future-ready organizations."
-        keywords="organizational transformation, regenerative business, conscious leadership, team retreats, organizational development, purpose-driven companies, structural transformation, human transformation, business evolution, workplace culture"
-        url="/"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        url={currentLanguage === 'es' ? '/es' : '/'}
       />
       <StructuredData type="organization" />
       

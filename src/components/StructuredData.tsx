@@ -1,5 +1,6 @@
 
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface StructuredDataProps {
   type?: 'organization' | 'article' | 'service' | 'faq';
@@ -7,6 +8,8 @@ interface StructuredDataProps {
 }
 
 const StructuredData = ({ type = 'organization', data }: StructuredDataProps) => {
+  const { currentLanguage } = useLanguage();
+  
   const getStructuredData = () => {
     const baseOrganization = {
       "@context": "https://schema.org",
@@ -30,7 +33,7 @@ const StructuredData = ({ type = 'organization', data }: StructuredDataProps) =>
         "@type": "ContactPoint",
         "contactType": "customer service",
         "url": "https://coirea.com/journey",
-        "availableLanguage": "English"
+        "availableLanguage": ["English", "Spanish"]
       },
       "sameAs": [
         "https://linkedin.com/company/coirea"
@@ -121,7 +124,7 @@ const StructuredData = ({ type = 'organization', data }: StructuredDataProps) =>
             "@id": data?.url || "https://coirea.com"
           },
           "articleBody": data?.bodyContent?.substring(0, 500) || data?.description,
-          "inLanguage": "en-US",
+          "inLanguage": currentLanguage === 'es' ? 'es-ES' : 'en-US',
           "isAccessibleForFree": "True"
         };
 

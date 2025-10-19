@@ -63,6 +63,7 @@ const App = () => {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+            {/* English routes */}
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/offerings" element={<Offerings />} />
@@ -74,6 +75,17 @@ const App = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:id" element={<PostEditor />} />
+            
+            {/* Spanish routes */}
+            <Route path="/es" element={<Index />} />
+            <Route path="/es/about" element={<About />} />
+            <Route path="/es/offerings" element={<Offerings />} />
+            <Route path="/es/insights" element={<Insights />} />
+            <Route path="/es/insights/:slug" element={<BlogPost />} />
+            <Route path="/es/events" element={<Events />} />
+            <Route path="/es/tools" element={<Tools />} />
+            <Route path="/es/journey" element={<Journey />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

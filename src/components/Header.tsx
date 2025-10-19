@@ -3,10 +3,13 @@ import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LocalizedLink from "@/components/LocalizedLink";
+import LanguageSwitch from "@/components/LanguageSwitch";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation('common');
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -16,7 +19,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/">
+            <LocalizedLink to="/">
               <OptimizedImage 
                 src="/lovable-uploads/ea999de3-6404-4e30-b9e9-4f78f806f6dd.png" 
                 alt="COIREA - Conscious Leadership & Regenerative Business Transformation Logo" 
@@ -25,34 +28,32 @@ const Header = () => {
                 height={48}
                 priority={true}
               />
-            </Link>
+            </LocalizedLink>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              HOME
-            </Link>
-            <Link to="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              OFFERINGS
-            </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              ABOUT
-            </Link>
-            <Link to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              INSIGHTS
-            </Link>
-            <Link to="/events" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              EVENTS
-            </Link>
-            <Link to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              TOOLS
-            </Link>
-            <Link to="/journey">
+          <nav className="hidden md:flex items-center space-x-6">
+            <LocalizedLink to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.about').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.offerings').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.insights').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.tools').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/events" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.events').toUpperCase()}
+            </LocalizedLink>
+            <LanguageSwitch />
+            <LocalizedLink to="/journey">
               <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
-                BEGIN JOURNEY
+                {t('header.cta').toUpperCase()}
               </Button>
-            </Link>
+            </LocalizedLink>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -67,29 +68,29 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6 space-y-4">
-            <Link to="/" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              HOME
-            </Link>
-            <Link to="/offerings" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              OFFERINGS
-            </Link>
-            <Link to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              ABOUT
-            </Link>
-            <Link to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              INSIGHTS
-            </Link>
-            <Link to="/events" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              EVENTS
-            </Link>
-            <Link to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              TOOLS
-            </Link>
-            <Link to="/journey" onClick={closeMenu}>
+            <LocalizedLink to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.about').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/offerings" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.offerings').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.insights').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.tools').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/events" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.events').toUpperCase()}
+            </LocalizedLink>
+            <div className="py-2">
+              <LanguageSwitch />
+            </div>
+            <LocalizedLink to="/journey" onClick={closeMenu}>
               <Button variant="outline" size="lg" className="w-full mt-4 border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full">
-                BEGIN JOURNEY
+                {t('header.cta').toUpperCase()}
               </Button>
-            </Link>
+            </LocalizedLink>
           </nav>
         )}
       </div>
