@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OptimizedImage from "@/components/OptimizedImage";
@@ -19,6 +18,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Search } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
+import LocalizedLink from "@/components/LocalizedLink";
 
 interface BlogPost {
   id: string;
@@ -63,6 +65,8 @@ const Insights = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const { t } = useTranslation('insights');
+  const { currentLanguage } = useLanguage();
   
   const postsPerPage = 6;
 
@@ -84,6 +88,7 @@ const Insights = () => {
         .from('posts')
         .select('*')
         .eq('published', true)
+        .eq('language', currentLanguage) // Filter by current language
         .order('featured', { ascending: false })
         .order('created_at', { ascending: false });
       
@@ -133,10 +138,10 @@ const Insights = () => {
   return (
     <>
       <SEOHead
-        title="Business Insights - Organizational Transformation & Leadership | COIREA"
-        description="Expert business insights on organizational transformation, conscious leadership, company culture, and team development. Proven frameworks and strategies from COIREA's transformational work with purpose-driven businesses."
-        keywords="business insights, organizational transformation, conscious leadership, company culture, leadership development, team transformation, business strategy, organizational health, purpose-driven business, workplace culture"
-        url="/insights"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        url={currentLanguage === 'es' ? '/es/insights' : '/insights'}
       />
       <StructuredData type="organization" />
       
@@ -147,11 +152,10 @@ const Insights = () => {
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-              Business Insights
+              {t('listing.title')}
             </h1>
             <p className="text-xl text-muted-foreground font-body leading-relaxed">
-              Expert frameworks, strategies, and discoveries from our work in 
-              organizational transformation and conscious leadership.
+              {t('listing.subtitle')}
             </p>
           </div>
         </section>
@@ -163,7 +167,7 @@ const Insights = () => {
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
                 <Input
-                  placeholder="Search insights..."
+                  placeholder={t('listing.searchPlaceholder') || "Search insights..."}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
@@ -194,7 +198,7 @@ const Insights = () => {
               <h2 className="text-2xl font-display font-semibold text-primary mb-6">Featured</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {featuredPosts.map((post) => (
-                  <Link key={post.id} to={`/insights/${post.slug}`}>
+                  <LocalizedLink key={post.id} to={`/insights/${post.slug}`}>
                     <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group">
                       {post.featured_image && (
                         <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
@@ -232,7 +236,7 @@ const Insights = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </Link>
+                  </LocalizedLink>
                 ))}
               </div>
             </div>
@@ -248,7 +252,7 @@ const Insights = () => {
               </div>
             ) : regularPosts.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-muted-foreground">No insights found matching your criteria.</p>
+                <p className="text-muted-foreground">{t('listing.noPostsAvailable')}</p>
               </div>
             ) : (
               <>
@@ -261,7 +265,7 @@ const Insights = () => {
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {paginatedPosts.map((post) => (
-                    <Link key={post.id} to={`/insights/${post.slug}`}>
+                    <LocalizedLink key={post.id} to={`/insights/${post.slug}`}>
                       <Card className="bg-card shadow-soft hover:shadow-elegant transition-shadow cursor-pointer group h-full">
                         {post.featured_image && (
                           <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
@@ -294,7 +298,7 @@ const Insights = () => {
                           </p>
                         </CardContent>
                       </Card>
-                    </Link>
+                    </LocalizedLink>
                   ))}
                 </div>
 

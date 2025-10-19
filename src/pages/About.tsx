@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -9,16 +8,21 @@ import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { aboutFAQs } from "@/data/faqData";
 import { Leaf, Users, Zap, Heart, Eye, TreePine, Compass, Lightbulb, Target, Star, ArrowRight, Mountain } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
+import LocalizedLink from "@/components/LocalizedLink";
 
 const About = () => {
+  const { t } = useTranslation('about');
+  const { currentLanguage } = useLanguage();
+  
   return (
     <>
       <SEOHead
-        title="About COIREA - Conscious Leadership & Regenerative Business Transformation"
-        description="Meet the team behind COIREA's regenerative organizational transformation. Learn about our mission, values, and approach to conscious leadership and purpose-driven business evolution."
-        keywords="conscious leadership, regenerative business, organizational transformation team, purpose-driven leadership, business transformation consultants, sustainable business practices"
-        url="/about"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        url={currentLanguage === 'es' ? '/es/about' : '/about'}
       />
       <StructuredData type="organization" />
       
@@ -400,12 +404,12 @@ const About = () => {
                   Begin your transformation journey with COIREA's regenerative approach to organizational evolution.
                 </p>
                 
-                <Link to="/journey#journey-start">
+                <LocalizedLink to="/journey#journey-start">
                   <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
                     Begin the Journey
                     <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
-                </Link>
+                </LocalizedLink>
               </div>
             </div>
           </div>

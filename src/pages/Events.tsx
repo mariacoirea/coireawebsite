@@ -3,15 +3,20 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Events = () => {
+  const { t } = useTranslation('common');
+  const { currentLanguage } = useLanguage();
+  
   return (
     <>
       <SEOHead
         title="COIREA Community Events - Live Conversations for Conscious Leaders"
         description="Join our free monthly events featuring global speakers, forward-thinking leaders, and startup teams building thriving cultures and regenerative growth."
         keywords="COIREA events, conscious leadership workshops, startup community events, future of work panels, organizational transformation, live conversations"
-        url="/events"
+        url={currentLanguage === 'es' ? '/es/events' : '/events'}
       />
       
       <div className="min-h-screen bg-background">

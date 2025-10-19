@@ -1,14 +1,15 @@
 {
   "seo": {
-    "title": "Insights - Organizational Transformation Blog | COIREA",
-    "description": "Read our latest insights on organizational transformation, conscious leadership, regenerative business practices, and the future of work.",
-    "keywords": "organizational transformation blog, conscious leadership insights, regenerative business, future of work"
+    "title": "Business Insights - Organizational Transformation & Leadership | COIREA",
+    "description": "Expert business insights on organizational transformation, conscious leadership, company culture, and team development. Proven frameworks and strategies from COIREA's transformational work with purpose-driven businesses.",
+    "keywords": "business insights, organizational transformation, conscious leadership, company culture, leadership development, team transformation, business strategy, organizational health, purpose-driven business, workplace culture"
   },
   "listing": {
-    "title": "Insights",
-    "subtitle": "Thoughts on organizational transformation and conscious leadership",
+    "title": "Business Insights",
+    "subtitle": "Expert frameworks, strategies, and discoveries from our work in organizational transformation and conscious leadership.",
     "readMore": "Read more",
     "readingTime": "{{minutes}} min read",
-    "noPostsAvailable": "No posts available in this language yet."
+    "noPostsAvailable": "No insights found matching your criteria.",
+    "searchPlaceholder": "Search insights..."
   }
 }

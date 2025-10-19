@@ -1,14 +1,15 @@
 {
   "seo": {
-    "title": "Perspectivas - Blog de Transformación Organizacional | COIREA",
-    "description": "Lee nuestras últimas perspectivas sobre transformación organizacional, liderazgo consciente, prácticas empresariales regenerativas y el futuro del trabajo.",
-    "keywords": "blog de transformación organizacional, perspectivas de liderazgo consciente, negocio regenerativo, futuro del trabajo"
+    "title": "Perspectivas Empresariales - Transformación Organizacional y Liderazgo | COIREA",
+    "description": "Perspectivas empresariales expertas sobre transformación organizacional, liderazgo consciente, cultura empresarial y desarrollo de equipos. Marcos y estrategias probados del trabajo transformacional de COIREA con empresas con propósito.",
+    "keywords": "perspectivas empresariales, transformación organizacional, liderazgo consciente, cultura empresarial, desarrollo de liderazgo, transformación de equipos, estrategia empresarial, salud organizacional, negocio con propósito, cultura laboral"
   },
   "listing": {
-    "title": "Perspectivas",
-    "subtitle": "Reflexiones sobre transformación organizacional y liderazgo consciente",
+    "title": "Perspectivas Empresariales",
+    "subtitle": "Marcos, estrategias y descubrimientos expertos de nuestro trabajo en transformación organizacional y liderazgo consciente.",
     "readMore": "Leer más",
     "readingTime": "{{minutes}} min de lectura",
-    "noPostsAvailable": "Aún no hay publicaciones disponibles en este idioma."
+    "noPostsAvailable": "No se encontraron perspectivas que coincidan con tus criterios.",
+    "searchPlaceholder": "Buscar perspectivas..."
   }
 }

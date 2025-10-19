@@ -8,6 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
+import LocalizedLink from "@/components/LocalizedLink";
 import { 
   Brain, 
   Leaf, 
@@ -36,6 +39,8 @@ import { pillars as corePillars } from "@/components/FivePillarFrameworkSection"
 
 const Offerings = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation('offerings');
+  const { currentLanguage } = useLanguage();
 
   const pillars = [
     {
@@ -158,10 +163,10 @@ const Offerings = () => {
   return (
     <>
       <SEOHead
-        title="Organizational Transformation Services - COIREA Business Evolution Programs"
-        description="Comprehensive organizational transformation services including leadership coaching, culture development, and regenerative business programs. Transform your company with COIREA's proven 5-pillar framework."
-        keywords="organizational transformation services, leadership coaching programs, business culture development, regenerative business consulting, corporate transformation, team development programs"
-        url="/offerings"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        url={currentLanguage === 'es' ? '/es/offerings' : '/offerings'}
       />
       <StructuredData type="service" />
       
