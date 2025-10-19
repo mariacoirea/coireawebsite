@@ -9,7 +9,8 @@ import { Switch } from "@/components/ui/switch";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Save, Eye, X, Upload, Image } from "lucide-react";
+import { ArrowLeft, Save, Eye, X, Upload, Image, Copy } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { User } from "@supabase/supabase-js";
 import DOMPurify from 'dompurify';
@@ -30,14 +31,20 @@ const AVAILABLE_TAGS = [
 interface BlogPost {
   id?: string;
   title: string;
+  title_es?: string;
   slug: string;
   cluster: string;
   tags: string[];
   featured_image?: string;
   preview_snippet: string;
+  preview_snippet_es?: string;
   body_content: string;
+  body_content_es?: string;
   seo_title?: string;
+  seo_title_es?: string;
   meta_description?: string;
+  meta_description_es?: string;
+  seo_keywords_es?: string[];
   author: string;
   featured: boolean;
   published: boolean;
@@ -53,19 +60,26 @@ const PostEditor = () => {
   const [success, setSuccess] = useState(false);
   const [newTag, setNewTag] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [editingLanguage, setEditingLanguage] = useState<'en' | 'es'>('en');
   const fileInputRef = useRef<HTMLInputElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   
   const [post, setPost] = useState<BlogPost>({
     title: "",
+    title_es: "",
     slug: "",
     cluster: "",
     tags: [],
     featured_image: "",
     preview_snippet: "",
+    preview_snippet_es: "",
     body_content: "",
+    body_content_es: "",
     seo_title: "",
+    seo_title_es: "",
     meta_description: "",
+    meta_description_es: "",
+    seo_keywords_es: [],
     author: "María José Figueroa",
     featured: false,
     published: false
@@ -109,7 +123,7 @@ const PostEditor = () => {
     try {
       const { data, error } = await supabase
         .from('posts')
-        .select('*')
+        .select('*, title_es, preview_snippet_es, body_content_es, seo_title_es, meta_description_es, seo_keywords_es')
         .eq('id', postId)
         .single();
       
@@ -117,7 +131,13 @@ const PostEditor = () => {
       
       setPost({
         ...data,
-        tags: data.tags || []
+        tags: data.tags || [],
+        title_es: data.title_es || "",
+        preview_snippet_es: data.preview_snippet_es || "",
+        body_content_es: data.body_content_es || "",
+        seo_title_es: data.seo_title_es || "",
+        meta_description_es: data.meta_description_es || "",
+        seo_keywords_es: data.seo_keywords_es || []
       });
     } catch (error) {
       console.error('Error fetching post:', error);
@@ -262,6 +282,23 @@ const PostEditor = () => {
     }
   };
 
+  const copyFromEnglish = () => {
+    setPost(prev => ({
+      ...prev,
+      title_es: prev.title,
+      preview_snippet_es: prev.preview_snippet,
+      body_content_es: prev.body_content,
+      seo_title_es: prev.seo_title || "",
+      meta_description_es: prev.meta_description || ""
+    }));
+  };
+
+  const getTranslationProgress = () => {
+    const fields = [post.title_es, post.preview_snippet_es, post.body_content_es];
+    const filled = fields.filter(f => f && f.trim().length > 0).length;
+    return `${filled}/${fields.length}`;
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -325,98 +362,128 @@ const PostEditor = () => {
           </Alert>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Title */}
-            <div className="space-y-2">
-              <Label htmlFor="title">Title *</Label>
-              <Input
-                id="title"
-                value={post.title}
-                onChange={(e) => setPost(prev => ({ ...prev, title: e.target.value }))}
-                placeholder="Enter post title"
-                className="text-lg"
-              />
-            </div>
-
-            {/* Slug */}
-            <div className="space-y-2">
-              <Label htmlFor="slug">URL Slug *</Label>
-              <Input
-                id="slug"
-                value={post.slug}
-                onChange={(e) => setPost(prev => ({ ...prev, slug: e.target.value }))}
-                placeholder="url-friendly-slug"
-              />
-              <p className="text-xs text-muted-foreground">
-                URL: /insights/{post.slug}
-              </p>
-            </div>
-
-            {/* Preview Snippet */}
-            <div className="space-y-2">
-              <Label htmlFor="preview">Preview Snippet *</Label>
-              <Textarea
-                id="preview"
-                value={post.preview_snippet}
-                onChange={(e) => setPost(prev => ({ ...prev, preview_snippet: e.target.value }))}
-                placeholder="Brief description for the post preview"
-                rows={3}
-              />
-            </div>
-
-            {/* Body Content */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="content">Body Content *</Label>
-                <div className="flex gap-2">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    onClick={() => fileInputRef.current?.click()}
-                    disabled={uploading}
-                    className="h-8"
-                  >
-                    {uploading ? (
-                      <>
-                        <Upload className="w-3 h-3 mr-2 animate-spin" />
-                        Uploading...
-                      </>
-                    ) : (
-                      <>
-                        <Image className="w-3 h-3 mr-2" />
-                        Add Image
-                      </>
-                    )}
-                  </Button>
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept="image/*"
-                    onChange={handleFileSelect}
-                    className="hidden"
-                  />
-                </div>
-              </div>
-              <Textarea
-                ref={textareaRef}
-                id="content"
-                value={post.body_content}
-                onChange={(e) => setPost(prev => ({ ...prev, body_content: e.target.value }))}
-                placeholder="Write your post content here. You can use HTML tags for formatting. Click 'Add Image' to upload and insert images."
-                rows={15}
-                className="font-mono text-sm"
-              />
-              <p className="text-xs text-muted-foreground">
-                Supports HTML formatting (p, h2, h3, strong, em, ul, ol, li, a, blockquote, img). Images are automatically inserted with responsive styling.
-              </p>
-            </div>
+        <Tabs value={editingLanguage} onValueChange={(v) => setEditingLanguage(v as 'en' | 'es')} className="mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <TabsList>
+              <TabsTrigger value="en">🇺🇸 English</TabsTrigger>
+              <TabsTrigger value="es">
+                🇪🇸 Español
+                {editingLanguage === 'en' && (
+                  <Badge variant="outline" className="ml-2 text-xs">
+                    {getTranslationProgress()}
+                  </Badge>
+                )}
+              </TabsTrigger>
+            </TabsList>
+            {editingLanguage === 'es' && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={copyFromEnglish}
+                className="gap-2"
+              >
+                <Copy className="w-3 h-3" />
+                Copy from English
+              </Button>
+            )}
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
+          <TabsContent value="en" className="mt-0">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Main Content - English */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Title */}
+                <div className="space-y-2">
+                  <Label htmlFor="title">Title *</Label>
+                  <Input
+                    id="title"
+                    value={post.title}
+                    onChange={(e) => setPost(prev => ({ ...prev, title: e.target.value }))}
+                    placeholder="Enter post title"
+                    className="text-lg"
+                  />
+                </div>
+
+                {/* Slug */}
+                <div className="space-y-2">
+                  <Label htmlFor="slug">URL Slug *</Label>
+                  <Input
+                    id="slug"
+                    value={post.slug}
+                    onChange={(e) => setPost(prev => ({ ...prev, slug: e.target.value }))}
+                    placeholder="url-friendly-slug"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    URL: /insights/{post.slug}
+                  </p>
+                </div>
+
+                {/* Preview Snippet */}
+                <div className="space-y-2">
+                  <Label htmlFor="preview">Preview Snippet *</Label>
+                  <Textarea
+                    id="preview"
+                    value={post.preview_snippet}
+                    onChange={(e) => setPost(prev => ({ ...prev, preview_snippet: e.target.value }))}
+                    placeholder="Brief description for the post preview"
+                    rows={3}
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    {post.preview_snippet.length} characters
+                  </p>
+                </div>
+
+                {/* Body Content */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="content">Body Content *</Label>
+                    <div className="flex gap-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={() => fileInputRef.current?.click()}
+                        disabled={uploading}
+                        className="h-8"
+                      >
+                        {uploading ? (
+                          <>
+                            <Upload className="w-3 h-3 mr-2 animate-spin" />
+                            Uploading...
+                          </>
+                        ) : (
+                          <>
+                            <Image className="w-3 h-3 mr-2" />
+                            Add Image
+                          </>
+                        )}
+                      </Button>
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        accept="image/*"
+                        onChange={handleFileSelect}
+                        className="hidden"
+                      />
+                    </div>
+                  </div>
+                  <Textarea
+                    ref={textareaRef}
+                    id="content"
+                    value={post.body_content}
+                    onChange={(e) => setPost(prev => ({ ...prev, body_content: e.target.value }))}
+                    placeholder="Write your post content here. You can use HTML tags for formatting. Click 'Add Image' to upload and insert images."
+                    rows={15}
+                    className="font-mono text-sm"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Supports HTML formatting (p, h2, h3, strong, em, ul, ol, li, a, blockquote, img). Images are automatically inserted with responsive styling.
+                  </p>
+                </div>
+              </div>
+
+              {/* Sidebar - English */}
+              <div className="space-y-6">
             {/* Publishing Options */}
             <Card>
               <CardHeader>
@@ -534,36 +601,135 @@ const PostEditor = () => {
               </CardContent>
             </Card>
 
-            {/* SEO */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">SEO</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+                {/* SEO */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">SEO</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="seo_title">SEO Title</Label>
+                      <Input
+                        id="seo_title"
+                        value={post.seo_title || ""}
+                        onChange={(e) => setPost(prev => ({ ...prev, seo_title: e.target.value }))}
+                        placeholder="Leave empty to use post title"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="meta_description">Meta Description</Label>
+                      <Textarea
+                        id="meta_description"
+                        value={post.meta_description || ""}
+                        onChange={(e) => setPost(prev => ({ ...prev, meta_description: e.target.value }))}
+                        placeholder="Brief description for search engines"
+                        rows={3}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="es" className="mt-0">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Main Content - Spanish */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Title Spanish */}
                 <div className="space-y-2">
-                  <Label htmlFor="seo_title">SEO Title</Label>
+                  <Label htmlFor="title_es">Título (Spanish)</Label>
                   <Input
-                    id="seo_title"
-                    value={post.seo_title || ""}
-                    onChange={(e) => setPost(prev => ({ ...prev, seo_title: e.target.value }))}
-                    placeholder="Leave empty to use post title"
+                    id="title_es"
+                    value={post.title_es || ""}
+                    onChange={(e) => setPost(prev => ({ ...prev, title_es: e.target.value }))}
+                    placeholder="Enter Spanish title"
+                    className="text-lg"
                   />
                 </div>
 
+                {/* Preview Snippet Spanish */}
                 <div className="space-y-2">
-                  <Label htmlFor="meta_description">Meta Description</Label>
+                  <Label htmlFor="preview_es">Preview Snippet (Spanish)</Label>
                   <Textarea
-                    id="meta_description"
-                    value={post.meta_description || ""}
-                    onChange={(e) => setPost(prev => ({ ...prev, meta_description: e.target.value }))}
-                    placeholder="Brief description for search engines"
+                    id="preview_es"
+                    value={post.preview_snippet_es || ""}
+                    onChange={(e) => setPost(prev => ({ ...prev, preview_snippet_es: e.target.value }))}
+                    placeholder="Breve descripción para la vista previa"
                     rows={3}
                   />
+                  <p className="text-xs text-muted-foreground">
+                    {(post.preview_snippet_es || "").length} characters
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+
+                {/* Body Content Spanish */}
+                <div className="space-y-2">
+                  <Label htmlFor="content_es">Body Content (Spanish)</Label>
+                  <Textarea
+                    id="content_es"
+                    value={post.body_content_es || ""}
+                    onChange={(e) => setPost(prev => ({ ...prev, body_content_es: e.target.value }))}
+                    placeholder="Escribe el contenido del artículo en español. Puedes usar etiquetas HTML para formato."
+                    rows={15}
+                    className="font-mono text-sm"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Soporta formato HTML (p, h2, h3, strong, em, ul, ol, li, a, blockquote, img).
+                  </p>
+                </div>
+              </div>
+
+              {/* Sidebar - Spanish */}
+              <div className="space-y-6">
+                {/* Info Card */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Translation Info</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <p className="text-sm text-muted-foreground">
+                      Spanish translations are optional. If not provided, the English version will be displayed.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Progress: <Badge variant="secondary">{getTranslationProgress()}</Badge>
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* SEO Spanish */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">SEO (Spanish)</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="seo_title_es">SEO Title (Spanish)</Label>
+                      <Input
+                        id="seo_title_es"
+                        value={post.seo_title_es || ""}
+                        onChange={(e) => setPost(prev => ({ ...prev, seo_title_es: e.target.value }))}
+                        placeholder="Dejar vacío para usar el título del artículo"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="meta_description_es">Meta Description (Spanish)</Label>
+                      <Textarea
+                        id="meta_description_es"
+                        value={post.meta_description_es || ""}
+                        onChange={(e) => setPost(prev => ({ ...prev, meta_description_es: e.target.value }))}
+                        placeholder="Breve descripción para motores de búsqueda"
+                        rows={3}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </main>
     </div>
   );
