@@ -32,10 +32,10 @@ import {
   Send,
   Check,
   MessageCircle,
-  Calendar
+  Calendar,
+  Crown,
+  Layers
 } from "lucide-react";
-
-import { pillars as corePillars } from "@/components/FivePillarFrameworkSection";
 
 const Offerings = () => {
   const navigate = useNavigate();
@@ -508,25 +508,29 @@ const Offerings = () => {
               {/* Framework Pillars Grid */}
               <div className="mb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                  {corePillars.map(({ title, subtitle, description, Icon }, i) => (
-                    <Card
-                      key={title}
-                      className="h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5"
-                    >
-                      <CardHeader className="pb-4">
-                        <div className="flex items-center justify-center">
-                          <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 flex items-center justify-center">
-                            <Icon className="h-6 w-6" aria-hidden="true" />
+                  {(t('framework.pillars', { returnObjects: true, ns: 'home' }) as any[]).map((pillar: any, i: number) => {
+                    const pillarIcons = [Target, Crown, Users, Heart, Layers];
+                    const Icon = pillarIcons[i];
+                    return (
+                      <Card
+                        key={i}
+                        className="h-full bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 border-border/50 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5"
+                      >
+                        <CardHeader className="pb-4">
+                          <div className="flex items-center justify-center">
+                            <div className="h-12 w-12 rounded-full bg-primary/10 text-primary ring-1 ring-primary/20 flex items-center justify-center">
+                              <Icon className="h-6 w-6" aria-hidden="true" />
+                            </div>
                           </div>
-                        </div>
-                        <CardTitle className="mt-4 text-center text-lg text-foreground">{title}</CardTitle>
-                        <p className="text-center text-sm text-muted-foreground">{subtitle}</p>
+                          <CardTitle className="mt-4 text-center text-lg text-foreground">{pillar.title}</CardTitle>
+                        <p className="text-center text-sm text-muted-foreground">{pillar.subtitle}</p>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
                       </CardContent>
                     </Card>
-                  ))}
+                  );
+                  })}
                 </div>
               </div>
 
