@@ -215,9 +215,9 @@ const About = () => {
               </h2>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-              {/* Founder Image */}
-              <div className="flex justify-center">
+            <div className="grid lg:grid-cols-[300px_1fr] gap-12 items-start max-w-6xl mx-auto">
+              {/* Founder Image - aligned with first 3 paragraphs */}
+              <div className="flex justify-center lg:justify-start">
                 <div className="relative">
                   <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/60 shadow-elegant">
                     <OptimizedImage 
@@ -238,14 +238,21 @@ const About = () => {
               {/* Founder Content */}
               <div>
                 <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
-                  {(t('founder.bio', { returnObjects: true }) as string[] || []).map((paragraph: string, index: number) => (
+                  {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(0, 3).map((paragraph: string, index: number) => (
                     <p key={index}>{paragraph}</p>
                   ))}
-                  
-                  <p className="text-xl font-medium text-primary italic">
-                    {t('founder.quote')}
-                  </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Last 3 paragraphs - horizontal and centered */}
+            <div className="mt-12 max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(3).map((paragraph: string, index: number) => (
+                  <div key={index} className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-primary/10 shadow-soft">
+                    <p className="text-base text-foreground/80 font-body leading-relaxed">{paragraph}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
