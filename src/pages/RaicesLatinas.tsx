@@ -52,19 +52,19 @@ const RaicesLatinas = () => {
                 </div>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] leading-tight whitespace-nowrap">
                 COIREA – Raíces Latinas
               </h1>
               
-              <p className="text-2xl md:text-3xl text-[hsl(var(--raices-charcoal-earth))]/80 font-body font-light max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-light max-w-3xl mx-auto">
                 Strengthening organizations that shape the future of Latin America
               </p>
 
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))]/70 leading-relaxed">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">
                   <strong className="text-[hsl(var(--raices-earth-brown))] font-medium">COIREA – Raíces Latinas</strong> is the social impact division of COIREA dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America.
                 </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))]/70 leading-relaxed mt-4">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4">
                   We collaborate with organizations working with Indigenous and rural communities to build operational strength, leadership capacity, and long-term sustainability using the <strong className="text-[hsl(var(--raices-sage-green))] font-medium">COIREA Regenerative Operating System (COIREA OS)</strong>.
                 </p>
               </div>
