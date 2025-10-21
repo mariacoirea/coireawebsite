@@ -38,9 +38,9 @@ const RaicesLatinas = () => {
             <img 
               src={raicesHeroImg} 
               alt="Latin American landscape with roots" 
-              className="w-full h-full object-cover opacity-20"
+              className="w-full h-full object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/80 to-[hsl(var(--raices-sandstone))]/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/40 to-[hsl(var(--raices-sandstone))]/20" />
           </div>
 
           <div className="container mx-auto max-w-5xl relative z-10">
