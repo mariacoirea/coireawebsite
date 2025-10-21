@@ -246,7 +246,7 @@ const About = () => {
             </div>
 
             {/* Last 3 paragraphs - single column justified */}
-            <div className="mt-16 max-w-4xl mx-auto space-y-6">
+            <div className="mt-16 max-w-6xl mx-auto space-y-6">
               {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(3).map((paragraph: string, index: number) => (
                 <p key={index} className="text-lg text-justify text-foreground/80 font-body leading-relaxed">{paragraph}</p>
               ))}
