@@ -131,9 +131,9 @@ const RaicesLatinas = () => {
             <img 
               src={mayanPatternsBg} 
               alt="Mayan patterns background" 
-              className="w-full h-full object-cover opacity-15"
+              className="w-full h-full object-cover opacity-25"
             />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/85" />
+            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/60" />
           </div>
           
           <div className="container mx-auto max-w-6xl relative z-10">
