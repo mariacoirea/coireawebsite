@@ -26,7 +26,6 @@ export interface AssessmentResult {
 }
 
 const OrganizationalHealthScanner = () => {
-  const { t } = useTranslation('assessment');
   const [currentStep, setCurrentStep] = useState<'intro' | 'assessment' | 'email' | 'results'>('intro');
   const [assessmentResults, setAssessmentResults] = useState<AssessmentResult | null>(null);
 
@@ -60,42 +59,33 @@ const OrganizationalHealthScanner = () => {
     return <AssessmentResults results={assessmentResults} onRetake={handleRetakeAssessment} />;
   }
 
-  const pillarsList = [
-    { key: 'purposeCulture', count: 7 },
-    { key: 'collaboration', count: 7 },
-    { key: 'leadership', count: 14 },
-    { key: 'wellBeing', count: 7 },
-    { key: 'organizationalStrategy', count: 7 }
-  ];
-
   return (
     <section className="py-20 px-6">
       <div className="container mx-auto max-w-4xl">
         <Card className="bg-card shadow-elegant border-primary/10">
           <CardHeader className="text-center pb-8">
             <CardTitle className="text-3xl md:text-4xl font-display font-semibold text-primary mb-6">
-              {t('intro.title')}
+              COIREA Organizational Health Scanner
             </CardTitle>
             <div className="space-y-4 text-foreground/80 font-body text-lg leading-relaxed">
               <p>
-                {t('intro.description1')}
+                A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars.
               </p>
               <p>
-                {t('intro.description2')}
+                Answer 55 questions covering organizational health, leadership dynamics, and system interconnectivity to receive an instant diagnostic of your 
+                organization's overall well-being, leadership consciousness, pain points, and strengths.
               </p>
             </div>
           </CardHeader>
           <CardContent className="text-center">
             <div className="mb-8">
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                {t('intro.pillarsTitle')}
+                Assessment Pillars:
               </h3>
               <div className="grid md:grid-cols-3 gap-4 mb-8">
-                {pillarsList.map((pillar) => (
-                  <div key={pillar.key} className="bg-primary/5 rounded-lg p-4">
-                    <span className="text-primary font-body font-medium text-sm">
-                      {t(`pillars.${pillar.key}`)} ({pillar.count})
-                    </span>
+                {['Purpose & Culture (7)', 'Collaboration (7)', 'Leadership (14)', 'Well-Being (7)', 'Organizational Strategy (7)'].map((pillar) => (
+                  <div key={pillar} className="bg-primary/5 rounded-lg p-4">
+                    <span className="text-primary font-body font-medium text-sm">{pillar}</span>
                   </div>
                 ))}
               </div>
@@ -103,10 +93,10 @@ const OrganizationalHealthScanner = () => {
             
             <div className="bg-gradient-warm/10 rounded-xl p-6 mb-8">
               <p className="text-sm text-foreground/70 font-body mb-4">
-                {t('intro.timeEstimate')}
+                Takes approximately 12-15 minutes to complete
               </p>
               <p className="text-sm text-foreground/70 font-body">
-                {t('intro.resultsInfo')}
+                Receive instant results with organizational health & leadership consciousness insights
               </p>
             </div>
 
@@ -116,7 +106,7 @@ const OrganizationalHealthScanner = () => {
               size="lg"
               className="text-lg px-12 py-6"
             >
-              {t('intro.startButton')}
+              Start Your Organizational Health Scan
             </Button>
           </CardContent>
         </Card>

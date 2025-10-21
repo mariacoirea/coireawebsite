@@ -15,7 +15,6 @@ interface OrganizationalAssessmentData {
   lastName: string;
   email: string;
   company: string;
-  language?: string;
   assessmentResults: {
     pillarScores: {
       purposeCulture: number;
@@ -65,7 +64,6 @@ const OrganizationalAssessmentSchema = z.object({
   lastName: z.string().max(200),
   email: z.string().email().max(320),
   company: z.string().max(200),
-  language: z.string().optional(),
   assessmentResults: z.object({
     pillarScores: z.object({
       purposeCulture: z.number().min(0).max(35),
@@ -121,18 +119,11 @@ const escapeHtml = (str: string) =>
 const handleOrganizationalAssessment = async (formData: OrganizationalAssessmentData): Promise<Response> => {
   console.log("Received organizational assessment results submission:", { ...formData, email: "[redacted]" });
 
-  const { assessmentResults, language = 'en' } = formData;
-  const isSpanish = language === 'es';
+  const { assessmentResults } = formData;
   const overallPercentage = Math.round((assessmentResults.totalScore / 175) * 100);
   const interconnectivityPercentage = Math.round((assessmentResults.interconnectivityScore / 35) * 100);
   
   const getSelfLeadershipStatus = () => {
-    if (isSpanish) {
-      if (assessmentResults.selfLeadershipPercent <= 39) return 'Por Debajo de la Línea';
-      if (assessmentResults.selfLeadershipPercent <= 59) return 'En Transición';
-      if (assessmentResults.selfLeadershipPercent <= 79) return 'Liderazgo Consciente Emergente';
-      return 'Liderazgo Regenerativo Incorporado';
-    }
     if (assessmentResults.selfLeadershipPercent <= 39) return 'Below the Line';
     if (assessmentResults.selfLeadershipPercent <= 59) return 'In Transition';
     if (assessmentResults.selfLeadershipPercent <= 79) return 'Conscious Leadership Emerging';
@@ -141,100 +132,26 @@ const handleOrganizationalAssessment = async (formData: OrganizationalAssessment
 
   // Format pillar scores for email (only main 5 pillars for results)
   const formatPillarScores = () => {
-    const mainPillars = isSpanish ? [
-      { name: 'Propósito y Cultura', englishName: 'Purpose & Culture', score: assessmentResults.pillarScores.purposeCulture },
-      { name: 'Colaboración', englishName: 'Collaboration', score: assessmentResults.pillarScores.collaboration },
-      { name: 'Liderazgo', englishName: 'Leadership', score: assessmentResults.pillarScores.leadership },
-      { name: 'Bienestar', englishName: 'Well-Being', score: assessmentResults.pillarScores.wellBeing },
-      { name: 'Estrategia Organizacional', englishName: 'Organizational Strategy', score: assessmentResults.pillarScores.organizationalStrategy }
-    ] : [
-      { name: 'Purpose & Culture', englishName: 'Purpose & Culture', score: assessmentResults.pillarScores.purposeCulture },
-      { name: 'Collaboration', englishName: 'Collaboration', score: assessmentResults.pillarScores.collaboration },
-      { name: 'Leadership', englishName: 'Leadership', score: assessmentResults.pillarScores.leadership },
-      { name: 'Well-Being', englishName: 'Well-Being', score: assessmentResults.pillarScores.wellBeing },
-      { name: 'Organizational Strategy', englishName: 'Organizational Strategy', score: assessmentResults.pillarScores.organizationalStrategy }
+    const mainPillars = [
+      { name: 'Purpose & Culture', score: assessmentResults.pillarScores.purposeCulture },
+      { name: 'Collaboration', score: assessmentResults.pillarScores.collaboration },
+      { name: 'Leadership', score: assessmentResults.pillarScores.leadership },
+      { name: 'Well-Being', score: assessmentResults.pillarScores.wellBeing },
+      { name: 'Organizational Strategy', score: assessmentResults.pillarScores.organizationalStrategy }
     ];
 
     return mainPillars.map(pillar => {
       const percentage = Math.round((pillar.score / 35) * 100);
-      const isLowest = pillar.englishName === assessmentResults.painPoint;
-      const isHighest = pillar.englishName === assessmentResults.strength;
-      const indicator = isSpanish ? 
-        (isLowest ? ' 🔴 (Punto Crítico)' : isHighest ? ' 🟢 (Fortaleza)' : '') :
-        (isLowest ? ' 🔴 (Pain Point)' : isHighest ? ' 🟢 (Strength)' : '');
+      const isLowest = pillar.name === assessmentResults.painPoint;
+      const isHighest = pillar.name === assessmentResults.strength;
+      const indicator = isLowest ? ' 🔴 (Pain Point)' : 
+                       isHighest ? ' 🟢 (Strength)' : '';
       return `<li><strong>${pillar.name}:</strong> ${percentage}%${indicator}</li>`;
     }).join('\n');
   };
 
   // User email with comprehensive results
-  const userEmailHtml = isSpanish ? `
-    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
-      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px; text-align: center;">
-        <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">Tus Resultados de Salud Organizacional</h1>
-      </div>
-      
-      <div style="padding: 40px 20px;">
-        <p style="font-size: 16px; color: #333; margin-bottom: 20px;">Hola ${escapeHtml(formData.firstName)},</p>
-        
-        <p style="font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 30px;">
-          Gracias por completar el Escáner de Salud Organizacional de COIREA. Aquí están tus resultados completos:
-        </p>
-        
-        <div style="background-color: #f8f9fa; border-radius: 12px; padding: 30px; margin-bottom: 30px; text-align: center;">
-          <div style="display: inline-block; width: 80px; height: 80px; border-radius: 50%; background-color: #667eea; color: white; line-height: 80px; font-size: 24px; font-weight: bold; margin-bottom: 15px;">
-            ${overallPercentage}%
-          </div>
-          <h2 style="color: #667eea; margin: 0 0 10px 0; font-size: 24px;">${escapeHtml(assessmentResults.organizationalStatus)}</h2>
-          <p style="color: #666; margin: 0; font-size: 14px;">Puntuación General de Salud Organizacional</p>
-        </div>
-        
-        <h3 style="color: #333; font-size: 20px; margin-bottom: 20px;">Desglose por Pilares:</h3>
-        <div style="margin-bottom: 30px;">
-          <ul style="list-style: none; padding: 0;">
-            ${formatPillarScores()}
-          </ul>
-        </div>
-        
-        <div style="background-color: #e7e3ff; border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 4px solid #6f42c1;">
-          <h4 style="color: #4c1d95; margin: 0 0 10px 0; font-size: 18px;">Evaluación de Liderazgo Personal</h4>
-          <p style="color: #4c1d95; margin: 0 0 15px 0; line-height: 1.5;"><strong>${getSelfLeadershipStatus()} (${assessmentResults.selfLeadershipPercent}%)</strong></p>
-          <p style="color: #4c1d95; margin: 0; font-size: 14px;">Tu nivel de desarrollo de liderazgo consciente e inteligencia emocional.</p>
-        </div>
-        
-        <div style="background-color: #fff3cd; border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
-          <h4 style="color: #856404; margin: 0 0 10px 0; font-size: 18px;">Mayor Desafío: ${escapeHtml(assessmentResults.painPoint)}</h4>
-          <p style="color: #856404; margin: 0; line-height: 1.5;">Esta es tu área principal de mejora y crecimiento.</p>
-        </div>
-        
-        <div style="background-color: #d4edda; border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 4px solid #28a745;">
-          <h4 style="color: #155724; margin: 0 0 10px 0; font-size: 18px;">Mayor Fortaleza: ${escapeHtml(assessmentResults.strength)}</h4>
-          <p style="color: #155724; margin: 0; line-height: 1.5;">Este es tu ancla para la transformación y el crecimiento.</p>
-        </div>
-        
-        <div style="background-color: #f0f8ff; border-radius: 12px; padding: 25px; margin-bottom: 30px; border-left: 4px solid #0066cc;">
-          <h4 style="color: #003d7a; margin: 0 0 10px 0; font-size: 18px;">Interconectividad del Sistema: ${interconnectivityPercentage}%</h4>
-          <p style="color: #003d7a; margin: 0; line-height: 1.5;">
-            ${interconnectivityPercentage < 60 ? 
-              'Los elementos de tu organización necesitan mejor alineación y flujo entre los pilares.' : 
-              'Tu sistema organizacional muestra buena coherencia y flujo interconectado.'}
-          </p>
-        </div>
-        
-        <div style="background-color: #667eea; border-radius: 12px; padding: 30px; text-align: center; color: white;">
-          <h3 style="margin: 0 0 15px 0; font-size: 22px;">¿Listo para Transformar tu Organización?</h3>
-          <p style="margin: 0 0 20px 0; line-height: 1.6;">Conversemos sobre cómo convertir estos insights en estrategias de transformación accionables.</p>
-          <p style="margin: 0; font-size: 14px;">Nos pondremos en contacto dentro de las próximas 24 horas para programar tu consulta gratuita.</p>
-        </div>
-        
-        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
-          <p style="color: #666; font-size: 14px; margin: 0;">
-            Saludos cordiales,<br>
-            El Equipo COIREA
-          </p>
-        </div>
-      </div>
-    </div>
-  ` : `
+  const userEmailHtml = `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
       <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px; text-align: center;">
         <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">Your Organizational Health Results</h1>
@@ -346,14 +263,10 @@ const handleOrganizationalAssessment = async (formData: OrganizationalAssessment
   `;
 
   // Send user email
-  const emailSubject = isSpanish 
-    ? `Tus Resultados de Salud Organizacional - ${escapeHtml(assessmentResults.organizationalStatus)}`
-    : `Your Organizational Health Results - ${escapeHtml(assessmentResults.organizationalStatus)}`;
-    
   const userEmailResponse = await resend.emails.send({
     from: "COIREA <noreply@coirea.com>",
     to: [formData.email],
-    subject: emailSubject,
+    subject: `Your Organizational Health Results - ${escapeHtml(assessmentResults.organizationalStatus)}`,
     html: userEmailHtml,
   });
 
