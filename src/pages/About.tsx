@@ -245,16 +245,11 @@ const About = () => {
               </div>
             </div>
 
-            {/* Last 3 paragraphs - single column with last highlighted */}
+            {/* Last 3 paragraphs - single column justified */}
             <div className="mt-16 max-w-4xl mx-auto space-y-6">
-              {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(3).map((paragraph: string, index: number) => {
-                const isLast = index === 2;
-                return (
-                  <div key={index} className={isLast ? "bg-primary/10 border border-primary/20 rounded-2xl p-8" : ""}>
-                    <p className="text-lg text-center text-foreground/80 font-body leading-relaxed">{paragraph}</p>
-                  </div>
-                );
-              })}
+              {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(3).map((paragraph: string, index: number) => (
+                <p key={index} className="text-lg text-justify text-foreground/80 font-body leading-relaxed">{paragraph}</p>
+              ))}
             </div>
           </div>
         </section>
