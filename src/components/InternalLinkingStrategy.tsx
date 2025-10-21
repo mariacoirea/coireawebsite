@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface InternalLinkProps {
   to: string;
@@ -50,28 +52,24 @@ const InternalLink = ({
   }
 };
 
-// Pre-defined internal navigation links for consistent SEO
-export const SEONavigationLinks = {
-  home: { to: "/", text: "Transform Your Organization", keywords: "organizational transformation" },
-  about: { to: "/about", text: "About COIREA", keywords: "conscious leadership team" },
-  offerings: { to: "/offerings", text: "Our Services", keywords: "transformation services" },
-  journey: { to: "/journey", text: "Start Your Journey", keywords: "free consultation" },
-  tools: { to: "/tools", text: "Assessment Tools", keywords: "organizational health assessment" },
-  insights: { to: "/insights", text: "Insights & Articles", keywords: "business transformation insights" },
-  events: { to: "/events", text: "Community Events", keywords: "leadership events" }
-};
+// Navigation link keys
+const navigationKeys = ["home", "about", "offerings", "insights", "tools", "journey", "events"] as const;
+type NavigationKey = typeof navigationKeys[number];
 
 // Component for related content recommendations
 interface RelatedContentProps {
-  currentPage: keyof typeof SEONavigationLinks;
-  suggestions?: Array<keyof typeof SEONavigationLinks>;
+  currentPage: NavigationKey;
+  suggestions?: Array<NavigationKey>;
 }
 
 export const RelatedContent = ({ 
   currentPage, 
   suggestions = [] 
 }: RelatedContentProps) => {
-  const defaultSuggestions: Record<keyof typeof SEONavigationLinks, Array<keyof typeof SEONavigationLinks>> = {
+  const { t } = useTranslation('common');
+  const { getLocalizedPath } = useLanguage();
+
+  const defaultSuggestions: Record<NavigationKey, Array<NavigationKey>> = {
     home: ["offerings", "journey", "tools"],
     about: ["offerings", "journey", "insights"],
     offerings: ["journey", "tools", "about"],
@@ -83,25 +81,37 @@ export const RelatedContent = ({
 
   const linksToShow = suggestions.length > 0 ? suggestions : defaultSuggestions[currentPage] || [];
 
+  const getNavigationLink = (key: NavigationKey) => {
+    const paths: Record<NavigationKey, string> = {
+      home: "/",
+      about: "/about",
+      offerings: "/offerings",
+      insights: "/insights",
+      tools: "/tools",
+      journey: "/journey",
+      events: "/events",
+    };
+    return getLocalizedPath(paths[key]);
+  };
+
   return (
     <section className="py-12 px-6 bg-warm-beige/50">
       <div className="container mx-auto max-w-4xl">
         <h3 className="text-2xl font-display font-semibold text-primary mb-8 text-center">
-          Continue Your Journey
+          {t('relatedContent.title')}
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
           {linksToShow.map((linkKey) => {
-            const link = SEONavigationLinks[linkKey];
             return (
-              <InternalLink key={linkKey} to={link.to} variant="card">
+              <InternalLink key={linkKey} to={getNavigationLink(linkKey)} variant="card">
                 <h4 className="font-display font-semibold text-primary mb-2">
-                  {link.text}
+                  {t(`relatedContent.links.${linkKey}.text`)}
                 </h4>
                 <p className="text-sm text-foreground/70 mb-3">
-                  Explore {link.keywords}
+                  {t('relatedContent.explore')} {t(`relatedContent.links.${linkKey}.keywords`)}
                 </p>
                 <div className="flex items-center text-primary text-sm">
-                  <span>Learn more</span>
+                  <span>{t('relatedContent.learnMore')}</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
               </InternalLink>
