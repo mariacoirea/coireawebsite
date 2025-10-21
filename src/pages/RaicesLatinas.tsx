@@ -2,7 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Hexagon, Circle, Triangle, Square, Diamond, Sprout, Flame, Globe } from "lucide-react";
+import { Sprout, Flame, Globe } from "lucide-react";
+import { 
+  MayanDiamond, 
+  MayanConcentric, 
+  MayanChevron, 
+  MayanSteps, 
+  MayanCross,
+  MayanPyramid,
+  MayanSun,
+  MayanBird
+} from "@/components/MayanIcons";
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
 import raicesHeroImg from "@/assets/raices-latinas-hero.png";
@@ -87,11 +97,11 @@ const RaicesLatinas = () => {
             {/* Challenges Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {[
-                { icon: Hexagon, text: "Teams operate without aligned roles or rhythm" },
-                { icon: Circle, text: "Leadership is exhausted by reactive operations" },
-                { icon: Triangle, text: "Growth is limited by donor dependency" },
-                { icon: Square, text: "Programs lack system continuity" },
-                { icon: Diamond, text: "Culture and purpose get lost as organizations grow" },
+                { icon: MayanDiamond, text: "Teams operate without aligned roles or rhythm" },
+                { icon: MayanConcentric, text: "Leadership is exhausted by reactive operations" },
+                { icon: MayanChevron, text: "Growth is limited by donor dependency" },
+                { icon: MayanSteps, text: "Programs lack system continuity" },
+                { icon: MayanCross, text: "Culture and purpose get lost as organizations grow" },
               ].map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/20 bg-white/50 backdrop-blur-sm">
                   <CardContent className="p-6">
@@ -131,27 +141,27 @@ const RaicesLatinas = () => {
                 {
                   area: "Organizational Clarity",
                   purpose: "Define structure, roles, responsibilities and decision-making models",
-                  icon: Square
+                  icon: MayanSteps
                 },
                 {
                   area: "Strategic Direction",
                   purpose: "Align mission and execution through operational roadmaps",
-                  icon: Circle
+                  icon: MayanConcentric
                 },
                 {
                   area: "COIREA OS Installation",
                   purpose: "Implement a regenerative operating system tailored to each organization",
-                  icon: Hexagon
+                  icon: MayanPyramid
                 },
                 {
                   area: "Leadership Development",
                   purpose: "Train leadership teams in conscious, collaborative, and accountable leadership",
-                  icon: Triangle
+                  icon: MayanSun
                 },
                 {
                   area: "Sustainability & Partnerships",
                   purpose: "Design long-term funding and impact partnership strategies",
-                  icon: Diamond
+                  icon: MayanBird
                 },
               ].map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300">
