@@ -8,5 +8,31 @@
     "title": "Organizational Health Scanner",
     "description": "Transform your organization with our comprehensive assessment tool. Diagnose your organizational health and leadership effectiveness in one integrated diagnostic."
   },
-  "faqTitle": "Frequently Asked Questions About Our Assessment Tools"
+  "faqTitle": "Frequently Asked Questions About Our Assessment Tools",
+  "faqs": [
+    {
+      "question": "How long does the assessment take?",
+      "answer": "The comprehensive organizational health assessment typically takes 15-20 minutes to complete. We recommend setting aside uninterrupted time to ensure thoughtful responses."
+    },
+    {
+      "question": "Who should take this assessment?",
+      "answer": "This assessment is designed for organizational leaders, executives, HR professionals, and anyone responsible for organizational development and cultural transformation."
+    },
+    {
+      "question": "What will I receive after completing the assessment?",
+      "answer": "You'll receive a detailed analysis of your organization's health across five key pillars: Purpose & Culture, People & Development, Structure & Systems, Results & Innovation, and Interconnectivity. The report includes specific recommendations and areas for improvement."
+    },
+    {
+      "question": "Is my data kept confidential?",
+      "answer": "Yes, all assessment data is kept strictly confidential and is only used to generate your personalized results and recommendations. We do not share individual assessment data with third parties."
+    },
+    {
+      "question": "Can I retake the assessment?",
+      "answer": "Absolutely! We encourage organizations to retake the assessment periodically to track progress and measure the impact of implemented changes. This helps you monitor your transformation journey over time."
+    },
+    {
+      "question": "What if I need help interpreting my results?",
+      "answer": "Our team is here to help! After receiving your results, you can schedule a complimentary consultation to discuss your assessment outcomes and explore how COIREA can support your organizational transformation."
+    }
+  ]
 }
