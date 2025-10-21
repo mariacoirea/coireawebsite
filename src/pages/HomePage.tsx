@@ -10,15 +10,20 @@ import StructuredData from "@/components/StructuredData";
 import SEOFAQSection from "@/components/SEOFAQSection";
 import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { homepageFAQs } from "@/data/faqData";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const HomePage = () => {
+  const { t } = useTranslation('home');
+  const { currentLanguage } = useLanguage();
+  
   return (
     <>
       <SEOHead
-        title="COIREA - Transform Your Organization from the Inside Out"
-        description="Regenerative consultancy helping purpose-driven organizations through structural and human transformation. From team retreats to long-term programs, we support evolution toward resilient, future-ready organizations."
-        keywords="organizational transformation, regenerative business, conscious leadership, team retreats, organizational development, purpose-driven companies, structural transformation, human transformation, business evolution, workplace culture"
-        url="/"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
+        url={currentLanguage === 'es' ? '/es' : '/'}
       />
       <StructuredData type="organization" />
       <StructuredData type="faq" data={{ questions: homepageFAQs }} />
