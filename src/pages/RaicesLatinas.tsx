@@ -64,7 +64,7 @@ const RaicesLatinas = () => {
                 </div>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight">
                 COIREA – Raíces Latinas
               </h1>
               
