@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Leaf, Users, Target, TrendingUp, Heart, Network, Sprout, Flame, Globe } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
+import raicesHeroImg from "@/assets/raices-latinas-hero.png";
 
 const RaicesLatinas = () => {
   const [formData, setFormData] = useState({
@@ -32,11 +33,14 @@ const RaicesLatinas = () => {
       <div className="min-h-screen bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-background">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
-          {/* Decorative background pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `repeating-linear-gradient(45deg, hsl(var(--raices-earth-brown)) 0, hsl(var(--raices-earth-brown)) 2px, transparent 2px, transparent 10px)`
-            }} />
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <img 
+              src={raicesHeroImg} 
+              alt="Latin American landscape with roots" 
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/80 to-[hsl(var(--raices-sandstone))]/60" />
           </div>
 
           <div className="container mx-auto max-w-5xl relative z-10">
