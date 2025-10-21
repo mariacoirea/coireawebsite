@@ -16,6 +16,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
 import raicesHeroImg from "@/assets/raices-latinas-hero.png";
+import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 
 const RaicesLatinas = () => {
   const [formData, setFormData] = useState({
@@ -124,8 +125,18 @@ const RaicesLatinas = () => {
         </section>
 
         {/* What We Do Section */}
-        <section className="py-24 px-6 bg-[hsl(var(--raices-sage-green))]/10">
-          <div className="container mx-auto max-w-6xl">
+        <section className="relative py-24 px-6 overflow-hidden">
+          {/* Background with pattern image */}
+          <div className="absolute inset-0">
+            <img 
+              src={mayanPatternsBg} 
+              alt="Mayan patterns background" 
+              className="w-full h-full object-cover opacity-15"
+            />
+            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/85" />
+          </div>
+          
+          <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 What We Do
