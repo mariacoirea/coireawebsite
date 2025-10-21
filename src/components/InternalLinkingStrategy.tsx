@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface InternalLinkProps {
   to: string;
@@ -71,6 +73,9 @@ export const RelatedContent = ({
   currentPage, 
   suggestions = [] 
 }: RelatedContentProps) => {
+  const { t } = useTranslation('common');
+  const { getLocalizedPath } = useLanguage();
+  
   const defaultSuggestions: Record<keyof typeof SEONavigationLinks, Array<keyof typeof SEONavigationLinks>> = {
     home: ["offerings", "journey", "tools"],
     about: ["offerings", "journey", "insights"],
@@ -87,21 +92,21 @@ export const RelatedContent = ({
     <section className="py-12 px-6 bg-warm-beige/50">
       <div className="container mx-auto max-w-4xl">
         <h3 className="text-2xl font-display font-semibold text-primary mb-8 text-center">
-          Continue Your Journey
+          {t('relatedContent.title')}
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
           {linksToShow.map((linkKey) => {
             const link = SEONavigationLinks[linkKey];
             return (
-              <InternalLink key={linkKey} to={link.to} variant="card">
+              <InternalLink key={linkKey} to={getLocalizedPath(link.to)} variant="card">
                 <h4 className="font-display font-semibold text-primary mb-2">
-                  {link.text}
+                  {t(`relatedContent.links.${linkKey}.text`)}
                 </h4>
                 <p className="text-sm text-foreground/70 mb-3">
-                  Explore {link.keywords}
+                  {t('relatedContent.explore')} {t(`relatedContent.links.${linkKey}.keywords`)}
                 </p>
                 <div className="flex items-center text-primary text-sm">
-                  <span>Learn more</span>
+                  <span>{t('relatedContent.learnMore')}</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
               </InternalLink>

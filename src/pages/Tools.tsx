@@ -6,13 +6,14 @@ import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import SEOFAQSection from "@/components/SEOFAQSection";
 import { RelatedContent } from "@/components/InternalLinkingStrategy";
-import { toolsFAQs } from "@/data/faqData";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Tools = () => {
   const { t } = useTranslation('tools');
   const { currentLanguage } = useLanguage();
+  
+  const faqs = t('faqs', { returnObjects: true }) as Array<{ question: string; answer: string }>;
   return (
     <>
       <SEOHead
@@ -45,7 +46,7 @@ const Tools = () => {
           {/* FAQ Section */}
           <SEOFAQSection 
             title={t('faqTitle')}
-            faqs={toolsFAQs}
+            faqs={faqs}
             className="bg-warm-beige"
           />
           

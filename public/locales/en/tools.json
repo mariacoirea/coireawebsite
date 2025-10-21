@@ -8,5 +8,27 @@
     "title": "Organizational Health Scanner",
     "description": "Transform your organization with our comprehensive assessment tool. Diagnose your organizational health and leadership effectiveness in one integrated diagnostic."
   },
-  "faqTitle": "Frequently Asked Questions About Our Assessment Tools"
+  "faqTitle": "Frequently Asked Questions About Our Assessment Tools",
+  "faqs": [
+    {
+      "question": "What is the Organizational Health Scanner and how does it work?",
+      "answer": "The Organizational Health Scanner is a comprehensive assessment tool that evaluates two critical dimensions of organizational success: your organization's structural health and your leadership team's consciousness level. It combines questions about organizational systems, culture, and leadership practices to provide a holistic view of where you are and where you need to focus."
+    },
+    {
+      "question": "How long does the assessment take?",
+      "answer": "The complete assessment typically takes 15-20 minutes to complete thoughtfully. We recommend taking it when you have uninterrupted time to reflect on each question, as the quality of your responses directly impacts the accuracy of your results and recommendations."
+    },
+    {
+      "question": "Who should take this assessment?",
+      "answer": "This assessment is designed for organizational leaders, executives, and decision-makers who are responsible for or deeply invested in their organization's health and performance. It's particularly valuable for leadership teams considering transformation initiatives or those seeking to understand why their current approaches aren't delivering desired results."
+    },
+    {
+      "question": "What will I receive after completing the assessment?",
+      "answer": "You'll receive a detailed analysis of your organization's current state across both dimensions, personalized recommendations for your specific situation, and a clear understanding of where to focus your transformation efforts. The results will be emailed to you immediately upon completion, and you'll also have the option to schedule a consultation to discuss your results in depth."
+    },
+    {
+      "question": "Is my information confidential?",
+      "answer": "Absolutely. All assessment responses and results are kept strictly confidential. We use your information only to provide you with personalized insights and recommendations. We never share individual assessment data with third parties, and you have complete control over whether you'd like to discuss your results with our team."
+    }
+  ]
 }

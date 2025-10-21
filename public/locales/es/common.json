@@ -13,7 +13,7 @@
     "tagline": "Transforma tu organización desde adentro hacia afuera",
     "contact": {
       "title": "Contacto",
-      "email": "maria@coirea.com"
+      "email": "hello@coirea.com"
     },
     "quickLinks": {
       "title": "Enlaces Rápidos",
@@ -23,6 +23,41 @@
       "journey": "Comenzar Viaje"
     },
     "copyright": "© 2024 COIREA. Todos los derechos reservados."
+  },
+  "relatedContent": {
+    "title": "Continúa Tu Viaje",
+    "learnMore": "Saber más",
+    "explore": "Explora",
+    "links": {
+      "home": {
+        "text": "Transforma Tu Organización",
+        "keywords": "transformación organizacional"
+      },
+      "about": {
+        "text": "Acerca de COIREA",
+        "keywords": "equipo de liderazgo consciente"
+      },
+      "offerings": {
+        "text": "Nuestros Servicios",
+        "keywords": "servicios de transformación"
+      },
+      "journey": {
+        "text": "Comienza Tu Viaje",
+        "keywords": "consulta gratuita"
+      },
+      "tools": {
+        "text": "Herramientas de Evaluación",
+        "keywords": "evaluación de salud organizacional"
+      },
+      "insights": {
+        "text": "Perspectivas y Artículos",
+        "keywords": "perspectivas de transformación empresarial"
+      },
+      "events": {
+        "text": "Eventos Comunitarios",
+        "keywords": "eventos de liderazgo"
+      }
+    }
   },
   "language": {
     "en": "English",
