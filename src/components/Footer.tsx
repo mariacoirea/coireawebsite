@@ -55,6 +55,11 @@ const Footer = () => {
               <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Leadership Coaching</a></li>
               <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Strategic Consulting</a></li>
               <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">5-Pillar Framework</a></li>
+              <li>
+                <LocalizedLink to="/raices-latinas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Raíces Latinas
+                </LocalizedLink>
+              </li>
             </ul>
           </div>
 
