@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AssessmentForm from "./AssessmentForm";
@@ -25,7 +25,7 @@ export interface AssessmentResult {
   strength: string;
 }
 
-const OrganizationalHealthScanner = () => {
+const ScannerContent = () => {
   const { t } = useTranslation('tools');
   const [currentStep, setCurrentStep] = useState<'intro' | 'assessment' | 'email' | 'results'>('intro');
   const [assessmentResults, setAssessmentResults] = useState<AssessmentResult | null>(null);
@@ -118,6 +118,28 @@ const OrganizationalHealthScanner = () => {
         </Card>
       </div>
     </section>
+  );
+};
+
+const OrganizationalHealthScanner = () => {
+  return (
+    <Suspense fallback={
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="bg-card shadow-elegant border-primary/10 animate-pulse">
+            <CardHeader className="text-center pb-8">
+              <div className="h-10 bg-primary/10 rounded w-3/4 mx-auto mb-6"></div>
+              <div className="space-y-4">
+                <div className="h-6 bg-primary/5 rounded w-full"></div>
+                <div className="h-6 bg-primary/5 rounded w-5/6 mx-auto"></div>
+              </div>
+            </CardHeader>
+          </Card>
+        </div>
+      </section>
+    }>
+      <ScannerContent />
+    </Suspense>
   );
 };
 
