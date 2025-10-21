@@ -55,7 +55,7 @@ const RaicesLatinas = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/50 to-[hsl(var(--raices-sandstone))]/30" />
           </div>
 
-          <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center space-y-8">
               {/* Logo/Icon */}
               <div className="flex justify-center mb-8">
@@ -68,11 +68,11 @@ const RaicesLatinas = () => {
                 COIREA – Raíces Latinas
               </h1>
               
-              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-5xl mx-auto">
                 Strengthening organizations that shape the future of Latin America
               </p>
 
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-5xl mx-auto">
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
                   <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> is the social impact division of COIREA dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America.
                 </p>
@@ -86,12 +86,12 @@ const RaicesLatinas = () => {
 
         {/* A New Path Section */}
         <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 A New Path for Impact in Latin America
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
                 Latin America is a land of intelligence, resilience, and cultural depth. But many organizations working for social transformation struggle to sustain their impact over time. Not because of lack of purpose — but because of lack of structure.
               </p>
             </div>
@@ -114,7 +114,7 @@ const RaicesLatinas = () => {
               ))}
             </div>
 
-            <div className="text-center space-y-6 max-w-3xl mx-auto">
+            <div className="text-center space-y-6 max-w-5xl mx-auto">
               <p className="text-2xl font-display text-[hsl(var(--raices-sage-green))] font-semibold">
                 Raíces Latinas exists to change that.
               </p>
@@ -137,12 +137,12 @@ const RaicesLatinas = () => {
             <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/60" />
           </div>
           
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 What We Do
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
                 We support organizations to lead, organize, and grow with clarity and integrity by applying COIREA OS through co-created transformation journeys.
               </p>
             </div>
@@ -199,12 +199,12 @@ const RaicesLatinas = () => {
 
         {/* Our Approach Section */}
         <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
                 Our Approach
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
                 Our work is relational, strategic, and grounded in Latin American realities. We build transformation from the inside out.
               </p>
             </div>
@@ -255,15 +255,15 @@ const RaicesLatinas = () => {
             <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/75" />
           </div>
           
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 Programs
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed mb-4 font-medium">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed mb-4 font-medium">
                 Co-Created With Each Partner
               </p>
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-2xl mx-auto font-medium">
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto font-medium">
                 Every organization is unique. That's why our programs are designed as co-creation journeys, not pre-made packages.
               </p>
             </div>
@@ -321,7 +321,7 @@ const RaicesLatinas = () => {
 
         {/* Who We Work With Section */}
         <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
                 Who We Work With
@@ -350,7 +350,7 @@ const RaicesLatinas = () => {
 
         {/* Partnership Invitation Section */}
         <section className="py-24 px-6 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-earth-brown))]/10">
-          <div className="container mx-auto max-w-4xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 Partnership Invitation
