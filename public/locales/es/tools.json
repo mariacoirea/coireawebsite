@@ -8,6 +8,22 @@
     "title": "Escáner de Salud Organizacional",
     "description": "Transforma tu organización con nuestra herramienta integral de evaluación. Diagnostica la salud de tu organización y la efectividad del liderazgo en un diagnóstico integrado."
   },
+  "scanner": {
+    "title": "Escáner de Salud Organizacional COIREA",
+    "intro1": "Una herramienta de diagnóstico integral que evalúa la salud de tu organización a través de cinco pilares regenerativos.",
+    "intro2": "Responde 55 preguntas que cubren salud organizacional, dinámicas de liderazgo e interconectividad sistémica para recibir un diagnóstico instantáneo del bienestar general de tu organización, conciencia de liderazgo, puntos de dolor y fortalezas.",
+    "pillarsTitle": "Pilares de Evaluación:",
+    "pillars": {
+      "purposeCulture": "Propósito y Cultura (7)",
+      "collaboration": "Colaboración (7)",
+      "leadership": "Liderazgo (14)",
+      "wellBeing": "Bienestar (7)",
+      "strategy": "Estrategia Organizacional (7)"
+    },
+    "duration": "Toma aproximadamente 12-15 minutos completar",
+    "results": "Recibe resultados instantáneos con perspectivas sobre salud organizacional y conciencia de liderazgo",
+    "startButton": "Comienza Tu Escaneo de Salud Organizacional"
+  },
   "faqTitle": "Preguntas Frecuentes Sobre Nuestras Herramientas de Evaluación",
   "faqs": [
     {

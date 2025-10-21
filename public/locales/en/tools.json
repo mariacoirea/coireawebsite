@@ -8,6 +8,22 @@
     "title": "Organizational Health Scanner",
     "description": "Transform your organization with our comprehensive assessment tool. Diagnose your organizational health and leadership effectiveness in one integrated diagnostic."
   },
+  "scanner": {
+    "title": "COIREA Organizational Health Scanner",
+    "intro1": "A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars.",
+    "intro2": "Answer 55 questions covering organizational health, leadership dynamics, and system interconnectivity to receive an instant diagnostic of your organization's overall well-being, leadership consciousness, pain points, and strengths.",
+    "pillarsTitle": "Assessment Pillars:",
+    "pillars": {
+      "purposeCulture": "Purpose & Culture (7)",
+      "collaboration": "Collaboration (7)",
+      "leadership": "Leadership (14)",
+      "wellBeing": "Well-Being (7)",
+      "strategy": "Organizational Strategy (7)"
+    },
+    "duration": "Takes approximately 12-15 minutes to complete",
+    "results": "Receive instant results with organizational health & leadership consciousness insights",
+    "startButton": "Start Your Organizational Health Scan"
+  },
   "faqTitle": "Frequently Asked Questions About Our Assessment Tools",
   "faqs": [
     {

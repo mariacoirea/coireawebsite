@@ -26,6 +26,7 @@ export interface AssessmentResult {
 }
 
 const OrganizationalHealthScanner = () => {
+  const { t } = useTranslation('tools');
   const [currentStep, setCurrentStep] = useState<'intro' | 'assessment' | 'email' | 'results'>('intro');
   const [assessmentResults, setAssessmentResults] = useState<AssessmentResult | null>(null);
 
@@ -65,25 +66,30 @@ const OrganizationalHealthScanner = () => {
         <Card className="bg-card shadow-elegant border-primary/10">
           <CardHeader className="text-center pb-8">
             <CardTitle className="text-3xl md:text-4xl font-display font-semibold text-primary mb-6">
-              COIREA Organizational Health Scanner
+              {t('scanner.title')}
             </CardTitle>
             <div className="space-y-4 text-foreground/80 font-body text-lg leading-relaxed">
               <p>
-                A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars.
+                {t('scanner.intro1')}
               </p>
               <p>
-                Answer 55 questions covering organizational health, leadership dynamics, and system interconnectivity to receive an instant diagnostic of your 
-                organization's overall well-being, leadership consciousness, pain points, and strengths.
+                {t('scanner.intro2')}
               </p>
             </div>
           </CardHeader>
           <CardContent className="text-center">
             <div className="mb-8">
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                Assessment Pillars:
+                {t('scanner.pillarsTitle')}
               </h3>
               <div className="grid md:grid-cols-3 gap-4 mb-8">
-                {['Purpose & Culture (7)', 'Collaboration (7)', 'Leadership (14)', 'Well-Being (7)', 'Organizational Strategy (7)'].map((pillar) => (
+                {[
+                  t('scanner.pillars.purposeCulture'),
+                  t('scanner.pillars.collaboration'),
+                  t('scanner.pillars.leadership'),
+                  t('scanner.pillars.wellBeing'),
+                  t('scanner.pillars.strategy')
+                ].map((pillar) => (
                   <div key={pillar} className="bg-primary/5 rounded-lg p-4">
                     <span className="text-primary font-body font-medium text-sm">{pillar}</span>
                   </div>
@@ -93,10 +99,10 @@ const OrganizationalHealthScanner = () => {
             
             <div className="bg-gradient-warm/10 rounded-xl p-6 mb-8">
               <p className="text-sm text-foreground/70 font-body mb-4">
-                Takes approximately 12-15 minutes to complete
+                {t('scanner.duration')}
               </p>
               <p className="text-sm text-foreground/70 font-body">
-                Receive instant results with organizational health & leadership consciousness insights
+                {t('scanner.results')}
               </p>
             </div>
 
@@ -106,7 +112,7 @@ const OrganizationalHealthScanner = () => {
               size="lg"
               className="text-lg px-12 py-6"
             >
-              Start Your Organizational Health Scan
+              {t('scanner.startButton')}
             </Button>
           </CardContent>
         </Card>
