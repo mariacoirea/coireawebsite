@@ -1,7 +1,117 @@
 {
   "seo": {
-    "title": "Comienza Tu Viaje - Transformación Organizacional | COIREA",
-    "description": "Inicia el viaje de transformación de tu organización con COIREA. Completa nuestro formulario para explorar cómo podemos apoyar tu evolución.",
-    "keywords": "iniciar transformación organizacional, consulta de transformación, consulta de desarrollo organizacional"
+    "title": "Inicia Tu Viaje de Transformación Organizacional - Llamada Estratégica Gratuita | COIREA",
+    "description": "Agenda tu llamada estratégica gratuita de 30 minutos para comenzar tu viaje de transformación organizacional. Co-crea un enfoque personalizado para la evolución empresarial regenerativa con el marco probado de COIREA.",
+    "keywords": "consulta de transformación organizacional, llamada estratégica gratuita, coaching empresarial, desarrollo de liderazgo, transformación empresarial regenerativa, consulta de desarrollo de equipos",
+    "successTitle": "Gracias - Viaje de Transformación Organizacional Iniciado | COIREA",
+    "successDescription": "Gracias por iniciar tu viaje de transformación organizacional con COIREA. Nos pondremos en contacto dentro de las próximas 24 horas para programar tu llamada de claridad complementaria.",
+    "successKeywords": "transformación organizacional, consulta de coaching empresarial, desarrollo de liderazgo, gracias"
+  },
+  "hero": {
+    "title": "Agenda Tu Llamada Estratégica Gratuita de 30 Minutos",
+    "description": "Toda transformación significativa comienza con un solo paso. Comparte tu contexto con nosotros y co-creemos un camino hacia la coherencia, vitalidad y propósito organizacional a través de una sesión estratégica personalizada.",
+    "features": {
+      "proven": "Marco Probado",
+      "regenerative": "Enfoque Regenerativo"
+    }
+  },
+  "form": {
+    "mainTitle": "Cuéntanos Sobre Tu Organización",
+    "mainDescription": "Ayúdanos a entender tu contexto único para que podamos diseñar el enfoque más efectivo para tu transformación.",
+    "contact": {
+      "title": "Información de Contacto",
+      "name": "Tu Nombre",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu.correo@empresa.com",
+      "organization": "Organización",
+      "organizationPlaceholder": "Nombre de tu organización",
+      "role": "Tu Rol",
+      "rolePlaceholder": "CEO, Gerente, Director de RR.HH., etc."
+    },
+    "challenges": {
+      "title": "Desafíos Actuales",
+      "description": "Selecciona todos los que apliquen a tu organización:",
+      "list": [
+        "Falta de claridad y propósito organizacional",
+        "Pobre colaboración y comunicación del equipo",
+        "Altos niveles de estrés y agotamiento",
+        "Débil alineación de liderazgo",
+        "Desconexión cultural",
+        "Bajo compromiso de empleados",
+        "Resistencia al cambio",
+        "Departamentos aislados",
+        "Visión y estrategia poco claras",
+        "Desequilibrio entre rendimiento y bienestar"
+      ],
+      "customLabel": "Otros desafíos (por favor describe):",
+      "customPlaceholder": "Describe cualquier desafío específico no mencionado arriba..."
+    },
+    "goals": {
+      "title": "Metas y Visión",
+      "goalsLabel": "¿Cuáles son tus principales metas para esta transformación?",
+      "goalsPlaceholder": "Describe cómo se ve el éxito para tu organización...",
+      "visionLabel": "Describe tu visión para el estado futuro",
+      "visionPlaceholder": "Pinta una imagen de dónde quieres que esté tu organización...",
+      "urgencyLabel": "¿Qué tan urgente es esta transformación?",
+      "urgencyPlaceholder": "Selecciona el nivel de urgencia",
+      "urgencyOptions": {
+        "high": "Alta - Necesitamos actuar de inmediato",
+        "medium": "Media - Importante pero podemos planificar con anticipación",
+        "low": "Baja - Explorando para planificación futura"
+      }
+    },
+    "scope": {
+      "title": "Alcance del Proyecto",
+      "timelineLabel": "Cronograma Preferido",
+      "timelinePlaceholder": "Selecciona el cronograma",
+      "timelineOptions": {
+        "immediate": "Comenzar de inmediato",
+        "1-3months": "Dentro de 1-3 meses",
+        "3-6months": "Dentro de 3-6 meses",
+        "6-12months": "Dentro de 6-12 meses",
+        "exploring": "Solo explorando opciones"
+      },
+      "budgetLabel": "Rango de Inversión",
+      "budgetPlaceholder": "Selecciona el rango de presupuesto",
+      "budgetOptions": {
+        "under-10k": "Menos de $10,000",
+        "10k-25k": "$10,000 - $25,000",
+        "25k-50k": "$25,000 - $50,000",
+        "50k-100k": "$50,000 - $100,000",
+        "100k+": "$100,000+",
+        "discuss": "Prefiero discutir"
+      }
+    },
+    "additional": {
+      "title": "Información Adicional",
+      "label": "¿Algo más que te gustaría que supiéramos?",
+      "placeholder": "Comparte cualquier contexto adicional, preguntas o áreas específicas de enfoque..."
+    },
+    "submit": {
+      "button": "Comencemos Nuestro Viaje Juntos",
+      "submitting": "Enviando...",
+      "error": "Hubo un error al enviar tu formulario. Por favor intenta de nuevo o contáctanos directamente.",
+      "note": "Nos pondremos en contacto dentro de las próximas 24 horas para programar tu llamada de claridad complementaria"
+    }
+  },
+  "success": {
+    "title": "Tu Viaje Comienza Ahora",
+    "subtitle": "Gracias por dar el primer paso hacia la transformación organizacional consciente.",
+    "nextSteps": {
+      "title": "¿Qué Sigue Ahora?",
+      "step1": {
+        "title": "Dentro de 24 horas:",
+        "description": "Nos pondremos en contacto para programar tu llamada de claridad complementaria"
+      },
+      "step2": {
+        "title": "Llamada de Descubrimiento (30-45 min):",
+        "description": "Exploraremos tus desafíos específicos y co-crearemos un enfoque personalizado"
+      },
+      "step3": {
+        "title": "Propuesta Personalizada:",
+        "description": "Diseñaremos un camino de transformación alineado con las necesidades y cronograma únicos de tu organización"
+      }
+    }
   }
 }

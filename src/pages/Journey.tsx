@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +17,7 @@ import { RelatedContent } from "@/components/InternalLinkingStrategy";
 import { supabase } from "@/integrations/supabase/client";
 
 const Journey = () => {
+  const { t } = useTranslation('journey');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,18 +37,7 @@ const Journey = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const challenges = [
-    "Lack of organizational clarity and purpose",
-    "Poor team collaboration and communication",
-    "High stress and burnout levels",
-    "Weak leadership alignment",
-    "Cultural disconnect",
-    "Low employee engagement",
-    "Resistance to change",
-    "Siloed departments",
-    "Unclear vision and strategy",
-    "Performance and well-being imbalance"
-  ];
+  const challenges = t('form.challenges.list', { returnObjects: true }) as string[];
 
   const handleChallengeChange = (challenge: string, checked: boolean) => {
     setFormData(prev => ({
@@ -75,7 +66,7 @@ const Journey = () => {
       setIsSubmitted(true);
     } catch (error: any) {
       console.error('Error submitting form:', error);
-      setSubmitError('There was an error submitting your form. Please try again or contact us directly.');
+      setSubmitError(t('form.submit.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -85,9 +76,9 @@ const Journey = () => {
     return (
       <>
         <SEOHead
-          title="Thank You - Organizational Transformation Journey Started | COIREA"
-          description="Thank you for starting your organizational transformation journey with COIREA. We'll be in touch within 24 hours to schedule your complimentary clarity call."
-          keywords="organizational transformation, business coaching consultation, leadership development, thank you"
+          title={t('seo.successTitle')}
+          description={t('seo.successDescription')}
+          keywords={t('seo.successKeywords')}
           url="/journey"
         />
         <StructuredData type="organization" />
@@ -100,16 +91,16 @@ const Journey = () => {
               <div className="mb-8">
                 <CheckCircle className="w-20 h-20 text-primary mx-auto mb-6" />
                 <h1 className="text-4xl font-display font-semibold text-primary mb-4">
-                  Your Journey Begins Now
+                  {t('success.title')}
                 </h1>
                 <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8">
-                  Thank you for taking the first step toward conscious organizational transformation.
+                  {t('success.subtitle')}
                 </p>
               </div>
               
               <Card className="bg-card/80 backdrop-blur-sm border-primary/20 p-8">
                 <h2 className="text-2xl font-display font-semibold text-primary mb-4">
-                  What Happens Next?
+                  {t('success.nextSteps.title')}
                 </h2>
                 <div className="space-y-4 text-left">
                   <div className="flex items-start space-x-3">
@@ -117,7 +108,7 @@ const Journey = () => {
                       <span className="text-sm font-bold text-primary">1</span>
                     </div>
                     <p className="text-foreground/80 font-body">
-                      <strong>Within 24 hours:</strong> We'll reach out to schedule your complimentary clarity call
+                      <strong>{t('success.nextSteps.step1.title')}</strong> {t('success.nextSteps.step1.description')}
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -125,7 +116,7 @@ const Journey = () => {
                       <span className="text-sm font-bold text-primary">2</span>
                     </div>
                     <p className="text-foreground/80 font-body">
-                      <strong>Discovery Call (30-45 min):</strong> We'll explore your specific challenges and co-create a tailored approach
+                      <strong>{t('success.nextSteps.step2.title')}</strong> {t('success.nextSteps.step2.description')}
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -133,7 +124,7 @@ const Journey = () => {
                       <span className="text-sm font-bold text-primary">3</span>
                     </div>
                     <p className="text-foreground/80 font-body">
-                      <strong>Custom Proposal:</strong> We'll design a transformation pathway aligned with your organization's unique needs and timeline
+                      <strong>{t('success.nextSteps.step3.title')}</strong> {t('success.nextSteps.step3.description')}
                     </p>
                   </div>
                 </div>
@@ -150,9 +141,9 @@ const Journey = () => {
   return (
     <>
       <SEOHead
-        title="Start Your Organizational Transformation Journey - Free Strategy Call | COIREA"
-        description="Book your free 30-minute strategy call to begin your organizational transformation journey. Co-create a tailored approach for regenerative business evolution with COIREA's proven framework."
-        keywords="organizational transformation consultation, free strategy call, business coaching, leadership development, regenerative business transformation, team development consultation"
+        title={t('seo.title')}
+        description={t('seo.description')}
+        keywords={t('seo.keywords')}
         url="/journey"
       />
       <StructuredData type="organization" />
@@ -164,20 +155,19 @@ const Journey = () => {
         <section className="py-20 px-6 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
-              Book Your Free 30-Minute Strategy Call
+              {t('hero.title')}
             </h1>
             <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8 max-w-3xl mx-auto">
-              Every meaningful transformation starts with a single step. Share your context with us, 
-              and let's co-create a pathway toward organizational coherence, vitality, and purpose through a personalized strategy session.
+              {t('hero.description')}
             </p>
             <div className="flex justify-center items-center space-x-8 mb-12">
               <div className="flex items-center space-x-2">
                 <Target className="w-5 h-5 text-primary" />
-                <span className="text-foreground/70 font-body">Proven Framework</span>
+                <span className="text-foreground/70 font-body">{t('hero.features.proven')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Lightbulb className="w-5 h-5 text-primary" />
-                <span className="text-foreground/70 font-body">Regenerative Approach</span>
+                <span className="text-foreground/70 font-body">{t('hero.features.regenerative')}</span>
               </div>
             </div>
           </div>
@@ -189,10 +179,10 @@ const Journey = () => {
             <Card className="bg-card/60 backdrop-blur-sm border-primary/10">
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl font-display font-semibold text-primary mb-4">
-                  Tell Us About Your Organization
+                  {t('form.mainTitle')}
                 </CardTitle>
                 <p className="text-lg text-foreground/70 font-body">
-                  Help us understand your unique context so we can design the most effective approach for your transformation.
+                  {t('form.mainDescription')}
                 </p>
               </CardHeader>
               
@@ -200,30 +190,30 @@ const Journey = () => {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Contact Information */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Contact Information</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">{t('form.contact.title')}</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Your Name *
+                          {t('form.contact.name')} *
                         </Label>
                         <Input
                           id="name"
                           value={formData.name}
                           onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          placeholder="Your full name"
+                          placeholder={t('form.contact.namePlaceholder')}
                           required
                         />
                       </div>
                       <div>
                         <Label htmlFor="email" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Email Address *
+                          {t('form.contact.email')} *
                         </Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          placeholder="your.email@company.com"
+                          placeholder={t('form.contact.emailPlaceholder')}
                           required
                         />
                       </div>
@@ -231,25 +221,25 @@ const Journey = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="organization" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Organization *
+                          {t('form.contact.organization')} *
                         </Label>
                         <Input
                           id="organization"
                           value={formData.organization}
                           onChange={(e) => setFormData(prev => ({ ...prev, organization: e.target.value }))}
-                          placeholder="Your organization name"
+                          placeholder={t('form.contact.organizationPlaceholder')}
                           required
                         />
                       </div>
                       <div>
                         <Label htmlFor="role" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Your Role *
+                          {t('form.contact.role')} *
                         </Label>
                         <Input
                           id="role"
                           value={formData.role}
                           onChange={(e) => setFormData(prev => ({ ...prev, role: e.target.value }))}
-                          placeholder="CEO, Manager, HR Director, etc."
+                          placeholder={t('form.contact.rolePlaceholder')}
                           required
                         />
                       </div>
@@ -258,9 +248,9 @@ const Journey = () => {
 
                   {/* Current Challenges */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Current Challenges</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">{t('form.challenges.title')}</h3>
                     <p className="text-sm text-foreground/70 font-body">
-                      Select all that apply to your organization:
+                      {t('form.challenges.description')}
                     </p>
                     <div className="grid md:grid-cols-2 gap-3">
                       {challenges.map((challenge) => (
@@ -278,13 +268,13 @@ const Journey = () => {
                     </div>
                     <div>
                       <Label htmlFor="customChallenge" className="text-sm font-body text-foreground/70 mb-1 block">
-                        Other challenges (please describe):
+                        {t('form.challenges.customLabel')}
                       </Label>
                       <Textarea
                         id="customChallenge"
                         value={formData.customChallenge}
                         onChange={(e) => setFormData(prev => ({ ...prev, customChallenge: e.target.value }))}
-                        placeholder="Describe any specific challenges not listed above..."
+                        placeholder={t('form.challenges.customPlaceholder')}
                         rows={3}
                       />
                     </div>
@@ -292,45 +282,45 @@ const Journey = () => {
 
                   {/* Goals and Vision */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Goals & Vision</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">{t('form.goals.title')}</h3>
                     <div>
                       <Label htmlFor="goals" className="text-sm font-body text-foreground/70 mb-1 block">
-                        What are your main goals for this transformation? *
+                        {t('form.goals.goalsLabel')} *
                       </Label>
                       <Textarea
                         id="goals"
                         value={formData.goals}
                         onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
-                        placeholder="Describe what success looks like for your organization..."
+                        placeholder={t('form.goals.goalsPlaceholder')}
                         rows={3}
                         required
                       />
                     </div>
                     <div>
                       <Label htmlFor="vision" className="text-sm font-body text-foreground/70 mb-1 block">
-                        Describe your vision for the future state *
+                        {t('form.goals.visionLabel')} *
                       </Label>
                       <Textarea
                         id="vision"
                         value={formData.vision}
                         onChange={(e) => setFormData(prev => ({ ...prev, vision: e.target.value }))}
-                        placeholder="Paint a picture of where you want your organization to be..."
+                        placeholder={t('form.goals.visionPlaceholder')}
                         rows={3}
                         required
                       />
                     </div>
                     <div>
                       <Label htmlFor="urgency" className="text-sm font-body text-foreground/70 mb-1 block">
-                        How urgent is this transformation?
+                        {t('form.goals.urgencyLabel')}
                       </Label>
                       <Select value={formData.urgency} onValueChange={(value) => setFormData(prev => ({ ...prev, urgency: value }))}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select urgency level" />
+                          <SelectValue placeholder={t('form.goals.urgencyPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="high">High - We need to act immediately</SelectItem>
-                          <SelectItem value="medium">Medium - Important but can plan ahead</SelectItem>
-                          <SelectItem value="low">Low - Exploring for future planning</SelectItem>
+                          <SelectItem value="high">{t('form.goals.urgencyOptions.high')}</SelectItem>
+                          <SelectItem value="medium">{t('form.goals.urgencyOptions.medium')}</SelectItem>
+                          <SelectItem value="low">{t('form.goals.urgencyOptions.low')}</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -338,40 +328,40 @@ const Journey = () => {
 
                   {/* Timeline and Budget */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Project Scope</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">{t('form.scope.title')}</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="timeline" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Preferred Timeline
+                          {t('form.scope.timelineLabel')}
                         </Label>
                         <Select value={formData.timeline} onValueChange={(value) => setFormData(prev => ({ ...prev, timeline: value }))}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select timeline" />
+                            <SelectValue placeholder={t('form.scope.timelinePlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="immediate">Start immediately</SelectItem>
-                            <SelectItem value="1-3months">Within 1-3 months</SelectItem>
-                            <SelectItem value="3-6months">Within 3-6 months</SelectItem>
-                            <SelectItem value="6-12months">Within 6-12 months</SelectItem>
-                            <SelectItem value="exploring">Just exploring options</SelectItem>
+                            <SelectItem value="immediate">{t('form.scope.timelineOptions.immediate')}</SelectItem>
+                            <SelectItem value="1-3months">{t('form.scope.timelineOptions.1-3months')}</SelectItem>
+                            <SelectItem value="3-6months">{t('form.scope.timelineOptions.3-6months')}</SelectItem>
+                            <SelectItem value="6-12months">{t('form.scope.timelineOptions.6-12months')}</SelectItem>
+                            <SelectItem value="exploring">{t('form.scope.timelineOptions.exploring')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
                       <div>
                         <Label htmlFor="budget" className="text-sm font-body text-foreground/70 mb-1 block">
-                          Investment Range
+                          {t('form.scope.budgetLabel')}
                         </Label>
                         <Select value={formData.budget} onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select budget range" />
+                            <SelectValue placeholder={t('form.scope.budgetPlaceholder')} />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="under-10k">Under $10,000</SelectItem>
-                            <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                            <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                            <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                            <SelectItem value="100k+">$100,000+</SelectItem>
-                            <SelectItem value="discuss">Prefer to discuss</SelectItem>
+                            <SelectItem value="under-10k">{t('form.scope.budgetOptions.under-10k')}</SelectItem>
+                            <SelectItem value="10k-25k">{t('form.scope.budgetOptions.10k-25k')}</SelectItem>
+                            <SelectItem value="25k-50k">{t('form.scope.budgetOptions.25k-50k')}</SelectItem>
+                            <SelectItem value="50k-100k">{t('form.scope.budgetOptions.50k-100k')}</SelectItem>
+                            <SelectItem value="100k+">{t('form.scope.budgetOptions.100k+')}</SelectItem>
+                            <SelectItem value="discuss">{t('form.scope.budgetOptions.discuss')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -380,16 +370,16 @@ const Journey = () => {
 
                   {/* Additional Context */}
                   <div className="space-y-4">
-                    <h3 className="text-xl font-display font-semibold text-primary">Additional Information</h3>
+                    <h3 className="text-xl font-display font-semibold text-primary">{t('form.additional.title')}</h3>
                     <div>
                       <Label htmlFor="additionalContext" className="text-sm font-body text-foreground/70 mb-1 block">
-                        Anything else you'd like us to know?
+                        {t('form.additional.label')}
                       </Label>
                       <Textarea
                         id="additionalContext"
                         value={formData.additionalContext}
                         onChange={(e) => setFormData(prev => ({ ...prev, additionalContext: e.target.value }))}
-                        placeholder="Share any additional context, questions, or specific areas of focus..."
+                        placeholder={t('form.additional.placeholder')}
                         rows={4}
                       />
                     </div>
@@ -407,11 +397,11 @@ const Journey = () => {
                       disabled={isSubmitting}
                       className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
                     >
-                      {isSubmitting ? "Submitting..." : "Begin Our Journey Together"}
+                      {isSubmitting ? t('form.submit.submitting') : t('form.submit.button')}
                       <ArrowRight className="w-5 h-5" />
                     </Button>
                     <p className="text-xs text-foreground/60 font-body mt-4">
-                      We'll reach out within 24 hours to schedule your complimentary clarity call
+                      {t('form.submit.note')}
                     </p>
                   </div>
                   </form>

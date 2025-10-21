@@ -1,7 +1,117 @@
 {
   "seo": {
-    "title": "Begin Your Journey - Organizational Transformation | COIREA",
-    "description": "Start your organization's transformation journey with COIREA. Complete our intake form to explore how we can support your evolution.",
-    "keywords": "start organizational transformation, transformation consultation, organizational development inquiry"
+    "title": "Start Your Organizational Transformation Journey - Free Strategy Call | COIREA",
+    "description": "Book your free 30-minute strategy call to begin your organizational transformation journey. Co-create a tailored approach for regenerative business evolution with COIREA's proven framework.",
+    "keywords": "organizational transformation consultation, free strategy call, business coaching, leadership development, regenerative business transformation, team development consultation",
+    "successTitle": "Thank You - Organizational Transformation Journey Started | COIREA",
+    "successDescription": "Thank you for starting your organizational transformation journey with COIREA. We'll be in touch within 24 hours to schedule your complimentary clarity call.",
+    "successKeywords": "organizational transformation, business coaching consultation, leadership development, thank you"
+  },
+  "hero": {
+    "title": "Book Your Free 30-Minute Strategy Call",
+    "description": "Every meaningful transformation starts with a single step. Share your context with us, and let's co-create a pathway toward organizational coherence, vitality, and purpose through a personalized strategy session.",
+    "features": {
+      "proven": "Proven Framework",
+      "regenerative": "Regenerative Approach"
+    }
+  },
+  "form": {
+    "mainTitle": "Tell Us About Your Organization",
+    "mainDescription": "Help us understand your unique context so we can design the most effective approach for your transformation.",
+    "contact": {
+      "title": "Contact Information",
+      "name": "Your Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@company.com",
+      "organization": "Organization",
+      "organizationPlaceholder": "Your organization name",
+      "role": "Your Role",
+      "rolePlaceholder": "CEO, Manager, HR Director, etc."
+    },
+    "challenges": {
+      "title": "Current Challenges",
+      "description": "Select all that apply to your organization:",
+      "list": [
+        "Lack of organizational clarity and purpose",
+        "Poor team collaboration and communication",
+        "High stress and burnout levels",
+        "Weak leadership alignment",
+        "Cultural disconnect",
+        "Low employee engagement",
+        "Resistance to change",
+        "Siloed departments",
+        "Unclear vision and strategy",
+        "Performance and well-being imbalance"
+      ],
+      "customLabel": "Other challenges (please describe):",
+      "customPlaceholder": "Describe any specific challenges not listed above..."
+    },
+    "goals": {
+      "title": "Goals & Vision",
+      "goalsLabel": "What are your main goals for this transformation?",
+      "goalsPlaceholder": "Describe what success looks like for your organization...",
+      "visionLabel": "Describe your vision for the future state",
+      "visionPlaceholder": "Paint a picture of where you want your organization to be...",
+      "urgencyLabel": "How urgent is this transformation?",
+      "urgencyPlaceholder": "Select urgency level",
+      "urgencyOptions": {
+        "high": "High - We need to act immediately",
+        "medium": "Medium - Important but can plan ahead",
+        "low": "Low - Exploring for future planning"
+      }
+    },
+    "scope": {
+      "title": "Project Scope",
+      "timelineLabel": "Preferred Timeline",
+      "timelinePlaceholder": "Select timeline",
+      "timelineOptions": {
+        "immediate": "Start immediately",
+        "1-3months": "Within 1-3 months",
+        "3-6months": "Within 3-6 months",
+        "6-12months": "Within 6-12 months",
+        "exploring": "Just exploring options"
+      },
+      "budgetLabel": "Investment Range",
+      "budgetPlaceholder": "Select budget range",
+      "budgetOptions": {
+        "under-10k": "Under $10,000",
+        "10k-25k": "$10,000 - $25,000",
+        "25k-50k": "$25,000 - $50,000",
+        "50k-100k": "$50,000 - $100,000",
+        "100k+": "$100,000+",
+        "discuss": "Prefer to discuss"
+      }
+    },
+    "additional": {
+      "title": "Additional Information",
+      "label": "Anything else you'd like us to know?",
+      "placeholder": "Share any additional context, questions, or specific areas of focus..."
+    },
+    "submit": {
+      "button": "Begin Our Journey Together",
+      "submitting": "Submitting...",
+      "error": "There was an error submitting your form. Please try again or contact us directly.",
+      "note": "We'll reach out within 24 hours to schedule your complimentary clarity call"
+    }
+  },
+  "success": {
+    "title": "Your Journey Begins Now",
+    "subtitle": "Thank you for taking the first step toward conscious organizational transformation.",
+    "nextSteps": {
+      "title": "What Happens Next?",
+      "step1": {
+        "title": "Within 24 hours:",
+        "description": "We'll reach out to schedule your complimentary clarity call"
+      },
+      "step2": {
+        "title": "Discovery Call (30-45 min):",
+        "description": "We'll explore your specific challenges and co-create a tailored approach"
+      },
+      "step3": {
+        "title": "Custom Proposal:",
+        "description": "We'll design a transformation pathway aligned with your organization's unique needs and timeline"
+      }
+    }
   }
 }
