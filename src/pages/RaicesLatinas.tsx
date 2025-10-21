@@ -201,7 +201,7 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
                 Our Approach
               </h2>
               <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
@@ -323,7 +323,7 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
                 Who We Work With
               </h2>
             </div>
