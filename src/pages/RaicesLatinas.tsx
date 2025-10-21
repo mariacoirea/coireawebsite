@@ -52,20 +52,20 @@ const RaicesLatinas = () => {
                 </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] leading-tight whitespace-nowrap">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] leading-tight">
                 COIREA – Raíces Latinas
               </h1>
               
-              <p className="text-2xl md:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-light max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-3xl mx-auto">
                 Strengthening organizations that shape the future of Latin America
               </p>
 
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-medium">COIREA – Raíces Latinas</strong> is the social impact division of COIREA dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America.
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> is the social impact division of COIREA dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America.
                 </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4">
-                  We collaborate with organizations working with Indigenous and rural communities to build operational strength, leadership capacity, and long-term sustainability using the <strong className="text-[hsl(var(--raices-sage-green))] font-medium">COIREA Regenerative Operating System (COIREA OS)</strong>.
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4 font-medium">
+                  We collaborate with organizations working with Indigenous and rural communities to build operational strength, leadership capacity, and long-term sustainability using the <strong className="text-[hsl(var(--raices-sage-green))] font-semibold">COIREA Regenerative Operating System (COIREA OS)</strong>.
                 </p>
               </div>
             </div>
@@ -76,10 +76,10 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 A New Path for Impact in Latin America
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
                 Latin America is a land of intelligence, resilience, and cultural depth. But many organizations working for social transformation struggle to sustain their impact over time. Not because of lack of purpose — but because of lack of structure.
               </p>
             </div>
@@ -106,7 +106,7 @@ const RaicesLatinas = () => {
               <p className="text-2xl font-display text-[hsl(var(--raices-sage-green))] font-semibold">
                 Raíces Latinas exists to change that.
               </p>
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))]/80 leading-relaxed">
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
                 We work with organizations ready to evolve from good intentions to scalable transformation — in a way that remains human, ethical, and deeply grounded in purpose.
               </p>
             </div>
@@ -117,10 +117,10 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-gradient-to-b from-background to-[hsl(var(--raices-sandstone))]/30">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 What We Do
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
                 We support organizations to lead, organize, and grow with clarity and integrity by applying COIREA OS through co-created transformation journeys.
               </p>
             </div>
@@ -163,7 +163,7 @@ const RaicesLatinas = () => {
                       <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
                         {item.area}
                       </h3>
-                      <p className="text-[hsl(var(--raices-charcoal-earth))]/80 leading-relaxed">
+                      <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
                         {item.purpose}
                       </p>
                     </div>
@@ -184,10 +184,10 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 Our Approach
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed font-medium">
                 Our work is relational, strategic, and grounded in Latin American realities. We build transformation from the inside out.
               </p>
             </div>
@@ -208,7 +208,7 @@ const RaicesLatinas = () => {
                   <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
                     {item.step}
                   </h3>
-                  <p className="text-sm text-[hsl(var(--raices-charcoal-earth))]/70">
+                  <p className="text-sm text-[hsl(var(--raices-charcoal-earth))] font-medium">
                     {item.desc}
                   </p>
                 </div>
@@ -219,7 +219,7 @@ const RaicesLatinas = () => {
               <p className="text-2xl font-display text-[hsl(var(--raices-deep-copper))] font-semibold">
                 This is not consulting.
               </p>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] font-medium">
                 This is capacity transfer and organizational empowerment.
               </p>
             </div>
@@ -230,13 +230,13 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-gradient-to-b from-background to-[hsl(var(--raices-sandstone))]/30">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 Programs
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80 max-w-3xl mx-auto leading-relaxed mb-4">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-3xl mx-auto leading-relaxed mb-4 font-medium">
                 Co-Created With Each Partner
               </p>
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))]/70 max-w-2xl mx-auto">
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-2xl mx-auto font-medium">
                 Every organization is unique. That's why our programs are designed as co-creation journeys, not pre-made packages.
               </p>
             </div>
@@ -276,7 +276,7 @@ const RaicesLatinas = () => {
                     <p className="text-lg text-[hsl(var(--raices-sage-green))] font-medium mb-4">
                       {program.subtitle}
                     </p>
-                    <p className="text-[hsl(var(--raices-charcoal-earth))]/80 leading-relaxed">
+                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
                       {program.description}
                     </p>
                   </CardContent>
@@ -285,7 +285,7 @@ const RaicesLatinas = () => {
             </div>
 
             <div className="text-center">
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))]/70 italic">
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] italic font-medium">
                 Each program can be delivered in Spanish or English, onsite or online, and fully adapted to local context, culture, and team reality.
               </p>
             </div>
@@ -325,10 +325,10 @@ const RaicesLatinas = () => {
         <section className="py-24 px-6 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-earth-brown))]/10">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 Partnership Invitation
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))]/80 leading-relaxed mb-8">
+              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-8 font-medium">
                 We are building a network of organizations, funders, and allies committed to strengthening Latin America from within.
               </p>
             </div>
@@ -429,7 +429,7 @@ const RaicesLatinas = () => {
             </Card>
 
             <div className="text-center mt-8">
-              <p className="text-[hsl(var(--raices-charcoal-earth))]/70">
+              <p className="text-[hsl(var(--raices-charcoal-earth))] font-medium">
                 Or reach us directly at{" "}
                 <a href="mailto:raices@coirea.com" className="text-[hsl(var(--raices-sage-green))] hover:text-[hsl(var(--raices-earth-brown))] transition-colors underline">
                   raices@coirea.com
@@ -442,7 +442,7 @@ const RaicesLatinas = () => {
         {/* Footer Note */}
         <section className="py-12 px-6 bg-[hsl(var(--raices-earth-brown))]/5 border-t border-[hsl(var(--raices-andean-clay))]/20">
           <div className="container mx-auto max-w-4xl text-center">
-            <p className="text-sm text-[hsl(var(--raices-charcoal-earth))]/60">
+            <p className="text-sm text-[hsl(var(--raices-charcoal-earth))]">
               © 2024 COIREA - Raíces Latinas. All rights reserved.
             </p>
           </div>
