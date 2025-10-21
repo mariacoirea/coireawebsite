@@ -239,7 +239,7 @@ const About = () => {
               <div>
                 <div className="space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
                   {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(0, 3).map((paragraph: string, index: number) => (
-                    <p key={index}>{paragraph}</p>
+                    <p key={index} className="text-justify">{paragraph}</p>
                   ))}
                 </div>
               </div>
