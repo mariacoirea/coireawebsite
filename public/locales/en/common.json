@@ -13,7 +13,7 @@
     "tagline": "Transform your organization from the inside out",
     "contact": {
       "title": "Contact",
-      "email": "hello@coirea.com"
+      "email": "maria@coirea.com"
     },
     "quickLinks": {
       "title": "Quick Links",
@@ -28,40 +28,5 @@
     "en": "English",
     "es": "Español",
     "switchTo": "Switch to {{language}}"
-  },
-  "relatedContent": {
-    "title": "Continue Your Journey",
-    "learnMore": "Learn more",
-    "explore": "Explore",
-    "links": {
-      "home": {
-        "text": "Transform Your Organization",
-        "keywords": "organizational transformation"
-      },
-      "about": {
-        "text": "About COIREA",
-        "keywords": "conscious leadership team"
-      },
-      "offerings": {
-        "text": "Our Services",
-        "keywords": "comprehensive consulting services"
-      },
-      "insights": {
-        "text": "Insights & Articles",
-        "keywords": "leadership insights"
-      },
-      "tools": {
-        "text": "Assessment Tools",
-        "keywords": "organizational health tools"
-      },
-      "journey": {
-        "text": "Start Your Journey",
-        "keywords": "begin transformation"
-      },
-      "events": {
-        "text": "Community Events",
-        "keywords": "leadership events"
-      }
-    }
   }
 }
