@@ -251,7 +251,7 @@ const About = () => {
                 const isLast = index === 2;
                 return (
                   <div key={index} className={isLast ? "bg-primary/10 border border-primary/20 rounded-2xl p-8" : ""}>
-                    <p className="text-lg text-foreground/80 font-body leading-relaxed">{paragraph}</p>
+                    <p className="text-lg text-center text-foreground/80 font-body leading-relaxed">{paragraph}</p>
                   </div>
                 );
               })}
