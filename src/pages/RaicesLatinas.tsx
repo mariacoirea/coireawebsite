@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Leaf, Users, Target, TrendingUp, Heart, Network, Sprout, Flame, Globe } from "lucide-react";
+import { Hexagon, Circle, Triangle, Square, Diamond, Sprout, Flame, Globe } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
 import raicesHeroImg from "@/assets/raices-latinas-hero.png";
@@ -87,15 +87,15 @@ const RaicesLatinas = () => {
             {/* Challenges Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {[
-                { icon: Users, text: "Teams operate without aligned roles or rhythm" },
-                { icon: Target, text: "Leadership is exhausted by reactive operations" },
-                { icon: TrendingUp, text: "Growth is limited by donor dependency" },
-                { icon: Network, text: "Programs lack system continuity" },
-                { icon: Heart, text: "Culture and purpose get lost as organizations grow" },
+                { icon: Hexagon, text: "Teams operate without aligned roles or rhythm" },
+                { icon: Circle, text: "Leadership is exhausted by reactive operations" },
+                { icon: Triangle, text: "Growth is limited by donor dependency" },
+                { icon: Square, text: "Programs lack system continuity" },
+                { icon: Diamond, text: "Culture and purpose get lost as organizations grow" },
               ].map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/20 bg-white/50 backdrop-blur-sm">
                   <CardContent className="p-6">
-                    <item.icon className="w-8 h-8 text-[hsl(var(--raices-deep-copper))] mb-3" strokeWidth={1.5} />
+                    <item.icon className="w-8 h-8 text-[hsl(var(--raices-deep-copper))] mb-3" strokeWidth={2} />
                     <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">{item.text}</p>
                   </CardContent>
                 </Card>
@@ -131,33 +131,33 @@ const RaicesLatinas = () => {
                 {
                   area: "Organizational Clarity",
                   purpose: "Define structure, roles, responsibilities and decision-making models",
-                  icon: Network
+                  icon: Square
                 },
                 {
                   area: "Strategic Direction",
                   purpose: "Align mission and execution through operational roadmaps",
-                  icon: Target
+                  icon: Circle
                 },
                 {
                   area: "COIREA OS Installation",
                   purpose: "Implement a regenerative operating system tailored to each organization",
-                  icon: Leaf
+                  icon: Hexagon
                 },
                 {
                   area: "Leadership Development",
                   purpose: "Train leadership teams in conscious, collaborative, and accountable leadership",
-                  icon: Users
+                  icon: Triangle
                 },
                 {
                   area: "Sustainability & Partnerships",
                   purpose: "Design long-term funding and impact partnership strategies",
-                  icon: TrendingUp
+                  icon: Diamond
                 },
               ].map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300">
                   <CardContent className="p-6 flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-[hsl(var(--raices-sage-green))]" strokeWidth={1.5} />
+                      <item.icon className="w-6 h-6 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
