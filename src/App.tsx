@@ -17,6 +17,7 @@ import Journey from "./pages/Journey";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import PostEditor from "./pages/PostEditor";
+import RaicesLatinas from "./pages/RaicesLatinas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -85,6 +86,10 @@ const App = () => {
             <Route path="/es/events" element={<Events />} />
             <Route path="/es/tools" element={<Tools />} />
             <Route path="/es/journey" element={<Journey />} />
+            
+            {/* Raíces Latinas (standalone landing page) */}
+            <Route path="/raices-latinas" element={<RaicesLatinas />} />
+            <Route path="/es/raices-latinas" element={<RaicesLatinas />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

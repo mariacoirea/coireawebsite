@@ -50,6 +50,14 @@
     --sage: 82 25% 45%;
     --copper: 18 35% 50%; /* Sovereign Soft Copper #B56D4E */
 
+    /* Raíces Latinas Palette */
+    --raices-earth-brown: 24 45% 38%; /* #8A5A3A - grounded authority */
+    --raices-andean-clay: 30 38% 60%; /* #C49A6C - natural warmth */
+    --raices-sage-green: 86 10% 45%; /* #6B7A64 - regenerative life */
+    --raices-deep-copper: 15 40% 51%; /* #B56D4E - sacred power */
+    --raices-sandstone: 38 35% 85%; /* #E9DCC5 - neutral soft space */
+    --raices-charcoal-earth: 60 6% 17%; /* #2C2C28 - text */
+
     /* Status Colors */
     --destructive: 18 35% 50%; /* Sovereign Soft Copper #B56D4E */
     --destructive-foreground: 48 15% 97%;
