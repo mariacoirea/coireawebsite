@@ -245,12 +245,12 @@ const About = () => {
               </div>
             </div>
 
-            {/* Last 3 paragraphs - horizontal and centered */}
-            <div className="mt-12 max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
+            {/* Last 3 paragraphs - horizontal */}
+            <div className="mt-16 max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-12">
                 {(t('founder.bio', { returnObjects: true }) as string[] || []).slice(3).map((paragraph: string, index: number) => (
-                  <div key={index} className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-primary/10 shadow-soft">
-                    <p className="text-base text-foreground/80 font-body leading-relaxed">{paragraph}</p>
+                  <div key={index}>
+                    <p className="text-base text-foreground/80 font-body leading-relaxed text-left">{paragraph}</p>
                   </div>
                 ))}
               </div>
