@@ -24,9 +24,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <header>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary mb-6 mt-12 leading-tight">
-            <span className="italic block mb-2">{t('hero.title').split(' ')[0]} {t('hero.title').split(' ')[1]}</span>
-            <span className="block">{t('hero.title').split('from')[0].split('Organization')[1]?.trim() || 'Organization from'}</span>
-            <span className="block">{t('hero.title').split('from')[1]?.trim() || 'the Inside Out'}</span>
+            {t('hero.title')}
           </h1>
 
           <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-6xl mx-auto mb-8 leading-relaxed">
