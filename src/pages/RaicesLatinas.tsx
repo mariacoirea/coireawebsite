@@ -124,7 +124,7 @@ const RaicesLatinas = () => {
         </section>
 
         {/* What We Do Section */}
-        <section className="py-24 px-6 bg-gradient-to-b from-background to-[hsl(var(--raices-sandstone))]/30">
+        <section className="py-24 px-6 bg-[hsl(var(--raices-sage-green))]/10">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
@@ -147,11 +147,6 @@ const RaicesLatinas = () => {
                   area: "Strategic Direction",
                   purpose: "Align mission and execution through operational roadmaps",
                   icon: MayanConcentric
-                },
-                {
-                  area: "COIREA OS Installation",
-                  purpose: "Implement a regenerative operating system tailored to each organization",
-                  icon: MayanPyramid
                 },
                 {
                   area: "Leadership Development",
