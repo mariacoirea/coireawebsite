@@ -1,0 +1,28 @@
+{
+  "email": {
+    "form": {
+      "title": "Get Your Personalized Results",
+      "description": "Enter your information below to receive a detailed analysis of your organizational health assessment results.",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "submitButton": "Get My Results",
+      "submitting": "Sending...",
+      "helperText": "We'll send your personalized analysis to this email address.",
+      "success": "Success! Check your email for your detailed results.",
+      "error": "There was an error sending your results. Please try again.",
+      "validation": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "companyRequired": "Company name is required"
+      }
+    }
+  }
+}
