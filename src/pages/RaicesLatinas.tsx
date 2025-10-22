@@ -73,12 +73,11 @@ const RaicesLatinas = () => {
               </p>
 
               <div className="max-w-5xl mx-auto">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-4">
-                  Latin America is not a region in need of saving.
-                  It is a land of memory, courage, and creation — where transformation already lives in communities, collectives, and leaders building change every day. What is missing is not purpose. What is missing is structure that sustains purpose.
-                </p>
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> exists to strengthen the organizations that protect territory, culture, and human dignity across the region. We bring capacity, clarity, and long-term sustainability to NGOs, social enterprises, and community-led initiatives — so their work can grow with integrity.
+                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> is the social impact division of COIREA dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America.
+                </p>
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4 font-medium">
+                  We collaborate with organizations working with Indigenous and rural communities to build operational strength, leadership capacity, and long-term sustainability using the <strong className="text-[hsl(var(--raices-sage-green))] font-semibold">COIREA Regenerative Operating System (COIREA OS)</strong>.
                 </p>
               </div>
             </div>
@@ -92,12 +91,8 @@ const RaicesLatinas = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
                 A New Path for Impact in Latin America
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium mb-6">
-                Latin America is not a region in need of saving.
-                It is a land of memory, courage, and creation — where transformation already lives in communities, collectives, and leaders building change every day. What is missing is not purpose. What is missing is structure that sustains purpose.
-              </p>
               <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
-                COIREA – Raíces Latinas exists to strengthen the organizations that protect territory, culture, and human dignity across the region. We bring capacity, clarity, and long-term sustainability to NGOs, social enterprises, and community-led initiatives — so their work can grow with integrity.
+                Latin America is a land of intelligence, resilience, and cultural depth. But many organizations working for social transformation struggle to sustain their impact over time. Not because of lack of purpose — but because of lack of structure.
               </p>
             </div>
 
