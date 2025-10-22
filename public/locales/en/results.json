@@ -1,4 +1,48 @@
 {
+  "organizational": {
+    "title": "Your Organizational Health Results",
+    "overallScore": "Overall Score",
+    "organizationalStatus": "Organizational Status",
+    "pillarBreakdown": "Pillar Breakdown",
+    "selfLeadership": "Self-Leadership Assessment",
+    "painPoint": "Greatest Challenge",
+    "strength": "Greatest Strength",
+    "interconnectivity": "Interconnectivity",
+    "greatestChallenge": "Greatest Challenge",
+    "greatestStrength": "Greatest Strength",
+    "resultsSent": "Success! Your results have been sent to your email.",
+    "retakeButton": "Retake Assessment",
+    "statusMessages": {
+      "Misaligned": "Your organization shows significant disconnection from purpose. Focus on foundational alignment and cultural clarity.",
+      "Emerging": "Basic structures exist but need strengthening. Prioritize leadership development and cross-functional collaboration.",
+      "Stabilizing": "Good foundation with room for optimization. Focus on innovation and strategic coherence.",
+      "Evolving": "Strong organizational health with clear momentum. Continue advancing integration and adaptive capacity.",
+      "Thriving": "Exceptional organizational alignment and vitality. Maintain excellence while exploring regenerative leadership practices."
+    },
+    "painPointMessages": {
+      "purposeCulture": "Your organization's purpose and culture need attention. When these foundations are weak, employees lack direction and engagement suffers. Consider clarifying your organizational values and ensuring they're lived daily.",
+      "collaboration": "Cross-functional collaboration is challenging. Silos prevent information flow and slow decision-making. Focus on building bridges between teams and creating collaborative spaces.",
+      "leadership": "Leadership effectiveness needs development. Strong leadership cascades positive impact throughout the organization. Invest in leadership development and coaching.",
+      "wellbeing": "Employee wellbeing shows strain. Sustainable performance requires healthy, supported team members. Prioritize wellbeing initiatives and psychological safety.",
+      "organizationalStrategy": "Strategic alignment needs strengthening. When strategy isn't clear or coherent, efforts scatter and results suffer. Focus on strategic clarity and alignment."
+    },
+    "selfLeadershipMessages": {
+      "0-25": "Self-leadership awareness is emerging. This is your foundation for personal and organizational growth.",
+      "26-50": "Developing self-leadership capacity. You're building important personal leadership capabilities.",
+      "51-75": "Strong self-leadership foundation. Your personal leadership is positively impacting your organization.",
+      "76-100": "Exceptional self-leadership. You're modeling conscious leadership that elevates your entire organization."
+    },
+    "interconnectivityMessages": {
+      "low": {
+        "title": "Limited Interconnectivity",
+        "message": "Your organizational pillars are operating somewhat independently. While each area may function well, there's opportunity to strengthen connections and create synergy across domains."
+      },
+      "strong": {
+        "title": "Strong Interconnectivity",
+        "message": "Your organizational pillars reinforce each other effectively. This interconnectedness creates resilience and accelerates growth across all areas."
+      }
+    }
+  },
   "email": {
     "form": {
       "title": "Get Your Personalized Results",
