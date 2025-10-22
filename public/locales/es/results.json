@@ -22,20 +22,18 @@
     },
     
     "painPointMessages": {
-      "Purpose & Culture": "El propósito y la cultura de tu organización necesitan una mayor claridad y alineación. Enfócate en articular valores claros y crear rituales que refuercen la identidad compartida.",
-      "Collaboration": "Los equipos están trabajando de manera más aislada que integrada. Prioriza crear canales de comunicación más fuertes y fomentar una mentalidad colaborativa.",
-      "Leadership": "Las prácticas de liderazgo requieren desarrollo. Enfócate en construir confianza, aumentar la transparencia y crear un liderazgo más participativo e inclusivo.",
-      "Self-Leadership": "El liderazgo personal a nivel individual necesita fortalecerse. Invierte en capacidad de autoconocimiento y desarrolla prácticas que apoyen el crecimiento personal y la responsabilidad.",
-      "Well-Being": "El bienestar está comprometido en tu organización. Prioriza crear equilibrio sostenible, apoyar la salud mental y asegurar que las cargas de trabajo sean manejables.",
-      "Organizational Strategy": "La claridad y alineación estratégica necesitan mejora. Enfócate en comunicar la dirección de manera más efectiva y asegurar que los sistemas apoyen los objetivos estratégicos.",
-      "Interconnectivity": "El pensamiento sistémico y la interconectividad son débiles. Desarrolla una mayor conciencia de cómo las partes del sistema se impactan mutuamente y fortalece los ciclos de retroalimentación."
+      "Purpose & Culture": "Tu puntuación más baja es en Propósito y Cultura. Esto señala una desalineación entre tus valores y comportamientos diarios. Cuando las personas no se sienten emocionalmente conectadas a una misión compartida, o la cultura no refleja el propósito declarado, la energía y la confianza comienzan a erosionarse. Esto debilita la pertenencia, motivación y alineación a largo plazo.",
+      "Collaboration": "Tu puntuación más baja es en Colaboración. Esto sugiere fricción o fragmentación en cómo las personas trabajan juntas. Mala comunicación, silos o falta de propiedad compartida pueden drenar silenciosamente el impulso. Sin una fuerte colaboración, los equipos pierden su poder creativo y conectivo.",
+      "Leadership": "Tu puntuación más baja es en Liderazgo. Esto significa que el liderazgo puede no estar ofreciendo claridad, inspiración o confianza. Cuando el liderazgo se siente distante, reactivo o desconectado, afecta cada otra capa de la organización. La sanación comienza con presencia, transparencia y confianza relacional.",
+      "Well-Being": "Tu puntuación más baja es en Bienestar. Esto apunta a agotamiento, fatiga o desconexión emocional. El bienestar no es un lujo — es la línea base energética de una organización regenerativa. Sin él, el propósito se desvanece y el rendimiento sufre. Esta es una llamada para desacelerar y recalibrar.",
+      "Organizational Strategy": "Tu puntuación más baja es en Estrategia Organizacional. Esto revela que la estructura puede ser rígida, poco clara o desconectada de tu propósito. Cuando la estrategia se siente mecánica o desalineada con la realidad, los equipos pierden dirección. Una organización regenerativa fluye desde la claridad interna hacia la ejecución externa — este pilar necesita una reafinación."
     },
     
     "selfLeadershipMessages": {
-      "Below the Line": "Tu liderazgo personal actual está principalmente Por Debajo de la Línea, caracterizado por defensividad, culpa y perspectiva cerrada. El desarrollo en autoconocimiento y gestión emocional creará una base transformadora.",
-      "In Transition": "Estás en transición entre operación Por Debajo y Por Encima de la Línea. Continúa desarrollando prácticas de autoconocimiento y responsabilidad para moverte más consistentemente hacia el liderazgo consciente.",
-      "Conscious Leadership Emerging": "Estás operando principalmente Por Encima de la Línea con liderazgo consciente emergente. Tus prácticas de autoconocimiento son fuertes. Continúa profundizando en responsabilidad y apertura.",
-      "Regenerative Leadership Embodied": "Incorporas el liderazgo consciente y regenerativo, operando consistentemente Por Encima de la Línea con perspectiva sistémica. Tu liderazgo crea condiciones para que otros prosperen."
+      "Below the Line": "Probablemente estás operando en patrones de liderazgo reactivo (urgencia, miedo, control), y tu organización refleja esa desconexión.",
+      "In Transition": "Estás despertando. Tanto tu liderazgo como tu organización están cambiando — pero la incorporación completa y la consistencia aún están madurando.",
+      "Conscious Leadership Emerging": "Estás liderando con inteligencia emocional y manteniendo confianza relacional — pero aún hay crecimiento para estabilizar la cultura a tu alrededor.",
+      "Regenerative Leadership Embodied": "Tú y tu organización están operando desde la claridad, confianza e integridad. Estás modelando un liderazgo regenerativo que inspira transformación."
     },
     
     "interconnectivityMessages": {

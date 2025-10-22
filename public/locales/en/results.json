@@ -20,17 +20,17 @@
       "Thriving": "Exceptional organizational alignment and vitality. Maintain excellence while exploring regenerative leadership practices."
     },
     "painPointMessages": {
-      "purposeCulture": "Your organization's purpose and culture need attention. When these foundations are weak, employees lack direction and engagement suffers. Consider clarifying your organizational values and ensuring they're lived daily.",
-      "collaboration": "Cross-functional collaboration is challenging. Silos prevent information flow and slow decision-making. Focus on building bridges between teams and creating collaborative spaces.",
-      "leadership": "Leadership effectiveness needs development. Strong leadership cascades positive impact throughout the organization. Invest in leadership development and coaching.",
-      "wellbeing": "Employee wellbeing shows strain. Sustainable performance requires healthy, supported team members. Prioritize wellbeing initiatives and psychological safety.",
-      "organizationalStrategy": "Strategic alignment needs strengthening. When strategy isn't clear or coherent, efforts scatter and results suffer. Focus on strategic clarity and alignment."
+      "Purpose & Culture": "Your lowest score is in Purpose & Culture. This signals a misalignment between your values and day-to-day behaviors. When people don't feel emotionally connected to a shared mission, or the culture doesn't reflect the stated purpose, energy and trust begin to erode. This weakens belonging, motivation, and long-term alignment.",
+      "Collaboration": "Your lowest score is in Collaboration. This suggests friction or fragmentation in how people work together. Poor communication, silos, or lack of shared ownership can quietly drain momentum. Without strong collaboration, teams lose their creative and connective power.",
+      "Leadership": "Your lowest score is in Leadership. This means leadership may not be offering clarity, inspiration, or trust. When leadership feels distant, reactive, or disconnected, it affects every other layer of the organization. Healing begins with presence, transparency, and relational trust.",
+      "Well-Being": "Your lowest score is in Well-Being. This points to burnout, fatigue, or emotional disconnection. Well-being is not a luxury — it's the energetic baseline of a regenerative organization. Without it, purpose fades and performance suffers. This is a call to slow down and recalibrate.",
+      "Organizational Strategy": "Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning."
     },
     "selfLeadershipMessages": {
-      "0-25": "Self-leadership awareness is emerging. This is your foundation for personal and organizational growth.",
-      "26-50": "Developing self-leadership capacity. You're building important personal leadership capabilities.",
-      "51-75": "Strong self-leadership foundation. Your personal leadership is positively impacting your organization.",
-      "76-100": "Exceptional self-leadership. You're modeling conscious leadership that elevates your entire organization."
+      "Below the Line": "You are likely operating in reactive leadership patterns (urgency, fear, control), and your organization reflects that disconnection.",
+      "In Transition": "You're awakening. Both your leadership and your org are shifting — but full embodiment and consistency are still maturing.",
+      "Conscious Leadership Emerging": "You are leading with emotional intelligence and holding relational trust — but there's still growth to stabilize the culture around you.",
+      "Regenerative Leadership Embodied": "You and your organization are operating from clarity, trust, and integrity. You are modeling regenerative leadership that inspires transformation."
     },
     "interconnectivityMessages": {
       "low": {

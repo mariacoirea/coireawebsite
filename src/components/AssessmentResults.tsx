@@ -8,29 +8,6 @@ interface AssessmentResultsProps {
   onRetake: () => void;
 }
 
-const statusMessages = {
-  'Misaligned': 'There is deep misalignment across your system. This is a signal to pause and realign from the roots.',
-  'Emerging': 'You\'re in the early stages of conscious transformation. There\'s awareness building — and that\'s the first step.',
-  'Stabilizing': 'You\'re laying a solid foundation, but some structural elements need care for long-term coherence.',
-  'Evolving': 'You\'re in a phase of conscious growth. Keep nurturing the flow between strategy, leadership, and team dynamics.',
-  'Thriving': 'Your organization is thriving — rooted in purpose, balanced in leadership, and aligned in its structure and well-being.'
-};
-
-const painPointMessages = {
-  'Purpose & Culture': 'Your lowest score is in Purpose & Culture. This signals a misalignment between your values and day-to-day behaviors. When people don\'t feel emotionally connected to a shared mission, or the culture doesn\'t reflect the stated purpose, energy and trust begin to erode. This weakens belonging, motivation, and long-term alignment.',
-  'Collaboration': 'Your lowest score is in Collaboration. This suggests friction or fragmentation in how people work together. Poor communication, silos, or lack of shared ownership can quietly drain momentum. Without strong collaboration, teams lose their creative and connective power.',
-  'Leadership': 'Your lowest score is in Leadership. This means leadership may not be offering clarity, inspiration, or trust. When leadership feels distant, reactive, or disconnected, it affects every other layer of the organization. Healing begins with presence, transparency, and relational trust.',
-  'Well-Being': 'Your lowest score is in Well-Being. This points to burnout, fatigue, or emotional disconnection. Well-being is not a luxury — it\'s the energetic baseline of a regenerative organization. Without it, purpose fades and performance suffers. This is a call to slow down and recalibrate.',
-  'Organizational Strategy': 'Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning.'
-};
-
-const selfLeadershipMessages = {
-  'Below the Line': 'You are likely operating in reactive leadership patterns (urgency, fear, control), and your organization reflects that disconnection.',
-  'In Transition': 'You\'re awakening. Both your leadership and your org are shifting — but full embodiment and consistency are still maturing.',
-  'Conscious Leadership Emerging': 'You are leading with emotional intelligence and holding relational trust — but there\'s still growth to stabilize the culture around you.',
-  'Regenerative Leadership Embodied': 'You and your organization are operating from clarity, trust, and integrity. You are modeling regenerative leadership that inspires transformation.'
-};
-
 const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
   const { t } = useTranslation('results');
   const { pillarScores, totalScore, interconnectivityScore, selfLeadershipScore, selfLeadershipPercent, organizationalStatus, painPoint, strength } = results;
