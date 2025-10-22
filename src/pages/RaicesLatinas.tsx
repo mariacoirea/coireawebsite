@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Sprout, Flame, Globe } from "lucide-react";
+
 import { 
   MayanDiamond, 
   MayanConcentric, 
@@ -60,7 +60,7 @@ const RaicesLatinas = () => {
               {/* Logo/Icon */}
               <div className="flex justify-center mb-8">
                 <div className="w-20 h-20 rounded-full bg-[hsl(var(--raices-earth-brown))]/10 flex items-center justify-center">
-                  <Sprout className="w-10 h-10 text-[hsl(var(--raices-earth-brown))]" strokeWidth={1.5} />
+                  <MayanBird className="w-10 h-10 text-[hsl(var(--raices-earth-brown))]" strokeWidth={1.5} />
                 </div>
               </div>
 
@@ -271,21 +271,21 @@ const RaicesLatinas = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {[
                 {
-                  icon: Sprout,
+                  icon: MayanPyramid,
                   name: "Seed Program",
                   subtitle: "Organizational Foundations",
-                  description: "Build internal clarity and structure with COIREA OS Lite.",
+                  description: "Build internal clarity and structure with COIREA OS.",
                   color: "raices-sage-green"
                 },
                 {
-                  icon: Flame,
+                  icon: MayanSun,
                   name: "Build Program",
                   subtitle: "Leadership & Execution",
                   description: "Develop strong operational rhythm and leadership capacity.",
                   color: "raices-deep-copper"
                 },
                 {
-                  icon: Globe,
+                  icon: MayanConcentric,
                   name: "Thrive Program",
                   subtitle: "Regenerative Growth",
                   description: "Create long-term sustainability and aligned partnership ecosystems.",
