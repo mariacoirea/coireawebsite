@@ -64,7 +64,6 @@ const RaicesLatinas = () => {
                   src={coireaLogo} 
                   alt="COIREA Logo" 
                   className="w-24 h-24 drop-shadow-lg"
-                  style={{ filter: 'hue-rotate(70deg) saturate(0.8) brightness(0.9)' }}
                 />
               </div>
 
