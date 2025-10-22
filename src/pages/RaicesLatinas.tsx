@@ -16,7 +16,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
 import coireaLogo from "@/assets/coirea-logo.png";
-const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero.png";
+const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
 
