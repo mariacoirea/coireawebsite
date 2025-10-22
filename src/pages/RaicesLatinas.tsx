@@ -59,25 +59,25 @@ const RaicesLatinas = () => {
             <div className="text-center space-y-8">
               {/* Logo/Icon */}
               <div className="flex justify-center mb-8">
-                <div className="w-20 h-20 rounded-full bg-[hsl(var(--raices-earth-brown))]/10 flex items-center justify-center">
-                  <MayanBird className="w-10 h-10 text-[hsl(var(--raices-earth-brown))]" strokeWidth={1.5} />
+                <div className="w-20 h-20 rounded-full bg-[hsl(var(--raices-earth-brown))]/20 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                  <MayanBird className="w-10 h-10 text-[hsl(var(--raices-earth-brown))] drop-shadow-md" strokeWidth={1.5} />
                 </div>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                 COIREA – Raíces Latinas
               </h1>
               
-              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-5xl mx-auto">
+              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-semibold max-w-5xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
                 Strengthening organizations that shape the future of Latin America
               </p>
 
-              <div className="max-w-5xl mx-auto">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+              <div className="max-w-5xl mx-auto bg-[hsl(var(--raices-sandstone))]/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-semibold drop-shadow-sm">
                   Latin America is not a region in need of saving. It is a land of memory, courage, and creation — where transformation already lives in communities, collectives, and leaders building change every day. What is missing is not purpose. What is missing is structure that sustains purpose.
                 </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4 font-medium">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> exists to strengthen the organizations that protect territory, culture, and human dignity across the region. We bring capacity, clarity, and long-term sustainability to NGOs, social enterprises, and community-led initiatives — so their work can grow with integrity.
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4 font-semibold drop-shadow-sm">
+                  <strong className="text-[hsl(var(--raices-earth-brown))] font-bold">COIREA – Raíces Latinas</strong> exists to strengthen the organizations that protect territory, culture, and human dignity across the region. We bring capacity, clarity, and long-term sustainability to NGOs, social enterprises, and community-led initiatives — so their work can grow with integrity.
                 </p>
               </div>
             </div>
