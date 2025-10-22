@@ -15,6 +15,7 @@ import {
 } from "@/components/MayanIcons";
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
+import coireaLogo from "@/assets/coirea-logo.png";
 const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero.png";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
@@ -59,9 +60,12 @@ const RaicesLatinas = () => {
             <div className="text-center space-y-8">
               {/* Logo/Icon */}
               <div className="flex justify-center mb-8">
-                <div className="w-20 h-20 rounded-full bg-[hsl(var(--raices-earth-brown))]/20 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                  <MayanBird className="w-10 h-10 text-[hsl(var(--raices-earth-brown))] drop-shadow-md" strokeWidth={1.5} />
-                </div>
+                <img 
+                  src={coireaLogo} 
+                  alt="COIREA Logo" 
+                  className="w-24 h-24 drop-shadow-lg"
+                  style={{ filter: 'hue-rotate(70deg) saturate(0.8) brightness(0.9)' }}
+                />
               </div>
 
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
