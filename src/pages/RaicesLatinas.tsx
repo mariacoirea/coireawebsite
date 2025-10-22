@@ -15,7 +15,7 @@ import {
 } from "@/components/MayanIcons";
 import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
-import raicesHeroImg from "@/assets/raices-latinas-hero.png";
+const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero.png";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
 
@@ -48,11 +48,11 @@ const RaicesLatinas = () => {
           {/* Background image */}
           <div className="absolute inset-0">
             <img 
-              src={raicesHeroImg} 
-              alt="Latin American landscape with roots" 
-              className="w-full h-full object-cover opacity-45"
+              src={raicesCulturalHero} 
+              alt="Traditional Latin American cultural collage with Andean heritage" 
+              className="w-full h-full object-cover opacity-30"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/50 to-[hsl(var(--raices-sandstone))]/30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/65 to-[hsl(var(--raices-sandstone))]/45" />
           </div>
 
           <div className="container mx-auto max-w-7xl relative z-10">
