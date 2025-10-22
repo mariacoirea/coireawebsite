@@ -43,11 +43,11 @@ const RaicesLatinas = () => {
         url="/raices-latinas"
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-background">
+      <div className="min-h-screen bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-background overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
           {/* Background image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 -left-px -right-px">
             <img 
               src={raicesCulturalHero} 
               alt="Traditional Latin American cultural collage with Andean heritage" 
