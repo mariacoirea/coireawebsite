@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 
 import { 
   MayanDiamond, 
@@ -18,24 +22,53 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 import coireaLogo from "@/assets/coirea-logo.png";
 const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
 
+const formSchema = z.object({
+  name: z.string().trim().min(1, { message: 'Name is required' }).max(200),
+  email: z.string().trim().email({ message: 'Invalid email address' }).max(320),
+  organization: z.string().trim().min(1, { message: 'Organization is required' }).max(200),
+  message: z.string().trim().min(1, { message: 'Message is required' }).max(5000),
+});
+
+type FormData = z.infer<typeof formSchema>;
+
 const RaicesLatinas = () => {
   const { t } = useTranslation('raices');
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    message: ""
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      organization: '',
+      message: '',
+    },
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Implement form submission
+  const handleSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('send-raices-form', {
+        body: data,
+      });
+
+      if (error) throw error;
+
+      toast.success(t('partnership.form.successMessage', 'Message sent successfully! We will contact you soon.'));
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error(t('partnership.form.errorMessage', 'Failed to send message. Please try again.'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -306,20 +339,15 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                Partnership Invitation
+                {t('partnership.title')}
               </h2>
               <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-8 font-medium">
-                We are building a network of organizations, funders, and allies committed to strengthening Latin America from within.
+                {t('partnership.intro')}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {[
-                "NGOs seeking to strengthen internal capacity",
-                "Community-led projects growing impact sustainably",
-                "Foundations and donors funding capacity building",
-                "Ecosystem builders creating regenerative change in the region",
-              ].map((item, index) => (
+              {(t('partnership.partners', { returnObjects: true }) as string[]).map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-6">
                     <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">{item}</p>
@@ -330,7 +358,7 @@ const RaicesLatinas = () => {
 
             <div className="text-center mb-12">
               <p className="text-xl text-[hsl(var(--raices-earth-brown))] font-medium mb-4">
-                If you're building impact with purpose — we are ready to build with you.
+                {t('partnership.callToAction')}
               </p>
             </div>
 
@@ -338,73 +366,98 @@ const RaicesLatinas = () => {
             <Card className="border-[hsl(var(--raices-earth-brown))]/30 bg-white/90 backdrop-blur-sm">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6 text-center">
-                  Let's Co-Create Together
+                  {t('partnership.formTitle')}
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[hsl(var(--raices-charcoal-earth))] mb-2">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
+                            {t('partnership.form.name')}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              {...field}
+                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[hsl(var(--raices-charcoal-earth))] mb-2">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
+                            {t('partnership.form.email')}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              {...field}
+                              type="email"
+                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <div>
-                    <label htmlFor="organization" className="block text-sm font-medium text-[hsl(var(--raices-charcoal-earth))] mb-2">
-                      Organization
-                    </label>
-                    <Input
-                      id="organization"
-                      type="text"
-                      value={formData.organization}
-                      onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                      required
-                      className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                    <FormField
+                      control={form.control}
+                      name="organization"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
+                            {t('partnership.form.organization')}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              {...field}
+                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[hsl(var(--raices-charcoal-earth))] mb-2">
-                      Tell us about your organization and what you're looking for
-                    </label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
-                      rows={5}
-                      className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
+                            {t('partnership.form.message')}
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              {...field}
+                              rows={5}
+                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-sage-green))] text-white transition-all duration-300"
-                    size="lg"
-                  >
-                    Send Message
-                  </Button>
-                </form>
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-sage-green))] text-white transition-all duration-300"
+                      size="lg"
+                    >
+                      {isSubmitting ? t('partnership.form.sending', 'Sending...') : t('partnership.form.submit')}
+                    </Button>
+                  </form>
+                </Form>
               </CardContent>
             </Card>
           </div>

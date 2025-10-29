@@ -186,15 +186,25 @@
     ]
   },
   "partnership": {
-    "title": "¿Listo para Conectar Visión con Estructura?",
-    "subtitle": "Construyamos una alianza arraigada en reciprocidad, claridad e impacto duradero.",
-    "cta": "Iniciar una Conversación",
+    "title": "Invitación a Colaborar",
+    "intro": "Estamos construyendo una red de organizaciones, financiadores y aliados comprometidos con fortalecer América Latina desde adentro.",
+    "partners": [
+      "ONGs que buscan fortalecer su capacidad interna",
+      "Proyectos liderados por comunidades creciendo su impacto de manera sostenible",
+      "Fundaciones y donantes financiando construcción de capacidades",
+      "Constructores de ecosistemas creando cambio regenerativo en la región"
+    ],
+    "callToAction": "Si estás construyendo impacto con propósito — estamos listos para construir contigo.",
+    "formTitle": "Co-Creemos Juntos",
     "form": {
-      "name": "Tu Nombre",
+      "name": "Nombre",
       "email": "Correo Electrónico",
-      "organization": "Nombre de Organización / Iniciativa",
-      "message": "Cuéntanos sobre tu visión y necesidades",
-      "submit": "Enviar Mensaje"
+      "organization": "Organización",
+      "message": "Cuéntanos sobre tu organización y lo que buscas",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "successMessage": "¡Mensaje enviado exitosamente! Te contactaremos pronto.",
+      "errorMessage": "Error al enviar el mensaje. Por favor intenta de nuevo."
     }
   }
 }

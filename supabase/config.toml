@@ -1,1 +1,4 @@
 project_id = "ugvvvqodvkbojzbtllxj"
+
+[functions.send-raices-form]
+verify_jwt = false

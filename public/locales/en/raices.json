@@ -186,15 +186,25 @@
     ]
   },
   "partnership": {
-    "title": "Ready to Bridge Vision with Structure?",
-    "subtitle": "Let's build a partnership rooted in reciprocity, clarity, and lasting impact.",
-    "cta": "Start a Conversation",
+    "title": "Partnership Invitation",
+    "intro": "We are building a network of organizations, funders, and allies committed to strengthening Latin America from within.",
+    "partners": [
+      "NGOs seeking to strengthen internal capacity",
+      "Community-led projects growing impact sustainably",
+      "Foundations and donors funding capacity building",
+      "Ecosystem builders creating regenerative change in the region"
+    ],
+    "callToAction": "If you're building impact with purpose — we are ready to build with you.",
+    "formTitle": "Let's Co-Create Together",
     "form": {
-      "name": "Your Name",
-      "email": "Email Address",
-      "organization": "Organization / Initiative Name",
-      "message": "Tell us about your vision and needs",
-      "submit": "Send Message"
+      "name": "Name",
+      "email": "Email",
+      "organization": "Organization",
+      "message": "Tell us about your organization and what you're looking for",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Message sent successfully! We will contact you soon.",
+      "errorMessage": "Failed to send message. Please try again."
     }
   }
 }
