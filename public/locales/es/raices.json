@@ -1,0 +1,128 @@
+{
+  "hero": {
+    "title": "COIREA Raíces Latinas",
+    "subtitle": "Conectando Recursos Globales con Impacto Local",
+    "description": "Empoderando organizaciones con propósito en América Latina para escalar con claridad, estructura e integridad."
+  },
+  "intro": {
+    "text1": "América Latina posee una inteligencia, creatividad y potencial regenerativo profundos — sin embargo, muchas iniciativas comunitarias y ONGs luchan por escalar su impacto de manera sostenible.",
+    "text2": "No por falta de propósito, sino por falta de estructura que sostenga el propósito.",
+    "bridge": "COIREA Raíces Latinas actúa como un puente entre los recursos globales y las iniciativas locales.",
+    "description": "Combinamos el pensamiento sistémico estructurado del Norte Global con la sabiduría regenerativa de América Latina — ayudando a organizaciones visionarias a asegurar financiamiento, optimizar operaciones y construir capacidad para una transformación social duradera."
+  },
+  "whyCoirea": {
+    "title": "¿Por Qué COIREA Raíces Latinas?",
+    "subtitle": "El Sistema Operativo COIREA adaptado para el impacto social latinoamericano",
+    "gap": {
+      "title": "La Brecha que Cerramos",
+      "description": "Muchas iniciativas latinoamericanas están arraigadas en sabiduría cultural profunda, cuidado comunitario y prácticas regenerativas. Sin embargo, a menudo enfrentan barreras al navegar sistemas globales:"
+    },
+    "barriers": {
+      "funding": {
+        "title": "Financiamiento y Preparación para Financiadores",
+        "description": "Acceder a subvenciones, inversión social o filantropía requiere estructuras de reporte específicas, planes estratégicos y marcos operacionales que no siempre son intuitivos para movimientos de base."
+      },
+      "operations": {
+        "title": "Capacidad Operacional",
+        "description": "Escalar el impacto requiere sistemas de gestión de proyectos, gobernanza, cumplimiento y sostenibilidad financiera — no solo pasión y visión."
+      },
+      "communication": {
+        "title": "Comunicación Intercultural",
+        "description": "Los financiadores y socios globales a menudo no hablan el mismo lenguaje cultural u operacional que las comunidades locales, lo que lleva a desalineación y oportunidades perdidas."
+      }
+    },
+    "solution": {
+      "title": "Nuestro Enfoque",
+      "description": "Nos encontramos con las organizaciones donde están — honrando su contexto cultural y valores regenerativos — y las equipamos con la claridad, sistemas y marcos que necesitan para prosperar en ecosistemas locales y globales."
+    }
+  },
+  "whoWeWorkWith": {
+    "title": "Con Quiénes Trabajamos",
+    "types": {
+      "ngos": {
+        "title": "ONGs y Empresas Sociales",
+        "description": "Construyendo gobernanza, marcos estratégicos y operaciones listas para financiamiento para organizaciones sin fines de lucro que impulsan el cambio social."
+      },
+      "cooperatives": {
+        "title": "Cooperativas Indígenas y Rurales",
+        "description": "Apoyando iniciativas de propiedad comunitaria con estructura, desarrollo de liderazgo y movilización de recursos."
+      },
+      "womenLed": {
+        "title": "Iniciativas Lideradas por Mujeres",
+        "description": "Empoderando a líderes y colectivos femeninos con herramientas para la sostenibilidad financiera y la resiliencia organizacional."
+      },
+      "regenerative": {
+        "title": "Proyectos Comunitarios Regenerativos",
+        "description": "Fortaleciendo iniciativas ecológicas y centradas en la comunidad a través de claridad, gobernanza y medición de impacto."
+      }
+    }
+  },
+  "whatWeOffer": {
+    "title": "Qué Ofrecemos",
+    "subtitle": "Apoyo personalizado para el crecimiento de tu organización",
+    "services": {
+      "fundingReadiness": {
+        "title": "Preparación para Financiamiento y Financiadores",
+        "items": [
+          "Desarrollo de narrativa estratégica para solicitudes de subvenciones",
+          "Teoría del Cambio y marcos de medición de impacto",
+          "Sistemas de presupuesto y reportes financieros",
+          "Construcción de relaciones con financiadores y coaching de presentaciones"
+        ]
+      },
+      "capacityBuilding": {
+        "title": "Construcción de Capacidad Organizacional",
+        "items": [
+          "Diseño de gobernanza (estructura de junta, estatutos, procesos de toma de decisiones)",
+          "Sistemas operacionales (gestión de proyectos, flujos de trabajo internos, POEs)",
+          "Desarrollo de liderazgo y alineación de equipo",
+          "Planificación de sucesión y documentación de conocimiento"
+        ]
+      },
+      "consciousLeadership": {
+        "title": "Desarrollo de Liderazgo Consciente",
+        "items": [
+          "Coaching ejecutivo para fundadores y directores",
+          "Cohesión de equipo y prácticas de comunicación",
+          "Resolución de conflictos y modelos de gobernanza regenerativa",
+          "Transiciones de liderazgo y sanación organizacional"
+        ]
+      },
+      "coireaOS": {
+        "title": "Implementación del Sistema Operativo COIREA",
+        "description": "Un sistema operativo completo para claridad y ejecución organizacional — adaptado para contextos latinoamericanos.",
+        "includes": "Planificación estratégica, marcos OKR, ritmos regenerativos, rituales de alineación de equipo y más."
+      }
+    }
+  },
+  "ourPhilosophy": {
+    "title": "Nuestra Filosofía",
+    "subtitle": "Arraigada en Ayni — el principio de reciprocidad",
+    "principles": {
+      "reciprocity": {
+        "title": "Reciprocidad Sobre Extracción",
+        "description": "Creemos en el beneficio mutuo — no solo consultoría, sino co-creación con las comunidades."
+      },
+      "integrity": {
+        "title": "Integridad Sobre Imitación",
+        "description": "No imponemos modelos del Norte Global. Adaptamos sistemas para honrar la cultura local, la sabiduría y las formas de ser."
+      },
+      "regeneration": {
+        "title": "Regeneración Sobre Escala a Cualquier Costo",
+        "description": "El verdadero impacto no es solo crecimiento — es sostenibilidad, bienestar y prácticas regenerativas que honran a las personas y el planeta."
+      }
+    }
+  },
+  "partnership": {
+    "title": "¿Listo para Conectar Visión con Estructura?",
+    "subtitle": "Construyamos una alianza arraigada en reciprocidad, claridad e impacto duradero.",
+    "cta": "Iniciar una Conversación",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Correo Electrónico",
+      "organization": "Nombre de Organización / Iniciativa",
+      "message": "Cuéntanos sobre tu visión y necesidades",
+      "submit": "Enviar Mensaje"
+    }
+  }
+}

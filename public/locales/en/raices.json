@@ -1,0 +1,128 @@
+{
+  "hero": {
+    "title": "COIREA Raíces Latinas",
+    "subtitle": "Bridging Global Resources with Grassroots Impact",
+    "description": "Empowering purpose-driven organizations across Latin America to scale with clarity, structure, and integrity."
+  },
+  "intro": {
+    "text1": "Latin America holds profound intelligence, creativity, and regenerative potential — yet many community-led initiatives and NGOs struggle to scale their impact sustainably.",
+    "text2": "Not because of lack of purpose, but because of lack of structure that sustains purpose.",
+    "bridge": "COIREA Raíces Latinas acts as a bridge between global resources and local initiatives.",
+    "description": "We combine the structured systems thinking of the Global North with the regenerative wisdom of Latin America — helping visionary organizations secure funding, streamline operations, and build capacity for lasting social transformation."
+  },
+  "whyCoirea": {
+    "title": "Why COIREA Raíces Latinas?",
+    "subtitle": "The COIREA OS adapted for Latin American social impact",
+    "gap": {
+      "title": "The Gap We Bridge",
+      "description": "Many Latin American initiatives are rooted in deep cultural wisdom, community care, and regenerative practices. Yet they often face barriers when navigating global systems:"
+    },
+    "barriers": {
+      "funding": {
+        "title": "Funding & Funder Readiness",
+        "description": "Accessing grants, social investment, or philanthropy requires specific reporting structures, strategic plans, and operational frameworks that aren't always intuitive to grassroots movements."
+      },
+      "operations": {
+        "title": "Operational Capacity",
+        "description": "Scaling impact requires systems for project management, governance, compliance, and financial sustainability — not just passion and vision."
+      },
+      "communication": {
+        "title": "Cross-Cultural Communication",
+        "description": "Funders and global partners often don't speak the same cultural or operational language as local communities, leading to misalignment and missed opportunities."
+      }
+    },
+    "solution": {
+      "title": "Our Approach",
+      "description": "We meet organizations where they are — honoring their cultural context and regenerative values — and equip them with the clarity, systems, and frameworks they need to thrive in both local and global ecosystems."
+    }
+  },
+  "whoWeWorkWith": {
+    "title": "Who We Work With",
+    "types": {
+      "ngos": {
+        "title": "NGOs & Social Enterprises",
+        "description": "Building governance, strategic frameworks, and funding-ready operations for nonprofits driving social change."
+      },
+      "cooperatives": {
+        "title": "Indigenous & Rural Cooperatives",
+        "description": "Supporting community-owned initiatives with structure, leadership development, and resource mobilization."
+      },
+      "womenLed": {
+        "title": "Women-Led Initiatives",
+        "description": "Empowering female leaders and collectives with tools for financial sustainability and organizational resilience."
+      },
+      "regenerative": {
+        "title": "Regenerative Community Projects",
+        "description": "Strengthening ecological and community-centered initiatives through clarity, governance, and impact measurement."
+      }
+    }
+  },
+  "whatWeOffer": {
+    "title": "What We Offer",
+    "subtitle": "Tailored support for your organization's growth",
+    "services": {
+      "fundingReadiness": {
+        "title": "Funding & Funder Readiness",
+        "items": [
+          "Strategic narrative development for grant applications",
+          "Theory of Change & impact measurement frameworks",
+          "Budgeting and financial reporting systems",
+          "Funder relationship building and pitch coaching"
+        ]
+      },
+      "capacityBuilding": {
+        "title": "Organizational Capacity Building",
+        "items": [
+          "Governance design (board structure, bylaws, decision-making processes)",
+          "Operational systems (project management, internal workflows, SOPs)",
+          "Leadership development and team alignment",
+          "Succession planning and knowledge documentation"
+        ]
+      },
+      "consciousLeadership": {
+        "title": "Conscious Leadership Development",
+        "items": [
+          "Executive coaching for founders and directors",
+          "Team cohesion and communication practices",
+          "Conflict resolution and regenerative governance models",
+          "Leadership transitions and organizational healing"
+        ]
+      },
+      "coireaOS": {
+        "title": "COIREA OS Implementation",
+        "description": "A full operating system for organizational clarity and execution — adapted for Latin American contexts.",
+        "includes": "Strategic planning, OKR frameworks, regenerative rhythms, team alignment rituals, and more."
+      }
+    }
+  },
+  "ourPhilosophy": {
+    "title": "Our Philosophy",
+    "subtitle": "Rooted in Ayni — the principle of reciprocity",
+    "principles": {
+      "reciprocity": {
+        "title": "Reciprocity Over Extraction",
+        "description": "We believe in mutual benefit — not just consulting, but co-creating with communities."
+      },
+      "integrity": {
+        "title": "Integrity Over Imitation",
+        "description": "We don't impose Global North models. We adapt systems to honor local culture, wisdom, and ways of being."
+      },
+      "regeneration": {
+        "title": "Regeneration Over Scale at Any Cost",
+        "description": "True impact isn't just about growth — it's about sustainability, wellbeing, and regenerative practices that honor people and planet."
+      }
+    }
+  },
+  "partnership": {
+    "title": "Ready to Bridge Vision with Structure?",
+    "subtitle": "Let's build a partnership rooted in reciprocity, clarity, and lasting impact.",
+    "cta": "Start a Conversation",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "organization": "Organization / Initiative Name",
+      "message": "Tell us about your vision and needs",
+      "submit": "Send Message"
+    }
+  }
+}

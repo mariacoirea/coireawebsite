@@ -17,12 +17,14 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import coireaLogo from "@/assets/coirea-logo.png";
 const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
 
 const RaicesLatinas = () => {
+  const { t } = useTranslation('raices');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -72,15 +74,15 @@ const RaicesLatinas = () => {
               </div>
 
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-                COIREA Raíces Latinas
+                {t('hero.title')}
               </h1>
               
               <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-5xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-                Social Impact Initiative for Latin America
+                {t('hero.subtitle')}
               </p>
               
               <p className="text-lg md:text-xl text-[hsl(var(--raices-earth-brown))] font-medium max-w-4xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-                Empowering purpose-driven organizations to scale with clarity, structure, and integrity.
+                {t('hero.description')}
               </p>
 
             </div>
@@ -92,19 +94,19 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="space-y-8 max-w-5xl mx-auto">
               <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium text-center">
-                Latin America and the Global South hold profound intelligence, creativity, and regenerative potential — yet many community-led initiatives and NGOs struggle to scale their impact sustainably.
+                {t('intro.text1')}
               </p>
               
               <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-sage-green))] font-semibold text-center">
-                Not because of lack of purpose, but because of lack of structure that sustains purpose.
+                {t('intro.text2')}
               </p>
 
               <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-andean-clay))]/20">
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-6 font-medium">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA Raíces Latinas</strong> acts as a bridge between global resources and local initiatives.
+                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA Raíces Latinas</strong> {t('intro.bridge')}
                 </p>
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  We strengthen mission-driven organizations so they can scale their work, secure funding, and continue protecting culture, territory, and human dignity — in a way that remains human, ethical, and regenerative.
+                  {t('intro.description')}
                 </p>
               </div>
             </div>
@@ -450,15 +452,6 @@ const RaicesLatinas = () => {
                 </form>
               </CardContent>
             </Card>
-
-            <div className="text-center mt-8">
-              <p className="text-[hsl(var(--raices-charcoal-earth))] font-medium">
-                Or reach us directly at{" "}
-                <a href="mailto:raices@coirea.com" className="text-[hsl(var(--raices-sage-green))] hover:text-[hsl(var(--raices-earth-brown))] transition-colors underline">
-                  raices@coirea.com
-                </a>
-              </p>
-            </div>
           </div>
         </section>
 
