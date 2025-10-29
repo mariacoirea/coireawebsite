@@ -14,6 +14,8 @@ import {
   MayanBird
 } from "@/components/MayanIcons";
 import SEOHead from "@/components/SEOHead";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 import coireaLogo from "@/assets/coirea-logo.png";
 const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
@@ -42,10 +44,12 @@ const RaicesLatinas = () => {
         keywords="social impact Latin America, NGOs capacity building, indigenous cooperatives, women-led initiatives, regenerative community projects, social enterprises, funding readiness, conscious leadership, COIREA OS, Ayni reciprocity"
         url="/raices-latinas"
       />
+      
+      <Header />
 
       <div className="min-h-screen bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-background overflow-x-hidden">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
           {/* Background image */}
           <div className="absolute inset-0 -left-px -right-px">
             <img 
@@ -458,15 +462,9 @@ const RaicesLatinas = () => {
           </div>
         </section>
 
-        {/* Footer Note */}
-        <section className="py-12 px-6 bg-[hsl(var(--raices-earth-brown))]/5 border-t border-[hsl(var(--raices-andean-clay))]/20">
-          <div className="container mx-auto max-w-4xl text-center">
-            <p className="text-sm text-[hsl(var(--raices-charcoal-earth))]">
-              © 2024 COIREA - Raíces Latinas. All rights reserved.
-            </p>
-          </div>
-        </section>
       </div>
+      
+      <Footer />
     </>
   );
 };
