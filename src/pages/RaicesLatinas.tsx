@@ -102,8 +102,11 @@ const RaicesLatinas = () => {
               </p>
 
               <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-andean-clay))]/20">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-6 font-medium">
                   <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA Raíces Latinas</strong> {t('intro.bridge')}
+                </p>
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                  {t('intro.description')}
                 </p>
               </div>
             </div>
