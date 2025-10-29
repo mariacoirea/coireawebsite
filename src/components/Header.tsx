@@ -45,8 +45,9 @@ const Header = () => {
             <LocalizedLink to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/events" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('header.nav.events').toUpperCase()}
+            <LocalizedLink to="/raices-latinas" className="text-[hsl(var(--raices-earth-brown))] hover:text-[hsl(var(--raices-sage-green))] transition-colors font-body font-medium flex flex-col items-center leading-tight">
+              <span className="text-xs tracking-wider">SOCIAL</span>
+              <span className="text-xs tracking-wider">IMPACT</span>
             </LocalizedLink>
             <LanguageSwitch />
             <LocalizedLink to="/journey">
@@ -80,8 +81,11 @@ const Header = () => {
             <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/events" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.events').toUpperCase()}
+            <LocalizedLink to="/raices-latinas" onClick={closeMenu} className="block text-[hsl(var(--raices-earth-brown))] hover:text-[hsl(var(--raices-sage-green))] transition-colors font-body font-medium py-2">
+              <div className="flex flex-col leading-tight">
+                <span className="text-sm tracking-wider">SOCIAL</span>
+                <span className="text-sm tracking-wider">IMPACT</span>
+              </div>
             </LocalizedLink>
             <div className="py-2">
               <LanguageSwitch />
