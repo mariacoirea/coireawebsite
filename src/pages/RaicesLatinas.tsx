@@ -302,8 +302,18 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Who We Work With Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
+        <section className="py-24 px-6 relative overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <img 
+              src={andeanPeopleBg} 
+              alt="Andean people in traditional clothing" 
+              className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/75" />
+          </div>
+          
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
                 Who We Work With
