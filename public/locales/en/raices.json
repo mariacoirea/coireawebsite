@@ -113,6 +113,78 @@
       }
     }
   },
+  "mission": {
+    "title": "Our Mission",
+    "text1": "To enable social-impact organizations across Latin America to grow from inspiration to implementation — with clarity, coherence, and capacity.",
+    "text2": "We combine COIREA's Organizational Operating System (COIREA OS) with regenerative leadership and funding strategy to help NGOs and social enterprises scale purpose, not burnout."
+  },
+  "whatWeOffer": {
+    "title": "What We Offer",
+    "services": [
+      {
+        "area": "Organizational Clarity",
+        "purpose": "Define structure, roles, and decision-making models for agile, self-managing teams."
+      },
+      {
+        "area": "Strategic Direction",
+        "purpose": "Align mission, goals, and operations through practical roadmaps."
+      },
+      {
+        "area": "Leadership Capacity",
+        "purpose": "Train teams in conscious, collaborative, and accountable leadership."
+      },
+      {
+        "area": "Funding Readiness",
+        "purpose": "Build sustainability models and co-design grant proposals and partnerships."
+      },
+      {
+        "area": "Impact Communication",
+        "purpose": "Strengthen storytelling and reporting to attract aligned funders and allies."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      { "step": "Diagnose", "desc": "Assess current structure, leadership, and impact gaps" },
+      { "step": "Design", "desc": "Co-create a customized operating model using COIREA OS" },
+      { "step": "Implement", "desc": "Apply structure, rhythm, and leadership practices" },
+      { "step": "Sustain", "desc": "Embed ownership and long-term financial coherence" },
+      { "step": "Scale", "desc": "Connect to funding opportunities and aligned partnerships" }
+    ],
+    "notConsulting": "This is not consulting.",
+    "empowerment": "This is capacity transfer, ecosystem building, and regenerative empowerment."
+  },
+  "whyCoirea": {
+    "title": "Why COIREA Raíces Latinas",
+    "text1": "We bring together more than a decade of experience in corporate operations, startup growth, and organizational transformation — now dedicated to social regeneration.",
+    "text2": "Rooted in the Andean principle of Ayni (Sacred Reciprocity), our methodology bridges structure and soul, helping organizations lead with both strategy and spirit.",
+    "values": [
+      {
+        "title": "Proven Experience",
+        "description": "Decade+ track record in corporate operations and organizational transformation"
+      },
+      {
+        "title": "Regenerative Approach",
+        "description": "Rooted in Ayni (Sacred Reciprocity) and conscious leadership principles"
+      },
+      {
+        "title": "Structure + Soul",
+        "description": "Bridging strategic clarity with cultural integrity and purpose"
+      }
+    ]
+  },
+  "whoWeWorkWith": {
+    "title": "Who We Work With",
+    "partners": [
+      "NGOs & nonprofit organizations",
+      "Indigenous & rural cooperatives",
+      "Women-led initiatives",
+      "Regenerative community projects",
+      "Social enterprises",
+      "Capacity-building foundations and alliances"
+    ]
+  },
   "partnership": {
     "title": "Ready to Bridge Vision with Structure?",
     "subtitle": "Let's build a partnership rooted in reciprocity, clarity, and lasting impact.",

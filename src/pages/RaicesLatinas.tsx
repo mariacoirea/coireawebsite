@@ -127,14 +127,14 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
-                Our Mission
+                {t('mission.title')}
               </h2>
               <div className="max-w-5xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
                 <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
-                  To enable social-impact organizations across Latin America to grow from inspiration to implementation — with clarity, coherence, and capacity.
+                  {t('mission.text1')}
                 </p>
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  We combine <strong className="text-[hsl(var(--raices-sage-green))]">COIREA's Organizational Operating System (COIREA OS)</strong> with regenerative leadership and funding strategy to help NGOs and social enterprises <strong className="text-[hsl(var(--raices-earth-brown))]">scale purpose, not burnout</strong>.
+                  {t('mission.text2')}
                 </p>
               </div>
             </div>
@@ -146,38 +146,18 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                What We Offer
+                {t('whatWeOffer.title')}
               </h2>
             </div>
 
             {/* Service Areas */}
             <div className="space-y-4">
               {[
-                {
-                  area: "Organizational Clarity",
-                  purpose: "Define structure, roles, and decision-making models for agile, self-managing teams.",
-                  icon: MayanSteps
-                },
-                {
-                  area: "Strategic Direction",
-                  purpose: "Align mission, goals, and operations through practical roadmaps.",
-                  icon: MayanConcentric
-                },
-                {
-                  area: "Leadership Capacity",
-                  purpose: "Train teams in conscious, collaborative, and accountable leadership.",
-                  icon: MayanSun
-                },
-                {
-                  area: "Funding Readiness",
-                  purpose: "Build sustainability models and co-design grant proposals and partnerships.",
-                  icon: MayanBird
-                },
-                {
-                  area: "Impact Communication",
-                  purpose: "Strengthen storytelling and reporting to attract aligned funders and allies.",
-                  icon: MayanDiamond
-                },
+                { icon: MayanSteps },
+                { icon: MayanConcentric },
+                { icon: MayanSun },
+                { icon: MayanBird },
+                { icon: MayanDiamond },
               ].map((item, index) => (
                 <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
                   <CardContent className="p-6 flex items-start gap-4">
@@ -186,10 +166,10 @@ const RaicesLatinas = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
-                        {item.area}
+                        {t(`whatWeOffer.services.${index}.area`)}
                       </h3>
                       <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                        {item.purpose}
+                        {t(`whatWeOffer.services.${index}.purpose`)}
                       </p>
                     </div>
                   </CardContent>
@@ -213,19 +193,13 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
-                How It Works
+                {t('howItWorks.title')}
               </h2>
             </div>
 
             {/* 5-Step Process */}
             <div className="grid md:grid-cols-5 gap-6 mb-12">
-              {[
-                { step: "Diagnose", desc: "Assess current structure, leadership, and impact gaps" },
-                { step: "Design", desc: "Co-create a customized operating model using COIREA OS" },
-                { step: "Implement", desc: "Apply structure, rhythm, and leadership practices" },
-                { step: "Sustain", desc: "Embed ownership and long-term financial coherence" },
-                { step: "Scale", desc: "Connect to funding opportunities and aligned partnerships" },
-              ].map((item, index) => (
+              {(t('howItWorks.steps', { returnObjects: true }) as Array<{ step: string; desc: string }>).map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-sage-green))] to-[hsl(var(--raices-earth-brown))] flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-white font-display font-bold text-2xl">{index + 1}</span>
@@ -242,10 +216,10 @@ const RaicesLatinas = () => {
 
             <div className="text-center space-y-4 max-w-4xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
               <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-deep-copper))] font-semibold">
-                This is not consulting.
+                {t('howItWorks.notConsulting')}
               </p>
               <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] font-medium">
-                This is capacity transfer, ecosystem building, and regenerative empowerment.
+                {t('howItWorks.empowerment')}
               </p>
             </div>
           </div>
@@ -256,37 +230,25 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
-                Why COIREA Raíces Latinas
+                {t('whyCoirea.title')}
               </h2>
             </div>
 
             <div className="max-w-5xl mx-auto space-y-8">
               <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
-                  We bring together more than a decade of experience in corporate operations, startup growth, and organizational transformation — now dedicated to social regeneration.
+                  {t('whyCoirea.text1')}
                 </p>
                 <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  Rooted in the Andean principle of <strong className="text-[hsl(var(--raices-sage-green))]">Ayni (Sacred Reciprocity)</strong>, our methodology bridges structure and soul, helping organizations lead with both strategy and spirit.
+                  {t('whyCoirea.text2')}
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  {
-                    icon: MayanSteps,
-                    title: "Proven Experience",
-                    description: "Decade+ track record in corporate operations and organizational transformation"
-                  },
-                  {
-                    icon: MayanSun,
-                    title: "Regenerative Approach",
-                    description: "Rooted in Ayni (Sacred Reciprocity) and conscious leadership principles"
-                  },
-                  {
-                    icon: MayanConcentric,
-                    title: "Structure + Soul",
-                    description: "Bridging strategic clarity with cultural integrity and purpose"
-                  },
+                  { icon: MayanSteps },
+                  { icon: MayanSun },
+                  { icon: MayanConcentric },
                 ].map((item, index) => (
                   <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/30 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6 text-center">
@@ -294,10 +256,10 @@ const RaicesLatinas = () => {
                         <item.icon className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
                       </div>
                       <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-3">
-                        {item.title}
+                        {t(`whyCoirea.values.${index}.title`)}
                       </h3>
                       <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                        {item.description}
+                        {t(`whyCoirea.values.${index}.description`)}
                       </p>
                     </CardContent>
                   </Card>
@@ -322,19 +284,12 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
-                Who We Work With
+                {t('whoWeWorkWith.title')}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "NGOs & nonprofit organizations",
-                "Indigenous & rural cooperatives",
-                "Women-led initiatives",
-                "Regenerative community projects",
-                "Social enterprises",
-                "Capacity-building foundations and alliances",
-              ].map((partner, index) => (
+              {(t('whoWeWorkWith.partners', { returnObjects: true }) as string[]).map((partner, index) => (
                 <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-[hsl(var(--raices-sage-green))]/5">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[hsl(var(--raices-sage-green))] flex items-center justify-center mt-1">
                     <span className="text-white text-xs font-bold">✓</span>

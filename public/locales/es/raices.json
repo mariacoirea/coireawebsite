@@ -113,6 +113,78 @@
       }
     }
   },
+  "mission": {
+    "title": "Nuestra Misión",
+    "text1": "Permitir que las organizaciones de impacto social en América Latina crezcan desde la inspiración hasta la implementación — con claridad, coherencia y capacidad.",
+    "text2": "Combinamos el Sistema Operativo Organizacional de COIREA (COIREA OS) con liderazgo regenerativo y estrategia de financiamiento para ayudar a ONGs y empresas sociales a escalar el propósito, no el agotamiento."
+  },
+  "whatWeOffer": {
+    "title": "Qué Ofrecemos",
+    "services": [
+      {
+        "area": "Claridad Organizacional",
+        "purpose": "Definir estructura, roles y modelos de toma de decisiones para equipos ágiles y auto-gestionados."
+      },
+      {
+        "area": "Dirección Estratégica",
+        "purpose": "Alinear misión, objetivos y operaciones a través de hojas de ruta prácticas."
+      },
+      {
+        "area": "Capacidad de Liderazgo",
+        "purpose": "Capacitar equipos en liderazgo consciente, colaborativo y responsable."
+      },
+      {
+        "area": "Preparación para Financiamiento",
+        "purpose": "Construir modelos de sostenibilidad y co-diseñar propuestas de subvenciones y alianzas."
+      },
+      {
+        "area": "Comunicación de Impacto",
+        "purpose": "Fortalecer la narrativa y el reporte para atraer financiadores y aliados alineados."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "steps": [
+      { "step": "Diagnosticar", "desc": "Evaluar estructura actual, liderazgo y brechas de impacto" },
+      { "step": "Diseñar", "desc": "Co-crear un modelo operativo personalizado usando COIREA OS" },
+      { "step": "Implementar", "desc": "Aplicar estructura, ritmo y prácticas de liderazgo" },
+      { "step": "Sostener", "desc": "Integrar propiedad y coherencia financiera a largo plazo" },
+      { "step": "Escalar", "desc": "Conectar con oportunidades de financiamiento y alianzas alineadas" }
+    ],
+    "notConsulting": "Esto no es consultoría.",
+    "empowerment": "Esto es transferencia de capacidad, construcción de ecosistema y empoderamiento regenerativo."
+  },
+  "whyCoirea": {
+    "title": "Por Qué COIREA Raíces Latinas",
+    "text1": "Aportamos más de una década de experiencia en operaciones corporativas, crecimiento de startups y transformación organizacional — ahora dedicados a la regeneración social.",
+    "text2": "Arraigados en el principio andino de Ayni (Reciprocidad Sagrada), nuestra metodología une estructura y alma, ayudando a las organizaciones a liderar con estrategia y espíritu.",
+    "values": [
+      {
+        "title": "Experiencia Probada",
+        "description": "Más de una década de trayectoria en operaciones corporativas y transformación organizacional"
+      },
+      {
+        "title": "Enfoque Regenerativo",
+        "description": "Arraigado en Ayni (Reciprocidad Sagrada) y principios de liderazgo consciente"
+      },
+      {
+        "title": "Estructura + Alma",
+        "description": "Uniendo claridad estratégica con integridad cultural y propósito"
+      }
+    ]
+  },
+  "whoWeWorkWith": {
+    "title": "Con Quiénes Trabajamos",
+    "partners": [
+      "ONGs y organizaciones sin fines de lucro",
+      "Cooperativas indígenas y rurales",
+      "Iniciativas lideradas por mujeres",
+      "Proyectos comunitarios regenerativos",
+      "Empresas sociales",
+      "Fundaciones y alianzas de construcción de capacidades"
+    ]
+  },
   "partnership": {
     "title": "¿Listo para Conectar Visión con Estructura?",
     "subtitle": "Construyamos una alianza arraigada en reciprocidad, claridad e impacto duradero.",
