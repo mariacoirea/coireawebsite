@@ -37,9 +37,9 @@ const RaicesLatinas = () => {
   return (
     <>
       <SEOHead
-        title="COIREA - Raíces Latinas | Strengthening Latin American Organizations"
-        description="Social impact division dedicated to strengthening NGOs, social enterprises, and community-led initiatives across Latin America using the COIREA Regenerative Operating System."
-        keywords="Latin America NGOs, social enterprises, indigenous communities, organizational development, capacity building, COIREA OS, regenerative organizations, community impact"
+        title="COIREA Raíces Latinas - Social Impact Initiative for Latin America"
+        description="Empowering purpose-driven organizations to scale with clarity, structure, and integrity. Bridging global resources with local initiatives across Latin America."
+        keywords="social impact Latin America, NGOs capacity building, indigenous cooperatives, women-led initiatives, regenerative community projects, social enterprises, funding readiness, conscious leadership, COIREA OS, Ayni reciprocity"
         url="/raices-latinas"
       />
 
@@ -68,113 +68,112 @@ const RaicesLatinas = () => {
               </div>
 
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-                COIREA – Raíces Latinas
+                COIREA Raíces Latinas
               </h1>
               
               <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-5xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-                Strengthening organizations that shape the future of Latin America
+                Social Impact Initiative for Latin America
+              </p>
+              
+              <p className="text-lg md:text-xl text-[hsl(var(--raices-earth-brown))] font-medium max-w-4xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                Empowering purpose-driven organizations to scale with clarity, structure, and integrity.
               </p>
 
-              <div className="max-w-5xl mx-auto bg-[hsl(var(--raices-sandstone))]/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium drop-shadow-sm">
-                  Latin America is not a region in need of saving. It is a land of memory, courage, and creation — where transformation already lives in communities, collectives, and leaders building change every day. What is missing is not purpose. What is missing is structure that sustains purpose.
+            </div>
+          </div>
+        </section>
+
+        {/* Intro Section */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-7xl">
+            <div className="space-y-8 max-w-5xl mx-auto">
+              <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium text-center">
+                Latin America and the Global South hold profound intelligence, creativity, and regenerative potential — yet many community-led initiatives and NGOs struggle to scale their impact sustainably.
+              </p>
+              
+              <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-sage-green))] font-semibold text-center">
+                Not because of lack of purpose, but because of lack of structure that sustains purpose.
+              </p>
+
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-andean-clay))]/20">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-6 font-medium">
+                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA Raíces Latinas</strong> acts as a bridge between global resources and local initiatives.
                 </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mt-4 font-medium drop-shadow-sm">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA – Raíces Latinas</strong> exists to strengthen the organizations that protect territory, culture, and human dignity across the region. We bring capacity, clarity, and long-term sustainability to NGOs, social enterprises, and community-led initiatives — so their work can grow with integrity.
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                  We strengthen mission-driven organizations so they can scale their work, secure funding, and continue protecting culture, territory, and human dignity — in a way that remains human, ethical, and regenerative.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* A New Path Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                A New Path for Impact in Latin America
-              </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
-                Latin America is a land of intelligence, resilience, and cultural depth. But many organizations working for social transformation struggle to sustain their impact over time. Not because of lack of purpose — but because of lack of structure.
-              </p>
-            </div>
-
-            {/* Challenges Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {[
-                { icon: MayanDiamond, text: "Teams operate without aligned roles or rhythm" },
-                { icon: MayanConcentric, text: "Leadership is exhausted by reactive operations" },
-                { icon: MayanChevron, text: "Growth is limited by donor dependency" },
-                { icon: MayanSteps, text: "Programs lack system continuity" },
-                { icon: MayanCross, text: "Culture and purpose get lost as organizations grow" },
-              ].map((item, index) => (
-                <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/20 bg-white/50 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <item.icon className="w-8 h-8 text-[hsl(var(--raices-deep-copper))] mb-3" strokeWidth={2} />
-                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">{item.text}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center space-y-6 max-w-5xl mx-auto">
-              <p className="text-2xl font-display text-[hsl(var(--raices-sage-green))] font-semibold">
-                Raíces Latinas exists to change that.
-              </p>
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                We work with organizations ready to evolve from good intentions to scalable transformation — in a way that remains human, ethical, and deeply grounded in purpose.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Do Section */}
-        <section className="relative py-24 px-6 overflow-hidden">
-          {/* Background with pattern image */}
+        {/* Our Mission Section */}
+        <section className="py-24 px-6 relative overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src={mayanPatternsBg} 
               alt="Mayan patterns background" 
-              className="w-full h-full object-cover opacity-25"
+              className="w-full h-full object-cover opacity-20"
             />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/60" />
+            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/70" />
           </div>
           
           <div className="container mx-auto max-w-7xl relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
+                Our Mission
+              </h2>
+              <div className="max-w-5xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
+                <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
+                  To enable social-impact organizations across Latin America to grow from inspiration to implementation — with clarity, coherence, and capacity.
+                </p>
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                  We combine <strong className="text-[hsl(var(--raices-sage-green))]">COIREA's Organizational Operating System (COIREA OS)</strong> with regenerative leadership and funding strategy to help NGOs and social enterprises <strong className="text-[hsl(var(--raices-earth-brown))]">scale purpose, not burnout</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What We Offer Section */}
+        <section className="py-24 px-6 bg-background">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                What We Do
+                What We Offer
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
-                We support organizations to lead, organize, and grow with clarity and integrity by applying COIREA OS through co-created transformation journeys.
-              </p>
             </div>
 
-            {/* Focus Areas Table */}
-            <div className="space-y-4 mb-12">
+            {/* Service Areas */}
+            <div className="space-y-4">
               {[
                 {
                   area: "Organizational Clarity",
-                  purpose: "Define structure, roles, responsibilities and decision-making models",
+                  purpose: "Define structure, roles, and decision-making models for agile, self-managing teams.",
                   icon: MayanSteps
                 },
                 {
                   area: "Strategic Direction",
-                  purpose: "Align mission and execution through operational roadmaps",
+                  purpose: "Align mission, goals, and operations through practical roadmaps.",
                   icon: MayanConcentric
                 },
                 {
-                  area: "Leadership Development",
-                  purpose: "Train leadership teams in conscious, collaborative, and accountable leadership",
+                  area: "Leadership Capacity",
+                  purpose: "Train teams in conscious, collaborative, and accountable leadership.",
                   icon: MayanSun
                 },
                 {
-                  area: "Sustainability & Partnerships",
-                  purpose: "Design long-term funding and impact partnership strategies",
+                  area: "Funding Readiness",
+                  purpose: "Build sustainability models and co-design grant proposals and partnerships.",
                   icon: MayanBird
                 },
+                {
+                  area: "Impact Communication",
+                  purpose: "Strengthen storytelling and reporting to attract aligned funders and allies.",
+                  icon: MayanDiamond
+                },
               ].map((item, index) => (
-                <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300">
+                <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
                   <CardContent className="p-6 flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center">
                       <item.icon className="w-6 h-6 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
@@ -191,62 +190,62 @@ const RaicesLatinas = () => {
                 </Card>
               ))}
             </div>
-
-            <div className="text-center">
-              <p className="text-xl font-display italic text-[hsl(var(--raices-deep-copper))]">
-                We don't deliver templates. We co-create systems with each organization based on their culture, context, and purpose.
-              </p>
-            </div>
           </div>
         </section>
 
-        {/* Our Approach Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
+        {/* How It Works Section */}
+        <section className="relative py-24 px-6 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={mayanPatternsBg} 
+              alt="Mayan patterns background" 
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/70" />
+          </div>
+          
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
-                Our Approach
+                How It Works
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed font-medium">
-                Our work is relational, strategic, and grounded in Latin American realities. We build transformation from the inside out.
-              </p>
             </div>
 
-            {/* Transformation Cycle */}
+            {/* 5-Step Process */}
             <div className="grid md:grid-cols-5 gap-6 mb-12">
               {[
-                { step: "Diagnose", desc: "current reality, patterns, system gaps" },
-                { step: "Design", desc: "custom operating model based on COIREA OS" },
-                { step: "Implement", desc: "structure + leadership + execution rhythm" },
-                { step: "Sustain", desc: "internal ownership + long-term growth" },
-                { step: "Evolve", desc: "continuous improvement and adaptive strategy" },
+                { step: "Diagnose", desc: "Assess current structure, leadership, and impact gaps" },
+                { step: "Design", desc: "Co-create a customized operating model using COIREA OS" },
+                { step: "Implement", desc: "Apply structure, rhythm, and leadership practices" },
+                { step: "Sustain", desc: "Embed ownership and long-term financial coherence" },
+                { step: "Scale", desc: "Connect to funding opportunities and aligned partnerships" },
               ].map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-sage-green))] to-[hsl(var(--raices-earth-brown))] flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-sage-green))] to-[hsl(var(--raices-earth-brown))] flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <span className="text-white font-display font-bold text-2xl">{index + 1}</span>
                   </div>
                   <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
                     {item.step}
                   </h3>
-                  <p className="text-sm text-[hsl(var(--raices-charcoal-earth))] font-medium">
+                  <p className="text-sm text-[hsl(var(--raices-charcoal-earth))] font-medium leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="text-center space-y-4">
-              <p className="text-2xl font-display text-[hsl(var(--raices-deep-copper))] font-semibold">
+            <div className="text-center space-y-4 max-w-4xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
+              <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-deep-copper))] font-semibold">
                 This is not consulting.
               </p>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] font-medium">
-                This is capacity transfer and organizational empowerment.
+              <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] font-medium">
+                This is capacity transfer, ecosystem building, and regenerative empowerment.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Programs Section */}
+        {/* Why COIREA Raíces Latinas Section */}
         <section className="py-24 px-6 relative overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0">
@@ -259,65 +258,55 @@ const RaicesLatinas = () => {
           </div>
           
           <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                Programs
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
+                Why COIREA Raíces Latinas
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto leading-relaxed mb-4 font-medium">
-                Co-Created With Each Partner
-              </p>
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-5xl mx-auto font-medium">
-                Every organization is unique. That's why our programs are designed as co-creation journeys, not pre-made packages.
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {[
-                {
-                  icon: MayanPyramid,
-                  name: "Seed Program",
-                  subtitle: "Organizational Foundations",
-                  description: "Build internal clarity and structure with COIREA OS.",
-                  color: "raices-sage-green"
-                },
-                {
-                  icon: MayanSun,
-                  name: "Build Program",
-                  subtitle: "Leadership & Execution",
-                  description: "Develop strong operational rhythm and leadership capacity.",
-                  color: "raices-deep-copper"
-                },
-                {
-                  icon: MayanConcentric,
-                  name: "Thrive Program",
-                  subtitle: "Regenerative Growth",
-                  description: "Create long-term sustainability and aligned partnership ecosystems.",
-                  color: "raices-earth-brown"
-                },
-              ].map((program, index) => (
-                <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/30 hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className={`w-16 h-16 rounded-full bg-[hsl(var(--${program.color}))]/10 flex items-center justify-center mb-6`}>
-                      <program.icon className={`w-8 h-8 text-[hsl(var(--${program.color}))]`} strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-2xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
-                      {program.name}
-                    </h3>
-                    <p className="text-lg text-[hsl(var(--raices-sage-green))] font-medium mb-4">
-                      {program.subtitle}
-                    </p>
-                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                      {program.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <div className="max-w-5xl mx-auto space-y-8">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
+                  We bring together more than a decade of experience in corporate operations, startup growth, and organizational transformation — now dedicated to social regeneration.
+                </p>
+                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                  Rooted in the Andean principle of <strong className="text-[hsl(var(--raices-sage-green))]">Ayni (Sacred Reciprocity)</strong>, our methodology bridges structure and soul, helping organizations lead with both strategy and spirit.
+                </p>
+              </div>
 
-            <div className="text-center">
-              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] italic font-medium">
-                Each program can be delivered in Spanish or English, onsite or online, and fully adapted to local context, culture, and team reality.
-              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: MayanSteps,
+                    title: "Proven Experience",
+                    description: "Decade+ track record in corporate operations and organizational transformation"
+                  },
+                  {
+                    icon: MayanSun,
+                    title: "Regenerative Approach",
+                    description: "Rooted in Ayni (Sacred Reciprocity) and conscious leadership principles"
+                  },
+                  {
+                    icon: MayanConcentric,
+                    title: "Structure + Soul",
+                    description: "Bridging strategic clarity with cultural integrity and purpose"
+                  },
+                ].map((item, index) => (
+                  <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/30 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-16 h-16 rounded-full bg-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center mx-auto mb-4">
+                        <item.icon className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
+                      </div>
+                      <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -333,9 +322,9 @@ const RaicesLatinas = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                "NGOs and nonprofit organizations",
-                "Indigenous and rural cooperatives",
-                "Women-led economic initiatives",
+                "NGOs & nonprofit organizations",
+                "Indigenous & rural cooperatives",
+                "Women-led initiatives",
                 "Regenerative community projects",
                 "Social enterprises",
                 "Capacity-building foundations and alliances",
