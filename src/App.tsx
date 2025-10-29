@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
-import Index from "./pages/Index";
+import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Offerings from "./pages/Offerings";
 import Insights from "./pages/Insights";
@@ -65,7 +65,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
             {/* English routes */}
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/offerings" element={<Offerings />} />
             <Route path="/insights" element={<Insights />} />
@@ -78,7 +78,7 @@ const App = () => {
             <Route path="/admin/posts/:id" element={<PostEditor />} />
             
             {/* Spanish routes */}
-            <Route path="/es" element={<Index />} />
+            <Route path="/es" element={<HomePage />} />
             <Route path="/es/about" element={<About />} />
             <Route path="/es/offerings" element={<Offerings />} />
             <Route path="/es/insights" element={<Insights />} />
