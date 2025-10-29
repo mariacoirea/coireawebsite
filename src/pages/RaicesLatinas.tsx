@@ -246,18 +246,8 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Why COIREA Raíces Latinas Section */}
-        <section className="py-24 px-6 relative overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0">
-            <img 
-              src={andeanPeopleBg} 
-              alt="Andean people in traditional clothing" 
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/75" />
-          </div>
-          
-          <div className="container mx-auto max-w-7xl relative z-10">
+        <section className="py-24 px-6 bg-gradient-to-br from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-sage-green))]/10">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
                 Why COIREA Raíces Latinas
