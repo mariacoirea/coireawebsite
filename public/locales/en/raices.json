@@ -10,108 +10,92 @@
     "bridge": "acts as a bridge between global resources and local initiatives.",
     "description": "We combine the structured systems thinking with the regenerative wisdom of Latin America; helping visionary organizations secure funding, streamline operations, and build capacity for lasting social transformation."
   },
-  "whyCoirea": {
-    "title": "Why COIREA Raíces Latinas?",
-    "subtitle": "The COIREA OS adapted for Latin American social impact",
-    "gap": {
-      "title": "The Gap We Bridge",
-      "description": "Many Latin American initiatives are rooted in deep cultural wisdom, community care, and regenerative practices. Yet they often face barriers when navigating global systems:"
-    },
-    "barriers": {
-      "funding": {
-        "title": "Funding & Funder Readiness",
-        "description": "Accessing grants, social investment, or philanthropy requires specific reporting structures, strategic plans, and operational frameworks that aren't always intuitive to grassroots movements."
-      },
-      "operations": {
-        "title": "Operational Capacity",
-        "description": "Scaling impact requires systems for project management, governance, compliance, and financial sustainability — not just passion and vision."
-      },
-      "communication": {
-        "title": "Cross-Cultural Communication",
-        "description": "Funders and global partners often don't speak the same cultural or operational language as local communities, leading to misalignment and missed opportunities."
-      }
-    },
-    "solution": {
-      "title": "Our Approach",
-      "description": "We meet organizations where they are — honoring their cultural context and regenerative values — and equip them with the clarity, systems, and frameworks they need to thrive in both local and global ecosystems."
-    }
-  },
-  "whoWeWorkWith": {
-    "title": "Who We Work With",
-    "types": {
-      "ngos": {
-        "title": "NGOs & Social Enterprises",
-        "description": "Building governance, strategic frameworks, and funding-ready operations for nonprofits driving social change."
-      },
-      "cooperatives": {
-        "title": "Indigenous & Rural Cooperatives",
-        "description": "Supporting community-owned initiatives with structure, leadership development, and resource mobilization."
-      },
-      "womenLed": {
-        "title": "Women-Led Initiatives",
-        "description": "Empowering female leaders and collectives with tools for financial sustainability and organizational resilience."
-      },
-      "regenerative": {
-        "title": "Regenerative Community Projects",
-        "description": "Strengthening ecological and community-centered initiatives through clarity, governance, and impact measurement."
-      }
-    }
+  "mission": {
+    "title": "Our Mission",
+    "text1": "To enable social-impact organizations across Latin America to grow from inspiration to implementation — with clarity, coherence, and capacity.",
+    "text2": "We combine COIREA's Organizational Operating System (COIREA OS) with regenerative leadership and funding strategy to help NGOs and social enterprises scale purpose, not burnout."
   },
   "whatWeOffer": {
     "title": "What We Offer",
-    "subtitle": "Tailored support for your organization's growth",
-    "services": {
-      "fundingReadiness": {
-        "title": "Funding & Funder Readiness",
-        "items": [
-          "Strategic narrative development for grant applications",
-          "Theory of Change & impact measurement frameworks",
-          "Budgeting and financial reporting systems",
-          "Funder relationship building and pitch coaching"
-        ]
+    "services": [
+      {
+        "area": "Organizational Clarity",
+        "purpose": "Define structure, roles, and decision-making models for agile, self-managing teams."
       },
-      "capacityBuilding": {
-        "title": "Organizational Capacity Building",
-        "items": [
-          "Governance design (board structure, bylaws, decision-making processes)",
-          "Operational systems (project management, internal workflows, SOPs)",
-          "Leadership development and team alignment",
-          "Succession planning and knowledge documentation"
-        ]
+      {
+        "area": "Strategic Direction",
+        "purpose": "Align mission, goals, and operations through practical roadmaps."
       },
-      "consciousLeadership": {
-        "title": "Conscious Leadership Development",
-        "items": [
-          "Executive coaching for founders and directors",
-          "Team cohesion and communication practices",
-          "Conflict resolution and regenerative governance models",
-          "Leadership transitions and organizational healing"
-        ]
+      {
+        "area": "Leadership Capacity",
+        "purpose": "Train teams in conscious, collaborative, and accountable leadership."
       },
-      "coireaOS": {
-        "title": "COIREA OS Implementation",
-        "description": "A full operating system for organizational clarity and execution — adapted for Latin American contexts.",
-        "includes": "Strategic planning, OKR frameworks, regenerative rhythms, team alignment rituals, and more."
+      {
+        "area": "Funding Readiness",
+        "purpose": "Build sustainability models and co-design grant proposals and partnerships."
+      },
+      {
+        "area": "Impact Communication",
+        "purpose": "Strengthen storytelling and reporting to attract aligned funders and allies."
       }
-    }
+    ]
   },
-  "ourPhilosophy": {
-    "title": "Our Philosophy",
-    "subtitle": "Rooted in Ayni — the principle of reciprocity",
-    "principles": {
-      "reciprocity": {
-        "title": "Reciprocity Over Extraction",
-        "description": "We believe in mutual benefit — not just consulting, but co-creating with communities."
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "step": "Diagnose",
+        "desc": "Assess current structure, leadership, and impact gaps"
       },
-      "integrity": {
-        "title": "Integrity Over Imitation",
-        "description": "We don't impose Global North models. We adapt systems to honor local culture, wisdom, and ways of being."
+      {
+        "step": "Design",
+        "desc": "Co-create a customized operating model using COIREA OS"
       },
-      "regeneration": {
-        "title": "Regeneration Over Scale at Any Cost",
-        "description": "True impact isn't just about growth — it's about sustainability, wellbeing, and regenerative practices that honor people and planet."
+      {
+        "step": "Implement",
+        "desc": "Apply structure, rhythm, and leadership practices"
+      },
+      {
+        "step": "Sustain",
+        "desc": "Embed ownership and long-term financial coherence"
+      },
+      {
+        "step": "Scale",
+        "desc": "Connect to funding opportunities and aligned partnerships"
       }
-    }
+    ],
+    "notConsulting": "This is not consulting.",
+    "empowerment": "This is capacity transfer, ecosystem building, and regenerative empowerment."
+  },
+  "whyCoirea": {
+    "title": "Why COIREA Raíces Latinas",
+    "text1": "We bring together more than a decade of experience in corporate operations, startup growth, and organizational transformation — now dedicated to social regeneration.",
+    "text2": "Rooted in the Andean principle of Ayni (Sacred Reciprocity), our methodology bridges structure and soul, helping organizations lead with both strategy and spirit.",
+    "values": [
+      {
+        "title": "Proven Experience",
+        "description": "Decade+ track record in corporate operations and organizational transformation"
+      },
+      {
+        "title": "Regenerative Approach",
+        "description": "Rooted in Ayni (Sacred Reciprocity) and conscious leadership principles"
+      },
+      {
+        "title": "Structure + Soul",
+        "description": "Bridging strategic clarity with cultural integrity and purpose"
+      }
+    ]
+  },
+  "whoWeWorkWith": {
+    "title": "Who We Work With",
+    "partners": [
+      "NGOs & nonprofit organizations",
+      "Indigenous & rural cooperatives",
+      "Women-led initiatives",
+      "Regenerative community projects",
+      "Social enterprises",
+      "Capacity-building foundations and alliances"
+    ]
   },
   "partnership": {
     "title": "Ready to Bridge Vision with Structure?",
