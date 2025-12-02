@@ -31,6 +31,7 @@ import {
 
 import mayanPatternsBg from '@/assets/mayan-patterns-bg.png';
 import andeanPeopleBg from '@/assets/andean-people-bg.jpg';
+const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -121,37 +122,40 @@ const RaicesLatinas = () => {
       
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section 
-          className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
-          style={{
-            backgroundImage: `url(${andeanPeopleBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sage-green))]/90 via-[hsl(var(--raices-sage-green))]/85 to-[hsl(var(--raices-sage-green))]/95" />
-          
-          <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium tracking-wider text-[hsl(var(--raices-sandstone))] uppercase bg-[hsl(var(--raices-earth-brown))]/30 rounded-full border border-[hsl(var(--raices-earth-brown))]/40">
-              COIREA Social
-            </span>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-6 max-w-4xl mx-auto leading-tight">
-              {t('hero.title')}
-            </h1>
-            
-            <p className="text-lg md:text-xl text-[hsl(var(--raices-sandstone))]/80 max-w-3xl mx-auto mb-10 leading-relaxed font-body">
-              {t('hero.subtitle')}
-            </p>
-            
-            <Button 
-              onClick={scrollToForm}
-              size="lg"
-              className="bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-earth-brown))]/90 text-[hsl(var(--raices-sandstone))] px-8 py-6 text-lg font-medium rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              {t('hero.cta')}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
+          {/* Background image */}
+          <div className="absolute inset-0 -left-px -right-px">
+            <img 
+              src={raicesCulturalHero} 
+              alt="Traditional Latin American cultural collage with Andean heritage" 
+              className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/65 to-[hsl(var(--raices-sandstone))]/45" />
+          </div>
+
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <div className="text-center space-y-8">
+              <span className="inline-block px-4 py-2 mb-2 text-sm font-medium tracking-wider text-[hsl(var(--raices-earth-brown))] uppercase bg-[hsl(var(--raices-earth-brown))]/10 rounded-full border border-[hsl(var(--raices-earth-brown))]/20">
+                COIREA Social
+              </span>
+              
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+                {t('hero.title')}
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-4xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+                {t('hero.subtitle')}
+              </p>
+
+              <Button 
+                onClick={scrollToForm}
+                size="lg"
+                className="bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-earth-brown))]/90 text-[hsl(var(--raices-sandstone))] px-8 py-6 text-lg font-medium rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                {t('hero.cta')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
         </section>
 
