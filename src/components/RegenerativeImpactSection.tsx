@@ -2,36 +2,37 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LocalizedLink from "@/components/LocalizedLink";
 import { useTranslation } from "react-i18next";
+import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 
 const RegenerativeImpactSection = () => {
   const { t } = useTranslation('home');
 
   return (
-    <section 
-      className="py-24 px-6 relative overflow-hidden"
-      style={{
-        backgroundImage: `url('/lovable-uploads/e1245c87-e916-4502-8adf-fb8970e5bb4c.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-warm-beige/85" />
+    <section className="py-24 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `url(${mayanPatternsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))]/90 to-[hsl(var(--warm-beige))]/80" />
       
-      <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <p className="text-secondary font-body text-sm tracking-widest uppercase mb-4">
+      <div className="container mx-auto max-w-4xl text-center relative z-10 px-4">
+        <p className="text-secondary font-medium mb-2">
           {t('impact.badge')}
         </p>
         
-        <h2 className="text-3xl md:text-5xl font-display font-semibold text-primary mb-8 leading-tight">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
           {t('impact.title')}
         </h2>
         
-        <p className="text-lg text-foreground/80 font-body leading-relaxed mb-4 max-w-3xl mx-auto">
+        <p className="text-lg text-muted-foreground font-body leading-relaxed mb-4 max-w-2xl mx-auto">
           {t('impact.description1')}
         </p>
         
-        <p className="text-lg text-foreground/70 font-body leading-relaxed mb-10 max-w-3xl mx-auto">
+        <p className="text-muted-foreground font-body leading-relaxed mb-8 max-w-2xl mx-auto">
           {t('impact.description2')}
         </p>
         
@@ -39,10 +40,10 @@ const RegenerativeImpactSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8 py-6 text-lg font-body group"
+            className="border-secondary text-secondary hover:bg-secondary/10"
           >
             {t('impact.cta')}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
         </LocalizedLink>
       </div>
