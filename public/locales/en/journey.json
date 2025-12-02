@@ -1,23 +1,33 @@
 {
   "seo": {
-    "title": "Start Your Organizational Transformation Journey - Free Strategy Call | COIREA",
-    "description": "Book your free 30-minute strategy call to begin your organizational transformation journey. Co-create a tailored approach for regenerative business evolution with COIREA's proven framework.",
-    "keywords": "organizational transformation consultation, free strategy call, business coaching, leadership development, regenerative business transformation, team development consultation",
-    "successTitle": "Thank You - Organizational Transformation Journey Started | COIREA",
-    "successDescription": "Thank you for starting your organizational transformation journey with COIREA. We'll be in touch within 24 hours to schedule your complimentary clarity call.",
-    "successKeywords": "organizational transformation, business coaching consultation, leadership development, thank you"
+    "title": "Apply for Early Access - COIREA MVP | Organizational Intelligence Platform",
+    "description": "Apply for early access to the COIREA Organizational Intelligence Platform MVP. Measure culture, leadership, collaboration, and well-being through real-time AI-powered intelligence.",
+    "keywords": "COIREA MVP, early access, organizational intelligence platform, AI organizational health, culture measurement, leadership analytics",
+    "successTitle": "Application Received - COIREA MVP Early Access | COIREA",
+    "successDescription": "Thank you for applying to the COIREA MVP. We'll review your application and reach out if your organization is selected for early access.",
+    "successKeywords": "organizational intelligence, COIREA MVP, early access application, thank you"
   },
   "hero": {
-    "title": "Book Your Free 30-Minute Strategy Call",
-    "description": "Every meaningful transformation starts with a single step. Share your context with us, and let's co-create a pathway toward organizational coherence, vitality, and purpose through a personalized strategy session.",
+    "title": "Apply for Early Access to the COIREA MVP",
+    "description": "Be among the first organizations to experience the COIREA Organizational Intelligence Platform. Our MVP cohort is built for purpose-driven companies ready to measure culture, leadership, collaboration, and well-being through real-time intelligence.",
     "features": {
-      "proven": "Proven Framework",
-      "regenerative": "Regenerative Approach"
-    }
+      "proven": "Limited Spots",
+      "regenerative": "Early Access"
+    },
+    "note": "Limited early-access spots available."
+  },
+  "access": {
+    "title": "What You'll Access",
+    "items": [
+      "Real-Time Organizational Health Scanner",
+      "AI-Generated Insights & Risk Signals",
+      "5-Pillar Framework Dashboard",
+      "Regenerative Impact Reporting"
+    ]
   },
   "form": {
     "mainTitle": "Tell Us About Your Organization",
-    "mainDescription": "Help us understand your unique context so we can design the most effective approach for your transformation.",
+    "mainDescription": "We review every application to ensure the MVP is the right match. Share your context below, and we'll follow up if your organization is selected for early access.",
     "contact": {
       "title": "Contact Information",
       "name": "Your Name",
@@ -27,7 +37,7 @@
       "organization": "Organization",
       "organizationPlaceholder": "Your organization name",
       "role": "Your Role",
-      "rolePlaceholder": "CEO, Manager, HR Director, etc."
+      "rolePlaceholder": "CEO, Founder, HR Director, etc."
     },
     "challenges": {
       "title": "Current Challenges",
@@ -39,7 +49,7 @@
         "Weak leadership alignment",
         "Cultural disconnect",
         "Low employee engagement",
-        "Resistance to change",
+        "No real-time visibility into organizational health",
         "Siloed departments",
         "Unclear vision and strategy",
         "Performance and well-being imbalance"
@@ -49,68 +59,68 @@
     },
     "goals": {
       "title": "Goals & Vision",
-      "goalsLabel": "What are your main goals for this transformation?",
+      "goalsLabel": "What do you hope to achieve with the COIREA platform?",
       "goalsPlaceholder": "Describe what success looks like for your organization...",
-      "visionLabel": "Describe your vision for the future state",
-      "visionPlaceholder": "Paint a picture of where you want your organization to be...",
-      "urgencyLabel": "How urgent is this transformation?",
+      "visionLabel": "Describe your vision for organizational health",
+      "visionPlaceholder": "What would a thriving, aligned organization look like for you?",
+      "urgencyLabel": "How urgent is gaining visibility into your organizational health?",
       "urgencyPlaceholder": "Select urgency level",
       "urgencyOptions": {
-        "high": "High - We need to act immediately",
+        "high": "High - We need insights immediately",
         "medium": "Medium - Important but can plan ahead",
         "low": "Low - Exploring for future planning"
       }
     },
     "scope": {
-      "title": "Project Scope",
-      "timelineLabel": "Preferred Timeline",
+      "title": "Organization Context",
+      "timelineLabel": "When would you like to start?",
       "timelinePlaceholder": "Select timeline",
       "timelineOptions": {
-        "immediate": "Start immediately",
+        "immediate": "Ready to start immediately",
         "1-3months": "Within 1-3 months",
         "3-6months": "Within 3-6 months",
         "6-12months": "Within 6-12 months",
         "exploring": "Just exploring options"
       },
-      "budgetLabel": "Investment Range",
-      "budgetPlaceholder": "Select budget range",
+      "budgetLabel": "Team Size",
+      "budgetPlaceholder": "Select team size",
       "budgetOptions": {
-        "under-10k": "Under $10,000",
-        "10k-25k": "$10,000 - $25,000",
-        "25k-50k": "$25,000 - $50,000",
-        "50k-100k": "$50,000 - $100,000",
-        "100k+": "$100,000+",
+        "under-10k": "5-20 employees",
+        "10k-25k": "21-50 employees",
+        "25k-50k": "51-100 employees",
+        "50k-100k": "101-500 employees",
+        "100k+": "500+ employees",
         "discuss": "Prefer to discuss"
       }
     },
     "additional": {
       "title": "Additional Information",
       "label": "Anything else you'd like us to know?",
-      "placeholder": "Share any additional context, questions, or specific areas of focus..."
+      "placeholder": "Share any additional context about your organization or why you're interested in the COIREA MVP..."
     },
     "submit": {
-      "button": "Begin Our Journey Together",
+      "button": "Submit Application",
       "submitting": "Submitting...",
-      "error": "There was an error submitting your form. Please try again or contact us directly.",
-      "note": "We'll reach out within 24 hours to schedule your complimentary clarity call"
+      "error": "There was an error submitting your application. Please try again or contact us directly.",
+      "note": "We'll review your application and reach out within 5 business days"
     }
   },
   "success": {
-    "title": "Your Journey Begins Now",
-    "subtitle": "Thank you for taking the first step toward conscious organizational transformation.",
+    "title": "Application Received",
+    "subtitle": "Thank you for applying to the COIREA MVP Early Access Program.",
     "nextSteps": {
       "title": "What Happens Next?",
       "step1": {
-        "title": "Within 24 hours:",
-        "description": "We'll reach out to schedule your complimentary clarity call"
+        "title": "Application Review:",
+        "description": "Our team will review your application within 5 business days"
       },
       "step2": {
-        "title": "Discovery Call (30-45 min):",
-        "description": "We'll explore your specific challenges and co-create a tailored approach"
+        "title": "If Selected:",
+        "description": "We'll schedule a brief call to discuss onboarding and next steps"
       },
       "step3": {
-        "title": "Custom Proposal:",
-        "description": "We'll design a transformation pathway aligned with your organization's unique needs and timeline"
+        "title": "MVP Access:",
+        "description": "Selected organizations will receive platform access and onboarding support"
       }
     }
   }

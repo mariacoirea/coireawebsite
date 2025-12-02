@@ -157,8 +157,11 @@ const Journey = () => {
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
               {t('hero.title')}
             </h1>
-            <p className="text-xl text-foreground/80 font-body leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 font-body leading-relaxed mb-4 max-w-3xl mx-auto">
               {t('hero.description')}
+            </p>
+            <p className="text-lg text-secondary font-medium mb-8">
+              {t('hero.note')}
             </p>
             <div className="flex justify-center items-center space-x-8 mb-12">
               <div className="flex items-center space-x-2">
@@ -169,6 +172,23 @@ const Journey = () => {
                 <Lightbulb className="w-5 h-5 text-primary" />
                 <span className="text-foreground/70 font-body">{t('hero.features.regenerative')}</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What You'll Access Section */}
+        <section className="py-12 px-6 bg-background">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl font-display font-semibold text-primary mb-8 text-center">
+              {t('access.title')}
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {(t('access.items', { returnObjects: true }) as string[] || []).map((item, index) => (
+                <div key={index} className="flex items-center gap-3 p-4 rounded-xl bg-[hsl(var(--warm-beige))] border border-border">
+                  <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <span className="text-foreground font-body text-sm font-medium">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
