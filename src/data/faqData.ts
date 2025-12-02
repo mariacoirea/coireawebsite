@@ -1,4 +1,4 @@
-// FAQ data for different pages - SEO optimized content
+// FAQ data for different pages - SEO optimized content (Platform-focused)
 
 export interface FAQItem {
   question: string;
@@ -7,92 +7,92 @@ export interface FAQItem {
 
 export const homepageFAQs: FAQItem[] = [
   {
-    question: "What makes COIREA's organizational transformation approach different from traditional consulting?",
-    answer: "COIREA uses a regenerative 5-pillar framework that addresses Purpose, Leadership, Collaboration, Culture, and Well-Being simultaneously. Unlike traditional consulting that focuses on single issues, we create systemic transformation that aligns your organization's soul with its strategy, ensuring sustainable change that grows stronger over time."
+    question: "What makes COIREA different from traditional organizational consulting?",
+    answer: "COIREA is an AI-powered organizational intelligence platform, not a consulting firm. We provide real-time measurement and insights across culture, leadership, collaboration, and well-being — all in one integrated system. Instead of periodic assessments and reports, you get continuous visibility into organizational health with AI-generated recommendations."
   },
   {
-    question: "How long does an organizational transformation typically take with COIREA?",
-    answer: "Our signature Organizational Transformation programs typically run 6-18 months, depending on your organization's size and complexity. We believe real change takes time to embed properly. Leadership Coaching runs 3-12 months, while Fractional Operations partnerships can be 3-12 months based on your strategic needs."
+    question: "How does the COIREA platform work?",
+    answer: "COIREA collects signals from surveys, behavior patterns, culture metrics, and leadership data. Our AI Agent interprets these signals across 5 pillars (Purpose & Culture, Leadership, Collaboration, Well-Being, and Strategy) to surface risks before they escalate and generate actionable insights tailored to your organization."
   },
   {
-    question: "What types of organizations work best with COIREA's transformation process?",
-    answer: "We work with purpose-driven organizations ready for deep change - from startups scaling their culture to established companies reimagining their impact. Our ideal partners are leadership teams committed to conscious business practices, sustainable growth, and creating workplaces that honor both performance and human well-being."
+    question: "What types of organizations benefit most from COIREA?",
+    answer: "COIREA is designed for purpose-driven companies ready to take a data-informed approach to organizational health. Whether you're a scaling startup needing to preserve culture, or an established company seeking to transform from within, our platform adapts to your context and complexity."
   },
   {
-    question: "How do you measure the success of organizational transformation programs?",
-    answer: "We use the COIREA Evolution Dashboard to track real-time organizational health across our 5-pillar framework. This includes leadership maturity indices, team performance insights, culture alignment metrics, well-being indicators, and strategic KPIs. You'll see both qualitative culture shifts and quantitative business results."
+    question: "How does COIREA measure organizational health?",
+    answer: "We track 5 core pillars in real-time: Purpose & Culture (clarity, alignment, values), Collaboration (trust, psychological safety, team dynamics), Leadership (effectiveness, presence, influence), Well-Being (burnout index, energy, resilience), and Organizational Strategy (execution, prioritization, role coherence). The Evolution Dashboard gives you visibility across all dimensions."
   },
   {
     question: "Can COIREA work with remote or hybrid teams?",
-    answer: "Absolutely. Our regenerative framework is designed for modern work structures. We facilitate virtual team retreats, hybrid leadership coaching, and digital culture-building experiences. Many of our most successful transformations have been with distributed teams looking to build deeper connection and alignment across distance."
+    answer: "Absolutely. Our platform is designed for modern distributed work. We collect signals digitally across locations and time zones, providing unified insights regardless of where your team members are based. Many of our most successful implementations are with hybrid and fully remote organizations."
   }
 ];
 
 export const offeringsFAQs: FAQItem[] = [
   {
-    question: "What's included in COIREA's Signature Organizational Transformation program?",
-    answer: "Our 6-18 month program includes strategic alignment sessions, leadership development, culture architecture design, change implementation support, the COIREA Evolution Dashboard for tracking progress, team retreats, and ongoing coaching. You'll work with our full ecosystem of transformation specialists tailored to your organization's specific needs."
+    question: "What features are included in the COIREA platform?",
+    answer: "The platform includes the Organizational Health Dashboard for real-time visibility, AI-Powered Insights for intelligent analysis, Culture & Leadership Metrics for tracking effectiveness, Well-Being Signals for burnout prevention, Collaboration Network visualization, and SDGs Reporting to measure social impact."
   },
   {
-    question: "How does Leadership Coaching integrate with broader organizational change?",
-    answer: "Our 1:1 Leadership Coaching focuses on conscious decision-making, executive presence, and embodied communication. When combined with organizational transformation, leaders develop the inner alignment needed to guide authentic change. Coaching can be standalone or part of comprehensive transformation programs."
+    question: "What is the COIREA AI Agent?",
+    answer: "The COIREA AI Agent is the intelligence layer of our platform — a system trained on proven frameworks and real transformation patterns. It interprets signals from people, behavior, and culture, detects misalignment and emerging risks, and generates clear, actionable recommendations for leadership."
   },
   {
-    question: "What makes Fractional Operations different from traditional consulting?",
-    answer: "Fractional Operations means we embed as strategic partners, not external advisors. We co-design and implement systems alongside your team for 3-12 months, ensuring knowledge transfer and sustainable practices. It's hands-on partnership ideal for startups and growing organizations needing operational architecture that scales."
+    question: "How does the Early Access program work?",
+    answer: "Early Access members get priority onboarding, founding member benefits, and the opportunity to shape platform development. You'll work directly with our team to implement COIREA in your organization while providing feedback that influences our roadmap."
   },
   {
-    question: "Do you offer team retreats as standalone services?",
-    answer: "Yes, our transformational team retreats can be standalone experiences or integrated into longer programs. We create custom experiences focusing on strategic alignment, culture building, leadership development, and team cohesion using regenerative practices and conscious facilitation methods."
+    question: "What is the Regenerative Impact Layer?",
+    answer: "COIREA uniquely converts a percentage of organizational growth (time, skills, or financial contributions) into regenerative impact in Latin America through our social impact arm, Raíces Latinas. Companies can track their social impact with transparent SDGs reporting directly inside the platform."
   },
   {
-    question: "How do you customize programs for different industries or organizational sizes?",
-    answer: "Every engagement begins with deep organizational assessment across our 5-pillar framework. We adapt methodologies, timeline, and focus areas based on your industry dynamics, company size, current challenges, and growth stage. Our regenerative principles work across all sectors while honoring each organization's unique context."
+    question: "How does COIREA integrate with existing tools?",
+    answer: "Our roadmap includes API integrations with HR systems, communication tools, and performance platforms. Currently, COIREA operates as a standalone intelligence layer that can complement your existing tech stack without requiring major changes to current workflows."
   }
 ];
 
 export const aboutFAQs: FAQItem[] = [
   {
-    question: "What is conscious leadership and how does COIREA develop it?",
-    answer: "Conscious leadership combines strategic clarity with emotional intelligence, presence, and authentic communication. COIREA develops conscious leaders through inner work, systems thinking, embodied practices, and real-world application. Leaders learn to make decisions from alignment rather than reactivity, creating cultures of trust and high performance."
+    question: "What is COIREA's mission?",
+    answer: "COIREA exists to help purpose-driven organizations measure, understand, and transform their organizational health. We believe that when Purpose, People, Planet, and Performance align, organizations can achieve sustainable growth while creating positive impact."
   },
   {
-    question: "How does regenerative business differ from traditional sustainability practices?",
-    answer: "Regenerative business goes beyond 'doing less harm' to actively creating positive impact. COIREA helps organizations design systems that regenerate human potential, community relationships, and ecological health. It's about building businesses that leave people, places, and systems better than they found them."
+    question: "What makes organizational intelligence different from people analytics?",
+    answer: "People analytics focuses on workforce data. Organizational intelligence goes deeper — it interprets the interconnected signals of culture, leadership behavior, team dynamics, and well-being to understand how the entire organizational system functions and evolves."
   },
   {
-    question: "What is the COIREA team's background and experience?",
-    answer: "COIREA is led by Maria Jose Figueroa, a Conscious Leadership Catalyst with deep business and soul-centered experience. Our ecosystem includes executive coaches, culture strategists, regenerative business mentors, well-being practitioners, and systems change facilitators, each bringing decades of transformation expertise."
+    question: "What is the COIREA team's background?",
+    answer: "COIREA is led by experienced organizational transformation specialists who combine deep business expertise with human-centered design. Our team brings decades of experience in leadership development, culture change, and building technology for organizational health."
   },
   {
-    question: "How does COIREA's approach address burnout and employee well-being?",
-    answer: "Well-being is one of our core 5 pillars, not an add-on. We design organizational systems that support energy, resilience, and sustainability. This includes restructuring workloads, creating psychologically safe environments, implementing regenerative practices, and measuring well-being indicators alongside performance metrics."
+    question: "How does COIREA address burnout and well-being?",
+    answer: "Well-Being is one of our 5 core pillars, not an afterthought. The platform includes a Burnout Early Warning Index that identifies risk signals before they impact performance and retention. We track energy levels, stress patterns, and resilience indicators in real-time."
   },
   {
-    question: "What does 'reciprocity as strategy' mean in practice?",
-    answer: "Inspired by the concept of Ayni, we believe sustainable business honors natural flows of giving and receiving. In practice, this means designing stakeholder relationships, decision-making processes, and business models that benefit all parties involved - employees, customers, communities, and ecosystems. It's regenerative business strategy."
+    question: "What is COIREA's connection to Latin America?",
+    answer: "Through Raíces Latinas, our social impact arm, COIREA enables companies to convert organizational improvements into community impact in Latin America. We support initiatives in community regeneration, women-led leadership, and organizational strengthening for NGOs and social enterprises."
   }
 ];
 
 export const toolsFAQs: FAQItem[] = [
   {
-    question: "What is the Organizational Health Scanner and how does it work?",
-    answer: "The Organizational Health Scanner is a comprehensive assessment tool that evaluates your organization across COIREA's 5-pillar framework plus leadership effectiveness. It combines surveys, behavioral metrics, and diagnostic questions to provide insights into Purpose clarity, Leadership maturity, Collaboration health, Culture alignment, and Well-being indicators."
+    question: "What is the Organizational Health Scanner?",
+    answer: "The Organizational Health Scanner is a comprehensive assessment tool that evaluates your organization across COIREA's 5-pillar framework. It provides immediate insights into Purpose clarity, Leadership effectiveness, Collaboration health, Well-being indicators, and Strategic alignment."
   },
   {
     question: "How long does the assessment take and what do I get?",
-    answer: "The complete assessment takes 15-20 minutes and provides immediate insights plus a detailed report. You'll receive scores for each pillar, leadership effectiveness metrics, specific recommendations for improvement, and guidance on next steps. The assessment is designed to give actionable insights, not just numbers."
+    answer: "The complete assessment takes 15-20 minutes and provides immediate insights plus a detailed report. You'll receive scores for each pillar, specific recommendations for improvement, and guidance on next steps. The assessment is designed to give actionable insights, not just numbers."
   },
   {
-    question: "Is the Organizational Health Scanner free to use?",
-    answer: "Yes, the basic assessment is completely free and provides valuable insights for any organization. It's our way of supporting purpose-driven leaders with immediately useful tools for organizational development and conscious business practices."
+    question: "Is the Organizational Health Scanner free?",
+    answer: "Yes, the basic assessment is completely free and provides valuable insights for any organization. It's our way of helping purpose-driven leaders understand their organizational health before committing to the full platform."
   },
   {
     question: "How accurate is the assessment for different organization sizes?",
-    answer: "The assessment is calibrated for organizations from startup to enterprise level. Questions and scoring adjust for different contexts, whether you're a 5-person team or 500+ employee organization. The framework principles remain consistent while recommendations adapt to your scale and complexity."
+    answer: "The assessment is calibrated for organizations from startup to enterprise level. Questions and scoring adjust for different contexts, whether you're a 5-person team or 500+ employee organization. The framework principles remain consistent while recommendations adapt to your scale."
   },
   {
-    question: "Can I use these insights without working with COIREA directly?",
-    answer: "Absolutely. The assessment and recommendations are designed to be valuable whether you work with us or not. Many organizations use our tools independently to guide their development. For those wanting deeper transformation, we offer follow-up programs, but the tools themselves provide standalone value."
+    question: "How does the assessment connect to the full COIREA platform?",
+    answer: "The assessment provides a snapshot of organizational health. The full COIREA platform offers continuous measurement, AI-powered insights, trend tracking, and predictive capabilities. Assessment results can serve as a baseline for tracking progress once you join the platform."
   }
 ];

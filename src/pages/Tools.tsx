@@ -53,7 +53,7 @@ const Tools = () => {
           {/* Related Content */}
           <RelatedContent 
             currentPage="tools" 
-            suggestions={["offerings", "about", "insights"]}
+            suggestions={["platform", "about", "insights"]}
           />
         </main>
         <Footer />

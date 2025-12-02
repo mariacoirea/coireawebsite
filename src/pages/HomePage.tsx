@@ -47,7 +47,7 @@ const HomePage = () => {
           {/* Related Content */}
           <RelatedContent 
             currentPage="home" 
-            suggestions={["offerings", "tools", "about"]}
+            suggestions={["platform", "tools", "about"]}
           />
         </main>
         <Footer />
