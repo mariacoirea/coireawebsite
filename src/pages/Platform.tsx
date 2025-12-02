@@ -66,30 +66,51 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* COIREA gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-background to-[hsl(var(--warm-beige))]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--secondary)/0.15),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.08),transparent_50%)]" />
+            {/* Nature-inspired green background */}
+            <div className="absolute inset-0 bg-gradient-to-b from-secondary via-secondary/95 to-secondary/85" />
+            
+            {/* Organic leaf patterns */}
+            <div className="absolute inset-0 opacity-10">
+              <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="leaf-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+                    <path d="M60 10 Q80 30 60 60 Q40 30 60 10" fill="currentColor" className="text-background" opacity="0.6"/>
+                    <path d="M20 70 Q40 90 20 120 Q0 90 20 70" fill="currentColor" className="text-background" opacity="0.4"/>
+                    <path d="M100 80 Q120 100 100 130 Q80 100 100 80" fill="currentColor" className="text-background" opacity="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#leaf-pattern)" />
+              </svg>
+            </div>
+            
+            {/* Radial light overlays */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--sage)/0.3),transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--primary)/0.2),transparent_60%)]" />
+            
+            {/* Subtle organic curves */}
+            <svg className="absolute bottom-0 left-0 w-full h-48 opacity-20" viewBox="0 0 1440 200" preserveAspectRatio="none">
+              <path d="M0,100 C360,150 720,50 1080,100 C1260,125 1380,90 1440,100 L1440,200 L0,200 Z" fill="hsl(var(--background))" />
+            </svg>
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 border border-background/30 text-background text-sm font-medium backdrop-blur-sm">
                   <Sparkles className="w-4 h-4" />
                   <span>AI-Powered Organizational Intelligence</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-foreground leading-tight">
                   {t('hero.title')}
-                  <span className="block text-secondary mt-2">{t('hero.subtitle')}</span>
+                  <span className="block text-background/90 mt-2">{t('hero.subtitle')}</span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-background/80 font-body max-w-2xl mx-auto leading-relaxed">
                   {t('hero.description')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <LocalizedLink to="/journey">
-                    <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                    <Button size="lg" className="text-lg px-8 py-6 bg-background text-secondary hover:bg-background/90">
                       {t('hero.cta.primary')}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
@@ -97,7 +118,7 @@ const Platform = () => {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="text-lg px-8 py-6 border-secondary/30 text-secondary hover:bg-secondary/10" 
+                    className="text-lg px-8 py-6 border-background/40 text-background hover:bg-background/10" 
                     onClick={() => {
                       document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' });
                     }}
@@ -108,8 +129,8 @@ const Platform = () => {
               </div>
             </div>
 
-            {/* Decorative elements */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+            {/* Bottom fade to content */}
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--warm-beige))] to-transparent" />
           </section>
 
           {/* What COIREA Does */}
