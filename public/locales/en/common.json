@@ -2,7 +2,7 @@
   "header": {
     "nav": {
       "about": "About",
-      "offerings": "Offerings",
+      "platform": "Platform",
       "insights": "Insights",
       "tools": "Tools",
       "socialImpact": "Social Impact"
@@ -18,9 +18,17 @@
     "quickLinks": {
       "title": "Quick Links",
       "about": "About",
-      "offerings": "Offerings",
+      "platform": "Platform",
       "insights": "Insights",
       "journey": "Begin Journey"
+    },
+    "platformFeatures": {
+      "title": "Platform",
+      "health": "Health Dashboard",
+      "insights": "AI Insights",
+      "leadership": "Leadership Metrics",
+      "impact": "Social Impact",
+      "raices": "Raíces Latinas"
     },
     "copyright": "© 2024 COIREA. All rights reserved."
   },
@@ -37,9 +45,9 @@
         "text": "About COIREA",
         "keywords": "conscious leadership team"
       },
-      "offerings": {
-        "text": "Our Services",
-        "keywords": "transformation services"
+      "platform": {
+        "text": "Our Platform",
+        "keywords": "organizational intelligence platform"
       },
       "journey": {
         "text": "Start Your Journey",

@@ -33,8 +33,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <LocalizedLink to="/offerings" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('header.nav.offerings').toUpperCase()}
+            <LocalizedLink to="/platform" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.platform').toUpperCase()}
             </LocalizedLink>
             <LocalizedLink to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.about').toUpperCase()}
@@ -71,8 +71,8 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6 space-y-4">
-            <LocalizedLink to="/offerings" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.offerings').toUpperCase()}
+            <LocalizedLink to="/platform" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.platform').toUpperCase()}
             </LocalizedLink>
             <LocalizedLink to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.about').toUpperCase()}
