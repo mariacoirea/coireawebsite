@@ -80,9 +80,11 @@ const Platform = () => {
                   <span>AI-Powered Organizational Intelligence</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary leading-tight">
-                  {t('hero.title')}
-                  <span className="block text-primary/80 mt-2">{t('hero.subtitle')}</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
+                  <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
+                    {t('hero.title')}
+                  </span>
+                  <span className="block bg-gradient-to-b from-primary/80 to-primary/60 bg-clip-text text-transparent mt-2">{t('hero.subtitle')}</span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-primary/70 font-body max-w-2xl mx-auto leading-relaxed">
