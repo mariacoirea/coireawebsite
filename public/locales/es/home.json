@@ -170,5 +170,12 @@
       "duration": "90 Días",
       "phases": "3 Fases"
     }
+  },
+  "impact": {
+    "badge": "La Capa de Impacto Regenerativo",
+    "title": "Transforma la Salud Organizacional en Impacto Social",
+    "description1": "COIREA convierte un porcentaje del crecimiento organizacional (tiempo, habilidades o contribuciones financieras) en impacto regenerativo en América Latina.",
+    "description2": "A través de nuestro brazo de impacto social, las empresas apoyan proyectos sociales con reportes transparentes de ODS directamente dentro de la plataforma.",
+    "cta": "Conoce el Impacto Social"
   }
 }

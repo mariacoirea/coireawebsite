@@ -170,5 +170,12 @@
       "duration": "90 Days",
       "phases": "3 Phases"
     }
+  },
+  "impact": {
+    "badge": "The Regenerative Impact Layer",
+    "title": "Transform Organizational Health into Social Impact",
+    "description1": "COIREA converts a percentage of organizational growth (time, skills, or financial contributions) into regenerative impact in Latin America.",
+    "description2": "Through our social impact arm, companies support social projects with transparent SDGs reporting directly inside the platform.",
+    "cta": "Learn About Social Impact"
   }
 }
