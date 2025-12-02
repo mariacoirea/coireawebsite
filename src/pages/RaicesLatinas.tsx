@@ -400,7 +400,7 @@ const RaicesLatinas = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/90 to-[hsl(var(--raices-earth-brown))]/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/75 to-[hsl(var(--raices-earth-brown))]/70" />
           
           <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-12">
