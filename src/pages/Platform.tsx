@@ -66,36 +66,42 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/20" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]" />
+            {/* COIREA gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-background to-[hsl(var(--warm-beige))]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--secondary)/0.15),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.08),transparent_50%)]" />
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium">
                   <Sparkles className="w-4 h-4" />
                   <span>AI-Powered Organizational Intelligence</span>
                 </div>
                 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
                   {t('hero.title')}
-                  <span className="block text-primary mt-2">{t('hero.subtitle')}</span>
+                  <span className="block text-secondary mt-2">{t('hero.subtitle')}</span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto leading-relaxed">
                   {t('hero.description')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <LocalizedLink to="/journey">
-                    <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
+                    <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                       {t('hero.cta.primary')}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </LocalizedLink>
-                  <Button size="lg" variant="outline" className="text-lg px-8 py-6" onClick={() => {
-                    document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' });
-                  }}>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="text-lg px-8 py-6 border-secondary/30 text-secondary hover:bg-secondary/10" 
+                    onClick={() => {
+                      document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
                     {t('hero.cta.secondary')}
                   </Button>
                 </div>
@@ -107,13 +113,13 @@ const Platform = () => {
           </section>
 
           {/* What COIREA Does */}
-          <section id="what-we-do" className="py-24 bg-secondary/30">
+          <section id="what-we-do" className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
                   {t('whatWeDo.title')}
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground font-body">
                   {t('whatWeDo.subtitle')}
                 </p>
               </div>
@@ -122,15 +128,15 @@ const Platform = () => {
                 {capabilities.map(({ key, icon: Icon }) => (
                   <div 
                     key={key}
-                    className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                    className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                      <Icon className="w-6 h-6 text-secondary" />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-2">
                       {t(`whatWeDo.capabilities.${key}.title`)}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground font-body">
                       {t(`whatWeDo.capabilities.${key}.description`)}
                     </p>
                   </div>
@@ -143,13 +149,13 @@ const Platform = () => {
           <section className="py-24 bg-background">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
                   {t('aiAgent.title')}
                 </h2>
-                <p className="text-lg text-muted-foreground mb-2">
+                <p className="text-lg text-muted-foreground font-body mb-2">
                   {t('aiAgent.subtitle')}
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-body">
                   {t('aiAgent.description')}
                 </p>
               </div>
@@ -159,12 +165,12 @@ const Platform = () => {
                 {aiCapabilities.map(({ key, icon: Icon }) => (
                   <div 
                     key={key}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-[hsl(var(--warm-beige))] border border-border"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-secondary" />
                     </div>
-                    <span className="text-foreground font-medium">
+                    <span className="text-foreground font-body font-medium">
                       {t(`aiAgent.capabilities.${key}`)}
                     </span>
                   </div>
@@ -174,20 +180,20 @@ const Platform = () => {
               {/* MVP vs Future */}
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* MVP Today */}
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-medium">
+                    <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
                       {t('aiAgent.mvp.badge')}
                     </span>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-xl font-display font-bold text-foreground">
                       {t('aiAgent.mvp.title')}
                     </h3>
                   </div>
                   <ul className="space-y-4">
                     {['scanner', 'insights', 'indicators', 'burnout'].map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">
+                        <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground font-body">
                           {t(`aiAgent.mvp.features.${feature}`)}
                         </span>
                       </li>
@@ -196,20 +202,20 @@ const Platform = () => {
                 </div>
 
                 {/* Future Roadmap */}
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-muted/50 to-muted border border-border">
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="px-3 py-1 rounded-full bg-muted-foreground/20 text-muted-foreground text-sm font-medium">
+                    <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-medium">
                       {t('aiAgent.future.badge')}
                     </span>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-xl font-display font-bold text-foreground">
                       {t('aiAgent.future.title')}
                     </h3>
                   </div>
                   <ul className="space-y-4">
                     {['predictive', 'automation', 'api', 'realtime'].map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">
+                        <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground font-body">
                           {t(`aiAgent.future.features.${feature}`)}
                         </span>
                       </li>
@@ -221,13 +227,13 @@ const Platform = () => {
           </section>
 
           {/* Platform Features */}
-          <section className="py-24 bg-secondary/30">
+          <section className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
                   {t('features.title')}
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground font-body">
                   {t('features.subtitle')}
                 </p>
               </div>
@@ -236,15 +242,15 @@ const Platform = () => {
                 {features.map(({ key, icon: Icon }) => (
                   <div 
                     key={key}
-                    className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                    className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary" />
+                    <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
+                      <Icon className="w-7 h-7 text-secondary" />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                       {t(`features.items.${key}.title`)}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground font-body leading-relaxed">
                       {t(`features.items.${key}.description`)}
                     </p>
                   </div>
@@ -254,22 +260,22 @@ const Platform = () => {
           </section>
 
           {/* Early Access CTA */}
-          <section className="py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+          <section className="py-24 bg-gradient-to-br from-secondary/5 via-background to-accent/5">
             <div className="container px-4">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
                   {t('cta.title')}
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
                   {t('cta.description')}
                 </p>
                 <LocalizedLink to="/journey">
-                  <Button size="lg" className="text-lg px-10 py-6 bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="text-lg px-10 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     {t('cta.button')}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </LocalizedLink>
-                <p className="text-sm text-muted-foreground mt-4">
+                <p className="text-sm text-muted-foreground font-body mt-4">
                   {t('cta.note')}
                 </p>
               </div>
