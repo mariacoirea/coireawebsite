@@ -52,15 +52,28 @@
   },
   "aiAgent": {
     "title": "Meet the COIREA AI Agent",
-    "subtitle": "Your Organizational Partner",
-    "description": "An AI that understands the nuances of organizational health, trained on proven frameworks and real transformation patterns.",
-    "capabilities": {
-      "analyze": "Analyzes signals from people, behavior, and culture",
-      "detect": "Detects misalignment and emerging risks",
-      "learn": "Learns your organizational context",
-      "generate": "Generates clear, actionable recommendations",
-      "support": "Supports leaders with evidence-based insight, not noise"
+    "subtitle": "Your Organizational Intelligence Partner",
+    "description": "The COIREA AI Agent is the intelligence layer of the platform — a system that interprets signals from people, behavior, culture, and organizational structures, transforming them into clear insights that leaders can act on. Trained on proven frameworks and real transformation patterns, it understands how healthy organizations evolve and guides your team accordingly.",
+    "whatItDoes": {
+      "title": "What It Does"
     },
+    "capabilities": {
+      "analyze": "Analyzes signals from people, behavior, culture, and team dynamics",
+      "detect": "Detects misalignment and emerging risks before they escalate",
+      "learn": "Learns your organizational context and adapts recommendations",
+      "generate": "Generates clear, actionable insight tailored to your leadership needs",
+      "support": "Supports leaders with evidence-based guidance, not noise"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "input": "Input",
+      "inputDescription": "Surveys, behavior signals, culture metrics, leadership patterns",
+      "interpretation": "Interpretation",
+      "interpretationDescription": "AI analysis + OS logic",
+      "action": "Action",
+      "actionDescription": "Insights, recommendations, predictions, and alerts"
+    },
+    "differentiator": "This is the first AI specifically designed to understand organizational vitality — not just people analytics.",
     "mvp": {
       "title": "MVP Available",
       "badge": "MVP",
