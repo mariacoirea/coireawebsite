@@ -136,13 +136,10 @@ const Platform = () => {
                   <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
                     {t('hero.title')}
                   </span>
-                  <span className="block bg-gradient-to-b from-primary/80 to-primary/60 bg-clip-text text-transparent mt-2">
-                    {t('hero.subtitle')}
-                  </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-primary/70 font-body max-w-3xl mx-auto leading-relaxed">
-                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. Designed for purpose-driven companies, it turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
+                <p className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed">
+                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. It turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
