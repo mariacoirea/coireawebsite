@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ReflectionCheckpoint from "@/components/ReflectionCheckpoint";
 import FivePillarFrameworkSection from "@/components/FivePillarFrameworkSection";
-import ServicesSection from "@/components/ServicesSection";
+import AIAgentSection from "@/components/AIAgentSection";
 
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -34,7 +34,7 @@ const HomePage = () => {
           <Hero />
           <ReflectionCheckpoint />
           <FivePillarFrameworkSection />
-          <ServicesSection />
+          <AIAgentSection />
           
           
           {/* FAQ Section for Homepage */}
