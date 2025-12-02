@@ -66,8 +66,8 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Soft dark green background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(77,18%,32%)] via-[hsl(77,16%,28%)] to-[hsl(77,14%,25%)]" />
+            {/* Soft dark green background with transparency */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(77,18%,32%/0.6)] via-[hsl(77,16%,28%/0.6)] to-[hsl(77,14%,25%/0.6)]" />
             
             {/* Soft radial light overlays for depth */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,hsl(45,29%,97%,0.08),transparent_50%)]" />
