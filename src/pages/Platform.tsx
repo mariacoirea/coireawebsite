@@ -452,7 +452,7 @@ const Platform = () => {
                   <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
                     <Input
                       type="text"
-                      placeholder={t('cta.form.name') || "Full Name"}
+                      placeholder={t('cta.form.name', 'Full Name')}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-background border-border h-12"
@@ -460,7 +460,7 @@ const Platform = () => {
                     />
                     <Input
                       type="email"
-                      placeholder={t('cta.form.email') || "Work Email"}
+                      placeholder={t('cta.form.email', 'Work Email')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-background border-border h-12"
@@ -468,7 +468,7 @@ const Platform = () => {
                     />
                     <Input
                       type="text"
-                      placeholder={t('cta.form.company') || "Company Name"}
+                      placeholder={t('cta.form.company', 'Company Name')}
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="bg-background border-border h-12"
