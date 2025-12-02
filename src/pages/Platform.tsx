@@ -120,36 +120,13 @@ const Platform = () => {
           {/* Why COIREA Exists */}
           <section id="why-exists" className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              <div className="text-center max-w-3xl mx-auto mb-12">
-                <p className="text-secondary font-medium mb-2">{t('whyExists.subtitle')}</p>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
                   {t('whyExists.title')}
                 </h2>
-              </div>
-
-              <div className="max-w-4xl mx-auto space-y-6">
-                {['fragmented', 'outdated', 'invisible'].map((point) => (
-                  <div 
-                    key={point}
-                    className="flex items-start gap-4 p-5 rounded-xl bg-background/50 border border-border"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <AlertTriangle className="w-4 h-4 text-destructive" />
-                    </div>
-                    <p className="text-foreground/80 font-body text-lg">
-                      {t(`whyExists.points.${point}`)}
-                    </p>
-                  </div>
-                ))}
-                
-                <div className="flex items-start gap-4 p-5 rounded-xl bg-secondary/10 border border-secondary/30">
-                  <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Zap className="w-4 h-4 text-secondary" />
-                  </div>
-                  <p className="text-foreground font-body text-lg font-medium">
-                    {t('whyExists.points.solution')}
-                  </p>
-                </div>
+                <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
+                  {t('whyExists.description')}
+                </p>
               </div>
             </div>
           </section>
