@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -18,14 +19,69 @@ import {
   ArrowRight,
   AlertTriangle,
   Compass,
-  Globe
+  Globe,
+  Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 
 const Platform = () => {
   const { t } = useTranslation('platform');
   const { currentLanguage } = useLanguage();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.company) {
+      toast({
+        title: "Please fill all fields",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('send-journey-form', {
+        body: {
+          firstName: formData.name.split(' ')[0],
+          lastName: formData.name.split(' ').slice(1).join(' ') || '',
+          email: formData.email,
+          company: formData.company,
+          role: 'Early Access Interest',
+          goals: 'Platform Early Access Request',
+          source: 'platform-page'
+        }
+      });
+      
+      if (error) throw error;
+      
+      setSubmitted(true);
+      toast({
+        title: t('cta.successTitle') || "Thank you!",
+        description: t('cta.successMessage') || "We'll be in touch soon."
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const pillars = [
     { key: 'purpose', icon: Compass },
@@ -381,12 +437,64 @@ const Platform = () => {
                 <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
                   {t('cta.description')}
                 </p>
-                <LocalizedLink to="/journey">
-                  <Button size="lg" className="text-lg px-10 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                    {t('cta.button')}
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </LocalizedLink>
+                
+                {submitted ? (
+                  <div className="p-8 rounded-2xl bg-background border border-secondary/30">
+                    <CheckCircle2 className="w-12 h-12 text-secondary mx-auto mb-4" />
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-2">
+                      {t('cta.successTitle') || "Thank you for your interest!"}
+                    </h3>
+                    <p className="text-muted-foreground font-body">
+                      {t('cta.successMessage') || "We'll be in touch soon with next steps."}
+                    </p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
+                    <Input
+                      type="text"
+                      placeholder={t('cta.form.name') || "Full Name"}
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="bg-background border-border h-12"
+                      required
+                    />
+                    <Input
+                      type="email"
+                      placeholder={t('cta.form.email') || "Work Email"}
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="bg-background border-border h-12"
+                      required
+                    />
+                    <Input
+                      type="text"
+                      placeholder={t('cta.form.company') || "Company Name"}
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="bg-background border-border h-12"
+                      required
+                    />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full text-lg py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          {t('cta.button')}
+                          <ArrowRight className="ml-2 w-5 h-5" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                )}
+                
                 <p className="text-sm text-muted-foreground font-body mt-4">
                   {t('cta.note')}
                 </p>
