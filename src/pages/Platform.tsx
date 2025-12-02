@@ -67,7 +67,7 @@ const Platform = () => {
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
             {/* Soft gradient background - white to sage/olive */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(77,19%,88%)] to-[hsl(77,19%,78%)]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-[hsl(77,22%,78%)] to-[hsl(77,20%,65%)]" />
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
