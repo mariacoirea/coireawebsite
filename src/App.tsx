@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Offerings from "./pages/Offerings";
+import Platform from "./pages/Platform";
 import Insights from "./pages/Insights";
 import BlogPost from "./pages/BlogPost";
 import Events from "./pages/Events";
@@ -67,7 +68,7 @@ const App = () => {
             {/* English routes */}
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/offerings" element={<Offerings />} />
+            <Route path="/platform" element={<Platform />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/insights/:slug" element={<BlogPost />} />
             <Route path="/events" element={<Events />} />
@@ -77,10 +78,14 @@ const App = () => {
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:id" element={<PostEditor />} />
             
+            {/* Hidden legacy route for Offerings */}
+            <Route path="/90days" element={<Offerings />} />
+            <Route path="/es/90days" element={<Offerings />} />
+            
             {/* Spanish routes */}
             <Route path="/es" element={<HomePage />} />
             <Route path="/es/about" element={<About />} />
-            <Route path="/es/offerings" element={<Offerings />} />
+            <Route path="/es/platform" element={<Platform />} />
             <Route path="/es/insights" element={<Insights />} />
             <Route path="/es/insights/:slug" element={<BlogPost />} />
             <Route path="/es/events" element={<Events />} />

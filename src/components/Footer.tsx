@@ -46,18 +46,33 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Platform */}
           <div>
-            <h3 className="text-lg font-display font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-display font-semibold mb-6">{t('footer.platformFeatures.title')}</h3>
             <ul className="space-y-3 font-body">
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Organizational Transformation</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Team Retreats</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Leadership Coaching</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Strategic Consulting</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">5-Pillar Framework</a></li>
+              <li>
+                <LocalizedLink to="/platform" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.platformFeatures.health')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/platform" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.platformFeatures.insights')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/platform" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.platformFeatures.leadership')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/platform" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.platformFeatures.impact')}
+                </LocalizedLink>
+              </li>
               <li>
                 <LocalizedLink to="/raices-latinas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Raíces Latinas
+                  {t('footer.platformFeatures.raices')}
                 </LocalizedLink>
               </li>
             </ul>
