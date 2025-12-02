@@ -123,6 +123,13 @@
     "title": "Da Forma al Futuro de la Inteligencia Organizacional",
     "description": "Sé de las primeras empresas en experimentar COIREA. Los miembros de acceso anticipado ayudan a definir la plataforma y reciben beneficios de miembro fundador.",
     "button": "Únete al Programa de Acceso Anticipado",
-    "note": "Lugares limitados para la cohorte 2025"
+    "note": "Lugares limitados para la cohorte 2025",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo de Trabajo",
+      "company": "Nombre de Empresa"
+    },
+    "successTitle": "¡Gracias por tu interés!",
+    "successMessage": "Te contactaremos pronto con los siguientes pasos."
   }
 }
