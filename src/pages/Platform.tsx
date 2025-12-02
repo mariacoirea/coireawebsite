@@ -117,15 +117,15 @@ const Platform = () => {
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--warm-beige))] to-transparent" />
           </section>
 
-          {/* Why COIREA Exists - Updated */}
+          {/* Why COIREA Exists */}
           <section id="why-exists" className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
-                  {t('whyExists.title', 'The Future of Healthy, Regenerative Organizations')}
+                  The Future of Healthy, Regenerative Organizations
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
-                  {t('whyExists.description', 'COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system.')}
+                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. Designed for purpose-driven companies, it turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
                 </p>
               </div>
             </div>
