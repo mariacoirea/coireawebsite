@@ -66,31 +66,12 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Nature-inspired green background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-secondary via-secondary/95 to-secondary/85" />
+            {/* Soft sage green background */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(82,25%,55%)] via-[hsl(82,20%,50%)] to-[hsl(77,19%,45%)]" />
             
-            {/* Organic leaf patterns */}
-            <div className="absolute inset-0 opacity-10">
-              <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <pattern id="leaf-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-                    <path d="M60 10 Q80 30 60 60 Q40 30 60 10" fill="currentColor" className="text-background" opacity="0.6"/>
-                    <path d="M20 70 Q40 90 20 120 Q0 90 20 70" fill="currentColor" className="text-background" opacity="0.4"/>
-                    <path d="M100 80 Q120 100 100 130 Q80 100 100 80" fill="currentColor" className="text-background" opacity="0.5"/>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#leaf-pattern)" />
-              </svg>
-            </div>
-            
-            {/* Radial light overlays */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--sage)/0.3),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--primary)/0.2),transparent_60%)]" />
-            
-            {/* Subtle organic curves */}
-            <svg className="absolute bottom-0 left-0 w-full h-48 opacity-20" viewBox="0 0 1440 200" preserveAspectRatio="none">
-              <path d="M0,100 C360,150 720,50 1080,100 C1260,125 1380,90 1440,100 L1440,200 L0,200 Z" fill="hsl(var(--background))" />
-            </svg>
+            {/* Soft radial light overlays for depth */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,hsl(45,29%,97%,0.15),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(82,25%,60%,0.3),transparent_60%)]" />
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
