@@ -4,9 +4,10 @@ import {
   Shield, 
   Activity,
   Sparkles,
+  AlertTriangle,
   CheckCircle2,
   Clock,
-  AlertTriangle
+  ArrowRight
 } from "lucide-react";
 
 const AIAgentSection = () => {
@@ -23,32 +24,70 @@ const AIAgentSection = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-secondary font-medium mb-2">{t('aiAgent.subtitle')}</p>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+        {/* Header */}
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
             {t('aiAgent.title')}
           </h2>
-          <p className="text-muted-foreground font-body">
+          <p className="text-xl text-secondary font-medium mb-4">{t('aiAgent.subtitle')}</p>
+          <p className="text-muted-foreground font-body leading-relaxed">
             {t('aiAgent.description')}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-16">
-          {aiCapabilities.map(({ key, icon: Icon }) => (
-            <div 
-              key={key}
-              className="flex items-center gap-3 p-4 rounded-xl bg-[hsl(var(--warm-beige))] border border-border"
-            >
-              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                <Icon className="w-5 h-5 text-secondary" />
+        {/* What It Does */}
+        <div className="max-w-5xl mx-auto mb-12">
+          <h3 className="text-xl font-display font-semibold text-foreground text-center mb-6">
+            {t('aiAgent.whatItDoes.title')}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {aiCapabilities.map(({ key, icon: Icon }) => (
+              <div 
+                key={key}
+                className="flex items-center gap-3 p-4 rounded-xl bg-[hsl(var(--warm-beige))] border border-border"
+              >
+                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-secondary" />
+                </div>
+                <span className="text-foreground font-body text-sm font-medium">
+                  {t(`aiAgent.capabilities.${key}`)}
+                </span>
               </div>
-              <span className="text-foreground font-body text-sm font-medium">
-                {t(`aiAgent.capabilities.${key}`)}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
+        {/* How It Works Bar */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <h3 className="text-xl font-display font-semibold text-foreground text-center mb-6">
+            {t('aiAgent.howItWorks.title')}
+          </h3>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-secondary/5 via-accent/5 to-secondary/5 border border-border">
+            <div className="text-center md:text-left flex-1">
+              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.input')}</p>
+              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.inputDescription')}</p>
+            </div>
+            <ArrowRight className="w-6 h-6 text-secondary hidden md:block" />
+            <div className="text-center flex-1">
+              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.interpretation')}</p>
+              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.interpretationDescription')}</p>
+            </div>
+            <ArrowRight className="w-6 h-6 text-secondary hidden md:block" />
+            <div className="text-center md:text-right flex-1">
+              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.action')}</p>
+              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.actionDescription')}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Differentiator Line */}
+        <div className="max-w-3xl mx-auto mb-12 text-center">
+          <p className="text-lg font-medium text-secondary italic">
+            {t('aiAgent.differentiator')}
+          </p>
+        </div>
+
+        {/* MVP & Roadmap Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="p-8 rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20">
             <div className="flex items-center gap-3 mb-6">
