@@ -1,210 +1,136 @@
 {
   "hero": {
-    "title": "COIREA Raíces Latinas",
-    "subtitle": "Conectando Recursos Globales con Impacto Local",
-    "description": "Empoderando organizaciones con propósito en América Latina para escalar con claridad, estructura e integridad."
+    "title": "Transforma la Salud Organizacional en Impacto Social",
+    "subtitle": "Un modelo regenerativo donde empresas más fuertes apoyan directamente a comunidades más fuertes—impulsado por datos y alineado con los ODS.",
+    "cta": "Únete a la Red de Impacto"
   },
-  "intro": {
-    "text1": "América Latina posee una inteligencia, creatividad y potencial regenerativo profundos — sin embargo, muchas iniciativas comunitarias y ONGs luchan por escalar su impacto de manera sostenible.",
-    "text2": "No por falta de propósito, sino por falta de estructura que sostenga el propósito.",
-    "bridge": "actúa como un puente entre los recursos globales y las iniciativas locales.",
-    "description": "Combinamos el pensamiento sistémico estructurado con la sabiduría regenerativa de América Latina; ayudando a organizaciones visionarias a asegurar financiamiento, optimizar operaciones y construir capacidad para una transformación social duradera."
-  },
-  "whyCoirea": {
-    "title": "¿Por Qué COIREA Raíces Latinas?",
-    "subtitle": "El Sistema Operativo COIREA adaptado para el impacto social latinoamericano",
-    "gap": {
-      "title": "La Brecha que Cerramos",
-      "description": "Muchas iniciativas latinoamericanas están arraigadas en sabiduría cultural profunda, cuidado comunitario y prácticas regenerativas. Sin embargo, a menudo enfrentan barreras al navegar sistemas globales:"
-    },
-    "barriers": {
-      "funding": {
-        "title": "Financiamiento y Preparación para Financiadores",
-        "description": "Acceder a subvenciones, inversión social o filantropía requiere estructuras de reporte específicas, planes estratégicos y marcos operacionales que no siempre son intuitivos para movimientos de base."
-      },
-      "operations": {
-        "title": "Capacidad Operacional",
-        "description": "Escalar el impacto requiere sistemas de gestión de proyectos, gobernanza, cumplimiento y sostenibilidad financiera — no solo pasión y visión."
-      },
-      "communication": {
-        "title": "Comunicación Intercultural",
-        "description": "Los financiadores y socios globales a menudo no hablan el mismo lenguaje cultural u operacional que las comunidades locales, lo que lleva a desalineación y oportunidades perdidas."
-      }
-    },
-    "solution": {
-      "title": "Nuestro Enfoque",
-      "description": "Nos encontramos con las organizaciones donde están — honrando su contexto cultural y valores regenerativos — y las equipamos con la claridad, sistemas y marcos que necesitan para prosperar en ecosistemas locales y globales."
-    }
-  },
-  "whoWeWorkWith": {
-    "title": "Con Quiénes Trabajamos",
-    "types": {
-      "ngos": {
-        "title": "ONGs y Empresas Sociales",
-        "description": "Construyendo gobernanza, marcos estratégicos y operaciones listas para financiamiento para organizaciones sin fines de lucro que impulsan el cambio social."
-      },
-      "cooperatives": {
-        "title": "Cooperativas Indígenas y Rurales",
-        "description": "Apoyando iniciativas de propiedad comunitaria con estructura, desarrollo de liderazgo y movilización de recursos."
-      },
-      "womenLed": {
-        "title": "Iniciativas Lideradas por Mujeres",
-        "description": "Empoderando a líderes y colectivos femeninos con herramientas para la sostenibilidad financiera y la resiliencia organizacional."
-      },
-      "regenerative": {
-        "title": "Proyectos Comunitarios Regenerativos",
-        "description": "Fortaleciendo iniciativas ecológicas y centradas en la comunidad a través de claridad, gobernanza y medición de impacto."
-      }
-    }
-  },
-  "whatWeOffer": {
-    "title": "Qué Ofrecemos",
-    "subtitle": "Apoyo personalizado para el crecimiento de tu organización",
-    "services": {
-      "fundingReadiness": {
-        "title": "Preparación para Financiamiento y Financiadores",
-        "items": [
-          "Desarrollo de narrativa estratégica para solicitudes de subvenciones",
-          "Teoría del Cambio y marcos de medición de impacto",
-          "Sistemas de presupuesto y reportes financieros",
-          "Construcción de relaciones con financiadores y coaching de presentaciones"
-        ]
-      },
-      "capacityBuilding": {
-        "title": "Construcción de Capacidad Organizacional",
-        "items": [
-          "Diseño de gobernanza (estructura de junta, estatutos, procesos de toma de decisiones)",
-          "Sistemas operacionales (gestión de proyectos, flujos de trabajo internos, POEs)",
-          "Desarrollo de liderazgo y alineación de equipo",
-          "Planificación de sucesión y documentación de conocimiento"
-        ]
-      },
-      "consciousLeadership": {
-        "title": "Desarrollo de Liderazgo Consciente",
-        "items": [
-          "Coaching ejecutivo para fundadores y directores",
-          "Cohesión de equipo y prácticas de comunicación",
-          "Resolución de conflictos y modelos de gobernanza regenerativa",
-          "Transiciones de liderazgo y sanación organizacional"
-        ]
-      },
-      "coireaOS": {
-        "title": "Implementación del Sistema Operativo COIREA",
-        "description": "Un sistema operativo completo para claridad y ejecución organizacional — adaptado para contextos latinoamericanos.",
-        "includes": "Planificación estratégica, marcos OKR, ritmos regenerativos, rituales de alineación de equipo y más."
-      }
-    }
-  },
-  "ourPhilosophy": {
-    "title": "Nuestra Filosofía",
-    "subtitle": "Arraigada en Ayni — el principio de reciprocidad",
-    "principles": {
-      "reciprocity": {
-        "title": "Reciprocidad Sobre Extracción",
-        "description": "Creemos en el beneficio mutuo — no solo consultoría, sino co-creación con las comunidades."
-      },
-      "integrity": {
-        "title": "Integridad Sobre Imitación",
-        "description": "No imponemos modelos del Norte Global. Adaptamos sistemas para honrar la cultura local, la sabiduría y las formas de ser."
-      },
-      "regeneration": {
-        "title": "Regeneración Sobre Escala a Cualquier Costo",
-        "description": "El verdadero impacto no es solo crecimiento — es sostenibilidad, bienestar y prácticas regenerativas que honran a las personas y el planeta."
-      }
-    }
-  },
-  "mission": {
-    "title": "Nuestra Misión",
-    "text1": "Permitir que las organizaciones de impacto social en América Latina crezcan desde la inspiración hasta la implementación — con claridad, coherencia y capacidad.",
-    "text2": "Combinamos el Sistema Operativo Organizacional de COIREA (COIREA OS) con liderazgo regenerativo y estrategia de financiamiento para ayudar a ONGs y empresas sociales a escalar el propósito, no el agotamiento."
-  },
-  "whatWeOffer": {
-    "title": "Qué Ofrecemos",
-    "services": [
+  "whyImpactMatters": {
+    "title": "Por Qué Importa el Impacto",
+    "subtitle": "Cerrando la brecha entre el bienestar organizacional y la regeneración comunitaria",
+    "points": [
       {
-        "area": "Claridad Organizacional",
-        "purpose": "Definir estructura, roles y modelos de toma de decisiones para equipos ágiles y auto-gestionados."
+        "title": "El Impacto Se Queda Interno",
+        "description": "Las empresas invierten mucho en cultura y bienestar, pero el impacto a menudo se queda dentro de la organización."
       },
       {
-        "area": "Dirección Estratégica",
-        "purpose": "Alinear misión, objetivos y operaciones a través de hojas de ruta prácticas."
+        "title": "Las Comunidades Necesitan Apoyo Sostenible",
+        "description": "Los desafíos sociales en LATAM—especialmente en comunidades indígenas, rurales y lideradas por mujeres—carecen de apoyo sostenible a largo plazo."
       },
       {
-        "area": "Capacidad de Liderazgo",
-        "purpose": "Capacitar equipos en liderazgo consciente, colaborativo y responsable."
+        "title": "La RSE Está Fragmentada",
+        "description": "La RSE tradicional es fragmentada, a corto plazo y no está conectada con el desempeño empresarial."
       },
       {
-        "area": "Preparación para Financiamiento",
-        "purpose": "Construir modelos de sostenibilidad y co-diseñar propuestas de subvenciones y alianzas."
-      },
-      {
-        "area": "Comunicación de Impacto",
-        "purpose": "Fortalecer la narrativa y el reporte para atraer financiadores y aliados alineados."
+        "title": "COIREA Cierra la Brecha",
+        "description": "COIREA cierra esta brecha vinculando la vitalidad organizacional con la regeneración comunitaria."
       }
     ]
   },
-  "howItWorks": {
-    "title": "Cómo Funciona",
+  "coireaSocial": {
+    "tagline": "Tu brazo de impacto regenerativo",
+    "title": "Presentamos COIREA Social",
+    "subtitle": "Raíces Latinas",
+    "description": "COIREA Social canaliza tiempo, habilidades y capital inteligente de las organizaciones participantes hacia proyectos comunitarios de alto impacto en toda América Latina. Tus mejoras organizacionales—bienestar, colaboración, liderazgo—se traducen en contribuciones tangibles alineadas con los ODS, rastreadas dentro de la plataforma."
+  },
+  "impactModel": {
+    "title": "El Modelo de Impacto Regenerativo",
+    "subtitle": "Un mecanismo de tres pasos que transforma el crecimiento organizacional en impacto comunitario",
     "steps": [
-      { "step": "Diagnosticar", "desc": "Evaluar estructura actual, liderazgo y brechas de impacto" },
-      { "step": "Diseñar", "desc": "Co-crear un modelo operativo personalizado usando COIREA OS" },
-      { "step": "Implementar", "desc": "Aplicar estructura, ritmo y prácticas de liderazgo" },
-      { "step": "Sostener", "desc": "Integrar propiedad y coherencia financiera a largo plazo" },
-      { "step": "Escalar", "desc": "Conectar con oportunidades de financiamiento y alianzas alineadas" }
+      {
+        "number": "01",
+        "title": "Medir y Mejorar",
+        "description": "La cultura, el liderazgo, el bienestar y la colaboración se fortalecen a través de la plataforma COIREA."
+      },
+      {
+        "number": "02",
+        "title": "Activar el Índice de Impacto",
+        "description": "Un porcentaje del crecimiento organizacional (habilidades, horas o capital) fluye hacia socios comunitarios verificados."
+      },
+      {
+        "number": "03",
+        "title": "Rastrear Resultados ODS",
+        "description": "Las organizaciones ven informes transparentes y basados en datos sobre resultados alineados con los ODS."
+      }
     ],
-    "notConsulting": "Esto no es consultoría.",
-    "empowerment": "Esto es transferencia de capacidad, construcción de ecosistema y empoderamiento regenerativo."
+    "sdgs": {
+      "title": "Alineado con los Objetivos de Desarrollo Sostenible",
+      "list": [
+        { "number": "3", "name": "Bienestar" },
+        { "number": "4", "name": "Educación de Calidad" },
+        { "number": "5", "name": "Igualdad de Género" },
+        { "number": "8", "name": "Trabajo Decente" },
+        { "number": "10", "name": "Reducción de Desigualdades" },
+        { "number": "11", "name": "Comunidades Sostenibles" },
+        { "number": "13", "name": "Acción Climática" },
+        { "number": "17", "name": "Alianzas" }
+      ]
+    }
   },
-  "whyCoirea": {
-    "title": "Por Qué COIREA Raíces Latinas",
-    "text1": "Aportamos más de una década de experiencia en operaciones corporativas, crecimiento de startups y transformación organizacional — ahora dedicados a la regeneración social.",
-    "text2": "Arraigados en el principio andino de Ayni (Reciprocidad Sagrada), nuestra metodología une estructura y alma, ayudando a las organizaciones a liderar con estrategia y espíritu.",
-    "values": [
+  "impactAreas": {
+    "title": "Áreas de Impacto",
+    "subtitle": "Tres pilares fundamentales impulsando el cambio regenerativo en América Latina",
+    "pillars": [
       {
-        "title": "Experiencia Probada",
-        "description": "Más de una década de trayectoria en operaciones corporativas y transformación organizacional"
+        "title": "Regeneración Comunitaria",
+        "description": "Apoyar a comunidades indígenas y rurales a través del turismo regenerativo, emprendimiento local y desarrollo comunitario."
       },
       {
-        "title": "Enfoque Regenerativo",
-        "description": "Arraigado en Ayni (Reciprocidad Sagrada) y principios de liderazgo consciente"
+        "title": "Liderazgo Femenino",
+        "description": "Programas para fortalecer a mujeres líderes locales, microempresas y aprendizaje intergeneracional."
       },
       {
-        "title": "Estructura + Alma",
-        "description": "Uniendo claridad estratégica con integridad cultural y propósito"
+        "title": "Fortalecimiento de ONGs",
+        "description": "Aplicar el Sistema Operativo COIREA para ayudar a ONGs de LATAM a construir gobernanza sostenible, modelos de ingresos y estructuras de liderazgo."
       }
     ]
   },
-  "whoWeWorkWith": {
-    "title": "Con Quiénes Trabajamos",
-    "partners": [
-      "ONGs y organizaciones sin fines de lucro",
-      "Cooperativas indígenas y rurales",
-      "Iniciativas lideradas por mujeres",
-      "Proyectos comunitarios regenerativos",
-      "Empresas sociales",
-      "Fundaciones y alianzas de construcción de capacidades"
+  "howToParticipate": {
+    "title": "Cómo Participan las Empresas",
+    "subtitle": "Tres caminos para unirse a la transformación regenerativa",
+    "pathways": [
+      {
+        "title": "Membresía de Impacto",
+        "description": "Tu modelo principal para contribución regenerativa continua a través de la plataforma COIREA."
+      },
+      {
+        "title": "Voluntariado Basado en Habilidades",
+        "description": "Conecta la experiencia de tu equipo con las necesidades de la comunidad a través de la red de talento de COIREA."
+      },
+      {
+        "title": "Capital Regenerativo",
+        "description": "Asigna capital hacia proyectos regenerativos—como un Founders Pledge corporativo."
+      }
     ]
   },
-  "partnership": {
-    "title": "Invitación a Colaborar",
-    "intro": "Estamos construyendo una red de organizaciones, financiadores y aliados comprometidos con fortalecer América Latina desde adentro.",
-    "partners": [
-      "ONGs que buscan fortalecer su capacidad interna",
-      "Proyectos liderados por comunidades creciendo su impacto de manera sostenible",
-      "Fundaciones y donantes financiando construcción de capacidades",
-      "Constructores de ecosistemas creando cambio regenerativo en la región"
+  "dashboard": {
+    "title": "Panel de Reportes de Impacto",
+    "subtitle": "Rastrea la contribución regenerativa de tu organización en tiempo real",
+    "features": [
+      "Visualización de contribuciones ODS",
+      "Seguimiento de fondos y tiempo asignado",
+      "Métricas de progreso comunitario",
+      "Integración de historias y datos"
     ],
-    "callToAction": "Si estás construyendo impacto con propósito — estamos listos para construir contigo.",
-    "formTitle": "Co-Creemos Juntos",
+    "comingSoon": "Vista Previa del Panel Próximamente"
+  },
+  "cta": {
+    "title": "Únete a la Red de Impacto COIREA",
+    "subtitle": "Sé parte de la transformación regenerativa de América Latina.",
     "form": {
-      "name": "Nombre",
+      "name": "Nombre Completo",
       "email": "Correo Electrónico",
-      "organization": "Organización",
-      "message": "Cuéntanos sobre tu organización y lo que buscas",
-      "submit": "Enviar Mensaje",
-      "sending": "Enviando...",
-      "successMessage": "¡Mensaje enviado exitosamente! Te contactaremos pronto.",
-      "errorMessage": "Error al enviar el mensaje. Por favor intenta de nuevo."
+      "company": "Organización",
+      "message": "Cuéntanos sobre tu interés en el impacto regenerativo",
+      "submit": "Unirse a la Red",
+      "submitting": "Enviando..."
+    },
+    "success": {
+      "title": "¡Gracias por unirte!",
+      "message": "Nos pondremos en contacto pronto para discutir cómo podemos crear impacto regenerativo juntos."
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "message": "Por favor intenta de nuevo o contáctanos directamente."
     }
   }
 }
