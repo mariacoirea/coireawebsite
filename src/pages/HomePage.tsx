@@ -34,8 +34,8 @@ const HomePage = () => {
         <main>
           <Hero />
           <ReflectionCheckpoint />
-          <FivePillarFrameworkSection />
           <HowItWorksSection />
+          <FivePillarFrameworkSection />
           <AIAgentSection />
           <RegenerativeImpactSection />
           
