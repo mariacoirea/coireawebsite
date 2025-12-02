@@ -177,5 +177,24 @@
     "description1": "COIREA convierte un porcentaje del crecimiento organizacional (tiempo, habilidades o contribuciones financieras) en impacto regenerativo en América Latina.",
     "description2": "A través de nuestro brazo de impacto social, las empresas apoyan proyectos sociales con reportes transparentes de ODS directamente dentro de la plataforma.",
     "cta": "Conoce el Impacto Social"
+  },
+  "howItWorks": {
+    "badge": "El Viaje COIREA",
+    "title": "Cómo Funciona",
+    "steps": {
+      "platform": {
+        "title": "PLATAFORMA",
+        "description": "El SO Regenerativo mide la salud organizacional en 5 pilares en tiempo real."
+      },
+      "results": {
+        "title": "OBTIENE RESULTADOS",
+        "description": "El Agente IA analiza datos para generar insights, predicciones y alertas de riesgo."
+      },
+      "impact": {
+        "title": "IMPACTO SOCIAL",
+        "description": "El crecimiento organizacional se convierte en impacto regenerativo en Latinoamérica."
+      }
+    },
+    "quote": "La primera plataforma diseñada específicamente para transformar la vitalidad organizacional en impacto social medible — no solo analítica de personas."
   }
 }
