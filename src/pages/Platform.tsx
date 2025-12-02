@@ -66,12 +66,8 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Soft olive green tint - almost transparent */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(78,20%,50%/0.15)] via-[hsl(76,18%,45%/0.12)] to-[hsl(74,16%,40%/0.1)]" />
-            
-            {/* Soft radial light overlays for subtle depth */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,hsl(78,20%,60%/0.1),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(74,18%,50%/0.08),transparent_60%)]" />
+            {/* Soft gradient background like 90days */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white via-[hsl(82,25%,45%/0.08)] to-[hsl(183,48%,21%/0.12)]" />
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
@@ -93,7 +89,7 @@ const Platform = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <LocalizedLink to="/journey">
-                    <Button size="lg" className="text-lg px-8 py-6 bg-background text-secondary hover:bg-background/90">
+                    <Button size="lg" className="text-lg px-8 py-6 bg-secondary text-secondary-foreground hover:bg-secondary/90">
                       {t('hero.cta.primary')}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
@@ -101,7 +97,7 @@ const Platform = () => {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="text-lg px-8 py-6 border-background/40 text-background hover:bg-background/10" 
+                    className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10" 
                     onClick={() => {
                       document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' });
                     }}
