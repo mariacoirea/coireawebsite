@@ -18,10 +18,10 @@ import {
   ArrowRight,
   AlertTriangle,
   Compass,
-  Zap,
   Globe
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
 
 const Platform = () => {
   const { t } = useTranslation('platform');
@@ -339,8 +339,17 @@ const Platform = () => {
           </section>
 
           {/* Regenerative Impact Layer */}
-          <section className="py-24 bg-gradient-to-br from-secondary/5 via-background to-accent/5">
-            <div className="container px-4">
+          <section className="py-24 relative overflow-hidden">
+            <div 
+              className="absolute inset-0 opacity-30"
+              style={{
+                backgroundImage: `url(${mayanPatternsBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))]/90 to-[hsl(var(--warm-beige))]/80" />
+            <div className="container px-4 relative z-10">
               <div className="max-w-4xl mx-auto text-center">
                 <p className="text-secondary font-medium mb-2">{t('impact.subtitle')}</p>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
