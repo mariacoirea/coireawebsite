@@ -1,19 +1,19 @@
 {
   "seo": {
-    "title": "About COIREA - Regenerative Organizational Transformation",
-    "description": "Learn about COIREA's approach to regenerative organizational transformation. We help purpose-driven companies evolve through conscious leadership and structural change.",
-    "keywords": "about COIREA, regenerative consultancy, organizational transformation, conscious leadership, María José Figueroa"
+    "title": "About COIREA - Organizational Intelligence Platform",
+    "description": "Learn about COIREA's AI-powered organizational intelligence platform. We help purpose-driven companies measure, understand, and transform their organizational health.",
+    "keywords": "about COIREA, organizational intelligence, AI platform, organizational health, María José Figueroa"
   },
   "hero": {
     "title": "The Future of Work Isn't a Trend —",
     "titleEmphasis": "It's a Transformation",
-    "subtitle": "We founded COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being."
+    "subtitle": "We built COIREA to challenge outdated systems and lead the shift toward human-centered, high-performing organizations built on coherence, clarity, and well-being."
   },
   "mission": {
     "badge": "Our Mission",
     "title": "Purpose. People.",
     "titleEmphasis": "Performance.",
-    "description": "Our mission is to guide organizations through deep structural and human transformation. We align purpose, people, and performance so that companies can evolve with integrity, strategic direction, and long-term success.",
+    "description": "Our mission is to help organizations measure, understand, and transform their organizational health. We align purpose, people, and performance so that companies can evolve with integrity, strategic direction, and long-term success.",
     "quote": "When purpose and leadership are in coherence, companies not only grow — they regenerate."
   },
   "values": {
@@ -52,41 +52,41 @@
     "badge": "Real Partnership",
     "title": "Real change requires",
     "titleEmphasis": "real partnership.",
-    "intro": "At COIREA, you don't just work with a consulting firm. You enter a living ecosystem of transformational allies:",
+    "intro": "At COIREA, you don't just use a platform. You enter a living ecosystem of transformational support:",
     "allies": [
-      "Executive coaches",
-      "Culture strategists",
-      "Regenerative business mentors",
-      "Well-being and somatic practitioners",
-      "Systems change facilitators"
+      "AI-powered insights",
+      "Real-time organizational health data",
+      "Evidence-based recommendations",
+      "Continuous measurement and tracking",
+      "Social impact integration"
     ],
     "helpTitle": "Together, we help you:",
     "helpItems": [
       {
         "title": "Align Your Leadership Team",
-        "description": "So they operate from shared values and authentic presence"
+        "description": "With data-driven insights into organizational health"
       },
       {
         "title": "Design Regenerative Systems",
         "description": "That prioritize people, planet, and performance"
       },
       {
-        "title": "Navigate Transition",
-        "description": "With strategic clarity and embodied support"
+        "title": "Navigate Transformation",
+        "description": "With real-time visibility and AI-guided recommendations"
       }
     ],
-    "commitment": "We're not here to give you a playbook. We're here to co-create a living organization with you."
+    "commitment": "We're not here to give you a playbook. We're here to give you the intelligence to build a thriving organization."
   },
   "founder": {
     "badge": "Founder & CEO",
     "name": "María José Figueroa",
     "role": "Founder & Visionary",
     "bio": [
-      "María José is a systems thinker, transformational consultant, and regenerative business strategist with deep experience in human-centered organizational design.",
+      "María José is a systems thinker and regenerative business strategist with deep experience in human-centered organizational design.",
       "After years working in corporate environments, she witnessed firsthand how rapid scaling and misaligned structures lead to burnout, cultural fragmentation, and leadership disconnection — even inside purpose-driven companies.",
       "COIREA was born from a simple truth: organizations don't transform through better processes alone. They transform when their leadership systems, cultural architecture, and human energy are aligned with a meaningful purpose.",
       "Trained in conscious leadership, somatic intelligence, and regenerative design, María José integrates strategic clarity with deep inner work — combining business structure with human transformation. Her approach blends operating systems with emotional intelligence, governance with trust, and performance with well-being.",
-      "She has guided leadership teams, coached founders, and facilitated transformational offsites and retreats for organizations navigating complexity, cultural evolution, and intentional growth.",
+      "She has guided leadership teams, coached founders, and facilitated transformational experiences for organizations navigating complexity, cultural evolution, and intentional growth.",
       "For her, the future belongs to organizations that can hold both structure and soul — places where people don't have to disconnect who they are to do the work they love. Transformation begins when leaders choose coherence — and build companies that honor both purpose and performance."
     ],
     "quote": ""
@@ -100,20 +100,20 @@
     "title": "About COIREA - Frequently Asked Questions",
     "items": [
       {
-        "question": "What makes COIREA different from other organizational consultancies?",
-        "answer": "COIREA integrates regenerative business principles with practical systems design. We don't just consult, we embed as partners to co-create sustainable transformation. Guided by our 5-Pillar Framework — purpose, leadership, collaboration, culture, well-being, and organizational strategy — we help organizations evolve into resilient, purpose-driven, self-managing systems."
+        "question": "What is COIREA?",
+        "answer": "COIREA is an AI-powered organizational intelligence platform that measures, analyzes, and helps transform organizational health in real-time. We bring together culture, leadership, collaboration, well-being, and strategy into one unified system with AI-generated insights and recommendations."
       },
       {
-        "question": "How long does organizational transformation typically take?",
-        "answer": "Our transformation programs range from 90-day intensive resets to 6-18 month comprehensive partnerships. The timeline depends on your organization's size, complexity, and transformation goals. We also offer ongoing fractional support for sustained evolution."
+        "question": "How does COIREA help organizations improve?",
+        "answer": "Our platform continuously collects signals from across your organization, interprets patterns using AI, and surfaces risks before they escalate. The Evolution Dashboard provides real-time visibility across our 5-Pillar Framework, enabling data-driven decisions that improve organizational health."
       },
       {
         "question": "What is regenerative business and how does it apply to my organization?",
         "answer": "Regenerative business goes beyond sustainability to create systems that actively restore and revitalize. For organizations, this means building cultures and practices that strengthen both people and performance, creating positive impact while achieving business results."
       },
       {
-        "question": "How do you measure the success of organizational transformation?",
-        "answer": "We use our COIREA Evolution Dashboard to track both quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership maturity, cultural coherence, well-being) across our 5-Pillar Framework, providing real-time insights into your organization's transformation progress."
+        "question": "How does COIREA measure organizational health?",
+        "answer": "We track quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership effectiveness, cultural coherence, well-being signals) across our 5-Pillar Framework in real-time, providing continuous insights rather than periodic snapshots."
       }
     ]
   },
