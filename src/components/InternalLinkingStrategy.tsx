@@ -56,7 +56,7 @@ const InternalLink = ({
 export const SEONavigationLinks = {
   home: { to: "/", text: "Transform Your Organization", keywords: "organizational transformation" },
   about: { to: "/about", text: "About COIREA", keywords: "conscious leadership team" },
-  offerings: { to: "/offerings", text: "Our Services", keywords: "transformation services" },
+  platform: { to: "/platform", text: "Our Platform", keywords: "organizational intelligence platform" },
   journey: { to: "/journey", text: "Start Your Journey", keywords: "free consultation" },
   tools: { to: "/tools", text: "Assessment Tools", keywords: "organizational health assessment" },
   insights: { to: "/insights", text: "Insights & Articles", keywords: "business transformation insights" },
@@ -77,12 +77,12 @@ export const RelatedContent = ({
   const { getLocalizedPath } = useLanguage();
   
   const defaultSuggestions: Record<keyof typeof SEONavigationLinks, Array<keyof typeof SEONavigationLinks>> = {
-    home: ["offerings", "journey", "tools"],
-    about: ["offerings", "journey", "insights"],
-    offerings: ["journey", "tools", "about"],
-    journey: ["offerings", "tools", "insights"],
-    tools: ["journey", "offerings", "insights"],
-    insights: ["offerings", "journey", "about"],
+    home: ["platform", "tools", "about"],
+    about: ["platform", "journey", "insights"],
+    platform: ["journey", "tools", "about"],
+    journey: ["platform", "tools", "insights"],
+    tools: ["journey", "platform", "insights"],
+    insights: ["platform", "journey", "about"],
     events: ["journey", "insights", "about"]
   };
 
