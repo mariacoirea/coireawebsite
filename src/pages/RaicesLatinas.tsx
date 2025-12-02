@@ -32,7 +32,7 @@ import {
 import mayanPatternsBg from '@/assets/mayan-patterns-bg.png';
 import andeanPeopleBg from '@/assets/andean-people-bg.jpg';
 import impactHandsBg from '@/assets/impact-hands-bg.jpg';
-const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
+import socialImpactHero from '@/assets/social-impact-hero.jpg';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -114,7 +114,7 @@ const RaicesLatinas = () => {
   return (
     <>
       <SEOHead
-        title="COIREA Social Impact | Raíces Latinas"
+        title="COIREA Social Impact"
         description="Transform organizational health into social impact. A regenerative model where stronger companies directly support stronger communities across Latin America."
         keywords="social impact, SDG, Latin America, regenerative, CSR, community development"
         url="/raices-latinas"
@@ -127,11 +127,11 @@ const RaicesLatinas = () => {
           {/* Background image */}
           <div className="absolute inset-0 -left-px -right-px">
             <img 
-              src={raicesCulturalHero} 
-              alt="Traditional Latin American cultural collage with Andean heritage" 
-              className="w-full h-full object-cover opacity-30"
+              src={socialImpactHero} 
+              alt="Hands passing a globe symbolizing social impact" 
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/65 to-[hsl(var(--raices-sandstone))]/45" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/70 to-[hsl(var(--raices-sandstone))]/50" />
           </div>
 
           <div className="container mx-auto max-w-7xl relative z-10">
