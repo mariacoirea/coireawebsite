@@ -11,7 +11,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-[hsl(var(--warm-beige))]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-secondary font-medium mb-2">
