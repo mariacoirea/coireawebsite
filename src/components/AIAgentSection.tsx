@@ -6,8 +6,7 @@ import {
   Sparkles,
   AlertTriangle,
   CheckCircle2,
-  Clock,
-  ArrowRight
+  Clock
 } from "lucide-react";
 
 const AIAgentSection = () => {
@@ -55,36 +54,6 @@ const AIAgentSection = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* How It Works Bar */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h3 className="text-xl font-display font-semibold text-foreground text-center mb-6">
-            {t('aiAgent.howItWorks.title')}
-          </h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 p-6 rounded-2xl bg-gradient-to-r from-secondary/5 via-accent/5 to-secondary/5 border border-border">
-            <div className="text-center md:text-left flex-1">
-              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.input')}</p>
-              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.inputDescription')}</p>
-            </div>
-            <ArrowRight className="w-6 h-6 text-secondary hidden md:block" />
-            <div className="text-center flex-1">
-              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.interpretation')}</p>
-              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.interpretationDescription')}</p>
-            </div>
-            <ArrowRight className="w-6 h-6 text-secondary hidden md:block" />
-            <div className="text-center md:text-right flex-1">
-              <p className="text-sm font-semibold text-foreground mb-1">{t('aiAgent.howItWorks.action')}</p>
-              <p className="text-xs text-muted-foreground">{t('aiAgent.howItWorks.actionDescription')}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Differentiator Line */}
-        <div className="max-w-3xl mx-auto mb-12 text-center">
-          <p className="text-lg font-medium text-secondary italic">
-            {t('aiAgent.differentiator')}
-          </p>
         </div>
 
         {/* MVP & Roadmap Cards */}
