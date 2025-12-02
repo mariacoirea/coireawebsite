@@ -121,7 +121,7 @@ const Platform = () => {
           <section id="pillars" className="py-24 bg-background">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <p className="text-secondary font-medium mb-2">{t('pillars.subtitle')}</p>
+                <p className="text-secondary font-medium mb-2">The COIREA Operating System</p>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
                   {t('pillars.title')}
                 </h2>
