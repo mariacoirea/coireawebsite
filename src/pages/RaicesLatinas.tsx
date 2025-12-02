@@ -1,53 +1,57 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-
-import { 
-  MayanDiamond, 
-  MayanConcentric, 
-  MayanChevron, 
-  MayanSteps, 
-  MayanCross,
-  MayanPyramid,
-  MayanSun,
-  MayanBird
-} from "@/components/MayanIcons";
-import SEOHead from "@/components/SEOHead";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import * as z from 'zod';
+import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-import coireaLogo from "@/assets/coirea-logo.png";
-const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
-import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
-import andeanPeopleBg from "@/assets/andean-people-bg.jpg";
+import { useToast } from '@/hooks/use-toast';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { 
+  TrendingUp, 
+  Heart, 
+  Target, 
+  Users, 
+  Building, 
+  Briefcase,
+  HandHeart,
+  Coins,
+  BarChart3,
+  Clock,
+  MapPin,
+  BookOpen,
+  ArrowRight,
+  CheckCircle2
+} from 'lucide-react';
+
+import mayanPatternsBg from '@/assets/mayan-patterns-bg.png';
+import andeanPeopleBg from '@/assets/andean-people-bg.jpg';
 
 const formSchema = z.object({
-  name: z.string().trim().min(1, { message: 'Name is required' }).max(200),
-  email: z.string().trim().email({ message: 'Invalid email address' }).max(320),
-  organization: z.string().trim().min(1, { message: 'Organization is required' }).max(200),
-  message: z.string().trim().min(1, { message: 'Message is required' }).max(5000),
+  name: z.string().min(2, 'Name is required'),
+  email: z.string().email('Valid email is required'),
+  company: z.string().min(2, 'Organization is required'),
+  message: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 const RaicesLatinas = () => {
   const { t } = useTranslation('raices');
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
       email: '',
-      organization: '',
+      company: '',
       message: '',
     },
   });
@@ -61,409 +65,424 @@ const RaicesLatinas = () => {
 
       if (error) throw error;
 
-      toast.success(t('partnership.form.successMessage', 'Message sent successfully! We will contact you soon.'));
+      toast({
+        title: t('cta.success.title'),
+        description: t('cta.success.message'),
+      });
       form.reset();
     } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error(t('partnership.form.errorMessage', 'Failed to send message. Please try again.'));
+      console.error('Form submission error:', error);
+      toast({
+        title: t('cta.error.title'),
+        description: t('cta.error.message'),
+        variant: 'destructive',
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const scrollToForm = () => {
+    document.getElementById('impact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const whyImpactPoints = t('whyImpactMatters.points', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const impactSteps = t('impactModel.steps', { returnObjects: true }) as Array<{ number: string; title: string; description: string }>;
+  const sdgList = t('impactModel.sdgs.list', { returnObjects: true }) as Array<{ number: string; name: string }>;
+  const impactPillars = t('impactAreas.pillars', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const pathways = t('howToParticipate.pathways', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const dashboardFeatures = t('dashboard.features', { returnObjects: true }) as string[];
+
+  const whyImpactIcons = [Building, Users, Briefcase, Heart];
+  const stepIcons = [TrendingUp, Heart, Target];
+  const pillarIcons = [MapPin, Heart, Building];
+  const pathwayIcons = [Briefcase, HandHeart, Coins];
+
   return (
     <>
       <SEOHead
-        title="COIREA Raíces Latinas - Social Impact Initiative for Latin America"
-        description="Empowering purpose-driven organizations to scale with clarity, structure, and integrity. Bridging global resources with local initiatives across Latin America."
-        keywords="social impact Latin America, NGOs capacity building, indigenous cooperatives, women-led initiatives, regenerative community projects, social enterprises, funding readiness, conscious leadership, COIREA OS, Ayni reciprocity"
+        title="COIREA Social Impact | Raíces Latinas"
+        description="Transform organizational health into social impact. A regenerative model where stronger companies directly support stronger communities across Latin America."
+        keywords="social impact, SDG, Latin America, regenerative, CSR, community development"
         url="/raices-latinas"
       />
-      
       <Header />
-
-      <div className="min-h-screen bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-background overflow-x-hidden">
+      
+      <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6">
-          {/* Background image */}
-          <div className="absolute inset-0 -left-px -right-px">
-            <img 
-              src={raicesCulturalHero} 
-              alt="Traditional Latin American cultural collage with Andean heritage" 
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/65 to-[hsl(var(--raices-sandstone))]/45" />
-          </div>
-
-          <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="text-center space-y-8">
-              {/* Logo/Icon */}
-              <div className="flex justify-center mb-8">
-                <img 
-                  src={coireaLogo} 
-                  alt="COIREA Logo" 
-                  className="w-24 h-24 drop-shadow-lg"
-                />
-              </div>
-
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-                {t('hero.title')}
-              </h1>
-              
-              <p className="text-xl md:text-2xl lg:text-3xl text-[hsl(var(--raices-charcoal-earth))] font-body font-normal max-w-5xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-                {t('hero.subtitle')}
-              </p>
-              
-              <p className="text-lg md:text-xl text-[hsl(var(--raices-earth-brown))] font-medium max-w-4xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-                {t('hero.description')}
-              </p>
-
-            </div>
-          </div>
-        </section>
-
-        {/* Intro Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
-            <div className="space-y-8 max-w-5xl mx-auto">
-              <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium text-center">
-                {t('intro.text1')}
-              </p>
-              
-              <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-sage-green))] font-semibold text-center">
-                {t('intro.text2')}
-              </p>
-
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-andean-clay))]/20">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-6 font-medium">
-                  <strong className="text-[hsl(var(--raices-earth-brown))] font-semibold">COIREA Raíces Latinas</strong> {t('intro.bridge')}
-                </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  {t('intro.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Mission Section */}
-        <section className="py-24 px-6 relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={mayanPatternsBg} 
-              alt="Mayan patterns background" 
-              className="w-full h-full object-cover opacity-20"
-            />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/70" />
-          </div>
+        <section 
+          className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+          style={{
+            backgroundImage: `url(${andeanPeopleBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sage-green))]/90 via-[hsl(var(--raices-sage-green))]/85 to-[hsl(var(--raices-sage-green))]/95" />
           
-          <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
-                {t('mission.title')}
-              </h2>
-              <div className="max-w-5xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
-                <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
-                  {t('mission.text1')}
-                </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  {t('mission.text2')}
-                </p>
-              </div>
-            </div>
+          <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium tracking-wider text-[hsl(var(--raices-sandstone))] uppercase bg-[hsl(var(--raices-earth-brown))]/30 rounded-full border border-[hsl(var(--raices-earth-brown))]/40">
+              COIREA Social
+            </span>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-6 max-w-4xl mx-auto leading-tight">
+              {t('hero.title')}
+            </h1>
+            
+            <p className="text-lg md:text-xl text-[hsl(var(--raices-sandstone))]/80 max-w-3xl mx-auto mb-10 leading-relaxed font-body">
+              {t('hero.subtitle')}
+            </p>
+            
+            <Button 
+              onClick={scrollToForm}
+              size="lg"
+              className="bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-earth-brown))]/90 text-[hsl(var(--raices-sandstone))] px-8 py-6 text-lg font-medium rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+              {t('hero.cta')}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </section>
 
-        {/* What We Offer Section */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-7xl">
+        {/* Why Impact Matters Section */}
+        <section className="py-24 bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-[hsl(var(--raices-sandstone))]/30">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                {t('whatWeOffer.title')}
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-4">
+                {t('whyImpactMatters.title')}
               </h2>
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-2xl mx-auto">
+                {t('whyImpactMatters.subtitle')}
+              </p>
             </div>
-
-            {/* Service Areas */}
-            <div className="space-y-4">
-              {[
-                { icon: MayanSteps },
-                { icon: MayanConcentric },
-                { icon: MayanSun },
-                { icon: MayanBird },
-                { icon: MayanDiamond },
-              ].map((item, index) => (
-                <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 hover:border-[hsl(var(--raices-sage-green))]/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {whyImpactPoints.map((point, index) => {
+                const Icon = whyImpactIcons[index];
+                return (
+                  <div 
+                    key={index}
+                    className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[hsl(var(--raices-earth-brown))]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-[hsl(var(--raices-sage-green))]/20 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-[hsl(var(--raices-sage-green))]" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
-                        {t(`whatWeOffer.services.${index}.area`)}
-                      </h3>
-                      <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                        {t(`whatWeOffer.services.${index}.purpose`)}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works Section */}
-        <section className="relative py-24 px-6 overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={mayanPatternsBg} 
-              alt="Mayan patterns background" 
-              className="w-full h-full object-cover opacity-20"
-            />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/70" />
-          </div>
-          
-          <div className="container mx-auto max-w-7xl relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
-                {t('howItWorks.title')}
-              </h2>
-            </div>
-
-            {/* 5-Step Process */}
-            <div className="grid md:grid-cols-5 gap-6 mb-12">
-              {(t('howItWorks.steps', { returnObjects: true }) as Array<{ step: string; desc: string }>).map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-sage-green))] to-[hsl(var(--raices-earth-brown))] flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <span className="text-white font-display font-bold text-2xl">{index + 1}</span>
+                    <h3 className="text-lg font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-2">
+                      {point.title}
+                    </h3>
+                    <p className="text-[hsl(var(--raices-charcoal-earth))] text-sm leading-relaxed">
+                      {point.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-2">
-                    {item.step}
-                  </h3>
-                  <p className="text-sm text-[hsl(var(--raices-charcoal-earth))] font-medium leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
+          </div>
+        </section>
 
-            <div className="text-center space-y-4 max-w-4xl mx-auto bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
-              <p className="text-2xl md:text-3xl font-display text-[hsl(var(--raices-deep-copper))] font-semibold">
-                {t('howItWorks.notConsulting')}
+        {/* Introducing COIREA Social Section */}
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="inline-block px-4 py-2 mb-6 text-sm font-medium tracking-wider text-[hsl(var(--raices-sage-green))] uppercase bg-[hsl(var(--raices-sandstone))]/20 rounded-full">
+                {t('coireaSocial.tagline')}
+              </span>
+              
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-2">
+                {t('coireaSocial.title')}
+              </h2>
+              <p className="text-2xl font-display text-[hsl(var(--raices-earth-brown))] mb-8">
+                {t('coireaSocial.subtitle')}
               </p>
-              <p className="text-xl md:text-2xl text-[hsl(var(--raices-charcoal-earth))] font-medium">
-                {t('howItWorks.empowerment')}
+              
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80 leading-relaxed font-body">
+                {t('coireaSocial.description')}
               </p>
             </div>
           </div>
         </section>
 
-        {/* Why COIREA Raíces Latinas Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-sage-green))]/10">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-8">
-                {t('whyCoirea.title')}
+        {/* Regenerative Impact Model Section */}
+        <section className="py-24 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-sandstone))]">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-4">
+                {t('impactModel.title')}
               </h2>
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-2xl mx-auto">
+                {t('impactModel.subtitle')}
+              </p>
             </div>
-
-            <div className="max-w-5xl mx-auto space-y-8">
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[hsl(var(--raices-andean-clay))]/20">
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium mb-6">
-                  {t('whyCoirea.text1')}
-                </p>
-                <p className="text-lg md:text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                  {t('whyCoirea.text2')}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { icon: MayanSteps },
-                  { icon: MayanSun },
-                  { icon: MayanConcentric },
-                ].map((item, index) => (
-                  <Card key={index} className="border-[hsl(var(--raices-andean-clay))]/30 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6 text-center">
-                      <div className="w-16 h-16 rounded-full bg-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center mx-auto mb-4">
-                        <item.icon className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" strokeWidth={2} />
-                      </div>
-                      <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-3">
-                        {t(`whyCoirea.values.${index}.title`)}
-                      </h3>
-                      <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed font-medium">
-                        {t(`whyCoirea.values.${index}.description`)}
-                      </p>
-                    </CardContent>
-                  </Card>
+            
+            {/* 3-Step Process */}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {impactSteps.map((step, index) => {
+                const Icon = stepIcons[index];
+                return (
+                  <div 
+                    key={index}
+                    className="relative bg-white rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-earth-brown))]/10 hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="absolute -top-4 left-8 bg-[hsl(var(--raices-earth-brown))] text-[hsl(var(--raices-sandstone))] text-sm font-bold px-3 py-1 rounded-full">
+                      {step.number}
+                    </div>
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-sage-green))]/20 to-[hsl(var(--raices-sage-green))]/10 flex items-center justify-center mb-6 mt-2">
+                      <Icon className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" />
+                    </div>
+                    <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+            
+            {/* SDGs Grid */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-earth-brown))]/10">
+              <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6 text-center">
+                {t('impactModel.sdgs.title')}
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+                {sdgList.map((sdg, index) => (
+                  <div 
+                    key={index}
+                    className="flex flex-col items-center p-3 rounded-lg bg-[hsl(var(--raices-sage-green))]/10 hover:bg-[hsl(var(--raices-sage-green))]/20 transition-colors"
+                  >
+                    <span className="text-2xl font-bold text-[hsl(var(--raices-sage-green))] mb-1">
+                      {sdg.number}
+                    </span>
+                    <span className="text-xs text-[hsl(var(--raices-charcoal-earth))] text-center">
+                      {sdg.name}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Who We Work With Section */}
-        <section className="py-24 px-6 relative overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0">
-            <img 
-              src={andeanPeopleBg} 
-              alt="Andean people in traditional clothing" 
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-[hsl(var(--raices-sandstone))]/75" />
-          </div>
-          
-          <div className="container mx-auto max-w-7xl relative z-10">
+        {/* Impact Areas Section */}
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-6">
-                {t('whoWeWorkWith.title')}
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
+                {t('impactAreas.title')}
               </h2>
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/70 max-w-2xl mx-auto">
+                {t('impactAreas.subtitle')}
+              </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(t('whoWeWorkWith.partners', { returnObjects: true }) as string[]).map((partner, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-[hsl(var(--raices-sage-green))]/5">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[hsl(var(--raices-sage-green))] flex items-center justify-center mt-1">
-                    <span className="text-white text-xs font-bold">✓</span>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {impactPillars.map((pillar, index) => {
+                const Icon = pillarIcons[index];
+                return (
+                  <div 
+                    key={index}
+                    className="bg-[hsl(var(--raices-sandstone))]/10 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/20 hover:bg-[hsl(var(--raices-sandstone))]/15 transition-all duration-300"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[hsl(var(--raices-earth-brown))]/30 flex items-center justify-center mb-6">
+                      <Icon className="w-7 h-7 text-[hsl(var(--raices-sandstone))]" />
+                    </div>
+                    <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-3">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-[hsl(var(--raices-sandstone))]/70 leading-relaxed">
+                      {pillar.description}
+                    </p>
                   </div>
-                  <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">{partner}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
-        {/* Partnership Invitation Section */}
-        <section className="py-24 px-6 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/30 to-[hsl(var(--raices-earth-brown))]/10">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6">
-                {t('partnership.title')}
+        {/* How Companies Participate Section */}
+        <section className="py-24 bg-gradient-to-b from-[hsl(var(--raices-sandstone))] to-[hsl(var(--raices-sandstone))]/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-4">
+                {t('howToParticipate.title')}
               </h2>
-              <p className="text-xl text-[hsl(var(--raices-charcoal-earth))] leading-relaxed mb-8 font-medium">
-                {t('partnership.intro')}
+              <p className="text-lg text-[hsl(var(--raices-charcoal-earth))] max-w-2xl mx-auto">
+                {t('howToParticipate.subtitle')}
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {(t('partnership.partners', { returnObjects: true }) as string[]).map((item, index) => (
-                <Card key={index} className="border-[hsl(var(--raices-earth-brown))]/20 bg-white/80 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">{item}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {pathways.map((pathway, index) => {
+                const Icon = pathwayIcons[index];
+                return (
+                  <div 
+                    key={index}
+                    className="bg-white rounded-2xl p-8 shadow-lg border border-[hsl(var(--raices-earth-brown))]/10 hover:shadow-xl transition-all duration-300 text-center"
+                  >
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--raices-earth-brown))]/20 to-[hsl(var(--raices-earth-brown))]/10 flex items-center justify-center mb-6 mx-auto">
+                      <Icon className="w-8 h-8 text-[hsl(var(--raices-earth-brown))]" />
+                    </div>
+                    <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-sage-green))] mb-3">
+                      {pathway.title}
+                    </h3>
+                    <p className="text-[hsl(var(--raices-charcoal-earth))] leading-relaxed">
+                      {pathway.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-
-            <div className="text-center mb-12">
-              <p className="text-xl text-[hsl(var(--raices-earth-brown))] font-medium mb-4">
-                {t('partnership.callToAction')}
-              </p>
-            </div>
-
-            {/* Contact Form */}
-            <Card className="border-[hsl(var(--raices-earth-brown))]/30 bg-white/90 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-6 text-center">
-                  {t('partnership.formTitle')}
-                </h3>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
-                            {t('partnership.form.name')}
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              {...field}
-                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
-                            {t('partnership.form.email')}
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              {...field}
-                              type="email"
-                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="organization"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
-                            {t('partnership.form.organization')}
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              {...field}
-                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[hsl(var(--raices-charcoal-earth))]">
-                            {t('partnership.form.message')}
-                          </FormLabel>
-                          <FormControl>
-                            <Textarea
-                              {...field}
-                              rows={5}
-                              className="border-[hsl(var(--raices-andean-clay))]/30 focus:border-[hsl(var(--raices-sage-green))]"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-[hsl(var(--raices-earth-brown))] hover:bg-[hsl(var(--raices-sage-green))] text-white transition-all duration-300"
-                      size="lg"
-                    >
-                      {isSubmitting ? t('partnership.form.sending', 'Sending...') : t('partnership.form.submit')}
-                    </Button>
-                  </form>
-                </Form>
-              </CardContent>
-            </Card>
           </div>
         </section>
 
-      </div>
+        {/* Impact Dashboard Preview Section */}
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
+                {t('dashboard.title')}
+              </h2>
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/70 max-w-2xl mx-auto">
+                {t('dashboard.subtitle')}
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-[hsl(var(--raices-sandstone))]/10 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/20">
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  {dashboardFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[hsl(var(--raices-sandstone))] flex-shrink-0" />
+                      <span className="text-[hsl(var(--raices-sandstone))]/80">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Dashboard Mockup Placeholder */}
+                <div className="bg-[hsl(var(--raices-charcoal-earth))] rounded-xl p-8 border border-[hsl(var(--raices-sage-green))]/30">
+                  <div className="flex items-center justify-center gap-4 mb-6">
+                    <BarChart3 className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" />
+                    <Clock className="w-8 h-8 text-[hsl(var(--raices-earth-brown))]" />
+                    <BookOpen className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" />
+                  </div>
+                  <p className="text-[hsl(var(--raices-sandstone))]/60 text-center text-lg font-medium">
+                    {t('dashboard.comingSoon')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section with Form */}
+        <section 
+          id="impact-form"
+          className="py-24 relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${mayanPatternsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/95 to-[hsl(var(--raices-earth-brown))]/90" />
+          
+          <div className="relative z-10 container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
+                {t('cta.title')}
+              </h2>
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80">
+                {t('cta.subtitle')}
+              </p>
+            </div>
+            
+            <div className="max-w-xl mx-auto">
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.name')}</FormLabel>
+                        <FormControl>
+                          <Input 
+                            {...field} 
+                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.email')}</FormLabel>
+                        <FormControl>
+                          <Input 
+                            {...field} 
+                            type="email"
+                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.company')}</FormLabel>
+                        <FormControl>
+                          <Input 
+                            {...field} 
+                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.message')}</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            {...field} 
+                            rows={4}
+                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))] resize-none"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-[hsl(var(--raices-sandstone))] hover:bg-white text-[hsl(var(--raices-sage-green))] py-6 text-lg font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+                  >
+                    {isSubmitting ? t('cta.form.submitting') : t('cta.form.submit')}
+                  </Button>
+                </form>
+              </Form>
+            </div>
+          </div>
+        </section>
+      </main>
       
       <Footer />
     </>
