@@ -7,64 +7,84 @@
   "hero": {
     "title": "La Plataforma de Inteligencia Organizacional",
     "subtitle": "para Empresas con Propósito",
-    "description": "Mide cultura, liderazgo y bienestar en tiempo real. Predice riesgos antes de que se conviertan en crisis. Transforma datos en acción estratégica.",
+    "description": "Un sistema en tiempo real que mide cultura, liderazgo, colaboración y bienestar — y transforma insights en acción estratégica e impacto regenerativo.",
     "cta": {
       "primary": "Únete al Acceso Anticipado",
-      "secondary": "Descubre Cómo Funciona"
+      "secondary": "Ver Cómo Funciona"
+    },
+    "note": "MVP disponible • Próxima cohorte abre Q1 2026"
+  },
+  "whyExists": {
+    "title": "Por Qué Existe COIREA",
+    "subtitle": "La Nueva Forma de Evolución Organizacional",
+    "points": {
+      "fragmented": "Las organizaciones hoy están fragmentadas: cultura, liderazgo, bienestar y estrategia viven en silos diferentes.",
+      "outdated": "Los líderes dependen de encuestas obsoletas, ciclos de retroalimentación lentos e intuición.",
+      "invisible": "El burnout, la desalineación y la erosión cultural son invisibles hasta que es demasiado tarde.",
+      "solution": "COIREA unifica todo en un sistema de inteligencia en tiempo real."
     }
   },
-  "whatWeDo": {
-    "title": "Qué Hace COIREA",
-    "subtitle": "Cuatro pilares de inteligencia organizacional",
-    "capabilities": {
-      "measure": {
-        "title": "Mide Lo Que Importa",
-        "description": "Salud cultural, efectividad del liderazgo, bienestar del equipo y patrones de colaboración—todo en una vista unificada."
+  "pillars": {
+    "title": "Qué Mide COIREA",
+    "subtitle": "Los 5 Pilares de Inteligencia Organizacional",
+    "items": {
+      "purpose": {
+        "title": "Propósito y Cultura",
+        "description": "Señales de claridad, alineación, coherencia de valores y salud cultural."
       },
-      "unify": {
-        "title": "Unifica Tus Datos",
-        "description": "Encuestas, señales de comportamiento, métricas de engagement e indicadores de desempeño conectados en inteligencia accionable."
+      "collaboration": {
+        "title": "Colaboración",
+        "description": "Dinámicas de equipo, patrones de confianza, seguridad psicológica y conexiones de red."
       },
-      "predict": {
-        "title": "Identifica Riesgos Temprano",
-        "description": "Detecta patrones de burnout, desalineación cultural y brechas de liderazgo antes de que impacten tu organización."
+      "leadership": {
+        "title": "Liderazgo",
+        "description": "Efectividad del líder, presencia, ciclos de retroalimentación e influencia en el equipo."
       },
-      "recommend": {
-        "title": "Recomienda Acciones",
-        "description": "Insights impulsados por IA que traducen datos complejos en recomendaciones claras y priorizadas para líderes."
+      "wellbeing": {
+        "title": "Bienestar",
+        "description": "Índice de burnout, niveles de energía, patrones de estrés, indicadores de resiliencia."
+      },
+      "strategy": {
+        "title": "Estrategia Organizacional",
+        "description": "Claridad de ejecución, priorización, coherencia de roles y ritmo operativo."
       }
-    }
+    },
+    "footer": "Todo capturado en tiempo real. Todo en un sistema."
+  },
+  "dashboard": {
+    "title": "Descubre los Patrones Ocultos de tu Organización",
+    "subtitle": "El Dashboard de Evolución",
+    "description": "Rastrea la vitalidad de tu organización en los 5 pilares. Detecta tendencias, riesgos y oportunidades antes de que escalen."
   },
   "aiAgent": {
-    "title": "Conoce al Agente de IA COIREA",
-    "subtitle": "Tu socio en inteligencia organizacional",
+    "title": "Conoce al Agente IA de COIREA",
+    "subtitle": "Tu Socio Organizacional",
     "description": "Una IA que entiende los matices de la salud organizacional, entrenada en frameworks probados y patrones reales de transformación.",
     "capabilities": {
-      "analyze": "Analiza señales de salud organizacional",
-      "identify": "Identifica patrones culturales ocultos",
-      "generate": "Genera recomendaciones personalizadas",
-      "track": "Rastrea el progreso de transformación",
-      "alert": "Alerta sobre riesgos emergentes",
-      "learn": "Aprende del contexto de tu organización"
+      "analyze": "Analiza señales de personas, comportamiento y cultura",
+      "detect": "Detecta desalineación y riesgos emergentes",
+      "learn": "Aprende el contexto de tu organización",
+      "generate": "Genera recomendaciones claras y accionables",
+      "support": "Apoya a líderes con insights basados en evidencia, no ruido"
     },
     "mvp": {
-      "title": "Disponible Hoy",
+      "title": "MVP Disponible",
       "badge": "MVP",
       "features": {
-        "scanner": "Escáner de Salud Organizacional",
+        "scanner": "Scanner de Salud Organizacional",
         "insights": "Reporte de Insights con IA",
-        "indicators": "Dashboard de Indicadores Clave",
+        "indicators": "Indicadores de Riesgo Temprano",
         "burnout": "Índice de Alerta Temprana de Burnout"
       }
     },
     "future": {
-      "title": "Próximamente",
-      "badge": "Roadmap",
+      "title": "Roadmap",
+      "badge": "Próximamente",
       "features": {
-        "predictive": "Motor de Analítica Predictiva",
+        "predictive": "Motor Predictivo",
         "automation": "Automatización de Intervenciones",
-        "api": "API de Integración",
-        "realtime": "Dashboard de Monitoreo en Tiempo Real"
+        "api": "Integraciones API",
+        "realtime": "Monitoreo en Tiempo Real"
       }
     }
   },
@@ -81,27 +101,34 @@
         "description": "Análisis inteligente que destaca lo más importante y recomienda acciones basadas en evidencia."
       },
       "leadership": {
-        "title": "Métricas de Liderazgo y Cultura",
-        "description": "Rastrea la efectividad del liderazgo y alineación cultural con indicadores científicamente validados."
+        "title": "Métricas de Cultura y Liderazgo",
+        "description": "Rastrea efectividad de liderazgo y alineación cultural con indicadores científicamente validados."
       },
       "wellbeing": {
         "title": "Señales de Bienestar",
-        "description": "Monitorea la salud del equipo e identifica riesgos de burnout antes de que impacten el desempeño y retención."
+        "description": "Monitorea la salud del equipo e identifica riesgos de burnout antes de que impacten rendimiento y retención."
       },
       "collaboration": {
         "title": "Red de Colaboración",
         "description": "Visualiza cómo trabajan los equipos juntos e identifica oportunidades para fortalecer conexiones."
       },
-      "impact": {
-        "title": "Seguimiento de Impacto Social",
-        "description": "Mide y reporta el impacto más amplio de tu organización en comunidades y stakeholders."
+      "regenerative": {
+        "title": "Índice de Capital Regenerativo",
+        "description": "Mide cómo tus mejoras en bienestar y cultura se traducen en impacto social positivo."
       }
     }
+  },
+  "impact": {
+    "title": "Transforma la Salud Organizacional en Impacto Social",
+    "subtitle": "La Capa de Impacto Regenerativo",
+    "description": "COIREA convierte un porcentaje del crecimiento organizacional (tiempo, habilidades o contribuciones financieras) en impacto regenerativo en América Latina.",
+    "note": "A través de nuestro brazo de impacto social, las empresas apoyan proyectos sociales con reportes SDGs transparentes directamente en la plataforma.",
+    "cta": "Conoce Raíces Latinas"
   },
   "cta": {
     "title": "Da Forma al Futuro de la Inteligencia Organizacional",
     "description": "Sé de las primeras empresas en experimentar COIREA. Los miembros de acceso anticipado ayudan a definir la plataforma y reciben beneficios de miembro fundador.",
     "button": "Únete al Programa de Acceso Anticipado",
-    "note": "Lugares limitados para la cohorte 2024"
+    "note": "Lugares limitados para la cohorte 2025"
   }
 }
