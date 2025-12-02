@@ -86,12 +86,23 @@ const RaicesLatinas = () => {
     document.getElementById('impact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const whyImpactPoints = t('whyImpactMatters.points', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const impactSteps = t('impactModel.steps', { returnObjects: true }) as Array<{ number: string; title: string; description: string }>;
-  const sdgList = t('impactModel.sdgs.list', { returnObjects: true }) as Array<{ number: string; name: string }>;
-  const impactPillars = t('impactAreas.pillars', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const pathways = t('howToParticipate.pathways', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const dashboardFeatures = t('dashboard.features', { returnObjects: true }) as string[];
+  const whyImpactPointsRaw = t('whyImpactMatters.points', { returnObjects: true });
+  const whyImpactPoints = Array.isArray(whyImpactPointsRaw) ? whyImpactPointsRaw : [];
+  
+  const impactStepsRaw = t('impactModel.steps', { returnObjects: true });
+  const impactSteps = Array.isArray(impactStepsRaw) ? impactStepsRaw : [];
+  
+  const sdgListRaw = t('impactModel.sdgs.list', { returnObjects: true });
+  const sdgList = Array.isArray(sdgListRaw) ? sdgListRaw : [];
+  
+  const impactPillarsRaw = t('impactAreas.pillars', { returnObjects: true });
+  const impactPillars = Array.isArray(impactPillarsRaw) ? impactPillarsRaw : [];
+  
+  const pathwaysRaw = t('howToParticipate.pathways', { returnObjects: true });
+  const pathways = Array.isArray(pathwaysRaw) ? pathwaysRaw : [];
+  
+  const dashboardFeaturesRaw = t('dashboard.features', { returnObjects: true });
+  const dashboardFeatures = Array.isArray(dashboardFeaturesRaw) ? dashboardFeaturesRaw : [];
 
   const whyImpactIcons = [Building, Users, Briefcase, Heart];
   const stepIcons = [TrendingUp, Heart, Target];
