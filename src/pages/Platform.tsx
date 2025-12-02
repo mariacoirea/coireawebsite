@@ -85,8 +85,8 @@ const Platform = () => {
                   </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-primary/70 font-body max-w-2xl mx-auto leading-relaxed">
-                  {t('hero.description')}
+                <p className="text-lg md:text-xl text-primary/70 font-body max-w-3xl mx-auto leading-relaxed">
+                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. Designed for purpose-driven companies, it turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -101,7 +101,7 @@ const Platform = () => {
                     variant="outline" 
                     className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10" 
                     onClick={() => {
-                      document.getElementById('why-exists')?.scrollIntoView({ behavior: 'smooth' });
+                      document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
                     {t('hero.cta.secondary')}
@@ -117,22 +117,8 @@ const Platform = () => {
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--warm-beige))] to-transparent" />
           </section>
 
-          {/* Why COIREA Exists */}
-          <section id="why-exists" className="py-24 bg-[hsl(var(--warm-beige))]">
-            <div className="container px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
-                  The Future of Healthy, Regenerative Organizations
-                </h2>
-                <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
-                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. Designed for purpose-driven companies, it turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* 5 Pillars */}
-          <section className="py-24 bg-background">
+          <section id="pillars" className="py-24 bg-background">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <p className="text-secondary font-medium mb-2">{t('pillars.subtitle')}</p>
