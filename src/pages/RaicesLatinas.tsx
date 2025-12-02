@@ -400,14 +400,14 @@ const RaicesLatinas = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/75 to-[hsl(var(--raices-earth-brown))]/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/90 to-[hsl(var(--raices-sandstone))]/85" />
           
           <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-4">
                 {t('cta.title')}
               </h2>
-              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80">
+              <p className="text-lg text-[hsl(var(--raices-charcoal))]/80">
                 {t('cta.subtitle')}
               </p>
             </div>
@@ -420,11 +420,11 @@ const RaicesLatinas = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.name')}</FormLabel>
+                        <FormLabel className="text-[hsl(var(--raices-earth-brown))]">{t('cta.form.name')}</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
-                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                            className="bg-white/60 border-[hsl(var(--raices-earth-brown))]/30 text-[hsl(var(--raices-charcoal))] placeholder:text-[hsl(var(--raices-charcoal))]/50 focus:border-[hsl(var(--raices-sage-green))]"
                           />
                         </FormControl>
                         <FormMessage />
@@ -437,12 +437,12 @@ const RaicesLatinas = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.email')}</FormLabel>
+                        <FormLabel className="text-[hsl(var(--raices-earth-brown))]">{t('cta.form.email')}</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
                             type="email"
-                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                            className="bg-white/60 border-[hsl(var(--raices-earth-brown))]/30 text-[hsl(var(--raices-charcoal))] placeholder:text-[hsl(var(--raices-charcoal))]/50 focus:border-[hsl(var(--raices-sage-green))]"
                           />
                         </FormControl>
                         <FormMessage />
@@ -455,11 +455,11 @@ const RaicesLatinas = () => {
                     name="company"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.company')}</FormLabel>
+                        <FormLabel className="text-[hsl(var(--raices-earth-brown))]">{t('cta.form.company')}</FormLabel>
                         <FormControl>
                           <Input 
                             {...field} 
-                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))]"
+                            className="bg-white/60 border-[hsl(var(--raices-earth-brown))]/30 text-[hsl(var(--raices-charcoal))] placeholder:text-[hsl(var(--raices-charcoal))]/50 focus:border-[hsl(var(--raices-sage-green))]"
                           />
                         </FormControl>
                         <FormMessage />
@@ -472,12 +472,12 @@ const RaicesLatinas = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[hsl(var(--raices-sandstone))]">{t('cta.form.message')}</FormLabel>
+                        <FormLabel className="text-[hsl(var(--raices-earth-brown))]">{t('cta.form.message')}</FormLabel>
                         <FormControl>
                           <Textarea 
                             {...field} 
                             rows={4}
-                            className="bg-white/10 border-[hsl(var(--raices-sandstone))]/30 text-[hsl(var(--raices-sandstone))] placeholder:text-[hsl(var(--raices-sandstone))]/50 focus:border-[hsl(var(--raices-sandstone))] resize-none"
+                            className="bg-white/60 border-[hsl(var(--raices-earth-brown))]/30 text-[hsl(var(--raices-charcoal))] placeholder:text-[hsl(var(--raices-charcoal))]/50 focus:border-[hsl(var(--raices-sage-green))] resize-none"
                           />
                         </FormControl>
                         <FormMessage />
@@ -488,7 +488,7 @@ const RaicesLatinas = () => {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full bg-[hsl(var(--raices-sandstone))] hover:bg-white text-[hsl(var(--raices-sage-green))] py-6 text-lg font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+                    className="w-full bg-[hsl(var(--raices-sage-green))] hover:bg-[hsl(var(--raices-sage-green))]/90 text-white py-6 text-lg font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
                   >
                     {isSubmitting ? t('cta.form.submitting') : t('cta.form.submit')}
                   </Button>
