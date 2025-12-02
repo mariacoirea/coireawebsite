@@ -177,5 +177,24 @@
     "description1": "COIREA converts a percentage of organizational growth (time, skills, or financial contributions) into regenerative impact in Latin America.",
     "description2": "Through our social impact arm, companies support social projects with transparent SDGs reporting directly inside the platform.",
     "cta": "Learn About Social Impact"
+  },
+  "howItWorks": {
+    "badge": "The COIREA Journey",
+    "title": "How It Works",
+    "steps": {
+      "platform": {
+        "title": "PLATFORM",
+        "description": "The Regenerative OS measures organizational health across 5 pillars in real-time."
+      },
+      "results": {
+        "title": "OBTAIN RESULTS",
+        "description": "AI Agent analyzes data to generate insights, predictions, and risk alerts."
+      },
+      "impact": {
+        "title": "SOCIAL IMPACT",
+        "description": "Organizational growth converts into regenerative impact in Latin America."
+      }
+    },
+    "quote": "The first platform specifically designed to transform organizational vitality into measurable social impact — not just people analytics."
   }
 }
