@@ -151,7 +151,7 @@ const Journey = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main id="journey-start" className="pt-20">
-        {/* Hero Section */}
+        {/* Hero Section - MVP Early Access */}
         <section className="py-20 px-6 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
@@ -163,14 +163,14 @@ const Journey = () => {
             <p className="text-lg text-secondary font-medium mb-8">
               {t('hero.note')}
             </p>
-            <div className="flex justify-center items-center space-x-8 mb-12">
-              <div className="flex items-center space-x-2">
-                <Target className="w-5 h-5 text-primary" />
-                <span className="text-foreground/70 font-body">{t('hero.features.proven')}</span>
+            <div className="flex justify-center items-center space-x-8">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-secondary/10 rounded-full">
+                <Target className="w-5 h-5 text-secondary" />
+                <span className="text-secondary font-body font-medium">{t('hero.features.proven')}</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-primary/10 rounded-full">
                 <Lightbulb className="w-5 h-5 text-primary" />
-                <span className="text-foreground/70 font-body">{t('hero.features.regenerative')}</span>
+                <span className="text-primary font-body font-medium">{t('hero.features.regenerative')}</span>
               </div>
             </div>
           </div>
