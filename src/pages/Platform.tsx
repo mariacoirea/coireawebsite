@@ -66,12 +66,12 @@ const Platform = () => {
         <main>
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Soft dark green background - solid muted olive */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#6B7B5E] via-[#5F6F52] to-[#566347]" />
+            {/* Soft olive green background with transparency - COIREA palette */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(77,19%,35%/0.85)] via-[hsl(77,19%,32%/0.9)] to-[hsl(77,19%,28%/0.95)]" />
             
             {/* Soft radial light overlays for depth */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(255,255,255,0.1),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(107,123,94,0.4),transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,hsl(45,29%,97%/0.15),transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(77,19%,40%/0.3),transparent_70%)]" />
             
             <div className="container relative z-10 px-4 py-20 text-center">
               <div className="max-w-4xl mx-auto space-y-8">
