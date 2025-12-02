@@ -196,21 +196,21 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Introducing COIREA Social Section */}
-        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]/80">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <span className="inline-block px-4 py-2 mb-6 text-sm font-medium tracking-wider text-[hsl(var(--raices-sage-green))] uppercase bg-[hsl(var(--raices-sandstone))]/20 rounded-full">
+              <span className="inline-block px-4 py-2 mb-6 text-sm font-medium tracking-wider text-[hsl(var(--raices-sandstone))] uppercase bg-[hsl(var(--raices-sandstone))]/15 rounded-full border border-[hsl(var(--raices-sandstone))]/20">
                 {t('coireaSocial.tagline')}
               </span>
               
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-2">
                 {t('coireaSocial.title')}
               </h2>
-              <p className="text-2xl font-display text-[hsl(var(--raices-earth-brown))] mb-8">
+              <p className="text-2xl font-display text-[hsl(var(--raices-sandstone))]/70 mb-8">
                 {t('coireaSocial.subtitle')}
               </p>
               
-              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80 leading-relaxed font-body">
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/85 leading-relaxed font-body">
                 {t('coireaSocial.description')}
               </p>
             </div>
@@ -280,13 +280,13 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Impact Areas Section */}
-        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]/70">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
                 {t('impactAreas.title')}
               </h2>
-              <p className="text-lg text-[hsl(var(--raices-sandstone))]/70 max-w-2xl mx-auto">
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80 max-w-2xl mx-auto">
                 {t('impactAreas.subtitle')}
               </p>
             </div>
@@ -297,15 +297,15 @@ const RaicesLatinas = () => {
                 return (
                   <div 
                     key={index}
-                    className="bg-[hsl(var(--raices-sandstone))]/10 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/20 hover:bg-[hsl(var(--raices-sandstone))]/15 transition-all duration-300"
+                    className="bg-[hsl(var(--raices-sandstone))]/15 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/25 hover:bg-[hsl(var(--raices-sandstone))]/20 transition-all duration-300"
                   >
-                    <div className="w-14 h-14 rounded-full bg-[hsl(var(--raices-earth-brown))]/30 flex items-center justify-center mb-6">
+                    <div className="w-14 h-14 rounded-full bg-[hsl(var(--raices-sandstone))]/20 flex items-center justify-center mb-6">
                       <Icon className="w-7 h-7 text-[hsl(var(--raices-sandstone))]" />
                     </div>
                     <h3 className="text-xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-3">
                       {pillar.title}
                     </h3>
-                    <p className="text-[hsl(var(--raices-sandstone))]/70 leading-relaxed">
+                    <p className="text-[hsl(var(--raices-sandstone))]/80 leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
@@ -352,34 +352,34 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Impact Dashboard Preview Section */}
-        <section className="py-24 bg-[hsl(var(--raices-sage-green))]">
+        <section className="py-24 bg-[hsl(var(--raices-sage-green))]/60">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-sandstone))] mb-4">
                 {t('dashboard.title')}
               </h2>
-              <p className="text-lg text-[hsl(var(--raices-sandstone))]/70 max-w-2xl mx-auto">
+              <p className="text-lg text-[hsl(var(--raices-sandstone))]/80 max-w-2xl mx-auto">
                 {t('dashboard.subtitle')}
               </p>
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <div className="bg-[hsl(var(--raices-sandstone))]/10 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/20">
+              <div className="bg-[hsl(var(--raices-sandstone))]/15 backdrop-blur-sm rounded-2xl p-8 border border-[hsl(var(--raices-sandstone))]/25">
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                   {dashboardFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(var(--raices-sandstone))] flex-shrink-0" />
-                      <span className="text-[hsl(var(--raices-sandstone))]/80">{feature}</span>
+                      <span className="text-[hsl(var(--raices-sandstone))]/85">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
                 {/* Dashboard Mockup Placeholder */}
-                <div className="bg-[hsl(var(--raices-charcoal-earth))] rounded-xl p-8 border border-[hsl(var(--raices-sage-green))]/30">
+                <div className="bg-[hsl(var(--raices-charcoal-earth))]/80 rounded-xl p-8 border border-[hsl(var(--raices-sandstone))]/20">
                   <div className="flex items-center justify-center gap-4 mb-6">
-                    <BarChart3 className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" />
+                    <BarChart3 className="w-8 h-8 text-[hsl(var(--raices-sandstone))]/70" />
                     <Clock className="w-8 h-8 text-[hsl(var(--raices-earth-brown))]" />
-                    <BookOpen className="w-8 h-8 text-[hsl(var(--raices-sage-green))]" />
+                    <BookOpen className="w-8 h-8 text-[hsl(var(--raices-sandstone))]/70" />
                   </div>
                   <p className="text-[hsl(var(--raices-sandstone))]/60 text-center text-lg font-medium">
                     {t('dashboard.comingSoon')}
@@ -400,7 +400,7 @@ const RaicesLatinas = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/95 to-[hsl(var(--raices-earth-brown))]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-earth-brown))]/90 to-[hsl(var(--raices-earth-brown))]/85" />
           
           <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center mb-12">
