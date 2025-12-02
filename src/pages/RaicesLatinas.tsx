@@ -31,6 +31,7 @@ import {
 
 import mayanPatternsBg from '@/assets/mayan-patterns-bg.png';
 import andeanPeopleBg from '@/assets/andean-people-bg.jpg';
+import impactHandsBg from '@/assets/impact-hands-bg.jpg';
 const raicesCulturalHero = "/lovable-uploads/raices-cultural-hero-new.png";
 
 const formSchema = z.object({
@@ -280,8 +281,16 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Impact Areas Section */}
-        <section className="py-24 bg-[hsl(var(--raices-earth-brown))]/10">
-          <div className="container mx-auto px-4">
+        <section 
+          className="py-24 relative overflow-hidden"
+          style={{
+            backgroundImage: `url(${impactHandsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--raices-sandstone))]/90 to-[hsl(var(--raices-sandstone))]/85" />
+          <div className="relative z-10 container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-4">
                 {t('impactAreas.title')}
