@@ -352,7 +352,7 @@ const RaicesLatinas = () => {
         </section>
 
         {/* Impact Dashboard Preview Section */}
-        <section className="py-24 bg-[hsl(var(--raices-sandstone))]/30">
+        <section className="py-24 bg-[hsl(var(--raices-earth-brown))]/10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-semibold text-[hsl(var(--raices-earth-brown))] mb-4">
