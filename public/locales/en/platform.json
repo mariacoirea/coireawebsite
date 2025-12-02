@@ -7,64 +7,84 @@
   "hero": {
     "title": "The Organizational Intelligence Platform",
     "subtitle": "for Purpose-Driven Companies",
-    "description": "Measure culture, leadership, and well-being in real-time. Predict risks before they become crises. Transform data into strategic action.",
+    "description": "A real-time system that measures culture, leadership, collaboration, and well-being — and transforms insights into strategic action and regenerative impact.",
     "cta": {
       "primary": "Join Early Access",
       "secondary": "See How It Works"
+    },
+    "note": "MVP available • Next cohort opens Q1 2026"
+  },
+  "whyExists": {
+    "title": "Why COIREA Exists",
+    "subtitle": "The New Way Organizations Evolve",
+    "points": {
+      "fragmented": "Organizations today are fragmented: culture, leadership, well-being, and strategy sit in different silos.",
+      "outdated": "Leaders rely on outdated surveys, slow feedback loops, and intuition.",
+      "invisible": "Burnout, misalignment, and cultural erosion are invisible until it's too late.",
+      "solution": "COIREA unifies everything into one real-time system of intelligence."
     }
   },
-  "whatWeDo": {
-    "title": "What COIREA Does",
-    "subtitle": "Four pillars of organizational intelligence",
-    "capabilities": {
-      "measure": {
-        "title": "Measures What Matters",
-        "description": "Culture health, leadership effectiveness, team well-being, and collaboration patterns—all in one unified view."
+  "pillars": {
+    "title": "What COIREA Measures",
+    "subtitle": "The 5 Pillars of Organizational Intelligence",
+    "items": {
+      "purpose": {
+        "title": "Purpose & Culture",
+        "description": "Signals on clarity, alignment, values coherence, and cultural health."
       },
-      "unify": {
-        "title": "Unifies Your Data",
-        "description": "Surveys, behavioral signals, engagement metrics, and performance indicators connected into actionable intelligence."
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Team dynamics, trust patterns, psychological safety, and network connections."
       },
-      "predict": {
-        "title": "Identifies Risks Early",
-        "description": "Spot burnout patterns, cultural misalignment, and leadership gaps before they impact your organization."
+      "leadership": {
+        "title": "Leadership",
+        "description": "Leader effectiveness, presence, feedback loops, and team influence."
       },
-      "recommend": {
-        "title": "Recommends Actions",
-        "description": "AI-powered insights that translate complex data into clear, prioritized recommendations for leaders."
+      "wellbeing": {
+        "title": "Well-Being",
+        "description": "Burnout index, energy levels, stress patterns, resilience indicators."
+      },
+      "strategy": {
+        "title": "Organizational Strategy",
+        "description": "Execution clarity, prioritization, role coherence, and operating rhythm."
       }
-    }
+    },
+    "footer": "All captured in real time. All in one system."
+  },
+  "dashboard": {
+    "title": "See the Hidden Patterns of Your Organization",
+    "subtitle": "The Evolution Dashboard",
+    "description": "Track your organization's vitality across all 5 pillars. Spot trends, risks, and opportunities before they escalate."
   },
   "aiAgent": {
     "title": "Meet the COIREA AI Agent",
-    "subtitle": "Your organizational intelligence partner",
+    "subtitle": "Your Organizational Partner",
     "description": "An AI that understands the nuances of organizational health, trained on proven frameworks and real transformation patterns.",
     "capabilities": {
-      "analyze": "Analyzes organizational health signals",
-      "identify": "Identifies hidden cultural patterns",
-      "generate": "Generates personalized recommendations",
-      "track": "Tracks transformation progress",
-      "alert": "Alerts on emerging risks",
-      "learn": "Learns from your organization's context"
+      "analyze": "Analyzes signals from people, behavior, and culture",
+      "detect": "Detects misalignment and emerging risks",
+      "learn": "Learns your organizational context",
+      "generate": "Generates clear, actionable recommendations",
+      "support": "Supports leaders with evidence-based insight, not noise"
     },
     "mvp": {
-      "title": "Available Today",
+      "title": "MVP Available",
       "badge": "MVP",
       "features": {
         "scanner": "Organizational Health Scanner",
-        "insights": "AI-Generated Insights Report",
-        "indicators": "Key Risk Indicators Dashboard",
+        "insights": "AI Insights Report",
+        "indicators": "Early Risk Indicators",
         "burnout": "Burnout Early Warning Index"
       }
     },
     "future": {
-      "title": "Coming Soon",
-      "badge": "Roadmap",
+      "title": "Roadmap",
+      "badge": "Coming Soon",
       "features": {
-        "predictive": "Predictive Analytics Engine",
+        "predictive": "Predictive Engine",
         "automation": "Intervention Automation",
-        "api": "Integration API",
-        "realtime": "Real-Time Monitoring Dashboard"
+        "api": "API Integrations",
+        "realtime": "Real-Time Monitoring"
       }
     }
   },
@@ -81,7 +101,7 @@
         "description": "Intelligent analysis that surfaces what matters most and recommends evidence-based actions."
       },
       "leadership": {
-        "title": "Leadership & Culture Metrics",
+        "title": "Culture & Leadership Metrics",
         "description": "Track leadership effectiveness and cultural alignment with scientifically validated indicators."
       },
       "wellbeing": {
@@ -92,16 +112,23 @@
         "title": "Collaboration Network",
         "description": "Visualize how teams work together and identify opportunities to strengthen connections."
       },
-      "impact": {
-        "title": "Social Impact Tracking",
-        "description": "Measure and report on your organization's broader impact on communities and stakeholders."
+      "regenerative": {
+        "title": "Regenerative Capital Index",
+        "description": "Measure how your improvements in well-being and culture translate into positive social impact."
       }
     }
+  },
+  "impact": {
+    "title": "Transform Organizational Health into Social Impact",
+    "subtitle": "The Regenerative Impact Layer",
+    "description": "COIREA converts a percentage of organizational growth (time, skills, or financial contributions) into regenerative impact in Latin America.",
+    "note": "Through our social impact arm, companies support social projects with transparent SDGs reporting directly inside the platform.",
+    "cta": "Learn About Raíces Latinas"
   },
   "cta": {
     "title": "Shape the Future of Organizational Intelligence",
     "description": "Be among the first companies to experience COIREA. Early access members help define the platform and receive founding member benefits.",
     "button": "Join Early Access Program",
-    "note": "Limited spots available for 2024 cohort"
+    "note": "Limited spots available for 2025 cohort"
   }
 }
