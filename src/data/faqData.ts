@@ -7,8 +7,8 @@ export interface FAQItem {
 
 export const homepageFAQs: FAQItem[] = [
   {
-    question: "What makes COIREA different from traditional organizational consulting?",
-    answer: "COIREA is an AI-powered organizational intelligence platform, not a consulting firm. We provide real-time measurement and insights across culture, leadership, collaboration, and well-being — all in one integrated system. Instead of periodic assessments and reports, you get continuous visibility into organizational health with AI-generated recommendations."
+    question: "What is COIREA and how does it help organizations?",
+    answer: "COIREA is an AI-powered organizational intelligence platform that provides real-time measurement and insights across culture, leadership, collaboration, and well-being — all in one integrated system. You get continuous visibility into organizational health with AI-generated recommendations that help you make better decisions."
   },
   {
     question: "How does the COIREA platform work?",
