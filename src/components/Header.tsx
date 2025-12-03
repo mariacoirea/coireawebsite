@@ -45,7 +45,7 @@ const Header = () => {
             <LocalizedLink to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/raices-latinas" className="flex flex-col items-center leading-tight group">
+            <LocalizedLink to="/social-impact" className="flex flex-col items-center leading-tight group">
               <div className="bg-[hsl(var(--raices-earth-brown))]/80 hover:bg-[hsl(var(--raices-sage-green))]/80 transition-all duration-300 px-3 py-1.5 rounded-md">
                 <span className="text-xs tracking-wider text-white font-bold block">SOCIAL</span>
                 <span className="text-xs tracking-wider text-white font-bold block">IMPACT</span>
@@ -83,7 +83,7 @@ const Header = () => {
             <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/raices-latinas" onClick={closeMenu} className="block py-2">
+            <LocalizedLink to="/social-impact" onClick={closeMenu} className="block py-2">
               <div className="bg-[hsl(var(--raices-earth-brown))]/80 hover:bg-[hsl(var(--raices-sage-green))]/80 transition-all duration-300 px-4 py-2 rounded-md inline-block">
                 <div className="flex flex-col leading-tight">
                   <span className="text-sm tracking-wider text-white font-bold">SOCIAL</span>

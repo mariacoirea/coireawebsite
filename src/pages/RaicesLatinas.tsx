@@ -117,7 +117,7 @@ const RaicesLatinas = () => {
         title="COIREA Social Impact"
         description="Transform organizational health into social impact. A regenerative model where stronger companies directly support stronger communities across Latin America."
         keywords="social impact, SDG, Latin America, regenerative, CSR, community development"
-        url="/raices-latinas"
+        url="/social-impact"
       />
       <Header />
       
