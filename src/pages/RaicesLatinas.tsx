@@ -131,7 +131,7 @@ const RaicesLatinas = () => {
               alt="Hands passing a globe symbolizing social impact" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#d4dbc8]/85 via-[#dde3d2]/85 to-[#e5e9dc]/85" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#d9d4c8]/85 via-[#e0dbd0]/85 to-[#e5e0d6]/85" />
           </div>
 
           <div className="container mx-auto max-w-7xl relative z-10">
