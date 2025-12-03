@@ -137,7 +137,7 @@ const RaicesLatinas = () => {
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center space-y-8">
               <span className="inline-block px-4 py-2 mb-2 text-sm font-medium tracking-wider text-[hsl(var(--raices-earth-brown))] uppercase bg-[hsl(var(--raices-earth-brown))]/10 rounded-full border border-[hsl(var(--raices-earth-brown))]/20">
-                COIREA Social
+                Social Impact
               </span>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold text-[hsl(var(--raices-sage-green))] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
