@@ -92,9 +92,9 @@ const App = () => {
             <Route path="/es/tools" element={<Tools />} />
             <Route path="/es/journey" element={<Journey />} />
             
-            {/* Raíces Latinas (standalone landing page) */}
-            <Route path="/raices-latinas" element={<RaicesLatinas />} />
-            <Route path="/es/raices-latinas" element={<RaicesLatinas />} />
+            {/* Social Impact (standalone landing page) */}
+            <Route path="/social-impact" element={<RaicesLatinas />} />
+            <Route path="/es/social-impact" element={<RaicesLatinas />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

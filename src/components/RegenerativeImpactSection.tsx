@@ -36,7 +36,7 @@ const RegenerativeImpactSection = () => {
           {t('impact.description2')}
         </p>
         
-        <LocalizedLink to="/raices-latinas">
+        <LocalizedLink to="/social-impact">
           <Button 
             variant="outline" 
             size="lg"
