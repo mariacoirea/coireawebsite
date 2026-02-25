@@ -24,12 +24,12 @@ const FivePillarFrameworkSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <header className="mx-auto max-w-4xl text-center animate-fade-in">
+        <header className="mx-auto max-w-6xl text-center animate-fade-in">
           <Badge variant="secondary" className="mb-4 text-sm">
-            {t('framework.badge')}
+            {t('framework.badge', 'Regenerative Execution for Real Growth')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
-            {t('framework.heading')}
+            {t('framework.heading', 'The COIREA Operating System')}
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground">
             {intro.map((paragraph: string, idx: number) => (
@@ -42,7 +42,7 @@ const FivePillarFrameworkSection = () => {
 
         {/* Pillars Heading */}
         <h3 className="mt-16 mb-10 text-center text-2xl md:text-3xl font-semibold text-foreground animate-fade-in">
-          {t('framework.pillarsHeading')}
+          {t('framework.pillarsHeading', 'The Five Pillars of Systemic Health')}
         </h3>
 
         {/* Pillar Cards */}
@@ -81,12 +81,12 @@ const FivePillarFrameworkSection = () => {
         </div>
 
         {/* AI Note + Closing */}
-        <div className="mt-14 mx-auto max-w-3xl text-center space-y-4 animate-fade-in">
+        <div className="mt-14 mx-auto max-w-4xl text-center space-y-4 animate-fade-in">
           <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
-            {t('framework.aiNote')}
+            {t('framework.aiNote', 'At the platform level, these pillars are interpreted through COIREA\'s trained Organizational AI — surfacing cross-pillar tensions and converting system signals into clear, aligned action.')}
           </p>
           <p className="text-lg md:text-xl font-semibold text-primary">
-            {t('framework.closingLine')}
+            {t('framework.closingLine', 'Growth should increase coherence, not extraction.')}
           </p>
         </div>
       </div>
