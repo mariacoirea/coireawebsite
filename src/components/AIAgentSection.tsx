@@ -34,7 +34,7 @@ const AIAgentSection = () => {
         </div>
 
         {/* Description Block */}
-        <div className="max-w-4xl mx-auto mb-14 space-y-4">
+        <div className="max-w-6xl mx-auto mb-14 space-y-4">
           <p className="text-muted-foreground font-body leading-relaxed text-center">
             {t('aiAgent.description', 'GiA is not a generic chatbot or external analytics engine. It is a trained Organizational AI designed specifically to interpret patterns within your organization\'s own data — across governance, culture, execution, collaboration, and well-being.')}
           </p>
