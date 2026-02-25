@@ -30,7 +30,8 @@ const HowItWorksSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {phaseKeys.map((key, index) => {
             const Icon = phaseIcons[index];
-            const outputs = t(`howItWorks.phases.${key}.outputs`, { returnObjects: true }) as string[];
+            const rawOutputs = t(`howItWorks.phases.${key}.outputs`, { returnObjects: true });
+            const outputs = Array.isArray(rawOutputs) ? rawOutputs : [];
 
             return (
               <div
