@@ -60,8 +60,9 @@
     "heading": "The COIREA Operating System",
     "intro": [
       "Growth brings complexity — competing priorities, decision bottlenecks, cultural drift, and silent burnout. Most organizations respond by adding more goals, more meetings, and more pressure.",
-      "COIREA structures growth differently. It organizes execution around five interconnected pillars. When these pillars are misaligned, growth becomes extractive — draining energy faster than it builds capacity. When aligned, the system strengthens as it scales.",
-      "These pillars are continuously measured within the platform, ensuring coherence is not assumed — but verified."
+      "COIREA structures growth differently.",
+      "It organizes execution around five interconnected pillars. When these pillars are misaligned, growth becomes extractive. Draining energy faster than it builds capacity, when aligned, the system strengthens as it scales.",
+      "These pillars are continuously measured within the platform, ensuring coherence is not assumed, but verified."
     ],
     "pillarsHeading": "The Five Pillars of Systemic Health",
     "pillars": [
@@ -90,7 +91,7 @@
         "drives": "Sustainable performance, focus, long-term growth."
       },
       {
-        "title": "Strategy",
+        "title": "Strategy & Execution",
         "subtitle": "Structure and Momentum",
         "description": "Connects long-term vision to quarterly priorities and ownership. Prevents strategic drift and ensures progress is measurable.",
         "drives": "Scalability, efficiency, adaptive resilience."
