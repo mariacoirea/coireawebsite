@@ -51,47 +51,41 @@
     "description": "Track your organization's vitality across all 5 pillars. Spot trends, risks, and opportunities before they escalate."
   },
   "aiAgent": {
-    "title": "Meet the COIREA AI Agent",
-    "subtitle": "Your Organizational Intelligence Partner",
-    "description": "The COIREA AI Agent is the intelligence layer of the platform — a system that interprets signals from people, behavior, culture, and organizational structures, transforming them into clear insights that leaders can act on. Trained on proven frameworks and real transformation patterns, it understands how healthy organizations evolve and guides your team accordingly.",
+    "title": "Meet GiA: COIREA's Trained Organizational AI",
+    "subtitle": "Your System Intelligence Layer",
+    "description": "GiA is not a generic chatbot or external analytics engine. It is a trained Organizational AI designed specifically to interpret patterns within your organization's own data — across governance, culture, execution, collaboration, and well-being.",
+    "description2": "Instead of generating answers from external models, GiA learns from your system's internal signals. It identifies structural tensions, recurring behavioral patterns, and early indicators of misalignment — converting them into clear, contextual guidance.",
+    "closingNote1": "The intelligence stays inside your field.",
+    "closingNote2": "The insights are specific to your organization.",
     "whatItDoes": {
-      "title": "What It Does"
+      "title": "What GiA Does"
     },
     "capabilities": {
-      "analyze": "Analyzes signals from people, behavior, culture, and team dynamics",
-      "detect": "Detects misalignment and emerging risks before they escalate",
-      "learn": "Learns your organizational context and adapts recommendations",
-      "generate": "Generates clear, actionable insight tailored to your leadership needs",
-      "support": "Supports leaders with evidence-based guidance, not noise"
+      "analyze": "Interprets cross-pillar signals in real time",
+      "detect": "Detects structural misalignment before it escalates",
+      "learn": "Surfaces early risk indicators (burnout, drift, bottlenecks)",
+      "generate": "Translates data into clear priorities and ownership suggestions",
+      "support": "Supports leadership with evidence-based, system-aware guidance"
     },
-    "howItWorks": {
-      "title": "How It Works",
-      "input": "Input",
-      "inputDescription": "Surveys, behavior signals, culture metrics, leadership patterns",
-      "interpretation": "Interpretation",
-      "interpretationDescription": "AI analysis + OS logic",
-      "action": "Action",
-      "actionDescription": "Insights, recommendations, predictions, and alerts"
-    },
-    "differentiator": "This is the first AI specifically designed to understand organizational vitality — not just people analytics.",
     "mvp": {
-      "title": "MVP Available",
+      "title": "MVP Capabilities",
       "badge": "MVP",
       "features": {
-        "scanner": "Organizational Health Scanner",
-        "insights": "AI Insights Report",
-        "indicators": "Early Risk Indicators",
-        "burnout": "Burnout Early Warning Index"
+        "scanner": "Organizational Health Reflection (15-question entry)",
+        "insights": "OVI Scoring",
+        "indicators": "AI Insights Report",
+        "burnout": "Early Risk Indicators",
+        "burnoutIndex": "Burnout Early Warning Index"
       }
     },
     "future": {
-      "title": "Roadmap",
-      "badge": "Coming Soon",
+      "title": "Roadmap (Coming Next)",
+      "badge": "Coming Next",
       "features": {
-        "predictive": "Predictive Engine",
+        "predictive": "Predictive Pattern Engine",
         "automation": "Intervention Automation",
         "api": "API Integrations",
-        "realtime": "Real-Time Monitoring"
+        "realtime": "Advanced Real-Time Monitoring"
       }
     }
   },
