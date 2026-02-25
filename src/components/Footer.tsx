@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <OptimizedImage 
                 src="/lovable-uploads/e067195f-6380-4731-875b-50e5cf44f94b.png" 
-                alt="COIREA Logo - Regenerative Business Transformation Consultancy" 
+                alt="COIREA Logo - Organizational Intelligence Platform" 
                 className="w-12 h-12"
                 width={48}
                 height={48}
@@ -71,8 +71,8 @@ const Footer = () => {
                 </LocalizedLink>
               </li>
               <li>
-                <LocalizedLink to="/raices-latinas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  {t('footer.platformFeatures.raices')}
+                <LocalizedLink to="/social-impact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.platformFeatures.socialImpact')}
                 </LocalizedLink>
               </li>
             </ul>
@@ -89,7 +89,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5" />
                 <span className="text-primary-foreground/80">
-                  Global consultancy<br />
+                  Organizational Intelligence Platform<br />
                   Serving organizations worldwide
                 </span>
               </div>
