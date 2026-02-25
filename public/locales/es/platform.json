@@ -51,47 +51,41 @@
     "description": "Rastrea la vitalidad de tu organización en los 5 pilares. Detecta tendencias, riesgos y oportunidades antes de que escalen."
   },
   "aiAgent": {
-    "title": "Conoce al Agente IA de COIREA",
-    "subtitle": "Tu Socio de Inteligencia Organizacional",
-    "description": "El Agente IA de COIREA es la capa de inteligencia de la plataforma — un sistema que interpreta señales de personas, comportamiento, cultura y estructuras organizacionales, transformándolas en insights claros sobre los que los líderes pueden actuar. Entrenado en frameworks probados y patrones reales de transformación, entiende cómo evolucionan las organizaciones saludables y guía a tu equipo en consecuencia.",
+    "title": "Conoce a GiA: La IA Organizacional Entrenada de COIREA",
+    "subtitle": "Tu Capa de Inteligencia Sistémica",
+    "description": "GiA no es un chatbot genérico ni un motor de analítica externo. Es una IA Organizacional entrenada, diseñada específicamente para interpretar patrones dentro de los datos propios de tu organización — a través de gobernanza, cultura, ejecución, colaboración y bienestar.",
+    "description2": "En lugar de generar respuestas desde modelos externos, GiA aprende de las señales internas de tu sistema. Identifica tensiones estructurales, patrones de comportamiento recurrentes e indicadores tempranos de desalineación — convirtiéndolos en guía clara y contextual.",
+    "closingNote1": "La inteligencia permanece dentro de tu campo.",
+    "closingNote2": "Los insights son específicos de tu organización.",
     "whatItDoes": {
-      "title": "Qué Hace"
+      "title": "Qué Hace GiA"
     },
     "capabilities": {
-      "analyze": "Analiza señales de personas, comportamiento, cultura y dinámicas de equipo",
-      "detect": "Detecta desalineación y riesgos emergentes antes de que escalen",
-      "learn": "Aprende el contexto de tu organización y adapta recomendaciones",
-      "generate": "Genera insights claros y accionables adaptados a tus necesidades de liderazgo",
-      "support": "Apoya a líderes con guía basada en evidencia, no ruido"
+      "analyze": "Interpreta señales entre pilares en tiempo real",
+      "detect": "Detecta desalineación estructural antes de que escale",
+      "learn": "Identifica indicadores de riesgo temprano (burnout, deriva, cuellos de botella)",
+      "generate": "Traduce datos en prioridades claras y sugerencias de responsabilidad",
+      "support": "Apoya al liderazgo con guía basada en evidencia y consciencia sistémica"
     },
-    "howItWorks": {
-      "title": "Cómo Funciona",
-      "input": "Entrada",
-      "inputDescription": "Encuestas, señales de comportamiento, métricas de cultura, patrones de liderazgo",
-      "interpretation": "Interpretación",
-      "interpretationDescription": "Análisis IA + lógica del SO",
-      "action": "Acción",
-      "actionDescription": "Insights, recomendaciones, predicciones y alertas"
-    },
-    "differentiator": "Esta es la primera IA diseñada específicamente para entender la vitalidad organizacional — no solo analítica de personas.",
     "mvp": {
-      "title": "MVP Disponible",
+      "title": "Capacidades MVP",
       "badge": "MVP",
       "features": {
-        "scanner": "Scanner de Salud Organizacional",
-        "insights": "Reporte de Insights con IA",
-        "indicators": "Indicadores de Riesgo Temprano",
-        "burnout": "Índice de Alerta Temprana de Burnout"
+        "scanner": "Reflexión de Salud Organizacional (15 preguntas)",
+        "insights": "Puntuación OVI",
+        "indicators": "Reporte de Insights con IA",
+        "burnout": "Indicadores de Riesgo Temprano",
+        "burnoutIndex": "Índice de Alerta Temprana de Burnout"
       }
     },
     "future": {
-      "title": "Roadmap",
+      "title": "Roadmap (Próximamente)",
       "badge": "Próximamente",
       "features": {
-        "predictive": "Motor Predictivo",
+        "predictive": "Motor de Patrones Predictivos",
         "automation": "Automatización de Intervenciones",
         "api": "Integraciones API",
-        "realtime": "Monitoreo en Tiempo Real"
+        "realtime": "Monitoreo Avanzado en Tiempo Real"
       }
     }
   },
