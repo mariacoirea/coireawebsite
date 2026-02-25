@@ -70,11 +70,6 @@ const Footer = () => {
                   {t('footer.platformFeatures.impact')}
                 </LocalizedLink>
               </li>
-              <li>
-                <LocalizedLink to="/social-impact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  {t('footer.platformFeatures.socialImpact')}
-                </LocalizedLink>
-              </li>
             </ul>
           </div>
 

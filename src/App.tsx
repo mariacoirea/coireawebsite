@@ -18,7 +18,7 @@ import Journey from "./pages/Journey";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import PostEditor from "./pages/PostEditor";
-import RaicesLatinas from "./pages/RaicesLatinas";
+// import RaicesLatinas from "./pages/RaicesLatinas"; // Archived: Social Impact not in current stage
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -93,9 +93,7 @@ const App = () => {
             <Route path="/es/tools" element={<Tools />} />
             <Route path="/es/journey" element={<Journey />} />
             
-            {/* Social Impact (standalone landing page) */}
-            <Route path="/social-impact" element={<RaicesLatinas />} />
-            <Route path="/es/social-impact" element={<RaicesLatinas />} />
+            {/* Social Impact archived - not part of current stage */}
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
