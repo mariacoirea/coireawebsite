@@ -56,44 +56,48 @@
     "conclusion": "If these patterns look familiar, your organization is likely extracting energy faster than it is building capacity."
   },
   "framework": {
-    "heading": "The COIREA Operating System (Regenerative OS)",
+    "badge": "Regenerative Execution for Real Growth",
+    "heading": "The COIREA Operating System",
     "intro": [
-      "Growth brings complexity — competing priorities, misaligned teams, and stalled momentum. The COIREA Operating System transforms these challenges into coherence.",
-      "Built on five core functions: Purpose & Culture, Supportive Leadership, Collaboration, Well-Being, and Organizational Strategy. The COIREA OS is a living architecture that aligns Purpose, People, and Performance into one holistic system.",
-      "Unlike static frameworks, the COIREA OS integrates structure with soul: decision-making that flows, metrics that measure meaning as well as results, and practices that sustain human vitality. The result: organizations that are aligned, adaptive, and resilient — designed to grow with integrity."
+      "Growth brings complexity — competing priorities, decision bottlenecks, cultural drift, and silent burnout. Most organizations respond by adding more goals, more meetings, and more pressure.",
+      "COIREA structures growth differently. It organizes execution around five interconnected pillars. When these pillars are misaligned, growth becomes extractive — draining energy faster than it builds capacity. When aligned, the system strengthens as it scales.",
+      "These pillars are continuously measured within the platform, ensuring coherence is not assumed — but verified."
     ],
+    "pillarsHeading": "The Five Pillars of Systemic Health",
     "pillars": [
       {
-        "title": "Purpose & Culture",
-        "subtitle": "Clarity & storytelling",
-        "description": "Turn vision into belonging. Purpose and culture set the tone for everything: why you exist and what it feels like to work here. We weave your values and vision into daily practices, creating a coherent field that people trust and want to belong to.",
-        "drives": "Team alignment, talent retention, brand trust."
+        "title": "Vision",
+        "subtitle": "Clarity and Direction",
+        "description": "Defines why the organization exists and how it behaves. Anchors decisions in shared direction, reducing drift and internal friction.",
+        "drives": "Alignment, retention, brand trust."
       },
       {
-        "title": "Supportive Leadership",
-        "subtitle": "Presence & feedback",
-        "description": "Build leaders who inspire through change. Supportive Leadership defines the energy of an organization. We cultivate leaders who are authentic, values-driven, and able to guide others with clarity, courage, and trust.",
-        "drives": "Strategic execution, innovation, cultural trust."
+        "title": "Leadership",
+        "subtitle": "Ownership and Accountability",
+        "description": "Structures clear roles, decision rights, and responsibility. Prevents bottlenecks and distributes authority with clarity.",
+        "drives": "Faster execution, innovation, cultural trust."
       },
       {
         "title": "Collaboration",
-        "subtitle": "Trust & flow",
-        "description": "Unlock collective intelligence. When trust and clarity are present, collaboration becomes effortless flow. We create systems that remove silos, foster psychological safety, and turn conflict into creativity.",
-        "drives": "Faster problem-solving, better ideas, stronger execution."
+        "subtitle": "Trust and Coordination",
+        "description": "Creates systems that reduce silos and increase collective intelligence. Aligns communication, feedback, and team agreements with execution needs.",
+        "drives": "Better decisions, stronger teamwork, efficient delivery."
       },
       {
         "title": "Well-Being",
-        "subtitle": "Energy & resilience",
-        "description": "Protect human energy as a strategic asset. Well-being is not a perk—it's the foundation of performance. We embed regenerative practices that sustain focus, creativity, and resilience across the whole team.",
-        "drives": "Productivity, retention, sustainable growth."
+        "subtitle": "Energy and Sustainability",
+        "description": "Treats human energy as a strategic asset. Monitors capacity, burnout signals, and resilience in real time.",
+        "drives": "Sustainable performance, focus, long-term growth."
       },
       {
-        "title": "Organizational Strategy",
-        "subtitle": "System Design & Backbone",
-        "description": "Turn vision into reality. Strategy is the structural spine of your business. We design adaptive systems, regenerative KPIs, and decision-making architectures that keep your organization agile and aligned with its deeper purpose.",
-        "drives": "Scalability, efficiency, resilience."
+        "title": "Strategy",
+        "subtitle": "Structure and Momentum",
+        "description": "Connects long-term vision to quarterly priorities and ownership. Prevents strategic drift and ensures progress is measurable.",
+        "drives": "Scalability, efficiency, adaptive resilience."
       }
-    ]
+    ],
+    "aiNote": "At the platform level, these pillars are interpreted through COIREA's trained Organizational AI — surfacing cross-pillar tensions and converting system signals into clear, aligned action.",
+    "closingLine": "Growth should increase coherence, not extraction."
   },
   "services": {
     "heading": "90-Day Reset Programs",

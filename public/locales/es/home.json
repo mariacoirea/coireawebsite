@@ -56,44 +56,48 @@
     "conclusion": "Si estos patrones te resultan familiares, tu organización probablemente está extrayendo energía más rápido de lo que está construyendo capacidad."
   },
   "framework": {
-    "heading": "El Sistema Operativo COIREA (SO Regenerativo)",
+    "badge": "Ejecución Regenerativa para un Crecimiento Real",
+    "heading": "El Sistema Operativo COIREA",
     "intro": [
-      "El crecimiento trae complejidad — prioridades en conflicto, equipos desalineados y momentum estancado. El Sistema Operativo COIREA transforma estos desafíos en coherencia.",
-      "Construido sobre cinco funciones clave: Propósito y Cultura, Liderazgo Consciente, Colaboración, Bienestar y Estrategia Organizacional. El SO COIREA es una arquitectura viva que alinea Propósito, Personas y Rendimiento en un sistema holístico.",
-      "A diferencia de marcos estáticos, el SO COIREA integra estructura con alma: toma de decisiones que fluye, métricas que miden significado además de resultados, y prácticas que sostienen la vitalidad humana. El resultado: organizaciones alineadas, adaptativas y resilientes — diseñadas para crecer con integridad."
+      "El crecimiento trae complejidad — prioridades en conflicto, cuellos de botella en decisiones, deriva cultural y agotamiento silencioso. La mayoría de las organizaciones responden agregando más metas, más reuniones y más presión.",
+      "COIREA estructura el crecimiento de manera diferente. Organiza la ejecución en torno a cinco pilares interconectados. Cuando estos pilares están desalineados, el crecimiento se vuelve extractivo — agotando energía más rápido de lo que construye capacidad. Cuando están alineados, el sistema se fortalece mientras escala.",
+      "Estos pilares se miden continuamente dentro de la plataforma, asegurando que la coherencia no se asuma — sino que se verifique."
     ],
+    "pillarsHeading": "Los Cinco Pilares de la Salud Sistémica",
     "pillars": [
       {
-        "title": "Propósito y Cultura",
-        "subtitle": "Claridad y narrativa",
-        "description": "Convierte la visión en pertenencia. El propósito y la cultura establecen el tono para todo: por qué existes y cómo se siente trabajar aquí. Tejemos tus valores y visión en prácticas diarias, creando un campo coherente en el que las personas confían y desean pertenecer.",
-        "drives": "Alineación de equipo, retención de talento, confianza de marca."
+        "title": "Visión",
+        "subtitle": "Claridad y Dirección",
+        "description": "Define por qué existe la organización y cómo se comporta. Ancla las decisiones en una dirección compartida, reduciendo la deriva y la fricción interna.",
+        "drives": "Alineación, retención, confianza de marca."
       },
       {
-        "title": "Liderazgo Consciente",
-        "subtitle": "Presencia y retroalimentación",
-        "description": "Construye líderes que inspiran a través del cambio. El Liderazgo Consciente define la energía de una organización. Cultivamos líderes auténticos, impulsados por valores y capaces de guiar a otros con claridad, coraje y confianza.",
-        "drives": "Ejecución estratégica, innovación, confianza cultural."
+        "title": "Liderazgo",
+        "subtitle": "Propiedad y Responsabilidad",
+        "description": "Estructura roles claros, derechos de decisión y responsabilidad. Previene cuellos de botella y distribuye autoridad con claridad.",
+        "drives": "Ejecución más rápida, innovación, confianza cultural."
       },
       {
         "title": "Colaboración",
-        "subtitle": "Confianza y flujo",
-        "description": "Desbloquea la inteligencia colectiva. Cuando la confianza y la claridad están presentes, la colaboración se convierte en flujo sin esfuerzo. Creamos sistemas que eliminan silos, fomentan la seguridad psicológica y convierten el conflicto en creatividad.",
-        "drives": "Resolución más rápida de problemas, mejores ideas, ejecución más sólida."
+        "subtitle": "Confianza y Coordinación",
+        "description": "Crea sistemas que reducen silos y aumentan la inteligencia colectiva. Alinea comunicación, retroalimentación y acuerdos de equipo con las necesidades de ejecución.",
+        "drives": "Mejores decisiones, trabajo en equipo más sólido, entrega eficiente."
       },
       {
         "title": "Bienestar",
-        "subtitle": "Energía y resiliencia",
-        "description": "Protege la energía humana como un activo estratégico. El bienestar no es un beneficio — es la base del rendimiento. Integramos prácticas regenerativas que sostienen el enfoque, la creatividad y la resiliencia en todo el equipo.",
-        "drives": "Productividad, retención, crecimiento sostenible."
+        "subtitle": "Energía y Sostenibilidad",
+        "description": "Trata la energía humana como un activo estratégico. Monitorea capacidad, señales de agotamiento y resiliencia en tiempo real.",
+        "drives": "Rendimiento sostenible, enfoque, crecimiento a largo plazo."
       },
       {
-        "title": "Estrategia Organizacional",
-        "subtitle": "Diseño de Sistema y Columna Vertebral",
-        "description": "Convierte la visión en realidad. La estrategia es la columna estructural de tu negocio. Diseñamos sistemas adaptativos, KPIs regenerativos y arquitecturas de toma de decisiones que mantienen tu organización ágil y alineada con su propósito más profundo.",
-        "drives": "Escalabilidad, eficiencia, resiliencia."
+        "title": "Estrategia",
+        "subtitle": "Estructura y Momentum",
+        "description": "Conecta la visión a largo plazo con prioridades trimestrales y propiedad. Previene la deriva estratégica y asegura que el progreso sea medible.",
+        "drives": "Escalabilidad, eficiencia, resiliencia adaptativa."
       }
-    ]
+    ],
+    "aiNote": "A nivel de plataforma, estos pilares son interpretados por la IA Organizacional entrenada de COIREA — detectando tensiones entre pilares y convirtiendo señales del sistema en acción clara y alineada.",
+    "closingLine": "El crecimiento debe aumentar la coherencia, no la extracción."
   },
   "services": {
     "heading": "Programas de Reinicio de 90 Días",
