@@ -5,19 +5,18 @@
     "keywords": "plataforma de inteligencia organizacional, salud organizacional IA, analítica de cultura, métricas de liderazgo, bienestar de empleados, colaboración de equipos, empresas con propósito, transformación organizacional, insights en tiempo real, negocio regenerativo"
   },
   "hero": {
-    "titleLine1": "Transformando",
-    "titleLine2": "Organizaciones",
-    "titleLine3": "Desde Adentro",
-    "subtitle": "La Plataforma de Inteligencia Organizacional para Empresas con Propósito",
-    "description": "COIREA es una plataforma en tiempo real que integra cada dimensión de la salud organizacional en un sistema unificado. Usando IA para interpretar patrones y detectar riesgos antes de que escalen, convertimos la complejidad en insights claros y accionables — fortaleciendo equipos, mejorando decisiones y habilitando impacto medible.",
-    "ctaButton": "Obtén Acceso Anticipado"
+    "titleLine1": "El Crecimiento Real",
+    "titleLine2": "Empieza Dentro",
+    "titleLine3": "del Sistema",
+    "description": "COIREA es una Plataforma de Inteligencia Organizacional diseñada para ayudar a las empresas a alcanzar sus objetivos estratégicos sin desgastar a su gente, su cultura ni su capacidad a largo plazo. Impulsada por IA entrenada que interpreta patrones dentro de tu propio sistema, transforma señales internas en ejecución alineada.",
+    "ctaButton": "Iniciar Reflexión"
   },
   "reflection": {
-    "heading": "¿Tu Organización Está Suficientemente Alineada Para Crecer?",
-    "intro": "Cuando Propósito, Personas, Planeta y Rendimiento se desalinean, el crecimiento se ralentiza. La desalineación en cultura, liderazgo, bienestar y colaboración drena silenciosamente la energía, claridad y capacidad. Antes de escalar más, es esencial examinar tu núcleo.",
+    "heading": "¿Tu Organización Está Estructuralmente Alineada Para Crecer?",
+    "intro": "Cuando propósito, liderazgo, colaboración y ejecución se desalinean, el crecimiento se frena. La desalineación no siempre es evidente — aparece como cuellos de botella en decisiones, pérdida de talento, deriva estratégica y agotamiento silencioso. Antes de escalar más, examina el sistema detrás de los resultados.",
     "questions": [
-      "¿Las decisiones se están ralentizando en la cúpula?",
-      "¿Las prioridades chocan más rápido que la ejecución?",
+      "¿Las decisiones están atrapadas en cuellos de botella en la cúpula?",
+      "¿Las prioridades se multiplican más rápido que la capacidad de ejecución?",
       "¿Pierdes talento más rápido de lo que puedes incorporar?",
       "¿Tu cultura inspira lealtad en todas las generaciones, especialmente Gen Z?"
     ],
@@ -29,32 +28,32 @@
         "source": "Fuente: Gallup, 2024"
       },
       {
-        "highlight": "El bajo compromiso cuesta a la economía mundial $8.9 billones anuales",
-        "description": "eso es el 9% del PIB mundial perdido en estancamiento, rotación y agotamiento.",
-        "source": "Fuente: Gallup, 2024"
+        "highlight": "El 67% de las estrategias nunca se ejecutan completamente",
+        "description": "debido a falta de claridad en responsabilidades, prioridades en conflicto y desalineación estructural.",
+        "source": "Fuente: Harvard Business Review"
       },
       {
-        "highlight": "El 72% de los líderes carecen de claridad sobre el propósito",
-        "description": "creando confusión y desalineación en toda la organización.",
+        "highlight": "El 72% de los líderes carecen de claridad sobre el propósito organizacional",
+        "description": "creando confusión y parálisis en la toma de decisiones en todo el sistema.",
         "source": "Fuente: Encuesta COIREA"
       },
       {
-        "highlight": "El 60% de los equipos reportan confianza débil",
-        "description": "socavando la colaboración y la seguridad psicológica.",
+        "highlight": "El 60% de los equipos reportan confianza débil y límites de rol poco claros",
+        "description": "socavando la colaboración, la responsabilidad y la seguridad psicológica.",
         "source": "Fuente: Encuesta COIREA"
       },
       {
-        "highlight": "Solo el 33% de los empleados prospera en su bienestar general",
-        "description": "Cuando las personas no se sienten bien, no pueden rendir bien.",
-        "source": "Fuente: Gallup, 2024"
+        "highlight": "El 76% del agotamiento está vinculado a sobrecarga de decisiones y ambigüedad estructural",
+        "description": "no solo la carga de trabajo — es el diseño del sistema lo que desgasta a las personas.",
+        "source": "Fuente: McKinsey, 2023"
       },
       {
-        "highlight": "Las empresas con cultura sólida ven un 72% más de compromiso y 40% menos rotación",
-        "description": "demostrando que la transformación cultural intencional genera resultados medibles.",
+        "highlight": "Las empresas con coherencia estructural ven un 72% más de compromiso y 40% menos rotación",
+        "description": "demostrando que la alineación sistémica genera resultados medibles y sostenibles.",
         "source": "Fuente: Deloitte"
       }
     ],
-    "conclusion": "Si tu organización aparece en estos números, probablemente estás dejando capacidad, claridad e impacto sobre la mesa — mucho antes de que los síntomas sean visibles."
+    "conclusion": "Si estos patrones te resultan familiares, tu organización probablemente está extrayendo energía más rápido de lo que está construyendo capacidad."
   },
   "framework": {
     "heading": "El Sistema Operativo COIREA (SO Regenerativo)",
