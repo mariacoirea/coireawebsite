@@ -4,7 +4,6 @@ import ReflectionCheckpoint from "@/components/ReflectionCheckpoint";
 import FivePillarFrameworkSection from "@/components/FivePillarFrameworkSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AIAgentSection from "@/components/AIAgentSection";
-import RegenerativeImpactSection from "@/components/RegenerativeImpactSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
@@ -37,7 +36,6 @@ const HomePage = () => {
           <HowItWorksSection />
           <FivePillarFrameworkSection />
           <AIAgentSection />
-          <RegenerativeImpactSection />
           
           {/* FAQ Section for Homepage */}
           <SEOFAQSection 
