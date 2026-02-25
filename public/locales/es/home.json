@@ -178,22 +178,42 @@
     "cta": "Conoce el Impacto Social"
   },
   "howItWorks": {
-    "badge": "El Viaje COIREA",
-    "title": "Cómo Funciona",
-    "steps": {
-      "platform": {
-        "title": "PLATAFORMA",
-        "description": "El SO Regenerativo mide la salud organizacional en 5 pilares en tiempo real."
+    "badge": "El Ciclo de Ejecución Regenerativa",
+    "title": "Cómo Funciona COIREA",
+    "phases": {
+      "soil": {
+        "title": "SOIL",
+        "subtitle": "Siente el Sistema",
+        "description": "COIREA comienza con reflexión estructurada. La plataforma mide la salud organizacional en cinco pilares y revela tensiones ocultas usando reconocimiento de patrones con IA entrenada.",
+        "outputs": [
+          "Índice de Vitalidad Organizacional",
+          "Señales entre pilares",
+          "Indicadores de riesgo temprano"
+        ]
       },
-      "results": {
-        "title": "OBTIENE RESULTADOS",
-        "description": "El Agente IA analiza datos para generar insights, predicciones y alertas de riesgo."
+      "grow": {
+        "title": "GROW",
+        "subtitle": "Alinea y Ejecuta",
+        "description": "Los insights se convierten en gobernanza y ejecución estructurada. La ejecución se vuelve alineada, no reactiva.",
+        "outputs": [
+          "Propiedad clara (roles y círculos)",
+          "Prioridades trimestrales",
+          "Detección de deriva estratégica",
+          "Responsabilidad de liderazgo"
+        ]
       },
-      "impact": {
-        "title": "IMPACTO SOCIAL",
-        "description": "El crecimiento organizacional se convierte en impacto regenerativo en Latinoamérica."
+      "flourish": {
+        "title": "FLOURISH",
+        "subtitle": "Aprende y Regenera",
+        "description": "El sistema integra retroalimentación y fortalece la capacidad con el tiempo. El crecimiento construye resiliencia en lugar de agotamiento.",
+        "outputs": [
+          "Pulsos de bienestar",
+          "Mapa de innovación",
+          "Ciclos de aprendizaje",
+          "Señales de Capacidad Regenerativa"
+        ]
       }
     },
-    "quote": "La primera plataforma diseñada específicamente para transformar la vitalidad organizacional en impacto social medible — no solo analítica de personas."
+    "quote": "COIREA ayuda a las organizaciones a alcanzar objetivos estratégicos mientras aumenta la coherencia sistémica y la capacidad a largo plazo."
   }
 }
