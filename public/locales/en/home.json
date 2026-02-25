@@ -5,19 +5,18 @@
     "keywords": "organizational intelligence platform, AI organizational health, culture analytics, leadership metrics, employee well-being, team collaboration, purpose-driven companies, organizational transformation, real-time insights, regenerative business"
   },
   "hero": {
-    "titleLine1": "Transforming",
-    "titleLine2": "Organizations",
-    "titleLine3": "From the Inside Out",
-    "subtitle": "The Organizational Intelligence Platform for Purpose-Driven Companies",
-    "description": "COIREA is a real-time platform that brings every dimension of organizational health into one integrated system. Using AI to interpret patterns and surface risks before they escalate, we turn complexity into clear, actionable insight — strengthening teams, improving decisions, and enabling measurable impact.",
-    "ctaButton": "Get Early Access"
+    "titleLine1": "Real Growth Starts",
+    "titleLine2": "Inside",
+    "titleLine3": "the System",
+    "description": "COIREA is an Organizational Intelligence Platform designed to help companies achieve strategic goals without depleting their people, culture, or long-term capacity. Powered by trained AI that interprets patterns within your own system, it transforms internal signals into aligned execution.",
+    "ctaButton": "Start Reflection"
   },
   "reflection": {
-    "heading": "Is Your Organization Aligned Enough to Grow?",
-    "intro": "When Purpose, People, Planet and Performance drift apart, growth slows down. Misalignment across culture, leadership, well-being, and collaboration silently drains energy, clarity, and capacity. Before scaling further, it's essential to examine your core.",
+    "heading": "Is Your Organization Structurally Aligned to Grow?",
+    "intro": "When purpose, leadership, collaboration, and execution drift apart, growth slows. Misalignment doesn't always look dramatic — it shows up as decision bottlenecks, talent loss, strategic drift, and quiet burnout. Before scaling further, examine the system beneath the results.",
     "questions": [
-      "Are decisions slowing down at the top?",
-      "Are priorities clashing faster than execution?",
+      "Are decisions bottlenecked at the top?",
+      "Are priorities multiplying faster than execution capacity?",
       "Are you losing great people faster than you can onboard them?",
       "Does your culture inspire loyalty across generations, especially Gen Z?"
     ],
@@ -29,32 +28,32 @@
         "source": "Source: Gallup, 2024"
       },
       {
-        "highlight": "Low engagement costs the global economy $8.9 trillion annually",
-        "description": "that's 9% of global GDP lost to stagnation, turnover, and burnout.",
-        "source": "Source: Gallup, 2024"
+        "highlight": "67% of strategies are never fully executed",
+        "description": "due to unclear ownership, competing priorities, and structural misalignment.",
+        "source": "Source: Harvard Business Review"
       },
       {
-        "highlight": "72% of leaders lack clarity on purpose",
-        "description": "creating confusion and misalignment throughout organizations.",
-        "source": "Source: COIREA survey"
+        "highlight": "72% of leaders lack clarity on organizational purpose",
+        "description": "creating confusion and decision paralysis throughout the system.",
+        "source": "Source: COIREA Survey"
       },
       {
-        "highlight": "60% of teams report weak trust",
-        "description": "undermining collaboration and psychological safety.",
-        "source": "Source: COIREA survey"
+        "highlight": "60% of teams report weak trust and unclear role boundaries",
+        "description": "undermining collaboration, accountability, and psychological safety.",
+        "source": "Source: COIREA Survey"
       },
       {
-        "highlight": "Only 33% of employees are thriving in their overall well-being",
-        "description": "When people don't feel well, they can't perform well.",
-        "source": "Source: Gallup, 2024"
+        "highlight": "76% of burnout is linked to decision overload and structural ambiguity",
+        "description": "not workload alone — it's the system design that depletes people.",
+        "source": "Source: McKinsey, 2023"
       },
       {
-        "highlight": "Companies with strong culture see 72% higher engagement and 40% lower turnover",
-        "description": "proving that intentional culture transformation delivers measurable results.",
+        "highlight": "Companies with structural coherence see 72% higher engagement and 40% lower turnover",
+        "description": "proving that systemic alignment delivers measurable, sustainable results.",
         "source": "Source: Deloitte"
       }
     ],
-    "conclusion": "If your organization appears in these numbers, you're likely leaving capacity, clarity, and impact on the table — long before symptoms become visible."
+    "conclusion": "If these patterns look familiar, your organization is likely extracting energy faster than it is building capacity."
   },
   "framework": {
     "heading": "The COIREA Operating System (Regenerative OS)",

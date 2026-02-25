@@ -29,7 +29,7 @@ const Hero = () => {
             <span className="block">{t('hero.titleLine3')}</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-primary/80 font-body font-light max-w-6xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-primary/80 font-body font-light max-w-4xl mx-auto mb-8 leading-relaxed">
             {t('hero.description')}
           </p>
         </header>
@@ -47,12 +47,12 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center items-center mb-16">
-          <LocalizedLink to="/journey" aria-label={t('hero.ctaButton')}>
+          <a href="#reflection-checkpoint" aria-label={t('hero.ctaButton')}>
             <Button variant="default" size="xl" className="group bg-[#4A7C7A]/90 hover:bg-[#4A7C7A] text-white border-none rounded-full px-8 py-4 transition-all duration-300 shadow-lg">
               {t('hero.ctaButton')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" aria-hidden="true" />
             </Button>
-          </LocalizedLink>
+          </a>
         </div>
       </div>
     </section>
