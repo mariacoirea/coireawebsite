@@ -1,18 +1,22 @@
-import { ArrowRight } from "lucide-react";
+import { Sprout, TrendingUp, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Badge } from "@/components/ui/badge";
+
+const phaseKeys = ["soil", "grow", "flourish"] as const;
+const phaseIcons = [Sprout, TrendingUp, Sun];
+const phaseColors = [
+  "bg-primary/10 text-primary ring-primary/20",
+  "bg-secondary/10 text-secondary ring-secondary/20",
+  "bg-accent/20 text-accent-foreground ring-accent/30",
+];
 
 const HowItWorksSection = () => {
   const { t } = useTranslation('home');
 
-  const steps = [
-    { key: 'platform' },
-    { key: 'results' },
-    { key: 'impact' },
-  ];
-
   return (
     <section className="py-24 bg-[hsl(var(--warm-beige))]">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-secondary font-medium mb-2">
             {t('howItWorks.badge')}
@@ -22,44 +26,58 @@ const HowItWorksSection = () => {
           </h2>
         </div>
 
-        {/* Flow visualization */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 max-w-5xl mx-auto mb-12">
-          {steps.map((step, index) => (
-            <div key={step.key} className="flex flex-col md:flex-row items-center">
-              {/* Circle */}
-              <div className="flex flex-col items-center">
-                <div className="w-40 h-40 md:w-44 md:h-44 rounded-full bg-primary flex items-center justify-center p-6 shadow-lg">
-                  <div className="text-center">
-                    <span className="text-primary-foreground font-display font-bold text-sm md:text-base leading-tight block">
-                      {t(`howItWorks.steps.${step.key}.title`)}
-                    </span>
-                  </div>
+        {/* Three Phase Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          {phaseKeys.map((key, index) => {
+            const Icon = phaseIcons[index];
+            const outputs = t(`howItWorks.phases.${key}.outputs`, { returnObjects: true }) as string[];
+
+            return (
+              <div
+                key={key}
+                className="group relative bg-card/60 backdrop-blur border border-border/50 rounded-2xl p-8 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${index * 120}ms` }}
+              >
+                {/* Phase number */}
+                <div className="absolute -top-3 left-6">
+                  <Badge variant="secondary" className="text-xs font-mono">
+                    {String(index + 1).padStart(2, '0')}
+                  </Badge>
                 </div>
-                <p className="mt-4 text-muted-foreground font-body text-sm text-center max-w-[180px]">
-                  {t(`howItWorks.steps.${step.key}.description`)}
+
+                {/* Icon */}
+                <div className={`h-14 w-14 rounded-full ${phaseColors[index]} ring-1 flex items-center justify-center mb-5`}>
+                  <Icon className="h-7 w-7" aria-hidden="true" />
+                </div>
+
+                {/* Title & Subtitle */}
+                <h3 className="text-xl font-display font-bold text-foreground tracking-wide">
+                  {t(`howItWorks.phases.${key}.title`)}
+                </h3>
+                <p className="text-sm text-secondary font-medium mt-1 mb-4">
+                  {t(`howItWorks.phases.${key}.subtitle`)}
                 </p>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  {t(`howItWorks.phases.${key}.description`)}
+                </p>
+
+                {/* Outputs */}
+                <ul className="space-y-2">
+                  {outputs.map((output, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      {output}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
-              {/* Arrow (except for last item) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:flex items-center mx-4">
-                  <div className="w-16 h-0.5 bg-secondary" />
-                  <ArrowRight className="w-6 h-6 text-secondary -ml-1" />
-                </div>
-              )}
-              
-              {/* Mobile arrow */}
-              {index < steps.length - 1 && (
-                <div className="md:hidden flex items-center justify-center my-4">
-                  <div className="h-8 w-0.5 bg-secondary" />
-                  <ArrowRight className="w-5 h-5 text-secondary rotate-90 absolute" />
-                </div>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Quote */}
+        {/* Bottom quote */}
         <p className="text-center text-lg md:text-xl text-foreground/70 font-body italic max-w-3xl mx-auto">
           {t('howItWorks.quote')}
         </p>

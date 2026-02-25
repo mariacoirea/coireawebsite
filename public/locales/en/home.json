@@ -178,22 +178,42 @@
     "cta": "Learn About Social Impact"
   },
   "howItWorks": {
-    "badge": "The COIREA Journey",
-    "title": "How It Works",
-    "steps": {
-      "platform": {
-        "title": "PLATFORM",
-        "description": "The Regenerative OS measures organizational health across 5 pillars in real-time."
+    "badge": "The Regenerative Execution Cycle",
+    "title": "How COIREA Works",
+    "phases": {
+      "soil": {
+        "title": "SOIL",
+        "subtitle": "Sense the System",
+        "description": "COIREA begins with structured reflection. The platform measures organizational health across five pillars and surfaces hidden tensions using trained AI pattern recognition.",
+        "outputs": [
+          "Organizational Vitality Index",
+          "Cross-pillar signals",
+          "Early risk indicators"
+        ]
       },
-      "results": {
-        "title": "OBTAIN RESULTS",
-        "description": "AI Agent analyzes data to generate insights, predictions, and risk alerts."
+      "grow": {
+        "title": "GROW",
+        "subtitle": "Align & Execute",
+        "description": "Insights convert into structured governance and execution. Execution becomes aligned, not reactive.",
+        "outputs": [
+          "Clear ownership (roles & circles)",
+          "Quarterly priorities",
+          "Strategic drift detection",
+          "Leadership accountability"
+        ]
       },
-      "impact": {
-        "title": "SOCIAL IMPACT",
-        "description": "Organizational growth converts into regenerative impact in Latin America."
+      "flourish": {
+        "title": "FLOURISH",
+        "subtitle": "Learn & Regenerate",
+        "description": "The system integrates feedback and strengthens capacity over time. Growth builds resilience instead of depletion.",
+        "outputs": [
+          "Well-being pulses",
+          "Innovation map",
+          "Learning loops",
+          "Regenerative Capacity signals"
+        ]
       }
     },
-    "quote": "The first platform specifically designed to transform organizational vitality into measurable social impact — not just people analytics."
+    "quote": "COIREA helps organizations achieve strategic goals while increasing systemic coherence and long-term capacity."
   }
 }
