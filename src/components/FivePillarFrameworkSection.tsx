@@ -1,28 +1,38 @@
-import { Target, Crown, Users, Heart, Layers } from "lucide-react";
+import { Compass, Crown, Users, Heart, Layers } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 
-const pillarIcons = [Target, Crown, Users, Heart, Layers];
+const pillarIcons = [Compass, Crown, Users, Heart, Layers];
 
 const FivePillarFrameworkSection = () => {
   const { t } = useTranslation('home');
+
+  const rawIntro = t('framework.intro', { returnObjects: true });
+  const intro = Array.isArray(rawIntro) ? rawIntro : [];
+
+  const rawPillars = t('framework.pillars', { returnObjects: true });
+  const pillars = Array.isArray(rawPillars) ? rawPillars : [];
+
   return (
     <section className="relative overflow-hidden py-24" style={{backgroundImage: "url('/lovable-uploads/a2132690-3657-43fd-9280-c318fd590fa4.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
-      {/* subtle background accents using semantic tokens */}
+      {/* subtle background accents */}
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_10%,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(50%_50%_at_80%_90%,hsl(var(--accent)/0.10)_0%,transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--foreground)/0.06)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground)/0.06)_1px,transparent_1px)] bg-[size:22px_22px] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <header className="mx-auto max-w-6xl text-center animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
+        {/* Header */}
+        <header className="mx-auto max-w-4xl text-center animate-fade-in">
+          <Badge variant="secondary" className="mb-4 text-sm">
+            {t('framework.badge')}
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
             {t('framework.heading')}
-          </h1>
+          </h2>
           <div className="mt-6 space-y-4 text-muted-foreground">
-            {(t('framework.intro', { returnObjects: true }) as string[]).map((paragraph: string, idx: number) => (
+            {intro.map((paragraph: string, idx: number) => (
               <p key={idx} className={idx === 0 ? "text-lg md:text-xl leading-relaxed" : "text-base md:text-lg leading-relaxed"}>
                 {paragraph}
               </p>
@@ -30,9 +40,15 @@ const FivePillarFrameworkSection = () => {
           </div>
         </header>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {(t('framework.pillars', { returnObjects: true }) as any[]).map((pillar: any, i: number) => {
-            const Icon = pillarIcons[i];
+        {/* Pillars Heading */}
+        <h3 className="mt-16 mb-10 text-center text-2xl md:text-3xl font-semibold text-foreground animate-fade-in">
+          {t('framework.pillarsHeading')}
+        </h3>
+
+        {/* Pillar Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {pillars.map((pillar: any, i: number) => {
+            const Icon = pillarIcons[i] || Compass;
             return (
               <Card
                 key={i}
@@ -62,6 +78,16 @@ const FivePillarFrameworkSection = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* AI Note + Closing */}
+        <div className="mt-14 mx-auto max-w-3xl text-center space-y-4 animate-fade-in">
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+            {t('framework.aiNote')}
+          </p>
+          <p className="text-lg md:text-xl font-semibold text-primary">
+            {t('framework.closingLine')}
+          </p>
         </div>
       </div>
     </section>
