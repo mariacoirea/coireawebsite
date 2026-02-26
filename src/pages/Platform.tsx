@@ -218,37 +218,45 @@ const Platform = () => {
           {/* Dashboard Preview */}
           <section className="py-20 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <p className="text-secondary font-medium">{t('dashboard.subtitle')}</p>
-                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-5">
+                  <p className="text-secondary font-medium text-sm tracking-wide uppercase">{t('dashboard.subtitle')}</p>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
                     {t('dashboard.title')}
                   </h2>
-                  <p className="text-muted-foreground font-body leading-relaxed">
+                  <p className="text-lg text-muted-foreground font-body leading-relaxed">
                     {t('dashboard.description')}
                   </p>
                   <p className="text-muted-foreground font-body leading-relaxed">
                     {t('dashboard.description2')}
                   </p>
-                  <ul className="space-y-2">
+                  <p className="text-sm text-secondary font-medium font-body">
+                    {currentLanguage === 'es' ? 'En lugar de reaccionar a indicadores tardíos, ves:' : 'Instead of reacting to lagging indicators, you see:'}
+                  </p>
+                  <ul className="space-y-2.5 pl-1">
                     {['drift', 'ownership', 'capacity', 'alignment'].map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-foreground font-body">
-                        <CheckCircle2 className="w-4 h-4 text-secondary flex-shrink-0" />
+                      <li key={item} className="flex items-center gap-3 text-foreground font-body">
+                        <div className="w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
+                        </div>
                         {t(`dashboard.signals.${item}`)}
                       </li>
                     ))}
                   </ul>
-                  <p className="text-muted-foreground font-body leading-relaxed italic">
+                  <p className="text-muted-foreground font-body leading-relaxed border-l-2 border-secondary/30 pl-4 italic">
                     {t('dashboard.result')}
                   </p>
                 </div>
-                <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
-                  <img 
-                    src={platformDashboardPreview} 
-                    alt="COIREA Platform Dashboard" 
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
+                <div className="relative">
+                  <div className="rounded-2xl overflow-hidden border border-border shadow-2xl bg-background">
+                    <img 
+                      src={platformDashboardPreview} 
+                      alt="COIREA Platform Dashboard showing organizational health overview" 
+                      className="w-full h-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-secondary/10 to-transparent -z-10 blur-sm" />
                 </div>
               </div>
             </div>
