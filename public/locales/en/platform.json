@@ -56,9 +56,17 @@
     "footer": "All captured in real time. All in one system."
   },
   "dashboard": {
-    "title": "See the Hidden Patterns of Your Organization",
+    "title": "System-Level Clarity in One Dashboard",
     "subtitle": "The Evolution Dashboard",
-    "description": "Track your organization's vitality across all 5 pillars. Spot trends, risks, and opportunities before they escalate."
+    "description": "Turn organizational signals into goal-aligned execution.",
+    "description2": "COIREA centralizes signals across vision, culture, leadership, collaboration, well-being, and strategy, and uses trained Organizational AI to interpret how these dimensions impact your goals.",
+    "signals": {
+      "drift": "Where execution is drifting",
+      "ownership": "Where ownership is unclear",
+      "capacity": "Where capacity is thinning",
+      "alignment": "Where alignment is strengthening"
+    },
+    "result": "The result: faster correction, clearer priorities, and growth that builds systemic capacity instead of exhausting it."
   },
   "aiAgent": {
     "title": "Meet GiA: COIREA's Trained Organizational AI",

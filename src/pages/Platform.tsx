@@ -27,6 +27,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
+import platformDashboardPreview from "@/assets/platform-dashboard-preview.png";
 
 const Platform = () => {
   const { t } = useTranslation('platform');
@@ -217,76 +218,37 @@ const Platform = () => {
           {/* Dashboard Preview */}
           <section className="py-20 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              <div className="text-center max-w-3xl mx-auto mb-12">
-                <p className="text-secondary font-medium mb-2">{t('dashboard.subtitle')}</p>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  {t('dashboard.title')}
-                </h2>
-                <p className="text-muted-foreground font-body leading-relaxed">
-                  {t('dashboard.description')}
-                </p>
-              </div>
-
-              <div className="max-w-4xl mx-auto p-6 bg-background rounded-2xl border border-border shadow-lg">
-                <div className="flex items-start gap-6">
-                  <div className="hidden md:block w-48 space-y-1 border-r border-border pr-4">
-                    <div className="text-lg font-display font-bold text-primary mb-1">COIREA</div>
-                    <div className="text-sm text-muted-foreground mb-4">Evolution Dashboard</div>
-                    <div className="space-y-1">
-                      {['Overview', '5 Pillars', 'Team Insights', 'Leadership', 'Culture Metrics', 'Well-being', 'Reports'].map((item, i) => (
-                        <div key={item} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm ${i === 0 ? 'bg-secondary/10 text-secondary font-medium' : 'text-muted-foreground'}`}>
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start mb-6">
-                      <div>
-                        <h3 className="text-xl font-display font-bold text-secondary">Overview</h3>
-                        <p className="text-sm text-muted-foreground">Real-time pulse of organizational health</p>
-                      </div>
-                      <span className="flex items-center gap-1.5 text-sm text-secondary">
-                        <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                        Vitality: High
-                      </span>
-                    </div>
-                    
-                    <div className="p-4 bg-[hsl(var(--warm-beige))] rounded-xl mb-4">
-                      <h4 className="text-lg font-display font-semibold text-foreground mb-1">Organizational Vitality Index (OVI)</h4>
-                      <p className="text-sm text-muted-foreground mb-4">Real-time pulse of organizational health</p>
-                      
-                      <div className="flex items-center justify-center mb-6">
-                        <div className="relative w-32 h-32">
-                          <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="hsl(var(--border))" strokeWidth="8" />
-                            <circle cx="50" cy="50" r="40" fill="none" stroke="hsl(var(--secondary))" strokeWidth="8" strokeDasharray="251.2" strokeDashoffset="119" strokeLinecap="round" />
-                          </svg>
-                          <div className="absolute inset-0 flex flex-col items-center justify-center">
-                            <span className="text-2xl font-display font-bold text-secondary">52.6</span>
-                            <span className="text-xs text-muted-foreground">Vitality Score</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="grid grid-cols-5 gap-2 text-center">
-                        {[
-                          { score: 46, label: 'Purpose', sub: 'Culture health' },
-                          { score: 52, label: 'Collaboration', sub: 'Trust & flow' },
-                          { score: 50, label: 'Leadership', sub: 'Effectiveness' },
-                          { score: 54, label: 'Well-Being', sub: 'Resilience' },
-                          { score: 59, label: 'Strategy', sub: 'Execution' }
-                        ].map(({ score, label, sub }) => (
-                          <div key={label}>
-                            <div className="inline-block px-2 py-1 border border-border rounded text-sm font-medium text-foreground mb-1">{score}</div>
-                            <div className="text-xs font-medium text-secondary">{label}</div>
-                            <div className="text-[10px] text-muted-foreground">{sub}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+              <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <p className="text-secondary font-medium">{t('dashboard.subtitle')}</p>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                    {t('dashboard.title')}
+                  </h2>
+                  <p className="text-muted-foreground font-body leading-relaxed">
+                    {t('dashboard.description')}
+                  </p>
+                  <p className="text-muted-foreground font-body leading-relaxed">
+                    {t('dashboard.description2')}
+                  </p>
+                  <ul className="space-y-2">
+                    {['drift', 'ownership', 'capacity', 'alignment'].map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-foreground font-body">
+                        <CheckCircle2 className="w-4 h-4 text-secondary flex-shrink-0" />
+                        {t(`dashboard.signals.${item}`)}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-muted-foreground font-body leading-relaxed italic">
+                    {t('dashboard.result')}
+                  </p>
+                </div>
+                <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
+                  <img 
+                    src={platformDashboardPreview} 
+                    alt="COIREA Platform Dashboard" 
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
