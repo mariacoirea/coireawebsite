@@ -138,9 +138,11 @@ const Platform = () => {
                   </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed">
-                  COIREA is a real-time Organizational Intelligence Platform that brings every dimension of organizational health into one integrated system. Instead of relying on scattered surveys and slow feedback loops, COIREA unifies quantitative and qualitative data, using AI to interpret patterns and surface risks before they escalate. It turns complexity into clear, actionable insight. Strengthening teams, improving decision-making, and enabling measurable impact across social projects in LATAM.
-                </p>
+                <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed space-y-4">
+                  <p>COIREA replaces fragmented management tools with one integrated system for execution clarity.</p>
+                  <p>It measures organizational health across five pillars, detects misalignment before it becomes costly, and translates data into clear ownership and strategic focus.</p>
+                  <p>Its trained Organizational AI works within your system (not on generic benchmarks) ensuring growth builds capacity instead of draining it.</p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <LocalizedLink to="/journey">
