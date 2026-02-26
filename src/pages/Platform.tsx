@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalizedLink from "@/components/LocalizedLink";
+import DashboardZoom from "@/components/DashboardZoom";
 import { 
   Brain, 
   Users, 
@@ -247,17 +248,7 @@ const Platform = () => {
                     {t('dashboard.result')}
                   </p>
                 </div>
-                <div className="relative">
-                  <div className="rounded-2xl overflow-hidden border border-border shadow-2xl bg-background">
-                    <img 
-                      src={platformDashboardPreview} 
-                      alt="COIREA Platform Dashboard showing organizational health overview" 
-                      className="w-full h-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-secondary/10 to-transparent -z-10 blur-sm" />
-                </div>
+              <DashboardZoom src={platformDashboardPreview} />
               </div>
             </div>
           </section>
