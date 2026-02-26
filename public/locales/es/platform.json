@@ -56,9 +56,17 @@
     "footer": "Todo capturado en tiempo real. Todo en un sistema."
   },
   "dashboard": {
-    "title": "Descubre los Patrones Ocultos de tu Organización",
+    "title": "Claridad Sistémica en un Solo Dashboard",
     "subtitle": "El Dashboard de Evolución",
-    "description": "Rastrea la vitalidad de tu organización en los 5 pilares. Detecta tendencias, riesgos y oportunidades antes de que escalen."
+    "description": "Convierte señales organizacionales en ejecución alineada a objetivos.",
+    "description2": "COIREA centraliza señales de visión, cultura, liderazgo, colaboración, bienestar y estrategia, y usa IA Organizacional entrenada para interpretar cómo estas dimensiones impactan tus metas.",
+    "signals": {
+      "drift": "Dónde la ejecución está desviándose",
+      "ownership": "Dónde la propiedad no es clara",
+      "capacity": "Dónde la capacidad se está agotando",
+      "alignment": "Dónde la alineación se está fortaleciendo"
+    },
+    "result": "El resultado: corrección más rápida, prioridades más claras, y crecimiento que construye capacidad sistémica en lugar de agotarla."
   },
   "aiAgent": {
     "title": "Conoce a GiA: La IA Organizacional Entrenada de COIREA",
