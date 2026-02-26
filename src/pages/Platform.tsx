@@ -219,7 +219,7 @@ const Platform = () => {
           {/* Dashboard Preview */}
           <section className="py-20 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.95fr_1.35fr] gap-10 items-center">
+              <div className="max-w-[1700px] mx-auto grid lg:grid-cols-[0.78fr_1.62fr] gap-8 items-center">
                 <div className="space-y-5">
                   <p className="text-secondary font-medium text-sm tracking-wide uppercase">{t('dashboard.subtitle')}</p>
                   <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
@@ -248,7 +248,7 @@ const Platform = () => {
                     {t('dashboard.result')}
                   </p>
                 </div>
-                <div className="lg:-mr-6">
+                <div className="lg:-mr-24 xl:-mr-32 lg:pl-2">
                   <DashboardZoom src={platformDashboardPreview} />
                 </div>
               </div>
