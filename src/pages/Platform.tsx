@@ -20,14 +20,13 @@ import {
   ArrowRight,
   AlertTriangle,
   Compass,
-  Globe,
   Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import mayanPatternsBg from "@/assets/mayan-patterns-bg.png";
+
 import platformDashboardPreview from "@/assets/platform-dashboard-preview.png";
 
 const Platform = () => {
@@ -102,12 +101,54 @@ const Platform = () => {
   ];
 
   const features = [
-    { key: 'health', icon: Activity },
-    { key: 'insights', icon: Brain },
-    { key: 'leadership', icon: Users },
-    { key: 'wellbeing', icon: Heart },
-    { key: 'collaboration', icon: Network },
-    { key: 'regenerative', icon: Globe },
+    { 
+      key: 'alignment', 
+      icon: Target,
+      title: 'Strategic Alignment Engine',
+      titleEs: 'Motor de Alineación Estratégica',
+      desc: 'Connect long-term vision to quarterly execution. COIREA detects where priorities drift from strategic intent and keeps goals anchored in clear ownership and measurable progress.',
+      descEs: 'Conecta la visión a largo plazo con la ejecución trimestral. COIREA detecta dónde las prioridades se desvían de la intención estratégica y mantiene los objetivos anclados en propiedad clara y progreso medible.'
+    },
+    { 
+      key: 'gia', 
+      icon: Brain,
+      title: 'Trained Organizational AI (GiA)',
+      titleEs: 'IA Organizacional Entrenada (GiA)',
+      desc: 'GiA interprets cross-pillar signals within your own system — across leadership, culture, collaboration, well-being, and strategy. It surfaces structural tensions, execution blockers, and early risk indicators before they impact results.',
+      descEs: 'GiA interpreta señales entre pilares dentro de tu propio sistema — a través de liderazgo, cultura, colaboración, bienestar y estrategia. Identifica tensiones estructurales, bloqueadores de ejecución e indicadores de riesgo temprano antes de que impacten los resultados.'
+    },
+    { 
+      key: 'governance', 
+      icon: Shield,
+      title: 'Governance & Ownership Architecture',
+      titleEs: 'Arquitectura de Gobernanza y Propiedad',
+      desc: 'Define clear roles, decision rights, and accountability pathways. Eliminate bottlenecks, reduce decision friction, and distribute authority with clarity.',
+      descEs: 'Define roles claros, derechos de decisión y rutas de responsabilidad. Elimina cuellos de botella, reduce la fricción de decisiones y distribuye la autoridad con claridad.'
+    },
+    { 
+      key: 'ovi', 
+      icon: Activity,
+      title: 'Organizational Vitality Index (OVI)',
+      titleEs: 'Índice de Vitalidad Organizacional (OVI)',
+      desc: 'Aggregate systemic health into one executive score, with detailed pillar breakdowns and trend visibility. Track how organizational coherence directly affects execution and goal achievement.',
+      descEs: 'Agrega la salud sistémica en un puntaje ejecutivo, con desgloses detallados por pilar y visibilidad de tendencias. Rastrea cómo la coherencia organizacional afecta directamente la ejecución y el logro de objetivos.'
+    },
+    { 
+      key: 'capacity', 
+      icon: Heart,
+      title: 'System Capacity Signals',
+      titleEs: 'Señales de Capacidad del Sistema',
+      desc: 'Monitor well-being, collaboration strain, and energy trends in real time. Detect burnout risk and capacity depletion early — protecting performance as you scale.',
+      descEs: 'Monitorea bienestar, tensión de colaboración y tendencias de energía en tiempo real. Detecta riesgo de burnout y agotamiento de capacidad temprano — protegiendo el rendimiento mientras escalas.'
+    },
+    { 
+      key: 'flow', 
+      icon: Network,
+      title: 'Collaboration & Flow Intelligence',
+      titleEs: 'Inteligencia de Colaboración y Flujo',
+      desc: 'Visualize how teams coordinate across priorities and projects. Identify friction points slowing execution and strengthen cross-functional alignment.',
+      descEs: 'Visualiza cómo los equipos coordinan a través de prioridades y proyectos. Identifica puntos de fricción que ralentizan la ejecución y fortalece la alineación interfuncional.'
+    },
   ];
 
   return (
@@ -330,20 +371,22 @@ const Platform = () => {
             </div>
           </section>
 
-          {/* Platform Features */}
+          {/* Execution Intelligence Infrastructure */}
           <section className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  {t('features.title')}
+                  {currentLanguage === 'es' ? 'Infraestructura de Inteligencia de Ejecución' : 'Execution Intelligence Infrastructure'}
                 </h2>
                 <p className="text-lg text-muted-foreground font-body">
-                  {t('features.subtitle')}
+                  {currentLanguage === 'es' 
+                    ? 'Todo lo que necesitas para alinear tu organización, proteger capacidad y ejecutar objetivos estratégicos sin volverse extractiva.'
+                    : 'Everything you need to align your organization, protect capacity, and execute strategic goals without becoming extractive.'}
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {features.map(({ key, icon: Icon }) => (
+                {features.map(({ key, icon: Icon, title, titleEs, desc, descEs }) => (
                   <div 
                     key={key}
                     className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
@@ -352,10 +395,10 @@ const Platform = () => {
                       <Icon className="w-7 h-7 text-secondary" />
                     </div>
                     <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                      {t(`features.items.${key}.title`)}
+                      {currentLanguage === 'es' ? titleEs : title}
                     </h3>
                     <p className="text-muted-foreground font-body leading-relaxed">
-                      {t(`features.items.${key}.description`)}
+                      {currentLanguage === 'es' ? descEs : desc}
                     </p>
                   </div>
                 ))}
@@ -363,38 +406,6 @@ const Platform = () => {
             </div>
           </section>
 
-          {/* Regenerative Impact Layer */}
-          <section className="py-24 relative overflow-hidden">
-            <div 
-              className="absolute inset-0 opacity-30"
-              style={{
-                backgroundImage: `url(${mayanPatternsBg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))]/90 to-[hsl(var(--warm-beige))]/80" />
-            <div className="container px-4 relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
-                <p className="text-secondary font-medium mb-2">{t('impact.subtitle')}</p>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-                  {t('impact.title')}
-                </h2>
-                <p className="text-lg text-muted-foreground font-body mb-4 leading-relaxed max-w-2xl mx-auto">
-                  {t('impact.description')}
-                </p>
-                <p className="text-muted-foreground font-body mb-8 leading-relaxed max-w-2xl mx-auto">
-                  {t('impact.note')}
-                </p>
-                <LocalizedLink to="/raices-latinas">
-                  <Button variant="outline" size="lg" className="border-secondary text-secondary hover:bg-secondary/10">
-                    {t('impact.cta')}
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </LocalizedLink>
-              </div>
-            </div>
-          </section>
 
           {/* Early Access CTA */}
           <section className="py-24 bg-[hsl(var(--warm-beige))]">
