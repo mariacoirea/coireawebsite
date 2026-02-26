@@ -23,24 +23,34 @@
     "subtitle": "Los 5 Pilares de Inteligencia Organizacional",
     "items": {
       "purpose": {
-        "title": "Propósito y Cultura",
-        "description": "Señales de claridad, alineación, coherencia de valores y salud cultural."
-      },
-      "collaboration": {
-        "title": "Colaboración",
-        "description": "Dinámicas de equipo, patrones de confianza, seguridad psicológica y conexiones de red."
+        "title": "Visión",
+        "subtitle": "Claridad y Dirección",
+        "description": "Define por qué existe la organización y cómo se comporta. Ancla las decisiones en una dirección compartida, reduciendo la deriva y la fricción interna.",
+        "drives": "Alineación, retención, confianza de marca."
       },
       "leadership": {
         "title": "Liderazgo",
-        "description": "Efectividad del líder, presencia, ciclos de retroalimentación e influencia en el equipo."
+        "subtitle": "Propiedad y Responsabilidad",
+        "description": "Estructura roles claros, derechos de decisión y responsabilidad. Previene cuellos de botella y distribuye la autoridad con claridad.",
+        "drives": "Ejecución más rápida, innovación, confianza cultural."
+      },
+      "collaboration": {
+        "title": "Colaboración",
+        "subtitle": "Confianza y Coordinación",
+        "description": "Crea sistemas que reducen silos y aumentan la inteligencia colectiva. Alinea comunicación, retroalimentación y acuerdos de equipo con las necesidades de ejecución.",
+        "drives": "Mejores decisiones, trabajo en equipo más fuerte, entrega eficiente."
       },
       "wellbeing": {
         "title": "Bienestar",
-        "description": "Índice de burnout, niveles de energía, patrones de estrés, indicadores de resiliencia."
+        "subtitle": "Energía y Sostenibilidad",
+        "description": "Trata la energía humana como un activo estratégico. Monitorea capacidad, señales de burnout y resiliencia en tiempo real.",
+        "drives": "Rendimiento sostenible, enfoque, crecimiento a largo plazo."
       },
       "strategy": {
-        "title": "Estrategia Organizacional",
-        "description": "Claridad de ejecución, priorización, coherencia de roles y ritmo operativo."
+        "title": "Estrategia y Ejecución",
+        "subtitle": "Estructura y Momentum",
+        "description": "Conecta la visión a largo plazo con prioridades trimestrales y propiedad. Previene la deriva estratégica y asegura que el progreso sea medible.",
+        "drives": "Escalabilidad, eficiencia, resiliencia adaptativa."
       }
     },
     "footer": "Todo capturado en tiempo real. Todo en un sistema."
