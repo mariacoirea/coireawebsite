@@ -408,7 +408,7 @@ const Platform = () => {
 
 
           {/* Early Access CTA */}
-          <section className="py-24 bg-[hsl(var(--warm-beige))]">
+          <section className="py-24 bg-background">
             <div className="container px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
@@ -418,62 +418,15 @@ const Platform = () => {
                   {t('cta.description')}
                 </p>
                 
-                {submitted ? (
-                  <div className="p-8 rounded-2xl bg-background border border-secondary/30">
-                    <CheckCircle2 className="w-12 h-12 text-secondary mx-auto mb-4" />
-                    <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                      {t('cta.successTitle') || "Thank you for your interest!"}
-                    </h3>
-                    <p className="text-muted-foreground font-body">
-                      {t('cta.successMessage') || "We'll be in touch soon with next steps."}
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                    <Input
-                      type="text"
-                      placeholder={t('cta.form.name', 'Full Name')}
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="bg-background border-border h-12"
-                      required
-                    />
-                    <Input
-                      type="email"
-                      placeholder={t('cta.form.email', 'Work Email')}
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-background border-border h-12"
-                      required
-                    />
-                    <Input
-                      type="text"
-                      placeholder={t('cta.form.company', 'Company Name')}
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="bg-background border-border h-12"
-                      required
-                    />
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full text-lg py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 w-5 h-5 animate-spin" />
-                          Submitting...
-                        </>
-                      ) : (
-                        <>
-                          {t('cta.button')}
-                          <ArrowRight className="ml-2 w-5 h-5" />
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
+                <LocalizedLink to="/journey">
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-10 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  >
+                    {t('cta.button')}
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </LocalizedLink>
                 
                 <p className="text-sm text-muted-foreground font-body mt-4">
                   {t('cta.note')}
