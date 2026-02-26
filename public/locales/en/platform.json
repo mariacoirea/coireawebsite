@@ -23,24 +23,34 @@
     "subtitle": "The 5 Pillars of Organizational Intelligence",
     "items": {
       "purpose": {
-        "title": "Purpose & Culture",
-        "description": "Signals on clarity, alignment, values coherence, and cultural health."
-      },
-      "collaboration": {
-        "title": "Collaboration",
-        "description": "Team dynamics, trust patterns, psychological safety, and network connections."
+        "title": "Vision",
+        "subtitle": "Clarity and Direction",
+        "description": "Defines why the organization exists and how it behaves. Anchors decisions in shared direction, reducing drift and internal friction.",
+        "drives": "Alignment, retention, brand trust."
       },
       "leadership": {
         "title": "Leadership",
-        "description": "Leader effectiveness, presence, feedback loops, and team influence."
+        "subtitle": "Ownership and Accountability",
+        "description": "Structures clear roles, decision rights, and responsibility. Prevents bottlenecks and distributes authority with clarity.",
+        "drives": "Faster execution, innovation, cultural trust."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "subtitle": "Trust and Coordination",
+        "description": "Creates systems that reduce silos and increase collective intelligence. Aligns communication, feedback, and team agreements with execution needs.",
+        "drives": "Better decisions, stronger teamwork, efficient delivery."
       },
       "wellbeing": {
         "title": "Well-Being",
-        "description": "Burnout index, energy levels, stress patterns, resilience indicators."
+        "subtitle": "Energy and Sustainability",
+        "description": "Treats human energy as a strategic asset. Monitors capacity, burnout signals, and resilience in real time.",
+        "drives": "Sustainable performance, focus, long-term growth."
       },
       "strategy": {
-        "title": "Organizational Strategy",
-        "description": "Execution clarity, prioritization, role coherence, and operating rhythm."
+        "title": "Strategy & Execution",
+        "subtitle": "Structure and Momentum",
+        "description": "Connects long-term vision to quarterly priorities and ownership. Prevents strategic drift and ensures progress is measurable.",
+        "drives": "Scalability, efficiency, adaptive resilience."
       }
     },
     "footer": "All captured in real time. All in one system."

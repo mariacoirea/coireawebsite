@@ -85,8 +85,8 @@ const Platform = () => {
 
   const pillars = [
     { key: 'purpose', icon: Compass },
-    { key: 'collaboration', icon: Network },
     { key: 'leadership', icon: Users },
+    { key: 'collaboration', icon: Network },
     { key: 'wellbeing', icon: Heart },
     { key: 'strategy', icon: Target },
   ];
@@ -188,15 +188,22 @@ const Platform = () => {
                     key={key}
                     className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 text-center"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
                       <Icon className="w-6 h-6 text-secondary" />
                     </div>
-                    <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                    <h3 className="text-lg font-display font-semibold text-foreground mb-1">
                       {t(`pillars.items.${key}.title`)}
                     </h3>
-                    <p className="text-sm text-muted-foreground font-body">
+                    <p className="text-sm text-secondary font-medium mb-3">
+                      {t(`pillars.items.${key}.subtitle`)}
+                    </p>
+                    <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4 text-left">
                       {t(`pillars.items.${key}.description`)}
                     </p>
+                    <div className="flex items-start gap-2 text-left">
+                      <span className="shrink-0 px-2.5 py-1 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Drives</span>
+                      <span className="text-xs text-muted-foreground">{t(`pillars.items.${key}.drives`)}</span>
+                    </div>
                   </div>
                 ))}
               </div>
