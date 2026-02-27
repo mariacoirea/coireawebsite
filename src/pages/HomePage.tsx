@@ -40,6 +40,7 @@ const HomePage = () => {
           {/* FAQ Section for Homepage */}
           <SEOFAQSection 
             title="Frequently Asked Questions About Organizational Transformation"
+            titleEs="Preguntas Frecuentes Sobre Transformación Organizacional"
             faqs={homepageFAQs}
             className="bg-gradient-subtle"
           />
