@@ -158,7 +158,7 @@ const Insights = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-4xl text-center">
@@ -206,7 +206,7 @@ const Insights = () => {
         {featuredPosts.length > 0 && (
           <section className="py-8 px-6">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-2xl font-display font-semibold text-primary mb-6">Featured</h2>
+              <h2 className="text-2xl font-display font-semibold text-primary mb-6">{t('listing.featured')}</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {featuredPosts.map((post) => (
                   <LocalizedLink key={post.id} to={`/insights/${post.slug}`}>
@@ -270,7 +270,7 @@ const Insights = () => {
                 {/* Posts count info */}
                 {totalRegularPosts > 0 && (
                   <div className="mb-6 text-sm text-muted-foreground">
-                    Showing {startIndex + 1}-{Math.min(endIndex, totalRegularPosts)} of {totalRegularPosts} posts
+                    {t('listing.showingPosts', { start: startIndex + 1, end: Math.min(endIndex, totalRegularPosts), total: totalRegularPosts })}
                   </div>
                 )}
                 

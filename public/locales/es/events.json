@@ -18,6 +18,12 @@
     "description": "Explora los próximos eventos, mira repeticiones de sesiones anteriores y únete a nuestra comunidad de líderes conscientes.",
     "loading": "Cargando eventos..."
   },
+  "calendarFooter": {
+    "title": "¿No encuentras lo que buscas?",
+    "description": "Consulta nuestro archivo completo de eventos y próximas sesiones en Luma",
+    "viewAll": "Ver Todos los Eventos",
+    "subscribe": "Suscríbete para Actualizaciones"
+  },
   "cta": {
     "title": "¿Quieres Mantenerte Conectado?",
     "description": "Regístrate para recibir actualizaciones de eventos y recursos exclusivos para líderes conscientes.",
