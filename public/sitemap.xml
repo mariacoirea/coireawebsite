@@ -3,27 +3,29 @@
   <!-- English Homepage -->
   <url>
     <loc>https://coirea.com/</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coirea.com/" />
   </url>
   
   <!-- Spanish Homepage -->
   <url>
     <loc>https://coirea.com/es</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coirea.com/" />
   </url>
   
   <!-- English About -->
   <url>
     <loc>https://coirea.com/about</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/about" />
@@ -33,37 +35,37 @@
   <!-- Spanish About -->
   <url>
     <loc>https://coirea.com/es/about</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/about" />
     <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/about" />
   </url>
   
-  <!-- English Offerings -->
+  <!-- English Platform -->
   <url>
-    <loc>https://coirea.com/offerings</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://coirea.com/platform</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/offerings" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/offerings" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/platform" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/platform" />
   </url>
   
-  <!-- Spanish Offerings -->
+  <!-- Spanish Platform -->
   <url>
-    <loc>https://coirea.com/es/offerings</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://coirea.com/es/platform</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/offerings" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/offerings" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/platform" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/platform" />
   </url>
   
   <!-- English Journey -->
   <url>
     <loc>https://coirea.com/journey</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/journey" />
@@ -73,7 +75,7 @@
   <!-- Spanish Journey -->
   <url>
     <loc>https://coirea.com/es/journey</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/journey" />
@@ -83,7 +85,7 @@
   <!-- English Tools -->
   <url>
     <loc>https://coirea.com/tools</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/tools" />
@@ -93,7 +95,7 @@
   <!-- Spanish Tools -->
   <url>
     <loc>https://coirea.com/es/tools</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/tools" />
@@ -103,7 +105,7 @@
   <!-- English Events -->
   <url>
     <loc>https://coirea.com/events</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/events" />
@@ -113,7 +115,7 @@
   <!-- Spanish Events -->
   <url>
     <loc>https://coirea.com/es/events</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/events" />
@@ -123,7 +125,7 @@
   <!-- English Insights -->
   <url>
     <loc>https://coirea.com/insights</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/insights" />
@@ -133,40 +135,10 @@
   <!-- Spanish Insights -->
   <url>
     <loc>https://coirea.com/es/insights</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://coirea.com/insights" />
     <xhtml:link rel="alternate" hreflang="es" href="https://coirea.com/es/insights" />
-  </url>
-  <url>
-    <loc>https://coirea.com/insights/cultural-reset</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://coirea.com/insights/tealorganizations</loc>
-    <lastmod>2025-01-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://coirea.com/insights/delegation-without-burnout</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://coirea.com/insights/culture-is-what-you-do-when-no-one-s-watching</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://coirea.com/insights/company-as-a-body-safety-nervous-system</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

@@ -21,7 +21,7 @@ const Events = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           {/* Hero Section */}
           <section 
             className="relative py-16 md:py-24 px-6 min-h-[70vh] flex items-center justify-center overflow-hidden"
@@ -114,10 +114,10 @@ const Events = () => {
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-center sm:text-left">
                       <h3 className="font-display font-semibold text-primary mb-2">
-                        Can't find what you're looking for?
+                        {t('calendarFooter.title')}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        View our complete event archive and upcoming schedule on Luma
+                        {t('calendarFooter.description')}
                       </p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3">
@@ -133,7 +133,7 @@ const Events = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2"
                         >
-                          View All Events
+                          {t('calendarFooter.viewAll')}
                           <ExternalLink size={16} />
                         </a>
                       </Button>
@@ -149,7 +149,7 @@ const Events = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2"
                         >
-                          Subscribe for Updates
+                          {t('calendarFooter.subscribe')}
                           <ExternalLink size={16} />
                         </a>
                       </Button>

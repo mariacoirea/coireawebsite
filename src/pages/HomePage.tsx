@@ -30,7 +30,7 @@ const HomePage = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-        <main>
+        <main id="main-content">
           <Hero />
           <ReflectionCheckpoint />
           <HowItWorksSection />

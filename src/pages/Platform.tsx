@@ -163,7 +163,7 @@ const Platform = () => {
       <div className="min-h-screen bg-background">
         <Header />
         
-        <main>
+        <main id="main-content">
           {/* Hero Section */}
           <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))] via-[hsl(77,15%,75%)] to-[hsl(77,18%,60%)]" />
@@ -172,7 +172,7 @@ const Platform = () => {
               <div className="max-w-4xl mx-auto space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
                   <Sparkles className="w-4 h-4" />
-                  <span>The Regenerative Organizational OS</span>
+                  <span>{t('hero.badge')}</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
@@ -182,9 +182,9 @@ const Platform = () => {
                 </h1>
                 
                 <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed space-y-4">
-                  <p>COIREA replaces fragmented management tools with one integrated system for execution clarity.</p>
-                  <p>It measures organizational health across five pillars, detects misalignment before it becomes costly, and translates data into clear ownership and strategic focus.</p>
-                  <p>Its trained Organizational AI works within your system (not on generic benchmarks) ensuring growth builds capacity instead of draining it.</p>
+                  <p>{t('hero.descLine1')}</p>
+                  <p>{t('hero.descLine2')}</p>
+                  <p>{t('hero.descLine3')}</p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -273,7 +273,7 @@ const Platform = () => {
                     {t('dashboard.description2')}
                   </p>
                   <p className="text-sm text-secondary font-medium font-body">
-                    {currentLanguage === 'es' ? 'En lugar de reaccionar a indicadores tardíos, ves:' : 'Instead of reacting to lagging indicators, you see:'}
+                    {t('dashboard.signalsIntro') || (currentLanguage === 'es' ? 'En lugar de reaccionar a indicadores tardíos, ves:' : 'Instead of reacting to lagging indicators, you see:')}
                   </p>
                   <ul className="space-y-2.5 pl-1">
                     {['drift', 'ownership', 'capacity', 'alignment'].map((item) => (

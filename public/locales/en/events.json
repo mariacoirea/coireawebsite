@@ -18,6 +18,12 @@
     "description": "Browse upcoming events, watch replays of past sessions, and join our community of conscious leaders.",
     "loading": "Loading events..."
   },
+  "calendarFooter": {
+    "title": "Can't find what you're looking for?",
+    "description": "View our complete event archive and upcoming schedule on Luma",
+    "viewAll": "View All Events",
+    "subscribe": "Subscribe for Updates"
+  },
   "cta": {
     "title": "Want to Stay Connected?",
     "description": "Sign up for event updates and exclusive resources for conscious leaders.",

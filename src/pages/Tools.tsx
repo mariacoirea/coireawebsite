@@ -25,7 +25,7 @@ const Tools = () => {
       
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="pt-20">
+        <main id="main-content" className="pt-20">
           {/* Hero Section */}
           <section className="py-20 px-6 bg-gradient-subtle">
             <div className="container mx-auto max-w-6xl text-center">

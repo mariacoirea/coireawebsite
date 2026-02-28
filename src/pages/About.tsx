@@ -28,7 +28,7 @@ const About = () => {
       
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-20">
+      <main id="main-content" className="pt-20">
         {/* Enhanced Hero Section with New Landscape Background */}
         <section 
           className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
