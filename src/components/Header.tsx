@@ -71,8 +71,8 @@ const Header = () => {
             <LocalizedLink to="/platform" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.platform').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.about').toUpperCase()}
+            <LocalizedLink to="/purpose" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
             </LocalizedLink>
             <LocalizedLink to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.insights').toUpperCase()}
@@ -80,8 +80,8 @@ const Header = () => {
             <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/purpose" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
+            <LocalizedLink to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.about').toUpperCase()}
             </LocalizedLink>
             <div className="py-2">
               <LanguageSwitch />
