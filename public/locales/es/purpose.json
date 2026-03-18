@@ -1,0 +1,106 @@
+{
+  "seo": {
+    "title": "Diseñado para Organizaciones con Propósito | COIREA",
+    "description": "COIREA ayuda a organizaciones con propósito a alinear sistemas, fortalecer la ejecución y escalar su impacto sin agotar a su gente. La capa de inteligencia para ONGs, startups de impacto y organizaciones regenerativas.",
+    "keywords": "organizaciones con propósito, plataforma ONG, negocio regenerativo, inteligencia organizacional, startups de impacto"
+  },
+  "hero": {
+    "title": "Diseñado para Organizaciones",
+    "titleEmphasis": "Impulsadas por el Propósito",
+    "subtitle": "COIREA ayuda a organizaciones con propósito a alinear sus sistemas, fortalecer la ejecución y escalar su impacto — sin agotar a su gente ni perder coherencia.",
+    "supporting": "Desde ONGs hasta ecosistemas regenerativos, COIREA proporciona la estructura e inteligencia necesarias para operar en entornos complejos liderados por el propósito.",
+    "cta": "Explorar la Plataforma"
+  },
+  "orgTypes": {
+    "title": "Para Quién Es",
+    "items": [
+      {
+        "title": "ONGs",
+        "description": "Generando impacto con recursos limitados, balanceando equipos, financiadores y realidades complejas."
+      },
+      {
+        "title": "Startups de Impacto",
+        "description": "Escalando soluciones con propósito mientras navegan crecimiento, alineación y presión de ejecución."
+      },
+      {
+        "title": "Organizaciones Regenerativas",
+        "description": "Diseñando sistemas que restauran en lugar de extraer — requiriendo coherencia entre personas y operaciones."
+      },
+      {
+        "title": "Ecosistemas y Redes",
+        "description": "Coordinando múltiples actores e interesados donde la alineación es distribuida, no centralizada."
+      },
+      {
+        "title": "Futuro del Trabajo",
+        "description": "Construyendo nuevas formas de organización — adaptativas, centradas en las personas y más allá de la jerarquía tradicional."
+      }
+    ]
+  },
+  "challenge": {
+    "title": "Diferentes Misiones.",
+    "titleEmphasis": "El Mismo Desafío Estructural.",
+    "intro": "Las organizaciones con propósito a menudo:",
+    "items": [
+      "Operan con fuerte intención pero limitada claridad estructural",
+      "Dependen de la energía de las personas en lugar de la coherencia del sistema",
+      "Luchan por alinear la ejecución con la misión a medida que crece la complejidad",
+      "Experimentan agotamiento, fragmentación o toma de decisiones lenta"
+    ],
+    "closing": "El desafío no es el propósito.",
+    "closingEmphasis": "Es construir un sistema que pueda sostenerlo."
+  },
+  "solution": {
+    "title": "La Ejecución Regenerativa Comienza con",
+    "titleEmphasis": "Inteligencia del Sistema",
+    "intro": "COIREA permite a las organizaciones:",
+    "items": [
+      {
+        "title": "Alinear Misión y Ejecución",
+        "description": "Conectar misión, estrategia y ejecución diaria en un sistema coherente."
+      },
+      {
+        "title": "Detectar Tensión Sistémica",
+        "description": "Identificar desalineaciones estructurales antes de que se conviertan en colapso organizacional."
+      },
+      {
+        "title": "Proteger la Capacidad del Equipo",
+        "description": "Salvaguardar la energía y capacidad del equipo mientras se escala el impacto."
+      },
+      {
+        "title": "Estructurar con Humanidad",
+        "description": "Construir estructuras de gobernanza sin perder el elemento humano."
+      }
+    ],
+    "closing": "Esto es lo que regenerativo significa en la práctica —",
+    "closingEmphasis": "no ideología, sino cómo opera tu sistema."
+  },
+  "gia": {
+    "title": "Inteligencia Que Entiende",
+    "titleEmphasis": "Tu Sistema",
+    "description": "GiA interpreta patrones dentro de tu organización — a través de liderazgo, colaboración, estructura y bienestar.",
+    "intro": "Te ayuda a ver dónde tu sistema está:",
+    "items": [
+      "Desalineado",
+      "Sobrecargado",
+      "Fragmentado",
+      "Listo para evolucionar"
+    ],
+    "closing": "Sin benchmarks genéricos.",
+    "closingEmphasis": "Solo insight fundamentado en tu realidad."
+  },
+  "planetary": {
+    "title": "De la Coherencia Organizacional al",
+    "titleEmphasis": "Impacto Regenerativo",
+    "lines": [
+      "Las organizaciones dan forma a los sistemas.",
+      "Los sistemas dan forma a los resultados."
+    ],
+    "description": "Cuando las organizaciones operan coherentemente — sin extracción — crean las condiciones para impacto regenerativo a escala.",
+    "closing": "COIREA apoya esta transformación desde adentro hacia afuera."
+  },
+  "cta": {
+    "title": "Descubre Cómo Funciona para Organizaciones Como la Tuya",
+    "primary": "Explorar COIREA",
+    "secondary": "Ver la Plataforma"
+  }
+}
