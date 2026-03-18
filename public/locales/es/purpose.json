@@ -102,6 +102,28 @@
     "closing": "Sin benchmarks genéricos.",
     "closingEmphasis": "Solo insight fundamentado en tu realidad."
   },
+  "health": {
+    "badge": "Empieza Aquí",
+    "title": "¿Qué Tan Saludable Es",
+    "titleEmphasis": "Tu Organización?",
+    "description": "Antes de transformar tu organización, necesitas entender dónde se encuentra. Nuestras herramientas de diagnóstico gratuitas te dan claridad inmediata sobre la salud organizacional, coherencia de liderazgo y alineación estructural.",
+    "ctaPrimary": "Tomar la Evaluación Gratuita",
+    "cardTitle": "Herramientas de Diagnóstico Gratuitas",
+    "tools": {
+      "ovi": {
+        "title": "Puntaje de Salud Organizacional",
+        "description": "Mide tu organización en 5 dimensiones sistémicas y recibe un puntaje de vitalidad general con insights accionables."
+      },
+      "leadership": {
+        "title": "Evaluación de Liderazgo Consciente",
+        "description": "Evalúa la coherencia, presencia y alineación del liderazgo — la base de cualquier organización saludable."
+      },
+      "scanner": {
+        "title": "Scanner de Salud Organizacional",
+        "description": "Un diagnóstico rápido para identificar tensiones estructurales y áreas que requieren atención inmediata."
+      }
+    }
+  },
   "planetary": {
     "title": "De la Coherencia Organizacional al",
     "titleEmphasis": "Impacto Regenerativo",

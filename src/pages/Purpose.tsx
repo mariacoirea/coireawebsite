@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { 
   ArrowRight, Building2, Rocket, Leaf, Network, Sparkles, 
   Target, Shield, Users, Heart, Compass, AlertTriangle, 
-  Lightbulb, Eye, Zap, CircleDot, Layers, EyeOff
+  Lightbulb, Eye, Zap, CircleDot, Layers, EyeOff,
+  Activity, BarChart3, ClipboardCheck
 } from "lucide-react";
 
 const Purpose = () => {
@@ -17,17 +18,9 @@ const Purpose = () => {
   const challengeIcons = [Layers, Zap, Compass, EyeOff];
   const solutionIcons = [Target, AlertTriangle, Shield, Heart];
 
-  const giaStates = [
-    { icon: AlertTriangle },
-    { icon: Eye },
-    { icon: Compass },
-    { icon: Lightbulb },
-  ];
-
   const orgItems = t('orgTypes.items', { returnObjects: true });
   const challengeItems = t('challenge.items', { returnObjects: true });
   const solutionItems = t('solution.items', { returnObjects: true });
-  const giaItems = t('gia.items', { returnObjects: true });
   const planetaryLines = t('planetary.lines', { returnObjects: true });
 
   return (
@@ -112,24 +105,20 @@ const Purpose = () => {
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
           <div className="container px-6 max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
-              {/* Left: Challenge narrative */}
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
                   <CircleDot className="w-4 h-4" />
                   {t('challenge.badge', 'The Real Problem')}
                 </div>
-                
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
                   {t('challenge.title')}{' '}
                   <span className="text-primary">{t('challenge.titleEmphasis')}</span>
                 </h2>
-                
                 <p className="text-muted-foreground font-body leading-relaxed">
                   {t('challenge.description')}
                 </p>
               </div>
 
-              {/* Right: Challenge cards */}
               <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50">
                 <div className="space-y-6">
                   {Array.isArray(challengeItems) && challengeItems.map((item: any, i: number) => {
@@ -147,7 +136,6 @@ const Purpose = () => {
                     );
                   })}
                 </div>
-
                 <div className="mt-8 pt-6 border-t border-border">
                   <p className="text-center font-display text-foreground/90 leading-relaxed">
                     {t('challenge.closing')}{' '}
@@ -159,98 +147,126 @@ const Purpose = () => {
           </div>
         </section>
 
-        {/* SECTION 4 — GiA (between challenge and solution) */}
+        {/* SECTION 4 — SOLUTION (Vertical centered) */}
         <section className="py-24 bg-background">
           <div className="container px-6 max-w-4xl mx-auto">
             <div className="text-center mb-14">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-[hsl(var(--warm-beige))] text-sm font-medium text-secondary mx-auto mb-6">
-                <Lightbulb className="w-4 h-4" />
-                GiA
+                <Sparkles className="w-4 h-4" />
+                {t('solution.badge', 'COIREA Response')}
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-                {t('gia.title')}{' '}
-                <span className="text-primary">{t('gia.titleEmphasis')}</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+                {t('solution.title')}{' '}
+                <span className="text-primary">{t('solution.titleEmphasis')}</span>
               </h2>
               <div className="w-12 h-0.5 bg-secondary/40 mx-auto mb-8" />
-              <p className="text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto mb-4">
-                {t('gia.description')}
+              <p className="text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto">
+                {t('solution.description')}
               </p>
-              <p className="text-foreground/80 font-body">{t('gia.intro')}</p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-3xl mx-auto mb-14">
-              {Array.isArray(giaItems) && giaItems.map((item: string, i: number) => {
-                const state = giaStates[i];
-                const Icon = state?.icon || Compass;
+            <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+              {Array.isArray(solutionItems) && solutionItems.map((item: any, i: number) => {
+                const Icon = solutionIcons[i] || Target;
                 return (
-                  <div key={i} className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
-                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
+                  <div key={i} className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
                       <Icon className="w-5 h-5 text-secondary" />
                     </div>
-                    <span className="text-sm font-display font-semibold text-foreground text-center">{item}</span>
+                    <h4 className="text-base font-display font-bold text-foreground mb-2">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
                   </div>
                 );
               })}
             </div>
             <div className="max-w-xl mx-auto py-6 px-8 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border text-center">
-              <p className="text-foreground font-display leading-relaxed">
-                {t('gia.closing')}{' '}
-                <span className="text-primary font-bold">{t('gia.closingEmphasis')}</span>
+              <p className="text-foreground/80 font-body italic">
+                {t('solution.closing')}{' '}
+                <span className="font-semibold text-foreground not-italic">{t('solution.closingEmphasis')}</span>
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 5 — SOLUTION (Two-Column: cards left, narrative right) */}
+        {/* SECTION 5 — ORGANIZATIONAL HEALTH */}
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
           <div className="container px-6 max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
-              {/* Left: Solution cards in 2x2 grid */}
-              <div className="grid sm:grid-cols-2 gap-5 order-2 lg:order-1">
-                {Array.isArray(solutionItems) && solutionItems.map((item: any, i: number) => {
-                  const Icon = solutionIcons[i] || Target;
-                  return (
-                    <div key={i} className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
-                      <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
-                        <Icon className="w-5 h-5 text-secondary" />
-                      </div>
-                      <h4 className="text-base font-display font-bold text-foreground mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
-                    </div>
-                  );
-                })}
+            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center">
+              {/* Left: Narrative */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
+                  <Activity className="w-4 h-4" />
+                  {t('health.badge', 'Start Here')}
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
+                  {t('health.title', 'How Healthy Is')}{' '}
+                  <span className="text-primary">{t('health.titleEmphasis', 'Your Organization?')}</span>
+                </h2>
+                <p className="text-muted-foreground font-body leading-relaxed">
+                  {t('health.description', 'Before you can transform your organization, you need to understand where it stands. Our free tools give you immediate clarity on your organizational health and structural coherence.')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <LocalizedLink to="/tools">
+                    <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                      {t('health.ctaPrimary', 'Take the Free Assessment')} <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </LocalizedLink>
+                </div>
               </div>
 
-              {/* Right: Solution narrative */}
-              <div className="space-y-6 lg:pt-4 order-1 lg:order-2">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
-                  <Sparkles className="w-4 h-4" />
-                  {t('solution.badge', 'COIREA Response')}
-                </div>
-                
-                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
-                  {t('solution.title')}{' '}
-                  <span className="text-primary">{t('solution.titleEmphasis')}</span>
+              {/* Right: Tool cards */}
+              <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50">
+                <h3 className="text-lg font-display font-bold text-foreground mb-6">
+                  {t('health.cardTitle', 'Free Diagnostic Tools')}
                 </h3>
-                
-                <p className="text-muted-foreground font-body leading-relaxed">
-                  {t('solution.description')}
-                </p>
-
-                <div className="pt-2">
-                  <p className="text-foreground/80 font-body italic">
-                    {t('solution.closing')}{' '}
-                    <span className="font-semibold text-foreground not-italic">{t('solution.closingEmphasis')}</span>
-                  </p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <BarChart3 className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="text-base font-display font-bold text-foreground mb-1">
+                        {t('health.tools.ovi.title', 'Organizational Health Score')}
+                      </h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {t('health.tools.ovi.description', 'Measure your organization across 5 systemic dimensions and receive an overall vitality score with actionable insights.')}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <ClipboardCheck className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="text-base font-display font-bold text-foreground mb-1">
+                        {t('health.tools.leadership.title', 'Conscious Leadership Assessment')}
+                      </h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {t('health.tools.leadership.description', 'Evaluate leadership coherence, presence, and alignment — the foundation of any healthy organization.')}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <Activity className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="text-base font-display font-bold text-foreground mb-1">
+                        {t('health.tools.scanner.title', 'Organizational Health Scanner')}
+                      </h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {t('health.tools.scanner.description', 'A quick diagnostic to identify structural tensions and areas requiring immediate attention.')}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-
         {/* SECTION — VISION + CTA */}
         <section className="relative py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(33,20%,45%)] via-[hsl(30,18%,40%)] to-[hsl(28,16%,36%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(33,18%,55%)] via-[hsl(30,15%,52%)] to-[hsl(28,14%,48%)]" />
           
           <div className="container relative z-10 px-6 max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/10 border border-background/20 text-background/80 text-sm font-medium backdrop-blur-sm mx-auto mb-8">
