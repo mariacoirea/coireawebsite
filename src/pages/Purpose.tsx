@@ -43,7 +43,7 @@ const Purpose = () => {
       <main className="min-h-screen bg-background">
         {/* SECTION 1 — HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(40,25%,88%)] via-[hsl(60,15%,78%)] to-[hsl(90,18%,65%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(38,30%,88%)] via-[hsl(32,25%,78%)] to-[hsl(45,18%,65%)]" />
           
           <div className="container relative z-10 px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto space-y-8">
@@ -250,7 +250,7 @@ const Purpose = () => {
 
         {/* SECTION — VISION + CTA */}
         <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(40,25%,88%)] via-[hsl(60,15%,78%)] to-[hsl(90,18%,65%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(38,30%,88%)] via-[hsl(32,25%,78%)] to-[hsl(45,18%,65%)]" />
           
           <div className="container relative z-10 px-6 max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/25 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm mx-auto mb-8">
