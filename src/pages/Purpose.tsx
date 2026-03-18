@@ -40,13 +40,13 @@ const Purpose = () => {
       <Header />
 
       <main className="min-h-screen bg-background">
-        {/* SECTION 1 — HERO */}
+        {/* SECTION 1 — HERO — unique warm copper/earth tone */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))] via-[hsl(77,15%,75%)] to-[hsl(77,18%,60%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(33,35%,90%)] via-[hsl(24,30%,82%)] to-[hsl(18,25%,72%)]" />
           
           <div className="container relative z-10 px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/25 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
                 <Leaf className="w-4 h-4" />
                 <span>{t('hero.title', 'Built for Organizations')}</span>
               </div>
@@ -57,7 +57,7 @@ const Purpose = () => {
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-primary/70 font-body max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-primary/75 font-body max-w-3xl mx-auto leading-relaxed">
                 {t('hero.subtitle')}
               </p>
               
@@ -82,9 +82,6 @@ const Purpose = () => {
         <section className="py-24 bg-background">
           <div className="container px-6 max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-secondary font-medium mb-2 text-sm tracking-wide uppercase">
-                {t('orgTypes.title')}
-              </p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
                 {t('orgTypes.title')}
               </h2>
@@ -109,71 +106,73 @@ const Purpose = () => {
           </div>
         </section>
 
-        {/* SECTION 3 — SHARED CHALLENGE */}
+        {/* SECTION 3 — MERGED: CHALLENGE + SOLUTION */}
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
-          <div className="container px-6 max-w-3xl mx-auto text-center">
-            <p className="text-secondary font-medium mb-2 text-sm tracking-wide uppercase">
-              {t('challenge.title')}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              {t('challenge.title')}{' '}
-              <span className="text-primary">{t('challenge.titleEmphasis')}</span>
-            </h2>
-            <p className="text-muted-foreground font-body mb-10">{t('challenge.intro')}</p>
-            <ul className="space-y-3 text-left max-w-xl mx-auto mb-12">
-              {Array.isArray(challengeItems) && challengeItems.map((item: string, i: number) => (
-                <li key={i} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
-                  </div>
-                  <span className="text-foreground/85 font-body leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="border-l-2 border-secondary/30 pl-6 py-2 max-w-lg mx-auto text-left">
-              <p className="text-lg font-display font-semibold text-foreground">{t('challenge.closing')}</p>
-              <p className="text-lg font-display font-bold text-primary">{t('challenge.closingEmphasis')}</p>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 4 — SOLUTION */}
-        <section className="py-24 bg-background">
           <div className="container px-6 max-w-6xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-secondary font-medium mb-2 text-sm tracking-wide uppercase">
-                {t('solution.intro')}
-              </p>
+            {/* Challenge half */}
+            <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+                {t('challenge.title')}{' '}
+                <span className="text-primary">{t('challenge.titleEmphasis')}</span>
+              </h2>
+              <p className="text-muted-foreground font-body mb-10">{t('challenge.intro')}</p>
+              <ul className="space-y-3 text-left max-w-xl mx-auto">
+                {Array.isArray(challengeItems) && challengeItems.map((item: string, i: number) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
+                    </div>
+                    <span className="text-foreground/85 font-body leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Transition quote */}
+            <div className="max-w-2xl mx-auto mb-16 py-8 px-8 rounded-2xl bg-background/60 backdrop-blur-sm border border-border text-center">
+              <p className="text-lg font-display text-foreground/90 leading-relaxed">
+                {t('challenge.closing')}{' '}
+                <span className="font-bold text-primary">{t('challenge.closingEmphasis')}</span>
+              </p>
+            </div>
+
+            {/* Solution half */}
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
                 {t('solution.title')}{' '}
                 <span className="text-primary">{t('solution.titleEmphasis')}</span>
-              </h2>
+              </h3>
+              <p className="text-muted-foreground font-body">{t('solution.intro')}</p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-14">
+            <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
               {Array.isArray(solutionItems) && solutionItems.map((item: any, i: number) => {
                 const Icon = solutionIcons[i] || Target;
                 return (
-                  <div key={i} className="group flex items-start gap-4 p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
+                  <div key={i} className="group flex items-start gap-4 p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
                       <Icon className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-display font-semibold text-foreground mb-1">{item.title}</h3>
+                      <h4 className="text-lg font-display font-semibold text-foreground mb-1">{item.title}</h4>
                       <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
-            <div className="text-center border-l-2 border-secondary/30 pl-6 py-2 max-w-lg mx-auto text-left">
-              <p className="text-foreground/80 font-body italic">{t('solution.closing')}</p>
-              <p className="text-foreground font-display font-semibold">{t('solution.closingEmphasis')}</p>
+
+            {/* Closing insight */}
+            <div className="max-w-2xl mx-auto py-6 px-8 rounded-2xl bg-background/60 backdrop-blur-sm border border-border text-center">
+              <p className="text-foreground/80 font-body italic">
+                {t('solution.closing')}{' '}
+                <span className="font-semibold text-foreground not-italic">{t('solution.closingEmphasis')}</span>
+              </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 5 — GiA */}
-        <section className="py-24 bg-[hsl(var(--warm-beige))]">
+        {/* SECTION 4 — GiA */}
+        <section className="py-24 bg-background">
           <div className="container px-6 max-w-4xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-secondary font-medium mb-2 text-sm tracking-wide uppercase">GiA</p>
@@ -191,7 +190,7 @@ const Purpose = () => {
                 const state = giaStates[i];
                 const Icon = state?.icon || Compass;
                 return (
-                  <div key={i} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
+                  <div key={i} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
                     <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
                       <Icon className="w-5 h-5 text-secondary" />
                     </div>
@@ -200,15 +199,17 @@ const Purpose = () => {
                 );
               })}
             </div>
-            <div className="text-center border-l-2 border-secondary/30 pl-6 py-2 max-w-md mx-auto text-left">
-              <p className="text-foreground font-display font-semibold">{t('gia.closing')}</p>
-              <p className="text-primary font-display font-bold">{t('gia.closingEmphasis')}</p>
+            <div className="max-w-lg mx-auto py-6 px-8 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border text-center">
+              <p className="text-foreground font-display font-semibold">
+                {t('gia.closing')}{' '}
+                <span className="text-primary font-bold">{t('gia.closingEmphasis')}</span>
+              </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 6 — PLANETARY LAYER */}
-        <section className="py-24 bg-background">
+        {/* SECTION 5 — PLANETARY LAYER */}
+        <section className="py-24 bg-[hsl(var(--warm-beige))]">
           <div className="container px-6 max-w-3xl mx-auto text-center">
             <p className="text-secondary font-medium mb-2 text-sm tracking-wide uppercase">Vision</p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-10">
@@ -220,15 +221,17 @@ const Purpose = () => {
                 <p key={i} className="text-xl font-display font-medium text-foreground/70 italic">{line}</p>
               ))}
             </div>
-            <p className="text-muted-foreground font-body leading-relaxed mb-8 max-w-2xl mx-auto">{t('planetary.description')}</p>
-            <p className="text-foreground font-display font-semibold italic border-l-2 border-secondary/30 pl-6 py-2 max-w-md mx-auto text-left">
-              {t('planetary.closing')}
-            </p>
+            <p className="text-muted-foreground font-body leading-relaxed mb-10 max-w-2xl mx-auto">{t('planetary.description')}</p>
+            <div className="max-w-md mx-auto py-6 px-8 rounded-2xl bg-background border border-border text-center">
+              <p className="text-foreground font-display font-semibold italic">
+                {t('planetary.closing')}
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* SECTION 7 — CTA */}
-        <section className="py-24 bg-[hsl(var(--warm-beige))]">
+        {/* SECTION 6 — CTA */}
+        <section className="py-24 bg-background">
           <div className="container px-6 max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-10">
               {t('cta.title')}
