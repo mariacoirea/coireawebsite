@@ -247,46 +247,6 @@ const Purpose = () => {
           </div>
         </section>
 
-        {/* SECTION 4 — GiA */}
-        <section className="py-24 bg-background">
-          <div className="container px-6 max-w-4xl mx-auto">
-            <div className="text-center mb-14">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-[hsl(var(--warm-beige))] text-sm font-medium text-secondary mx-auto mb-6">
-                <Lightbulb className="w-4 h-4" />
-                GiA
-              </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-                {t('gia.title')}{' '}
-                <span className="text-primary">{t('gia.titleEmphasis')}</span>
-              </h2>
-              <div className="w-12 h-0.5 bg-secondary/40 mx-auto mb-8" />
-              <p className="text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto mb-4">
-                {t('gia.description')}
-              </p>
-              <p className="text-foreground/80 font-body">{t('gia.intro')}</p>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-3xl mx-auto mb-14">
-              {Array.isArray(giaItems) && giaItems.map((item: string, i: number) => {
-                const state = giaStates[i];
-                const Icon = state?.icon || Compass;
-                return (
-                  <div key={i} className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
-                    <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
-                      <Icon className="w-5 h-5 text-secondary" />
-                    </div>
-                    <span className="text-sm font-display font-semibold text-foreground text-center">{item}</span>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="max-w-xl mx-auto py-6 px-8 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border text-center">
-              <p className="text-foreground font-display leading-relaxed">
-                {t('gia.closing')}{' '}
-                <span className="text-primary font-bold">{t('gia.closingEmphasis')}</span>
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* SECTION 5 — PLANETARY LAYER */}
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
