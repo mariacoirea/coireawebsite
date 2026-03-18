@@ -79,35 +79,40 @@
     "description2": "En lugar de generar respuestas desde modelos externos, GiA aprende de las señales internas de tu sistema. Identifica tensiones estructurales, patrones de comportamiento recurrentes e indicadores tempranos de desalineación — convirtiéndolos en guía clara y contextual.",
     "closingNote1": "La inteligencia permanece dentro de tu campo.",
     "closingNote2": "Los insights son específicos de tu organización.",
-    "whatItDoes": {
-      "title": "Qué Hace GiA"
-    },
-    "capabilities": {
-      "analyze": "Interpreta señales entre pilares en tiempo real",
-      "detect": "Detecta desalineación estructural antes de que escale",
-      "learn": "Identifica indicadores de riesgo temprano (burnout, deriva, cuellos de botella)",
-      "generate": "Traduce datos en prioridades claras y sugerencias de responsabilidad",
-      "support": "Apoya al liderazgo con guía basada en evidencia y consciencia sistémica"
-    },
-    "mvp": {
-      "title": "Capacidades MVP",
-      "badge": "MVP",
-      "features": {
-        "scanner": "Reflexión de Salud Organizacional (15 preguntas)",
-        "insights": "Puntuación OVI",
-        "indicators": "Reporte de Insights con IA",
-        "burnout": "Indicadores de Riesgo Temprano",
-        "burnoutIndex": "Índice de Alerta Temprana de Burnout"
-      }
-    },
-    "future": {
-      "title": "Roadmap (Próximamente)",
-      "badge": "Próximamente",
-      "features": {
-        "predictive": "Motor de Patrones Predictivos",
-        "automation": "Automatización de Intervenciones",
-        "api": "Integraciones API",
-        "realtime": "Monitoreo Avanzado en Tiempo Real"
+    "nodes": {
+      "title": "Lo que GiA Vuelve Visible",
+      "subtitle": "Seis preguntas sistémicas que GiA interpreta continuamente desde los datos de tu organización.",
+      "items": {
+        "directionCoherence": {
+          "title": "Dirección Coherente",
+          "question": "¿Nuestro trabajo diario avanza en la dirección que decimos que más importa?",
+          "clarification": "¿Están los proyectos e iniciativas alineados con la estrategia y visión?"
+        },
+        "systemCapacity": {
+          "title": "Capacidad del Sistema",
+          "question": "¿Tiene nuestro sistema la energía y el espacio para cumplir con lo que nos hemos comprometido?",
+          "clarification": "¿Tienen las personas y equipos la capacidad para los proyectos actuales?"
+        },
+        "roleClarity": {
+          "title": "Claridad de Roles",
+          "question": "¿Se sostienen las responsabilidades de manera que permitan a las personas contribuir desde su mejor versión?",
+          "clarification": "¿Son los roles claros, equilibrados y debidamente asumidos?"
+        },
+        "projectContribution": {
+          "title": "Iniciativas Claves",
+          "question": "¿Cómo están nuestras iniciativas actuales fortaleciendo la evolución de la organización?",
+          "clarification": "¿Qué proyectos fortalecen el sistema y cuáles generan fricción?"
+        },
+        "systemTensions": {
+          "title": "Tensión Organizacional",
+          "question": "¿Dónde está el sistema pidiendo atención o adaptación?",
+          "clarification": "¿Qué desalineaciones estructurales están emergiendo?"
+        },
+        "nextEvolution": {
+          "title": "Evolución",
+          "question": "¿Qué pequeños cambios estructurales podrían restaurar mayor coherencia?",
+          "clarification": "¿Qué acciones debería considerar el liderazgo a continuación?"
+        }
       }
     }
   },
