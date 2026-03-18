@@ -1,23 +1,41 @@
 import { useTranslation } from "react-i18next";
 import { 
-  Brain, 
-  Shield, 
-  Activity,
-  Sparkles,
+  Compass, 
+  Battery, 
+  Users,
+  Rocket,
   AlertTriangle,
-  CheckCircle2,
-  Clock
+  Lightbulb
 } from "lucide-react";
 
 const AIAgentSection = () => {
   const { t } = useTranslation('platform');
 
-  const aiCapabilities = [
-    { key: 'analyze', icon: Activity },
-    { key: 'detect', icon: AlertTriangle },
-    { key: 'learn', icon: Brain },
-    { key: 'generate', icon: Sparkles },
-    { key: 'support', icon: Shield },
+  const giaNodes = [
+    { 
+      key: 'directionCoherence', 
+      icon: Compass,
+    },
+    { 
+      key: 'systemCapacity', 
+      icon: Battery,
+    },
+    { 
+      key: 'roleClarity', 
+      icon: Users,
+    },
+    { 
+      key: 'projectContribution', 
+      icon: Rocket,
+    },
+    { 
+      key: 'systemTensions', 
+      icon: AlertTriangle,
+    },
+    { 
+      key: 'nextEvolution', 
+      icon: Lightbulb,
+    },
   ];
 
   return (
@@ -36,10 +54,10 @@ const AIAgentSection = () => {
         {/* Description Block */}
         <div className="max-w-6xl mx-auto mb-14 space-y-4">
           <p className="text-muted-foreground font-body leading-relaxed text-center">
-            {t('aiAgent.description', 'GiA is not a generic chatbot or external analytics engine. It is a trained Organizational AI designed specifically to interpret patterns within your organization\'s own data — across governance, culture, execution, collaboration, and well-being.')}
+            {t('aiAgent.description')}
           </p>
           <p className="text-muted-foreground font-body leading-relaxed text-center">
-            {t('aiAgent.description2', 'Instead of generating answers from external models, GiA learns from your system\'s internal signals. It identifies structural tensions, recurring behavioral patterns, and early indicators of misalignment — converting them into clear, contextual guidance.')}
+            {t('aiAgent.description2')}
           </p>
           <div className="text-center pt-2 space-y-1">
             <p className="text-foreground font-semibold italic">
@@ -51,74 +69,39 @@ const AIAgentSection = () => {
           </div>
         </div>
 
-        {/* What GiA Does */}
-        <div className="max-w-5xl mx-auto mb-14">
-          <h3 className="text-xl font-display font-semibold text-foreground text-center mb-6">
-            {t('aiAgent.whatItDoes.title', 'What GiA Does')}
+        {/* What GiA Makes Visible */}
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-2xl font-display font-bold text-foreground text-center mb-3">
+            {t('aiAgent.nodes.title', 'What GiA Makes Visible')}
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {aiCapabilities.map(({ key, icon: Icon }) => (
+          <p className="text-muted-foreground text-center font-body mb-10 max-w-3xl mx-auto">
+            {t('aiAgent.nodes.subtitle', 'Six system-level questions GiA continuously interprets from your organizational data.')}
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {giaNodes.map(({ key, icon: Icon }) => (
               <div 
                 key={key}
-                className="flex items-center gap-3 p-4 rounded-xl bg-muted/50 border border-border"
+                className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-secondary" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="text-lg font-display font-semibold text-foreground">
+                      {t(`aiAgent.nodes.items.${key}.title`)}
+                    </h4>
+                    <p className="text-sm text-foreground/80 font-body italic leading-relaxed">
+                      {t(`aiAgent.nodes.items.${key}.question`)}
+                    </p>
+                    <p className="text-xs text-muted-foreground font-body leading-relaxed">
+                      {t(`aiAgent.nodes.items.${key}.clarification`)}
+                    </p>
+                  </div>
                 </div>
-                <span className="text-foreground font-body text-sm font-medium">
-                  {t(`aiAgent.capabilities.${key}`)}
-                </span>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* MVP & Roadmap Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* MVP */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
-                {t('aiAgent.mvp.badge', 'MVP')}
-              </span>
-              <h3 className="text-xl font-display font-bold text-foreground">
-                {t('aiAgent.mvp.title', 'MVP Capabilities')}
-              </h3>
-            </div>
-            <ul className="space-y-4">
-              {['scanner', 'insights', 'indicators', 'burnout', 'burnoutIndex'].map((feature) => {
-                const text = t(`aiAgent.mvp.features.${feature}`, '');
-                if (!text) return null;
-                return (
-                  <li key={feature} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground font-body">{text}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Roadmap */}
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-medium">
-                {t('aiAgent.future.badge', 'Coming Next')}
-              </span>
-              <h3 className="text-xl font-display font-bold text-foreground">
-                {t('aiAgent.future.title', 'Roadmap (Coming Next)')}
-              </h3>
-            </div>
-            <ul className="space-y-4">
-              {['predictive', 'automation', 'api', 'realtime'].map((feature) => (
-                <li key={feature} className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground font-body">
-                    {t(`aiAgent.future.features.${feature}`)}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
