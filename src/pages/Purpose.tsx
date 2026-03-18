@@ -264,44 +264,33 @@ const Purpose = () => {
           </div>
         </section>
 
-        {/* SECTION — VISION + CTA */}
-        <section className="relative py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(33,18%,55%)] via-[hsl(30,15%,52%)] to-[hsl(28,14%,48%)]" />
-          
-          <div className="container relative z-10 px-6 max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/10 border border-background/20 text-background/80 text-sm font-medium backdrop-blur-sm mx-auto mb-8">
+        {/* SECTION — VISION (Inspiration) */}
+        <section className="relative py-24 overflow-hidden bg-[hsl(var(--warm-beige))]">
+          <div className="container relative z-10 px-6 max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary/70 text-sm font-medium mx-auto mb-8">
               <Leaf className="w-4 h-4" />
               Vision
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-background mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               {t('planetary.title')}{' '}
-              <span className="text-background/70">{t('planetary.titleEmphasis')}</span>
+              <span className="text-primary">{t('planetary.titleEmphasis')}</span>
             </h2>
-            <div className="w-12 h-0.5 bg-background/25 mx-auto mb-10" />
+            <div className="w-12 h-0.5 bg-primary/20 mx-auto mb-10" />
 
             <div className="space-y-3 mb-10">
               {Array.isArray(planetaryLines) && planetaryLines.map((line: string, i: number) => (
-                <p key={i} className="text-xl font-display font-medium text-background/60 italic">{line}</p>
+                <p key={i} className="text-xl font-display font-medium text-muted-foreground italic">{line}</p>
               ))}
             </div>
 
-            <p className="text-background/70 font-body leading-relaxed mb-16 max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto mb-6">
               {t('planetary.description')}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <LocalizedLink to="/journey">
-                <Button size="lg" className="text-lg px-8 py-6 bg-background text-foreground hover:bg-background/90">
-                  {t('cta.primary')} <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </LocalizedLink>
-              <LocalizedLink to="/platform">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-background/40 text-background hover:bg-background/10 backdrop-blur-sm">
-                  {t('cta.secondary')}
-                </Button>
-              </LocalizedLink>
-            </div>
+            <p className="text-sm font-body text-primary/60 italic">
+              {t('planetary.closing')}
+            </p>
           </div>
         </section>
       </main>
