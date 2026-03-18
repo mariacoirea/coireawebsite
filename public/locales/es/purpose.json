@@ -37,38 +37,52 @@
     ]
   },
   "challenge": {
+    "badge": "El Problema Real",
     "title": "Diferentes Misiones.",
     "titleEmphasis": "El Mismo Desafío Estructural.",
-    "intro": "Las organizaciones con propósito a menudo:",
+    "description": "Las organizaciones con propósito no luchan con su misión — luchan con los sistemas diseñados para sostenerla. A medida que crece la complejidad, incluso los equipos más alineados enfrentan brechas estructurales que socavan su impacto.",
     "items": [
-      "Operan con fuerte intención pero limitada claridad estructural",
-      "Dependen de la energía de las personas en lugar de la coherencia del sistema",
-      "Luchan por alinear la ejecución con la misión a medida que crece la complejidad",
-      "Experimentan agotamiento, fragmentación o toma de decisiones lenta"
+      {
+        "title": "Intención Sin Estructura",
+        "description": "Existe un propósito y valores fuertes, pero la arquitectura operativa para sostenerlos no."
+      },
+      {
+        "title": "Personas Sobre Sistemas",
+        "description": "Las organizaciones dependen de la energía individual y el esfuerzo heroico en lugar de la coherencia estructural."
+      },
+      {
+        "title": "Deriva de Ejecución",
+        "description": "El trabajo diario se desconecta gradualmente de la misión estratégica a medida que crecen la complejidad y el equipo."
+      },
+      {
+        "title": "Agotamiento Invisible",
+        "description": "La toma de decisiones fragmentada, la propiedad poco clara y la gobernanza lenta erosionan el bienestar silenciosamente."
+      }
     ],
     "closing": "El desafío no es el propósito.",
     "closingEmphasis": "Es construir un sistema que pueda sostenerlo."
   },
   "solution": {
+    "badge": "Respuesta COIREA",
     "title": "La Ejecución Regenerativa Comienza con",
     "titleEmphasis": "Inteligencia del Sistema",
-    "intro": "COIREA permite a las organizaciones:",
+    "description": "COIREA proporciona la capa de inteligencia estructural que las organizaciones con propósito necesitan para operar con claridad, proteger a su gente y escalar sin extracción.",
     "items": [
       {
         "title": "Alinear Misión y Ejecución",
-        "description": "Conectar misión, estrategia y ejecución diaria en un sistema coherente."
+        "description": "Conectar misión, estrategia y ejecución diaria en un sistema coherente con visibilidad en tiempo real."
       },
       {
         "title": "Detectar Tensión Sistémica",
-        "description": "Identificar desalineaciones estructurales antes de que se conviertan en colapso organizacional."
+        "description": "Identificar desalineaciones estructurales antes de que se conviertan en colapso organizacional o agotamiento del equipo."
       },
       {
         "title": "Proteger la Capacidad del Equipo",
-        "description": "Salvaguardar la energía y capacidad del equipo mientras se escala el impacto."
+        "description": "Salvaguardar la energía y capacidad del equipo mientras se escala el impacto — porque el crecimiento no debería costar bienestar."
       },
       {
         "title": "Estructurar con Humanidad",
-        "description": "Construir estructuras de gobernanza sin perder el elemento humano."
+        "description": "Construir estructuras de gobernanza y propiedad que distribuyan la autoridad sin perder el elemento humano."
       }
     ],
     "closing": "Esto es lo que regenerativo significa en la práctica —",

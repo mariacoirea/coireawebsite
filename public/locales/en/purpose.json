@@ -37,38 +37,52 @@
     ]
   },
   "challenge": {
+    "badge": "The Real Problem",
     "title": "Different Missions.",
     "titleEmphasis": "Same Structural Challenge.",
-    "intro": "Purpose-driven organizations often:",
+    "description": "Mission-driven organizations don't struggle with purpose — they struggle with the systems designed to carry it. As complexity grows, even the most aligned teams face structural gaps that undermine their impact.",
     "items": [
-      "Operate with strong intention but limited structural clarity",
-      "Rely on people's energy instead of system coherence",
-      "Struggle to align execution with mission as complexity grows",
-      "Experience burnout, fragmentation, or slow decision-making"
+      {
+        "title": "Intention Without Structure",
+        "description": "Strong purpose and values exist, but the operational architecture to sustain them doesn't."
+      },
+      {
+        "title": "People Over Systems",
+        "description": "Organizations depend on individual energy and heroic effort instead of structural coherence."
+      },
+      {
+        "title": "Execution Drift",
+        "description": "Daily work gradually disconnects from strategic mission as complexity and team size grow."
+      },
+      {
+        "title": "Invisible Burnout",
+        "description": "Fragmented decision-making, unclear ownership, and slow governance erode well-being silently."
+      }
     ],
     "closing": "The challenge is not purpose.",
     "closingEmphasis": "It's building a system that can sustain it."
   },
   "solution": {
+    "badge": "COIREA Response",
     "title": "Regenerative Execution Starts with",
     "titleEmphasis": "System Intelligence",
-    "intro": "COIREA enables organizations to:",
+    "description": "COIREA provides the structural intelligence layer that purpose-driven organizations need to operate with clarity, protect their people, and scale without extraction.",
     "items": [
       {
         "title": "Align Mission & Execution",
-        "description": "Connect mission, strategy, and daily execution into one coherent system."
+        "description": "Connect mission, strategy, and daily execution into one coherent system with real-time visibility."
       },
       {
         "title": "Detect System Tension",
-        "description": "Identify structural misalignment before it becomes organizational breakdown."
+        "description": "Identify structural misalignment before it becomes organizational breakdown or team burnout."
       },
       {
         "title": "Protect Team Capacity",
-        "description": "Safeguard team energy and capacity while scaling impact."
+        "description": "Safeguard team energy and capacity while scaling impact — because growth shouldn't cost well-being."
       },
       {
         "title": "Structure with Humanity",
-        "description": "Build governance structures without losing the human element."
+        "description": "Build governance and ownership structures that distribute authority without losing the human element."
       }
     ],
     "closing": "This is what regenerative means in practice —",
