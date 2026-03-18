@@ -43,7 +43,7 @@ const Purpose = () => {
       <main className="min-h-screen bg-background">
         {/* SECTION 1 — HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(33,35%,90%)] via-[hsl(24,30%,82%)] to-[hsl(18,25%,72%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(40,25%,88%)] via-[hsl(60,15%,78%)] to-[hsl(90,18%,65%)]" />
           
           <div className="container relative z-10 px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto space-y-8">
