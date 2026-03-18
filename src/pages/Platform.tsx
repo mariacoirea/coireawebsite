@@ -20,7 +20,11 @@ import {
   ArrowRight,
   AlertTriangle,
   Compass,
-  Loader2
+  Loader2,
+  Eye,
+  Wrench,
+  Radio,
+  Leaf
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -363,37 +367,118 @@ const Platform = () => {
             </div>
           </section>
 
-          {/* Execution Intelligence Infrastructure */}
+          {/* The System Today & Its Evolution */}
           <section className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              <div className="text-center max-w-3xl mx-auto mb-16">
+              {/* Section Header */}
+              <div className="text-center max-w-4xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  {currentLanguage === 'es' ? 'Infraestructura de Inteligencia de Ejecución' : 'Execution Intelligence Infrastructure'}
+                  {currentLanguage === 'es' ? 'El Sistema Hoy y Su Evolución' : 'The System Today & Its Evolution'}
                 </h2>
-                <p className="text-lg text-muted-foreground font-body">
+                <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto">
                   {currentLanguage === 'es' 
-                    ? 'Todo lo que necesitas para alinear tu organización, proteger capacidad y ejecutar objetivos estratégicos sin volverse extractiva.'
-                    : 'Everything you need to align your organization, protect capacity, and execute strategic goals without becoming extractive.'}
+                    ? 'Un sistema vivo que brinda claridad inmediata y evoluciona con tu organización a lo largo del tiempo.'
+                    : 'A living system that delivers immediate clarity, and evolves with your organization over time.'}
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {features.map(({ key, icon: Icon, title, titleEs, desc, descEs }) => (
-                  <div 
-                    key={key}
-                    className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-secondary" />
+              {/* TODAY — Core System Intelligence */}
+              <div className="max-w-6xl mx-auto mb-20">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-3 h-3 rounded-full bg-secondary" />
+                  <h3 className="text-2xl font-display font-bold text-foreground">
+                    {currentLanguage === 'es' ? 'Hoy — Inteligencia Sistémica Central' : 'Today — Core System Intelligence'}
+                  </h3>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {features.map(({ key, icon: Icon, title, titleEs, desc, descEs }) => (
+                    <div 
+                      key={key}
+                      className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+                        <Icon className="w-6 h-6 text-secondary" />
+                      </div>
+                      <h4 className="text-lg font-display font-semibold text-foreground mb-2">
+                        {currentLanguage === 'es' ? titleEs : title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {currentLanguage === 'es' ? descEs : desc}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                      {currentLanguage === 'es' ? titleEs : title}
-                    </h3>
-                    <p className="text-muted-foreground font-body leading-relaxed">
-                      {currentLanguage === 'es' ? descEs : desc}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+
+              {/* EVOLVING — Expanding System Intelligence */}
+              <div className="max-w-6xl mx-auto">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+                  <h3 className="text-2xl font-display font-bold text-foreground">
+                    {currentLanguage === 'es' ? 'En Evolución — Inteligencia Sistémica Expandida' : 'Evolving — Expanding System Intelligence'}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground font-body mb-8 max-w-4xl">
+                  {currentLanguage === 'es'
+                    ? 'A medida que el sistema evoluciona, COIREA se extiende de la visibilidad hacia una inteligencia más profunda e impacto medible:'
+                    : 'As the system evolves, COIREA extends from visibility into deeper intelligence and measurable impact:'}
+                </p>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {[
+                    {
+                      icon: Activity,
+                      title: 'Regenerative Capacity Index (RCI)',
+                      titleEs: 'Índice de Capacidad Regenerativa (RCI)',
+                      desc: "Measure your organization's ability to grow without depleting people, culture, or long-term capacity.",
+                      descEs: 'Mide la capacidad de tu organización para crecer sin agotar personas, cultura o capacidad a largo plazo.',
+                    },
+                    {
+                      icon: Eye,
+                      title: 'Deeper Organizational Insight Layer',
+                      titleEs: 'Capa de Insight Organizacional Profundo',
+                      desc: 'Identify structural patterns across governance, collaboration, and execution — revealing where the system is limiting performance.',
+                      descEs: 'Identifica patrones estructurales a través de gobernanza, colaboración y ejecución — revelando dónde el sistema está limitando el rendimiento.',
+                    },
+                    {
+                      icon: Wrench,
+                      title: 'Infrastructure Improvement Guidance',
+                      titleEs: 'Guía de Mejora de Infraestructura',
+                      desc: 'Translate system signals into concrete changes in roles, processes, and decision-making structures.',
+                      descEs: 'Traduce señales del sistema en cambios concretos en roles, procesos y estructuras de toma de decisiones.',
+                    },
+                    {
+                      icon: Radio,
+                      title: 'Advanced Real-Time Monitoring',
+                      titleEs: 'Monitoreo Avanzado en Tiempo Real',
+                      desc: 'Continuous tracking of trends, risks, and system evolution — beyond static snapshots.',
+                      descEs: 'Seguimiento continuo de tendencias, riesgos y evolución del sistema — más allá de capturas estáticas.',
+                    },
+                    {
+                      icon: Leaf,
+                      title: 'Impact & Regenerative Measurement',
+                      titleEs: 'Medición de Impacto Regenerativo',
+                      desc: 'Extend organizational progress into measurable regenerative impact and structured reporting (e.g. SDGs).',
+                      descEs: 'Extiende el progreso organizacional en impacto regenerativo medible y reportes estructurados (ej. ODS).',
+                    },
+                  ].map(({ icon: Icon, title, titleEs, desc, descEs }, idx) => (
+                    <div 
+                      key={idx}
+                      className="group p-6 rounded-2xl bg-background/60 border border-dashed border-border hover:border-primary/30 hover:bg-background transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary/12 transition-colors">
+                        <Icon className="w-6 h-6 text-primary/70" />
+                      </div>
+                      <h4 className="text-lg font-display font-semibold text-foreground mb-2">
+                        {currentLanguage === 'es' ? titleEs : title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {currentLanguage === 'es' ? descEs : desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
