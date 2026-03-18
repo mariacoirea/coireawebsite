@@ -278,18 +278,8 @@ const Purpose = () => {
             </h2>
             <div className="w-12 h-0.5 bg-primary/20 mx-auto mb-10" />
 
-            <div className="space-y-3 mb-10">
-              {Array.isArray(planetaryLines) && planetaryLines.map((line: string, i: number) => (
-                <p key={i} className="text-xl font-display font-medium text-muted-foreground italic">{line}</p>
-              ))}
-            </div>
-
-            <p className="text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto mb-6">
+            <p className="text-lg font-body text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               {t('planetary.description')}
-            </p>
-
-            <p className="text-sm font-body text-primary/60 italic">
-              {t('planetary.closing')}
             </p>
           </div>
         </section>
