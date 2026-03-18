@@ -92,12 +92,13 @@ const Platform = () => {
     { key: 'strategy', icon: Target },
   ];
 
-  const aiCapabilities = [
-    { key: 'analyze', icon: Activity },
-    { key: 'detect', icon: AlertTriangle },
-    { key: 'learn', icon: Brain },
-    { key: 'generate', icon: Sparkles },
-    { key: 'support', icon: Shield },
+  const giaNodes = [
+    { key: 'directionCoherence', icon: Compass },
+    { key: 'systemCapacity', icon: Activity },
+    { key: 'roleClarity', icon: Users },
+    { key: 'projectContribution', icon: Target },
+    { key: 'systemTensions', icon: AlertTriangle },
+    { key: 'nextEvolution', icon: Sparkles },
   ];
 
   const features = [
