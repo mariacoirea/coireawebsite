@@ -79,35 +79,40 @@
     "description2": "Instead of generating answers from external models, GiA learns from your system's internal signals. It identifies structural tensions, recurring behavioral patterns, and early indicators of misalignment — converting them into clear, contextual guidance.",
     "closingNote1": "The intelligence stays inside your field.",
     "closingNote2": "The insights are specific to your organization.",
-    "whatItDoes": {
-      "title": "What GiA Does"
-    },
-    "capabilities": {
-      "analyze": "Interprets cross-pillar signals in real time",
-      "detect": "Detects structural misalignment before it escalates",
-      "learn": "Surfaces early risk indicators (burnout, drift, bottlenecks)",
-      "generate": "Translates data into clear priorities and ownership suggestions",
-      "support": "Supports leadership with evidence-based, system-aware guidance"
-    },
-    "mvp": {
-      "title": "MVP Capabilities",
-      "badge": "MVP",
-      "features": {
-        "scanner": "Organizational Health Reflection (15-question entry)",
-        "insights": "OVI Scoring",
-        "indicators": "AI Insights Report",
-        "burnout": "Early Risk Indicators",
-        "burnoutIndex": "Burnout Early Warning Index"
-      }
-    },
-    "future": {
-      "title": "Roadmap (Coming Next)",
-      "badge": "Coming Next",
-      "features": {
-        "predictive": "Predictive Pattern Engine",
-        "automation": "Intervention Automation",
-        "api": "API Integrations",
-        "realtime": "Advanced Real-Time Monitoring"
+    "nodes": {
+      "title": "What GiA Makes Visible",
+      "subtitle": "Six system-level questions GiA continuously interprets from your organizational data.",
+      "items": {
+        "directionCoherence": {
+          "title": "Direction Coherence",
+          "question": "Is our daily work moving in the direction we say matters most?",
+          "clarification": "Are projects and initiatives aligned with the strategy and vision?"
+        },
+        "systemCapacity": {
+          "title": "System Capacity",
+          "question": "Does our system have the energy and space to deliver what we have committed to?",
+          "clarification": "Do people and teams have the capacity for current projects?"
+        },
+        "roleClarity": {
+          "title": "Role Clarity",
+          "question": "Are responsibilities held in ways that allow people to contribute at their best?",
+          "clarification": "Are roles clear, balanced, and properly owned?"
+        },
+        "projectContribution": {
+          "title": "Project Contribution",
+          "question": "How are our current initiatives strengthening the evolution of the organization?",
+          "clarification": "Which projects strengthen the system and which create friction?"
+        },
+        "systemTensions": {
+          "title": "System Tensions",
+          "question": "Where is the system asking for attention or adaptation?",
+          "clarification": "What structural misalignments are emerging?"
+        },
+        "nextEvolution": {
+          "title": "Next Evolution",
+          "question": "What small structural changes could restore greater coherence?",
+          "clarification": "What actions should leadership consider next?"
+        }
       }
     }
   },
