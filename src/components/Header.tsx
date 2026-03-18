@@ -45,6 +45,9 @@ const Header = () => {
             <LocalizedLink to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.tools').toUpperCase()}
             </LocalizedLink>
+            <LocalizedLink to="/purpose" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
+            </LocalizedLink>
             <LanguageSwitch />
             <LocalizedLink to="/journey">
               <Button variant="outline" size="default" className="border-[#5B6C49]/30 text-[#5B6C49] hover:bg-[#5B6C49]/10 transition-all duration-300 rounded-full px-8">
