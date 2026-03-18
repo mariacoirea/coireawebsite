@@ -108,12 +108,10 @@ const Purpose = () => {
           </div>
         </section>
 
-        {/* SECTION 3 — CHALLENGE + SOLUTION (Two-Column Layout inspired by About) */}
+        {/* SECTION 3 — CHALLENGE (Two-Column) */}
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
           <div className="container px-6 max-w-6xl mx-auto">
-            
-            {/* Challenge — Two Column: Left text + Right cards */}
-            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start mb-20">
+            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
               {/* Left: Challenge narrative */}
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
@@ -145,15 +143,11 @@ const Purpose = () => {
                           <h4 className="text-base font-display font-bold text-foreground mb-1">{item.title}</h4>
                           <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
                         </div>
-                        {i < (Array.isArray(challengeItems) ? challengeItems.length - 1 : 0) && (
-                          <div className="absolute" />
-                        )}
                       </div>
                     );
                   })}
                 </div>
 
-                {/* Separator + closing quote inside the card */}
                 <div className="mt-8 pt-6 border-t border-border">
                   <p className="text-center font-display text-foreground/90 leading-relaxed">
                     {t('challenge.closing')}{' '}
@@ -162,54 +156,10 @@ const Purpose = () => {
                 </div>
               </div>
             </div>
-
-            {/* Solution — Two Column: Left cards + Right text */}
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
-              {/* Left: Solution cards in 2x2 grid */}
-              <div className="grid sm:grid-cols-2 gap-5">
-                {Array.isArray(solutionItems) && solutionItems.map((item: any, i: number) => {
-                  const Icon = solutionIcons[i] || Target;
-                  return (
-                    <div key={i} className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
-                      <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
-                        <Icon className="w-5 h-5 text-secondary" />
-                      </div>
-                      <h4 className="text-base font-display font-bold text-foreground mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Right: Solution narrative */}
-              <div className="space-y-6 lg:pt-4">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
-                  <Sparkles className="w-4 h-4" />
-                  {t('solution.badge', 'COIREA Response')}
-                </div>
-                
-                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
-                  {t('solution.title')}{' '}
-                  <span className="text-primary">{t('solution.titleEmphasis')}</span>
-                </h3>
-                
-                <p className="text-muted-foreground font-body leading-relaxed">
-                  {t('solution.description')}
-                </p>
-
-                <div className="pt-2">
-                  <p className="text-foreground/80 font-body italic">
-                    {t('solution.closing')}{' '}
-                    <span className="font-semibold text-foreground not-italic">{t('solution.closingEmphasis')}</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </section>
 
-        {/* SECTION 4 — GiA */}
+        {/* SECTION 4 — GiA (between challenge and solution) */}
         <section className="py-24 bg-background">
           <div className="container px-6 max-w-4xl mx-auto">
             <div className="text-center mb-14">
@@ -249,6 +199,54 @@ const Purpose = () => {
             </div>
           </div>
         </section>
+
+        {/* SECTION 5 — SOLUTION (Two-Column: cards left, narrative right) */}
+        <section className="py-24 bg-[hsl(var(--warm-beige))]">
+          <div className="container px-6 max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
+              {/* Left: Solution cards in 2x2 grid */}
+              <div className="grid sm:grid-cols-2 gap-5 order-2 lg:order-1">
+                {Array.isArray(solutionItems) && solutionItems.map((item: any, i: number) => {
+                  const Icon = solutionIcons[i] || Target;
+                  return (
+                    <div key={i} className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/40 hover:shadow-md transition-all duration-300">
+                      <div className="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
+                        <Icon className="w-5 h-5 text-secondary" />
+                      </div>
+                      <h4 className="text-base font-display font-bold text-foreground mb-2">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">{item.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Right: Solution narrative */}
+              <div className="space-y-6 lg:pt-4 order-1 lg:order-2">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-background text-sm font-medium text-secondary">
+                  <Sparkles className="w-4 h-4" />
+                  {t('solution.badge', 'COIREA Response')}
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground leading-tight">
+                  {t('solution.title')}{' '}
+                  <span className="text-primary">{t('solution.titleEmphasis')}</span>
+                </h3>
+                
+                <p className="text-muted-foreground font-body leading-relaxed">
+                  {t('solution.description')}
+                </p>
+
+                <div className="pt-2">
+                  <p className="text-foreground/80 font-body italic">
+                    {t('solution.closing')}{' '}
+                    <span className="font-semibold text-foreground not-italic">{t('solution.closingEmphasis')}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* SECTION 5 — PLANETARY LAYER */}
         <section className="py-24 bg-[hsl(var(--warm-beige))]">
