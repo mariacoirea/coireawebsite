@@ -250,7 +250,7 @@ const Purpose = () => {
 
         {/* SECTION — VISION + CTA */}
         <section className="relative py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(35,28%,30%)] via-[hsl(30,22%,25%)] to-[hsl(25,20%,20%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(33,20%,45%)] via-[hsl(30,18%,40%)] to-[hsl(28,16%,36%)]" />
           
           <div className="container relative z-10 px-6 max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/10 border border-background/20 text-background/80 text-sm font-medium backdrop-blur-sm mx-auto mb-8">
