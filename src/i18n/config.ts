@@ -11,7 +11,7 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'es'],
     defaultNS: 'common',
-    ns: ['common', 'home', 'about', 'offerings', 'journey', 'tools', 'insights', 'assessment', 'leadership', 'results', 'raices', 'platform'],
+    ns: ['common', 'home', 'about', 'offerings', 'journey', 'tools', 'insights', 'assessment', 'leadership', 'results', 'raices', 'platform', 'purpose'],
     
     detection: {
       order: ['path', 'localStorage', 'navigator'],

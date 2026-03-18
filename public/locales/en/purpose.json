@@ -1,0 +1,106 @@
+{
+  "seo": {
+    "title": "Built for Mission-Driven Organizations | COIREA",
+    "description": "COIREA helps mission-driven organizations align systems, strengthen execution, and scale impact without burnout. The intelligence layer for NGOs, impact startups, and regenerative organizations.",
+    "keywords": "mission-driven organizations, NGO platform, regenerative business, organizational intelligence, impact startups"
+  },
+  "hero": {
+    "title": "Built for Organizations",
+    "titleEmphasis": "Driven by Purpose",
+    "subtitle": "COIREA helps mission-driven organizations align their systems, strengthen execution, and scale their impact — without burning out their people or losing coherence.",
+    "supporting": "From NGOs to regenerative ecosystems, COIREA provides the structure and intelligence needed to operate in complex, purpose-led environments.",
+    "cta": "Explore the Platform"
+  },
+  "orgTypes": {
+    "title": "Who This Is For",
+    "items": [
+      {
+        "title": "NGOs",
+        "description": "Delivering impact under resource constraints, balancing teams, funders, and complex realities."
+      },
+      {
+        "title": "Impact Startups",
+        "description": "Scaling solutions with purpose while navigating growth, alignment, and execution pressure."
+      },
+      {
+        "title": "Regenerative Organizations",
+        "description": "Designing systems that restore rather than extract — requiring coherence across people and operations."
+      },
+      {
+        "title": "Ecosystems & Networks",
+        "description": "Coordinating multiple actors and stakeholders where alignment is distributed, not centralized."
+      },
+      {
+        "title": "Future of Work",
+        "description": "Building new ways of organizing — adaptive, human-centered, and beyond traditional hierarchy."
+      }
+    ]
+  },
+  "challenge": {
+    "title": "Different Missions.",
+    "titleEmphasis": "Same Structural Challenge.",
+    "intro": "Purpose-driven organizations often:",
+    "items": [
+      "Operate with strong intention but limited structural clarity",
+      "Rely on people's energy instead of system coherence",
+      "Struggle to align execution with mission as complexity grows",
+      "Experience burnout, fragmentation, or slow decision-making"
+    ],
+    "closing": "The challenge is not purpose.",
+    "closingEmphasis": "It's building a system that can sustain it."
+  },
+  "solution": {
+    "title": "Regenerative Execution Starts with",
+    "titleEmphasis": "System Intelligence",
+    "intro": "COIREA enables organizations to:",
+    "items": [
+      {
+        "title": "Align Mission & Execution",
+        "description": "Connect mission, strategy, and daily execution into one coherent system."
+      },
+      {
+        "title": "Detect System Tension",
+        "description": "Identify structural misalignment before it becomes organizational breakdown."
+      },
+      {
+        "title": "Protect Team Capacity",
+        "description": "Safeguard team energy and capacity while scaling impact."
+      },
+      {
+        "title": "Structure with Humanity",
+        "description": "Build governance structures without losing the human element."
+      }
+    ],
+    "closing": "This is what regenerative means in practice —",
+    "closingEmphasis": "not ideology, but how your system operates."
+  },
+  "gia": {
+    "title": "Intelligence That Understands",
+    "titleEmphasis": "Your System",
+    "description": "GiA interprets patterns within your organization — across leadership, collaboration, structure, and well-being.",
+    "intro": "It helps you see where your system is:",
+    "items": [
+      "Misaligned",
+      "Overloaded",
+      "Fragmented",
+      "Ready to evolve"
+    ],
+    "closing": "No generic benchmarks.",
+    "closingEmphasis": "Only insight grounded in your reality."
+  },
+  "planetary": {
+    "title": "From Organizational Coherence to",
+    "titleEmphasis": "Regenerative Impact",
+    "lines": [
+      "Organizations shape systems.",
+      "Systems shape outcomes."
+    ],
+    "description": "When organizations operate coherently — without extraction — they create the conditions for regenerative impact at scale.",
+    "closing": "COIREA supports this shift from the inside out."
+  },
+  "cta": {
+    "title": "See How It Works for Organizations Like Yours",
+    "primary": "Explore COIREA",
+    "secondary": "View Platform Overview"
+  }
+}
