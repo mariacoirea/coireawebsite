@@ -19,6 +19,7 @@ import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import PostEditor from "./pages/PostEditor";
 // import RaicesLatinas from "./pages/RaicesLatinas"; // Archived: Social Impact not in current stage
+import Purpose from "./pages/Purpose";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
