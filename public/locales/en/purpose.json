@@ -102,6 +102,28 @@
     "closing": "No generic benchmarks.",
     "closingEmphasis": "Only insight grounded in your reality."
   },
+  "health": {
+    "badge": "Start Here",
+    "title": "How Healthy Is",
+    "titleEmphasis": "Your Organization?",
+    "description": "Before you can transform your organization, you need to understand where it stands. Our free diagnostic tools give you immediate clarity on your organizational health, leadership coherence, and structural alignment.",
+    "ctaPrimary": "Take the Free Assessment",
+    "cardTitle": "Free Diagnostic Tools",
+    "tools": {
+      "ovi": {
+        "title": "Organizational Health Score",
+        "description": "Measure your organization across 5 systemic dimensions and receive an overall vitality score with actionable insights."
+      },
+      "leadership": {
+        "title": "Conscious Leadership Assessment",
+        "description": "Evaluate leadership coherence, presence, and alignment — the foundation of any healthy organization."
+      },
+      "scanner": {
+        "title": "Organizational Health Scanner",
+        "description": "A quick diagnostic to identify structural tensions and areas requiring immediate attention."
+      }
+    }
+  },
   "planetary": {
     "title": "From Organizational Coherence to",
     "titleEmphasis": "Regenerative Impact",
