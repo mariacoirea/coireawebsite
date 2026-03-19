@@ -46,6 +46,33 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-display font-semibold mb-6">{t('footer.quickLinks.title')}</h3>
+            <ul className="space-y-3 font-body">
+              <li>
+                <LocalizedLink to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.quickLinks.about')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/tools" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('header.nav.tools')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/insights" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.quickLinks.insights')}
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to="/journey" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  {t('footer.quickLinks.journey')}
+                </LocalizedLink>
+              </li>
+            </ul>
+          </div>
+
           {/* Platform */}
           <div>
             <h3 className="text-lg font-display font-semibold mb-6">{t('footer.platformFeatures.title')}</h3>
