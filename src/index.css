@@ -87,6 +87,7 @@
     /* Typography Scale */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Roboto', sans-serif;
+    --font-handwritten: 'Caveat', cursive;
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
