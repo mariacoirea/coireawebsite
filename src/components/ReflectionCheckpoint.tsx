@@ -26,7 +26,7 @@ const ReflectionCheckpoint = () => {
           >
             {t('reflection.heading')}
           </h2>
-          <p className="mt-3 text-lg md:text-xl text-muted-foreground max-w-6xl mx-auto leading-relaxed font-handwritten">
+          <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-6xl mx-auto leading-relaxed">
             {t('reflection.intro')}
           </p>
         </header>

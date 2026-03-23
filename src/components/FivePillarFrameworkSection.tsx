@@ -25,7 +25,7 @@ const FivePillarFrameworkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <header className="mx-auto max-w-6xl text-center animate-fade-in">
-          <p className="mb-4 text-lg font-handwritten text-secondary">
+          <p className="mb-4 text-sm font-medium text-secondary uppercase tracking-wider">
             {t('framework.badge', 'Regenerative Execution for Real Growth')}
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-primary uppercase">

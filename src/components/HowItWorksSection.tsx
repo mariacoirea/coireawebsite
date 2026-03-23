@@ -80,7 +80,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Bottom quote — handwritten style */}
-        <p className="text-center text-xl md:text-2xl text-foreground/70 font-handwritten max-w-3xl mx-auto leading-relaxed">
+        <p className="text-center text-lg md:text-xl text-foreground/70 font-body italic max-w-3xl mx-auto">
           {t('howItWorks.quote')}
         </p>
       </div>
