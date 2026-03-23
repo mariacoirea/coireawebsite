@@ -18,7 +18,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-secondary font-handwritten text-2xl mb-2">
+          <p className="text-secondary font-medium text-sm uppercase tracking-wider mb-2">
             {t('howItWorks.badge')}
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">
@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
                   {t(`howItWorks.phases.${key}.title`)}
                 </h3>
                 {/* Handwritten subtitle */}
-                <p className="text-lg text-secondary font-handwritten mt-1 mb-4">
+                <p className="text-sm text-secondary font-medium mt-1 mb-4">
                   {t(`howItWorks.phases.${key}.subtitle`)}
                 </p>
 
@@ -80,7 +80,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Bottom quote — handwritten style */}
-        <p className="text-center text-xl md:text-2xl text-foreground/70 font-handwritten max-w-3xl mx-auto leading-relaxed">
+        <p className="text-center text-lg md:text-xl text-foreground/70 font-body italic max-w-3xl mx-auto">
           {t('howItWorks.quote')}
         </p>
       </div>

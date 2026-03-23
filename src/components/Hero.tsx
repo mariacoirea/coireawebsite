@@ -29,7 +29,7 @@ const Hero = () => {
             <span className="block">{t('hero.titleLine3')}</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-primary/80 font-handwritten max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-primary/80 font-body font-light max-w-4xl mx-auto mb-8 leading-relaxed">
             {t('hero.description')}
           </p>
         </header>
