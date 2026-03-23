@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
                   {t(`howItWorks.phases.${key}.title`)}
                 </h3>
                 {/* Handwritten subtitle */}
-                <p className="text-lg text-secondary font-handwritten mt-1 mb-4">
+                <p className="text-sm text-secondary font-medium mt-1 mb-4">
                   {t(`howItWorks.phases.${key}.subtitle`)}
                 </p>
 
