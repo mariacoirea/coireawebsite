@@ -22,11 +22,11 @@ const ReflectionCheckpoint = () => {
         <header className="text-center mb-8 md:mb-12">
           <h2
             id="reflection-heading"
-            className="text-3xl md:text-5xl font-display font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent"
+            className="text-4xl md:text-5xl font-display font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent tracking-tight"
           >
             {t('reflection.heading')}
           </h2>
-          <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-6xl mx-auto leading-relaxed">
+          <p className="mt-3 text-lg md:text-xl text-muted-foreground max-w-6xl mx-auto leading-relaxed font-handwritten">
             {t('reflection.intro')}
           </p>
         </header>

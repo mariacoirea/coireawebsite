@@ -43,10 +43,10 @@ const AIAgentSection = () => {
       <div className="container px-4">
         {/* Header */}
         <div className="text-center max-w-5xl mx-auto mb-6">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-2 tracking-tight">
             {t('aiAgent.title', "Meet GiA: COIREA's Trained Organizational AI")}
           </h2>
-          <p className="text-xl text-secondary font-medium mb-6">
+          <p className="text-xl text-secondary font-handwritten mb-6">
             {t('aiAgent.subtitle', 'Your System Intelligence Layer')}
           </p>
         </div>

@@ -72,7 +72,8 @@ export default {
 			},
 			fontFamily: {
 				display: ['var(--font-display)', 'serif'],
-				body: ['var(--font-body)', 'sans-serif']
+				body: ['var(--font-body)', 'sans-serif'],
+				handwritten: ['var(--font-handwritten)', 'cursive']
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

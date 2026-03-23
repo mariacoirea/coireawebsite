@@ -25,10 +25,10 @@ const FivePillarFrameworkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <header className="mx-auto max-w-6xl text-center animate-fade-in">
-          <Badge variant="secondary" className="mb-4 text-sm">
+          <p className="mb-4 text-lg font-handwritten text-secondary">
             {t('framework.badge', 'Regenerative Execution for Real Growth')}
-          </Badge>
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary">
+          </p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-primary uppercase">
             {t('framework.heading', 'The COIREA Operating System')}
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground">
@@ -41,7 +41,7 @@ const FivePillarFrameworkSection = () => {
         </header>
 
         {/* Pillars Heading */}
-        <h3 className="mt-16 mb-10 text-center text-2xl md:text-3xl font-semibold text-foreground animate-fade-in">
+        <h3 className="mt-16 mb-10 text-center text-2xl md:text-3xl font-display font-bold text-foreground animate-fade-in">
           {t('framework.pillarsHeading', 'The Five Pillars of Systemic Health')}
         </h3>
 

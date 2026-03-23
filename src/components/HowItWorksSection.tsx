@@ -18,10 +18,10 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-secondary font-medium mb-2">
+          <p className="text-secondary font-handwritten text-2xl mb-2">
             {t('howItWorks.badge')}
           </p>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">
             {t('howItWorks.title')}
           </h2>
         </div>
@@ -51,11 +51,12 @@ const HowItWorksSection = () => {
                   <Icon className="h-7 w-7" aria-hidden="true" />
                 </div>
 
-                {/* Title & Subtitle */}
-                <h3 className="text-xl font-display font-bold text-foreground tracking-wide">
+                {/* Title — uppercase bold like the sketch */}
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-primary uppercase tracking-widest">
                   {t(`howItWorks.phases.${key}.title`)}
                 </h3>
-                <p className="text-sm text-secondary font-medium mt-1 mb-4">
+                {/* Handwritten subtitle */}
+                <p className="text-lg text-secondary font-handwritten mt-1 mb-4">
                   {t(`howItWorks.phases.${key}.subtitle`)}
                 </p>
 
@@ -78,8 +79,8 @@ const HowItWorksSection = () => {
           })}
         </div>
 
-        {/* Bottom quote */}
-        <p className="text-center text-lg md:text-xl text-foreground/70 font-body italic max-w-3xl mx-auto">
+        {/* Bottom quote — handwritten style */}
+        <p className="text-center text-xl md:text-2xl text-foreground/70 font-handwritten max-w-3xl mx-auto leading-relaxed">
           {t('howItWorks.quote')}
         </p>
       </div>

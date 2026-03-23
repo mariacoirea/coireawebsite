@@ -35,7 +35,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight tracking-tight">
             {t('services.heading')}
           </h2>
           
@@ -50,7 +50,7 @@ const ServicesSection = () => {
 
         {/* 3-Phase Cycle */}
         <div className="max-w-5xl mx-auto mb-20">
-          <h3 className="text-2xl md:text-3xl font-display font-semibold text-primary text-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-primary text-center mb-12">
             {t('services.phaseTitle')}
           </h3>
           
