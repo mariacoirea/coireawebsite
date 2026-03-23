@@ -35,7 +35,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-primary mb-6 leading-tight tracking-tight">
             {t('services.heading')}
           </h2>
           
