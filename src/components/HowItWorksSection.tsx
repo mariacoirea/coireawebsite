@@ -18,7 +18,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-secondary font-handwritten text-2xl mb-2">
+          <p className="text-secondary font-medium text-sm uppercase tracking-wider mb-2">
             {t('howItWorks.badge')}
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-tight">
