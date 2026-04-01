@@ -66,7 +66,7 @@ const About = () => {
               </div>
               
               <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                {t('mission.title')} <span className="text-sage">{t('mission.titleEmphasis')}</span>
+                <span className="text-sage">{t('mission.titleEmphasis')}</span>
               </h2>
               
               <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mb-8"></div>
