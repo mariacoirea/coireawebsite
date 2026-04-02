@@ -188,7 +188,7 @@ const Journey = () => {
         </section>
 
         {/* Main Form Section */}
-        <section className="py-20 px-6">
+        <section id="journey-form" className="py-20 px-6">
           <div className="container mx-auto max-w-4xl">
             <Card className="bg-card/60 backdrop-blur-sm border-primary/10">
               <CardHeader className="text-center">
