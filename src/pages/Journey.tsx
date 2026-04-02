@@ -157,22 +157,16 @@ const Journey = () => {
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
               {t('hero.title')}
             </h1>
-            <p className="text-xl text-foreground/80 font-body leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-xl text-foreground/80 font-body leading-relaxed mb-6 max-w-3xl mx-auto">
               {t('hero.description')}
             </p>
-            <p className="text-lg text-secondary font-medium mb-8">
+            <p className="text-lg text-foreground/60 font-body leading-relaxed mb-8 max-w-2xl mx-auto">
               {t('hero.note')}
             </p>
-            <div className="flex justify-center items-center space-x-8">
-              <div className="flex items-center space-x-2 px-4 py-2 bg-secondary/10 rounded-full">
-                <Target className="w-5 h-5 text-secondary" />
-                <span className="text-secondary font-body font-medium">{t('hero.features.proven')}</span>
-              </div>
-              <div className="flex items-center space-x-2 px-4 py-2 bg-primary/10 rounded-full">
-                <Lightbulb className="w-5 h-5 text-primary" />
-                <span className="text-primary font-body font-medium">{t('hero.features.regenerative')}</span>
-              </div>
-            </div>
+            <a href="#journey-form" className="inline-flex items-center space-x-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-body font-medium text-lg hover:bg-primary/90 transition-colors">
+              <span>{t('hero.cta')}</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         </section>
 

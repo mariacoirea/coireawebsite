@@ -8,13 +8,10 @@
     "successKeywords": "organizational intelligence, COIREA MVP, early access application, thank you"
   },
   "hero": {
-    "title": "Apply for Early Access to the COIREA MVP",
-    "description": "Be among the first organizations to experience the COIREA Organizational Intelligence Platform. Our MVP cohort is built for purpose-driven companies ready to measure culture, leadership, collaboration, and well-being through real-time intelligence.",
-    "features": {
-      "proven": "Limited Spots",
-      "regenerative": "Early Access"
-    },
-    "note": "Limited early-access spots available."
+    "title": "Join the First COIREA Cohort",
+    "description": "COIREA is opening its first cycle with a small number of organizations ready to understand how their system actually operates — and evolve it through real-time organizational intelligence.",
+    "note": "We are working with a limited number of teams to ensure depth, signal quality, and meaningful integration into their operating system.",
+    "cta": "Explore Participation"
   },
   "access": {
     "title": "What You'll Access",
