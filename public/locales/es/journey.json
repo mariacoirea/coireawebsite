@@ -8,13 +8,10 @@
     "successKeywords": "inteligencia organizacional, COIREA MVP, solicitud de acceso anticipado, gracias"
   },
   "hero": {
-    "title": "Solicita Acceso Anticipado al MVP de COIREA",
-    "description": "Sé de las primeras organizaciones en experimentar la Plataforma de Inteligencia Organizacional COIREA. Nuestra cohorte MVP está diseñada para empresas con propósito listas para medir cultura, liderazgo, colaboración y bienestar a través de inteligencia en tiempo real.",
-    "features": {
-      "proven": "Lugares Limitados",
-      "regenerative": "Acceso Anticipado"
-    },
-    "note": "Lugares limitados de acceso anticipado disponibles."
+    "title": "Únete a la Primera Cohorte COIREA",
+    "description": "COIREA abre su primer ciclo con un número reducido de organizaciones listas para comprender cómo opera realmente su sistema — y evolucionarlo a través de inteligencia organizacional en tiempo real.",
+    "note": "Trabajamos con un número limitado de equipos para asegurar profundidad, calidad de señal e integración significativa en su sistema operativo.",
+    "cta": "Explorar Participación"
   },
   "access": {
     "title": "Lo Que Tendrás Acceso",
