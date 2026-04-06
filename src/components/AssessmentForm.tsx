@@ -20,69 +20,56 @@ interface Question {
 }
 
 const questions: Question[] = [
-  // Purpose & Culture (7 questions)
-  { id: 'pc1', text: 'I feel my work contributes to a meaningful mission.', pillar: 'purposeCulture' },
+  // Purpose & Culture (4 questions)
   { id: 'pc2', text: 'Our purpose as a company is clear and lived.', pillar: 'purposeCulture' },
   { id: 'pc3', text: 'Company values are embodied in everyday behaviors.', pillar: 'purposeCulture' },
-  { id: 'pc4', text: 'I feel emotionally connected to the organization\'s vision.', pillar: 'purposeCulture' },
   { id: 'pc5', text: 'There is coherence between what we say and what we do.', pillar: 'purposeCulture' },
   { id: 'pc6', text: 'Our culture promotes belonging and authenticity.', pillar: 'purposeCulture' },
-  { id: 'pc7', text: 'I understand how my role supports the long-term direction.', pillar: 'purposeCulture' },
   
-  // Collaboration (7 questions)
+  // Collaboration (3 questions)
   { id: 'col1', text: 'Our team communicates openly and effectively.', pillar: 'collaboration' },
-  { id: 'col2', text: 'I feel heard and respected in group settings.', pillar: 'collaboration' },
   { id: 'col3', text: 'Feedback is shared constructively across levels.', pillar: 'collaboration' },
-  { id: 'col4', text: 'People collaborate across departments.', pillar: 'collaboration' },
   { id: 'col5', text: 'Conflict is navigated with maturity and care.', pillar: 'collaboration' },
-  { id: 'col6', text: 'I feel trust among team members is high.', pillar: 'collaboration' },
-  { id: 'col7', text: 'We regularly co-create solutions together.', pillar: 'collaboration' },
   
-  // Leadership & Conscious Leadership (14 questions)
-  // Organizational Leadership (external experience)
+  // Leadership (4 questions)
   { id: 'l1', text: 'Our leaders inspire through example, not just words.', pillar: 'leadership' },
-  { id: 'l2', text: 'Leadership listens, adapts, and evolves.', pillar: 'leadership' },
   { id: 'l3', text: 'There is accountability at all levels.', pillar: 'leadership' },
   { id: 'l4', text: 'I trust the integrity of decision-making.', pillar: 'leadership' },
   { id: 'l5', text: 'Leaders empower us rather than control us.', pillar: 'leadership' },
-  { id: 'l6', text: 'I feel encouraged to step into my own leadership.', pillar: 'leadership' },
-  { id: 'l7', text: 'Our leaders operate with clarity, courage, and presence.', pillar: 'leadership' },
-  // Self-Leadership (internal reflection)
+
+  // Self-Leadership (3 questions)
   { id: 'l8', text: 'I am aware of how my emotions affect my leadership.', pillar: 'selfLeadership' },
-  { id: 'l9', text: 'I recognize when I\'m leading from fear, control, or urgency.', pillar: 'selfLeadership' },
   { id: 'l10', text: 'I pause and choose how to respond, even under pressure.', pillar: 'selfLeadership' },
-  { id: 'l11', text: 'I lead with emotional presence, not performance.', pillar: 'selfLeadership' },
-  { id: 'l12', text: 'I prioritize coherence over productivity when needed.', pillar: 'selfLeadership' },
-  { id: 'l13', text: 'I make space for others\' emotions without needing to fix or manage them.', pillar: 'selfLeadership' },
   { id: 'l14', text: 'I lead from purpose and long-term vision, not just immediate demands.', pillar: 'selfLeadership' },
   
-  // Well-Being (7 questions)
+  // Well-Being (4 questions)
   { id: 'w1', text: 'I feel supported in managing stress and energy.', pillar: 'wellBeing' },
-  { id: 'w2', text: 'The company normalizes healthy work boundaries.', pillar: 'wellBeing' },
   { id: 'w3', text: 'Burnout is actively prevented, not just treated.', pillar: 'wellBeing' },
-  { id: 'w4', text: 'Emotional and mental health is acknowledged.', pillar: 'wellBeing' },
   { id: 'w5', text: 'I feel safe taking time to rest and recharge.', pillar: 'wellBeing' },
-  { id: 'w6', text: 'Leadership models well-being by example.', pillar: 'wellBeing' },
   { id: 'w7', text: 'Our work rhythm feels regenerative, not extractive.', pillar: 'wellBeing' },
   
-  // Organizational Strategy (7 questions)
+  // Organizational Strategy (4 questions)
   { id: 'os1', text: 'Our strategic goals are clear and aligned with our purpose.', pillar: 'organizationalStrategy' },
-  { id: 'os2', text: 'Long-term thinking guides daily decisions.', pillar: 'organizationalStrategy' },
-  { id: 'os3', text: 'I understand how decisions are made across the org.', pillar: 'organizationalStrategy' },
   { id: 'os4', text: 'Our structure supports agility, not bureaucracy.', pillar: 'organizationalStrategy' },
   { id: 'os5', text: 'There is space for experimentation and iteration.', pillar: 'organizationalStrategy' },
-  { id: 'os6', text: 'Strategy evolves based on learning, not rigidity.', pillar: 'organizationalStrategy' },
   { id: 'os7', text: 'I feel part of the strategic evolution of the company.', pillar: 'organizationalStrategy' },
   
-  // Interconnectivity (7 questions)
-  { id: 'i1', text: 'Our purpose flows clearly into how we collaborate.', pillar: 'interconnectivity' },
-  { id: 'i2', text: 'Leadership reinforces both strategy and culture.', pillar: 'interconnectivity' },
+  // Interconnectivity (3 questions)
   { id: 'i3', text: 'There is alignment between our values and operations.', pillar: 'interconnectivity' },
   { id: 'i4', text: 'Well-being is considered when setting goals or timelines.', pillar: 'interconnectivity' },
-  { id: 'i5', text: 'Strategic decisions take collaboration and team input into account.', pillar: 'interconnectivity' },
-  { id: 'i6', text: 'Communication flows fluidly between leadership and teams.', pillar: 'interconnectivity' },
   { id: 'i7', text: 'Our organization feels like a connected whole, not separate silos.', pillar: 'interconnectivity' },
 ];
+
+// Number of questions per pillar for percentage calculation
+const pillarQuestionCounts: Record<string, number> = {
+  purposeCulture: 4,
+  collaboration: 3,
+  leadership: 4,
+  selfLeadership: 3,
+  wellBeing: 4,
+  organizationalStrategy: 4,
+  interconnectivity: 3,
+};
 
 const pillarNames = {
   purposeCulture: 'Purpose & Culture',
@@ -94,12 +81,14 @@ const pillarNames = {
   interconnectivity: 'Interconnectivity'
 };
 
+const TOTAL_QUESTIONS = 25;
+
 const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
   const { t } = useTranslation('assessment');
   const { currentLanguage } = useLanguage();
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [currentPillarIndex, setCurrentPillarIndex] = useState(0);
-  // Get translated questions
+
   const getQuestionText = (questionId: string) => {
     return t(`questions.${questionId}`);
   };
@@ -122,6 +111,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
   const handleNext = () => {
     if (currentPillarIndex < pillars.length - 1) {
       setCurrentPillarIndex(currentPillarIndex + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       calculateResults();
     }
@@ -130,6 +120,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
   const handlePrevious = () => {
     if (currentPillarIndex > 0) {
       setCurrentPillarIndex(currentPillarIndex - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -144,31 +135,39 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       interconnectivity: 0
     };
 
-    // Calculate pillar scores
     questions.forEach(question => {
       const score = answers[question.id] || 0;
       pillarScores[question.pillar] += score;
     });
 
-    // Calculate organizational health total (5 main pillars)
+    // Calculate percentage per pillar (each question max = 5)
+    const pillarPercentages: Record<string, number> = {};
+    for (const [pillar, score] of Object.entries(pillarScores)) {
+      const maxScore = pillarQuestionCounts[pillar] * 5;
+      pillarPercentages[pillar] = Math.round((score / maxScore) * 100);
+    }
+
+    // Main pillars for overall score
     const mainPillars = ['purposeCulture', 'collaboration', 'leadership', 'wellBeing', 'organizationalStrategy'] as const;
+    const mainPillarPercentages = mainPillars.map(p => pillarPercentages[p]);
+    const overallPercent = Math.round(mainPillarPercentages.reduce((a, b) => a + b, 0) / mainPillars.length);
+
     const totalScore = mainPillars.reduce((sum, pillar) => sum + pillarScores[pillar], 0);
     
-    // Separate interconnectivity and self-leadership scores
     const interconnectivityScore = pillarScores.interconnectivity;
     const selfLeadershipScore = pillarScores.selfLeadership;
-    const selfLeadershipPercent = Math.round((selfLeadershipScore / 35) * 100);
+    const selfLeadershipPercent = Math.round((selfLeadershipScore / (pillarQuestionCounts.selfLeadership * 5)) * 100);
 
-    // Determine organizational status based on new tiers (out of 175 total)
+    // Status based on overall percentage
     let organizationalStatus = '';
-    if (totalScore <= 60) organizationalStatus = 'Misaligned';
-    else if (totalScore <= 100) organizationalStatus = 'Emerging';
-    else if (totalScore <= 135) organizationalStatus = 'Stabilizing';
-    else if (totalScore <= 160) organizationalStatus = 'Evolving';
+    if (overallPercent <= 30) organizationalStatus = 'Misaligned';
+    else if (overallPercent <= 50) organizationalStatus = 'Emerging';
+    else if (overallPercent <= 65) organizationalStatus = 'Stabilizing';
+    else if (overallPercent <= 80) organizationalStatus = 'Evolving';
     else organizationalStatus = 'Thriving';
 
-    // Find pain point (lowest score) and strength (highest score) from main pillars only
-    const mainPillarEntries = mainPillars.map(pillar => [pillar, pillarScores[pillar]] as const);
+    // Find pain point and strength from main pillars
+    const mainPillarEntries = mainPillars.map(pillar => [pillar, pillarPercentages[pillar]] as const);
     const lowestPillar = mainPillarEntries.reduce((min, current) => 
       current[1] < min[1] ? current : min
     );
@@ -179,7 +178,6 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
     const painPoint = pillarNames[lowestPillar[0]];
     const strength = pillarNames[highestPillar[0]];
 
-    // Pass language to results
     onComplete({
       pillarScores,
       totalScore,
@@ -189,8 +187,7 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
       organizationalStatus,
       painPoint,
       strength,
-      language: currentLanguage
-    } as any);
+    });
   };
 
   return (
@@ -203,10 +200,13 @@ const AssessmentForm = ({ onComplete }: AssessmentFormProps) => {
                 {t(`pillars.${currentPillar}`)}
               </CardTitle>
               <span className="text-sm text-muted-foreground font-body">
-                {t('navigation.progress', { answered: totalAnswered, total: 55 })}
+                {t('navigation.progress', { answered: totalAnswered, total: TOTAL_QUESTIONS })}
               </span>
             </div>
             <Progress value={progress} className="w-full" />
+            <p className="text-xs text-muted-foreground mt-2 font-body">
+              {currentPillarIndex + 1} / {pillars.length} {t('navigation.sections') || 'sections'}
+            </p>
           </CardHeader>
           
           <CardContent className="space-y-8">

@@ -4,42 +4,51 @@
     "overallScore": "Overall Score",
     "organizationalStatus": "Organizational Status",
     "pillarBreakdown": "Pillar Breakdown",
-    "selfLeadership": "Self-Leadership Assessment",
-    "painPoint": "Greatest Challenge",
-    "strength": "Greatest Strength",
-    "interconnectivity": "Interconnectivity",
+    "selfLeadership": "Self-Leadership",
+    "painPoint": "Challenge",
+    "strength": "Strength",
+    "interconnectivity": "System Interconnectivity",
     "greatestChallenge": "Greatest Challenge",
     "greatestStrength": "Greatest Strength",
-    "resultsSent": "Success! Your results have been sent to your email.",
+    "resultsSent": "Your results have been sent to your email",
+    "ctaDescription": "We've sent a detailed copy of your organizational health assessment. Ready to explore what these insights mean for your team?",
+    "exploreJourney": "Explore Participation",
     "retakeButton": "Retake Assessment",
     "statusMessages": {
-      "Misaligned": "Your organization shows significant disconnection from purpose. Focus on foundational alignment and cultural clarity.",
-      "Emerging": "Basic structures exist but need strengthening. Prioritize leadership development and cross-functional collaboration.",
-      "Stabilizing": "Good foundation with room for optimization. Focus on innovation and strategic coherence.",
-      "Evolving": "Strong organizational health with clear momentum. Continue advancing integration and adaptive capacity.",
-      "Thriving": "Exceptional organizational alignment and vitality. Maintain excellence while exploring regenerative leadership practices."
+      "Misaligned": "Your organization shows significant disconnection across pillars. This is a powerful starting point — awareness is the first step toward systemic realignment.",
+      "Emerging": "Basic structures exist but need strengthening. Your organization is beginning to build the foundations for healthier ways of operating.",
+      "Stabilizing": "A solid foundation is forming. Focus on deepening coherence between what you value and how you operate day-to-day.",
+      "Evolving": "Strong organizational health with clear momentum. Your systems are maturing and there's real alignment between purpose, people, and strategy.",
+      "Thriving": "Exceptional alignment and vitality. Your organization is operating regeneratively — sustaining performance while nurturing the people and culture behind it."
     },
     "painPointMessages": {
-      "Purpose & Culture": "Your lowest score is in Purpose & Culture. This signals a misalignment between your values and day-to-day behaviors. When people don't feel emotionally connected to a shared mission, or the culture doesn't reflect the stated purpose, energy and trust begin to erode. This weakens belonging, motivation, and long-term alignment.",
-      "Collaboration": "Your lowest score is in Collaboration. This suggests friction or fragmentation in how people work together. Poor communication, silos, or lack of shared ownership can quietly drain momentum. Without strong collaboration, teams lose their creative and connective power.",
-      "Leadership": "Your lowest score is in Leadership. This means leadership may not be offering clarity, inspiration, or trust. When leadership feels distant, reactive, or disconnected, it affects every other layer of the organization. Healing begins with presence, transparency, and relational trust.",
-      "Well-Being": "Your lowest score is in Well-Being. This points to burnout, fatigue, or emotional disconnection. Well-being is not a luxury — it's the energetic baseline of a regenerative organization. Without it, purpose fades and performance suffers. This is a call to slow down and recalibrate.",
-      "Organizational Strategy": "Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical or misaligned with reality, teams lose direction. A regenerative organization flows from inner clarity into outer execution — this pillar needs a re-tuning."
+      "Purpose & Culture": "Your lowest score is in Purpose & Culture. This signals a gap between your stated values and everyday behaviors. When people don't feel emotionally connected to a shared mission, trust and energy begin to erode quietly.",
+      "Collaboration": "Your lowest score is in Collaboration. This suggests friction in how people work together — whether through silos, poor feedback loops, or unresolved conflict. Without strong collaboration, teams lose their creative and connective power.",
+      "Leadership": "Your lowest score is in Leadership. This means leadership may not be offering the clarity, trust, or empowerment people need. When leadership feels distant or reactive, it impacts every other layer of the organization.",
+      "Well-Being": "Your lowest score is in Well-Being. This points to burnout, fatigue, or a rhythm that's depleting rather than sustaining. Well-being isn't a perk — it's the energetic baseline of a regenerative organization.",
+      "Organizational Strategy": "Your lowest score is in Organizational Strategy. This reveals that structure may be rigid, unclear, or disconnected from your purpose. When strategy feels mechanical, teams lose direction and motivation."
+    },
+    "strengthMessages": {
+      "Purpose & Culture": "Purpose & Culture is your strongest pillar. Your team feels connected to a meaningful mission and your values are lived, not just stated. This is a powerful anchor for transformation.",
+      "Collaboration": "Collaboration is your strongest pillar. Your teams communicate well, navigate conflict with care, and share feedback constructively. This connective strength can fuel growth across other areas.",
+      "Leadership": "Leadership is your strongest pillar. Your leaders inspire trust, empower others, and lead with accountability. This sets the tone for the entire organization.",
+      "Well-Being": "Well-Being is your strongest pillar. Your organization actively supports sustainable rhythms, healthy boundaries, and genuine care for people. This is the foundation of long-term resilience.",
+      "Organizational Strategy": "Organizational Strategy is your strongest pillar. Your goals are clear, your structure supports agility, and people feel part of the strategic evolution. This clarity drives focused execution."
     },
     "selfLeadershipMessages": {
-      "Below the Line": "You are likely operating in reactive leadership patterns (urgency, fear, control), and your organization reflects that disconnection.",
-      "In Transition": "You're awakening. Both your leadership and your org are shifting — but full embodiment and consistency are still maturing.",
-      "Conscious Leadership Emerging": "You are leading with emotional intelligence and holding relational trust — but there's still growth to stabilize the culture around you.",
-      "Regenerative Leadership Embodied": "You and your organization are operating from clarity, trust, and integrity. You are modeling regenerative leadership that inspires transformation."
+      "Below the Line": "You may be operating in reactive patterns — urgency, fear, or control. This is not a judgment, but a signal. The organization often mirrors its leaders' inner state.",
+      "In Transition": "You're awakening to deeper leadership patterns. Both your inner awareness and your organization are shifting — but consistency is still maturing.",
+      "Conscious Leadership Emerging": "You lead with emotional intelligence and relational trust. There's still room to deepen, but your foundation is strong.",
+      "Regenerative Leadership Embodied": "You operate from clarity, trust, and integrity. You're modeling the kind of leadership that creates systemic transformation."
     },
     "interconnectivityMessages": {
       "low": {
         "title": "Limited Interconnectivity",
-        "message": "Your organizational pillars are operating somewhat independently. While each area may function well, there's opportunity to strengthen connections and create synergy across domains."
+        "message": "Your organizational pillars are operating somewhat independently. Decisions in one area may not account for their impact elsewhere. Strengthening cross-pillar awareness can unlock systemic resilience."
       },
       "strong": {
         "title": "Strong Interconnectivity",
-        "message": "Your organizational pillars reinforce each other effectively. This interconnectedness creates resilience and accelerates growth across all areas."
+        "message": "Your pillars reinforce each other. Decisions consider wellbeing, strategy, and culture together — creating a system that's greater than the sum of its parts."
       }
     }
   },
