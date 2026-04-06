@@ -254,14 +254,14 @@ const AssessmentResults = ({ results, onRetake }: AssessmentResultsProps) => {
               {t('organizational.resultsSent')}
             </h3>
             <p className="text-foreground/70 font-body leading-relaxed mb-6 max-w-xl mx-auto">
-              {t('organizational.ctaDescription') || 'Your detailed results have been sent to your email. Ready to explore what these insights mean for your organization?'}
+              {t('organizational.ctaDescription', 'We\'ve sent a detailed copy of your organizational health assessment. Ready to explore what these insights mean for your team?')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="/journey"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-body font-medium hover:bg-primary/90 transition-colors"
               >
-                {t('organizational.exploreJourney') || 'Explore Participation'}
+                {t('organizational.exploreJourney', 'Explore Participation')}
                 <ArrowRight className="w-4 h-4" />
               </a>
               <Button variant="ghost" onClick={onRetake} className="text-muted-foreground">
