@@ -10,41 +10,41 @@
   },
   "scanner": {
     "title": "COIREA Organizational Health Scanner",
-    "intro1": "A comprehensive diagnostic tool that assesses your organization's health across five regenerative pillars.",
-    "intro2": "Answer 55 questions covering organizational health, leadership dynamics, and system interconnectivity to receive an instant diagnostic of your organization's overall well-being, leadership consciousness, pain points, and strengths.",
-    "pillarsTitle": "Assessment Pillars:",
+    "intro1": "A focused diagnostic tool that assesses your organization's health across seven regenerative dimensions in just 25 questions.",
+    "intro2": "Receive an instant diagnostic of your organization's overall well-being, leadership consciousness, systemic interconnectivity, pain points, and strengths.",
+    "pillarsTitle": "Assessment Dimensions:",
     "pillars": {
-      "purposeCulture": "Purpose & Culture (7)",
-      "collaboration": "Collaboration (7)",
-      "leadership": "Leadership (14)",
-      "wellBeing": "Well-Being (7)",
-      "strategy": "Organizational Strategy (7)"
+      "purposeCulture": "Purpose & Culture (4)",
+      "collaboration": "Collaboration (3)",
+      "leadership": "Leadership & Self-Leadership (7)",
+      "wellBeing": "Well-Being (4)",
+      "strategy": "Strategy & Interconnectivity (7)"
     },
-    "duration": "Takes approximately 12-15 minutes to complete",
-    "results": "Receive instant results with organizational health & leadership consciousness insights",
+    "duration": "Takes approximately 5-7 minutes to complete",
+    "results": "Receive instant results with your OVI score, pillar breakdown, and personalized insights",
     "startButton": "Start Your Organizational Health Scan"
   },
   "faqTitle": "Frequently Asked Questions About Our Assessment Tools",
   "faqs": [
     {
       "question": "What is the Organizational Health Scanner and how does it work?",
-      "answer": "The Organizational Health Scanner is a comprehensive assessment tool that evaluates two critical dimensions of organizational success: your organization's structural health and your leadership team's consciousness level. It combines questions about organizational systems, culture, and leadership practices to provide a holistic view of where you are and where you need to focus."
+      "answer": "The Organizational Health Scanner is a focused 25-question diagnostic that evaluates your organization across seven dimensions: Purpose & Culture, Collaboration, Leadership, Self-Leadership, Well-Being, Organizational Strategy, and Interconnectivity. You receive an instant OVI (Organizational Vitality Index) score with actionable insights."
     },
     {
       "question": "How long does the assessment take?",
-      "answer": "The complete assessment typically takes 15-20 minutes to complete thoughtfully. We recommend taking it when you have uninterrupted time to reflect on each question, as the quality of your responses directly impacts the accuracy of your results and recommendations."
+      "answer": "The assessment takes approximately 5-7 minutes to complete. We recommend taking it when you have a few uninterrupted minutes to reflect honestly on each question."
     },
     {
       "question": "Who should take this assessment?",
-      "answer": "This assessment is designed for organizational leaders, executives, and decision-makers who are responsible for or deeply invested in their organization's health and performance. It's particularly valuable for leadership teams considering transformation initiatives or those seeking to understand why their current approaches aren't delivering desired results."
+      "answer": "This assessment is designed for organizational leaders, executives, and decision-makers who are responsible for or deeply invested in their organization's health and performance. It's particularly valuable for leadership teams considering transformation initiatives."
     },
     {
       "question": "What will I receive after completing the assessment?",
-      "answer": "You'll receive a detailed analysis of your organization's current state across both dimensions, personalized recommendations for your specific situation, and a clear understanding of where to focus your transformation efforts. The results will be emailed to you immediately upon completion, and you'll also have the option to schedule a consultation to discuss your results in depth."
+      "answer": "You'll receive a detailed OVI score, a visual breakdown of each pillar's health, identification of your greatest strength and challenge, a self-leadership consciousness reading, and a systemic interconnectivity score — all sent to your email."
     },
     {
       "question": "Is my information confidential?",
-      "answer": "Absolutely. All assessment responses and results are kept strictly confidential. We use your information only to provide you with personalized insights and recommendations. We never share individual assessment data with third parties, and you have complete control over whether you'd like to discuss your results with our team."
+      "answer": "Absolutely. All assessment responses and results are kept strictly confidential. We use your information only to provide you with personalized insights and recommendations."
     }
   ]
 }

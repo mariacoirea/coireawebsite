@@ -10,41 +10,41 @@
   },
   "scanner": {
     "title": "Escáner de Salud Organizacional COIREA",
-    "intro1": "Una herramienta de diagnóstico integral que evalúa la salud de tu organización a través de cinco pilares regenerativos.",
-    "intro2": "Responde 55 preguntas que cubren salud organizacional, dinámicas de liderazgo e interconectividad sistémica para recibir un diagnóstico instantáneo del bienestar general de tu organización, conciencia de liderazgo, puntos de dolor y fortalezas.",
-    "pillarsTitle": "Pilares de Evaluación:",
+    "intro1": "Una herramienta de diagnóstico enfocada que evalúa la salud de tu organización a través de siete dimensiones regenerativas en solo 25 preguntas.",
+    "intro2": "Recibe un diagnóstico instantáneo del bienestar general de tu organización, conciencia de liderazgo, interconectividad sistémica, puntos de dolor y fortalezas.",
+    "pillarsTitle": "Dimensiones de Evaluación:",
     "pillars": {
-      "purposeCulture": "Propósito y Cultura (7)",
-      "collaboration": "Colaboración (7)",
-      "leadership": "Liderazgo (14)",
-      "wellBeing": "Bienestar (7)",
-      "strategy": "Estrategia Organizacional (7)"
+      "purposeCulture": "Propósito y Cultura (4)",
+      "collaboration": "Colaboración (3)",
+      "leadership": "Liderazgo y Liderazgo Personal (7)",
+      "wellBeing": "Bienestar (4)",
+      "strategy": "Estrategia e Interconectividad (7)"
     },
-    "duration": "Toma aproximadamente 12-15 minutos completar",
-    "results": "Recibe resultados instantáneos con perspectivas sobre salud organizacional y conciencia de liderazgo",
+    "duration": "Toma aproximadamente 5-7 minutos completar",
+    "results": "Recibe resultados instantáneos con tu puntuación OVI, desglose por pilares y perspectivas personalizadas",
     "startButton": "Comienza Tu Escaneo de Salud Organizacional"
   },
   "faqTitle": "Preguntas Frecuentes Sobre Nuestras Herramientas de Evaluación",
   "faqs": [
     {
-      "question": "¿Cuánto tiempo toman las evaluaciones?",
-      "answer": "El Escáner de Salud Organizacional toma aproximadamente 12-15 minutos (55 preguntas), mientras que la Evaluación de Liderazgo Consciente toma 15-20 minutos (84 preguntas). Ambas están diseñadas para ser integrales pero eficientes."
+      "question": "¿Qué es el Escáner de Salud Organizacional y cómo funciona?",
+      "answer": "El Escáner de Salud Organizacional es un diagnóstico enfocado de 25 preguntas que evalúa tu organización en siete dimensiones: Propósito y Cultura, Colaboración, Liderazgo, Liderazgo Personal, Bienestar, Estrategia Organizacional e Interconectividad. Recibes una puntuación OVI (Índice de Vitalidad Organizacional) instantánea con perspectivas accionables."
     },
     {
-      "question": "¿Cómo se calculan los resultados?",
-      "answer": "Los resultados se calculan usando marcos validados que evalúan múltiples dimensiones de la salud organizacional y la efectividad del liderazgo. Tus respuestas se analizan para identificar fortalezas, desafíos y oportunidades específicas de crecimiento."
+      "question": "¿Cuánto tiempo toma la evaluación?",
+      "answer": "La evaluación toma aproximadamente 5-7 minutos completar. Recomendamos tomarla cuando tengas unos minutos ininterrumpidos para reflexionar honestamente sobre cada pregunta."
     },
     {
-      "question": "¿Puedo retomar las evaluaciones más tarde?",
-      "answer": "Actualmente, las evaluaciones están diseñadas para ser completadas en una sesión para asegurar la consistencia en tus respuestas. Sin embargo, puedes retomar cualquiera de las evaluaciones en cualquier momento para rastrear tu progreso a lo largo del tiempo."
+      "question": "¿Quién debería tomar esta evaluación?",
+      "answer": "Esta evaluación está diseñada para líderes organizacionales, ejecutivos y tomadores de decisiones que son responsables o están profundamente invertidos en la salud y el rendimiento de su organización."
     },
     {
-      "question": "¿Quién verá mis resultados?",
-      "answer": "Tus resultados son confidenciales. Recibirás un análisis detallado por correo electrónico, y solo tú y el equipo de COIREA tenemos acceso a tu información con fines de apoyo y seguimiento."
+      "question": "¿Qué recibiré después de completar la evaluación?",
+      "answer": "Recibirás una puntuación OVI detallada, un desglose visual de la salud de cada pilar, identificación de tu mayor fortaleza y desafío, una lectura de conciencia de liderazgo personal, y una puntuación de interconectividad sistémica — todo enviado a tu correo."
     },
     {
-      "question": "¿Qué pasa después de completar una evaluación?",
-      "answer": "Recibirás resultados detallados por correo electrónico con recomendaciones personalizadas. También tendrás la oportunidad de agendar una llamada de claridad gratuita con nuestro equipo para discutir tus resultados y explorar los siguientes pasos para tu desarrollo."
+      "question": "¿Es confidencial mi información?",
+      "answer": "Absolutamente. Todas las respuestas y resultados de la evaluación se mantienen estrictamente confidenciales. Usamos tu información solo para proporcionarte perspectivas y recomendaciones personalizadas."
     }
   ]
 }
