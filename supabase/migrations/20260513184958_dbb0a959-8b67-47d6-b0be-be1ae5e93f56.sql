@@ -1,0 +1,1 @@
+UPDATE public.posts SET slug = ltrim(slug, '/') WHERE slug LIKE '/%';
