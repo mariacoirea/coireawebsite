@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import purposeHero from "@/assets/purpose-hero.jpg";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
