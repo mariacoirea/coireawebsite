@@ -1,7 +1,7 @@
 {
   "header": {
     "nav": {
-      "about": "Acerca de",
+      "about": "Visión",
       "platform": "Plataforma",
       "insights": "Perspectivas",
       "tools": "Herramientas",
@@ -20,7 +20,7 @@
     },
     "quickLinks": {
       "title": "Enlaces Rápidos",
-      "about": "Acerca de",
+      "about": "Visión",
       "platform": "Plataforma",
       "insights": "Perspectivas",
       "journey": "Comenzar Viaje"

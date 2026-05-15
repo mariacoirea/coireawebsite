@@ -250,6 +250,58 @@ const About = () => {
           </div>
         </section>
 
+        {/* Why COIREA Is Inspired by Nature */}
+        <section className="py-24 px-6 bg-gradient-to-b from-background via-warm-beige/40 to-background">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 bg-sage/10 px-6 py-3 rounded-full border border-sage/20 shadow-sm mb-8">
+                <TreePine className="w-4 h-4 text-sage" />
+                <span className="text-primary font-medium">Living Systems</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-display font-semibold text-primary leading-tight">
+                Why COIREA Is <span className="italic text-sage">Inspired by Nature</span>
+              </h2>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto mt-8"></div>
+            </div>
+
+            <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-10 md:p-14 shadow-elegant border border-primary/10 space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
+              <p>Much of what is currently labelled "resilience" is asking people to endure unhealthy conditions for longer. That is not the model we follow.</p>
+              <p>From a regenerative perspective, resilience is the capacity of a living system to adapt, respond, and transform — while remaining in right-relationship with itself, with others, and with the wider ecosystems it depends on. Nature has been perfecting this logic for billions of years. We simply decided to pay attention.</p>
+              <p>Organizations are living systems. Yet most organizational frameworks were built on a mechanical metaphor — optimize, control, extract. COIREA was built on a different one.</p>
+              <p>Living systems require healthy nervous systems, strong relationships, coherent values, and clear feedback loops. They learn, adjust, and evolve constantly. Their structures are flexible because rigidity is what breaks — not what protects.</p>
+              <p>Without these foundations, no strategy, no transformation plan, and no wellbeing initiative will hold. This is why COIREA is designed the way it is: not as a methodology to apply, but as a living container to trust.</p>
+              <p className="text-primary font-medium italic">Nature didn't invent these principles for organizations. It invented them for survival. We borrowed them because they work.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Vision Section */}
+        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto max-w-5xl text-center">
+            <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
+              <Eye className="w-4 h-4 text-primary" />
+              <span className="text-primary font-medium">Our Vision</span>
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-10 leading-tight">
+              A world where organizations <span className="italic text-sage">give life</span> — not drain it.
+            </h2>
+
+            <div className="space-y-6 text-xl text-foreground/80 font-body leading-relaxed max-w-3xl mx-auto mb-12">
+              <p>We didn't build COIREA to make organizations more efficient. We built it because we believe a different kind of organization is possible — coherent, human, and genuinely good for the people inside it.</p>
+              <p className="text-primary font-medium">People who are well. Coherent systems. Organizations that regenerate.</p>
+              <p className="italic text-primary/80">One organization at a time.</p>
+            </div>
+
+            <LocalizedLink to="/journey#journey-start">
+              <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
+                {t('cta.button')}
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </LocalizedLink>
+          </div>
+        </section>
+
         {/* FAQ Section for SEO */}
         <section className="py-24 px-6 bg-background">
           <div className="container mx-auto max-w-4xl">
@@ -271,31 +323,6 @@ const About = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto max-w-6xl text-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <div className="relative p-12">
-                <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  {t('cta.title')}
-                </h2>
-                
-                <p className="text-xl text-primary/80 font-body mb-12 max-w-3xl mx-auto">
-                  {t('cta.subtitle')}
-                </p>
-                
-                <LocalizedLink to="/journey#journey-start">
-                  <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
-                    {t('cta.button')}
-                    <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Button>
-                </LocalizedLink>
-              </div>
             </div>
           </div>
         </section>
