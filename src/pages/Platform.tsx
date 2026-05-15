@@ -35,6 +35,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 import platformDashboardPreview from "@/assets/platform-dashboard-preview.png";
+import coireaCycleBg from "@/assets/coirea-cycle-bg.png";
 
 const Platform = () => {
   const { t } = useTranslation('platform');
