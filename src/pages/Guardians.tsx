@@ -3,8 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Eye, GitBranch, Zap, Anchor, User, Check, CircleDotDashed } from "lucide-react";
+import { Eye, GitBranch, Zap, Anchor, User, Check } from "lucide-react";
 import { toast } from "sonner";
+import guardiansHero from "@/assets/guardians-hero.jpg";
 
 const Guardians = () => {
   const { i18n } = useTranslation();
