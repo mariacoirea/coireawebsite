@@ -327,31 +327,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Enhanced CTA Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto max-w-6xl text-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sage/5 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <div className="relative p-12">
-                <h2 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-8 leading-tight">
-                  {t('cta.title')}
-                </h2>
-                
-                <p className="text-xl text-primary/80 font-body mb-12 max-w-3xl mx-auto">
-                  {t('cta.subtitle')}
-                </p>
-                
-                <LocalizedLink to="/journey#journey-start">
-                  <Button className="bg-primary text-white hover:bg-primary/90 px-12 py-6 rounded-full font-body font-semibold text-xl shadow-elegant transition-all duration-300 hover:scale-105 group">
-                    {t('cta.button')}
-                    <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Button>
-                </LocalizedLink>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Stress Statistics Section */}
         <section className="py-16 px-6 bg-background border-t border-primary/10">
           <div className="container mx-auto max-w-4xl text-center">
