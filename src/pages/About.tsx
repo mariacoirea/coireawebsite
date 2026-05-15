@@ -29,31 +29,28 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main id="main-content" className="pt-20">
-        {/* Enhanced Hero Section with New Landscape Background */}
-        <section 
-          className="min-h-[80vh] flex items-center justify-center relative overflow-hidden py-20"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(250, 248, 246, 0.7) 0%, rgba(246, 240, 233, 0.6) 30%, rgba(91, 108, 73, 0.15) 70%, rgba(74, 124, 122, 0.2) 100%), url(/lovable-uploads/8143fc2b-3b48-4a24-9ace-393341a0f118.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center bottom',
-            backgroundAttachment: 'fixed'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-aura-pearl/20 via-transparent to-primary/10"></div>
-          
-          {/* Subtle decorative elements for visual consistency */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-sage/10 rounded-full blur-3xl opacity-50"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl opacity-30"></div>
-          
-          <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-primary mb-8 leading-tight drop-shadow-sm">
-              {t('hero.title')} <span className="italic">{t('hero.titleEmphasis')}</span>
+        {/* Hero Section — Ethereal Mesh */}
+        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-[hsl(40,30%,97%)]">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-sage/25 blur-[120px]" />
+            <div className="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-copper/20 blur-[100px]" />
+            <div className="absolute top-[20%] right-[15%] w-[400px] h-[400px] rounded-full bg-[hsl(var(--olive-green))]/15 blur-[90px]" />
+            <div className="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] rounded-full bg-[hsl(var(--warm-beige))]/60 blur-[110px]" />
+          </div>
+
+          <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl py-20">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold mb-8 leading-tight">
+              <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
+                {t('hero.title')} <span className="italic">{t('hero.titleEmphasis')}</span>
+              </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-primary/90 font-body font-light max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+
+            <p className="text-xl md:text-2xl text-primary/75 font-body font-light max-w-4xl mx-auto leading-relaxed">
               {t('hero.subtitle')}
             </p>
           </div>
+
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
         </section>
 
         {/* Mission Section */}
