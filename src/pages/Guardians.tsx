@@ -115,26 +115,17 @@ const Guardians = () => {
                   "Cada Guardián trae su propio propósito, trayectoria y práctica interior al trabajo. COIREA les da el sistema y la red. Ellos traen la presencia que lo hace real."
                 )}</p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
-                {compass.map(({ icon: Icon, t: ct, d }) => (
-                  <div key={ct} className="rounded-xl p-5 bg-background/70 backdrop-blur-sm border border-border">
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3 bg-accent/10 border border-accent/30">
-                      <Icon className="w-4 h-4 text-accent" />
-                    </div>
-                    <div className="font-body text-sm font-semibold mb-1 text-primary">{ct}</div>
-                    <div className="text-sm leading-relaxed text-muted-foreground font-body">{d}</div>
-                  </div>
-                ))}
-              </div>
             </div>
-            <div className="hidden md:flex items-center justify-center min-h-[260px]">
-              <div className="w-[220px] h-[220px] rounded-full flex items-center justify-center border border-secondary/20">
-                <div className="w-[155px] h-[155px] rounded-full flex items-center justify-center border border-accent/30">
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-accent/10 border border-accent/30">
-                    <CircleDotDashed className="w-7 h-7 text-accent/60" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {compass.map(({ icon: Icon, t: ct, d }) => (
+                <div key={ct} className="rounded-xl p-6 bg-background/70 backdrop-blur-sm border border-border">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4 bg-accent/10 border border-accent/30">
+                    <Icon className="w-4 h-4 text-accent" />
                   </div>
+                  <div className="font-body text-base font-semibold mb-2 text-primary">{ct}</div>
+                  <div className="text-sm leading-relaxed text-muted-foreground font-body">{d}</div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
