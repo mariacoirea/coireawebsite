@@ -100,6 +100,9 @@ const Header = () => {
             <LocalizedLink to="/purpose" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
             </LocalizedLink>
+            <LocalizedLink to="/guardians" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.guardians', 'GUARDIANS').toUpperCase()}
+            </LocalizedLink>
 
             <div>
               <button
