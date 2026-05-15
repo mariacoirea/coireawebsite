@@ -24,7 +24,10 @@ import {
   Eye,
   Wrench,
   Radio,
-  Leaf
+  Leaf,
+  Sprout,
+  TrendingUp,
+  Sun
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
