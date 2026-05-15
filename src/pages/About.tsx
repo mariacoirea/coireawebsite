@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 import LocalizedLink from "@/components/LocalizedLink";
+import aboutHero from "@/assets/about-hero.jpg";
 
 const About = () => {
   const { t } = useTranslation('about');
@@ -29,14 +30,12 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main id="main-content" className="pt-20">
-        {/* Hero Section — Ethereal Mesh */}
-        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-[hsl(40,30%,97%)]">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-sage/25 blur-[120px]" />
-            <div className="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-copper/20 blur-[100px]" />
-            <div className="absolute top-[20%] right-[15%] w-[400px] h-[400px] rounded-full bg-[hsl(var(--olive-green))]/15 blur-[90px]" />
-            <div className="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] rounded-full bg-[hsl(var(--warm-beige))]/60 blur-[110px]" />
-          </div>
+        {/* Hero Section — Sky background */}
+        <section
+          className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${aboutHero})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
 
           <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl py-20">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-semibold mb-8 leading-tight">
