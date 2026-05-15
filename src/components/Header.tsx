@@ -1,17 +1,26 @@
 
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/OptimizedImage";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LocalizedLink from "@/components/LocalizedLink";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const { t } = useTranslation('common');
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const resourcesLabel = t('header.nav.resources', 'RESOURCES').toUpperCase();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
@@ -39,12 +48,26 @@ const Header = () => {
             <LocalizedLink to="/purpose" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/insights" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('header.nav.insights').toUpperCase()}
-            </LocalizedLink>
-            <LocalizedLink to="/tools" className="text-foreground hover:text-primary transition-colors font-body font-medium">
-              {t('header.nav.tools').toUpperCase()}
-            </LocalizedLink>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-body font-medium outline-none">
+                {resourcesLabel}
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="bg-background border border-border z-50">
+                <DropdownMenuItem asChild>
+                  <LocalizedLink to="/insights" className="cursor-pointer font-body">
+                    {t('header.nav.insights').toUpperCase()}
+                  </LocalizedLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <LocalizedLink to="/tools" className="cursor-pointer font-body">
+                    {t('header.nav.tools').toUpperCase()}
+                  </LocalizedLink>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <LocalizedLink to="/about" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.about').toUpperCase()}
             </LocalizedLink>
@@ -74,12 +97,27 @@ const Header = () => {
             <LocalizedLink to="/purpose" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
             </LocalizedLink>
-            <LocalizedLink to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.insights').toUpperCase()}
-            </LocalizedLink>
-            <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
-              {t('header.nav.tools').toUpperCase()}
-            </LocalizedLink>
+
+            <div>
+              <button
+                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                className="flex items-center justify-between w-full text-foreground hover:text-primary transition-colors font-body font-medium py-2"
+              >
+                <span>{resourcesLabel}</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isResourcesOpen && (
+                <div className="pl-4 mt-2 space-y-2 border-l border-border">
+                  <LocalizedLink to="/insights" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body py-2">
+                    {t('header.nav.insights').toUpperCase()}
+                  </LocalizedLink>
+                  <LocalizedLink to="/tools" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body py-2">
+                    {t('header.nav.tools').toUpperCase()}
+                  </LocalizedLink>
+                </div>
+              )}
+            </div>
+
             <LocalizedLink to="/about" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.about').toUpperCase()}
             </LocalizedLink>
