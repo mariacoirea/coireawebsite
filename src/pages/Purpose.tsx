@@ -35,14 +35,11 @@ const Purpose = () => {
 
       <main className="min-h-screen bg-background">
         {/* SECTION 1 — HERO */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[hsl(40,30%,97%)]">
-          {/* Ethereal mesh — soft floating orbs */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-sage/25 blur-[120px]" />
-            <div className="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-copper/20 blur-[100px]" />
-            <div className="absolute top-[20%] right-[15%] w-[400px] h-[400px] rounded-full bg-[hsl(var(--olive-green))]/15 blur-[90px]" />
-            <div className="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] rounded-full bg-[hsl(var(--warm-beige))]/60 blur-[110px]" />
-          </div>
+        <section
+          className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${purposeHero})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
 
           <div className="container relative z-10 px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto space-y-8">
