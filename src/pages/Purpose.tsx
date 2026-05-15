@@ -10,6 +10,7 @@ import {
   Lightbulb, Eye, Zap, CircleDot, Layers, EyeOff,
   Activity, BarChart3, ClipboardCheck
 } from "lucide-react";
+import purposeHero from "@/assets/purpose-hero.jpg";
 
 const Purpose = () => {
   const { t } = useTranslation('purpose');
@@ -35,36 +36,36 @@ const Purpose = () => {
 
       <main className="min-h-screen bg-background">
         {/* SECTION 1 — HERO */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[hsl(40,30%,97%)]">
-          {/* Ethereal mesh — soft floating orbs */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-sage/25 blur-[120px]" />
-            <div className="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-copper/20 blur-[100px]" />
-            <div className="absolute top-[20%] right-[15%] w-[400px] h-[400px] rounded-full bg-[hsl(var(--olive-green))]/15 blur-[90px]" />
-            <div className="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] rounded-full bg-[hsl(var(--warm-beige))]/60 blur-[110px]" />
-          </div>
+        <section
+          className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${purposeHero})` }}
+        >
+          {/* Deep teal overlay */}
+          <div className="absolute inset-0 bg-primary/55" />
+          {/* Sage + soft gold light wash */}
+          <div className="absolute inset-0 bg-gradient-to-br from-sage/25 via-transparent to-[hsl(var(--warm-beige))]/30" />
+          {/* Top soft gold light */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--warm-beige))]/30 via-transparent to-primary/40" />
 
           <div className="container relative z-10 px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/25 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F0EBE1]/15 border border-[#F0EBE1]/30 text-[#F0EBE1] text-sm font-medium backdrop-blur-sm">
                 <Leaf className="w-4 h-4" />
                 <span>{t('hero.title', 'Built for Organizations')}</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
-                <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
-                  {t('hero.title')} {t('hero.titleEmphasis')}
-                </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-[#F0EBE1] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+                {t('hero.title')} {t('hero.titleEmphasis')}
               </h1>
 
-              <p className="text-lg md:text-xl text-primary/75 font-body max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl font-body max-w-3xl mx-auto leading-relaxed text-[#F0EBE1]/90">
                 {t('hero.subtitle')}
               </p>
-              
-              <p className="text-base text-primary/50 font-body leading-relaxed max-w-2xl mx-auto">
+
+              <p className="text-base font-body leading-relaxed max-w-2xl mx-auto text-[#F0EBE1]/75">
                 {t('hero.supporting')}
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <LocalizedLink to="/platform">
                   <Button size="lg" className="text-lg px-8 py-6 bg-secondary text-secondary-foreground hover:bg-secondary/90">
