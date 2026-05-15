@@ -20,6 +20,7 @@ import Admin from "./pages/Admin";
 import PostEditor from "./pages/PostEditor";
 // import RaicesLatinas from "./pages/RaicesLatinas"; // Archived: Social Impact not in current stage
 import Purpose from "./pages/Purpose";
+import Guardians from "./pages/Guardians";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
