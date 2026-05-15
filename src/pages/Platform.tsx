@@ -224,7 +224,114 @@ const Platform = () => {
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(var(--warm-beige))] to-transparent" />
           </section>
 
-          {/* 5 Pillars */}
+          {/* The Regenerative Execution Cycle */}
+          <section className="relative py-24 overflow-hidden">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${coireaCycleBg})`, opacity: 0.18 }}
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--warm-beige))]/85 via-[hsl(var(--warm-beige))]/70 to-[hsl(var(--warm-beige))]/90" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-[hsl(77,18%,55%)]/15" aria-hidden="true" />
+
+            <div className="container relative z-10 px-4">
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase mb-4">
+                  {currentLanguage === 'es' ? 'El Ciclo de Ejecución Regenerativa' : 'The Regenerative Execution Cycle'}
+                </p>
+                <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
+                  {currentLanguage === 'es' ? 'Cómo Funciona COIREA' : 'How COIREA Works'}
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {[
+                  {
+                    num: '01',
+                    title: 'SOIL',
+                    subtitle: currentLanguage === 'es' ? 'Sentir el Sistema' : 'Sense the System',
+                    icon: Sprout,
+                    iconBg: 'bg-sage/30',
+                    iconColor: 'text-secondary',
+                    desc: currentLanguage === 'es'
+                      ? 'COIREA comienza con reflexión estructurada. La plataforma mide la salud organizacional en cinco pilares y revela tensiones ocultas usando reconocimiento de patrones con IA entrenada.'
+                      : 'COIREA begins with structured reflection. The platform measures organizational health across five pillars and surfaces hidden tensions using trained AI pattern recognition.',
+                    bullets: currentLanguage === 'es'
+                      ? ['Índice de Vitalidad Organizacional', 'Señales entre pilares', 'Indicadores tempranos de riesgo']
+                      : ['Organizational Vitality Index', 'Cross-pillar signals', 'Early risk indicators']
+                  },
+                  {
+                    num: '02',
+                    title: 'GROW',
+                    subtitle: currentLanguage === 'es' ? 'Alinear y Ejecutar' : 'Align & Execute',
+                    icon: TrendingUp,
+                    iconBg: 'bg-[hsl(var(--warm-beige))]',
+                    iconColor: 'text-secondary',
+                    desc: currentLanguage === 'es'
+                      ? 'Los insights se convierten en gobernanza y ejecución estructurada. La ejecución se vuelve alineada, no reactiva.'
+                      : 'Insights convert into structured governance and execution. Execution becomes aligned, not reactive.',
+                    bullets: currentLanguage === 'es'
+                      ? ['Propiedad clara (roles y círculos)', 'Prioridades trimestrales', 'Detección de deriva estratégica', 'Responsabilidad de liderazgo']
+                      : ['Clear ownership (roles & circles)', 'Quarterly priorities', 'Strategic drift detection', 'Leadership accountability']
+                  },
+                  {
+                    num: '03',
+                    title: 'FLOURISH',
+                    subtitle: currentLanguage === 'es' ? 'Aprender y Regenerar' : 'Learn & Regenerate',
+                    icon: Sun,
+                    iconBg: 'bg-[hsl(20,40%,88%)]',
+                    iconColor: 'text-copper',
+                    desc: currentLanguage === 'es'
+                      ? 'El sistema integra retroalimentación y fortalece la capacidad con el tiempo. El crecimiento construye resiliencia en lugar de agotamiento.'
+                      : 'The system integrates feedback and strengthens capacity over time. Growth builds resilience instead of depletion.',
+                    bullets: currentLanguage === 'es'
+                      ? ['Pulsos de bienestar', 'Mapa de innovación', 'Bucles de aprendizaje', 'Señales de Capacidad Regenerativa']
+                      : ['Well-being pulses', 'Innovation map', 'Learning loops', 'Regenerative Capacity signals']
+                  }
+                ].map((step) => {
+                  const Icon = step.icon;
+                  return (
+                    <div
+                      key={step.num}
+                      className="relative p-8 rounded-2xl bg-[hsl(var(--warm-beige))]/85 backdrop-blur-md border border-border/60 shadow-sm hover:shadow-lg transition-all duration-300"
+                    >
+                      <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-mono tracking-wider">
+                        {step.num}
+                      </div>
+                      <div className={`w-14 h-14 rounded-full ${step.iconBg} flex items-center justify-center mb-6 ring-1 ring-border/50`}>
+                        <Icon className={`w-6 h-6 ${step.iconColor}`} />
+                      </div>
+                      <h3 className="text-3xl font-display font-bold text-primary tracking-[0.15em] mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-foreground/80 font-body mb-5">
+                        {step.subtitle}
+                      </p>
+                      <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                        {step.desc}
+                      </p>
+                      <ul className="space-y-2">
+                        {step.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-2 text-sm text-foreground/85 font-body">
+                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <p className="text-center text-muted-foreground font-body italic max-w-3xl mx-auto mt-16 text-lg">
+                {currentLanguage === 'es'
+                  ? 'COIREA ayuda a las organizaciones a alcanzar metas estratégicas mientras aumenta la coherencia sistémica y la capacidad a largo plazo.'
+                  : 'COIREA helps organizations achieve strategic goals while increasing systemic coherence and long-term capacity.'}
+              </p>
+            </div>
+          </section>
+
+
           <section id="pillars" className="py-24 bg-background">
             <div className="container px-4">
               <div className="text-center max-w-3xl mx-auto mb-16">
