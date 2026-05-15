@@ -3,8 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Eye, GitBranch, Zap, Anchor, User, Check, CircleDotDashed } from "lucide-react";
+import { Eye, GitBranch, Zap, Anchor, User, Check } from "lucide-react";
 import { toast } from "sonner";
+import guardiansHero from "@/assets/guardians-hero.jpg";
 
 const Guardians = () => {
   const { i18n } = useTranslation();
@@ -66,24 +67,34 @@ const Guardians = () => {
 
       <main className="pt-20">
         {/* HERO */}
-        <section className="relative overflow-hidden px-6 md:px-10 py-20 md:py-28 bg-background">
-          <div className="absolute right-6 md:right-16 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none">
-            <div className="relative w-[260px] h-[260px]">
-              <div className="absolute inset-0 rounded-full border border-secondary/15" />
-              <div className="absolute top-1/2 left-1/2 w-[180px] h-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/25" />
-              <div className="absolute top-1/2 left-1/2 w-[90px] h-[90px] -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center bg-accent/10 border border-accent/30">
-                <CircleDotDashed className="w-6 h-6 text-accent/60" />
-              </div>
-            </div>
-          </div>
-          <div className="max-w-2xl">
-            <div className="text-xs tracking-[0.2em] uppercase mb-5 text-secondary font-body">
+        <section className="relative overflow-hidden min-h-[70vh] flex items-center justify-center px-6 md:px-10 py-24 md:py-32">
+          {/* Background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${guardiansHero})` }}
+            aria-hidden="true"
+          />
+          {/* Teal overlay */}
+          <div className="absolute inset-0 bg-primary/30" aria-hidden="true" />
+          {/* Soft edge blur / vignette */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              boxShadow: "inset 0 0 120px 40px rgba(27,94,90,0.55)",
+              backdropFilter: "blur(0px)",
+            }}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,transparent_55%,black_100%)] backdrop-blur-md" aria-hidden="true" />
+
+          <div className="relative max-w-3xl text-center" style={{ color: "#F0EBE1" }}>
+            <div className="text-xs tracking-[0.25em] uppercase mb-5 font-body" style={{ color: "#F0EBE1", opacity: 0.85 }}>
               {t("The heart of the system", "El corazón del sistema")}
             </div>
-            <h1 className="font-display text-5xl md:text-6xl leading-[1.05] mb-6 text-primary font-semibold">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 font-semibold" style={{ color: "#F0EBE1" }}>
               {t("The Guardians", "Los Guardianes")}
             </h1>
-            <p className="text-base md:text-lg leading-relaxed max-w-xl text-muted-foreground font-body">
+            <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-body" style={{ color: "#F0EBE1", opacity: 0.92 }}>
               {t(
                 "Guardians are the human presence behind the COIREA system. They don't apply a method — they hold a living process. They walk alongside organizations through their deepest transformation.",
                 "Los Guardianes son la presencia humana detrás del sistema COIREA. No aplican un método — sostienen un proceso vivo. Acompañan a las organizaciones a través de su transformación más profunda."
@@ -91,6 +102,7 @@ const Guardians = () => {
             </p>
           </div>
         </section>
+
 
         <div className="h-px bg-border" />
 
