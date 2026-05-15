@@ -20,6 +20,7 @@ import Admin from "./pages/Admin";
 import PostEditor from "./pages/PostEditor";
 // import RaicesLatinas from "./pages/RaicesLatinas"; // Archived: Social Impact not in current stage
 import Purpose from "./pages/Purpose";
+import Guardians from "./pages/Guardians";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -77,6 +78,7 @@ const App = () => {
             <Route path="/tools" element={<Tools />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/purpose" element={<Purpose />} />
+            <Route path="/guardians" element={<Guardians />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:id" element={<PostEditor />} />
@@ -95,6 +97,7 @@ const App = () => {
             <Route path="/es/tools" element={<Tools />} />
             <Route path="/es/journey" element={<Journey />} />
             <Route path="/es/purpose" element={<Purpose />} />
+            <Route path="/es/guardians" element={<Guardians />} />
             
             {/* Social Impact archived - not part of current stage */}
             

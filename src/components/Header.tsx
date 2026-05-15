@@ -48,6 +48,9 @@ const Header = () => {
             <LocalizedLink to="/purpose" className="text-foreground hover:text-primary transition-colors font-body font-medium">
               {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
             </LocalizedLink>
+            <LocalizedLink to="/guardians" className="text-foreground hover:text-primary transition-colors font-body font-medium">
+              {t('header.nav.guardians', 'GUARDIANS').toUpperCase()}
+            </LocalizedLink>
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-body font-medium outline-none">
@@ -96,6 +99,9 @@ const Header = () => {
             </LocalizedLink>
             <LocalizedLink to="/purpose" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
               {t('header.nav.purpose', 'PURPOSE').toUpperCase()}
+            </LocalizedLink>
+            <LocalizedLink to="/guardians" onClick={closeMenu} className="block text-foreground hover:text-primary transition-colors font-body font-medium py-2">
+              {t('header.nav.guardians', 'GUARDIANS').toUpperCase()}
             </LocalizedLink>
 
             <div>
