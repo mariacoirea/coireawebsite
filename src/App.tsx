@@ -78,6 +78,7 @@ const App = () => {
             <Route path="/tools" element={<Tools />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/purpose" element={<Purpose />} />
+            <Route path="/guardians" element={<Guardians />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/posts/:id" element={<PostEditor />} />
