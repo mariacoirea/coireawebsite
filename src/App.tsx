@@ -97,6 +97,7 @@ const App = () => {
             <Route path="/es/tools" element={<Tools />} />
             <Route path="/es/journey" element={<Journey />} />
             <Route path="/es/purpose" element={<Purpose />} />
+            <Route path="/es/guardians" element={<Guardians />} />
             
             {/* Social Impact archived - not part of current stage */}
             
