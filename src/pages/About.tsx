@@ -253,7 +253,7 @@ const About = () => {
 
         {/* Why COIREA Is Inspired by Nature */}
         <section className="py-24 px-6 bg-gradient-to-b from-background via-warm-beige/40 to-background">
-          <div className="container mx-auto max-w-4xl">
+          <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 bg-sage/10 px-6 py-3 rounded-full border border-sage/20 shadow-sm mb-8">
                 <TreePine className="w-4 h-4 text-sage" />
