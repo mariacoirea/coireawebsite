@@ -151,7 +151,7 @@ const Journey = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main id="journey-start" className="pt-20">
-        {/* Hero Section - MVP Early Access */}
+        {/* Hero Section */}
         <section className="py-20 px-6 bg-gradient-to-br from-warm-beige via-aura-pearl/80 to-background">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
@@ -160,7 +160,7 @@ const Journey = () => {
             <p className="text-xl text-foreground/80 font-body leading-relaxed mb-6 max-w-3xl mx-auto">
               {t('hero.description')}
             </p>
-            <p className="text-lg text-foreground/60 font-body leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-foreground/65 font-body leading-relaxed mb-10 max-w-3xl mx-auto">
               {t('hero.note')}
             </p>
             <a href="#journey-form" className="inline-flex items-center space-x-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-body font-medium text-lg hover:bg-primary/90 transition-colors">
@@ -170,10 +170,10 @@ const Journey = () => {
           </div>
         </section>
 
-        {/* What You'll Access Section */}
+        {/* What the Process Includes */}
         <section className="py-12 px-6 bg-background">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl font-display font-semibold text-primary mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-semibold text-primary mb-8 text-center">
               {t('access.title')}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -183,6 +183,33 @@ const Journey = () => {
                   <span className="text-foreground font-body text-sm font-medium">{item}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-20 px-6 bg-[hsl(var(--warm-beige))]">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-12 text-center">
+              {t('howItWorks.title')}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {(() => {
+                const steps = t('howItWorks.steps', { returnObjects: true }) as Array<{ title: string; description: string }>;
+                return Array.isArray(steps) ? steps.map((step, idx) => (
+                  <div key={idx} className="relative p-8 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
+                    <div className="absolute -top-4 left-6 w-10 h-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-display font-bold text-lg shadow-sm">
+                      {idx + 1}
+                    </div>
+                    <h3 className="text-xl font-display font-semibold text-foreground mt-3 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground font-body leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                )) : null;
+              })()}
             </div>
           </div>
         </section>

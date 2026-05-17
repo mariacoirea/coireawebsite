@@ -1,30 +1,47 @@
 {
   "seo": {
-    "title": "Solicita Acceso Anticipado - COIREA MVP | Plataforma de Inteligencia Organizacional",
-    "description": "Solicita acceso anticipado al MVP de la Plataforma de Inteligencia Organizacional COIREA. Mide cultura, liderazgo, colaboración y bienestar a través de inteligencia en tiempo real impulsada por IA.",
-    "keywords": "COIREA MVP, acceso anticipado, plataforma de inteligencia organizacional, salud organizacional IA, medición de cultura, analítica de liderazgo",
-    "successTitle": "Solicitud Recibida - Acceso Anticipado COIREA MVP | COIREA",
-    "successDescription": "Gracias por solicitar el MVP de COIREA. Revisaremos tu solicitud y nos pondremos en contacto si tu organización es seleccionada para acceso anticipado.",
-    "successKeywords": "inteligencia organizacional, COIREA MVP, solicitud de acceso anticipado, gracias"
+    "title": "Aplica para Trabajar con COIREA | Plataforma de Inteligencia Organizacional",
+    "description": "Aplica para trabajar con COIREA. Cada organización que entra al sistema lo hace con un Guardián entrenado que sostiene el proceso a tu lado.",
+    "keywords": "aplicación COIREA, plataforma de inteligencia organizacional, salud organizacional IA, medición de cultura, analítica de liderazgo, facilitador Guardián",
+    "successTitle": "Solicitud Recibida | COIREA",
+    "successDescription": "Gracias por aplicar para trabajar con COIREA. Un Guardián revisará tu solicitud personalmente y se pondrá en contacto si hay un ajuste genuino.",
+    "successKeywords": "inteligencia organizacional, aplicación COIREA, gracias"
   },
   "hero": {
-    "title": "Únete a la Primera Cohorte COIREA",
-    "description": "COIREA abre su primer ciclo con un número reducido de organizaciones listas para comprender cómo opera realmente su sistema — y evolucionarlo a través de inteligencia organizacional en tiempo real.",
-    "note": "Trabajamos con un número limitado de equipos para asegurar profundidad, calidad de señal e integración significativa en su sistema operativo.",
-    "cta": "Explorar Participación"
+    "title": "¿Está Tu Organización Lista para Verse con Claridad?",
+    "description": "COIREA no es para toda organización. Es para aquellas que sienten que algo necesita cambiar, y están listas para mirarlo con honestidad, con el acompañamiento correcto a su lado.",
+    "note": "Cada organización que entra a COIREA lo hace con un Guardián — un facilitador entrenado que sostiene el proceso contigo. Esto no es una suscripción de software. Es una transformación acompañada. Las aplicaciones se revisan personalmente. Si hay un ajuste genuino, un Guardián se pondrá en contacto para iniciar la conversación.",
+    "cta": "Aplica para Trabajar con COIREA"
   },
   "access": {
-    "title": "Lo Que Tendrás Acceso",
+    "title": "Lo Que Incluye el Proceso",
     "items": [
-      "Scanner de Salud Organizacional en Tiempo Real",
-      "Insights Generados por IA y Señales de Riesgo",
-      "Dashboard del Marco de 5 Pilares",
-      "Reportes de Impacto Regenerativo"
+      "Índice de Vitalidad Organizacional (OVI)",
+      "GiA, IA Organizacional Entrenada",
+      "Dashboard del Sistema Operativo de Cinco Pilares",
+      "Reflexión Sistémica y Seguimiento de Evolución"
+    ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "steps": [
+      {
+        "title": "Aplicas",
+        "description": "Cuéntanos sobre tu organización y lo que sientes que necesita cambiar. No hay respuestas incorrectas."
+      },
+      {
+        "title": "Un Guardián revisa tu solicitud",
+        "description": "Leemos cada solicitud personalmente. Si hay un ajuste genuino, un Guardián se pondrá en contacto para agendar una Compass Call — una primera conversación para entender tu sistema juntos."
+      },
+      {
+        "title": "Entras a SOIL",
+        "description": "El proceso comienza con la evaluación OVI y el Tablero de Reflexión. Gratuito, sin compromiso. Ves tu sistema. Luego decides si quieres profundizar."
+      }
     ]
   },
   "form": {
     "mainTitle": "Cuéntanos Sobre Tu Organización",
-    "mainDescription": "Revisamos cada solicitud para asegurar que el MVP sea el ajuste correcto. Comparte tu contexto abajo, y nos pondremos en contacto si tu organización es seleccionada para acceso anticipado.",
+    "mainDescription": "Un Guardián lee cada solicitud personalmente para asegurar que haya un ajuste genuino. Comparte tu contexto abajo, y nos pondremos en contacto si tiene sentido iniciar la conversación.",
     "contact": {
       "title": "Información de Contacto",
       "name": "Tu Nombre",
@@ -93,7 +110,7 @@
     "additional": {
       "title": "Información Adicional",
       "label": "¿Algo más que te gustaría que supiéramos?",
-      "placeholder": "Comparte cualquier contexto adicional sobre tu organización o por qué te interesa el MVP de COIREA..."
+      "placeholder": "Comparte cualquier contexto adicional sobre tu organización o por qué te interesa trabajar con COIREA..."
     },
     "submit": {
       "button": "Enviar Solicitud",
@@ -104,7 +121,7 @@
   },
   "success": {
     "title": "Solicitud Recibida",
-    "subtitle": "Gracias por solicitar el Programa de Acceso Anticipado al MVP de COIREA.",
+    "subtitle": "Gracias por aplicar para trabajar con COIREA.",
     "nextSteps": {
       "title": "¿Qué Sigue Ahora?",
       "step1": {
@@ -113,11 +130,11 @@
       },
       "step2": {
         "title": "Si Eres Seleccionado:",
-        "description": "Programaremos una breve llamada para discutir onboarding y próximos pasos"
+        "description": "Si hay un ajuste genuino, un Guardián agendará una Compass Call para entender tu sistema juntos."
       },
       "step3": {
-        "title": "Acceso al MVP:",
-        "description": "Las organizaciones seleccionadas recibirán acceso a la plataforma y soporte de onboarding"
+        "title": "Entras a SOIL:",
+        "description": "Si hay un ajuste, comenzarás con la evaluación OVI y el Tablero de Reflexión — gratuito, sin compromiso."
       }
     }
   }
