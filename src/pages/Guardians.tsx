@@ -322,8 +322,8 @@ const LatamMap = ({ label }: { label: string }) => {
   const locations = [
     { name: "Ecuador",   top: "41%", left: "37%", labelSide: "left" as const },
     { name: "Perú",      top: "52%", left: "42%", labelSide: "left" as const },
-    { name: "Chile",     top: "78%", left: "47%", labelSide: "left" as const },
-    { name: "Argentina", top: "78%", left: "56%", labelSide: "right" as const },
+    { name: "Chile",     top: "70%", left: "47%", labelSide: "left" as const },
+    { name: "Argentina", top: "70%", left: "56%", labelSide: "right" as const },
   ];
   return (
     <div className="mx-auto w-full max-w-sm">
