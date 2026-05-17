@@ -176,16 +176,15 @@ const Guardians = () => {
 
           {/* NARRATIVE */}
           <div className="pt-12 max-w-6xl mx-auto border-t border-border">
-            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-snug text-primary">
-              {t(
-                "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
-                "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
-              )}
-            </p>
-
-            <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
-              <div className="space-y-4 text-base leading-relaxed font-body text-muted-foreground">
-                <p>
+            <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
+              <div className="space-y-6">
+                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
+                  {t(
+                    "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
+                    "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
+                  )}
+                </p>
+                <p className="text-base leading-relaxed font-body text-muted-foreground">
                   {t(
                     "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it truly means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as it is. Gabriela brings the intelligence of natural systems: a biologist who reads organizations the way ecosystems are read, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when the doing has outrun the being. And Juan Carlos brings the ",
                     "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede continuar como está. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
@@ -195,6 +194,9 @@ const Guardians = () => {
                     ": accompanying organizations to see what the system already knows about itself, before touching any of it.",
                     ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada de ello."
                   )}
+                </p>
+                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
+                  {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
                 </p>
               </div>
 
