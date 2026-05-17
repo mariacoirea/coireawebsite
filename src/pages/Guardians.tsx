@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Eye, GitBranch, Zap, Anchor, User, Check } from "lucide-react";
 import { toast } from "sonner";
 import guardiansHero from "@/assets/guardians-hero.jpg";
+import latamMap from "@/assets/latam-map.png";
 
 const Guardians = () => {
   const { i18n } = useTranslation();
