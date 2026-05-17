@@ -331,7 +331,7 @@ const LatamMap = ({ label }: { label: string }) => {
         <img
           src={latamMap}
           alt={label}
-          className="w-full h-auto opacity-80"
+          className="w-full h-auto opacity-90 mix-blend-multiply"
         />
         {locations.map((l) => (
           <div
