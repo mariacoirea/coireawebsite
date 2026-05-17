@@ -187,19 +187,23 @@ const Platform = () => {
               <div className="max-w-4xl mx-auto space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
                   <Sparkles className="w-4 h-4" />
-                  <span>{t('hero.badge')}</span>
+                  <span>{currentLanguage === 'es' ? 'El Sistema Operativo Organizacional Regenerativo' : 'The Regenerative Organizational OS'}</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
                   <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
-                    {t('hero.title')}
+                    {currentLanguage === 'es'
+                      ? 'Tu Organización Ya Sabe Lo Que Necesita Cambiar. COIREA Te Ayuda a Verlo.'
+                      : 'Your Organization Already Knows What Needs to Change. COIREA Helps You See It.'}
                   </span>
                 </h1>
                 
-                <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed space-y-4">
-                  <p>{t('hero.descLine1')}</p>
-                  <p>{t('hero.descLine2')}</p>
-                  <p>{t('hero.descLine3')}</p>
+                <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed">
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'A la mayoría de las organizaciones no les falta propósito ni intención. Les falta un sistema que pueda sostener ambos, y traducirlos en cómo realmente operan, día a día. COIREA es ese sistema.'
+                      : "Most organizations don't lack purpose or intention. They lack a system that can hold both, and translate them into how they actually operate, day to day. COIREA is that system."}
+                  </p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -220,10 +224,6 @@ const Platform = () => {
                     {t('hero.cta.secondary')}
                   </Button>
                 </div>
-
-                <p className="text-sm text-primary/50 font-body">
-                  {t('hero.note')}
-                </p>
               </div>
             </div>
 
