@@ -16,21 +16,16 @@ import {
   Target,
   Sparkles,
   CheckCircle2,
-  Clock,
   ArrowRight,
   AlertTriangle,
   Compass,
-  Loader2,
-  Eye,
-  Wrench,
-  Radio,
-  Leaf,
   Sprout,
   TrendingUp,
   Sun
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -109,56 +104,6 @@ const Platform = () => {
     { key: 'nextEvolution', icon: Sparkles },
   ];
 
-  const features = [
-    { 
-      key: 'alignment', 
-      icon: Target,
-      title: 'Strategic Alignment Engine',
-      titleEs: 'Motor de Alineación Estratégica',
-      desc: 'Connect long-term vision to quarterly execution. COIREA detects where priorities drift from strategic intent and keeps goals anchored in clear ownership and measurable progress.',
-      descEs: 'Conecta la visión a largo plazo con la ejecución trimestral. COIREA detecta dónde las prioridades se desvían de la intención estratégica y mantiene los objetivos anclados en propiedad clara y progreso medible.'
-    },
-    { 
-      key: 'gia', 
-      icon: Brain,
-      title: 'Trained Organizational AI (GiA)',
-      titleEs: 'IA Organizacional Entrenada (GiA)',
-      desc: 'GiA interprets cross-pillar signals within your own system — across leadership, culture, collaboration, well-being, and strategy. It surfaces structural tensions, execution blockers, and early risk indicators before they impact results.',
-      descEs: 'GiA interpreta señales entre pilares dentro de tu propio sistema — a través de liderazgo, cultura, colaboración, bienestar y estrategia. Identifica tensiones estructurales, bloqueadores de ejecución e indicadores de riesgo temprano antes de que impacten los resultados.'
-    },
-    { 
-      key: 'governance', 
-      icon: Shield,
-      title: 'Governance & Ownership Architecture',
-      titleEs: 'Arquitectura de Gobernanza y Propiedad',
-      desc: 'Define clear roles, decision rights, and accountability pathways. Eliminate bottlenecks, reduce decision friction, and distribute authority with clarity.',
-      descEs: 'Define roles claros, derechos de decisión y rutas de responsabilidad. Elimina cuellos de botella, reduce la fricción de decisiones y distribuye la autoridad con claridad.'
-    },
-    { 
-      key: 'ovi', 
-      icon: Activity,
-      title: 'Organizational Vitality Index (OVI)',
-      titleEs: 'Índice de Vitalidad Organizacional (OVI)',
-      desc: 'Aggregate systemic health into one executive score, with detailed pillar breakdowns and trend visibility. Track how organizational coherence directly affects execution and goal achievement.',
-      descEs: 'Agrega la salud sistémica en un puntaje ejecutivo, con desgloses detallados por pilar y visibilidad de tendencias. Rastrea cómo la coherencia organizacional afecta directamente la ejecución y el logro de objetivos.'
-    },
-    { 
-      key: 'capacity', 
-      icon: Heart,
-      title: 'System Capacity Signals',
-      titleEs: 'Señales de Capacidad del Sistema',
-      desc: 'Monitor well-being, collaboration strain, and energy trends in real time. Detect burnout risk and capacity depletion early — protecting performance as you scale.',
-      descEs: 'Monitorea bienestar, tensión de colaboración y tendencias de energía en tiempo real. Detecta riesgo de burnout y agotamiento de capacidad temprano — protegiendo el rendimiento mientras escalas.'
-    },
-    { 
-      key: 'flow', 
-      icon: Network,
-      title: 'Collaboration & Flow Intelligence',
-      titleEs: 'Inteligencia de Colaboración y Flujo',
-      desc: 'Visualize how teams coordinate across priorities and projects. Identify friction points slowing execution and strengthen cross-functional alignment.',
-      descEs: 'Visualiza cómo los equipos coordinan a través de prioridades y proyectos. Identifica puntos de fricción que ralentizan la ejecución y fortalece la alineación interfuncional.'
-    },
-  ];
 
   return (
     <>
@@ -187,19 +132,23 @@ const Platform = () => {
               <div className="max-w-4xl mx-auto space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 border border-background/30 text-primary text-sm font-medium backdrop-blur-sm">
                   <Sparkles className="w-4 h-4" />
-                  <span>{t('hero.badge')}</span>
+                  <span>{currentLanguage === 'es' ? 'El Sistema Operativo Organizacional Regenerativo' : 'The Regenerative Organizational OS'}</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
                   <span className="bg-gradient-to-b from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent">
-                    {t('hero.title')}
+                    {currentLanguage === 'es'
+                      ? 'Tu Organización Ya Sabe Lo Que Necesita Cambiar. COIREA Te Ayuda a Verlo.'
+                      : 'Your Organization Already Knows What Needs to Change. COIREA Helps You See It.'}
                   </span>
                 </h1>
                 
-                <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed space-y-4">
-                  <p>{t('hero.descLine1')}</p>
-                  <p>{t('hero.descLine2')}</p>
-                  <p>{t('hero.descLine3')}</p>
+                <div className="text-lg md:text-xl text-primary/70 font-body max-w-5xl mx-auto leading-relaxed">
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'A la mayoría de las organizaciones no les falta propósito ni intención. Les falta un sistema que pueda sostener ambos, y traducirlos en cómo realmente operan, día a día. COIREA es ese sistema.'
+                      : "Most organizations don't lack purpose or intention. They lack a system that can hold both, and translate them into how they actually operate, day to day. COIREA is that system."}
+                  </p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -220,10 +169,6 @@ const Platform = () => {
                     {t('hero.cta.secondary')}
                   </Button>
                 </div>
-
-                <p className="text-sm text-primary/50 font-body">
-                  {t('hero.note')}
-                </p>
               </div>
             </div>
 
@@ -264,7 +209,10 @@ const Platform = () => {
                       : 'COIREA begins with structured reflection. The platform measures organizational health across five pillars and surfaces hidden tensions using trained AI pattern recognition.',
                     bullets: currentLanguage === 'es'
                       ? ['Índice de Vitalidad Organizacional', 'Señales entre pilares', 'Indicadores tempranos de riesgo']
-                      : ['Organizational Vitality Index', 'Cross-pillar signals', 'Early risk indicators']
+                      : ['Organizational Vitality Index', 'Cross-pillar signals', 'Early risk indicators'],
+                    closing: currentLanguage === 'es'
+                      ? 'Aquí es donde la organización pausa lo suficiente para verse con claridad.'
+                      : 'This is where the organization pauses long enough to see itself clearly.'
                   },
                   {
                     num: '02',
@@ -278,7 +226,10 @@ const Platform = () => {
                       : 'Insights convert into structured governance and execution. Execution becomes aligned, not reactive.',
                     bullets: currentLanguage === 'es'
                       ? ['Propiedad clara (roles y círculos)', 'Prioridades trimestrales', 'Detección de deriva estratégica', 'Responsabilidad de liderazgo']
-                      : ['Clear ownership (roles & circles)', 'Quarterly priorities', 'Strategic drift detection', 'Leadership accountability']
+                      : ['Clear ownership (roles & circles)', 'Quarterly priorities', 'Strategic drift detection', 'Leadership accountability'],
+                    closing: currentLanguage === 'es'
+                      ? 'Aquí es donde la claridad se vuelve estructura.'
+                      : 'This is where clarity becomes structure.'
                   },
                   {
                     num: '03',
@@ -292,7 +243,10 @@ const Platform = () => {
                       : 'The system integrates feedback and strengthens capacity over time. Growth builds resilience instead of depletion.',
                     bullets: currentLanguage === 'es'
                       ? ['Pulsos de bienestar', 'Mapa de innovación', 'Bucles de aprendizaje', 'Señales de Capacidad Regenerativa']
-                      : ['Well-being pulses', 'Innovation map', 'Learning loops', 'Regenerative Capacity signals']
+                      : ['Well-being pulses', 'Innovation map', 'Learning loops', 'Regenerative Capacity signals'],
+                    closing: currentLanguage === 'es'
+                      ? 'Este es crecimiento evolutivo y regenerativo.'
+                      : 'This is evolutionary and regenerative growth.'
                   }
                 ].map((step) => {
                   const Icon = step.icon;
@@ -316,7 +270,7 @@ const Platform = () => {
                       <p className="text-muted-foreground font-body leading-relaxed mb-6">
                         {step.desc}
                       </p>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 mb-6">
                         {step.bullets.map((b) => (
                           <li key={b} className="flex items-start gap-2 text-sm text-foreground/85 font-body">
                             <span className="mt-2 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
@@ -324,6 +278,9 @@ const Platform = () => {
                           </li>
                         ))}
                       </ul>
+                      <p className="text-sm italic text-muted-foreground/80 font-body pt-4 border-t border-border/40">
+                        {step.closing}
+                      </p>
                     </div>
                   );
                 })}
@@ -347,31 +304,38 @@ const Platform = () => {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-8">
-                {pillars.map(({ key, icon: Icon }) => (
-                  <div 
-                    key={key}
-                    className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 text-center"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
-                      <Icon className="w-6 h-6 text-secondary" />
-                    </div>
-                    <h3 className="text-lg font-display font-semibold text-foreground mb-1">
-                      {t(`pillars.items.${key}.title`)}
-                    </h3>
-                    <p className="text-sm text-secondary font-medium mb-3">
-                      {t(`pillars.items.${key}.subtitle`)}
-                    </p>
-                    <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4 text-left">
-                      {t(`pillars.items.${key}.description`)}
-                    </p>
-                    <div className="flex items-start gap-2 text-left">
-                      <span className="shrink-0 px-2.5 py-1 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Drives</span>
-                      <span className="text-xs text-muted-foreground">{t(`pillars.items.${key}.drives`)}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <TooltipProvider delayDuration={150}>
+                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-8">
+                  {pillars.map(({ key, icon: Icon }) => (
+                    <Tooltip key={key}>
+                      <TooltipTrigger asChild>
+                        <div
+                          className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 text-center cursor-help"
+                        >
+                          <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
+                            <Icon className="w-6 h-6 text-secondary" />
+                          </div>
+                          <h3 className="text-lg font-display font-semibold text-foreground mb-1">
+                            {t(`pillars.items.${key}.title`)}
+                          </h3>
+                          <p className="text-sm text-secondary font-medium mb-3">
+                            {t(`pillars.items.${key}.subtitle`)}
+                          </p>
+                          <p className="text-sm text-muted-foreground font-body leading-relaxed text-left line-clamp-2">
+                            {t(`pillars.items.${key}.description`)}
+                          </p>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="max-w-xs">
+                        <p className="text-xs font-semibold text-secondary mb-1">
+                          {currentLanguage === 'es' ? 'Impulsa' : 'Drives'}
+                        </p>
+                        <p className="text-xs">{t(`pillars.items.${key}.drives`)}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </div>
+              </TooltipProvider>
 
               <p className="text-center text-secondary font-medium font-body">
                 {t('pillars.footer')}
@@ -413,6 +377,38 @@ const Platform = () => {
                 </div>
                 <div className="lg:-mr-24 xl:-mr-32 lg:pl-2">
                   <DashboardZoom src={platformDashboardPreview} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* The Guardian in the System */}
+          <section className="py-24 bg-background">
+            <div className="container px-4">
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase">
+                    {currentLanguage === 'es' ? 'La Capa Humana' : 'The Human Layer'}
+                  </p>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
+                    {currentLanguage === 'es'
+                      ? 'El Sistema Funciona Porque Hay Personas Que Lo Sostienen'
+                      : 'The System Works Because People Hold It'}
+                  </h2>
+                  <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                    {currentLanguage === 'es'
+                      ? 'COIREA no es una herramienta de autoservicio. Cada organización que entra al sistema es acompañada por un Guardián — un facilitador entrenado que sostiene el proceso, lee lo que los datos por sí solos no pueden decirte, y permanece presente en los momentos que más importan. La plataforma da claridad. El Guardián le da contexto.'
+                      : 'COIREA is not a self-service tool. Every organization that enters the system is accompanied by a Guardian — a trained facilitator who holds the process, reads what the data alone cannot tell you, and stays present through the moments that matter most. The platform gives clarity. The Guardian gives it context.'}
+                  </p>
+                </div>
+                <div className="flex md:justify-end">
+                  <LocalizedLink
+                    to="/guardians"
+                    className="inline-flex items-center gap-2 text-copper hover:text-copper/80 font-display font-semibold text-xl underline-offset-8 hover:underline transition-colors"
+                  >
+                    {currentLanguage === 'es' ? 'Conoce a los Guardianes' : 'Meet the Guardians'}
+                    <ArrowRight className="w-5 h-5" />
+                  </LocalizedLink>
                 </div>
               </div>
             </div>
@@ -484,122 +480,88 @@ const Platform = () => {
             </div>
           </section>
 
-          {/* The System Today & Its Evolution */}
+
+          {/* Pricing / Access */}
           <section className="py-24 bg-[hsl(var(--warm-beige))]">
             <div className="container px-4">
-              {/* Section Header */}
-              <div className="text-center max-w-4xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  {currentLanguage === 'es' ? 'El Sistema Hoy y Su Evolución' : 'The System Today & Its Evolution'}
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                  {currentLanguage === 'es' ? 'Cómo Comenzar' : 'How to Get Started'}
                 </h2>
-                <p className="text-lg text-muted-foreground font-body max-w-3xl mx-auto">
-                  {currentLanguage === 'es' 
-                    ? 'Un sistema vivo que brinda claridad inmediata y evoluciona con tu organización a lo largo del tiempo.'
-                    : 'A living system that delivers immediate clarity, and evolves with your organization over time.'}
-                </p>
               </div>
-
-              {/* TODAY — Core System Intelligence */}
-              <div className="max-w-6xl mx-auto mb-20">
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="w-3 h-3 rounded-full bg-secondary" />
-                  <h3 className="text-2xl font-display font-bold text-foreground">
-                    {currentLanguage === 'es' ? 'Hoy — Inteligencia Sistémica Central' : 'Today — Core System Intelligence'}
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div className="p-8 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
+                  <p className="text-xs tracking-[0.2em] uppercase text-secondary font-semibold mb-3">SOIL</p>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                    {currentLanguage === 'es' ? 'Gratuito' : 'Free'}
                   </h3>
+                  <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                    {currentLanguage === 'es'
+                      ? 'Comienza con una reflexión organizacional gratuita. Sin compromiso. Solo por invitación.'
+                      : 'Start with a free organizational reflection. No commitment required. Invitation only.'}
+                  </p>
+                  <LocalizedLink to="/journey">
+                    <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
+                      {currentLanguage === 'es' ? 'Aplicar aquí' : 'Apply here'}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </LocalizedLink>
                 </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {features.map(({ key, icon: Icon, title, titleEs, desc, descEs }) => (
-                    <div 
-                      key={key}
-                      className="group p-6 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
-                        <Icon className="w-6 h-6 text-secondary" />
-                      </div>
-                      <h4 className="text-lg font-display font-semibold text-foreground mb-2">
-                        {currentLanguage === 'es' ? titleEs : title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
-                        {currentLanguage === 'es' ? descEs : desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* EVOLVING — Expanding System Intelligence */}
-              <div className="max-w-6xl mx-auto">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
-                  <h3 className="text-2xl font-display font-bold text-foreground">
-                    {currentLanguage === 'es' ? 'En Evolución — Inteligencia Sistémica Expandida' : 'Evolving — Expanding System Intelligence'}
+                <div className="p-8 rounded-2xl bg-background/60 border border-dashed border-border">
+                  <p className="text-xs tracking-[0.2em] uppercase text-primary/70 font-semibold mb-3">GROW · FLOURISH</p>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                    {currentLanguage === 'es' ? 'Acompañamiento Completo' : 'Full Accompaniment'}
                   </h3>
-                </div>
-                <p className="text-muted-foreground font-body mb-8 max-w-4xl">
-                  {currentLanguage === 'es'
-                    ? 'A medida que el sistema evoluciona, COIREA se extiende de la visibilidad hacia una inteligencia más profunda e impacto medible:'
-                    : 'As the system evolves, COIREA extends from visibility into deeper intelligence and measurable impact:'}
-                </p>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {[
-                    {
-                      icon: Activity,
-                      title: 'Regenerative Capacity Index (RCI)',
-                      titleEs: 'Índice de Capacidad Regenerativa (RCI)',
-                      desc: "Measure your organization's ability to grow without depleting people, culture, or long-term capacity.",
-                      descEs: 'Mide la capacidad de tu organización para crecer sin agotar personas, cultura o capacidad a largo plazo.',
-                    },
-                    {
-                      icon: Eye,
-                      title: 'Deeper Organizational Insight Layer',
-                      titleEs: 'Capa de Insight Organizacional Profundo',
-                      desc: 'Identify structural patterns across governance, collaboration, and execution — revealing where the system is limiting performance.',
-                      descEs: 'Identifica patrones estructurales a través de gobernanza, colaboración y ejecución — revelando dónde el sistema está limitando el rendimiento.',
-                    },
-                    {
-                      icon: Wrench,
-                      title: 'Infrastructure Improvement Guidance',
-                      titleEs: 'Guía de Mejora de Infraestructura',
-                      desc: 'Translate system signals into concrete changes in roles, processes, and decision-making structures.',
-                      descEs: 'Traduce señales del sistema en cambios concretos en roles, procesos y estructuras de toma de decisiones.',
-                    },
-                    {
-                      icon: Radio,
-                      title: 'Advanced Real-Time Monitoring',
-                      titleEs: 'Monitoreo Avanzado en Tiempo Real',
-                      desc: 'Continuous tracking of trends, risks, and system evolution — beyond static snapshots.',
-                      descEs: 'Seguimiento continuo de tendencias, riesgos y evolución del sistema — más allá de capturas estáticas.',
-                    },
-                    {
-                      icon: Leaf,
-                      title: 'Impact & Regenerative Measurement',
-                      titleEs: 'Medición de Impacto Regenerativo',
-                      desc: 'Extend organizational progress into measurable regenerative impact and structured reporting (e.g. SDGs).',
-                      descEs: 'Extiende el progreso organizacional en impacto regenerativo medible y reportes estructurados (ej. ODS).',
-                    },
-                  ].map(({ icon: Icon, title, titleEs, desc, descEs }, idx) => (
-                    <div 
-                      key={idx}
-                      className="group p-6 rounded-2xl bg-background/60 border border-dashed border-border hover:border-primary/30 hover:bg-background transition-all duration-300"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary/12 transition-colors">
-                        <Icon className="w-6 h-6 text-primary/70" />
-                      </div>
-                      <h4 className="text-lg font-display font-semibold text-foreground mb-2">
-                        {currentLanguage === 'es' ? titleEs : title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
-                        {currentLanguage === 'es' ? descEs : desc}
-                      </p>
-                    </div>
-                  ))}
+                  <p className="text-muted-foreground font-body leading-relaxed">
+                    {currentLanguage === 'es'
+                      ? 'Después de SOIL, las organizaciones invitadas entran en el sistema completo con un Guardián dedicado.'
+                      : 'After SOIL, invited organizations enter the full system with a dedicated Guardian.'}
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
+          {/* Words from the Founder */}
+          <section className="py-24 bg-background">
+            <div className="container px-4">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase mb-6 text-center">
+                  {currentLanguage === 'es' ? 'Palabras de la Fundadora' : 'Words from the Founder'}
+                </p>
+                <blockquote className="space-y-5 text-foreground/85 font-body leading-relaxed text-lg italic border-l-2 border-secondary/40 pl-6">
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Construir COIREA requirió que pensáramos con cuidado sobre el rol de la Inteligencia Artificial en la vida organizacional.'
+                      : 'Building COIREA required us to think carefully about the role of Artificial Intelligence in organizational life.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'GiA — nuestra IA Organizacional — está presente en partes específicas del sistema para ayudar a las organizaciones a reflexionar sobre sus propios patrones. Hace visible lo que ya está allí. No reemplaza el juicio humano, la inteligencia emocional, ni la sabiduría que surge de estar en la sala.'
+                      : 'GiA — our Organizational AI — is present in specific parts of the system to help organizations reflect on their own patterns. It surfaces what is already there. It does not replace human judgment, emotional intelligence, or the wisdom that comes from being in the room.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Creemos que el futuro de las organizaciones florecientes vive en la intersección de cuatro inteligencias: Humana, Orgánica, Emocional y Artificial. COIREA está diseñada para integrar las cuatro — no para privilegiar una sobre las otras.'
+                      : 'We believe the future of thriving organizations lives at the intersection of four intelligences: Human, Organic, Emotional, and Artificial. COIREA is designed to integrate all four — not to privilege one over the others.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'También somos conscientes del costo real de la IA sobre el planeta. La usamos responsablemente: con intención, al servicio de la reflexión, y solo donde genuinamente aporta algo que un humano por sí solo no podría ver con la misma facilidad. El resto del sistema está diseñado en torno a las personas — su presencia, sus relaciones, su capacidad de sentir lo que está ocurriendo y responder.'
+                      : 'We are also aware of the real cost of AI on the planet. We use it responsibly: deliberately, in service of reflection, and only where it genuinely adds something a human alone could not see as easily. The rest of the system is designed around people — their presence, their relationships, their capacity to sense what is happening and respond.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Esto es lo que IA Responsable significa para nosotros. No un descargo. Una decisión de diseño.'
+                      : 'This is what Responsible AI means to us. Not a disclaimer. A design choice.'}
+                  </p>
+                </blockquote>
+                <p className="mt-6 text-right text-foreground font-display font-semibold">
+                  {currentLanguage === 'es' ? '— María José Figueroa, Fundadora de COIREA' : '— María José Figueroa, Founder of COIREA'}
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Early Access CTA */}
           <section className="py-24 bg-background">
