@@ -384,7 +384,7 @@ const Platform = () => {
           </section>
 
           {/* The Guardian in the System */}
-          <section className="py-24 bg-background">
+          <section className="py-24 bg-[hsl(var(--aura-pearl))]">
             <div className="container px-4">
               <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
@@ -524,42 +524,62 @@ const Platform = () => {
           </section>
 
           {/* Words from the Founder */}
-          <section className="py-24 bg-background">
-            <div className="container px-4">
-              <div className="max-w-3xl mx-auto">
-                <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase mb-6 text-center">
-                  {currentLanguage === 'es' ? 'Palabras de la Fundadora' : 'Words from the Founder'}
-                </p>
-                <blockquote className="space-y-5 text-foreground/85 font-body leading-relaxed text-lg italic border-l-2 border-secondary/40 pl-6">
-                  <p>
-                    {currentLanguage === 'es'
-                      ? 'Construir COIREA requirió que pensáramos con cuidado sobre el rol de la Inteligencia Artificial en la vida organizacional.'
-                      : 'Building COIREA required us to think carefully about the role of Artificial Intelligence in organizational life.'}
+          <section className="relative py-28 bg-gradient-to-b from-[hsl(var(--warm-beige))] via-[hsl(var(--aura-pearl))] to-[hsl(var(--warm-beige))] overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.07]" aria-hidden="true"
+              style={{ backgroundImage: `url(${platformHeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div className="container relative z-10 px-4">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <p className="text-secondary font-medium text-sm tracking-[0.3em] uppercase mb-4">
+                    {currentLanguage === 'es' ? 'Palabras de la Fundadora' : 'Words from the Founder'}
                   </p>
-                  <p>
-                    {currentLanguage === 'es'
-                      ? 'GiA — nuestra IA Organizacional — está presente en partes específicas del sistema para ayudar a las organizaciones a reflexionar sobre sus propios patrones. Hace visible lo que ya está allí. No reemplaza el juicio humano, la inteligencia emocional, ni la sabiduría que surge de estar en la sala.'
-                      : 'GiA — our Organizational AI — is present in specific parts of the system to help organizations reflect on their own patterns. It surfaces what is already there. It does not replace human judgment, emotional intelligence, or the wisdom that comes from being in the room.'}
+                  <div className="w-16 h-px bg-secondary/40 mx-auto" />
+                </div>
+
+                <div className="relative">
+                  <span className="absolute -top-6 -left-2 md:-left-6 font-display text-[10rem] leading-none text-secondary/15 select-none pointer-events-none" aria-hidden="true">
+                    &ldquo;
+                  </span>
+
+                  <div className="relative grid md:grid-cols-2 gap-x-12 gap-y-6 text-foreground/85 font-body leading-relaxed text-[1.05rem] md:text-lg">
+                    <p className="md:col-span-2 font-display text-2xl md:text-3xl text-foreground leading-snug mb-4">
+                      {currentLanguage === 'es'
+                        ? 'Construir COIREA requirió que pensáramos con cuidado sobre el rol de la Inteligencia Artificial en la vida organizacional.'
+                        : 'Building COIREA required us to think carefully about the role of Artificial Intelligence in organizational life.'}
+                    </p>
+                    <p>
+                      {currentLanguage === 'es'
+                        ? 'GiA — nuestra IA Organizacional — está presente en partes específicas del sistema para ayudar a las organizaciones a reflexionar sobre sus propios patrones. Hace visible lo que ya está allí. No reemplaza el juicio humano, la inteligencia emocional, ni la sabiduría que surge de estar en la sala.'
+                        : 'GiA — our Organizational AI — is present in specific parts of the system to help organizations reflect on their own patterns. It surfaces what is already there. It does not replace human judgment, emotional intelligence, or the wisdom that comes from being in the room.'}
+                    </p>
+                    <p>
+                      {currentLanguage === 'es'
+                        ? 'Creemos que el futuro de las organizaciones florecientes vive en la intersección de cuatro inteligencias: Humana, Orgánica, Emocional y Artificial. COIREA está diseñada para integrar las cuatro — no para privilegiar una sobre las otras.'
+                        : 'We believe the future of thriving organizations lives at the intersection of four intelligences: Human, Organic, Emotional, and Artificial. COIREA is designed to integrate all four — not to privilege one over the others.'}
+                    </p>
+                    <p>
+                      {currentLanguage === 'es'
+                        ? 'También somos conscientes del costo real de la IA sobre el planeta. La usamos responsablemente: con intención, al servicio de la reflexión, y solo donde genuinamente aporta algo que un humano por sí solo no podría ver con la misma facilidad. El resto del sistema está diseñado en torno a las personas — su presencia, sus relaciones, su capacidad de sentir lo que está ocurriendo y responder.'
+                        : 'We are also aware of the real cost of AI on the planet. We use it responsibly: deliberately, in service of reflection, and only where it genuinely adds something a human alone could not see as easily. The rest of the system is designed around people — their presence, their relationships, their capacity to sense what is happening and respond.'}
+                    </p>
+                    <p className="font-display italic text-xl md:text-2xl text-primary leading-snug self-center">
+                      {currentLanguage === 'es'
+                        ? 'Esto es lo que IA Responsable significa para nosotros. No un descargo. Una decisión de diseño.'
+                        : 'This is what Responsible AI means to us. Not a disclaimer. A design choice.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-14 flex items-center justify-center gap-4">
+                  <div className="h-px w-12 bg-secondary/40" />
+                  <p className="text-foreground font-display font-semibold tracking-wide">
+                    {currentLanguage === 'es' ? 'María José Figueroa' : 'María José Figueroa'}
+                    <span className="block text-xs tracking-[0.25em] uppercase text-muted-foreground font-body font-normal mt-1">
+                      {currentLanguage === 'es' ? 'Fundadora de COIREA' : 'Founder of COIREA'}
+                    </span>
                   </p>
-                  <p>
-                    {currentLanguage === 'es'
-                      ? 'Creemos que el futuro de las organizaciones florecientes vive en la intersección de cuatro inteligencias: Humana, Orgánica, Emocional y Artificial. COIREA está diseñada para integrar las cuatro — no para privilegiar una sobre las otras.'
-                      : 'We believe the future of thriving organizations lives at the intersection of four intelligences: Human, Organic, Emotional, and Artificial. COIREA is designed to integrate all four — not to privilege one over the others.'}
-                  </p>
-                  <p>
-                    {currentLanguage === 'es'
-                      ? 'También somos conscientes del costo real de la IA sobre el planeta. La usamos responsablemente: con intención, al servicio de la reflexión, y solo donde genuinamente aporta algo que un humano por sí solo no podría ver con la misma facilidad. El resto del sistema está diseñado en torno a las personas — su presencia, sus relaciones, su capacidad de sentir lo que está ocurriendo y responder.'
-                      : 'We are also aware of the real cost of AI on the planet. We use it responsibly: deliberately, in service of reflection, and only where it genuinely adds something a human alone could not see as easily. The rest of the system is designed around people — their presence, their relationships, their capacity to sense what is happening and respond.'}
-                  </p>
-                  <p>
-                    {currentLanguage === 'es'
-                      ? 'Esto es lo que IA Responsable significa para nosotros. No un descargo. Una decisión de diseño.'
-                      : 'This is what Responsible AI means to us. Not a disclaimer. A design choice.'}
-                  </p>
-                </blockquote>
-                <p className="mt-6 text-right text-foreground font-display font-semibold">
-                  {currentLanguage === 'es' ? '— María José Figueroa, Fundadora de COIREA' : '— María José Figueroa, Founder of COIREA'}
-                </p>
+                  <div className="h-px w-12 bg-secondary/40" />
+                </div>
               </div>
             </div>
           </section>
