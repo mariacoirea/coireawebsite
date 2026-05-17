@@ -621,6 +621,88 @@ const Platform = () => {
           </section>
 
 
+          {/* Pricing / Access */}
+          <section className="py-24 bg-[hsl(var(--warm-beige))]">
+            <div className="container px-4">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                  {currentLanguage === 'es' ? 'Cómo Comenzar' : 'How to Get Started'}
+                </h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div className="p-8 rounded-2xl bg-background border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300">
+                  <p className="text-xs tracking-[0.2em] uppercase text-secondary font-semibold mb-3">SOIL</p>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                    {currentLanguage === 'es' ? 'Gratuito' : 'Free'}
+                  </h3>
+                  <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                    {currentLanguage === 'es'
+                      ? 'Comienza con una reflexión organizacional gratuita. Sin compromiso. Solo por invitación.'
+                      : 'Start with a free organizational reflection. No commitment required. Invitation only.'}
+                  </p>
+                  <LocalizedLink to="/journey">
+                    <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
+                      {currentLanguage === 'es' ? 'Aplicar aquí' : 'Apply here'}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </LocalizedLink>
+                </div>
+                <div className="p-8 rounded-2xl bg-background/60 border border-dashed border-border">
+                  <p className="text-xs tracking-[0.2em] uppercase text-primary/70 font-semibold mb-3">GROW · FLOURISH</p>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                    {currentLanguage === 'es' ? 'Acompañamiento Completo' : 'Full Accompaniment'}
+                  </h3>
+                  <p className="text-muted-foreground font-body leading-relaxed">
+                    {currentLanguage === 'es'
+                      ? 'Después de SOIL, las organizaciones invitadas entran en el sistema completo con un Guardián dedicado.'
+                      : 'After SOIL, invited organizations enter the full system with a dedicated Guardian.'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Words from the Founder */}
+          <section className="py-24 bg-background">
+            <div className="container px-4">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase mb-6 text-center">
+                  {currentLanguage === 'es' ? 'Palabras de la Fundadora' : 'Words from the Founder'}
+                </p>
+                <blockquote className="space-y-5 text-foreground/85 font-body leading-relaxed text-lg italic border-l-2 border-secondary/40 pl-6">
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Construir COIREA requirió que pensáramos con cuidado sobre el rol de la Inteligencia Artificial en la vida organizacional.'
+                      : 'Building COIREA required us to think carefully about the role of Artificial Intelligence in organizational life.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'GiA — nuestra IA Organizacional — está presente en partes específicas del sistema para ayudar a las organizaciones a reflexionar sobre sus propios patrones. Hace visible lo que ya está allí. No reemplaza el juicio humano, la inteligencia emocional, ni la sabiduría que surge de estar en la sala.'
+                      : 'GiA — our Organizational AI — is present in specific parts of the system to help organizations reflect on their own patterns. It surfaces what is already there. It does not replace human judgment, emotional intelligence, or the wisdom that comes from being in the room.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Creemos que el futuro de las organizaciones florecientes vive en la intersección de cuatro inteligencias: Humana, Orgánica, Emocional y Artificial. COIREA está diseñada para integrar las cuatro — no para privilegiar una sobre las otras.'
+                      : 'We believe the future of thriving organizations lives at the intersection of four intelligences: Human, Organic, Emotional, and Artificial. COIREA is designed to integrate all four — not to privilege one over the others.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'También somos conscientes del costo real de la IA sobre el planeta. La usamos responsablemente: con intención, al servicio de la reflexión, y solo donde genuinamente aporta algo que un humano por sí solo no podría ver con la misma facilidad. El resto del sistema está diseñado en torno a las personas — su presencia, sus relaciones, su capacidad de sentir lo que está ocurriendo y responder.'
+                      : 'We are also aware of the real cost of AI on the planet. We use it responsibly: deliberately, in service of reflection, and only where it genuinely adds something a human alone could not see as easily. The rest of the system is designed around people — their presence, their relationships, their capacity to sense what is happening and respond.'}
+                  </p>
+                  <p>
+                    {currentLanguage === 'es'
+                      ? 'Esto es lo que IA Responsable significa para nosotros. No un descargo. Una decisión de diseño.'
+                      : 'This is what Responsible AI means to us. Not a disclaimer. A design choice.'}
+                  </p>
+                </blockquote>
+                <p className="mt-6 text-right text-foreground font-display font-semibold">
+                  {currentLanguage === 'es' ? '— María José Figueroa, Fundadora de COIREA' : '— María José Figueroa, Founder of COIREA'}
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Early Access CTA */}
           <section className="py-24 bg-background">
             <div className="container px-4">
