@@ -124,7 +124,7 @@ const Platform = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--warm-beige))] via-[hsl(77,15%,75%)] to-[hsl(77,18%,60%)]" />
             <div
               className="absolute inset-0 bg-cover bg-center mix-blend-soft-light opacity-60"
-              style={{ backgroundImage: `url(${coireaCycleBg})` }}
+              style={{ backgroundImage: `url(${platformHeroBg})` }}
               aria-hidden="true"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--warm-beige))]/40 via-transparent to-[hsl(var(--warm-beige))]/70" aria-hidden="true" />
