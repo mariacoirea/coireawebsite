@@ -156,7 +156,7 @@ const Purpose = () => {
 
         {/* SECTION 4 — SOLUTION (Vertical centered) */}
         <section className="py-24 bg-background">
-          <div className="container px-6 max-w-4xl mx-auto">
+          <div className="container px-6 max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-[hsl(var(--warm-beige))] text-sm font-medium text-secondary mx-auto mb-6">
                 <Sparkles className="w-4 h-4" />
