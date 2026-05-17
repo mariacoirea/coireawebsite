@@ -1,25 +1,42 @@
 {
   "seo": {
-    "title": "Apply for Early Access - COIREA MVP | Organizational Intelligence Platform",
-    "description": "Apply for early access to the COIREA Organizational Intelligence Platform MVP. Measure culture, leadership, collaboration, and well-being through real-time AI-powered intelligence.",
-    "keywords": "COIREA MVP, early access, organizational intelligence platform, AI organizational health, culture measurement, leadership analytics",
-    "successTitle": "Application Received - COIREA MVP Early Access | COIREA",
-    "successDescription": "Thank you for applying to the COIREA MVP. We'll review your application and reach out if your organization is selected for early access.",
-    "successKeywords": "organizational intelligence, COIREA MVP, early access application, thank you"
+    "title": "Apply to Work with COIREA | Organizational Intelligence Platform",
+    "description": "Apply to work with COIREA. Every organization that enters the system does so with a trained Guardian who holds the process alongside you.",
+    "keywords": "COIREA application, organizational intelligence platform, AI organizational health, culture measurement, leadership analytics, Guardian facilitator",
+    "successTitle": "Application Received | COIREA",
+    "successDescription": "Thank you for applying to work with COIREA. A Guardian will review your application personally and reach out if there is a genuine fit.",
+    "successKeywords": "organizational intelligence, COIREA application, thank you"
   },
   "hero": {
-    "title": "Join the First COIREA Cohort",
-    "description": "COIREA is opening its first cycle with a small number of organizations ready to understand how their system actually operates — and evolve it through real-time organizational intelligence.",
-    "note": "We are working with a limited number of teams to ensure depth, signal quality, and meaningful integration into their operating system.",
-    "cta": "Explore Participation"
+    "title": "Is Your Organization Ready to See Itself Clearly?",
+    "description": "COIREA is not for every organization. It is for the ones that sense something needs to shift, and are ready to look at it honestly, with the right support alongside them.",
+    "note": "Every organization that enters COIREA does so with a Guardian — a trained facilitator who holds the process with you. This is not a software subscription. It is an accompanied transformation. Applications are reviewed personally. If there is a genuine fit, a Guardian will reach out to begin the conversation.",
+    "cta": "Apply to Work with COIREA"
   },
   "access": {
-    "title": "What You'll Access",
+    "title": "What the Process Includes",
     "items": [
-      "Real-Time Organizational Health Scanner",
-      "AI-Generated Insights & Risk Signals",
-      "5-Pillar Framework Dashboard",
-      "Regenerative Impact Reporting"
+      "Organizational Vitality Index (OVI)",
+      "GiA, Trained Organizational AI",
+      "Five-Pillar OS Dashboard",
+      "Systemic Reflection & Evolution Tracking"
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "You apply",
+        "description": "Tell us about your organization and what you're sensing needs to change. There are no wrong answers."
+      },
+      {
+        "title": "A Guardian reviews your application",
+        "description": "We read every application personally. If there is a genuine fit, a Guardian will reach out to schedule a Compass Call — a first conversation to understand your system together."
+      },
+      {
+        "title": "You enter SOIL",
+        "description": "The process begins with the OVI assessment and the Reflection Board. Free, no commitment. You see your system. Then you decide if you want to go deeper."
+      }
     ]
   },
   "form": {
