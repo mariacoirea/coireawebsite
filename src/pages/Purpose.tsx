@@ -8,14 +8,14 @@ import {
   ArrowRight, Building2, Rocket, Leaf, Network, Sparkles, 
   Target, Shield, Users, Heart, Compass, AlertTriangle, 
   Lightbulb, Eye, Zap, CircleDot, Layers, EyeOff,
-  Activity, BarChart3, ClipboardCheck
+  Activity, BarChart3, ClipboardCheck, GraduationCap
 } from "lucide-react";
 import purposeHero from "@/assets/purpose-hero.jpg";
 
 const Purpose = () => {
   const { t } = useTranslation('purpose');
 
-  const orgIcons = [Building2, Rocket, Leaf, Network, Sparkles];
+  const orgIcons = [Building2, Rocket, Leaf, Network, Sparkles, GraduationCap];
   const challengeIcons = [Layers, Zap, Compass, EyeOff];
   const solutionIcons = [Target, AlertTriangle, Shield, Heart];
 
@@ -156,7 +156,7 @@ const Purpose = () => {
 
         {/* SECTION 4 — SOLUTION (Vertical centered) */}
         <section className="py-24 bg-background">
-          <div className="container px-6 max-w-4xl mx-auto">
+          <div className="container px-6 max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-[hsl(var(--warm-beige))] text-sm font-medium text-secondary mx-auto mb-6">
                 <Sparkles className="w-4 h-4" />
@@ -274,11 +274,8 @@ const Purpose = () => {
         {/* SECTION — VISION (Inspiration) */}
         <section className="relative py-24 overflow-hidden bg-[hsl(40,20%,96%)]">
           <div className="container relative z-10 px-6 max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary/70 text-sm font-medium mx-auto mb-8">
-              <Leaf className="w-4 h-4" />
-              Vision
-            </div>
             
+
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               {t('planetary.title')}{' '}
               <span className="text-primary">{t('planetary.titleEmphasis')}</span>
