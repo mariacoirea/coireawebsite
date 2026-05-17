@@ -174,33 +174,39 @@ const Guardians = () => {
           </div>
 
           {/* NARRATIVE */}
-          <div className="pt-12 max-w-3xl mx-auto border-t border-border">
-            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-8 leading-snug text-primary">
+          <div className="pt-12 max-w-6xl mx-auto border-t border-border">
+            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-snug text-primary">
               {t(
-                "\"We didn't come together because we agree on everything. We arrived together because each of us carries a piece of what organizations most need today, and we recognized it in one another.\"",
-                "\"No nos unimos porque estemos de acuerdo en todo. Llegamos juntos porque cada uno carga una pieza de lo que las organizaciones más necesitan hoy, y la reconocimos en el otro.\""
+                "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
+                "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
               )}
             </p>
-            <div className="max-w-2xl mx-auto space-y-4 text-base leading-relaxed font-body text-muted-foreground">
-              <p>
-                {t(
-                  "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it really means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as before. Gabriela brings the intelligence of natural systems: a biologist who reads organizations as one reads ecosystems, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when doing has outpaced being. And Juan Carlos brings the ",
-                  "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede seguir como hasta ahora. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
-                )}
-                <span className="text-primary font-semibold">{t("systemic gaze", "mirada sistémica")}</span>
-                {t(
-                  ": accompanying organizations to see what the system already knows about itself, before touching anything.",
-                  ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
-                )}
-              </p>
+
+            <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
+              <div className="space-y-4 text-base leading-relaxed font-body text-muted-foreground">
+                <p>
+                  {t(
+                    "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it truly means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as it is. Gabriela brings the intelligence of natural systems: a biologist who reads organizations the way ecosystems are read, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when the doing has outrun the being. And Juan Carlos brings the ",
+                    "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede continuar como está. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
+                  )}
+                  <span className="text-primary font-semibold">{t("systemic gaze", "mirada sistémica")}</span>
+                  {t(
+                    ": accompanying organizations to see what the system already knows about itself, before touching any of it.",
+                    ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada de ello."
+                  )}
+                </p>
+              </div>
+
+              <LatamMap label={t("Guardian locations", "Ubicación de Guardianes")} />
             </div>
+
             <div className="font-display text-2xl md:text-3xl text-center my-10 text-primary font-semibold">
-              {t("Five different territories. One single living body.", "Cinco territorios diferentes. Un solo cuerpo vivo.")}
+              {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
             </div>
             <div className="max-w-2xl mx-auto text-base leading-relaxed font-body text-muted-foreground text-center">
               <p>{t(
-                "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are identified without pointing to culprits, and where organizational intelligence is allowed to emerge from within.",
-                "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde se identifican los patrones sin señalar culpables, y donde se permite que la inteligencia organizacional emerja desde dentro."
+                "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
+                "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
               )}</p>
             </div>
             <div className="font-display text-lg md:text-xl text-center max-w-xl mx-auto mt-10 py-6 leading-relaxed text-primary border-t border-b border-accent/40">
