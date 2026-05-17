@@ -8,14 +8,14 @@ import {
   ArrowRight, Building2, Rocket, Leaf, Network, Sparkles, 
   Target, Shield, Users, Heart, Compass, AlertTriangle, 
   Lightbulb, Eye, Zap, CircleDot, Layers, EyeOff,
-  Activity, BarChart3, ClipboardCheck
+  Activity, BarChart3, ClipboardCheck, GraduationCap
 } from "lucide-react";
 import purposeHero from "@/assets/purpose-hero.jpg";
 
 const Purpose = () => {
   const { t } = useTranslation('purpose');
 
-  const orgIcons = [Building2, Rocket, Leaf, Network, Sparkles];
+  const orgIcons = [Building2, Rocket, Leaf, Network, Sparkles, GraduationCap];
   const challengeIcons = [Layers, Zap, Compass, EyeOff];
   const solutionIcons = [Target, AlertTriangle, Shield, Heart];
 
