@@ -104,56 +104,6 @@ const Platform = () => {
     { key: 'nextEvolution', icon: Sparkles },
   ];
 
-  const features = [
-    { 
-      key: 'alignment', 
-      icon: Target,
-      title: 'Strategic Alignment Engine',
-      titleEs: 'Motor de Alineación Estratégica',
-      desc: 'Connect long-term vision to quarterly execution. COIREA detects where priorities drift from strategic intent and keeps goals anchored in clear ownership and measurable progress.',
-      descEs: 'Conecta la visión a largo plazo con la ejecución trimestral. COIREA detecta dónde las prioridades se desvían de la intención estratégica y mantiene los objetivos anclados en propiedad clara y progreso medible.'
-    },
-    { 
-      key: 'gia', 
-      icon: Brain,
-      title: 'Trained Organizational AI (GiA)',
-      titleEs: 'IA Organizacional Entrenada (GiA)',
-      desc: 'GiA interprets cross-pillar signals within your own system — across leadership, culture, collaboration, well-being, and strategy. It surfaces structural tensions, execution blockers, and early risk indicators before they impact results.',
-      descEs: 'GiA interpreta señales entre pilares dentro de tu propio sistema — a través de liderazgo, cultura, colaboración, bienestar y estrategia. Identifica tensiones estructurales, bloqueadores de ejecución e indicadores de riesgo temprano antes de que impacten los resultados.'
-    },
-    { 
-      key: 'governance', 
-      icon: Shield,
-      title: 'Governance & Ownership Architecture',
-      titleEs: 'Arquitectura de Gobernanza y Propiedad',
-      desc: 'Define clear roles, decision rights, and accountability pathways. Eliminate bottlenecks, reduce decision friction, and distribute authority with clarity.',
-      descEs: 'Define roles claros, derechos de decisión y rutas de responsabilidad. Elimina cuellos de botella, reduce la fricción de decisiones y distribuye la autoridad con claridad.'
-    },
-    { 
-      key: 'ovi', 
-      icon: Activity,
-      title: 'Organizational Vitality Index (OVI)',
-      titleEs: 'Índice de Vitalidad Organizacional (OVI)',
-      desc: 'Aggregate systemic health into one executive score, with detailed pillar breakdowns and trend visibility. Track how organizational coherence directly affects execution and goal achievement.',
-      descEs: 'Agrega la salud sistémica en un puntaje ejecutivo, con desgloses detallados por pilar y visibilidad de tendencias. Rastrea cómo la coherencia organizacional afecta directamente la ejecución y el logro de objetivos.'
-    },
-    { 
-      key: 'capacity', 
-      icon: Heart,
-      title: 'System Capacity Signals',
-      titleEs: 'Señales de Capacidad del Sistema',
-      desc: 'Monitor well-being, collaboration strain, and energy trends in real time. Detect burnout risk and capacity depletion early — protecting performance as you scale.',
-      descEs: 'Monitorea bienestar, tensión de colaboración y tendencias de energía en tiempo real. Detecta riesgo de burnout y agotamiento de capacidad temprano — protegiendo el rendimiento mientras escalas.'
-    },
-    { 
-      key: 'flow', 
-      icon: Network,
-      title: 'Collaboration & Flow Intelligence',
-      titleEs: 'Inteligencia de Colaboración y Flujo',
-      desc: 'Visualize how teams coordinate across priorities and projects. Identify friction points slowing execution and strengthen cross-functional alignment.',
-      descEs: 'Visualiza cómo los equipos coordinan a través de prioridades y proyectos. Identifica puntos de fricción que ralentizan la ejecución y fortalece la alineación interfuncional.'
-    },
-  ];
 
   return (
     <>
