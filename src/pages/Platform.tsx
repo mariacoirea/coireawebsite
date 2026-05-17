@@ -438,6 +438,38 @@ const Platform = () => {
             </div>
           </section>
 
+          {/* The Guardian in the System */}
+          <section className="py-24 bg-background">
+            <div className="container px-4">
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase">
+                    {currentLanguage === 'es' ? 'La Capa Humana' : 'The Human Layer'}
+                  </p>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
+                    {currentLanguage === 'es'
+                      ? 'El Sistema Funciona Porque Hay Personas Que Lo Sostienen'
+                      : 'The System Works Because People Hold It'}
+                  </h2>
+                  <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                    {currentLanguage === 'es'
+                      ? 'COIREA no es una herramienta de autoservicio. Cada organización que entra al sistema es acompañada por un Guardián — un facilitador entrenado que sostiene el proceso, lee lo que los datos por sí solos no pueden decirte, y permanece presente en los momentos que más importan. La plataforma da claridad. El Guardián le da contexto.'
+                      : 'COIREA is not a self-service tool. Every organization that enters the system is accompanied by a Guardian — a trained facilitator who holds the process, reads what the data alone cannot tell you, and stays present through the moments that matter most. The platform gives clarity. The Guardian gives it context.'}
+                  </p>
+                </div>
+                <div className="flex md:justify-end">
+                  <LocalizedLink
+                    to="/guardians"
+                    className="inline-flex items-center gap-2 text-copper hover:text-copper/80 font-display font-semibold text-xl underline-offset-8 hover:underline transition-colors"
+                  >
+                    {currentLanguage === 'es' ? 'Conoce a los Guardianes' : 'Meet the Guardians'}
+                    <ArrowRight className="w-5 h-5" />
+                  </LocalizedLink>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Meet GiA */}
           <section className="py-24 bg-background">
             <div className="container px-4">
