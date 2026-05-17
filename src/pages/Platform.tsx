@@ -384,7 +384,7 @@ const Platform = () => {
           </section>
 
           {/* The Guardian in the System */}
-          <section className="py-24 bg-[hsl(var(--aura-pearl))]">
+          <section className="py-24 bg-[hsl(var(--warm-beige))] border-y border-border/40">
             <div className="container px-4">
               <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
