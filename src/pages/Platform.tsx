@@ -407,10 +407,10 @@ const Platform = () => {
                 <div className="flex md:justify-end">
                   <LocalizedLink
                     to="/guardians"
-                    className="inline-flex items-center gap-2 text-copper hover:text-copper/80 font-display font-semibold text-xl underline-offset-8 hover:underline transition-colors"
+                    className="group inline-flex items-center gap-4 text-copper hover:text-copper/80 font-display font-bold text-3xl md:text-5xl leading-tight underline-offset-[12px] decoration-2 hover:underline transition-all"
                   >
                     {currentLanguage === 'es' ? 'Conoce a los Guardianes' : 'Meet the Guardians'}
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:translate-x-2" />
                   </LocalizedLink>
                 </div>
               </div>
