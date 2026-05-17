@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 import LocalizedLink from "@/components/LocalizedLink";
 import aboutHero from "@/assets/about-hero.jpg";
+import visionSunset from "@/assets/vision-sunset.jpg";
 
 const About = () => {
   const { t } = useTranslation('about');
