@@ -385,12 +385,7 @@ const Platform = () => {
 
           {/* The Guardian in the System */}
           <section className="relative py-24 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${coireaCycleBg})`, opacity: 0.18 }}
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--warm-beige))]/85 via-[hsl(var(--warm-beige))]/70 to-[hsl(var(--warm-beige))]/90" aria-hidden="true" />
+            <div className="absolute inset-0 bg-[hsl(var(--warm-beige))]" aria-hidden="true" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-[hsl(77,18%,55%)]/15" aria-hidden="true" />
             <div className="container relative z-10 px-4">
               <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -412,10 +407,10 @@ const Platform = () => {
                 <div className="flex md:justify-end">
                   <LocalizedLink
                     to="/guardians"
-                    className="inline-flex items-center gap-2 text-copper hover:text-copper/80 font-display font-semibold text-xl underline-offset-8 hover:underline transition-colors"
+                    className="group inline-flex items-center gap-4 text-copper hover:text-copper/80 font-display font-bold text-3xl md:text-5xl leading-tight underline-offset-[12px] decoration-2 hover:underline transition-all"
                   >
                     {currentLanguage === 'es' ? 'Conoce a los Guardianes' : 'Meet the Guardians'}
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:translate-x-2" />
                   </LocalizedLink>
                 </div>
               </div>
