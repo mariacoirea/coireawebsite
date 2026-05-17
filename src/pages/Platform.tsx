@@ -31,6 +31,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 import platformDashboardPreview from "@/assets/platform-dashboard-preview.png";
 import coireaCycleBg from "@/assets/coirea-cycle-bg.png";
+import platformHeroBg from "@/assets/platform-hero-bg.jpg";
 
 const Platform = () => {
   const { t } = useTranslation('platform');
