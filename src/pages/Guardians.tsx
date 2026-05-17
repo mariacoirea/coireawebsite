@@ -203,10 +203,8 @@ const Guardians = () => {
               <LatamMap label={t("Guardian locations", "Ubicación de Guardianes")} />
             </div>
 
-            <div className="font-display text-2xl md:text-3xl text-center my-10 text-primary font-semibold">
-              {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
-            </div>
-            <div className="max-w-2xl mx-auto text-base leading-relaxed font-body text-muted-foreground text-center">
+            <div className="max-w-2xl mx-auto mt-12 text-base leading-relaxed font-body text-muted-foreground text-center">
+
               <p>{t(
                 "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
                 "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
