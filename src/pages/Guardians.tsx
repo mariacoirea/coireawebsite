@@ -318,39 +318,41 @@ const Field = ({
 );
 
 const LatamMap = ({ label }: { label: string }) => {
+  // Positions as % of the uploaded LATAM map image
   const locations = [
-    { name: "Ecuador", cx: 70, cy: 95 },
-    { name: "Perú", cx: 82, cy: 140 },
-    { name: "Chile", cx: 92, cy: 240 },
-    { name: "Argentina", cx: 122, cy: 235 },
+    { name: "Ecuador",   top: "41%", left: "37%", labelSide: "left" as const },
+    { name: "Perú",      top: "52%", left: "42%", labelSide: "left" as const },
+    { name: "Chile",     top: "78%", left: "47%", labelSide: "left" as const },
+    { name: "Argentina", top: "78%", left: "56%", labelSide: "right" as const },
   ];
   return (
-    <div className="relative mx-auto w-full max-w-xs">
-      <svg viewBox="0 0 220 320" className="w-full h-auto" aria-label={label}>
-        {/* Simplified South America silhouette */}
-        <path
-          d="M95,15 C120,18 145,28 158,45 C168,58 172,75 165,88 C160,100 150,108 148,122 C147,138 158,150 160,168 C162,188 152,205 142,225 C135,245 130,265 118,285 C108,300 95,308 88,300 C82,290 90,275 88,260 C85,245 75,235 78,218 C82,200 92,188 88,170 C82,150 65,140 60,120 C56,102 65,85 75,68 C82,52 80,30 95,15 Z"
-          fill="hsl(var(--warm-beige))"
-          stroke="hsl(var(--primary) / 0.35)"
-          strokeWidth="1.2"
+    <div className="mx-auto w-full max-w-sm">
+      <div className="relative">
+        <img
+          src={latamMap}
+          alt={label}
+          className="w-full h-auto opacity-80"
         />
         {locations.map((l) => (
-          <g key={l.name}>
-            <circle cx={l.cx} cy={l.cy} r="9" fill="hsl(var(--accent) / 0.2)" />
-            <circle cx={l.cx} cy={l.cy} r="4" fill="hsl(var(--accent))" />
-            <text
-              x={l.cx + 10}
-              y={l.cy + 3}
-              fontSize="10"
-              fill="hsl(var(--primary))"
-              className="font-body"
-              fontWeight="600"
+          <div
+            key={l.name}
+            className="absolute -translate-x-1/2 -translate-y-1/2"
+            style={{ top: l.top, left: l.left }}
+          >
+            <span className="relative flex items-center justify-center">
+              <span className="absolute inline-flex h-5 w-5 rounded-full bg-accent/30 animate-ping" />
+              <span className="relative inline-flex h-3 w-3 rounded-full bg-accent border-2 border-background" />
+            </span>
+            <span
+              className={`absolute top-1/2 -translate-y-1/2 ${
+                l.labelSide === "left" ? "right-full mr-2" : "left-full ml-2"
+              } text-[11px] font-body font-semibold text-primary whitespace-nowrap`}
             >
               {l.name}
-            </text>
-          </g>
+            </span>
+          </div>
         ))}
-      </svg>
+      </div>
       <div className="text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3">
         {label}
       </div>
