@@ -12,7 +12,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 import LocalizedLink from "@/components/LocalizedLink";
 import aboutHero from "@/assets/about-hero.jpg";
-import visionSunset from "@/assets/vision-sunset.jpg";
 
 const About = () => {
   const { t } = useTranslation('about');
@@ -253,7 +252,7 @@ const About = () => {
 
         {/* Why COIREA Is Inspired by Nature */}
         <section className="py-24 px-6 bg-gradient-to-b from-background via-warm-beige/40 to-background">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 bg-sage/10 px-6 py-3 rounded-full border border-sage/20 shadow-sm mb-8">
                 <TreePine className="w-4 h-4 text-sage" />
@@ -277,16 +276,8 @@ const About = () => {
         </section>
 
         {/* Our Vision Section */}
-        <section className="relative py-24 px-6 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${visionSunset})` }}
-            aria-hidden="true"
-          />
-          {/* Earthy softening layer */}
-          <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/80 via-warm-beige/60 to-[hsl(var(--aura-pearl))]/70" aria-hidden="true" />
-          <div className="absolute inset-0 bg-primary/10" aria-hidden="true" />
-          <div className="relative container mx-auto max-w-5xl text-center">
+        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
+          <div className="container mx-auto max-w-5xl text-center">
             <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
               <Eye className="w-4 h-4 text-primary" />
               <span className="text-primary font-medium">Our Vision</span>
