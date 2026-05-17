@@ -41,7 +41,7 @@
   },
   "form": {
     "mainTitle": "Tell Us About Your Organization",
-    "mainDescription": "We review every application to ensure the MVP is the right match. Share your context below, and we'll follow up if your organization is selected for early access.",
+    "mainDescription": "A Guardian reads every application personally to ensure there is a genuine fit. Share your context below, and we'll reach out if it makes sense to begin the conversation.",
     "contact": {
       "title": "Contact Information",
       "name": "Your Name",
@@ -110,7 +110,7 @@
     "additional": {
       "title": "Additional Information",
       "label": "Anything else you'd like us to know?",
-      "placeholder": "Share any additional context about your organization or why you're interested in the COIREA MVP..."
+      "placeholder": "Share any additional context about your organization or why you're interested in working with COIREA..."
     },
     "submit": {
       "button": "Submit Application",
@@ -121,7 +121,7 @@
   },
   "success": {
     "title": "Application Received",
-    "subtitle": "Thank you for applying to the COIREA MVP Early Access Program.",
+    "subtitle": "Thank you for applying to work with COIREA.",
     "nextSteps": {
       "title": "What Happens Next?",
       "step1": {
@@ -130,11 +130,11 @@
       },
       "step2": {
         "title": "If Selected:",
-        "description": "We'll schedule a brief call to discuss onboarding and next steps"
+        "description": "If there is a genuine fit, a Guardian will schedule a Compass Call to understand your system together."
       },
       "step3": {
-        "title": "MVP Access:",
-        "description": "Selected organizations will receive platform access and onboarding support"
+        "title": "You enter SOIL:",
+        "description": "If there is a fit, you'll begin with the OVI assessment and the Reflection Board — free, with no commitment."
       }
     }
   }
