@@ -277,8 +277,16 @@ const About = () => {
         </section>
 
         {/* Our Vision Section */}
-        <section className="py-24 px-6 bg-gradient-to-br from-aura-pearl to-warm-beige">
-          <div className="container mx-auto max-w-5xl text-center">
+        <section className="relative py-24 px-6 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${visionSunset})` }}
+            aria-hidden="true"
+          />
+          {/* Earthy softening layer */}
+          <div className="absolute inset-0 bg-gradient-to-br from-warm-beige/80 via-warm-beige/60 to-[hsl(var(--aura-pearl))]/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-primary/10" aria-hidden="true" />
+          <div className="relative container mx-auto max-w-5xl text-center">
             <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/10 shadow-sm mb-8">
               <Eye className="w-4 h-4 text-primary" />
               <span className="text-primary font-medium">Our Vision</span>
