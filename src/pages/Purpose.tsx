@@ -274,11 +274,8 @@ const Purpose = () => {
         {/* SECTION — VISION (Inspiration) */}
         <section className="relative py-24 overflow-hidden bg-[hsl(40,20%,96%)]">
           <div className="container relative z-10 px-6 max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary/70 text-sm font-medium mx-auto mb-8">
-              <Leaf className="w-4 h-4" />
-              Vision
-            </div>
             
+
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               {t('planetary.title')}{' '}
               <span className="text-primary">{t('planetary.titleEmphasis')}</span>
