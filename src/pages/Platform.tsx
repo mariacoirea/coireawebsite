@@ -360,31 +360,38 @@ const Platform = () => {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-8">
-                {pillars.map(({ key, icon: Icon }) => (
-                  <div 
-                    key={key}
-                    className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 text-center"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
-                      <Icon className="w-6 h-6 text-secondary" />
-                    </div>
-                    <h3 className="text-lg font-display font-semibold text-foreground mb-1">
-                      {t(`pillars.items.${key}.title`)}
-                    </h3>
-                    <p className="text-sm text-secondary font-medium mb-3">
-                      {t(`pillars.items.${key}.subtitle`)}
-                    </p>
-                    <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4 text-left">
-                      {t(`pillars.items.${key}.description`)}
-                    </p>
-                    <div className="flex items-start gap-2 text-left">
-                      <span className="shrink-0 px-2.5 py-1 rounded-full bg-secondary/15 text-secondary text-xs font-semibold">Drives</span>
-                      <span className="text-xs text-muted-foreground">{t(`pillars.items.${key}.drives`)}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <TooltipProvider delayDuration={150}>
+                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-8">
+                  {pillars.map(({ key, icon: Icon }) => (
+                    <Tooltip key={key}>
+                      <TooltipTrigger asChild>
+                        <div
+                          className="group p-6 rounded-2xl bg-[hsl(var(--warm-beige))] border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300 text-center cursor-help"
+                        >
+                          <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors ring-1 ring-secondary/20">
+                            <Icon className="w-6 h-6 text-secondary" />
+                          </div>
+                          <h3 className="text-lg font-display font-semibold text-foreground mb-1">
+                            {t(`pillars.items.${key}.title`)}
+                          </h3>
+                          <p className="text-sm text-secondary font-medium mb-3">
+                            {t(`pillars.items.${key}.subtitle`)}
+                          </p>
+                          <p className="text-sm text-muted-foreground font-body leading-relaxed text-left line-clamp-2">
+                            {t(`pillars.items.${key}.description`)}
+                          </p>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom" className="max-w-xs">
+                        <p className="text-xs font-semibold text-secondary mb-1">
+                          {currentLanguage === 'es' ? 'Impulsa' : 'Drives'}
+                        </p>
+                        <p className="text-xs">{t(`pillars.items.${key}.drives`)}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </div>
+              </TooltipProvider>
 
               <p className="text-center text-secondary font-medium font-body">
                 {t('pillars.footer')}
