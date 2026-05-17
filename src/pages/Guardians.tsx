@@ -301,19 +301,60 @@ const Field = ({
   required?: boolean;
 }) => (
   <div className={`flex flex-col gap-1.5 ${full ? "sm:col-span-2" : ""}`}>
-    <label className="text-xs tracking-wide font-body text-primary-foreground/70">{label}</label>
+    <label className="text-xs tracking-wide font-body text-muted-foreground">{label}</label>
     {textarea ? (
       <textarea
         value={value} onChange={onChange} placeholder={placeholder} required={required}
-        className="resize-none h-20 rounded-md px-3 py-2 text-sm font-body outline-none bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent/60"
+        className="resize-none h-20 rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />
     ) : (
       <input
         value={value} onChange={onChange} placeholder={placeholder} required={required}
-        className="rounded-md px-3 py-2 text-sm font-body outline-none bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent/60"
+        className="rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />
     )}
   </div>
 );
+
+const LatamMap = ({ label }: { label: string }) => {
+  const locations = [
+    { name: "Ecuador", cx: 70, cy: 95 },
+    { name: "Perú", cx: 82, cy: 140 },
+    { name: "Chile", cx: 92, cy: 240 },
+    { name: "Argentina", cx: 122, cy: 235 },
+  ];
+  return (
+    <div className="relative mx-auto w-full max-w-xs">
+      <svg viewBox="0 0 220 320" className="w-full h-auto" aria-label={label}>
+        {/* Simplified South America silhouette */}
+        <path
+          d="M95,15 C120,18 145,28 158,45 C168,58 172,75 165,88 C160,100 150,108 148,122 C147,138 158,150 160,168 C162,188 152,205 142,225 C135,245 130,265 118,285 C108,300 95,308 88,300 C82,290 90,275 88,260 C85,245 75,235 78,218 C82,200 92,188 88,170 C82,150 65,140 60,120 C56,102 65,85 75,68 C82,52 80,30 95,15 Z"
+          fill="hsl(var(--warm-beige))"
+          stroke="hsl(var(--primary) / 0.35)"
+          strokeWidth="1.2"
+        />
+        {locations.map((l) => (
+          <g key={l.name}>
+            <circle cx={l.cx} cy={l.cy} r="9" fill="hsl(var(--accent) / 0.2)" />
+            <circle cx={l.cx} cy={l.cy} r="4" fill="hsl(var(--accent))" />
+            <text
+              x={l.cx + 10}
+              y={l.cy + 3}
+              fontSize="10"
+              fill="hsl(var(--primary))"
+              className="font-body"
+              fontWeight="600"
+            >
+              {l.name}
+            </text>
+          </g>
+        ))}
+      </svg>
+      <div className="text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3">
+        {label}
+      </div>
+    </div>
+  );
+};
 
 export default Guardians;
