@@ -32,8 +32,8 @@ const About = () => {
       <main id="main-content" className="pt-20">
         {/* Hero Section — Sky background */}
         <section
-          className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
-          style={{ backgroundImage: `url(${aboutHero})` }}
+          className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover"
+          style={{ backgroundImage: `url(${aboutHero})`, backgroundPosition: 'center 30%' }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
 
