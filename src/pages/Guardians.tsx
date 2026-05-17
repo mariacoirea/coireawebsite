@@ -176,16 +176,15 @@ const Guardians = () => {
 
           {/* NARRATIVE */}
           <div className="pt-12 max-w-6xl mx-auto border-t border-border">
-            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-snug text-primary">
-              {t(
-                "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
-                "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
-              )}
-            </p>
-
-            <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
-              <div className="space-y-4 text-base leading-relaxed font-body text-muted-foreground">
-                <p>
+            <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
+              <div className="space-y-6">
+                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
+                  {t(
+                    "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
+                    "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
+                  )}
+                </p>
+                <p className="text-base leading-relaxed font-body text-muted-foreground">
                   {t(
                     "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it truly means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as it is. Gabriela brings the intelligence of natural systems: a biologist who reads organizations the way ecosystems are read, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when the doing has outrun the being. And Juan Carlos brings the ",
                     "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede continuar como está. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
@@ -196,15 +195,16 @@ const Guardians = () => {
                     ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada de ello."
                   )}
                 </p>
+                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
+                  {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
+                </p>
               </div>
 
               <LatamMap label={t("Guardian locations", "Ubicación de Guardianes")} />
             </div>
 
-            <div className="font-display text-2xl md:text-3xl text-center my-10 text-primary font-semibold">
-              {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
-            </div>
-            <div className="max-w-2xl mx-auto text-base leading-relaxed font-body text-muted-foreground text-center">
+            <div className="max-w-2xl mx-auto mt-12 text-base leading-relaxed font-body text-muted-foreground text-center">
+
               <p>{t(
                 "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
                 "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
@@ -322,8 +322,8 @@ const LatamMap = ({ label }: { label: string }) => {
   const locations = [
     { name: "Ecuador",   top: "41%", left: "37%", labelSide: "left" as const },
     { name: "Perú",      top: "52%", left: "42%", labelSide: "left" as const },
-    { name: "Chile",     top: "78%", left: "47%", labelSide: "left" as const },
-    { name: "Argentina", top: "78%", left: "56%", labelSide: "right" as const },
+    { name: "Chile",     top: "70%", left: "47%", labelSide: "left" as const },
+    { name: "Argentina", top: "70%", left: "56%", labelSide: "right" as const },
   ];
   return (
     <div className="mx-auto w-full max-w-sm">
@@ -331,7 +331,7 @@ const LatamMap = ({ label }: { label: string }) => {
         <img
           src={latamMap}
           alt={label}
-          className="w-full h-auto opacity-80"
+          className="w-full h-auto opacity-90 mix-blend-multiply"
         />
         {locations.map((l) => (
           <div
