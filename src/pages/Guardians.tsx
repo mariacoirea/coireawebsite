@@ -221,22 +221,22 @@ const Guardians = () => {
         <div className="h-px bg-accent/40" />
 
         {/* APPLY */}
-        <section className="px-6 md:px-10 py-16 md:py-20 bg-primary text-primary-foreground">
+        <section className="px-6 md:px-10 py-16 md:py-20 bg-warm-beige text-foreground">
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div>
-              <div className="text-xs tracking-[0.2em] uppercase mb-3 text-primary-foreground/60 font-body">
+              <div className="text-xs tracking-[0.2em] uppercase mb-3 text-muted-foreground font-body">
                 {t("For facilitators & coaches", "Para facilitadores y coaches")}
               </div>
-              <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight text-primary-foreground font-semibold">
+              <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight text-primary font-semibold">
                 {t("Do you feel the call to become a Guardian?", "¿Sientes el llamado a ser Guardián?")}
               </h2>
-              <p className="text-base leading-relaxed font-body mb-3 text-primary-foreground/80">
+              <p className="text-base leading-relaxed font-body mb-3 text-muted-foreground">
                 {t(
                   "COIREA Guardians are not hired — they are recognized. If you have real experience accompanying human or organizational processes, an active personal practice, and you resonate with a more conscious, systemic, and alive way of doing things — we want to meet you.",
                   "Los Guardianes COIREA no se contratan — se reconocen. Si tienes experiencia real acompañando procesos humanos u organizacionales, una práctica personal activa, y resuenas con una forma más consciente, sistémica y viva de hacer las cosas — queremos conocerte."
                 )}
               </p>
-              <p className="text-base leading-relaxed font-body mb-6 text-primary-foreground/80">
+              <p className="text-base leading-relaxed font-body mb-6 text-muted-foreground">
                 {t(
                   "We are building the first Guardian network in Latin America. Current applications are part of the foundational process. This is an invitation, not a job posting.",
                   "Estamos construyendo la primera red de Guardianes en Latinoamérica. Las aplicaciones actuales son parte del proceso fundacional. Esta es una invitación, no una oferta de trabajo."
@@ -244,8 +244,8 @@ const Guardians = () => {
               </p>
               <div className="space-y-3 mb-7">
                 {criteria.map((c) => (
-                  <div key={c} className="flex gap-3 items-start text-sm leading-relaxed font-body text-primary-foreground/85">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-accent/30 border border-accent/60">
+                  <div key={c} className="flex gap-3 items-start text-sm leading-relaxed font-body text-foreground/80">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-accent/20 border border-accent/50">
                       <Check className="w-3 h-3 text-accent" />
                     </div>
                     <span>{c}</span>
@@ -255,16 +255,16 @@ const Guardians = () => {
               <a href="#guardian-form" className="inline-block px-7 py-3 rounded-full text-xs tracking-[0.1em] font-semibold uppercase font-body bg-accent text-accent-foreground hover:bg-accent-warm transition-colors">
                 {t("Apply to become a Guardian →", "Aplica para ser Guardián →")}
               </a>
-              <p className="text-xs mt-3 italic font-body text-primary-foreground/60">
+              <p className="text-xs mt-3 italic font-body text-muted-foreground">
                 {t("We review every application personally.", "Revisamos cada aplicación personalmente.")}
               </p>
             </div>
 
-            <form id="guardian-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/15">
-              <div className="font-display text-2xl mb-1 text-primary-foreground font-semibold">
+            <form id="guardian-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-background/70 backdrop-blur-sm border border-border">
+              <div className="font-display text-2xl mb-1 text-primary font-semibold">
                 {t("Tell us about yourself", "Cuéntanos sobre ti")}
               </div>
-              <div className="text-xs italic font-body mb-5 text-primary-foreground/60">
+              <div className="text-xs italic font-body mb-5 text-muted-foreground">
                 {t("We'll be in touch within 7–10 days.", "Te contactaremos en 7–10 días.")}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
