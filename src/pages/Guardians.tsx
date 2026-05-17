@@ -174,33 +174,39 @@ const Guardians = () => {
           </div>
 
           {/* NARRATIVE */}
-          <div className="pt-12 max-w-3xl mx-auto border-t border-border">
-            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-8 leading-snug text-primary">
+          <div className="pt-12 max-w-6xl mx-auto border-t border-border">
+            <p className="font-display text-xl md:text-2xl text-center max-w-2xl mx-auto mb-10 leading-snug text-primary">
               {t(
-                "\"We didn't come together because we agree on everything. We arrived together because each of us carries a piece of what organizations most need today, and we recognized it in one another.\"",
-                "\"No nos unimos porque estemos de acuerdo en todo. Llegamos juntos porque cada uno carga una pieza de lo que las organizaciones más necesitan hoy, y la reconocimos en el otro.\""
+                "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
+                "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
               )}
             </p>
-            <div className="max-w-2xl mx-auto space-y-4 text-base leading-relaxed font-body text-muted-foreground">
-              <p>
-                {t(
-                  "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it really means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as before. Gabriela brings the intelligence of natural systems: a biologist who reads organizations as one reads ecosystems, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when doing has outpaced being. And Juan Carlos brings the ",
-                  "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede seguir como hasta ahora. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
-                )}
-                <span className="text-primary font-semibold">{t("systemic gaze", "mirada sistémica")}</span>
-                {t(
-                  ": accompanying organizations to see what the system already knows about itself, before touching anything.",
-                  ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
-                )}
-              </p>
+
+            <div className="grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
+              <div className="space-y-4 text-base leading-relaxed font-body text-muted-foreground">
+                <p>
+                  {t(
+                    "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it truly means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as it is. Gabriela brings the intelligence of natural systems: a biologist who reads organizations the way ecosystems are read, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when the doing has outrun the being. And Juan Carlos brings the ",
+                    "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede continuar como está. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
+                  )}
+                  <span className="text-primary font-semibold">{t("systemic gaze", "mirada sistémica")}</span>
+                  {t(
+                    ": accompanying organizations to see what the system already knows about itself, before touching any of it.",
+                    ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada de ello."
+                  )}
+                </p>
+              </div>
+
+              <LatamMap label={t("Guardian locations", "Ubicación de Guardianes")} />
             </div>
+
             <div className="font-display text-2xl md:text-3xl text-center my-10 text-primary font-semibold">
-              {t("Five different territories. One single living body.", "Cinco territorios diferentes. Un solo cuerpo vivo.")}
+              {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
             </div>
             <div className="max-w-2xl mx-auto text-base leading-relaxed font-body text-muted-foreground text-center">
               <p>{t(
-                "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are identified without pointing to culprits, and where organizational intelligence is allowed to emerge from within.",
-                "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde se identifican los patrones sin señalar culpables, y donde se permite que la inteligencia organizacional emerja desde dentro."
+                "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
+                "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
               )}</p>
             </div>
             <div className="font-display text-lg md:text-xl text-center max-w-xl mx-auto mt-10 py-6 leading-relaxed text-primary border-t border-b border-accent/40">
@@ -215,22 +221,22 @@ const Guardians = () => {
         <div className="h-px bg-accent/40" />
 
         {/* APPLY */}
-        <section className="px-6 md:px-10 py-16 md:py-20 bg-primary text-primary-foreground">
+        <section className="px-6 md:px-10 py-16 md:py-20 bg-warm-beige text-foreground">
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div>
-              <div className="text-xs tracking-[0.2em] uppercase mb-3 text-primary-foreground/60 font-body">
+              <div className="text-xs tracking-[0.2em] uppercase mb-3 text-muted-foreground font-body">
                 {t("For facilitators & coaches", "Para facilitadores y coaches")}
               </div>
-              <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight text-primary-foreground font-semibold">
+              <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight text-primary font-semibold">
                 {t("Do you feel the call to become a Guardian?", "¿Sientes el llamado a ser Guardián?")}
               </h2>
-              <p className="text-base leading-relaxed font-body mb-3 text-primary-foreground/80">
+              <p className="text-base leading-relaxed font-body mb-3 text-muted-foreground">
                 {t(
                   "COIREA Guardians are not hired — they are recognized. If you have real experience accompanying human or organizational processes, an active personal practice, and you resonate with a more conscious, systemic, and alive way of doing things — we want to meet you.",
                   "Los Guardianes COIREA no se contratan — se reconocen. Si tienes experiencia real acompañando procesos humanos u organizacionales, una práctica personal activa, y resuenas con una forma más consciente, sistémica y viva de hacer las cosas — queremos conocerte."
                 )}
               </p>
-              <p className="text-base leading-relaxed font-body mb-6 text-primary-foreground/80">
+              <p className="text-base leading-relaxed font-body mb-6 text-muted-foreground">
                 {t(
                   "We are building the first Guardian network in Latin America. Current applications are part of the foundational process. This is an invitation, not a job posting.",
                   "Estamos construyendo la primera red de Guardianes en Latinoamérica. Las aplicaciones actuales son parte del proceso fundacional. Esta es una invitación, no una oferta de trabajo."
@@ -238,8 +244,8 @@ const Guardians = () => {
               </p>
               <div className="space-y-3 mb-7">
                 {criteria.map((c) => (
-                  <div key={c} className="flex gap-3 items-start text-sm leading-relaxed font-body text-primary-foreground/85">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-accent/30 border border-accent/60">
+                  <div key={c} className="flex gap-3 items-start text-sm leading-relaxed font-body text-foreground/80">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-accent/20 border border-accent/50">
                       <Check className="w-3 h-3 text-accent" />
                     </div>
                     <span>{c}</span>
@@ -249,16 +255,16 @@ const Guardians = () => {
               <a href="#guardian-form" className="inline-block px-7 py-3 rounded-full text-xs tracking-[0.1em] font-semibold uppercase font-body bg-accent text-accent-foreground hover:bg-accent-warm transition-colors">
                 {t("Apply to become a Guardian →", "Aplica para ser Guardián →")}
               </a>
-              <p className="text-xs mt-3 italic font-body text-primary-foreground/60">
+              <p className="text-xs mt-3 italic font-body text-muted-foreground">
                 {t("We review every application personally.", "Revisamos cada aplicación personalmente.")}
               </p>
             </div>
 
-            <form id="guardian-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/15">
-              <div className="font-display text-2xl mb-1 text-primary-foreground font-semibold">
+            <form id="guardian-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-background/70 backdrop-blur-sm border border-border">
+              <div className="font-display text-2xl mb-1 text-primary font-semibold">
                 {t("Tell us about yourself", "Cuéntanos sobre ti")}
               </div>
-              <div className="text-xs italic font-body mb-5 text-primary-foreground/60">
+              <div className="text-xs italic font-body mb-5 text-muted-foreground">
                 {t("We'll be in touch within 7–10 days.", "Te contactaremos en 7–10 días.")}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -295,19 +301,60 @@ const Field = ({
   required?: boolean;
 }) => (
   <div className={`flex flex-col gap-1.5 ${full ? "sm:col-span-2" : ""}`}>
-    <label className="text-xs tracking-wide font-body text-primary-foreground/70">{label}</label>
+    <label className="text-xs tracking-wide font-body text-muted-foreground">{label}</label>
     {textarea ? (
       <textarea
         value={value} onChange={onChange} placeholder={placeholder} required={required}
-        className="resize-none h-20 rounded-md px-3 py-2 text-sm font-body outline-none bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent/60"
+        className="resize-none h-20 rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />
     ) : (
       <input
         value={value} onChange={onChange} placeholder={placeholder} required={required}
-        className="rounded-md px-3 py-2 text-sm font-body outline-none bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent/60"
+        className="rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />
     )}
   </div>
 );
+
+const LatamMap = ({ label }: { label: string }) => {
+  const locations = [
+    { name: "Ecuador", cx: 70, cy: 95 },
+    { name: "Perú", cx: 82, cy: 140 },
+    { name: "Chile", cx: 92, cy: 240 },
+    { name: "Argentina", cx: 122, cy: 235 },
+  ];
+  return (
+    <div className="relative mx-auto w-full max-w-xs">
+      <svg viewBox="0 0 220 320" className="w-full h-auto" aria-label={label}>
+        {/* Simplified South America silhouette */}
+        <path
+          d="M95,15 C120,18 145,28 158,45 C168,58 172,75 165,88 C160,100 150,108 148,122 C147,138 158,150 160,168 C162,188 152,205 142,225 C135,245 130,265 118,285 C108,300 95,308 88,300 C82,290 90,275 88,260 C85,245 75,235 78,218 C82,200 92,188 88,170 C82,150 65,140 60,120 C56,102 65,85 75,68 C82,52 80,30 95,15 Z"
+          fill="hsl(var(--warm-beige))"
+          stroke="hsl(var(--primary) / 0.35)"
+          strokeWidth="1.2"
+        />
+        {locations.map((l) => (
+          <g key={l.name}>
+            <circle cx={l.cx} cy={l.cy} r="9" fill="hsl(var(--accent) / 0.2)" />
+            <circle cx={l.cx} cy={l.cy} r="4" fill="hsl(var(--accent))" />
+            <text
+              x={l.cx + 10}
+              y={l.cy + 3}
+              fontSize="10"
+              fill="hsl(var(--primary))"
+              className="font-body"
+              fontWeight="600"
+            >
+              {l.name}
+            </text>
+          </g>
+        ))}
+      </svg>
+      <div className="text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3">
+        {label}
+      </div>
+    </div>
+  );
+};
 
 export default Guardians;
