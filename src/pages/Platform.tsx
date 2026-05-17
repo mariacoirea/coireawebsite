@@ -264,7 +264,10 @@ const Platform = () => {
                       : 'COIREA begins with structured reflection. The platform measures organizational health across five pillars and surfaces hidden tensions using trained AI pattern recognition.',
                     bullets: currentLanguage === 'es'
                       ? ['Índice de Vitalidad Organizacional', 'Señales entre pilares', 'Indicadores tempranos de riesgo']
-                      : ['Organizational Vitality Index', 'Cross-pillar signals', 'Early risk indicators']
+                      : ['Organizational Vitality Index', 'Cross-pillar signals', 'Early risk indicators'],
+                    closing: currentLanguage === 'es'
+                      ? 'Aquí es donde la organización pausa lo suficiente para verse con claridad.'
+                      : 'This is where the organization pauses long enough to see itself clearly.'
                   },
                   {
                     num: '02',
@@ -278,7 +281,10 @@ const Platform = () => {
                       : 'Insights convert into structured governance and execution. Execution becomes aligned, not reactive.',
                     bullets: currentLanguage === 'es'
                       ? ['Propiedad clara (roles y círculos)', 'Prioridades trimestrales', 'Detección de deriva estratégica', 'Responsabilidad de liderazgo']
-                      : ['Clear ownership (roles & circles)', 'Quarterly priorities', 'Strategic drift detection', 'Leadership accountability']
+                      : ['Clear ownership (roles & circles)', 'Quarterly priorities', 'Strategic drift detection', 'Leadership accountability'],
+                    closing: currentLanguage === 'es'
+                      ? 'Aquí es donde la claridad se vuelve estructura.'
+                      : 'This is where clarity becomes structure.'
                   },
                   {
                     num: '03',
@@ -292,7 +298,10 @@ const Platform = () => {
                       : 'The system integrates feedback and strengthens capacity over time. Growth builds resilience instead of depletion.',
                     bullets: currentLanguage === 'es'
                       ? ['Pulsos de bienestar', 'Mapa de innovación', 'Bucles de aprendizaje', 'Señales de Capacidad Regenerativa']
-                      : ['Well-being pulses', 'Innovation map', 'Learning loops', 'Regenerative Capacity signals']
+                      : ['Well-being pulses', 'Innovation map', 'Learning loops', 'Regenerative Capacity signals'],
+                    closing: currentLanguage === 'es'
+                      ? 'Este es crecimiento evolutivo y regenerativo.'
+                      : 'This is evolutionary and regenerative growth.'
                   }
                 ].map((step) => {
                   const Icon = step.icon;
@@ -316,7 +325,7 @@ const Platform = () => {
                       <p className="text-muted-foreground font-body leading-relaxed mb-6">
                         {step.desc}
                       </p>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 mb-6">
                         {step.bullets.map((b) => (
                           <li key={b} className="flex items-start gap-2 text-sm text-foreground/85 font-body">
                             <span className="mt-2 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
@@ -324,6 +333,9 @@ const Platform = () => {
                           </li>
                         ))}
                       </ul>
+                      <p className="text-sm italic text-muted-foreground/80 font-body pt-4 border-t border-border/40">
+                        {step.closing}
+                      </p>
                     </div>
                   );
                 })}
