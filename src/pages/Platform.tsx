@@ -384,8 +384,15 @@ const Platform = () => {
           </section>
 
           {/* The Guardian in the System */}
-          <section className="py-24 bg-[hsl(var(--warm-beige))] border-y border-border/40">
-            <div className="container px-4">
+          <section className="relative py-24 overflow-hidden">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${coireaCycleBg})`, opacity: 0.18 }}
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--warm-beige))]/85 via-[hsl(var(--warm-beige))]/70 to-[hsl(var(--warm-beige))]/90" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-[hsl(77,18%,55%)]/15" aria-hidden="true" />
+            <div className="container relative z-10 px-4">
               <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <p className="text-secondary font-medium text-sm tracking-[0.2em] uppercase">
