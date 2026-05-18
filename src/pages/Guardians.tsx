@@ -40,11 +40,25 @@ const Guardians = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!form.name.trim()) {
+      toast.error(t("Please enter your name.", "Por favor ingresa tu nombre."));
+      return;
+    }
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 600));
-    toast.success(t("Application received. We'll be in touch within 7–10 days.", "Aplicación recibida. Te contactaremos en 7–10 días."));
-    setForm({ name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "" });
-    setSubmitting(false);
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { error } = await supabase.functions.invoke("send-guardian-application", {
+        body: form,
+      });
+      if (error) throw error;
+      toast.success(t("Application received. We'll be in touch within 7–10 days.", "Aplicación recibida. Te contactaremos en 7–10 días."));
+      setForm({ name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "" });
+    } catch (err) {
+      console.error(err);
+      toast.error(t("Something went wrong. Please try again.", "Algo salió mal. Inténtalo de nuevo."));
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
