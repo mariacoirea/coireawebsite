@@ -2,3 +2,9 @@ project_id = "ugvvvqodvkbojzbtllxj"
 
 [functions.send-raices-form]
 verify_jwt = false
+
+[functions.send-journey-form]
+verify_jwt = false
+
+[functions.send-guardian-application]
+verify_jwt = false
