@@ -52,9 +52,11 @@ const handler = async (req: Request): Promise<Response> => {
       <h3>Applicant</h3>
       <ul>
         <li><strong>Name:</strong> ${escapeHtml(data.name)}</li>
+        <li><strong>Email:</strong> ${escapeHtml(data.email)}</li>
         <li><strong>Country:</strong> ${escapeHtml(data.country) || "—"}</li>
         <li><strong>Current work / practice:</strong> ${escapeHtml(data.work) || "—"}</li>
-        <li><strong>LinkedIn / website:</strong> ${escapeHtml(data.link) || "—"}</li>
+        <li><strong>LinkedIn:</strong> ${escapeHtml(data.linkedin)}</li>
+        <li><strong>Website:</strong> ${escapeHtml(data.website) || "—"}</li>
       </ul>
 
       <h3>Processes accompanied</h3>
@@ -73,6 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "COIREA Guardians <guardians@coirea.com>",
       to: ["hello@coirea.com"],
+      replyTo: data.email,
       subject: `New Guardian Application — ${data.name}`,
       html,
     });
