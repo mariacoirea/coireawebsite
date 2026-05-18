@@ -13,7 +13,7 @@ const Guardians = () => {
   const isEs = i18n.language?.startsWith("es");
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "",
+    name: "", email: "", country: "", work: "", processes: "", resonance: "", practice: "", linkedin: "", website: "",
   });
 
   const t = (en: string, es: string) => (isEs ? es : en);
@@ -52,7 +52,7 @@ const Guardians = () => {
       });
       if (error) throw error;
       toast.success(t("Application received. We'll be in touch within 7–10 days.", "Aplicación recibida. Te contactaremos en 7–10 días."));
-      setForm({ name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "" });
+      setForm({ name: "", email: "", country: "", work: "", processes: "", resonance: "", practice: "", linkedin: "", website: "" });
     } catch (err) {
       console.error(err);
       toast.error(t("Something went wrong. Please try again.", "Algo salió mal. Inténtalo de nuevo."));
@@ -284,12 +284,14 @@ const Guardians = () => {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Field label={t("Full name", "Nombre completo")} value={form.name} onChange={set("name")} placeholder={t("Your name", "Tu nombre")} required />
+                <Field label={t("Email", "Correo electrónico")} type="email" value={form.email} onChange={set("email")} placeholder={t("your@email.com", "tu@correo.com")} required />
                 <Field label={t("Country", "País")} value={form.country} onChange={set("country")} placeholder={t("Where you're based", "Dónde resides")} required />
+                <Field label={t("LinkedIn", "LinkedIn")} value={form.linkedin} onChange={set("linkedin")} placeholder="https://linkedin.com/in/..." required />
                 <Field full label={t("What do you do today?", "¿A qué te dedicas hoy?")} value={form.work} onChange={set("work")} placeholder={t("Your current work or practice", "Tu trabajo o práctica actual")} />
                 <Field full textarea label={t("What kinds of processes have you accompanied?", "¿Qué tipos de procesos has acompañado?")} value={form.processes} onChange={set("processes")} placeholder={t("Teams, individuals, organizations...", "Equipos, individuos, organizaciones...")} />
                 <Field full textarea label={t("Why does COIREA resonate with you?", "¿Por qué resuena COIREA contigo?")} value={form.resonance} onChange={set("resonance")} placeholder={t("In your own words...", "En tus propias palabras...")} />
                 <Field full textarea label={t("Do you have a personal practice? Which one?", "¿Tienes una práctica personal? ¿Cuál?")} value={form.practice} onChange={set("practice")} placeholder={t("Meditation, coaching, somatic work...", "Meditación, coaching, trabajo somático...")} />
-                <Field full label={`${t("LinkedIn or website", "LinkedIn o sitio web")} (${t("optional", "opcional")})`} value={form.link} onChange={set("link")} placeholder="https://" />
+                <Field full label={`${t("Website", "Sitio web")} (${t("optional", "opcional")})`} value={form.website} onChange={set("website")} placeholder="https://" />
               </div>
               <button type="submit" disabled={submitting} className="block w-full mt-5 py-3 rounded-md text-xs tracking-[0.1em] uppercase font-semibold font-body bg-accent text-accent-foreground hover:bg-accent-warm transition-colors disabled:opacity-50">
                 {submitting ? t("Submitting...", "Enviando...") : t("Submit application", "Enviar aplicación")}
@@ -305,7 +307,7 @@ const Guardians = () => {
 };
 
 const Field = ({
-  label, value, onChange, placeholder, full, textarea, required,
+  label, value, onChange, placeholder, full, textarea, required, type,
 }: {
   label: string;
   value: string;
@@ -314,6 +316,7 @@ const Field = ({
   full?: boolean;
   textarea?: boolean;
   required?: boolean;
+  type?: string;
 }) => (
   <div className={`flex flex-col gap-1.5 ${full ? "sm:col-span-2" : ""}`}>
     <label className="text-xs tracking-wide font-body text-muted-foreground">{label}</label>
@@ -324,6 +327,7 @@ const Field = ({
       />
     ) : (
       <input
+        type={type || "text"}
         value={value} onChange={onChange} placeholder={placeholder} required={required}
         className="rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />

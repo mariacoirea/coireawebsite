@@ -12,12 +12,14 @@ const corsHeaders = {
 
 const GuardianSchema = z.object({
   name: z.string().trim().min(1).max(200),
+  email: z.string().trim().email().max(320),
   country: z.string().trim().max(200).optional().default(""),
   work: z.string().trim().max(500).optional().default(""),
   processes: z.string().trim().max(2000).optional().default(""),
   resonance: z.string().trim().max(2000).optional().default(""),
   practice: z.string().trim().max(500).optional().default(""),
-  link: z.string().trim().max(500).optional().default(""),
+  linkedin: z.string().trim().min(1).max(500),
+  website: z.string().trim().max(500).optional().default(""),
 });
 
 const escapeHtml = (str: string) =>
@@ -50,9 +52,11 @@ const handler = async (req: Request): Promise<Response> => {
       <h3>Applicant</h3>
       <ul>
         <li><strong>Name:</strong> ${escapeHtml(data.name)}</li>
+        <li><strong>Email:</strong> ${escapeHtml(data.email)}</li>
         <li><strong>Country:</strong> ${escapeHtml(data.country) || "—"}</li>
         <li><strong>Current work / practice:</strong> ${escapeHtml(data.work) || "—"}</li>
-        <li><strong>LinkedIn / website:</strong> ${escapeHtml(data.link) || "—"}</li>
+        <li><strong>LinkedIn:</strong> ${escapeHtml(data.linkedin)}</li>
+        <li><strong>Website:</strong> ${escapeHtml(data.website) || "—"}</li>
       </ul>
 
       <h3>Processes accompanied</h3>
@@ -71,6 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "COIREA Guardians <guardians@coirea.com>",
       to: ["hello@coirea.com"],
+      replyTo: data.email,
       subject: `New Guardian Application — ${data.name}`,
       html,
     });
