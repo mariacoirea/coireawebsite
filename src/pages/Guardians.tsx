@@ -120,12 +120,12 @@ const Guardians = () => {
                   "Un Guardián COIREA acompaña a equipos y líderes en la implementación del sistema operativo organizacional. Trabaja desde adentro: leyendo el estado actual de la organización, mapeando sus dinámicas y patrones ocultos, nombrando lo que el sistema evita, y sosteniendo una presencia firme en los momentos de mayor tensión."
                 )}</p>
                 <p>{t(
-                  "Their role is not to give answers. It is to ask the questions the system needs to hear — and to stay in the room when those questions land.",
-                  "Su rol no es dar respuestas. Es hacer las preguntas que el sistema necesita escuchar — y permanecer en la sala cuando esas preguntas aterrizan."
+                  "Their role is not to give answers. It is to ask the questions the system needs to hear, and to stay in the room when those questions land.",
+                  "Su rol no es dar respuestas. Es hacer las preguntas que el sistema necesita escuchar, y permanecer en la sala cuando esas preguntas aterrizan."
                 )}</p>
                 <p>{t(
-                  "Each Guardian brings their own purpose, background, and inner practice to the work. COIREA gives them the system and the network. They bring the presence that makes it real.",
-                  "Cada Guardián trae su propio propósito, trayectoria y práctica interior al trabajo. COIREA les da el sistema y la red. Ellos traen la presencia que lo hace real."
+                  "Each Guardian brings their own purpose, background, and inner practice to the work. COIREA gives them the system. They bring the presence that makes it real.",
+                  "Cada Guardián trae su propio propósito, trayectoria y práctica interior al trabajo. COIREA les da el sistema. Ellos traen la presencia que lo hace real."
                 )}</p>
               </div>
             </div>
