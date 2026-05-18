@@ -52,7 +52,7 @@ const Guardians = () => {
       });
       if (error) throw error;
       toast.success(t("Application received. We'll be in touch within 7–10 days.", "Aplicación recibida. Te contactaremos en 7–10 días."));
-      setForm({ name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "" });
+      setForm({ name: "", email: "", country: "", work: "", processes: "", resonance: "", practice: "", linkedin: "", website: "" });
     } catch (err) {
       console.error(err);
       toast.error(t("Something went wrong. Please try again.", "Algo salió mal. Inténtalo de nuevo."));
