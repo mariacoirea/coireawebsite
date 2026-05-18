@@ -13,7 +13,7 @@ const Guardians = () => {
   const isEs = i18n.language?.startsWith("es");
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    name: "", country: "", work: "", processes: "", resonance: "", practice: "", link: "",
+    name: "", email: "", country: "", work: "", processes: "", resonance: "", practice: "", linkedin: "", website: "",
   });
 
   const t = (en: string, es: string) => (isEs ? es : en);
