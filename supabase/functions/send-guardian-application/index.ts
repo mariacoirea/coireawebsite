@@ -12,12 +12,14 @@ const corsHeaders = {
 
 const GuardianSchema = z.object({
   name: z.string().trim().min(1).max(200),
+  email: z.string().trim().email().max(320),
   country: z.string().trim().max(200).optional().default(""),
   work: z.string().trim().max(500).optional().default(""),
   processes: z.string().trim().max(2000).optional().default(""),
   resonance: z.string().trim().max(2000).optional().default(""),
   practice: z.string().trim().max(500).optional().default(""),
-  link: z.string().trim().max(500).optional().default(""),
+  linkedin: z.string().trim().min(1).max(500),
+  website: z.string().trim().max(500).optional().default(""),
 });
 
 const escapeHtml = (str: string) =>
