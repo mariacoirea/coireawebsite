@@ -307,7 +307,7 @@ const Guardians = () => {
 };
 
 const Field = ({
-  label, value, onChange, placeholder, full, textarea, required,
+  label, value, onChange, placeholder, full, textarea, required, type,
 }: {
   label: string;
   value: string;
@@ -316,6 +316,7 @@ const Field = ({
   full?: boolean;
   textarea?: boolean;
   required?: boolean;
+  type?: string;
 }) => (
   <div className={`flex flex-col gap-1.5 ${full ? "sm:col-span-2" : ""}`}>
     <label className="text-xs tracking-wide font-body text-muted-foreground">{label}</label>
@@ -326,6 +327,7 @@ const Field = ({
       />
     ) : (
       <input
+        type={type || "text"}
         value={value} onChange={onChange} placeholder={placeholder} required={required}
         className="rounded-md px-3 py-2 text-sm font-body outline-none bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:border-accent/60"
       />
