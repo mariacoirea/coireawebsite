@@ -266,8 +266,8 @@ const About = () => {
 
             <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-10 md:p-14 shadow-elegant border border-primary/10 space-y-6 text-lg text-foreground/80 font-body leading-relaxed">
               <p>Much of what is currently labelled "resilience" is asking people to endure unhealthy conditions for longer. That is not the model we follow.</p>
-              <p>From a regenerative perspective, resilience is the capacity of a living system to adapt, respond, and transform — while remaining in right-relationship with itself, with others, and with the wider ecosystems it depends on. Nature has been perfecting this logic for billions of years. We simply decided to pay attention.</p>
-              <p>Organizations are living systems. Yet most organizational frameworks were built on a mechanical metaphor — optimize, control, extract. COIREA was built on a different one.</p>
+              <p>From a regenerative perspective, resilience is the capacity of a living system to adapt, respond, and transform; while remaining in right-relationship with itself, with others, and with the wider ecosystems it depends on. Nature has been perfecting this logic for billions of years. We simply decided to pay attention.</p>
+              <p>Organizations are living systems. Yet most organizational frameworks were built on a mechanical metaphor; optimize, control, extract. COIREA was built on a different one.</p>
               <p>Living systems require healthy nervous systems, strong relationships, coherent values, and clear feedback loops. They learn, adjust, and evolve constantly. Their structures are flexible because rigidity is what breaks — not what protects.</p>
               <p>Without these foundations, no strategy, no transformation plan, and no wellbeing initiative will hold. This is why COIREA is designed the way it is: not as a methodology to apply, but as a living container to trust.</p>
               <p className="text-primary font-medium italic">Nature didn't invent these principles for organizations. It invented them for survival. We borrowed them because they work.</p>
