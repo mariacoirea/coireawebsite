@@ -533,7 +533,7 @@ const Platform = () => {
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
                   <p className="text-secondary font-medium text-sm tracking-[0.3em] uppercase mb-4">
-                    {currentLanguage === 'es' ? 'Palabras de la Fundadora' : 'Words from the Founder'}
+                    {currentLanguage === 'es' ? 'Palabras de la Fuente' : 'Words from the Source'}
                   </p>
                   <div className="w-16 h-px bg-secondary/40 mx-auto" />
                 </div>
@@ -575,10 +575,7 @@ const Platform = () => {
                 <div className="mt-14 flex items-center justify-center gap-4">
                   <div className="h-px w-12 bg-secondary/40" />
                   <p className="text-foreground font-display font-semibold tracking-wide">
-                    {currentLanguage === 'es' ? 'María José Figueroa' : 'María José Figueroa'}
-                    <span className="block text-xs tracking-[0.25em] uppercase text-muted-foreground font-body font-normal mt-1">
-                      {currentLanguage === 'es' ? 'Fundadora de COIREA' : 'Founder of COIREA'}
-                    </span>
+                    María José Figueroa
                   </p>
                   <div className="h-px w-12 bg-secondary/40" />
                 </div>
