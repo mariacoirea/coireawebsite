@@ -26,7 +26,6 @@ const HomePage = () => {
         url={currentLanguage === 'es' ? '/es' : '/'}
       />
       <StructuredData type="organization" />
-      <StructuredData type="faq" data={{ questions: homepageFAQs }} />
       
       <div className="min-h-screen bg-background">
         <Header />
@@ -37,13 +36,7 @@ const HomePage = () => {
           <FivePillarFrameworkSection />
           <AIAgentSection />
           
-          {/* FAQ Section for Homepage */}
-          <SEOFAQSection 
-            title="Frequently Asked Questions About Organizational Transformation"
-            titleEs="Preguntas Frecuentes Sobre Transformación Organizacional"
-            faqs={homepageFAQs}
-            className="bg-gradient-subtle"
-          />
+
           
           {/* Related Content */}
           <RelatedContent 
