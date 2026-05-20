@@ -303,29 +303,12 @@ const About = () => {
         </section>
 
         {/* FAQ Section for SEO */}
-        <section className="py-24 px-6 bg-background">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-display font-semibold text-primary mb-4">
-                {t('faq.title')}
-              </h2>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-sage to-primary mx-auto"></div>
-            </div>
+        <SEOFAQSection
+          title={t('faq.title')}
+          titleEs={t('faq.title')}
+          faqs={(t('faq.items', { returnObjects: true }) as any[]) || []}
+        />
 
-            <div className="space-y-8">
-              {(t('faq.items', { returnObjects: true }) as any[] || []).map((faq: any, index: number) => (
-                <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-primary/10">
-                  <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                    {faq.question}
-                  </h3>
-                  <p className="text-foreground/80 font-body leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Stress Statistics Section */}
         <section className="py-16 px-6 bg-background border-t border-primary/10">
