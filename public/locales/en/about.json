@@ -98,19 +98,27 @@
     "items": [
       {
         "question": "What is COIREA?",
-        "answer": "COIREA is an AI-powered organizational intelligence platform that measures, analyzes, and helps transform organizational health in real-time. We bring together culture, leadership, collaboration, well-being, and strategy into one unified system with AI-generated insights and recommendations."
+        "answer": "COIREA is an Organizational Intelligence Platform that helps companies and NGOs achieve their goals in a less extractive and more regenerative way. It measures systemic health, aligns governance, and structures execution across five pillars — Purpose & Culture, Leadership, Collaboration, Strategy & Innovation, and Well-being — so organizations can reach their objectives without depleting people, culture, or long-term capacity."
       },
       {
-        "question": "How does COIREA help organizations improve?",
-        "answer": "Our platform continuously collects signals from across your organization, interprets patterns using AI, and surfaces risks before they escalate. The Evolution Dashboard provides real-time visibility across our 5-Pillar Framework, enabling data-driven decisions that improve organizational health."
+        "question": "What is the OVI (Organizational Vitality Index)?",
+        "answer": "The OVI is a composite score from 0 to 100 derived from all 5 pillars, with each pillar contributing up to 20 points. It maps your organization into one of four tiers: Systemic Coherence (80–100), Emerging Alignment (60–79), Fragile Stability (40–59), or Structural Risk (0–39), giving leaders a clear read on where the system is healthy and where intervention is needed."
       },
       {
-        "question": "What is regenerative business and how does it apply to my organization?",
-        "answer": "Regenerative business goes beyond sustainability to create systems that actively restore and revitalize. For organizations, this means building cultures and practices that strengthen both people and performance, creating positive impact while achieving business results."
+        "question": "What is GiA and how is it different from a chatbot?",
+        "answer": "GiA (Guided Intelligence for Alignment) is a trained organizational pattern-recognition engine — not a generative chatbot. It learns only from your internal system data, detects cross-pillar tensions, surfaces recurring patterns, and generates contextual suggestions tied to specific governance or execution spaces. GiA keeps intelligence contextual, relational, and system-bound, never extractive."
       },
       {
-        "question": "How does COIREA measure organizational health?",
-        "answer": "We track quantitative metrics (productivity, retention, engagement) and qualitative indicators (leadership effectiveness, cultural coherence, well-being signals) across our 5-Pillar Framework in real-time, providing continuous insights rather than periodic snapshots."
+        "question": "What does 'regenerative' actually mean inside COIREA?",
+        "answer": "Regeneration is operational, not aesthetic. Inside COIREA it means the system strengthens its internal coherence over time, embeds learning loops, grows innovation capacity without depleting people, informs decisions with multi-capital awareness (human, financial, social, natural), detects burnout and strategic drift early, and evolves governance based on feedback signals. It is measured through OVI progression, adaptive capacity, and the stability of well-being signals."
+      },
+      {
+        "question": "Who is COIREA built for?",
+        "answer": "COIREA is designed for founder-led or mission-driven organizations between 15 and 300 people that are navigating growth complexity, structural tension, or a shift toward distributed leadership — including NGOs moving from volunteer energy to structured stewardship. It is not optimized for large enterprises seeking short-term productivity hacks or teams unwilling to engage in structured governance rhythms."
+      },
+      {
+        "question": "What does COIREA do with our data?",
+        "answer": "COIREA does not mine, scrape, or monetize organizational data. All intelligence is generated from within your own system — no external data sources, no behavioral monetization, no cross-organization benchmarking by default. Your patterns stay yours."
       }
     ]
   },
