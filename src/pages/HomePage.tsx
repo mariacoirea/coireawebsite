@@ -7,9 +7,7 @@ import AIAgentSection from "@/components/AIAgentSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
-import SEOFAQSection from "@/components/SEOFAQSection";
 import { RelatedContent } from "@/components/InternalLinkingStrategy";
-import { homepageFAQs } from "@/data/faqData";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/useLanguage";
 
