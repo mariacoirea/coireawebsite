@@ -98,19 +98,27 @@
     "items": [
       {
         "question": "¿Qué es COIREA?",
-        "answer": "COIREA es una plataforma de inteligencia organizacional impulsada por IA que mide, analiza y ayuda a transformar la salud organizacional en tiempo real. Unimos cultura, liderazgo, colaboración, bienestar y estrategia en un sistema unificado con insights y recomendaciones generados por IA."
+        "answer": "COIREA es una Plataforma de Inteligencia Organizacional que ayuda a empresas y ONGs a alcanzar sus objetivos de una manera menos extractiva y más regenerativa. Mide la salud sistémica, alinea la gobernanza y estructura la ejecución a través de cinco pilares — Propósito y Cultura, Liderazgo, Colaboración, Estrategia e Innovación, y Bienestar — para que las organizaciones logren sus metas sin agotar a las personas, la cultura ni su capacidad a largo plazo."
       },
       {
-        "question": "¿Cómo ayuda COIREA a las organizaciones a mejorar?",
-        "answer": "Nuestra plataforma recopila continuamente señales de toda tu organización, interpreta patrones usando IA y detecta riesgos antes de que escalen. El Dashboard de Evolución proporciona visibilidad en tiempo real a través de nuestro Marco de 5 Pilares, habilitando decisiones basadas en datos que mejoran la salud organizacional."
+        "question": "¿Qué es el OVI (Índice de Vitalidad Organizacional)?",
+        "answer": "El OVI es un puntaje compuesto de 0 a 100 derivado de los 5 pilares, donde cada pilar aporta hasta 20 puntos. Ubica a tu organización en uno de cuatro niveles: Coherencia Sistémica (80–100), Alineación Emergente (60–79), Estabilidad Frágil (40–59) o Riesgo Estructural (0–39), dando a los líderes una lectura clara de dónde el sistema está sano y dónde se requiere intervención."
       },
       {
-        "question": "¿Qué es un negocio regenerativo y cómo se aplica a mi organización?",
-        "answer": "Los negocios regenerativos van más allá de la sostenibilidad para crear sistemas que activamente restauran y revitalizan. Para las organizaciones, esto significa construir culturas y prácticas que fortalecen tanto a las personas como al rendimiento, creando impacto positivo mientras se logran resultados empresariales."
+        "question": "¿Qué es GiA y en qué se diferencia de un chatbot?",
+        "answer": "GiA (Inteligencia Guiada para la Alineación) es un motor entrenado de reconocimiento de patrones organizacionales — no un chatbot generativo. Aprende únicamente de los datos internos de tu sistema, detecta tensiones entre pilares, identifica patrones recurrentes y genera sugerencias contextuales vinculadas a espacios específicos de gobernanza o ejecución. GiA mantiene la inteligencia contextual, relacional y ligada al sistema, nunca extractiva."
       },
       {
-        "question": "¿Cómo mide COIREA la salud organizacional?",
-        "answer": "Rastreamos métricas cuantitativas (productividad, retención, compromiso) e indicadores cualitativos (efectividad del liderazgo, coherencia cultural, señales de bienestar) a través de nuestro Marco de 5 Pilares en tiempo real, proporcionando insights continuos en lugar de instantáneas periódicas."
+        "question": "¿Qué significa realmente 'regenerativo' dentro de COIREA?",
+        "answer": "La regeneración es operativa, no estética. Dentro de COIREA significa que el sistema fortalece su coherencia interna en el tiempo, integra ciclos de aprendizaje, aumenta la capacidad de innovación sin agotar a las personas, informa decisiones con conciencia multi-capital (humano, financiero, social, natural), detecta tempranamente el burnout y la deriva estratégica, y evoluciona la gobernanza a partir de señales de retroalimentación. Se mide a través de la progresión del OVI, la capacidad adaptativa y la estabilidad de las señales de bienestar."
+      },
+      {
+        "question": "¿Para quién está diseñada COIREA?",
+        "answer": "COIREA está diseñada para organizaciones lideradas por fundadores o con propósito, entre 15 y 300 personas, que navegan complejidad de crecimiento, tensión estructural o una transición hacia el liderazgo distribuido — incluidas ONGs que pasan de la energía voluntaria a una administración estructurada. No está optimizada para grandes corporaciones que buscan atajos de productividad de corto plazo ni para equipos que no quieren comprometerse con ritmos de gobernanza estructurados."
+      },
+      {
+        "question": "¿Qué hace COIREA con nuestros datos?",
+        "answer": "COIREA no minea, raspa ni monetiza los datos organizacionales. Toda la inteligencia se genera desde dentro de tu propio sistema — sin fuentes externas, sin monetización de comportamiento y sin benchmarking cruzado entre organizaciones por defecto. Tus patrones siguen siendo tuyos."
       }
     ]
   },
