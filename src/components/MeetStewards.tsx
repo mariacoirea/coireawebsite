@@ -175,7 +175,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
 
         <div className="rounded-2xl p-6 bg-warm-beige border border-border">
           <div className="relative mx-auto w-full max-w-sm">
-            <img src={latamMap} alt={mapLabel} className="w-full h-auto opacity-90 mix-blend-multiply" />
+            <img src={latamMap.url} alt={mapLabel} className="w-full h-auto" />
             {stewards.map((s) => {
               const active = selectedId === s.id;
               return (
