@@ -215,7 +215,7 @@ const Stewards = () => {
                 "una bióloga que lee las organizaciones como ecosistemas, de dentro hacia fuera."
               ),
               photoUrl: gabrielaAsset.url,
-              map: { top: "38%", left: "32%", labelSide: "left" },
+              map: { top: "41%", left: "25%", labelSide: "right" },
             },
             {
               id: "marcela",
