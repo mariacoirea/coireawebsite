@@ -189,12 +189,12 @@ const Stewards = () => {
                 "acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
               ),
               photoUrl: juanCarlosAsset.url,
-              map: { top: "41%", left: "37%", labelSide: "left" },
+              map: { top: "26%", left: "28%", labelSide: "left" },
             },
             {
               id: "tanya",
               name: "Tanya",
-              location: t("Lima, Perú", "Lima, Perú"),
+              location: t("Santiago, Chile", "Santiago, Chile"),
               specialty: t("Systemic trust", "Confianza sistémica"),
               keyword: t("Systemic trust — ", "Confianza sistémica — "),
               description: t(
@@ -202,12 +202,12 @@ const Stewards = () => {
                 "sosteniendo procesos colectivos con cuidado, especialmente cuando algo ya no puede seguir como antes."
               ),
               photoUrl: tanyaAsset.url,
-              map: { top: "52%", left: "42%", labelSide: "left" },
+              map: { top: "72%", left: "37%", labelSide: "left" },
             },
             {
               id: "gabriela",
               name: "Gabriela",
-              location: t("Santiago, Chile", "Santiago, Chile"),
+              location: t("Lima, Perú", "Lima, Perú"),
               specialty: t("Natural intelligence", "Inteligencia natural"),
               keyword: t("Natural intelligence — ", "Inteligencia natural — "),
               description: t(
@@ -215,7 +215,7 @@ const Stewards = () => {
                 "una bióloga que lee las organizaciones como ecosistemas, de dentro hacia fuera."
               ),
               photoUrl: gabrielaAsset.url,
-              map: { top: "70%", left: "47%", labelSide: "left" },
+              map: { top: "38%", left: "32%", labelSide: "left" },
             },
             {
               id: "marcela",
@@ -228,7 +228,7 @@ const Stewards = () => {
                 "acompañando a líderes y equipos a la alineación cuando el hacer ha superado al ser."
               ),
               photoUrl: marcelaAsset.url,
-              map: { top: "70%", left: "56%", labelSide: "right" },
+              map: { top: "73%", left: "55%", labelSide: "right" },
             },
           ] satisfies Steward[]}
         />

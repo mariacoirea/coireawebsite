@@ -4,7 +4,7 @@ import tanyaAsset from "@/assets/stewards/tanya.jpeg.asset.json";
 import juanCarlosAsset from "@/assets/stewards/juan_carlos.jpeg.asset.json";
 import marcelaAsset from "@/assets/stewards/marcela.jpeg.asset.json";
 import gabrielaAsset from "@/assets/stewards/gabriela.jpg.asset.json";
-import latamMap from "@/assets/latam-map.png";
+import latamMap from "@/assets/stewards/latam-outline.png.asset.json";
 
 export interface Steward {
   id: string;
@@ -175,7 +175,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
 
         <div className="rounded-2xl p-6 bg-warm-beige border border-border">
           <div className="relative mx-auto w-full max-w-sm">
-            <img src={latamMap} alt={mapLabel} className="w-full h-auto opacity-90 mix-blend-multiply" />
+            <img src={latamMap.url} alt={mapLabel} className="w-full h-auto" />
             {stewards.map((s) => {
               const active = selectedId === s.id;
               return (
