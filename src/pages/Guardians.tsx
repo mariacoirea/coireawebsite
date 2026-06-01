@@ -7,6 +7,11 @@ import { Eye, GitBranch, Zap, Anchor, User, Check } from "lucide-react";
 import { toast } from "sonner";
 import guardiansHero from "@/assets/guardians-hero.jpg";
 import latamMap from "@/assets/latam-map.png";
+import MeetStewards, { type Steward } from "@/components/MeetStewards";
+import tanyaAsset from "@/assets/stewards/tanya.jpeg.asset.json";
+import juanCarlosAsset from "@/assets/stewards/juan_carlos.jpeg.asset.json";
+import marcelaAsset from "@/assets/stewards/marcela.jpeg.asset.json";
+import gabrielaAsset from "@/assets/stewards/gabriela.jpg.asset.json";
 
 const Stewards = () => {
   const { i18n } = useTranslation();
