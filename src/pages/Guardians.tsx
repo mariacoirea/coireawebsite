@@ -353,47 +353,5 @@ const Field = ({
   </div>
 );
 
-const LatamMap = ({ label }: { label: string }) => {
-  // Positions as % of the uploaded LATAM map image
-  const locations = [
-    { name: "Ecuador",   top: "41%", left: "37%", labelSide: "left" as const },
-    { name: "Perú",      top: "52%", left: "42%", labelSide: "left" as const },
-    { name: "Chile",     top: "70%", left: "47%", labelSide: "left" as const },
-    { name: "Argentina", top: "70%", left: "56%", labelSide: "right" as const },
-  ];
-  return (
-    <div className="mx-auto w-full max-w-sm">
-      <div className="relative">
-        <img
-          src={latamMap}
-          alt={label}
-          className="w-full h-auto opacity-90 mix-blend-multiply"
-        />
-        {locations.map((l) => (
-          <div
-            key={l.name}
-            className="absolute -translate-x-1/2 -translate-y-1/2"
-            style={{ top: l.top, left: l.left }}
-          >
-            <span className="relative flex items-center justify-center">
-              <span className="absolute inline-flex h-5 w-5 rounded-full bg-accent/30 animate-ping" />
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-accent border-2 border-background" />
-            </span>
-            <span
-              className={`absolute top-1/2 -translate-y-1/2 ${
-                l.labelSide === "left" ? "right-full mr-2" : "left-full ml-2"
-              } text-[11px] font-body font-semibold text-primary whitespace-nowrap`}
-            >
-              {l.name}
-            </span>
-          </div>
-        ))}
-      </div>
-      <div className="text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3">
-        {label}
-      </div>
-    </div>
-  );
-};
 
 export default Stewards;
