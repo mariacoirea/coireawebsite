@@ -1,16 +1,16 @@
 {
   "seo": {
     "title": "Apply to Work with COIREA | Organizational Intelligence Platform",
-    "description": "Apply to work with COIREA. Every organization that enters the system does so with a trained Guardian who holds the process alongside you.",
-    "keywords": "COIREA application, organizational intelligence platform, AI organizational health, culture measurement, leadership analytics, Guardian facilitator",
+    "description": "Apply to work with COIREA. Every organization that enters the system does so with a trained Steward who holds the process alongside you.",
+    "keywords": "COIREA application, organizational intelligence platform, AI organizational health, culture measurement, leadership analytics, Steward facilitator",
     "successTitle": "Application Received | COIREA",
-    "successDescription": "Thank you for applying to work with COIREA. A Guardian will review your application personally and reach out if there is a genuine fit.",
+    "successDescription": "Thank you for applying to work with COIREA. A Steward will review your application personally and reach out if there is a genuine fit.",
     "successKeywords": "organizational intelligence, COIREA application, thank you"
   },
   "hero": {
     "title": "Is Your Organization Ready to See Itself Clearly?",
     "description": "COIREA is not for every organization. It is for the ones that sense something needs to shift, and are ready to look at it honestly, with the right support alongside them.",
-    "note": "Every organization that enters COIREA does so with a Guardian — a trained facilitator who holds the process with you. This is not a software subscription. It is an accompanied transformation. Applications are reviewed personally. If there is a genuine fit, a Guardian will reach out to begin the conversation.",
+    "note": "Every organization that enters COIREA does so with a Steward — a trained facilitator who holds the process with you. This is not a software subscription. It is an accompanied transformation. Applications are reviewed personally. If there is a genuine fit, a Steward will reach out to begin the conversation.",
     "cta": "Apply to Work with COIREA"
   },
   "access": {
@@ -30,8 +30,8 @@
         "description": "Tell us about your organization and what you're sensing needs to change. There are no wrong answers."
       },
       {
-        "title": "A Guardian reviews your application",
-        "description": "We read every application personally. If there is a genuine fit, a Guardian will reach out to schedule a Compass Call — a first conversation to understand your system together."
+        "title": "A Steward reviews your application",
+        "description": "We read every application personally. If there is a genuine fit, a Steward will reach out to schedule a Compass Call — a first conversation to understand your system together."
       },
       {
         "title": "You enter SOIL",
@@ -41,7 +41,7 @@
   },
   "form": {
     "mainTitle": "Tell Us About Your Organization",
-    "mainDescription": "A Guardian reads every application personally to ensure there is a genuine fit. Share your context below, and we'll reach out if it makes sense to begin the conversation.",
+    "mainDescription": "A Steward reads every application personally to ensure there is a genuine fit. Share your context below, and we'll reach out if it makes sense to begin the conversation.",
     "contact": {
       "title": "Contact Information",
       "name": "Your Name",
@@ -130,7 +130,7 @@
       },
       "step2": {
         "title": "If Selected:",
-        "description": "If there is a genuine fit, a Guardian will schedule a Compass Call to understand your system together."
+        "description": "If there is a genuine fit, a Steward will schedule a Compass Call to understand your system together."
       },
       "step3": {
         "title": "You enter SOIL:",
