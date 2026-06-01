@@ -400,7 +400,7 @@ const Platform = () => {
                   </h2>
                   <p className="text-lg text-muted-foreground font-body leading-relaxed">
                     {currentLanguage === 'es'
-                      ? 'COIREA no es una herramienta de autoservicio. Cada organización que entra al sistema es acompañada por un Custodio — un facilitador entrenado que sostiene el proceso, lee lo que los datos por sí solos no pueden decirte, y permanece presente en los momentos que más importan. La plataforma da claridad. El Custodio le da contexto.'
+                      ? 'COIREA no es una herramienta de autoservicio. Cada organización que entra al sistema es acompañada por un Steward — un facilitador entrenado que sostiene el proceso, lee lo que los datos por sí solos no pueden decirte, y permanece presente en los momentos que más importan. La plataforma da claridad. El Steward le da contexto.'
                       : 'COIREA is not a self-service tool. Every organization that enters the system is accompanied by a Steward — a trained facilitator who holds the process, reads what the data alone cannot tell you, and stays present through the moments that matter most. The platform gives clarity. The Steward gives it context.'}
                   </p>
                 </div>
@@ -409,7 +409,7 @@ const Platform = () => {
                     to="/guardians"
                     className="group inline-flex items-center gap-4 text-copper hover:text-copper/80 font-display font-bold text-3xl md:text-5xl leading-tight underline-offset-[12px] decoration-2 hover:underline transition-all"
                   >
-                    {currentLanguage === 'es' ? 'Conoce a los Stewardes' : 'Meet the Stewards'}
+                    {currentLanguage === 'es' ? 'Conoce a los Stewards' : 'Meet the Stewards'}
                     <ArrowRight className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:translate-x-2" />
                   </LocalizedLink>
                 </div>
@@ -517,7 +517,7 @@ const Platform = () => {
                   </h3>
                   <p className="text-muted-foreground font-body leading-relaxed">
                     {currentLanguage === 'es'
-                      ? 'Después de SOIL, las organizaciones invitadas entran en el sistema completo con un Custodio dedicado.'
+                      ? 'Después de SOIL, las organizaciones invitadas entran en el sistema completo con un Steward dedicado.'
                       : 'After SOIL, invited organizations enter the full system with a dedicated Steward.'}
                   </p>
                 </div>
