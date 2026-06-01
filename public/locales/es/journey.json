@@ -1,16 +1,16 @@
 {
   "seo": {
     "title": "Aplica para Trabajar con COIREA | Plataforma de Inteligencia Organizacional",
-    "description": "Aplica para trabajar con COIREA. Cada organización que entra al sistema lo hace con un Custodio entrenado que sostiene el proceso a tu lado.",
-    "keywords": "aplicación COIREA, plataforma de inteligencia organizacional, salud organizacional IA, medición de cultura, analítica de liderazgo, facilitador Custodio",
+    "description": "Aplica para trabajar con COIREA. Cada organización que entra al sistema lo hace con un Steward entrenado que sostiene el proceso a tu lado.",
+    "keywords": "aplicación COIREA, plataforma de inteligencia organizacional, salud organizacional IA, medición de cultura, analítica de liderazgo, facilitador Steward",
     "successTitle": "Solicitud Recibida | COIREA",
-    "successDescription": "Gracias por aplicar para trabajar con COIREA. Un Custodio revisará tu solicitud personalmente y se pondrá en contacto si hay un ajuste genuino.",
+    "successDescription": "Gracias por aplicar para trabajar con COIREA. Un Steward revisará tu solicitud personalmente y se pondrá en contacto si hay un ajuste genuino.",
     "successKeywords": "inteligencia organizacional, aplicación COIREA, gracias"
   },
   "hero": {
     "title": "¿Está Tu Organización Lista para Verse con Claridad?",
     "description": "COIREA no es para toda organización. Es para aquellas que sienten que algo necesita cambiar, y están listas para mirarlo con honestidad, con el acompañamiento correcto a su lado.",
-    "note": "Cada organización que entra a COIREA lo hace con un Custodio — un facilitador entrenado que sostiene el proceso contigo. Esto no es una suscripción de software. Es una transformación acompañada. Las aplicaciones se revisan personalmente. Si hay un ajuste genuino, un Custodio se pondrá en contacto para iniciar la conversación.",
+    "note": "Cada organización que entra a COIREA lo hace con un Steward — un facilitador entrenado que sostiene el proceso contigo. Esto no es una suscripción de software. Es una transformación acompañada. Las aplicaciones se revisan personalmente. Si hay un ajuste genuino, un Steward se pondrá en contacto para iniciar la conversación.",
     "cta": "Aplica para Trabajar con COIREA"
   },
   "access": {
@@ -30,8 +30,8 @@
         "description": "Cuéntanos sobre tu organización y lo que sientes que necesita cambiar. No hay respuestas incorrectas."
       },
       {
-        "title": "Un Custodio revisa tu solicitud",
-        "description": "Leemos cada solicitud personalmente. Si hay un ajuste genuino, un Custodio se pondrá en contacto para agendar una Compass Call — una primera conversación para entender tu sistema juntos."
+        "title": "Un Steward revisa tu solicitud",
+        "description": "Leemos cada solicitud personalmente. Si hay un ajuste genuino, un Steward se pondrá en contacto para agendar una Compass Call — una primera conversación para entender tu sistema juntos."
       },
       {
         "title": "Entras a SOIL",
@@ -41,7 +41,7 @@
   },
   "form": {
     "mainTitle": "Cuéntanos Sobre Tu Organización",
-    "mainDescription": "Un Custodio lee cada solicitud personalmente para asegurar que haya un ajuste genuino. Comparte tu contexto abajo, y nos pondremos en contacto si tiene sentido iniciar la conversación.",
+    "mainDescription": "Un Steward lee cada solicitud personalmente para asegurar que haya un ajuste genuino. Comparte tu contexto abajo, y nos pondremos en contacto si tiene sentido iniciar la conversación.",
     "contact": {
       "title": "Información de Contacto",
       "name": "Tu Nombre",
@@ -130,7 +130,7 @@
       },
       "step2": {
         "title": "Si Eres Seleccionado:",
-        "description": "Si hay un ajuste genuino, un Custodio agendará una Compass Call para entender tu sistema juntos."
+        "description": "Si hay un ajuste genuino, un Steward agendará una Compass Call para entender tu sistema juntos."
       },
       "step3": {
         "title": "Entras a SOIL:",
