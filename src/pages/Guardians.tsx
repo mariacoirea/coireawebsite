@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import guardiansHero from "@/assets/guardians-hero.jpg";
 import latamMap from "@/assets/latam-map.png";
 
-const Guardians = () => {
+const Stewards = () => {
   const { i18n } = useTranslation();
   const isEs = i18n.language?.startsWith("es");
   const [submitting, setSubmitting] = useState(false);
@@ -64,10 +64,10 @@ const Guardians = () => {
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const title = t("Guardians — COIREA", "Guardianes — COIREA");
+  const title = t("Stewards — COIREA", "Stewardes — COIREA");
   const desc = t(
-    "The Guardians are the human presence behind the COIREA system — facilitators holding organizations through deep transformation.",
-    "Los Guardianes son la presencia humana detrás del sistema COIREA — facilitadores que sostienen a las organizaciones a través de transformaciones profundas."
+    "The Stewards are the human presence behind the COIREA system — facilitators holding organizations through deep transformation.",
+    "Los Stewardes son la presencia humana detrás del sistema COIREA — facilitadores que sostienen a las organizaciones a través de transformaciones profundas."
   );
 
   return (
@@ -107,12 +107,12 @@ const Guardians = () => {
               {t("The heart of the system", "El corazón del sistema")}
             </div>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 font-semibold" style={{ color: "#F0EBE1" }}>
-              {t("The Guardians", "Los Guardianes")}
+              {t("The Stewards", "Los Stewardes")}
             </h1>
             <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-body" style={{ color: "#F0EBE1", opacity: 0.92 }}>
               {t(
-                "Guardians are the human presence behind the COIREA system. They don't apply a method — they hold a living process. They walk alongside organizations through their deepest transformation.",
-                "Los Guardianes son la presencia humana detrás del sistema COIREA. No aplican un método — sostienen un proceso vivo. Acompañan a las organizaciones a través de su transformación más profunda."
+                "Stewards are the human presence behind the COIREA system. They don't apply a method — they hold a living process. They walk alongside organizations through their deepest transformation.",
+                "Los Stewardes son la presencia humana detrás del sistema COIREA. No aplican un método — sostienen un proceso vivo. Acompañan a las organizaciones a través de su transformación más profunda."
               )}
             </p>
           </div>
@@ -126,20 +126,20 @@ const Guardians = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div>
               <h2 className="font-display text-3xl md:text-4xl mb-5 leading-tight text-primary font-semibold">
-                {t("What does a Guardian do?", "¿Qué hace un Guardián?")}
+                {t("What does a Steward do?", "¿Qué hace un Custodio?")}
               </h2>
               <div className="space-y-4 text-base leading-relaxed text-muted-foreground font-body">
                 <p>{t(
-                  "A COIREA Guardian accompanies teams and leaders through the implementation of the organizational OS. They work from within: reading the current state of the organization, mapping its dynamics and hidden patterns, naming what the system is avoiding, and holding steady presence through the moments of greatest tension.",
-                  "Un Guardián COIREA acompaña a equipos y líderes en la implementación del sistema operativo organizacional. Trabaja desde adentro: leyendo el estado actual de la organización, mapeando sus dinámicas y patrones ocultos, nombrando lo que el sistema evita, y sosteniendo una presencia firme en los momentos de mayor tensión."
+                  "A COIREA Steward accompanies teams and leaders through the implementation of the organizational OS. They work from within: reading the current state of the organization, mapping its dynamics and hidden patterns, naming what the system is avoiding, and holding steady presence through the moments of greatest tension.",
+                  "Un Custodio COIREA acompaña a equipos y líderes en la implementación del sistema operativo organizacional. Trabaja desde adentro: leyendo el estado actual de la organización, mapeando sus dinámicas y patrones ocultos, nombrando lo que el sistema evita, y sosteniendo una presencia firme en los momentos de mayor tensión."
                 )}</p>
                 <p>{t(
                   "Their role is not to give answers. It is to ask the questions the system needs to hear, and to stay in the room when those questions land.",
                   "Su rol no es dar respuestas. Es hacer las preguntas que el sistema necesita escuchar, y permanecer en la sala cuando esas preguntas aterrizan."
                 )}</p>
                 <p>{t(
-                  "Each Guardian brings their own purpose, background, and inner practice to the work. COIREA gives them the system. They bring the presence that makes it real.",
-                  "Cada Guardián trae su propio propósito, trayectoria y práctica interior al trabajo. COIREA les da el sistema. Ellos traen la presencia que lo hace real."
+                  "Each Steward brings their own purpose, background, and inner practice to the work. COIREA gives them the system. They bring the presence that makes it real.",
+                  "Cada Custodio trae su propio propósito, trayectoria y práctica interior al trabajo. COIREA les da el sistema. Ellos traen la presencia que lo hace real."
                 )}</p>
               </div>
             </div>
@@ -163,7 +163,7 @@ const Guardians = () => {
         <section className="px-6 md:px-10 py-16 md:py-20 bg-background">
           <div className="text-center mb-12 max-w-6xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl mb-2 text-primary font-semibold">
-              {t("Meet the Guardians", "Conoce a los Guardianes")}
+              {t("Meet the Stewards", "Conoce a los Stewardes")}
             </h2>
             <p className="text-sm tracking-wide text-muted-foreground font-body">
               {t("The people holding the system", "Las personas que sostienen el sistema")}
@@ -214,7 +214,7 @@ const Guardians = () => {
                 </p>
               </div>
 
-              <LatamMap label={t("Guardian locations", "Ubicación de Guardianes")} />
+              <LatamMap label={t("Steward locations", "Ubicación de Stewardes")} />
             </div>
 
             <div className="max-w-6xl mx-auto mt-12 text-base leading-relaxed font-body text-muted-foreground text-center">
@@ -243,18 +243,18 @@ const Guardians = () => {
                 {t("For facilitators & coaches", "Para facilitadores y coaches")}
               </div>
               <h2 className="font-display text-3xl md:text-4xl mb-4 leading-tight text-primary font-semibold">
-                {t("Do you feel the call to become a Guardian?", "¿Sientes el llamado a ser Guardián?")}
+                {t("Do you feel the call to become a Steward?", "¿Sientes el llamado a ser Custodio?")}
               </h2>
               <p className="text-base leading-relaxed font-body mb-3 text-muted-foreground">
                 {t(
-                  "COIREA Guardians are not hired — they are recognized. If you have real experience accompanying human or organizational processes, an active personal practice, and you resonate with a more conscious, systemic, and alive way of doing things — we want to meet you.",
-                  "Los Guardianes COIREA no se contratan — se reconocen. Si tienes experiencia real acompañando procesos humanos u organizacionales, una práctica personal activa, y resuenas con una forma más consciente, sistémica y viva de hacer las cosas — queremos conocerte."
+                  "COIREA Stewards are not hired — they are recognized. If you have real experience accompanying human or organizational processes, an active personal practice, and you resonate with a more conscious, systemic, and alive way of doing things — we want to meet you.",
+                  "Los Stewardes COIREA no se contratan — se reconocen. Si tienes experiencia real acompañando procesos humanos u organizacionales, una práctica personal activa, y resuenas con una forma más consciente, sistémica y viva de hacer las cosas — queremos conocerte."
                 )}
               </p>
               <p className="text-base leading-relaxed font-body mb-6 text-muted-foreground">
                 {t(
-                  "We are building the first Guardian network in Latin America. Current applications are part of the foundational process. This is an invitation, not a job posting.",
-                  "Estamos construyendo la primera red de Guardianes en Latinoamérica. Las aplicaciones actuales son parte del proceso fundacional. Esta es una invitación, no una oferta de trabajo."
+                  "We are building the first Steward network in Latin America. Current applications are part of the foundational process. This is an invitation, not a job posting.",
+                  "Estamos construyendo la primera red de Stewardes en Latinoamérica. Las aplicaciones actuales son parte del proceso fundacional. Esta es una invitación, no una oferta de trabajo."
                 )}
               </p>
               <div className="space-y-3 mb-7">
@@ -267,15 +267,15 @@ const Guardians = () => {
                   </div>
                 ))}
               </div>
-              <a href="#guardian-form" className="inline-block px-7 py-3 rounded-full text-xs tracking-[0.1em] font-semibold uppercase font-body bg-accent text-accent-foreground hover:bg-accent-warm transition-colors">
-                {t("Apply to become a Guardian →", "Aplica para ser Guardián →")}
+              <a href="#steward-form" className="inline-block px-7 py-3 rounded-full text-xs tracking-[0.1em] font-semibold uppercase font-body bg-accent text-accent-foreground hover:bg-accent-warm transition-colors">
+                {t("Apply to become a Steward →", "Aplica para ser Custodio →")}
               </a>
               <p className="text-xs mt-3 italic font-body text-muted-foreground">
                 {t("We review every application personally.", "Revisamos cada aplicación personalmente.")}
               </p>
             </div>
 
-            <form id="guardian-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-background/70 backdrop-blur-sm border border-border">
+            <form id="steward-form" onSubmit={handleSubmit} className="rounded-2xl p-7 bg-background/70 backdrop-blur-sm border border-border">
               <div className="font-display text-2xl mb-1 text-primary font-semibold">
                 {t("Tell us about yourself", "Cuéntanos sobre ti")}
               </div>
@@ -378,4 +378,4 @@ const LatamMap = ({ label }: { label: string }) => {
   );
 };
 
-export default Guardians;
+export default Stewards;
