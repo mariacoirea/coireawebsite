@@ -228,7 +228,7 @@ const Stewards = () => {
                 "acompañando a líderes y equipos a la alineación cuando el hacer ha superado al ser."
               ),
               photoUrl: marcelaAsset.url,
-              map: { top: "73%", left: "55%", labelSide: "right" },
+              map: { top: "76%", left: "50%", labelSide: "right" },
             },
           ] satisfies Steward[]}
         />
