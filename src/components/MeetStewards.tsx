@@ -52,10 +52,11 @@ async function removeBgCached(src: string): Promise<string> {
 }
 
 function StewardAvatar({ src, name, size = 80 }: { src: string; name: string; size?: number }) {
-  const [url, setUrl] = useState<string | null>(null);
+  const [url, setUrl] = useState<string>(src);
   useEffect(() => {
     let alive = true;
-    removeBgCached(src).then((u) => alive && setUrl(u));
+    setUrl(src);
+    removeBgCached(src).then((u) => { if (alive && u) setUrl(u); }).catch(() => {});
     return () => { alive = false; };
   }, [src]);
   return (
