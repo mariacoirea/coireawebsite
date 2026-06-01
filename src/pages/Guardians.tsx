@@ -3,10 +3,14 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Eye, GitBranch, Zap, Anchor, User, Check } from "lucide-react";
+import { Eye, GitBranch, Zap, Anchor, Check } from "lucide-react";
 import { toast } from "sonner";
 import guardiansHero from "@/assets/guardians-hero.jpg";
-import latamMap from "@/assets/latam-map.png";
+import MeetStewards, { type Steward } from "@/components/MeetStewards";
+import tanyaAsset from "@/assets/stewards/tanya.jpeg.asset.json";
+import juanCarlosAsset from "@/assets/stewards/juan_carlos.jpeg.asset.json";
+import marcelaAsset from "@/assets/stewards/marcela.jpeg.asset.json";
+import gabrielaAsset from "@/assets/stewards/gabriela.jpg.asset.json";
 
 const Stewards = () => {
   const { i18n } = useTranslation();
@@ -160,65 +164,78 @@ const Stewards = () => {
         <div className="h-px bg-border" />
 
         {/* MEET */}
-        <section className="px-6 md:px-10 py-16 md:py-20 bg-background">
-          <div className="text-center mb-12 max-w-6xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl mb-2 text-primary font-semibold">
-              {t("Meet the Stewards", "Conoce a los Stewards")}
-            </h2>
-            <p className="text-sm tracking-wide text-muted-foreground font-body">
-              {t("The people holding the system", "Las personas que sostienen el sistema")}
-            </p>
-          </div>
+        <MeetStewards
+          title={t("Meet the Stewards", "Conoce a los Stewards")}
+          subtitle={t("The people holding the system", "Las personas que sostienen el sistema")}
+          quote={t(
+            "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
+            "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
+          )}
+          caption={t(
+            "Five different territories. One living body. Click any steward — on the grid or the map — to learn more.",
+            "Cinco territorios diferentes. Un cuerpo vivo. Haz clic en cualquier steward — en la cuadrícula o en el mapa — para conocer más."
+          )}
+          mapLabel={t("Steward locations", "Ubicación de Stewards")}
+          closeLabel={t("Close", "Cerrar")}
+          stewards={[
+            {
+              id: "juan-carlos",
+              name: "Juan Carlos",
+              location: t("Quito, Ecuador", "Quito, Ecuador"),
+              specialty: t("Systemic vision", "Visión sistémica"),
+              keyword: t("Systemic gaze — ", "Mirada sistémica — "),
+              description: t(
+                "accompanying organizations to see what the system already knows about itself, before touching anything.",
+                "acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
+              ),
+              photoUrl: juanCarlosAsset.url,
+              map: { top: "41%", left: "37%", labelSide: "left" },
+            },
+            {
+              id: "tanya",
+              name: "Tanya",
+              location: t("Lima, Perú", "Lima, Perú"),
+              specialty: t("Systemic trust", "Confianza sistémica"),
+              keyword: t("Systemic trust — ", "Confianza sistémica — "),
+              description: t(
+                "holding collective processes with care, especially when something can no longer continue as before.",
+                "sosteniendo procesos colectivos con cuidado, especialmente cuando algo ya no puede seguir como antes."
+              ),
+              photoUrl: tanyaAsset.url,
+              map: { top: "52%", left: "42%", labelSide: "left" },
+            },
+            {
+              id: "gabriela",
+              name: "Gabriela",
+              location: t("Santiago, Chile", "Santiago, Chile"),
+              specialty: t("Natural intelligence", "Inteligencia natural"),
+              keyword: t("Natural intelligence — ", "Inteligencia natural — "),
+              description: t(
+                "a biologist who reads organizations as ecosystems, from the inside out.",
+                "una bióloga que lee las organizaciones como ecosistemas, de dentro hacia fuera."
+              ),
+              photoUrl: gabrielaAsset.url,
+              map: { top: "70%", left: "47%", labelSide: "left" },
+            },
+            {
+              id: "marcela",
+              name: "Marcela",
+              location: t("Buenos Aires, Argentina", "Buenos Aires, Argentina"),
+              specialty: t("Coherence", "Coherencia"),
+              keyword: t("Coherence — ", "Coherencia — "),
+              description: t(
+                "accompanying leaders and teams back to alignment when doing has outpaced being.",
+                "acompañando a líderes y equipos a la alineación cuando el hacer ha superado al ser."
+              ),
+              photoUrl: marcelaAsset.url,
+              map: { top: "70%", left: "56%", labelSide: "right" },
+            },
+          ] satisfies Steward[]}
+        />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-16">
-            {guardians.map((g) => (
-              <div key={g.name} className="rounded-2xl p-6 text-center bg-warm-beige border border-border">
-                <div className="w-20 h-20 rounded-full flex flex-col items-center justify-center mx-auto mb-4 gap-1 bg-accent/10 border-2 border-dashed border-accent/40">
-                  <User className="w-5 h-5 text-accent/70" />
-                  <span className="text-[9px] tracking-wide text-accent/70 font-body">
-                    {t("Photo soon", "Foto pronto")}
-                  </span>
-                </div>
-                <div className="font-display text-xl mb-1 text-primary font-semibold">{g.name}</div>
-                <div className="text-xs mb-3 text-secondary font-body">{g.role}</div>
-                <div className="text-sm leading-relaxed text-muted-foreground font-body text-left pt-3 border-t border-border">
-                  <strong className="text-primary font-semibold">{g.aporte} —</strong> {g.desc}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* NARRATIVE */}
-          <div className="pt-12 max-w-6xl mx-auto border-t border-border">
-            <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
-              <div className="space-y-6">
-                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
-                  {t(
-                    "\"We didn't come together because we agree on everything. We came together because each of us carries a piece of what organizations need most right now, and we recognized it in each other.\"",
-                    "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
-                  )}
-                </p>
-                <p className="text-base leading-relaxed font-body text-muted-foreground">
-                  {t(
-                    "María José brings the vision: a decade leading organizations across three continents, and the courage to ask what it truly means for a system to be alive. Tanya brings systemic trust: the capacity to hold collective processes with care, especially when something can no longer continue as it is. Gabriela brings the intelligence of natural systems: a biologist who reads organizations the way ecosystems are read, from the inside out. Marcela brings coherence: accompanying leaders and teams back to alignment when the doing has outrun the being. And Juan Carlos brings the ",
-                    "María José aporta la visión: una década liderando organizaciones en tres continentes, y el valor de preguntarse qué significa realmente que un sistema esté vivo. Tanya aporta la confianza sistémica: la capacidad de sostener procesos colectivos con cuidado, especialmente cuando algo ya no puede continuar como está. Gabriela aporta la inteligencia de los sistemas naturales: una bióloga que lee las organizaciones como se leen los ecosistemas, de dentro hacia fuera. Marcela aporta coherencia: acompañando a líderes y equipos a volver a la alineación cuando el hacer ha superado al ser. Y Juan Carlos aporta la "
-                  )}
-                  <span className="text-primary font-semibold">{t("systemic gaze", "mirada sistémica")}</span>
-                  {t(
-                    ": accompanying organizations to see what the system already knows about itself, before touching any of it.",
-                    ": acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada de ello."
-                  )}
-                </p>
-                <p className="font-display text-xl md:text-2xl leading-snug text-primary">
-                  {t("Five different territories. One living body.", "Cinco territorios diferentes. Un cuerpo vivo.")}
-                </p>
-              </div>
-
-              <LatamMap label={t("Steward locations", "Ubicación de Stewards")} />
-            </div>
-
-            <div className="max-w-6xl mx-auto mt-12 text-base leading-relaxed font-body text-muted-foreground text-center">
-
+        <section className="px-6 md:px-10 pb-16 md:pb-20 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-base leading-relaxed font-body text-muted-foreground text-center">
               <p>{t(
                 "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
                 "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
@@ -335,47 +352,5 @@ const Field = ({
   </div>
 );
 
-const LatamMap = ({ label }: { label: string }) => {
-  // Positions as % of the uploaded LATAM map image
-  const locations = [
-    { name: "Ecuador",   top: "41%", left: "37%", labelSide: "left" as const },
-    { name: "Perú",      top: "52%", left: "42%", labelSide: "left" as const },
-    { name: "Chile",     top: "70%", left: "47%", labelSide: "left" as const },
-    { name: "Argentina", top: "70%", left: "56%", labelSide: "right" as const },
-  ];
-  return (
-    <div className="mx-auto w-full max-w-sm">
-      <div className="relative">
-        <img
-          src={latamMap}
-          alt={label}
-          className="w-full h-auto opacity-90 mix-blend-multiply"
-        />
-        {locations.map((l) => (
-          <div
-            key={l.name}
-            className="absolute -translate-x-1/2 -translate-y-1/2"
-            style={{ top: l.top, left: l.left }}
-          >
-            <span className="relative flex items-center justify-center">
-              <span className="absolute inline-flex h-5 w-5 rounded-full bg-accent/30 animate-ping" />
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-accent border-2 border-background" />
-            </span>
-            <span
-              className={`absolute top-1/2 -translate-y-1/2 ${
-                l.labelSide === "left" ? "right-full mr-2" : "left-full ml-2"
-              } text-[11px] font-body font-semibold text-primary whitespace-nowrap`}
-            >
-              {l.name}
-            </span>
-          </div>
-        ))}
-      </div>
-      <div className="text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3">
-        {label}
-      </div>
-    </div>
-  );
-};
 
 export default Stewards;
