@@ -189,7 +189,7 @@ const Stewards = () => {
                 "acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
               ),
               photoUrl: juanCarlosAsset.url,
-              map: { top: "41%", left: "37%", labelSide: "left" },
+              map: { top: "26%", left: "28%", labelSide: "left" },
             },
             {
               id: "tanya",
