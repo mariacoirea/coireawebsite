@@ -202,7 +202,7 @@ const Stewards = () => {
                 "sosteniendo procesos colectivos con cuidado, especialmente cuando algo ya no puede seguir como antes."
               ),
               photoUrl: tanyaAsset.url,
-              map: { top: "72%", left: "37%", labelSide: "left" },
+              map: { top: "74%", left: "30%", labelSide: "left" },
             },
             {
               id: "gabriela",
