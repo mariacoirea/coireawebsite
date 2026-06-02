@@ -172,8 +172,8 @@ const Stewards = () => {
             "\"No nos unimos porque estemos de acuerdo en todo. Nos unimos porque cada uno carga una pieza de lo que las organizaciones más necesitan ahora mismo, y la reconocimos en el otro.\""
           )}
           caption={t(
-            "Four territories. One living body. Click any steward — on the grid or the map — to learn more.",
-            "Cuatro territorios. Un cuerpo vivo. Haz clic en cualquier steward — en la cuadrícula o en el mapa — para conocer más."
+            "Click any steward — on the grid or the map — to learn more.",
+            "Haz clic en cualquier steward — en la cuadrícula o en el mapa — para conocer más."
           )}
           mapLabel={t("Steward locations", "Ubicación de Stewards")}
           closeLabel={t("Close", "Cerrar")}
