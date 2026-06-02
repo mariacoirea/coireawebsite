@@ -111,7 +111,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
               }`}
             >
               <div className="flex justify-center mb-3">
-                <StewardAvatar src={s.photoUrl} name={s.name} size={80} />
+                <StewardAvatar src={s.photoUrl} name={s.name} size={128} />
               </div>
               <div className="font-body font-medium text-primary text-sm md:text-base">{s.name}</div>
               <div className="text-xs text-muted-foreground font-body mt-0.5">{s.location}</div>
@@ -128,7 +128,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
         ref={detailRef}
         className="max-w-6xl mx-auto overflow-hidden transition-all duration-400 ease-out"
         style={{
-          maxHeight: selected ? 600 : 0,
+          maxHeight: selected ? 2000 : 0,
           opacity: selected ? 1 : 0,
           marginTop: selected ? 24 : 0,
         }}
@@ -152,8 +152,8 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
                   <MapPin className="w-3.5 h-3.5" />
                   {selected.location}
                 </div>
-                <p className="text-base leading-relaxed font-body text-muted-foreground">
-                  <span className="font-semibold text-accent">{selected.keyword}</span>
+                <p className="text-base leading-relaxed font-body text-muted-foreground whitespace-pre-line">
+                  {selected.keyword && <span className="font-semibold text-accent">{selected.keyword}</span>}
                   {selected.description}
                 </p>
               </div>

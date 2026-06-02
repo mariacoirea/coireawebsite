@@ -183,10 +183,10 @@ const Stewards = () => {
               name: "Juan Carlos",
               location: t("Quito, Ecuador", "Quito, Ecuador"),
               specialty: t("Systemic vision", "Visión sistémica"),
-              keyword: t("Systemic gaze — ", "Mirada sistémica — "),
+              keyword: "",
               description: t(
-                "accompanying organizations to see what the system already knows about itself, before touching anything.",
-                "acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
+                "Ecuador · Founding Steward COIREA\n\nFrom the middle of the world, I have spent more than two decades weaving networks among territories, organizations, and institutions. My work has always been the same, though it has taken different forms — accompanying companies, communities, and leaders to build regenerative models that are not imposed on the territory, but emerge from it.\n\nI have collaborated with international organizations — UNESCO, the European Union, the Presencing Institute, the World Bank — and from public service I have designed territorial, agricultural, and educational policy in highly complex contexts.\n\nWhat moves me, always, is the same question: what does this system want to do with its own intelligence?\n\nIn COIREA I found a body where that question has a home.",
+                "Ecuador · Guardián Fundacional COIREA\n\nDesde la mitad del mundo, llevo más de dos décadas tejiendo redes entre territorios, organizaciones e instituciones. Mi labor ha sido siempre la misma, aunque haya tomado formas distintas — acompañar a empresas, comunidades y líderes a construir modelos regenerativos que no se imponen sobre el territorio, sino que emergen de él.\n\nHe colaborado con organismos internacionales — UNESCO, Unión Europea, Presencing Institute, Banco Mundial — y desde la función pública he diseñado política territorial, agrícola y educativa en contextos de alta complejidad.\n\nLo que me mueve, desde siempre, es la misma pregunta: ¿qué quiere hacer este sistema con su propia inteligencia?\n\nEn COIREA encontré un cuerpo donde esa pregunta tiene casa."
               ),
               photoUrl: juanCarlosAsset.url,
               map: { top: "22%", left: "22%", labelSide: "right" },
@@ -222,10 +222,10 @@ const Stewards = () => {
               name: "Marcela",
               location: t("Buenos Aires, Argentina", "Buenos Aires, Argentina"),
               specialty: t("Coherence", "Coherencia"),
-              keyword: t("Coherence — ", "Coherencia — "),
+              keyword: "",
               description: t(
-                "accompanying leaders and teams back to alignment when doing has outpaced being.",
-                "acompañando a líderes y equipos a la alineación cuando el hacer ha superado al ser."
+                "Argentina · Founding Steward · COIREA\n\nWith my gaze on the present and on the speed at which the world evolves, I build network. As I have evolved, so has my work and my vision. Today, alongside COIREA, I accompany people, leaders, and companies to walk through life models with a unique perspective: integrating who we are into each of our roles, to live regeneratively, with an integral view of the community, society, and the world we inhabit.\n\n\"Integrating who we are into each of our roles, to live a regenerative life.\"\n\nFor two decades I grew, learned, and developed in the world of Latin American organizations — especially in the financial sector — from the perspective of business growth and the implementation of technology to simplify and make organizations profitable.\n\nToday I walk with my eyes set on accompanying this historic moment in which everything will take a new course alongside AI and new technologies. A moment that invites us to take an instant to rethink ourselves. COIREA brings a new way — together with technology — to walk hand in hand with transformation, in a simpler and more guided way.",
+                "Argentina · Guardián Fundacional · COIREA\n\nCon la mirada en el presente y en la velocidad con que el mundo evoluciona, construyo red. Como he evolucionado, ha evolucionado mi labor y mi visión. Hoy, junto a COIREA, acompaño a personas, líderes y empresas a transitar modelos de vida con una perspectiva única: integrar quienes somos en cada uno de nuestros roles, para vivir de manera regenerativa, con una mirada integral de la comunidad, la sociedad y el mundo en el que habitamos.\n\n\"Integrar quienes somos en cada uno de nuestros roles, para vivir una vida regenerativa.\"\n\nDurante dos décadas crecí, aprendí y me desarrollé en el mundo de las organizaciones del territorio latinoamericano — especialmente en el sector financiero — desde la mirada del crecimiento del negocio y la implementación de tecnología para simplificar y rentabilizar las organizaciones.\n\nHoy camino con la mirada puesta en acompañar este momento histórico en el que todo tomará un nuevo rumbo junto a la IA y las nuevas tecnologías. Un momento que nos invita a tomarnos un instante para repensarnos. COIREA trae una nueva forma — junto con tecnología — para ir de la mano con la transformación, de manera más simple y guiada."
               ),
               photoUrl: marcelaAsset.url,
               map: { top: "76%", left: "50%", labelSide: "right" },
