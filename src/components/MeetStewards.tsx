@@ -25,6 +25,7 @@ interface Props {
   mapLabel: string;
   closeLabel: string;
   stewards: Steward[];
+  extraContent?: React.ReactNode;
 }
 
 // Cache processed (background-removed) image URLs per source URL
