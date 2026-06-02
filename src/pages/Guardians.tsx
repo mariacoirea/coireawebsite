@@ -249,22 +249,6 @@ const Stewards = () => {
           ] satisfies Steward[]}
         />
 
-        <section className="px-6 md:px-10 pb-16 md:pb-20 bg-background">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-base leading-relaxed font-body text-muted-foreground text-center">
-              <p>{t(
-                "COIREA was not conceived as a methodology to apply. It was conceived as a container to trust: a space where reflection precedes intervention, where patterns are named without assigning blame, and where organizational intelligence is allowed to emerge from within.",
-                "COIREA no fue concebida como una metodología para aplicar. Fue concebida como un contenedor en el que confiar: un espacio donde la reflexión precede a la intervención, donde los patrones se nombran sin asignar culpas, y donde se permite que la inteligencia organizacional emerja desde dentro."
-              )}</p>
-            </div>
-            <div className="font-display text-lg md:text-xl text-center max-w-xl mx-auto mt-10 py-6 leading-relaxed text-primary border-t border-b border-accent/40">
-              {t(
-                "\"If something in your organization isn't flowing, we're not here to fix it. We're here to help you see it.\"",
-                "\"Si algo en tu organización no fluye, no estamos aquí para arreglarlo. Estamos aquí para ayudarte a verlo.\""
-              )}
-            </div>
-          </div>
-        </section>
 
         <div className="h-px bg-accent/40" />
 
