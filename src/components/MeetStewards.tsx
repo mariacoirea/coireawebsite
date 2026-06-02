@@ -128,7 +128,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
         ref={detailRef}
         className="max-w-6xl mx-auto overflow-hidden transition-all duration-400 ease-out"
         style={{
-          maxHeight: selected ? 600 : 0,
+          maxHeight: selected ? 2000 : 0,
           opacity: selected ? 1 : 0,
           marginTop: selected ? 24 : 0,
         }}
