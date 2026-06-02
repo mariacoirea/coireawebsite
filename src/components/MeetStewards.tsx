@@ -111,7 +111,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
               }`}
             >
               <div className="flex justify-center mb-3">
-                <StewardAvatar src={s.photoUrl} name={s.name} size={80} />
+                <StewardAvatar src={s.photoUrl} name={s.name} size={128} />
               </div>
               <div className="font-body font-medium text-primary text-sm md:text-base">{s.name}</div>
               <div className="text-xs text-muted-foreground font-body mt-0.5">{s.location}</div>
