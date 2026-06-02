@@ -25,6 +25,7 @@ interface Props {
   mapLabel: string;
   closeLabel: string;
   stewards: Steward[];
+  extraContent?: React.ReactNode;
 }
 
 // Cache processed (background-removed) image URLs per source URL
@@ -79,7 +80,7 @@ function StewardAvatar({ src, name, size = 80 }: { src: string; name: string; si
   );
 }
 
-const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, stewards }: Props) => {
+const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, stewards, extraContent }: Props) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const selected = stewards.find((s) => s.id === selectedId) || null;
@@ -172,6 +173,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
             {quote}
           </blockquote>
           <p className="text-sm leading-relaxed font-body text-muted-foreground mt-4 pl-5">{caption}</p>
+          {extraContent && <div className="mt-6 pl-5">{extraContent}</div>}
         </div>
 
         <div className="rounded-2xl p-6 bg-warm-beige border border-border">
