@@ -172,7 +172,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
           >
             {quote}
           </blockquote>
-          <p className="text-sm leading-relaxed font-body text-muted-foreground mt-4 pl-5">{caption}</p>
+          <h2 className="font-display text-xl md:text-2xl leading-relaxed text-primary font-semibold mt-4 pl-5">{caption}</h2>
           {extraContent && <div className="mt-6 pl-5">{extraContent}</div>}
         </div>
 
