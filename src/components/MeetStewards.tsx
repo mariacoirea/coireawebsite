@@ -80,7 +80,7 @@ function StewardAvatar({ src, name, size = 80 }: { src: string; name: string; si
   );
 }
 
-const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, stewards }: Props) => {
+const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, stewards, extraContent }: Props) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const selected = stewards.find((s) => s.id === selectedId) || null;
