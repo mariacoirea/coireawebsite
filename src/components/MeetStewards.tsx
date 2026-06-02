@@ -152,8 +152,8 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
                   <MapPin className="w-3.5 h-3.5" />
                   {selected.location}
                 </div>
-                <p className="text-base leading-relaxed font-body text-muted-foreground">
-                  <span className="font-semibold text-accent">{selected.keyword}</span>
+                <p className="text-base leading-relaxed font-body text-muted-foreground whitespace-pre-line">
+                  {selected.keyword && <span className="font-semibold text-accent">{selected.keyword}</span>}
                   {selected.description}
                 </p>
               </div>
