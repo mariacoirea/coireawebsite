@@ -97,6 +97,7 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
       <div className="text-center mb-12 max-w-6xl mx-auto">
         <h2 className="font-display text-3xl md:text-4xl mb-2 text-primary font-semibold">{title}</h2>
         <p className="text-sm tracking-wide text-muted-foreground font-body">{subtitle}</p>
+        <h3 className="font-display text-xl md:text-2xl text-primary font-semibold mt-6">{caption}</h3>
       </div>
 
       {/* Block A — Cards grid */}
@@ -172,7 +173,6 @@ const MeetStewards = ({ title, subtitle, quote, caption, mapLabel, closeLabel, s
           >
             {quote}
           </blockquote>
-          <h2 className="font-display text-xl md:text-2xl leading-relaxed text-primary font-semibold mt-4 pl-5">{caption}</h2>
           {extraContent && <div className="mt-6 pl-5">{extraContent}</div>}
         </div>
 
