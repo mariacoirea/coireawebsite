@@ -183,10 +183,10 @@ const Stewards = () => {
               name: "Juan Carlos",
               location: t("Quito, Ecuador", "Quito, Ecuador"),
               specialty: t("Systemic vision", "Visión sistémica"),
-              keyword: t("Systemic gaze — ", "Mirada sistémica — "),
+              keyword: "",
               description: t(
-                "accompanying organizations to see what the system already knows about itself, before touching anything.",
-                "acompañando a organizaciones a ver lo que el sistema ya sabe de sí mismo, antes de tocar nada."
+                "Ecuador · Founding Steward COIREA\n\nFrom the middle of the world, I have spent more than two decades weaving networks among territories, organizations, and institutions. My work has always been the same, though it has taken different forms — accompanying companies, communities, and leaders to build regenerative models that are not imposed on the territory, but emerge from it.\n\nI have collaborated with international organizations — UNESCO, the European Union, the Presencing Institute, the World Bank — and from public service I have designed territorial, agricultural, and educational policy in highly complex contexts.\n\nWhat moves me, always, is the same question: what does this system want to do with its own intelligence?\n\nIn COIREA I found a body where that question has a home.",
+                "Ecuador · Guardián Fundacional COIREA\n\nDesde la mitad del mundo, llevo más de dos décadas tejiendo redes entre territorios, organizaciones e instituciones. Mi labor ha sido siempre la misma, aunque haya tomado formas distintas — acompañar a empresas, comunidades y líderes a construir modelos regenerativos que no se imponen sobre el territorio, sino que emergen de él.\n\nHe colaborado con organismos internacionales — UNESCO, Unión Europea, Presencing Institute, Banco Mundial — y desde la función pública he diseñado política territorial, agrícola y educativa en contextos de alta complejidad.\n\nLo que me mueve, desde siempre, es la misma pregunta: ¿qué quiere hacer este sistema con su propia inteligencia?\n\nEn COIREA encontré un cuerpo donde esa pregunta tiene casa."
               ),
               photoUrl: juanCarlosAsset.url,
               map: { top: "22%", left: "22%", labelSide: "right" },
