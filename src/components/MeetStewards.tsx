@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { MapPin, X, User } from "lucide-react";
 import tanyaAsset from "@/assets/stewards/tanya.jpeg.asset.json";
-import juanCarlosAsset from "@/assets/stewards/juan_carlos.jpeg.asset.json";
+import juanCarlosAsset from "@/assets/stewards/juan_carlos.png.asset.json";
 import marcelaAsset from "@/assets/stewards/marcela.jpeg.asset.json";
 import gabrielaAsset from "@/assets/stewards/gabriela.jpg.asset.json";
 import latamMap from "@/assets/stewards/latam-outline.png.asset.json";
