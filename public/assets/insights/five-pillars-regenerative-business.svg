@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">The COIREA Operating System: The Five Pillars of Regenerative Organizations</title>
+  <desc id="desc">Abstract COIREA insight cover representing five pillars through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#193b2b"/>
+      <stop offset=".58" stop-color="#54724c"/>
+      <stop offset="1" stop-color="#193b2b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#c29a58" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#c29a58" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#193b2b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="237" cy="167" r="210" fill="#c29a58" opacity=".18" filter="url(#soft)"/>
+  <circle cx="923" cy="533" r="260" fill="#f3eadb" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#f3eadb" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.268"/><path d="M464 548 C 525.5 478, 525.5 238, 587 168" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M1081 535 C 859.5 465, 859.5 569, 638 499" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M758 522 C 723.5 452, 723.5 460, 689 390" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M435 509 C 587.5 439, 587.5 351, 740 281" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M1052 496 C 921.5 426, 921.5 242, 791 172" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M729 483 C 785.5 413, 785.5 573, 842 503" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M406 470 C 649.5 400, 649.5 464, 893 394" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M1023 457 C 983.5 387, 983.5 355, 944 285" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M700 444 C 847.5 374, 847.5 246, 995 176" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><path d="M377 431 C 711.5 361, 711.5 577, 1046 507" fill="none" stroke="#f3eadb" stroke-width="1.4" opacity=".24"/><circle cx="742" cy="295" r="8" fill="#c29a58" opacity="0.72"/><circle cx="241" cy="628" r="9" fill="#54724c" opacity="0.38"/><circle cx="790" cy="461" r="10" fill="#54724c" opacity="0.38"/><circle cx="289" cy="294" r="11" fill="#54724c" opacity="0.38"/><circle cx="838" cy="627" r="12" fill="#c29a58" opacity="0.72"/><circle cx="337" cy="460" r="13" fill="#54724c" opacity="0.38"/><circle cx="886" cy="293" r="5" fill="#54724c" opacity="0.38"/><circle cx="385" cy="626" r="6" fill="#54724c" opacity="0.38"/><circle cx="934" cy="459" r="7" fill="#c29a58" opacity="0.72"/><circle cx="433" cy="292" r="8" fill="#54724c" opacity="0.38"/><circle cx="982" cy="625" r="9" fill="#54724c" opacity="0.38"/><circle cx="481" cy="458" r="10" fill="#54724c" opacity="0.38"/><circle cx="1030" cy="291" r="11" fill="#c29a58" opacity="0.72"/>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#c29a58">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#f3eadb" opacity=".94">Five pillars</text>
+  </g>
+  <path d="M92 664H420" stroke="#c29a58" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#f3eadb" opacity=".7">Transformational Business Pillars</text>
+</svg>

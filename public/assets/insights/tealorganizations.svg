@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">The Future of Work Is Teal: Why Self-Managed, Purpose-Driven Organizations Are Here to Stay</title>
+  <desc id="desc">Abstract COIREA insight cover representing teal future through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163226"/>
+      <stop offset=".58" stop-color="#4f6e5a"/>
+      <stop offset="1" stop-color="#163226"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#dec78a" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#dec78a" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#163226" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="218" cy="148" r="210" fill="#dec78a" opacity=".18" filter="url(#soft)"/>
+  <circle cx="1022" cy="522" r="260" fill="#ece8d8" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#ece8d8" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.268"/><path d="M486 592 C 617 522, 617 502, 748 432" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M644 370 C 733 300, 733 536, 822 466" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M802 588 C 849 518, 849 570, 896 500" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M960 366 C 965 296, 965 604, 970 534" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M178 584 C 611 514, 611 638, 1044 568" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M336 362 C 727 292, 727 232, 1118 162" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M494 580 C 373 510, 373 266, 252 196" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M652 358 C 489 288, 489 300, 326 230" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M810 576 C 605 506, 605 334, 400 264" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M968 354 C 721 284, 721 368, 474 298" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><circle cx="463" cy="140" r="7" fill="#dec78a" opacity="0.72"/><circle cx="219" cy="442" r="8" fill="#4f6e5a" opacity="0.38"/><circle cx="1025" cy="244" r="9" fill="#4f6e5a" opacity="0.38"/><circle cx="781" cy="546" r="10" fill="#4f6e5a" opacity="0.38"/><circle cx="537" cy="348" r="11" fill="#dec78a" opacity="0.72"/><circle cx="293" cy="150" r="12" fill="#4f6e5a" opacity="0.38"/><circle cx="1099" cy="452" r="13" fill="#4f6e5a" opacity="0.38"/><circle cx="855" cy="254" r="5" fill="#4f6e5a" opacity="0.38"/><circle cx="611" cy="556" r="6" fill="#dec78a" opacity="0.72"/><circle cx="367" cy="358" r="7" fill="#4f6e5a" opacity="0.38"/><circle cx="1173" cy="160" r="8" fill="#4f6e5a" opacity="0.38"/><circle cx="929" cy="462" r="9" fill="#4f6e5a" opacity="0.38"/><circle cx="685" cy="264" r="10" fill="#dec78a" opacity="0.72"/><g transform="translate(930 142)" fill="none"><circle cx="130" cy="210" r="148" stroke="#dec78a" stroke-width="2" opacity=".66"/><circle cx="130" cy="210" r="98" stroke="#ece8d8" stroke-width="1.5" opacity=".34"/><circle cx="130" cy="210" r="48" fill="#4f6e5a" opacity=".54"/><path d="M130 62 A148 148 0 0 1 278 210" stroke="#dec78a" stroke-width="9" stroke-linecap="round"/><path d="M130 358 A148 148 0 0 1 -18 210" stroke="#ece8d8" stroke-width="5" stroke-linecap="round" opacity=".4"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#dec78a">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#ece8d8" opacity=".94">Teal future</text>
+  </g>
+  <path d="M92 664H420" stroke="#dec78a" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#ece8d8" opacity=".7">Organizational Evolution</text>
+</svg>

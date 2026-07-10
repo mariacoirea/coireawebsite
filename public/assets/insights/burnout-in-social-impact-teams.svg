@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">Burnout in Social Impact Teams: The Silent Crisis Limiting Real Change</title>
+  <desc id="desc">Abstract COIREA insight cover representing burnout through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173728"/>
+      <stop offset=".58" stop-color="#2f6b50"/>
+      <stop offset="1" stop-color="#173728"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#d2ad68" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#d2ad68" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#173728" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="289" cy="129" r="210" fill="#d2ad68" opacity=".18" filter="url(#soft)"/>
+  <circle cx="991" cy="581" r="260" fill="#eef0df" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#eef0df" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.268"/><path d="M868 316 C 603.5 246, 603.5 646, 339 576" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M277 575 C 651.5 505, 651.5 313, 1026 243" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M626 394 C 699.5 324, 699.5 420, 773 350" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M975 213 C 747.5 143, 747.5 527, 520 457" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M384 472 C 325.5 402, 325.5 634, 267 564" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M733 291 C 843.5 221, 843.5 301, 954 231" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M1082 550 C 891.5 480, 891.5 408, 701 338" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M491 369 C 469.5 299, 469.5 515, 448 445" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M840 188 C 987.5 118, 987.5 622, 1135 552" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M249 447 C 565.5 377, 565.5 289, 882 219" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><circle cx="1174" cy="535" r="6" fill="#d2ad68" opacity="0.72"/><circle cx="467" cy="216" r="7" fill="#2f6b50" opacity="0.38"/><circle cx="810" cy="397" r="8" fill="#2f6b50" opacity="0.38"/><circle cx="1153" cy="578" r="9" fill="#2f6b50" opacity="0.38"/><circle cx="446" cy="259" r="10" fill="#d2ad68" opacity="0.72"/><circle cx="789" cy="440" r="11" fill="#2f6b50" opacity="0.38"/><circle cx="1132" cy="621" r="12" fill="#2f6b50" opacity="0.38"/><circle cx="425" cy="302" r="13" fill="#2f6b50" opacity="0.38"/><circle cx="768" cy="483" r="5" fill="#d2ad68" opacity="0.72"/><circle cx="1111" cy="164" r="6" fill="#2f6b50" opacity="0.38"/><circle cx="404" cy="345" r="7" fill="#2f6b50" opacity="0.38"/><circle cx="747" cy="526" r="8" fill="#2f6b50" opacity="0.38"/><circle cx="1090" cy="207" r="9" fill="#d2ad68" opacity="0.72"/><g transform="translate(815 170)" fill="none" stroke-linecap="round"><path d="M30 210 C110 210 90 120 150 120 C220 120 190 318 265 318 C334 318 318 210 410 210" stroke="#d2ad68" stroke-width="5"/><path d="M42 278 C122 278 120 220 182 220 C252 220 238 356 318 356 C370 356 382 278 428 278" stroke="#eef0df" stroke-width="2" opacity=".35"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#d2ad68">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#eef0df" opacity=".94">Burnout</text>
+  </g>
+  <path d="M92 664H420" stroke="#d2ad68" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#eef0df" opacity=".7">Organizational Evolution</text>
+</svg>

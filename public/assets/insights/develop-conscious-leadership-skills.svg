@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">How to Develop the Leadership Skills the World Actually Needs Now</title>
+  <desc id="desc">Abstract COIREA insight cover representing leadership through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f392b"/>
+      <stop offset=".58" stop-color="#6c7d52"/>
+      <stop offset="1" stop-color="#1f392b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#bd8755" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#bd8755" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#1f392b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="343" cy="183" r="210" fill="#bd8755" opacity=".18" filter="url(#soft)"/>
+  <circle cx="957" cy="537" r="260" fill="#f1e5d4" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#f1e5d4" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.268"/><path d="M696 492 C 614.5 422, 614.5 382, 533 312" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M959 245 C 700.5 175, 700.5 511, 442 441" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M282 438 C 316.5 368, 316.5 640, 351 570" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M545 191 C 402.5 121, 402.5 329, 260 259" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M808 384 C 958.5 314, 958.5 458, 1109 388" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M1071 577 C 1044.5 507, 1044.5 587, 1018 517" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M394 330 C 660.5 260, 660.5 276, 927 206" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M657 523 C 746.5 453, 746.5 405, 836 335" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M920 276 C 832.5 206, 832.5 534, 745 464" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M243 469 C 448.5 399, 448.5 663, 654 593" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><circle cx="958" cy="165" r="6" fill="#bd8755" opacity="0.72"/><circle cx="179" cy="572" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="450" cy="479" r="8" fill="#6c7d52" opacity="0.38"/><circle cx="721" cy="386" r="9" fill="#6c7d52" opacity="0.38"/><circle cx="992" cy="293" r="10" fill="#bd8755" opacity="0.72"/><circle cx="213" cy="200" r="11" fill="#6c7d52" opacity="0.38"/><circle cx="484" cy="607" r="12" fill="#6c7d52" opacity="0.38"/><circle cx="755" cy="514" r="13" fill="#6c7d52" opacity="0.38"/><circle cx="1026" cy="421" r="5" fill="#bd8755" opacity="0.72"/><circle cx="247" cy="328" r="6" fill="#6c7d52" opacity="0.38"/><circle cx="518" cy="235" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="789" cy="142" r="8" fill="#6c7d52" opacity="0.38"/><circle cx="1060" cy="549" r="9" fill="#bd8755" opacity="0.72"/><g transform="translate(815 170)" fill="none" stroke-linecap="round"><path d="M30 210 C110 210 90 120 150 120 C220 120 190 318 265 318 C334 318 318 210 410 210" stroke="#bd8755" stroke-width="5"/><path d="M42 278 C122 278 120 220 182 220 C252 220 238 356 318 356 C370 356 382 278 428 278" stroke="#f1e5d4" stroke-width="2" opacity=".35"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#bd8755">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#f1e5d4" opacity=".94">Leadership</text>
+  </g>
+  <path d="M92 664H420" stroke="#bd8755" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#f1e5d4" opacity=".7">Transformational Business Pillars</text>
+</svg>

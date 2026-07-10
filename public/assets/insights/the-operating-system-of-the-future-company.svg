@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">The Operating System of the Future Company</title>
+  <desc id="desc">Abstract COIREA insight cover representing operating system through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173728"/>
+      <stop offset=".58" stop-color="#2f6b50"/>
+      <stop offset="1" stop-color="#173728"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#d2ad68" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#d2ad68" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#173728" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="237" cy="167" r="210" fill="#d2ad68" opacity=".18" filter="url(#soft)"/>
+  <circle cx="903" cy="583" r="260" fill="#eef0df" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#eef0df" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#eef0df" stroke-width="1" opacity="0.268"/><path d="M284 508 C 695.5 438, 695.5 278, 1107 208" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M341 375 C 719.5 305, 719.5 449, 1098 379" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M398 242 C 743.5 172, 743.5 620, 1089 550" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M455 549 C 767.5 479, 767.5 351, 1080 281" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M512 416 C 791.5 346, 791.5 522, 1071 452" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M569 283 C 815.5 213, 815.5 253, 1062 183" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M626 590 C 839.5 520, 839.5 424, 1053 354" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M683 457 C 863.5 387, 863.5 595, 1044 525" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M740 324 C 887.5 254, 887.5 326, 1035 256" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><path d="M797 191 C 911.5 121, 911.5 497, 1026 427" fill="none" stroke="#eef0df" stroke-width="1.4" opacity=".24"/><circle cx="862" cy="195" r="8" fill="#d2ad68" opacity="0.72"/><circle cx="751" cy="408" r="9" fill="#2f6b50" opacity="0.38"/><circle cx="640" cy="621" r="10" fill="#2f6b50" opacity="0.38"/><circle cx="529" cy="334" r="11" fill="#2f6b50" opacity="0.38"/><circle cx="418" cy="547" r="12" fill="#d2ad68" opacity="0.72"/><circle cx="307" cy="260" r="13" fill="#2f6b50" opacity="0.38"/><circle cx="196" cy="473" r="5" fill="#2f6b50" opacity="0.38"/><circle cx="1135" cy="186" r="6" fill="#2f6b50" opacity="0.38"/><circle cx="1024" cy="399" r="7" fill="#d2ad68" opacity="0.72"/><circle cx="913" cy="612" r="8" fill="#2f6b50" opacity="0.38"/><circle cx="802" cy="325" r="9" fill="#2f6b50" opacity="0.38"/><circle cx="691" cy="538" r="10" fill="#2f6b50" opacity="0.38"/><circle cx="580" cy="251" r="11" fill="#d2ad68" opacity="0.72"/><g transform="translate(920 180)" opacity=".9"><circle cx="120" cy="160" r="116" fill="none" stroke="#d2ad68" stroke-width="2" opacity=".52"/><circle cx="120" cy="160" r="62" fill="#173728" opacity=".74"/><path d="M28 160H212M120 68V252M70 110L170 210M170 110L70 210" stroke="#eef0df" stroke-width="2" opacity=".42"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#d2ad68">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#eef0df" opacity=".94">Operating system</text>
+  </g>
+  <path d="M92 664H420" stroke="#d2ad68" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#eef0df" opacity=".7">Organizational Evolution</text>
+</svg>

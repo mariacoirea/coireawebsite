@@ -1,0 +1,13 @@
+node_modules
+dist
+.vercel
+.npm-cache
+
+*.log
+*.local
+.env
+.env.*
+
+implementation-*.png
+qa-*.png
+platform-scroll-state.png

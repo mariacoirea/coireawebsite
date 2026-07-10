@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">Well-Being at Work: Ancient Tools for Modern Teams</title>
+  <desc id="desc">Abstract COIREA insight cover representing ancient tools through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f392b"/>
+      <stop offset=".58" stop-color="#6c7d52"/>
+      <stop offset="1" stop-color="#1f392b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#bd8755" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#bd8755" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#1f392b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="189" cy="119" r="210" fill="#bd8755" opacity=".18" filter="url(#soft)"/>
+  <circle cx="1011" cy="541" r="260" fill="#f1e5d4" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#f1e5d4" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.268"/><path d="M568 436 C 573.5 366, 573.5 526, 579 456" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M297 395 C 731.5 325, 731.5 453, 1166 383" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M966 354 C 889.5 284, 889.5 380, 813 310" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M695 313 C 577.5 243, 577.5 307, 460 237" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M424 272 C 735.5 202, 735.5 234, 1047 164" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M1093 231 C 893.5 161, 893.5 601, 694 531" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M822 190 C 581.5 120, 581.5 528, 341 458" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M551 589 C 739.5 519, 739.5 455, 928 385" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M280 548 C 427.5 478, 427.5 382, 575 312" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M949 507 C 1055.5 437, 1055.5 309, 1162 239" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><circle cx="634" cy="235" r="5" fill="#bd8755" opacity="0.72"/><circle cx="1147" cy="456" r="6" fill="#6c7d52" opacity="0.38"/><circle cx="610" cy="177" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="1123" cy="398" r="8" fill="#6c7d52" opacity="0.38"/><circle cx="586" cy="619" r="9" fill="#bd8755" opacity="0.72"/><circle cx="1099" cy="340" r="10" fill="#6c7d52" opacity="0.38"/><circle cx="562" cy="561" r="11" fill="#6c7d52" opacity="0.38"/><circle cx="1075" cy="282" r="12" fill="#6c7d52" opacity="0.38"/><circle cx="538" cy="503" r="13" fill="#bd8755" opacity="0.72"/><circle cx="1051" cy="224" r="5" fill="#6c7d52" opacity="0.38"/><circle cx="514" cy="445" r="6" fill="#6c7d52" opacity="0.38"/><circle cx="1027" cy="166" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="490" cy="387" r="8" fill="#bd8755" opacity="0.72"/><g transform="translate(815 170)" fill="none" stroke-linecap="round"><path d="M30 210 C110 210 90 120 150 120 C220 120 190 318 265 318 C334 318 318 210 410 210" stroke="#bd8755" stroke-width="5"/><path d="M42 278 C122 278 120 220 182 220 C252 220 238 356 318 356 C370 356 382 278 428 278" stroke="#f1e5d4" stroke-width="2" opacity=".35"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#bd8755">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#f1e5d4" opacity=".94">Ancient tools</text>
+  </g>
+  <path d="M92 664H420" stroke="#bd8755" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#f1e5d4" opacity=".7">Transformational Business Pillars</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">Organizational Systems Change Doesn’t Start at the Top </title>
+  <desc id="desc">Abstract COIREA insight cover representing roots through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163226"/>
+      <stop offset=".58" stop-color="#4f6e5a"/>
+      <stop offset="1" stop-color="#163226"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#dec78a" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#dec78a" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#163226" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="302" cy="142" r="210" fill="#dec78a" opacity=".18" filter="url(#soft)"/>
+  <circle cx="978" cy="568" r="260" fill="#ece8d8" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#ece8d8" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.268"/><path d="M994 168 C 743 98, 743 398, 492 328" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M936 390 C 867 320, 867 364, 798 294" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M878 172 C 991 102, 991 330, 1104 260" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M820 394 C 645 324, 645 296, 470 226" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M762 176 C 769 106, 769 262, 776 192" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M704 398 C 893 328, 893 668, 1082 598" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M646 180 C 547 110, 547 634, 448 564" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M588 402 C 671 332, 671 600, 754 530" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M530 184 C 795 114, 795 566, 1060 496" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M472 406 C 449 336, 449 532, 426 462" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><circle cx="517" cy="420" r="10" fill="#dec78a" opacity="0.72"/><circle cx="291" cy="478" r="11" fill="#4f6e5a" opacity="0.38"/><circle cx="1115" cy="536" r="12" fill="#4f6e5a" opacity="0.38"/><circle cx="889" cy="594" r="13" fill="#4f6e5a" opacity="0.38"/><circle cx="663" cy="152" r="5" fill="#dec78a" opacity="0.72"/><circle cx="437" cy="210" r="6" fill="#4f6e5a" opacity="0.38"/><circle cx="211" cy="268" r="7" fill="#4f6e5a" opacity="0.38"/><circle cx="1035" cy="326" r="8" fill="#4f6e5a" opacity="0.38"/><circle cx="809" cy="384" r="9" fill="#dec78a" opacity="0.72"/><circle cx="583" cy="442" r="10" fill="#4f6e5a" opacity="0.38"/><circle cx="357" cy="500" r="11" fill="#4f6e5a" opacity="0.38"/><circle cx="1181" cy="558" r="12" fill="#4f6e5a" opacity="0.38"/><circle cx="955" cy="616" r="13" fill="#dec78a" opacity="0.72"/><g transform="translate(835 110)" fill="none" stroke="#dec78a" stroke-linecap="round" opacity=".76"><path d="M170 70 C138 150 124 205 160 285 C196 365 156 425 118 498" stroke-width="4"/><path d="M158 284 C98 286 64 326 38 382" stroke-width="2"/><path d="M158 285 C218 286 266 326 300 392" stroke-width="2"/><path d="M144 180 C92 164 70 124 48 82" stroke-width="2"/><path d="M154 188 C214 158 250 114 284 58" stroke-width="2"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#dec78a">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#ece8d8" opacity=".94">Roots</text>
+  </g>
+  <path d="M92 664H420" stroke="#dec78a" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#ece8d8" opacity=".7">Organizational Evolution</text>
+</svg>

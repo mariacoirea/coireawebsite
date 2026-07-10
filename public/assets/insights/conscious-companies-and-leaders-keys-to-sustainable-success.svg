@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
+  <title id="title">Conscious Companies and Leaders: Keys to Sustainable Success</title>
+  <desc id="desc">Abstract COIREA insight cover representing conscious company through living-system lines, nodes, and natural rhythms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163226"/>
+      <stop offset=".58" stop-color="#4f6e5a"/>
+      <stop offset="1" stop-color="#163226"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
+      <stop offset="0" stop-color="#dec78a" stop-opacity=".5"/>
+      <stop offset=".42" stop-color="#dec78a" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#163226" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1400" height="788" fill="url(#bg)"/>
+  <rect width="1400" height="788" fill="url(#glow)"/>
+  <circle cx="330" cy="170" r="210" fill="#dec78a" opacity=".18" filter="url(#soft)"/>
+  <circle cx="1010" cy="520" r="260" fill="#ece8d8" opacity=".08" filter="url(#soft)"/>
+  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#ece8d8" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#ece8d8" stroke-width="1" opacity="0.268"/><path d="M690 400 C 675 330, 675 430, 660 360" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M480 570 C 735 500, 735 400, 990 330" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M270 300 C 325 230, 325 370, 380 300" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M1000 470 C 855 400, 855 340, 710 270" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M790 200 C 915 130, 915 310, 1040 240" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M580 370 C 505 300, 505 280, 430 210" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M370 540 C 565 470, 565 250, 760 180" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M1100 270 C 1095 200, 1095 660, 1090 590" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M890 440 C 685 370, 685 630, 480 560" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><path d="M680 170 C 745 100, 745 600, 810 530" fill="none" stroke="#ece8d8" stroke-width="1.4" opacity=".24"/><circle cx="955" cy="580" r="11" fill="#dec78a" opacity="0.72"/><circle cx="175" cy="470" r="12" fill="#4f6e5a" opacity="0.38"/><circle cx="445" cy="360" r="13" fill="#4f6e5a" opacity="0.38"/><circle cx="715" cy="250" r="5" fill="#4f6e5a" opacity="0.38"/><circle cx="985" cy="140" r="6" fill="#dec78a" opacity="0.72"/><circle cx="205" cy="530" r="7" fill="#4f6e5a" opacity="0.38"/><circle cx="475" cy="420" r="8" fill="#4f6e5a" opacity="0.38"/><circle cx="745" cy="310" r="9" fill="#4f6e5a" opacity="0.38"/><circle cx="1015" cy="200" r="10" fill="#dec78a" opacity="0.72"/><circle cx="235" cy="590" r="11" fill="#4f6e5a" opacity="0.38"/><circle cx="505" cy="480" r="12" fill="#4f6e5a" opacity="0.38"/><circle cx="775" cy="370" r="13" fill="#4f6e5a" opacity="0.38"/><circle cx="1045" cy="260" r="5" fill="#dec78a" opacity="0.72"/><g transform="translate(800 112)"><path d="M30 410 C150 260 220 330 310 185 C370 90 430 80 512 54" fill="none" stroke="#dec78a" stroke-width="5" stroke-linecap="round"/><circle cx="30" cy="410" r="18" fill="#ece8d8" opacity=".8"/><circle cx="310" cy="185" r="24" fill="#4f6e5a" opacity=".62"/><circle cx="512" cy="54" r="30" fill="#dec78a" opacity=".78"/></g>
+  <g opacity=".92">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#dec78a">COIREA INSIGHT</text>
+    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#ece8d8" opacity=".94">Conscious company</text>
+  </g>
+  <path d="M92 664H420" stroke="#dec78a" stroke-width="2" opacity=".72"/>
+  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#ece8d8" opacity=".7">Organizational Evolution</text>
+</svg>
