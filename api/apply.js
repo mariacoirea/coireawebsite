@@ -13,6 +13,13 @@ function isValidEmail(email = "") {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function parseRecipients(value = "") {
+  return String(value)
+    .split(/[,\n;]/)
+    .map((email) => email.trim())
+    .filter(Boolean);
+}
+
 function fieldRow(label, value) {
   return `
     <tr>
@@ -71,7 +78,7 @@ export default async function handler(request, response) {
     return response.status(503).json({ error: "Email service is not configured yet." });
   }
 
-  const recipient = process.env.APPLICATION_TO_EMAIL || "hello@coirea.com";
+  const recipients = parseRecipients(process.env.APPLICATION_TO_EMAIL || "hello@coirea.com");
   const from = process.env.RESEND_FROM_EMAIL || "COIREA <onboarding@resend.dev>";
   const frictionList = data.friction.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   const submittedAt = new Date().toISOString();
@@ -108,7 +115,7 @@ export default async function handler(request, response) {
     },
     body: JSON.stringify({
       from,
-      to: [recipient],
+      to: recipients,
       reply_to: data.email,
       subject: `New COIREA application - ${data.organization}`,
       html,
