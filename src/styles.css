@@ -265,7 +265,10 @@ p { line-height: 1.78; }
 .gia-insight p { margin: 5px 0 0; font-size: 10px; line-height: 1.5; color: rgba(255,255,255,.62); }
 .gia-insight button, .focus-header button { border: 0; background: transparent; color: var(--white); display: flex; gap: 6px; align-items: center; font-size: 10px; cursor: pointer; }
 
-.section { padding: clamp(90px, 10vw, 150px) clamp(24px, 7vw, 112px); }
+.section {
+  padding: clamp(90px, 10vw, 150px) clamp(24px, 7vw, 112px);
+  scroll-margin-top: 112px;
+}
 .section h2, .closing h2 { font-size: clamp(44px, 4.8vw, 74px); line-height: 1.03; letter-spacing: -.038em; color: var(--deep); font-weight: 500; text-wrap: balance; }
 
 .who {
@@ -818,6 +821,9 @@ p { line-height: 1.78; }
 }
 .subpage-hero-copy {
   max-width: 880px;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
 }
 .subpage-hero h1 {
   max-width: 12.4ch;
@@ -832,6 +838,7 @@ p { line-height: 1.78; }
   font-size: 18px;
 }
 .subpage-hero--insights {
+  min-height: clamp(500px, 62vh, 680px);
   align-items: center;
 }
 .subpage-hero--insights .subpage-scrim {
@@ -899,8 +906,8 @@ p { line-height: 1.78; }
 }
 .subpage-hero--about .subpage-scrim {
   background:
-    linear-gradient(90deg, color-mix(in oklch, var(--paper) 96%, transparent) 0%, color-mix(in oklch, var(--paper) 84%, transparent) 34%, color-mix(in oklch, var(--paper) 64%, transparent) 62%, color-mix(in oklch, var(--deep) 28%, transparent) 100%),
-    radial-gradient(circle at 50% 42%, color-mix(in oklch, var(--paper) 48%, transparent), transparent 46%),
+    radial-gradient(ellipse at 50% 46%, color-mix(in oklch, var(--paper) 86%, transparent) 0 36%, color-mix(in oklch, var(--paper) 46%, transparent) 58%, transparent 78%),
+    linear-gradient(90deg, color-mix(in oklch, var(--paper) 98%, transparent) 0%, color-mix(in oklch, var(--paper) 88%, transparent) 34%, color-mix(in oklch, var(--paper) 66%, transparent) 62%, color-mix(in oklch, var(--deep) 30%, transparent) 100%),
     radial-gradient(circle at 82% 22%, color-mix(in oklch, var(--gold) 14%, transparent), transparent 30%);
 }
 .subpage-hero--about .subpage-hero-copy {
@@ -911,16 +918,20 @@ p { line-height: 1.78; }
 .subpage-hero--about h1 {
   margin-left: auto;
   margin-right: auto;
-  max-width: 17ch;
-  font-size: clamp(46px, 5.25vw, 82px);
+  max-width: 15.5ch;
+  font-size: clamp(46px, 4.9vw, 76px);
   line-height: 1;
   letter-spacing: -.046em;
+  color: color-mix(in oklch, var(--deep) 94%, black);
+  text-shadow: 0 1px 0 color-mix(in oklch, var(--paper) 62%, transparent);
 }
 .subpage-hero--about p {
   max-width: 58ch;
   margin-left: auto;
   margin-right: auto;
   font-size: 17px;
+  color: color-mix(in oklch, var(--ink) 92%, var(--deep));
+  font-weight: 700;
 }
 
 .insights-page {
@@ -929,6 +940,7 @@ p { line-height: 1.78; }
   gap: clamp(28px, 5vw, 58px);
   align-items: start;
   background: var(--paper);
+  padding-top: clamp(50px, 6vw, 88px);
 }
 .detail-page {
   background:
@@ -1254,6 +1266,22 @@ p { line-height: 1.78; }
   border-radius: 18px;
   box-shadow: 0 28px 80px color-mix(in oklch, black 26%, transparent);
 }
+.featured-insight-image::after,
+.insight-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 58%, color-mix(in oklch, var(--deep) 18%, transparent)),
+    linear-gradient(90deg, color-mix(in oklch, var(--deep) 10%, transparent), transparent 38%);
+  opacity: .35;
+  transition: opacity .4s var(--ease);
+}
+.featured-insight-image:hover::after,
+.insight-card:hover .insight-card-image::after {
+  opacity: .16;
+}
 .featured-insight-image img {
   display: block;
   width: 100%;
@@ -1312,6 +1340,10 @@ p { line-height: 1.78; }
   grid-template-columns: minmax(180px, .75fr) minmax(260px, 1fr) minmax(220px, 1.4fr) auto;
   gap: 18px;
   align-items: center;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 16% 10%, color-mix(in oklch, var(--gold) 14%, transparent), transparent 28%),
+    color-mix(in oklch, var(--white) 86%, var(--paper));
 }
 .insight-card {
   min-height: 100%;
@@ -1324,12 +1356,16 @@ p { line-height: 1.78; }
   color: inherit;
   text-decoration: none;
   overflow: hidden;
-  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
+  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease);
+}
+.insight-card:visited h3 {
+  color: color-mix(in oklch, var(--forest) 76%, var(--muted));
 }
 .insight-card:hover {
   transform: translateY(-6px);
   border-color: color-mix(in oklch, var(--gold) 50%, var(--line));
   box-shadow: 0 24px 70px color-mix(in oklch, var(--forest) 10%, transparent);
+  background: color-mix(in oklch, var(--white) 88%, var(--paper));
 }
 .insight-card--loading {
   pointer-events: none;
@@ -2170,18 +2206,20 @@ p { line-height: 1.78; }
 .stage p { max-width: 29ch; margin: 12px auto 0; font-size: 13px; color: var(--muted); }
 
 .platform {
+  position: relative;
   display: grid;
   grid-template-columns: .78fr 1.22fr;
   gap: clamp(34px, 5vw, 82px);
   align-items: start;
-  min-height: clamp(1120px, 158vh, 1450px);
+  min-height: clamp(1040px, 138vh, 1280px);
   background: var(--paper);
+  overflow: clip;
 }
 .platform-copy {
   align-self: center;
   justify-self: center;
   position: sticky;
-  top: 120px;
+  top: 116px;
   max-width: 470px;
   text-align: center;
 }
@@ -2229,6 +2267,22 @@ p { line-height: 1.78; }
   border-color: color-mix(in oklch, var(--sage) 62%, var(--line));
   box-shadow: 0 18px 54px color-mix(in oklch, var(--forest) 9%, transparent);
 }
+.benefit-list li.is-active {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklch, var(--gold) 58%, var(--line));
+  background:
+    radial-gradient(circle at 10% 20%, color-mix(in oklch, var(--gold) 18%, transparent), transparent 35%),
+    color-mix(in oklch, var(--white) 88%, var(--paper));
+  box-shadow: 0 18px 52px color-mix(in oklch, var(--forest) 11%, transparent);
+}
+.benefit-list li.is-active svg,
+.benefit-list li.is-active strong {
+  color: var(--deep);
+}
+.benefit-list li.is-complete {
+  border-color: color-mix(in oklch, var(--sage) 38%, var(--line));
+  background: color-mix(in oklch, var(--sage) 8%, var(--white));
+}
 .benefit-list li:nth-child(2) { animation-delay: .08s; }
 .benefit-list li:nth-child(3) { animation-delay: .16s; }
 .benefit-list li:nth-child(4) { animation-delay: .24s; }
@@ -2257,7 +2311,7 @@ p { line-height: 1.78; }
 .signal-board { position: relative; overflow: hidden; background: var(--warm); border: 1px solid var(--line); border-radius: 18px; padding: clamp(22px, 3vw, 40px); box-shadow: 0 28px 90px color-mix(in oklch, var(--forest) 8%, transparent); }
 .platform > .signal-board {
   position: sticky;
-  top: 96px;
+  top: 98px;
   align-self: start;
 }
 .signal-board--journey {
@@ -2408,6 +2462,19 @@ p { line-height: 1.78; }
     linear-gradient(180deg, transparent 58%, color-mix(in oklch, var(--deep) 34%, transparent));
   z-index: 2;
 }
+.tour-screenshot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--hotspot-x, 20%) var(--hotspot-y, 35%), color-mix(in oklch, var(--gold) 24%, transparent), transparent 18%);
+  opacity: .72;
+  transition: background .42s var(--ease);
+}
+.tour-screenshot--step-0 { --hotspot-x: 17%; --hotspot-y: 43%; }
+.tour-screenshot--step-1 { --hotspot-x: 54%; --hotspot-y: 78%; }
+.tour-screenshot--step-2 { --hotspot-x: 91%; --hotspot-y: 84%; }
 .tour-screenshot img {
   width: 100%;
   height: 100%;
@@ -2428,6 +2495,30 @@ p { line-height: 1.78; }
   opacity: .55;
   z-index: 3;
   animation: platform-scan 5.8s var(--ease) infinite;
+}
+.tour-hotspot {
+  position: absolute;
+  z-index: 4;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in oklch, var(--paper) 78%, transparent);
+  background: var(--gold);
+  box-shadow: 0 0 0 0 color-mix(in oklch, var(--gold) 32%, transparent);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.68);
+  transition: opacity .36s var(--ease), transform .36s var(--ease), box-shadow .36s var(--ease);
+  animation: warning-dot 1.8s ease-in-out infinite;
+}
+.tour-hotspot--signal { left: 17%; top: 43%; }
+.tour-hotspot--insight { left: 54%; top: 78%; }
+.tour-hotspot--action { left: 91%; top: 84%; }
+.tour-screenshot--step-0 .tour-hotspot--signal,
+.tour-screenshot--step-1 .tour-hotspot--insight,
+.tour-screenshot--step-2 .tour-hotspot--action {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 0 0 9px color-mix(in oklch, var(--gold) 18%, transparent);
 }
 .tour-screenshot-badge {
   position: absolute;
@@ -2527,6 +2618,25 @@ p { line-height: 1.78; }
   background: color-mix(in oklch, var(--paper) 7%, transparent);
   animation: tour-step 5.4s var(--ease) infinite;
   animation-delay: var(--delay);
+  transition: background .42s var(--ease), border-color .42s var(--ease), color .42s var(--ease), transform .42s var(--ease), box-shadow .42s var(--ease), opacity .42s var(--ease);
+}
+.tour-panel div.is-active {
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in oklch, var(--gold) 18%, transparent), transparent 36%),
+    color-mix(in oklch, var(--forest) 86%, var(--deep));
+  border-color: color-mix(in oklch, var(--gold) 72%, transparent);
+  color: var(--paper);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 42px color-mix(in oklch, var(--deep) 20%, transparent);
+}
+.tour-panel div.is-active span,
+.tour-panel div.is-active small {
+  color: color-mix(in oklch, var(--paper) 86%, transparent);
+}
+.tour-panel div.is-complete {
+  border-color: color-mix(in oklch, var(--sage) 42%, transparent);
+  background: color-mix(in oklch, var(--paper) 10%, transparent);
+  opacity: .82;
 }
 .tour-panel span {
   grid-row: 1 / 3;
@@ -2779,7 +2889,7 @@ p { line-height: 1.78; }
 }
 .platform-details.is-visible {
   grid-template-rows: 1fr;
-  margin-top: 16px;
+  margin-top: 14px;
   padding-top: 18px;
   padding-bottom: 18px;
   pointer-events: auto;
@@ -3829,7 +3939,11 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   .diagnostic--journey .diagnostic-panel { min-height: 400px; }
   .score-orbit { grid-column: 1 / -1; width: 160px; justify-self: center; }
   .platform { grid-template-columns: 1fr; min-height: auto; }
-  .platform > .signal-board { position: static; }
+  .platform > .signal-board {
+    position: static;
+    max-height: none;
+    overflow: hidden;
+  }
   .platform-copy { position: static; max-width: 760px; text-align: center; }
   .platform-copy h2 { max-width: 12.5ch; }
   .application-section {

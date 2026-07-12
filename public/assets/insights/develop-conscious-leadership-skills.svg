@@ -1,28 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="788" viewBox="0 0 1400 788" role="img" aria-labelledby="title desc">
-  <title id="title">How to Develop the Leadership Skills the World Actually Needs Now</title>
-  <desc id="desc">Abstract COIREA insight cover representing leadership through living-system lines, nodes, and natural rhythms.</desc>
+  <title id="title">Leadership skills</title>
+  <desc id="desc">Editorial COIREA insight cover for Leadership skills: Learning to read the room.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1f392b"/>
-      <stop offset=".58" stop-color="#6c7d52"/>
-      <stop offset="1" stop-color="#1f392b"/>
-    </linearGradient>
-    <radialGradient id="glow" cx=".22" cy=".18" r=".72">
-      <stop offset="0" stop-color="#bd8755" stop-opacity=".5"/>
-      <stop offset=".42" stop-color="#bd8755" stop-opacity=".12"/>
-      <stop offset="1" stop-color="#1f392b" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#184847"/><stop offset=".55" stop-color="#536f48"/><stop offset="1" stop-color="#184847"/></linearGradient>
+    <radialGradient id="glow" cx=".2" cy=".18" r=".76"><stop offset="0" stop-color="#d1845d" stop-opacity=".52"/><stop offset=".46" stop-color="#d1845d" stop-opacity=".14"/><stop offset="1" stop-color="#184847" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="30"/></filter>
   </defs>
   <rect width="1400" height="788" fill="url(#bg)"/>
   <rect width="1400" height="788" fill="url(#glow)"/>
-  <circle cx="343" cy="183" r="210" fill="#bd8755" opacity=".18" filter="url(#soft)"/>
-  <circle cx="957" cy="537" r="260" fill="#f1e5d4" opacity=".08" filter="url(#soft)"/>
-  <path d="M-40 118 C 170 92, 270 144, 480 114 S 770 144, 980 100 S 1210 144, 1460 110" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.16"/><path d="M-40 200 C 170 165, 270 235, 480 196 S 770 235, 980 182 S 1210 235, 1460 192" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.178"/><path d="M-40 282 C 170 238, 270 326, 480 278 S 770 326, 980 264 S 1210 326, 1460 274" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.196"/><path d="M-40 364 C 170 338, 270 390, 480 360 S 770 390, 980 346 S 1210 390, 1460 356" fill="none" stroke="#f1e5d4" stroke-width="2" opacity="0.214"/><path d="M-40 446 C 170 411, 270 481, 480 442 S 770 481, 980 428 S 1210 481, 1460 438" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.23199999999999998"/><path d="M-40 528 C 170 484, 270 572, 480 524 S 770 572, 980 510 S 1210 572, 1460 520" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.25"/><path d="M-40 610 C 170 584, 270 636, 480 606 S 770 636, 980 592 S 1210 636, 1460 602" fill="none" stroke="#f1e5d4" stroke-width="1" opacity="0.268"/><path d="M696 492 C 614.5 422, 614.5 382, 533 312" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M959 245 C 700.5 175, 700.5 511, 442 441" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M282 438 C 316.5 368, 316.5 640, 351 570" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M545 191 C 402.5 121, 402.5 329, 260 259" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M808 384 C 958.5 314, 958.5 458, 1109 388" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M1071 577 C 1044.5 507, 1044.5 587, 1018 517" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M394 330 C 660.5 260, 660.5 276, 927 206" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M657 523 C 746.5 453, 746.5 405, 836 335" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M920 276 C 832.5 206, 832.5 534, 745 464" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><path d="M243 469 C 448.5 399, 448.5 663, 654 593" fill="none" stroke="#f1e5d4" stroke-width="1.4" opacity=".24"/><circle cx="958" cy="165" r="6" fill="#bd8755" opacity="0.72"/><circle cx="179" cy="572" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="450" cy="479" r="8" fill="#6c7d52" opacity="0.38"/><circle cx="721" cy="386" r="9" fill="#6c7d52" opacity="0.38"/><circle cx="992" cy="293" r="10" fill="#bd8755" opacity="0.72"/><circle cx="213" cy="200" r="11" fill="#6c7d52" opacity="0.38"/><circle cx="484" cy="607" r="12" fill="#6c7d52" opacity="0.38"/><circle cx="755" cy="514" r="13" fill="#6c7d52" opacity="0.38"/><circle cx="1026" cy="421" r="5" fill="#bd8755" opacity="0.72"/><circle cx="247" cy="328" r="6" fill="#6c7d52" opacity="0.38"/><circle cx="518" cy="235" r="7" fill="#6c7d52" opacity="0.38"/><circle cx="789" cy="142" r="8" fill="#6c7d52" opacity="0.38"/><circle cx="1060" cy="549" r="9" fill="#bd8755" opacity="0.72"/><g transform="translate(815 170)" fill="none" stroke-linecap="round"><path d="M30 210 C110 210 90 120 150 120 C220 120 190 318 265 318 C334 318 318 210 410 210" stroke="#bd8755" stroke-width="5"/><path d="M42 278 C122 278 120 220 182 220 C252 220 238 356 318 356 C370 356 382 278 428 278" stroke="#f1e5d4" stroke-width="2" opacity=".35"/></g>
-  <g opacity=".92">
-    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#bd8755">COIREA INSIGHT</text>
-    <text x="92" y="616" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#f1e5d4" opacity=".94">Leadership</text>
+  <circle cx="290" cy="180" r="230" fill="#d1845d" opacity=".16" filter="url(#soft)"/>
+  <circle cx="898" cy="490" r="285" fill="#f3eadb" opacity=".07" filter="url(#soft)"/>
+  <path d="M-60 115 C170 75, 270 160, 505 120 S835 160, 1055 112 S1235 160, 1465 120" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.09"/><path d="M-60 195 C170 155, 270 240, 505 200 S835 240, 1055 192 S1235 240, 1465 200" fill="none" stroke="#f3eadb" stroke-width="2" opacity="0.11"/><path d="M-60 275 C170 235, 270 320, 505 280 S835 320, 1055 272 S1235 320, 1465 280" fill="none" stroke="#f3eadb" stroke-width="3" opacity="0.13"/><path d="M-60 355 C170 315, 270 400, 505 360 S835 400, 1055 352 S1235 400, 1465 360" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.15"/><path d="M-60 435 C170 395, 270 480, 505 440 S835 480, 1055 432 S1235 480, 1465 440" fill="none" stroke="#f3eadb" stroke-width="2" opacity="0.17"/><path d="M-60 515 C170 475, 270 560, 505 520 S835 560, 1055 512 S1235 560, 1465 520" fill="none" stroke="#f3eadb" stroke-width="3" opacity="0.19"/><path d="M-60 595 C170 555, 270 640, 505 600 S835 640, 1055 592 S1235 640, 1465 600" fill="none" stroke="#f3eadb" stroke-width="1" opacity="0.21"/><path d="M-60 675 C170 635, 270 720, 505 680 S835 720, 1055 672 S1235 720, 1465 680" fill="none" stroke="#f3eadb" stroke-width="2" opacity="0.23"/>
+  <g opacity=".9"><path d="M210 550 C360 260, 520 590, 690 330 S1000 185, 1170 510" fill="none" stroke="#f3eadb" stroke-width="3" opacity=".28"/><path d="M220 552 C390 320, 560 530, 720 360 S960 250, 1160 505" fill="none" stroke="#d1845d" stroke-width="5" opacity=".55"/><circle cx="360" cy="300" r="8" fill="#d1845d" opacity=".72"/><circle cx="485" cy="370" r="9" fill="#d1845d" opacity=".72"/><circle cx="610" cy="440" r="10" fill="#d1845d" opacity=".72"/><circle cx="735" cy="300" r="11" fill="#d1845d" opacity=".72"/><circle cx="860" cy="370" r="8" fill="#d1845d" opacity=".72"/><circle cx="985" cy="440" r="9" fill="#d1845d" opacity=".72"/><circle cx="1110" cy="300" r="10" fill="#d1845d" opacity=".72"/></g>
+  <g opacity=".96">
+    <text x="92" y="116" font-size="18" font-family="Arial, sans-serif" font-weight="800" letter-spacing="5" fill="#d1845d">COIREA INSIGHT</text>
+    <text x="92" y="592" font-size="50" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#f3eadb" opacity=".96">Leadership skills</text>
+    <path d="M92 634H420" stroke="#d1845d" stroke-width="3" opacity=".72"/>
+    <text x="92" y="684" font-size="20" font-family="Arial, sans-serif" fill="#f3eadb" opacity=".72">Learning to read the room</text>
   </g>
-  <path d="M92 664H420" stroke="#bd8755" stroke-width="2" opacity=".72"/>
-  <text x="92" y="714" font-size="18" font-family="Arial, sans-serif" fill="#f1e5d4" opacity=".7">Transformational Business Pillars</text>
 </svg>

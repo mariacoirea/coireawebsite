@@ -977,9 +977,9 @@ function Platform() {
       }
 
       const lockedProgress = maxPlatformProgressRef.current;
-      const nextStep = lockedProgress < 0.32 ? 0 : lockedProgress < 0.6 ? 1 : 2;
+      const nextStep = lockedProgress < 0.24 ? 0 : lockedProgress < 0.5 ? 1 : 2;
       setActiveStep((current) => (current === nextStep ? current : nextStep));
-      setShowPlatformDetails(lockedProgress >= 0.78);
+      setShowPlatformDetails(lockedProgress >= 0.64);
     };
 
     const requestUpdate = () => {
@@ -1012,6 +1012,7 @@ function Platform() {
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.42, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
               key={title}
+              className={activeStep === index ? "is-active" : activeStep > index ? "is-complete" : ""}
             >
               <Icon />
               <strong>{title}</strong>
@@ -1022,7 +1023,7 @@ function Platform() {
       </Reveal>
       <Reveal className="signal-board" delay={0.08}>
         <div className="signal-board-inner">
-          <DashboardTour />
+          <DashboardTour activeStep={activeStep} />
           <div className="signal-flow signal-flow--animated">
             {platformJourney.map(({ stage, title, text, outcome, icon: Icon }, index) => (
               <Fragment key={stage}>
@@ -1081,7 +1082,7 @@ function Platform() {
   );
 }
 
-function DashboardTour() {
+function DashboardTour({ activeStep = 0 }) {
   const tourSteps = [
     ["01", "Sense", "Survey signals arrive"],
     ["02", "Read", "GiA detects patterns"],
@@ -1097,9 +1098,12 @@ function DashboardTour() {
           <small>20 sec loop</small>
         </div>
         <div className="tour-body">
-          <div className="tour-screenshot">
+          <div className={`tour-screenshot tour-screenshot--step-${activeStep}`}>
             <img src="/assets/coirea-platform-soil-preview.jpeg" alt="COIREA platform dashboard showing SOIL organizational health, OVI evaluation, and GiA qualitative insights" />
             <span className="tour-scanline" />
+            <span className="tour-hotspot tour-hotspot--signal" />
+            <span className="tour-hotspot tour-hotspot--insight" />
+            <span className="tour-hotspot tour-hotspot--action" />
             <div className="tour-screenshot-badge">
               <strong>SOIL</strong>
               <small>Real platform preview</small>
@@ -1107,7 +1111,11 @@ function DashboardTour() {
           </div>
           <div className="tour-panel">
             {tourSteps.map(([number, title, text], index) => (
-              <div key={title} style={{ "--delay": `${index * 1.2}s` }}>
+              <div
+                key={title}
+                className={activeStep === index ? "is-active" : activeStep > index ? "is-complete" : ""}
+                style={{ "--delay": `${index * 1.2}s` }}
+              >
                 <span>{number}</span>
                 <strong>{title}</strong>
                 <small>{text}</small>
