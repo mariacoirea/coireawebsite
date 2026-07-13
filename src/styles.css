@@ -3269,17 +3269,13 @@ p { line-height: 1.78; }
 }
 .coherence-orbit {
   position: absolute;
-  left: 50%;
-  top: 52%;
-  width: min(88%, 390px);
-  aspect-ratio: 1;
+  inset: 3% 2% 2%;
   z-index: 3;
-  transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
-  animation: coherence-circulation 26s linear infinite;
+  animation: coherence-circulation 28s linear infinite;
 }
 .state-panel--after:hover .coherence-orbit {
-  animation-duration: 18s;
+  animation-duration: 28s;
 }
 .coherence-node {
   z-index: 3;
@@ -3297,9 +3293,9 @@ p { line-height: 1.78; }
 .coherence-node__pill {
   display: grid;
   place-items: center;
-  min-width: 112px;
+  min-width: 92px;
   min-height: 38px;
-  padding: 9px 14px;
+  padding: 9px 12px;
   border: 1px solid color-mix(in oklch, var(--gold) 62%, transparent);
   border-radius: 999px;
   background: var(--gold);
@@ -3312,20 +3308,20 @@ p { line-height: 1.78; }
   white-space: nowrap;
   box-shadow: 0 12px 30px color-mix(in oklch, var(--deep) 20%, transparent);
   transform-origin: 50% 50%;
-  animation: coherence-counter 26s linear infinite, harmony-breathe 4.8s ease-in-out infinite;
+  animation: coherence-counter 28s linear infinite, harmony-breathe 4.8s ease-in-out infinite;
   transition: box-shadow .35s var(--ease), transform .35s var(--ease);
 }
 .state-panel--after:hover .coherence-node__pill {
   box-shadow:
     0 12px 30px color-mix(in oklch, var(--deep) 20%, transparent),
     0 0 0 9px color-mix(in oklch, var(--gold) 14%, transparent);
-  animation-duration: 18s, 4.8s;
+  animation-duration: 28s, 4.8s;
 }
-.coherence-node--1 { left: 50%; top: 0; transform: translate(-50%, -50%); }
-.coherence-node--2 { right: 6%; top: 32%; transform: translate(50%, -50%); }
-.coherence-node--3 { right: 21%; bottom: 5%; transform: translate(50%, 50%); }
-.coherence-node--4 { left: 21%; bottom: 5%; transform: translate(-50%, 50%); }
-.coherence-node--5 { left: 6%; top: 32%; transform: translate(-50%, -50%); }
+.coherence-node--1 { left: 50%; top: 4%; transform: translateX(-50%); }
+.coherence-node--2 { right: 1%; top: 30%; }
+.coherence-node--3 { right: 10%; bottom: 9%; }
+.coherence-node--4 { left: 7%; bottom: 10%; }
+.coherence-node--5 { left: 1%; top: 30%; }
 .coirea-bridge {
   position: relative;
   display: grid;
@@ -4531,7 +4527,7 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
     max-width: none;
   }
   .coherence-node__pill {
-    min-width: 78px;
+    min-width: 74px;
     min-height: 34px;
     padding: 8px 10px;
     font-size: 9px;
@@ -4553,17 +4549,17 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   .coherence-map::before { animation: engine-orbit 13s linear infinite; }
   .coherence-map::after { animation: engine-orbit 17s linear infinite reverse; }
   .coherence-orbit {
-    width: min(92%, 285px);
+    inset: 2% 0 1%;
     animation-duration: 28s;
   }
   .coherence-node__pill {
     animation-duration: 28s, 4.8s;
   }
-  .coherence-node--1 { left: 50%; top: 0; transform: translate(-50%, -50%); }
-  .coherence-node--2 { right: 2%; top: 34%; transform: translate(50%, -50%); }
-  .coherence-node--3 { right: 17%; bottom: 3%; transform: translate(50%, 50%); }
-  .coherence-node--4 { left: 17%; bottom: 3%; transform: translate(-50%, 50%); }
-  .coherence-node--5 { left: 2%; top: 34%; transform: translate(-50%, -50%); }
+  .coherence-node--1 { left: 50%; top: 1%; transform: translateX(-50%); }
+  .coherence-node--2 { right: 0; top: 34%; }
+  .coherence-node--3 { right: 6px; bottom: 4%; }
+  .coherence-node--4 { left: 6px; bottom: 4%; }
+  .coherence-node--5 { left: 0; top: 34%; }
   .fault-line--1 { left: 17%; top: 30%; width: 118px; }
   .fault-line--2 { left: 13%; top: 62%; width: 128px; }
   .fault-line--3 { right: 12%; top: 48%; width: 94px; }
