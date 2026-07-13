@@ -116,16 +116,16 @@ const fitQuestions = [
 ];
 
 const chatQuickPrompts = [
-  "Is COIREA right for us?",
-  "How does the platform work?",
-  "What is GiA?",
-  "What are the five dimensions?",
+  "Could COIREA help us?",
+  "What does the platform do?",
+  "Who is GiA?",
+  "Can I talk to someone?",
 ];
 
 const chatFollowUpPrompts = [
-  "How does the assessment work?",
-  "What happens after we apply?",
-  "Show me useful insights",
+  "How does the first step work?",
+  "What should I ask a Steward?",
+  "Show me something to read",
 ];
 
 function normalizeChatInput(value = "") {
@@ -146,164 +146,176 @@ function chatAnswer(text = "") {
   const normalized = normalizeChatInput(text);
   const spanish = isSpanishInput(text);
   const includes = (...words) => words.some((word) => normalized.includes(word));
-  const actionApply = { label: spanish ? "Postular a COIREA" : "Apply to Work with COIREA", href: "/conversation" };
+  const actionApply = { label: spanish ? "Hablar con un Steward" : "Book a conversation", href: "/conversation" };
   const actionInsights = { label: spanish ? "Ver insights" : "Explore insights", href: "/insights" };
-  const actionAbout = { label: spanish ? "Leer about us" : "Read about us", href: "/about" };
+  const actionAbout = { label: spanish ? "Conocer la historia" : "Meet COIREA", href: "/about" };
 
   if (includes("hello", "hi", "hola")) {
     return {
       text: spanish
-        ? "Hola, soy GiA. Puedo ayudarte a entender COIREA, el OVI, las cinco dimensiones y si tiene sentido abrir una conversación con un Steward."
-        : "Hi, I’m GiA. I can help you understand COIREA, the OVI, the five dimensions, and whether it may be worth opening a conversation with a Steward.",
+        ? "Hola, soy GiA. Estoy aqui para ayudarte a entender COIREA sin hacerlo complicado. Puedo aclarar dudas, orientarte por la plataforma y, si sientes que esto toca algo real en tu organizacion, ayudarte a abrir una conversacion con un Steward."
+        : "Hi, I’m GiA. I’m here to make COIREA easier to understand, not to overwhelm you. I can clarify doubts, guide you through the platform, and if something feels relevant, point you toward a real conversation with a Steward.",
       prompts: chatQuickPrompts,
     };
   }
 
-  if (includes("right for us", "fit", "for us", "sirve", "aplica", "adecuado", "para nosotros")) {
+  if (includes("right for us", "fit", "for us", "sirve", "aplica", "adecuado", "para nosotros", "could coirea help")) {
     return {
       text: spanish
-        ? "COIREA suele ser más útil cuando una organización ya siente fricción real: dirección poco compartida, liderazgo que no se mueve como uno, estrategia que no aterriza, brechas de comunicación o un ritmo poco sostenible. No es solo una suscripción de software; es una transformación acompañada con plataforma, OVI, GiA y Steward."
-        : "COIREA is usually most useful when an organization already senses real friction: direction is not fully shared, leadership is not moving as one, strategy is not landing in daily work, communication gaps are showing up, or the pace is becoming unsustainable. It is not just a software subscription; it is an accompanied transformation with the platform, OVI, GiA, and a Steward.",
+        ? "Puede ser. COIREA suele ayudar cuando hay una sensacion de: “algo en el sistema no esta fluyendo, pero no sabemos exactamente donde mirar”. Puede ser direccion poco clara, liderazgo cansado, estrategia que no aterriza, comunicacion entrecortada o equipos sosteniendo demasiado. Yo puedo ayudarte a orientarlo, pero la conversacion importante la tiene un Steward contigo."
+        : "It might. COIREA tends to help when there’s a feeling of: “something in the system isn’t flowing, but we’re not sure where to look.” That might be unclear direction, tired leadership, strategy not landing, communication gaps, or teams carrying too much. I can help you name the shape of it, but the real next step is a human conversation with a Steward.",
       actions: [actionApply],
-      prompts: ["What friction should we look for?", "What happens after we apply?"],
+      prompts: ["What friction should we look for?", "What happens in the first conversation?"],
     };
   }
 
   if (includes("friction", "look for", "tension", "problem", "pain", "bloqueo", "friccion", "tension", "problema")) {
     return {
       text: spanish
-        ? "Las señales más importantes suelen aparecer como patrones repetidos: decisiones lentas, conversaciones que se evitan, estrategia que no cambia el trabajo diario, equipos que se duplican esfuerzos o personas valiosas sosteniendo demasiado. COIREA no mira solo el síntoma; intenta encontrar qué parte del sistema lo está produciendo."
-        : "The most important signals usually show up as repeated patterns: slow decisions, avoided conversations, strategy that does not change daily work, teams duplicating effort, or strong people carrying too much. COIREA does not only look at the symptom; it looks for the part of the system producing it.",
-      prompts: ["What are the five dimensions?", "Is COIREA right for us?", "How does the assessment work?"],
+        ? "Buena pregunta. Muchas veces la friccion se muestra en cosas pequeñas que se repiten: decisiones que vuelven a la misma mesa, conversaciones que nadie quiere abrir, equipos que trabajan mucho pero no avanzan juntos, o personas clave que empiezan a apagarse. Si algo de eso suena familiar, puede valer la pena conversarlo con alguien de COIREA."
+        : "Good question. Friction often shows up in small things that repeat: decisions coming back to the same table, conversations people avoid, teams working hard but not moving together, or key people starting to fade. If any of that feels familiar, it may be worth talking it through with someone from COIREA.",
+      actions: [actionApply],
+      prompts: ["What are the five dimensions?", "Could COIREA help us?", "How does the first step work?"],
     };
   }
 
-  if (includes("platform", "plataforma", "how does it work", "funciona", "dashboard", "soil")) {
+  if (includes("platform", "plataforma", "how does it work", "what does the platform do", "funciona", "dashboard", "soil")) {
     return {
       text: spanish
-        ? "La plataforma COIREA escucha señales del sistema: encuestas, reflexión, patrones de liderazgo, colaboración y bienestar. Luego el OVI muestra la vitalidad organizacional y GiA traduce esas señales en insight, preguntas y próximos pasos. La idea no es generar más datos, sino hacer visible lo que el sistema ya está mostrando."
-        : "The COIREA platform reads signals your organization is already sending: surveys, reflection, leadership patterns, collaboration, and well-being. The OVI shows organizational vitality, while GiA translates signals into insight, questions, and next steps. The point is not more data; it is making the system visible enough to act.",
-      prompts: ["What is OVI?", "What is GiA?", "What are the five dimensions?"],
+        ? "La plataforma funciona como un espejo del sistema. Recoge señales, las organiza en dimensiones y ayuda a ver patrones que normalmente aparecen tarde: cansancio, falta de alineacion, tensiones entre equipos o estrategia que se queda en palabras. Yo ayudo a traducir esas señales en preguntas mas claras."
+        : "The platform works like a mirror for the system. It gathers signals, organizes them across dimensions, and helps reveal patterns leaders often notice too late: fatigue, misalignment, team tension, or strategy staying as words. My job is to help translate those signals into clearer questions.",
+      prompts: ["What is OVI?", "Who is GiA?", "Can I talk to someone?"],
     };
   }
 
   if (includes("ovi", "assessment", "diagnostic", "score", "evaluacion", "diagnostico", "indice", "vitality")) {
     return {
       text: spanish
-        ? "OVI significa Organizational Vitality Index. Es una lectura de salud organizacional basada en cinco dimensiones: Vision, Leadership, Strategy, Collaboration y Well-Being. Ayuda a ubicar dónde el sistema está coherente, dónde hay tensión y qué dimensión necesita atención primero."
-        : "OVI means Organizational Vitality Index. It is COIREA’s organizational health reading across five dimensions: Vision, Leadership, Strategy, Collaboration, and Well-Being. It helps leaders see where the system is coherent, where tension is building, and which dimension needs attention first.",
-      prompts: ["What are the five dimensions?", "How does GiA use the score?"],
+        ? "OVI es el pulso inicial. No es una nota para juzgar a la organizacion; es una forma de ver donde hay vitalidad, donde hay tension y donde conviene mirar primero. Despues, un Steward ayuda a interpretar lo que aparece con contexto humano."
+        : "OVI is the first pulse check. It is not a score to judge the organization; it is a way to see where there is vitality, where there is tension, and where it may be useful to look first. Then a Steward helps interpret what shows up with human context.",
+      prompts: ["What are the five dimensions?", "What happens in the first conversation?"],
     };
   }
 
-  if (includes("gia", "ai", "artificial", "intelligence", "ia", "inteligencia")) {
+  if (includes("gia", "who is gia", "ai", "artificial", "intelligence", "ia", "inteligencia")) {
     return {
       text: spanish
-        ? "GiA significa Guided Intelligence for Alignment. No está pensada como un chatbot genérico. Su rol es leer señales organizacionales y convertirlas en tres cosas útiles: una señal visible, un insight del patrón y una pregunta o próximo paso para que líderes y Stewards puedan actuar con más claridad."
-        : "GiA means Guided Intelligence for Alignment. It is not meant to behave like a generic chatbot. Its role is to read organizational signals and turn them into three useful things: a visible signal, an insight about the pattern, and a question or next step leaders and Stewards can work with.",
-      prompts: ["Give me an example", "What does GiA analyze?"],
+        ? "Soy GiA: Guided Intelligence for Alignment. Piensame como una guia ligera dentro de COIREA. No reemplazo a una persona, y no pretendo tener toda la respuesta. Ayudo a ordenar señales, explicar conceptos y acercarte al momento correcto para hablar con un Steward."
+        : "I’m GiA: Guided Intelligence for Alignment. Think of me as a light guide inside COIREA. I do not replace a person, and I’m not here to pretend I have the whole answer. I help organize signals, explain concepts, and guide you toward the right moment to speak with a Steward.",
+      prompts: ["Give me an example", "Can I talk to someone?"],
     };
   }
 
   if (includes("example", "ejemplo")) {
     return {
       text: spanish
-        ? "Ejemplo: si varias personas dicen que les cuesta hablar con sus managers, GiA no lo trata como comentarios aislados. Lo conecta con Collaboration y Leadership, genera un insight como “la seguridad psicológica está frágil en la interfaz de liderazgo” y propone una pregunta: “¿Qué entorno permitiría que las personas digan la verdad antes?”"
-        : "Example: if several people say they struggle to speak up with managers, GiA does not treat that as isolated comments. It connects the signal across Collaboration and Leadership, surfaces an insight like “psychological safety is fragile at the leadership interface,” and asks: “What environment would allow people to tell the truth earlier?”",
-      prompts: ["What does GiA analyze?", "What happens after we apply?"],
+        ? "Claro. Si varias personas dicen que les cuesta hablar con sus managers, yo no lo leo como “quejas sueltas”. Lo miro como una señal: quizas hay algo fragile entre liderazgo y colaboracion. Entonces la pregunta no seria “quien tiene la culpa?”, sino “que entorno permitiria que la verdad aparezca antes?”"
+        : "Of course. If several people say it is hard to speak up with managers, I would not frame that as “random complaints.” I would treat it as a signal: maybe something is fragile between leadership and collaboration. The question becomes less “who is wrong?” and more “what environment would let the truth appear earlier?”",
+      prompts: ["What should I ask a Steward?", "Can I talk to someone?"],
     };
   }
 
   if (includes("dimension", "pillar", "vision", "leadership", "strategy", "collaboration", "well being", "wellbeing", "pilar", "liderazgo", "estrategia", "colaboracion", "bienestar")) {
     return {
       text: spanish
-        ? "COIREA mira cinco dimensiones del sistema humano: Vision, para dirección compartida; Leadership, para coherencia de liderazgo; Strategy, para traducir intención en trabajo diario; Collaboration, para confianza y coordinación; y Well-Being, para sostener el desempeño sin agotar a las personas."
-        : "COIREA looks at five dimensions of the human system: Vision, for shared direction; Leadership, for leadership coherence; Strategy, for turning intention into daily work; Collaboration, for trust and coordination; and Well-Being, for sustaining performance without depleting people.",
-      prompts: ["Which dimension matters most?", "How does the assessment work?"],
+        ? "COIREA mira cinco puertas de entrada al sistema: Vision, Leadership, Strategy, Collaboration y Well-Being. A veces una tension se siente como “problema de personas”, pero al mirarla por dimensiones aparece algo mas claro: falta de direccion, decisiones trabadas, baja confianza o ritmo poco sostenible."
+        : "COIREA looks at five doorways into the system: Vision, Leadership, Strategy, Collaboration, and Well-Being. Sometimes a tension feels like a “people problem,” but through the dimensions it becomes clearer: unclear direction, stuck decisions, low trust, or an unsustainable rhythm.",
+      prompts: ["Which dimension matters most?", "What should I ask a Steward?"],
     };
   }
 
   if (includes("platform or consultancy", "platform and consultancy", "software or consultancy", "plataforma o consultoria", "software o consultoria")) {
     return {
       text: spanish
-        ? "COIREA es una mezcla intencional: plataforma más acompañamiento estratégico. La plataforma hace visible el sistema; GiA ayuda a leer los patrones; y el Steward acompaña la conversación humana necesaria para convertir insight en cambio."
-        : "COIREA is intentionally both: platform plus strategic accompaniment. The platform makes the system visible; GiA helps read the patterns; and the Steward supports the human conversations needed to turn insight into change.",
-      prompts: ["How does the platform work?", "What is a Steward?"],
+        ? "Es las dos cosas, pero con una idea muy clara: la plataforma muestra el patron, y el acompaniamiento humano ayuda a trabajarlo. COIREA no quiere dejarte solo frente a un dashboard bonito. El valor esta en convertir lo visible en una conversacion y luego en movimiento."
+        : "It is both, with a very clear idea: the platform reveals the pattern, and the human accompaniment helps work with it. COIREA does not want to leave you alone with a beautiful dashboard. The value is turning what becomes visible into a conversation, and then into movement.",
+      actions: [actionApply],
+      prompts: ["What does the platform do?", "Can I talk to someone?"],
     };
   }
 
   if (includes("steward", "stewards", "human", "acompan", "facilitador")) {
     return {
       text: spanish
-        ? "El Steward es la presencia humana del proceso. COIREA no deja a los líderes solos con un dashboard: un Steward ayuda a interpretar señales, sostener conversaciones difíciles y convertir insight en movimiento real."
-        : "The Steward is the human presence inside the process. COIREA does not leave leaders alone with a dashboard: a Steward helps interpret signals, hold difficult conversations, and turn insight into real movement.",
+        ? "Un Steward es la persona que acompaña el proceso. Yo puedo ayudarte a entender las piezas; un Steward puede escuchar tu contexto, hacer mejores preguntas y ver contigo si COIREA tiene sentido para tu organizacion."
+        : "A Steward is the person who accompanies the process. I can help you understand the pieces; a Steward can listen to your context, ask better questions, and explore with you whether COIREA makes sense for your organization.",
       actions: [actionAbout],
-      prompts: ["What happens after we apply?", "Is COIREA a platform or consultancy?"],
+      prompts: ["Can I talk to someone?", "What happens in the first conversation?"],
     };
   }
 
-  if (includes("apply", "book", "conversation", "contact", "email", "postular", "agenda", "reunion", "conversacion", "contacto")) {
+  if (includes("apply", "book", "conversation", "contact", "email", "postular", "agenda", "reunion", "conversacion", "contacto", "talk to someone", "specialist", "especialista", "steward")) {
     return {
       text: spanish
-        ? "Para empezar, completa la aplicación. Un Steward lee cada solicitud personalmente. Si hay un encaje real, COIREA responde dentro de 5 días hábiles."
-        : "To begin, complete the application. A Steward reads every application personally. If there is a genuine fit, COIREA reaches out within 5 business days.",
+        ? "Si quieres hablar con alguien, ese es probablemente el mejor siguiente paso. Yo puedo aclarar dudas aqui, pero una persona de COIREA puede escuchar el contexto real de tu organizacion. Puedes dejar la solicitud y un Steward la revisa personalmente."
+        : "If you want to talk to someone, that is probably the best next step. I can clarify things here, but someone from COIREA can listen to the real context of your organization. You can leave a request and a Steward will review it personally.",
       actions: [actionApply],
-      prompts: ["Is COIREA right for us?", "What should we prepare?"],
+      prompts: ["What should I ask a Steward?", "Could COIREA help us?"],
     };
   }
 
-  if (includes("after we apply", "after applying", "what happens after", "prepare", "preparar", "despues de aplicar", "despues de postular")) {
+  if (includes("after we apply", "after applying", "what happens after", "first conversation", "first step", "prepare", "preparar", "despues de aplicar", "despues de postular", "primer paso")) {
     return {
       text: spanish
-        ? "Después de enviar la aplicación, un Steward revisa personalmente la información. Si hay encaje, COIREA responde dentro de 5 días hábiles. Lo mejor es preparar una descripción honesta de dónde sienten fricción y qué cambiaría si esa tensión se resolviera."
-        : "After you send the application, a Steward reviews it personally. If there is a fit, COIREA reaches out within 5 business days. The best preparation is an honest description of where the organization feels friction and what would shift if that tension changed.",
+        ? "El primer paso no tiene que ser perfecto. Basta con contar donde sienten friccion y que les gustaria entender mejor. Si hay encaje, un Steward puede continuar la conversacion y ayudar a ver si COIREA es el contenedor correcto."
+        : "The first step does not need to be perfect. It is enough to share where you are sensing friction and what you would like to understand more clearly. If there is a fit, a Steward can continue the conversation and help see whether COIREA is the right container.",
       actions: [actionApply],
-      prompts: ["Is COIREA right for us?", "What friction should we look for?"],
+      prompts: ["What friction should we look for?", "Can I talk to someone?"],
     };
   }
 
   if (includes("price", "pricing", "cost", "cuanto", "precio", "costo", "vale")) {
     return {
       text: spanish
-        ? "COIREA no presenta el proceso como una compra estándar de software. El alcance depende del tamaño, momento y nivel de acompañamiento que la organización necesita. Lo más correcto es aplicar primero para revisar si hay encaje."
-        : "COIREA is not positioned as a standard software purchase. Scope depends on the organization’s size, moment, and level of accompaniment needed. The best next step is to apply first so fit can be reviewed.",
+        ? "Buena pregunta, y aqui prefiero no inventar. COIREA no se presenta como una compra generica de software; depende del contexto, tamaño y tipo de acompañamiento. Lo mas honesto es conversarlo con una persona de COIREA."
+        : "Good question, and I’d rather not invent an answer here. COIREA is not presented as a generic software purchase; it depends on context, size, and the kind of accompaniment needed. The most honest next step is to talk it through with someone from COIREA.",
       actions: [actionApply],
-      prompts: ["What happens after we apply?", "Is COIREA right for us?"],
+      prompts: ["Can I talk to someone?", "What happens in the first conversation?"],
     };
   }
 
   if (includes("blog", "insight", "article", "resources", "recurso", "articulo")) {
     return {
       text: spanish
-        ? "Los insights de COIREA exploran liderazgo consciente, sistemas organizacionales, bienestar, cultura, regeneración y el futuro del trabajo. Son útiles si quieres entender el pensamiento detrás de la plataforma antes de aplicar."
-        : "COIREA’s insights explore conscious leadership, organizational systems, well-being, culture, regeneration, and the future of work. They are useful if you want to understand the thinking behind the platform before applying.",
+        ? "Si quieres sentir mejor el pensamiento de COIREA antes de hablar con alguien, los insights son un buen lugar. Hay textos sobre liderazgo consciente, bienestar, cultura, sistemas organizacionales y nuevas formas de trabajar."
+        : "If you want to feel the thinking behind COIREA before talking to someone, the insights are a good place to wander. They cover conscious leadership, well-being, culture, organizational systems, and new ways of working.",
       actions: [actionInsights],
-      prompts: ["What is a People Operating System?", "Is COIREA right for us?"],
+      prompts: ["What is a People Operating System?", "Could COIREA help us?"],
     };
   }
 
   if (includes("people operating system", "operating system", "sistema operativo", "sistema humano")) {
     return {
       text: spanish
-        ? "Un People Operating System es la estructura viva detrás de cómo una organización decide, colabora, ejecuta estrategia y sostiene energía. COIREA ayuda a medir y fortalecer ese sistema para que el propósito no dependa solo del esfuerzo individual."
-        : "A People Operating System is the living structure behind how an organization decides, collaborates, executes strategy, and sustains energy. COIREA helps measure and strengthen that system so purpose does not depend only on individual effort.",
-      prompts: ["What are the five dimensions?", "How does the platform work?"],
+        ? "Un People Operating System es la forma real en que una organizacion decide, colabora, ejecuta y cuida su energia. No siempre esta escrito en un documento, pero se siente todos los dias. COIREA ayuda a hacerlo visible para que el proposito no dependa solo de esfuerzo individual."
+        : "A People Operating System is the real way an organization decides, collaborates, executes, and protects its energy. It is not always written in a document, but people feel it every day. COIREA helps make it visible so purpose does not depend only on individual effort.",
+      prompts: ["What are the five dimensions?", "What does the platform do?"],
     };
   }
 
   if (includes("which dimension", "matters most", "most important", "dimension importa", "mas importante")) {
     return {
       text: spanish
-        ? "No hay una dimensión universalmente más importante. En COIREA, el punto es ver cuál dimensión está limitando al sistema ahora. A veces el problema parece estrategia, pero nace en liderazgo; a veces parece bienestar, pero viene de colaboración o falta de dirección compartida."
-        : "There is no universally most important dimension. In COIREA, the point is to see which dimension is limiting the system now. Sometimes the problem looks like strategy but starts in leadership; sometimes it looks like well-being but comes from collaboration or unclear shared direction.",
-      prompts: ["How does the assessment work?", "What are the five dimensions?"],
+        ? "Depende del momento del sistema. A veces parece estrategia, pero el nudo esta en liderazgo. A veces parece bienestar, pero nace en colaboracion o falta de direccion compartida. Por eso COIREA mira el sistema completo antes de saltar a soluciones."
+        : "It depends on the system’s moment. Sometimes it looks like strategy, but the knot is in leadership. Sometimes it looks like well-being, but it comes from collaboration or unclear direction. That is why COIREA looks at the whole system before jumping into solutions.",
+      prompts: ["What should I ask a Steward?", "Can I talk to someone?"],
+    };
+  }
+
+  if (includes("what should i ask", "ask a steward", "preguntar", "que pregunto")) {
+    return {
+      text: spanish
+        ? "Podrias preguntarle: “Que patron creen que estamos repitiendo?”, “Que señales deberiamos mirar primero?”, “Como sabremos si COIREA es buen fit?” y “Que tipo de acompañamiento necesita una organizacion en nuestro momento?”. Son preguntas simples, pero abren bastante."
+        : "You could ask: “What pattern do you think we may be repeating?”, “Which signals should we look at first?”, “How will we know if COIREA is a good fit?”, and “What kind of support does an organization at our stage usually need?” Simple questions, but they open the right door.",
+      actions: [actionApply],
+      prompts: ["What friction should we look for?", "Show me something to read"],
     };
   }
 
   return {
     text: spanish
-      ? "Puedo ayudarte con COIREA, OVI, GiA, las cinco dimensiones, insights o el proceso para aplicar. Para no inventar respuestas, te recomiendo elegir una de estas rutas o contarme qué fricción está sintiendo tu organización."
-      : "I can help with COIREA, OVI, GiA, the five dimensions, insights, or the application process. To avoid inventing answers, choose one of these routes or tell me what friction your organization is sensing.",
+      ? "Te sigo. Para ayudarte mejor, cuentame si quieres entender la plataforma, explorar si COIREA podria servirles, leer algun insight o hablar con una persona. Yo puedo orientarte, y si hace sentido te llevo hacia un Steward."
+      : "I’m with you. To help better, tell me if you want to understand the platform, explore whether COIREA could help, read an insight, or talk with a person. I can guide you here, and if it makes sense I’ll point you toward a Steward.",
     prompts: chatQuickPrompts,
   };
 }
@@ -2949,7 +2961,7 @@ function Chatbox() {
   const [messages, setMessages] = useState([
     {
       from: "gia",
-      text: "Hello, I'm GiA. I can help you explore how COIREA works, what your organization may be signaling, and whether it makes sense to apply.",
+      text: "Hi, I'm GiA. Think of me as a friendly guide inside COIREA. I can clarify doubts, help you explore what your organization may be sensing, and point you toward a Steward when a real conversation would be better.",
       prompts: chatQuickPrompts,
     },
   ]);
@@ -2995,7 +3007,7 @@ function Chatbox() {
           >
             <header>
               <div className="gia-avatar"><Leaf size={19} weight="fill" /></div>
-              <div><strong>GiA</strong><span>Organizational Intelligence Advisor</span></div>
+              <div><strong>GiA</strong><span>Friendly guide, not a replacement for a human</span></div>
               <button onClick={() => setOpen(false)} aria-label="Close chat"><X /></button>
             </header>
             <div className="chat-messages" aria-live="polite" ref={messagesRef}>
@@ -3027,7 +3039,7 @@ function Chatbox() {
       </AnimatePresence>
       <motion.button className="chat-launcher" onClick={() => setOpen((value) => !value)} whileTap={{ scale: 0.96 }} aria-expanded={open}>
         <span className="gia-avatar"><ChatCircleDots size={21} weight="fill" /></span>
-        <span><strong>Ask GiA</strong><small>How can I help you today?</small></span>
+        <span><strong>Ask GiA</strong><small>Questions, clarity, or a human next step</small></span>
         {open ? <X size={20} /> : <ArrowUpRight size={20} />}
       </motion.button>
     </div>
