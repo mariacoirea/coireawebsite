@@ -320,6 +320,49 @@ function clusterClass(cluster = "") {
   return "category-tag--workplace-evolution";
 }
 
+function getArticleConceptLinks(post) {
+  if (!post) return [];
+  const searchable = `${post.title} ${post.cluster} ${(post.tags || []).join(" ")} ${post.preview_snippet} ${stripHtml(post.body_content)}`.toLowerCase();
+  const links = [
+    {
+      label: "People Operating System",
+      href: "/insights/what-is-a-people-operating-system",
+      text: "The core COIREA concept behind organizational coherence.",
+    },
+    {
+      label: "Book a Conversation",
+      href: "/conversation",
+      text: "Apply to explore whether COIREA is the right fit.",
+    },
+  ];
+
+  if (/ovi|vitality|diagnostic|measure|score|scanner|health/.test(searchable)) {
+    links.splice(1, 0, {
+      label: "OVI",
+      href: "/answer-engine.md",
+      text: "The Organizational Vitality Index across COIREA's five dimensions.",
+    });
+  }
+
+  if (/gia|ai|artificial intelligence|signal|insight|intelligence|platform/.test(searchable)) {
+    links.splice(1, 0, {
+      label: "GiA",
+      href: "/answer-engine.md",
+      text: "Guided Intelligence for Alignment turns signals into next actions.",
+    });
+  }
+
+  if (/well-being|burnout|resilience|sustainable|regenerative|culture|leadership|collaboration/.test(searchable)) {
+    links.splice(1, 0, {
+      label: "COIREA Insights",
+      href: "/insights",
+      text: "More essays on leadership, culture, and organizational evolution.",
+    });
+  }
+
+  return links.slice(0, 5);
+}
+
 function useMigratedBlogPosts() {
   const [state, setState] = useState({
     posts: blogPostsCache || [],
@@ -2285,6 +2328,11 @@ function MigratedBlogPostPage({ slug }) {
       articleSection: displayCluster(post.cluster, post.title),
       keywords: (post.tags || []).join(", "),
       ...(post.direct_answer ? { abstract: post.direct_answer } : {}),
+      mentions: getArticleConceptLinks(post).map((item) => ({
+        "@type": "Thing",
+        name: item.label,
+        url: absolutePublicUrl(item.href),
+      })),
       wordCount: stripHtml(post.body_content).split(/\s+/).filter(Boolean).length,
     });
 
@@ -2306,6 +2354,8 @@ function MigratedBlogPostPage({ slug }) {
       .sort((a, b) => b.relatedScore - a.relatedScore || new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
       .slice(0, 3);
   }, [post, posts]);
+
+  const conceptLinks = useMemo(() => getArticleConceptLinks(post), [post]);
 
   if (loading) {
     return (
@@ -2367,6 +2417,22 @@ function MigratedBlogPostPage({ slug }) {
             <div className="article-tags" aria-label="Article tags">
               {post.tags.map((tag) => <span key={tag}>{tag}</span>)}
             </div>
+          )}
+          {conceptLinks.length > 0 && (
+            <nav className="article-concept-links" aria-labelledby="article-concepts-title">
+              <div>
+                <span className="eyebrow">COIREA context</span>
+                <h2 id="article-concepts-title">Connect this insight to the system</h2>
+              </div>
+              <div className="article-concept-grid">
+                {conceptLinks.map((item) => (
+                  <a href={item.href} key={item.label}>
+                    <strong>{item.label}</strong>
+                    <span>{item.text}</span>
+                  </a>
+                ))}
+              </div>
+            </nav>
           )}
           {relatedPosts.length > 0 && (
             <section className="related-insights" aria-labelledby="related-insights-title">
