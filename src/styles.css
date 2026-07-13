@@ -3271,7 +3271,7 @@ p { line-height: 1.78; }
   position: absolute;
   left: 50%;
   top: 52%;
-  width: min(82%, 288px);
+  width: min(88%, 310px);
   aspect-ratio: 1;
   z-index: 3;
   transform: translate(-50%, -50%);
@@ -4556,7 +4556,7 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   .coherence-orbit {
     left: 50%;
     top: 52%;
-    width: min(82%, 248px);
+    width: min(88%, 268px);
     aspect-ratio: 1;
     transform: translate(-50%, -50%);
     animation-duration: 28s;
