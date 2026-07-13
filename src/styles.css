@@ -3118,7 +3118,6 @@ p { line-height: 1.78; }
   transform-origin: 50% 52%;
 }
 .state-panel--after:hover .coherence-map {
-  animation: engine-sync 4.8s ease-in-out infinite;
   filter: drop-shadow(0 18px 28px color-mix(in oklch, var(--deep) 22%, transparent));
 }
 .state-panel--after:hover .coherence-map::before {
@@ -3268,6 +3267,16 @@ p { line-height: 1.78; }
   color: var(--muted);
   font-size: 9px;
 }
+.coherence-orbit {
+  position: absolute;
+  inset: 3% 2% 2%;
+  z-index: 3;
+  transform-origin: 50% 50%;
+  transition: transform .6s var(--ease);
+}
+.state-panel--after:hover .coherence-orbit {
+  animation: coherence-circulation 16s linear infinite;
+}
 .coherence-node {
   z-index: 3;
   background: var(--gold);
@@ -3278,16 +3287,18 @@ p { line-height: 1.78; }
   animation: harmony-breathe 4.8s ease-in-out infinite;
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
+.coherence-node span {
+  display: block;
+  transform-origin: 50% 50%;
+}
 .state-panel--after:hover .coherence-node {
   box-shadow:
     0 12px 30px color-mix(in oklch, var(--deep) 20%, transparent),
     0 0 0 9px color-mix(in oklch, var(--gold) 14%, transparent);
 }
-.state-panel--after:hover .coherence-node--1 { animation: harmony-breathe 4.8s ease-in-out infinite, node-engine-1 4.8s ease-in-out infinite; }
-.state-panel--after:hover .coherence-node--2 { animation: harmony-breathe 4.8s ease-in-out infinite, node-engine-2 4.8s ease-in-out infinite; }
-.state-panel--after:hover .coherence-node--3 { animation: harmony-breathe 4.8s ease-in-out infinite, node-engine-3 4.8s ease-in-out infinite; }
-.state-panel--after:hover .coherence-node--4 { animation: harmony-breathe 4.8s ease-in-out infinite, node-engine-4 4.8s ease-in-out infinite; }
-.state-panel--after:hover .coherence-node--5 { animation: harmony-breathe 4.8s ease-in-out infinite, node-engine-5 4.8s ease-in-out infinite; }
+.state-panel--after:hover .coherence-node span {
+  animation: coherence-counter 16s linear infinite;
+}
 .coherence-node--1 { left: 50%; top: 4%; transform: translateX(-50%); }
 .coherence-node--2 { right: 1%; top: 30%; animation-delay: .2s; }
 .coherence-node--3 { right: 10%; bottom: 9%; animation-delay: .4s; }
@@ -3867,6 +3878,12 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
 }
 @keyframes engine-orbit {
   to { transform: rotate(360deg); }
+}
+@keyframes coherence-circulation {
+  to { transform: rotate(360deg); }
+}
+@keyframes coherence-counter {
+  to { transform: rotate(-360deg); }
 }
 @keyframes node-engine-1 {
   0%, 100% { transform: translateX(-50%) rotate(0deg); }
@@ -4496,6 +4513,13 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   }
   .coherence-map::before { animation: engine-orbit 13s linear infinite; }
   .coherence-map::after { animation: engine-orbit 17s linear infinite reverse; }
+  .coherence-orbit {
+    inset: 2% 0 1%;
+    animation: coherence-circulation 22s linear infinite;
+  }
+  .coherence-node span {
+    animation: coherence-counter 22s linear infinite;
+  }
   .coherence-node--1 { left: 50%; top: 1%; transform: translateX(-50%); }
   .coherence-node--2 { right: 0; top: 34%; }
   .coherence-node--3 { right: 6px; bottom: 4%; }

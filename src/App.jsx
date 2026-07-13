@@ -1258,18 +1258,20 @@ function ImpactShift() {
               <strong>OVI</strong>
               <small>living signal</small>
             </div>
-            {harmonySignals.map((item, index) => (
-              <motion.i
-                key={item}
-                className={`coherence-node coherence-node--${index + 1}`}
-                initial={reduced ? false : { opacity: 0, scale: 0.8 }}
-                whileInView={reduced ? {} : { opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.48, delay: 0.35 + index * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              >
-                {item}
-              </motion.i>
-            ))}
+            <div className="coherence-orbit">
+              {harmonySignals.map((item, index) => (
+                <motion.i
+                  key={item}
+                  className={`coherence-node coherence-node--${index + 1}`}
+                  initial={reduced ? false : { opacity: 0 }}
+                  whileInView={reduced ? {} : { opacity: 1 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ duration: 0.48, delay: 0.35 + index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <span>{item}</span>
+                </motion.i>
+              ))}
+            </div>
           </div>
           <ul>
             <li>Leadership aligned on the same signal</li>
