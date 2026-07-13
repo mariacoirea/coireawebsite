@@ -73,5 +73,6 @@ COIREA is a People Operating System for organizations that care. It helps leader
 - Insights: https://www.coirea.com/insights
 - Book a conversation: https://www.coirea.com/conversation
 - LLM context: https://www.coirea.com/llms.txt
+- AI search map: https://www.coirea.com/ai-search-map.md
 - Services context: https://www.coirea.com/services.md
 - Pricing context: https://www.coirea.com/pricing.md

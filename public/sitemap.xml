@@ -61,6 +61,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.coirea.com/ai-search-map.md</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.coirea.com/services.md</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

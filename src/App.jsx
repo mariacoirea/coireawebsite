@@ -598,7 +598,7 @@ const seoByRoute = {
   "/": {
     title: "COIREA - The People Operating System for Organizations That Care",
     description:
-      "COIREA is the People Operating System that helps purpose-driven organizations measure, align, and strengthen the five pillars of organizational health.",
+      "COIREA is the People Operating System for organizations that care, helping leaders measure organizational health and turn hidden signals into aligned action.",
   },
   "/about": {
     title: "About COIREA - People Operating System and Founder Story",
@@ -621,6 +621,15 @@ const seoByRoute = {
       "A People Operating System is the human infrastructure behind how organizations make decisions, collaborate, execute strategy, and sustain performance.",
   },
 };
+
+const defaultShareImage = "https://www.coirea.com/assets/coirea-social-card.png";
+
+function absolutePublicUrl(url = defaultShareImage) {
+  if (!url) return defaultShareImage;
+  if (/^https?:\/\//i.test(url)) return url;
+  if (url.startsWith("/")) return `https://www.coirea.com${url}`;
+  return `https://www.coirea.com/${url}`;
+}
 
 function ensureMeta(selector, createAttrs) {
   let node = document.head.querySelector(selector);
@@ -645,8 +654,17 @@ function SEOManager() {
     ensureMeta('meta[name="description"]', { name: "description" }).setAttribute("content", seo.description);
     ensureMeta('meta[property="og:title"]', { property: "og:title" }).setAttribute("content", seo.title);
     ensureMeta('meta[property="og:description"]', { property: "og:description" }).setAttribute("content", seo.description);
+    ensureMeta('meta[property="og:url"]', { property: "og:url" }).setAttribute("content", canonicalHref);
+    ensureMeta('meta[property="og:image"]', { property: "og:image" }).setAttribute("content", defaultShareImage);
+    ensureMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }).setAttribute("content", defaultShareImage);
+    ensureMeta('meta[property="og:image:type"]', { property: "og:image:type" }).setAttribute("content", "image/png");
+    ensureMeta('meta[property="og:image:width"]', { property: "og:image:width" }).setAttribute("content", "1200");
+    ensureMeta('meta[property="og:image:height"]', { property: "og:image:height" }).setAttribute("content", "630");
+    ensureMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }).setAttribute("content", "COIREA - The people system behind performance.");
     ensureMeta('meta[name="twitter:title"]', { name: "twitter:title" }).setAttribute("content", seo.title);
     ensureMeta('meta[name="twitter:description"]', { name: "twitter:description" }).setAttribute("content", seo.description);
+    ensureMeta('meta[name="twitter:image"]', { name: "twitter:image" }).setAttribute("content", defaultShareImage);
+    ensureMeta('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }).setAttribute("content", "COIREA - The people system behind performance.");
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -2216,12 +2234,20 @@ function MigratedBlogPostPage({ slug }) {
     if (!post) return;
     const title = post.seo_title || `${post.title} | COIREA Insights`;
     const description = post.meta_description || post.preview_snippet || stripHtml(post.body_content).slice(0, 155);
+    const postUrl = `https://www.coirea.com/insights/${post.slug}`;
+    const postImage = absolutePublicUrl(post.featured_image || extractFirstImage(post.body_content) || defaultShareImage);
     document.title = title;
     ensureMeta('meta[name="description"]', { name: "description" }).setAttribute("content", description);
     ensureMeta('meta[property="og:title"]', { property: "og:title" }).setAttribute("content", title);
     ensureMeta('meta[property="og:description"]', { property: "og:description" }).setAttribute("content", description);
+    ensureMeta('meta[property="og:url"]', { property: "og:url" }).setAttribute("content", postUrl);
+    ensureMeta('meta[property="og:image"]', { property: "og:image" }).setAttribute("content", postImage);
+    ensureMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }).setAttribute("content", postImage);
+    ensureMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }).setAttribute("content", `${post.title} - COIREA Insights`);
     ensureMeta('meta[name="twitter:title"]', { name: "twitter:title" }).setAttribute("content", title);
     ensureMeta('meta[name="twitter:description"]', { name: "twitter:description" }).setAttribute("content", description);
+    ensureMeta('meta[name="twitter:image"]', { name: "twitter:image" }).setAttribute("content", postImage);
+    ensureMeta('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }).setAttribute("content", `${post.title} - COIREA Insights`);
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -2229,14 +2255,14 @@ function MigratedBlogPostPage({ slug }) {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", `https://www.coirea.com/insights/${post.slug}`);
+    canonical.setAttribute("href", postUrl);
 
     upsertJsonLd("coirea-blogposting", {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       headline: post.title,
       description,
-      image: post.featured_image || extractFirstImage(post.body_content) || "https://www.coirea.com/assets/coirea-logo.png",
+      image: postImage,
       author: {
         "@type": "Person",
         name: normalizeAuthor(post.author),
@@ -2254,7 +2280,7 @@ function MigratedBlogPostPage({ slug }) {
       dateModified: post.updated_at || post.created_at,
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://www.coirea.com/insights/${post.slug}`,
+        "@id": postUrl,
       },
       articleSection: displayCluster(post.cluster, post.title),
       keywords: (post.tags || []).join(", "),

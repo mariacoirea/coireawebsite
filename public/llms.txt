@@ -55,6 +55,7 @@ COIREA uses five pillars to understand organizational health:
 - Original COIREA founder story: https://www.coirea.com/insights/coirea-evolution
 - Original five pillars article: https://www.coirea.com/insights/five-pillars-regenerative-business
 - Answer engine reference: https://www.coirea.com/answer-engine.md
+- AI search query map: https://www.coirea.com/ai-search-map.md
 - Services context: https://www.coirea.com/services.md
 - Pricing context: https://www.coirea.com/pricing.md
 
