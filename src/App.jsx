@@ -917,15 +917,14 @@ function HealthDashboard() {
             <strong>62</strong>
             <span>system score</span>
           </div>
-          <div key={activeDimension.name} className="active-dimension-card">
+          <div key={activeDimension.name} className="radar-tooltip radar-tooltip--auto">
             <span>{activeDimension.name}</span>
             <AnimatedNumber
               value={activeDimension.value}
-              replayKey={`active-card-${activeDimension.name}-${activeIndex}`}
-              className="active-dimension-score"
+              replayKey={`active-tooltip-${activeDimension.name}-${activeIndex}`}
             />
-            <small>{activeDimension.signal}</small>
           </div>
+          <span className={`radar-active-dot radar-active-dot--${activeDimension.accent}`} aria-hidden="true" />
         </div>
         <div className="dimension-list">
           {dimensions.map(({ name, value, icon: Icon }, index) => (

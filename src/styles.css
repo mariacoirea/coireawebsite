@@ -247,44 +247,34 @@ p { line-height: 1.78; }
 .health-score { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -48%); width: 88px; height: 88px; border-radius: 50%; display: grid; place-content: center; place-items: center; pointer-events: none; background: color-mix(in oklch, var(--deep) 94%, transparent); border: 1px solid color-mix(in oklch, var(--gold) 42%, transparent); box-shadow: 0 10px 32px color-mix(in oklch, var(--deep) 38%, transparent); }
 .health-score strong { font-family: "Bodoni Moda"; font-size: 48px; font-weight: 400; line-height: 1; }
 .health-score span { font-size: 9px; color: rgba(255,255,255,.62); }
-.active-dimension-card {
+.radar-tooltip--auto {
   position: absolute;
-  left: 50%;
-  bottom: 12px;
-  width: min(235px, calc(100% - 24px));
-  padding: 12px 14px;
-  transform: translateX(-50%);
-  border: 1px solid color-mix(in oklch, var(--gold) 34%, transparent);
-  border-radius: 14px;
-  background: color-mix(in oklch, var(--deep) 86%, transparent);
-  box-shadow: 0 18px 42px color-mix(in oklch, var(--deep) 34%, transparent);
-  backdrop-filter: blur(10px);
+  left: 18px;
+  top: 18px;
+  z-index: 6;
+  pointer-events: none;
   animation: dashboard-insight-enter .52s var(--ease) both;
 }
-.active-dimension-card span {
-  display: block;
-  color: var(--gold);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .13em;
-  text-transform: uppercase;
+.radar-active-dot {
+  position: absolute;
+  z-index: 5;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: #B56D4E;
+  box-shadow:
+    0 0 0 6px color-mix(in oklch, #B56D4E 24%, transparent),
+    0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
+  transform: translate(-50%, -50%);
+  animation: radar-dot-enter .52s var(--ease) both, radar-dot-pulse 2s ease-in-out infinite;
+  pointer-events: none;
 }
-.active-dimension-score {
-  display: block;
-  margin-top: 2px;
-  color: var(--paper);
-  font-family: "Bodoni Moda";
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1;
-}
-.active-dimension-card small {
-  display: block;
-  margin-top: 5px;
-  color: color-mix(in oklch, var(--paper) 62%, transparent);
-  font-size: 9px;
-  line-height: 1.42;
-}
+.radar-active-dot--vision { left: 50%; top: 20%; }
+.radar-active-dot--leadership { left: 76%; top: 37%; }
+.radar-active-dot--strategy { left: 66%; top: 68%; }
+.radar-active-dot--collaboration { left: 36%; top: 68%; }
+.radar-active-dot--wellbeing { left: 24%; top: 37%; }
 .dimension-list { align-self: center; display: grid; gap: 14px; }
 .dimension-row { display: grid; grid-template-columns: 20px 84px 1fr 28px; gap: 8px; align-items: center; padding: 4px 6px; margin: -4px -6px; border-radius: 999px; font-size: 10px; transition: background .42s var(--ease), color .42s var(--ease), transform .42s var(--ease); }
 .dimension-row svg,
@@ -3884,6 +3874,22 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@keyframes radar-dot-enter {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(.65); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes radar-dot-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 5px color-mix(in oklch, #B56D4E 18%, transparent),
+      0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 0 9px color-mix(in oklch, #B56D4E 5%, transparent),
+      0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
+  }
+}
 @keyframes node-float {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -5px; }
@@ -4253,16 +4259,6 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   .radar-wrap { height: 235px; }
   .health-score { width: 74px; height: 74px; }
   .health-score strong { font-size: 40px; }
-  .active-dimension-card {
-    bottom: 4px;
-    padding: 9px 11px;
-  }
-  .active-dimension-score {
-    font-size: 28px;
-  }
-  .active-dimension-card small {
-    display: none;
-  }
   .scroll-cue { display: none; }
   .section { padding: 74px 18px; }
   .section h2, .closing h2 { font-size: clamp(38px, 12vw, 54px); }
