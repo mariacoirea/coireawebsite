@@ -3868,10 +3868,16 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
 .chat-panel header button { border: 0; background: transparent; color: var(--white); cursor: pointer; }
 .chat-messages { padding: 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
 .message { max-width: 86%; padding: 12px 14px; border-radius: 13px; font-size: 11px; line-height: 1.55; }
+.message p { margin: 0; white-space: pre-line; }
 .message--gia { align-self: flex-start; background: var(--warm); color: var(--ink); border-bottom-left-radius: 3px; }
 .message--user { align-self: flex-end; background: var(--forest); color: var(--white); border-bottom-right-radius: 3px; }
+.message-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.message-actions a { display: inline-flex; align-items: center; gap: 5px; border: 1px solid color-mix(in oklch, var(--forest) 22%, transparent); border-radius: 999px; padding: 7px 9px; background: color-mix(in oklch, var(--paper) 82%, transparent); color: var(--forest); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
 .suggestions { display: grid; gap: 6px; padding: 0 18px 12px; }
-.suggestions button { border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--forest); padding: 9px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 10px; cursor: pointer; }
+.suggestions button { border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--forest); padding: 9px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 10px; cursor: pointer; transition: border-color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease); }
+.suggestions button:hover { border-color: color-mix(in oklch, var(--forest) 35%, var(--line)); background: color-mix(in oklch, var(--sage) 16%, transparent); transform: translateX(2px); }
+.suggestions button:disabled,
+.chat-panel form button:disabled { opacity: .55; cursor: wait; }
 .chat-panel form { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px; border-top: 1px solid var(--line); background: var(--white); }
 .chat-panel input { min-width: 0; border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 11px 14px; outline: 0; font-size: 11px; }
 .chat-panel input:focus { border-color: var(--moss); box-shadow: 0 0 0 3px color-mix(in oklch, var(--sage) 28%, transparent); }
