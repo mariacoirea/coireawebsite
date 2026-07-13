@@ -270,11 +270,11 @@ p { line-height: 1.78; }
   animation: radar-dot-enter .52s var(--ease) both, radar-dot-pulse 2s ease-in-out infinite;
   pointer-events: none;
 }
-.radar-active-dot--vision { left: 50%; top: 25%; }
-.radar-active-dot--leadership { left: 69%; top: 44%; }
-.radar-active-dot--strategy { left: 62%; top: 66%; }
-.radar-active-dot--collaboration { left: 42%; top: 64%; }
-.radar-active-dot--wellbeing { left: 28%; top: 43%; }
+.radar-active-dot--vision { left: 50%; top: 24.8%; }
+.radar-active-dot--leadership { left: 69.3%; top: 43.7%; }
+.radar-active-dot--strategy { left: 63.4%; top: 68.4%; }
+.radar-active-dot--collaboration { left: 40.1%; top: 63.6%; }
+.radar-active-dot--wellbeing { left: 27.7%; top: 42.8%; }
 .dimension-list { align-self: center; display: grid; gap: 14px; }
 .dimension-row { display: grid; grid-template-columns: 20px 84px 1fr 28px; gap: 8px; align-items: center; padding: 4px 6px; margin: -4px -6px; border-radius: 999px; font-size: 10px; transition: background .42s var(--ease), color .42s var(--ease), transform .42s var(--ease); }
 .dimension-row svg,
