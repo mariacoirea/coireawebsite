@@ -909,17 +909,17 @@ p { line-height: 1.78; }
   align-items: center;
 }
 .subpage-hero--conversation .hero-image {
-  background-image: url("/assets/coirea-conversation-landscape.svg");
-  background-position: center 52%;
+  background-image: url("/assets/coirea-conversation-mountains.jpg");
+  background-position: center 48%;
   background-size: cover;
-  opacity: .72;
-  filter: saturate(.88) contrast(.98) brightness(.82);
+  opacity: .82;
+  filter: saturate(.9) contrast(.96) brightness(.78);
 }
 .subpage-hero--conversation .subpage-scrim {
   background:
-    linear-gradient(180deg, color-mix(in oklch, var(--deep) 62%, transparent), color-mix(in oklch, var(--forest) 54%, transparent) 45%, color-mix(in oklch, var(--deep) 78%, transparent)),
-    radial-gradient(circle at 66% 18%, color-mix(in oklch, var(--gold) 20%, transparent), transparent 32%),
-    radial-gradient(circle at 26% 78%, color-mix(in oklch, var(--sage) 18%, transparent), transparent 36%);
+    linear-gradient(180deg, color-mix(in oklch, var(--deep) 64%, transparent), color-mix(in oklch, var(--forest) 44%, transparent) 42%, color-mix(in oklch, var(--deep) 76%, transparent)),
+    radial-gradient(circle at 68% 18%, color-mix(in oklch, var(--gold) 18%, transparent), transparent 34%),
+    linear-gradient(90deg, color-mix(in oklch, var(--deep) 58%, transparent), transparent 48%, color-mix(in oklch, var(--deep) 32%, transparent));
 }
 .subpage-hero--conversation .subpage-hero-copy {
   max-width: 900px;
