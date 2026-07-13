@@ -3317,11 +3317,11 @@ p { line-height: 1.78; }
     0 0 0 9px color-mix(in oklch, var(--gold) 14%, transparent);
   animation-duration: 28s, 4.8s;
 }
-.coherence-node--1 { left: 50%; top: 4%; transform: translateX(-50%); }
-.coherence-node--2 { right: 1%; top: 30%; }
-.coherence-node--3 { right: 10%; bottom: 9%; }
-.coherence-node--4 { left: 7%; bottom: 10%; }
-.coherence-node--5 { left: 1%; top: 30%; }
+.coherence-node--1 { left: 50%; top: 8%; transform: translate(-50%, -50%); }
+.coherence-node--2 { left: 87%; top: 34%; transform: translate(-50%, -50%); }
+.coherence-node--3 { left: 73%; top: 79%; transform: translate(-50%, -50%); }
+.coherence-node--4 { left: 27%; top: 79%; transform: translate(-50%, -50%); }
+.coherence-node--5 { left: 13%; top: 34%; transform: translate(-50%, -50%); }
 .coirea-bridge {
   position: relative;
   display: grid;
@@ -4555,11 +4555,11 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   .coherence-node__pill {
     animation-duration: 28s, 4.8s;
   }
-  .coherence-node--1 { left: 50%; top: 1%; transform: translateX(-50%); }
-  .coherence-node--2 { right: 0; top: 34%; }
-  .coherence-node--3 { right: 6px; bottom: 4%; }
-  .coherence-node--4 { left: 6px; bottom: 4%; }
-  .coherence-node--5 { left: 0; top: 34%; }
+  .coherence-node--1 { left: 50%; top: 7%; transform: translate(-50%, -50%); }
+  .coherence-node--2 { left: 88%; top: 35%; transform: translate(-50%, -50%); }
+  .coherence-node--3 { left: 72%; top: 82%; transform: translate(-50%, -50%); }
+  .coherence-node--4 { left: 28%; top: 82%; transform: translate(-50%, -50%); }
+  .coherence-node--5 { left: 12%; top: 35%; transform: translate(-50%, -50%); }
   .fault-line--1 { left: 17%; top: 30%; width: 118px; }
   .fault-line--2 { left: 13%; top: 62%; width: 128px; }
   .fault-line--3 { right: 12%; top: 48%; width: 94px; }
