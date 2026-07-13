@@ -868,7 +868,7 @@ function HealthDashboard() {
 
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % dimensions.length);
-    }, 4000);
+    }, 3000);
 
     return () => window.clearInterval(interval);
   }, [reduced]);
