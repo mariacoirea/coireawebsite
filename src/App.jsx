@@ -1433,6 +1433,12 @@ function Approach() {
 }
 
 function GiaSection() {
+  const giaExampleSteps = [
+    ["Signal", "Difficulty speaking up with managers is appearing across multiple responses."],
+    ["Insight", "Psychological safety is fragile at the leadership interface. This is a structural gap, not a personal issue."],
+    ["Question", "What environment could you create so people feel safe enough to tell the truth early?"],
+  ];
+
   return (
     <section className="gia-section section" id="gia">
       <Reveal className="gia-card-large">
@@ -1444,18 +1450,21 @@ function GiaSection() {
         <p>GiA means Guided Intelligence for Alignment. Instead of external models, it learns from your organization's own signals and turns them into specific, contextual guidance.</p>
       </Reveal>
       <Reveal className="gia-example" delay={0.1}>
-        <motion.div whileHover={{ x: 8 }} transition={{ duration: 0.22 }}>
-          <span>Signal</span>
-          <p>Difficulty speaking up with managers is appearing across multiple responses.</p>
-        </motion.div>
-        <motion.div whileHover={{ x: 8 }} transition={{ duration: 0.22 }}>
-          <span>Insight</span>
-          <p>Psychological safety is fragile at the leadership interface. This is a structural gap, not a personal issue.</p>
-        </motion.div>
-        <motion.div whileHover={{ x: 8 }} transition={{ duration: 0.22 }}>
-          <span>Question</span>
-          <p>What environment could you create so people feel safe enough to tell the truth early?</p>
-        </motion.div>
+        {giaExampleSteps.map(([label, text], index) => (
+          <motion.div
+            className={`gia-example-step gia-example-step--${index + 1}`}
+            key={label}
+            initial={{ opacity: 0, x: 28 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.45 }}
+            whileHover={{ x: 8 }}
+            transition={{ duration: 0.54, delay: index * 0.16, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <i>0{index + 1}</i>
+            <span>{label}</span>
+            <p>{text}</p>
+          </motion.div>
+        ))}
       </Reveal>
     </section>
   );

@@ -3548,18 +3548,55 @@ p { line-height: 1.78; }
 .gia-card-header > div:nth-child(2) { display: grid; }
 .gia-card-header span { font-size: 10px; color: color-mix(in oklch, var(--paper) 78%, transparent); font-weight: 700; }
 .gia-example {
+  position: relative;
   display: grid;
   gap: 18px;
 }
-.gia-example div {
+.gia-example::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 28px;
+  bottom: 28px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--gold) 42%, transparent), transparent);
+  animation: gia-flow-line 4.8s ease-in-out infinite;
+}
+.gia-example-step {
+  position: relative;
   padding: 26px;
+  padding-left: 58px;
   background: var(--white);
   border: 1px solid color-mix(in oklch, var(--forest) 22%, var(--line));
-  transition: box-shadow .25s var(--ease), border-color .25s var(--ease);
+  transition: box-shadow .34s var(--ease), border-color .34s var(--ease), transform .34s var(--ease), background .34s var(--ease);
 }
-.gia-example div:hover {
+.gia-example-step::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 8px color-mix(in oklch, var(--gold) 12%, transparent);
+  animation: gia-step-pulse 4.8s ease-in-out infinite;
+}
+.gia-example-step--2::before { animation-delay: .8s; }
+.gia-example-step--3::before { animation-delay: 1.6s; }
+.gia-example-step:hover {
   border-color: color-mix(in oklch, var(--gold) 52%, var(--line));
   box-shadow: 0 18px 44px color-mix(in oklch, var(--forest) 9%, transparent);
+}
+.gia-example-step i {
+  position: absolute;
+  right: 22px;
+  top: 18px;
+  color: color-mix(in oklch, var(--gold) 34%, transparent);
+  font-family: "Bodoni Moda";
+  font-size: 42px;
+  font-style: normal;
+  line-height: 1;
 }
 .gia-example span {
   color: var(--gold);
@@ -4047,6 +4084,14 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
 @keyframes flow-icon-breathe {
   0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 color-mix(in oklch, var(--gold) 0%, transparent); }
   50% { transform: scale(1.06); box-shadow: 0 0 0 8px color-mix(in oklch, var(--gold) 9%, transparent); }
+}
+@keyframes gia-flow-line {
+  0%, 100% { opacity: .35; transform: scaleY(.72); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+@keyframes gia-step-pulse {
+  0%, 100% { transform: scale(.88); box-shadow: 0 0 0 6px color-mix(in oklch, var(--gold) 10%, transparent); }
+  48%, 60% { transform: scale(1.08); box-shadow: 0 0 0 11px color-mix(in oklch, var(--gold) 4%, transparent); }
 }
 @keyframes flow-arrow-travel {
   0%, 100% { transform: translateX(-2px); opacity: .45; }
