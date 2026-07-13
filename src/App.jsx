@@ -1064,9 +1064,9 @@ function Platform() {
       }
 
       const lockedProgress = maxPlatformProgressRef.current;
-      const nextStep = lockedProgress < 0.24 ? 0 : lockedProgress < 0.5 ? 1 : 2;
+      const nextStep = lockedProgress < 0.3 ? 0 : lockedProgress < 0.58 ? 1 : 2;
       setActiveStep((current) => (current === nextStep ? current : nextStep));
-      setShowPlatformDetails(lockedProgress >= 0.64);
+      setShowPlatformDetails(lockedProgress >= 0.78);
     };
 
     const requestUpdate = () => {

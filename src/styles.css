@@ -2827,7 +2827,7 @@ p { line-height: 1.78; }
 .signal-flow--animated {
   counter-reset: flow-card;
 }
-.flow-step { min-height: 150px; display: flex; flex-direction: column; gap: 9px; justify-content: center; padding: 18px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; transition: box-shadow .48s var(--ease), border-color .48s var(--ease), transform .48s var(--ease), background .48s var(--ease), color .48s var(--ease), opacity .48s var(--ease), min-height .48s var(--ease); animation: flow-card-enter .7s var(--ease) both; }
+.flow-step { min-height: 210px; display: flex; flex-direction: column; gap: 9px; justify-content: center; padding: 18px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; transition: box-shadow .52s var(--ease), border-color .52s var(--ease), transform .52s var(--ease), background .52s var(--ease), color .52s var(--ease), opacity .52s var(--ease); animation: flow-card-enter .7s var(--ease) both; }
 .flow-step--signal { animation-delay: .18s; }
 .flow-step--insight { animation-delay: .34s; }
 .flow-step--action { animation-delay: .5s; }
@@ -2839,8 +2839,7 @@ p { line-height: 1.78; }
   color: var(--white);
   border-color: color-mix(in oklch, var(--gold) 46%, var(--forest));
   box-shadow: 0 26px 70px color-mix(in oklch, var(--forest) 24%, transparent);
-  transform: translateY(-4px);
-  min-height: 220px;
+  transform: translateY(-2px);
 }
 .flow-step--active .flow-icon { animation: action-pulse 2.4s ease-in-out infinite; }
 .flow-step--complete {
@@ -2883,10 +2882,9 @@ p { line-height: 1.78; }
   color: color-mix(in oklch, var(--ink) 78%, var(--muted));
   font-size: 10px;
   line-height: 1.55;
-  max-height: 0;
   opacity: 0;
-  overflow: hidden;
-  transition: max-height .42s var(--ease), opacity .34s var(--ease);
+  transform: translateY(7px);
+  transition: opacity .42s var(--ease), transform .42s var(--ease), color .42s var(--ease);
 }
 .flow-step small {
   width: fit-content;
@@ -2897,15 +2895,14 @@ p { line-height: 1.78; }
   background: color-mix(in oklch, var(--sage) 15%, var(--paper));
   font-size: 9px;
   font-weight: 800;
-  max-height: 0;
   opacity: 0;
-  overflow: hidden;
-  transition: max-height .42s var(--ease), opacity .34s var(--ease), background .42s var(--ease), color .42s var(--ease);
+  transform: translateY(7px);
+  transition: opacity .42s var(--ease), transform .42s var(--ease), background .42s var(--ease), color .42s var(--ease), border-color .42s var(--ease);
 }
 .flow-step--active p,
 .flow-step--active small {
-  max-height: 120px;
   opacity: 1;
+  transform: translateY(0);
 }
 .flow-step--active p {
   color: color-mix(in oklch, var(--paper) 72%, transparent);
@@ -2937,7 +2934,7 @@ p { line-height: 1.78; }
   pointer-events: none;
   filter: saturate(.72);
   transform-origin: top center;
-  transition: grid-template-rows .48s var(--ease), margin-top .48s var(--ease), padding .48s var(--ease), border-color .32s var(--ease), box-shadow .32s var(--ease), filter .32s var(--ease);
+  transition: grid-template-rows .68s var(--ease), margin-top .68s var(--ease), padding .68s var(--ease), border-color .44s var(--ease), box-shadow .44s var(--ease), filter .44s var(--ease);
 }
 .platform-details.is-visible {
   grid-template-rows: 1fr;
@@ -4358,8 +4355,8 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   }
   .flow-step p,
   .flow-step small {
-    max-height: 120px;
     opacity: 1;
+    transform: none;
   }
   .benefit-list li {
     border-radius: 16px;
