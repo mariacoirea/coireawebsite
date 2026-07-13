@@ -255,26 +255,21 @@ p { line-height: 1.78; }
   pointer-events: none;
   animation: dashboard-insight-enter .52s var(--ease) both;
 }
-.radar-active-dot {
-  position: absolute;
-  z-index: 5;
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--paper);
-  border-radius: 50%;
-  background: #B56D4E;
-  box-shadow:
-    0 0 0 6px color-mix(in oklch, #B56D4E 24%, transparent),
-    0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
-  transform: translate(-50%, -50%);
-  animation: radar-dot-enter .52s var(--ease) both, radar-dot-pulse 2s ease-in-out infinite;
+.radar-active-dot-svg {
   pointer-events: none;
+  transform-origin: center;
+  animation: radar-svg-dot-enter .48s var(--ease) both;
 }
-.radar-active-dot--vision { left: 50%; top: 24.8%; }
-.radar-active-dot--leadership { left: 69.3%; top: 43.7%; }
-.radar-active-dot--strategy { left: 63.4%; top: 68.4%; }
-.radar-active-dot--collaboration { left: 40.1%; top: 63.6%; }
-.radar-active-dot--wellbeing { left: 27.7%; top: 42.8%; }
+.radar-active-dot-svg__halo {
+  fill: color-mix(in oklch, #B56D4E 22%, transparent);
+  animation: radar-svg-dot-pulse 2s ease-in-out infinite;
+}
+.radar-active-dot-svg__ring {
+  fill: var(--paper);
+}
+.radar-active-dot-svg__core {
+  fill: #B56D4E;
+}
 .dimension-list { align-self: center; display: grid; gap: 14px; }
 .dimension-row { display: grid; grid-template-columns: 20px 84px 1fr 28px; gap: 8px; align-items: center; padding: 4px 6px; margin: -4px -6px; border-radius: 999px; font-size: 10px; transition: background .42s var(--ease), color .42s var(--ease), transform .42s var(--ease); }
 .dimension-row svg,
@@ -3874,20 +3869,18 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes radar-dot-enter {
-  from { opacity: 0; transform: translate(-50%, -50%) scale(.65); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+@keyframes radar-svg-dot-enter {
+  from { opacity: 0; transform: scale(.72); }
+  to { opacity: 1; transform: scale(1); }
 }
-@keyframes radar-dot-pulse {
+@keyframes radar-svg-dot-pulse {
   0%, 100% {
-    box-shadow:
-      0 0 0 5px color-mix(in oklch, #B56D4E 18%, transparent),
-      0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
+    opacity: .58;
+    r: 8;
   }
   50% {
-    box-shadow:
-      0 0 0 9px color-mix(in oklch, #B56D4E 5%, transparent),
-      0 10px 24px color-mix(in oklch, var(--deep) 34%, transparent);
+    opacity: .2;
+    r: 12;
   }
 }
 @keyframes node-float {

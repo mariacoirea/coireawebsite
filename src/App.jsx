@@ -826,6 +826,19 @@ function RadarTooltip({ active, payload, label }) {
   );
 }
 
+function ActiveRadarDot(props) {
+  const { cx, cy, index, activeIndex } = props;
+  if (index !== activeIndex || cx == null || cy == null) return null;
+
+  return (
+    <g className="radar-active-dot-svg">
+      <circle cx={cx} cy={cy} r="9" className="radar-active-dot-svg__halo" />
+      <circle cx={cx} cy={cy} r="5.5" className="radar-active-dot-svg__ring" />
+      <circle cx={cx} cy={cy} r="3.2" className="radar-active-dot-svg__core" />
+    </g>
+  );
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const isEs = isSpanishPath();
@@ -903,6 +916,7 @@ function HealthDashboard() {
                 fill="#9BA987"
                 fillOpacity={0.58}
                 strokeWidth={2}
+                dot={(props) => <ActiveRadarDot {...props} activeIndex={activeIndex} />}
                 isAnimationActive={!reduced}
               />
               <Tooltip
@@ -924,7 +938,6 @@ function HealthDashboard() {
               replayKey={`active-tooltip-${activeDimension.name}-${activeIndex}`}
             />
           </div>
-          <span className={`radar-active-dot radar-active-dot--${activeDimension.accent}`} aria-hidden="true" />
         </div>
         <div className="dimension-list">
           {dimensions.map(({ name, value, icon: Icon }, index) => (
