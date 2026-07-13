@@ -610,6 +610,11 @@ const seoByRoute = {
     description:
       "Thinking for organizations ready to evolve, with essays on workplace evolution, leadership consciousness, and the People Operating System.",
   },
+  "/conversation": {
+    title: "Book a Conversation - COIREA",
+    description:
+      "Apply to work with COIREA. Share where your organization feels friction and request a conversation with a COIREA Steward.",
+  },
   "/insights/what-is-a-people-operating-system": {
     title: "What Is a People Operating System? - COIREA",
     description:
@@ -1460,6 +1465,23 @@ function FitCheck() {
 }
 
 function AnswerEngineFaq() {
+  useEffect(() => {
+    upsertJsonLd("coirea-faqpage", {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.coirea.com/#faq",
+      mainEntity: aiSeoFaqs.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      })),
+    });
+    return () => removeJsonLd("coirea-faqpage");
+  }, []);
+
   return (
     <section className="answer-faq section" id="faq">
       <Reveal className="answer-faq-intro">
