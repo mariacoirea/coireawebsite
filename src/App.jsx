@@ -940,7 +940,28 @@ function Hero() {
 
 function Methodology() {
   const [active, setActive] = useState(dimensions[0]);
+  const [hasUserSelectedPillar, setHasUserSelectedPillar] = useState(false);
   const ActiveIcon = active.icon;
+
+  useEffect(() => {
+    if (hasUserSelectedPillar) return undefined;
+
+    const interval = window.setInterval(() => {
+      setActive((current) => {
+        const currentIndex = dimensions.findIndex((item) => item.name === current.name);
+        const nextIndex = (currentIndex + 1) % dimensions.length;
+        return dimensions[nextIndex];
+      });
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, [hasUserSelectedPillar]);
+
+  const handlePillarSelect = (index) => {
+    setHasUserSelectedPillar(true);
+    setActive(dimensions[index]);
+  };
+
   return (
     <section className="methodology section" id="methodology">
       <Reveal className="methodology-copy">
@@ -952,13 +973,13 @@ function Methodology() {
         <div className="pillar-orbit">
           <div className="pillar-instruction">
             <span>Explore the system</span>
-            <small>Select a dimension to read the signal.</small>
+            <small>Watch the system move, or select a dimension to explore.</small>
           </div>
           {dimensions.map(({ name, accent }, index) => (
             <button
               className={`pillar-node pillar-node--${accent} ${active.name === name ? "pillar-node--active" : ""}`}
               key={name}
-              onClick={() => setActive(dimensions[index])}
+              onClick={() => handlePillarSelect(index)}
               aria-pressed={active.name === name}
               type="button"
               style={{ "--i": index }}
