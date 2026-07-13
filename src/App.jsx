@@ -1268,7 +1268,7 @@ function ImpactShift() {
                   viewport={{ once: true, amount: 0.6 }}
                   transition={{ duration: 0.48, delay: 0.35 + index * 0.07, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span>{item}</span>
+                  <span className="coherence-node__pill">{item}</span>
                 </motion.i>
               ))}
             </div>
