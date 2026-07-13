@@ -69,6 +69,29 @@ const radarData = dimensions.map((item) => ({
   fullMark: 100,
 }));
 
+const dashboardInsights = {
+  Vision: {
+    title: "Vision is present, but not yet guiding every decision.",
+    text: "GiA is seeing moments where priorities may still depend on leadership interpretation instead of shared direction.",
+  },
+  Leadership: {
+    title: "Leadership signals are active, but alignment may be uneven.",
+    text: "GiA suggests reviewing where ownership, permission, and decision rights are slowing the system down.",
+  },
+  Strategy: {
+    title: "Strategy has momentum, but focus may be spreading too thin.",
+    text: "GiA is detecting a gap between strategic intent and what teams are actually protecting day to day.",
+  },
+  Collaboration: {
+    title: "Collaboration is limiting the system's evolutionary potential.",
+    text: "People are holding back with managers. Review collaboration and leadership together.",
+  },
+  "Well-Being": {
+    title: "Well-Being is holding, but capacity may depend on personal resilience.",
+    text: "GiA recommends checking whether sustainable performance is designed into the system or carried by individuals.",
+  },
+};
+
 const fitQuestions = [
   {
     prompt: "When something goes wrong, people in my organization know instinctively what the right call is, without needing to ask me.",
@@ -721,7 +744,7 @@ function SEOManager() {
   return null;
 }
 
-function AnimatedNumber({ value, delay = 0, className = "" }) {
+function AnimatedNumber({ value, delay = 0, className = "", replayKey = "", play = true }) {
   const [display, setDisplay] = useState(0);
   const ref = useRef(null);
   const reduced = useReducedMotion();
@@ -729,6 +752,10 @@ function AnimatedNumber({ value, delay = 0, className = "" }) {
 
   useEffect(() => {
     if (!inView) return undefined;
+    if (!play) {
+      setDisplay(value);
+      return undefined;
+    }
     if (reduced) {
       setDisplay(value);
       return undefined;
@@ -747,12 +774,12 @@ function AnimatedNumber({ value, delay = 0, className = "" }) {
       window.clearTimeout(timeout);
       controls?.stop();
     };
-  }, [delay, inView, reduced, value]);
+  }, [delay, inView, play, reduced, replayKey, value]);
 
   return <strong ref={ref} className={className}>{display}</strong>;
 }
 
-function AnimatedBar({ value, delay = 0 }) {
+function AnimatedBar({ value, delay = 0, replayKey = "", play = true }) {
   const ref = useRef(null);
   const reduced = useReducedMotion();
   const inView = useInView(ref, { once: true, amount: 0.6 });
@@ -761,8 +788,9 @@ function AnimatedBar({ value, delay = 0 }) {
     <div className="mini-track" ref={ref}>
       <motion.span
         style={{ width: `${value}%`, transformOrigin: "0 50%" }}
-        initial={reduced ? { scaleX: 1 } : { scaleX: 0 }}
-        animate={inView || reduced ? { scaleX: 1 } : { scaleX: 0 }}
+        initial={reduced || !play ? { scaleX: 1 } : { scaleX: 0 }}
+        animate={inView || reduced || !play ? { scaleX: 1 } : { scaleX: 0 }}
+        key={replayKey}
         transition={{ duration: 1.05, delay, ease: [0.16, 1, 0.3, 1] }}
       />
     </div>
@@ -831,6 +859,20 @@ function Header() {
 
 function HealthDashboard() {
   const reduced = useReducedMotion();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeDimension = dimensions[activeIndex];
+  const activeInsight = dashboardInsights[activeDimension.name];
+
+  useEffect(() => {
+    if (reduced) return undefined;
+
+    const interval = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % dimensions.length);
+    }, 4000);
+
+    return () => window.clearInterval(interval);
+  }, [reduced]);
+
   return (
     <motion.div
       className="health-dashboard"
@@ -855,6 +897,7 @@ function HealthDashboard() {
                 tick={{ fill: "#f4f0e5", fontSize: 11, fontFamily: "Manrope" }}
               />
               <Radar
+                key={activeDimension.name}
                 dataKey="value"
                 stroke="#B56D4E"
                 fill="#9BA987"
@@ -877,11 +920,11 @@ function HealthDashboard() {
         </div>
         <div className="dimension-list">
           {dimensions.map(({ name, value, icon: Icon }, index) => (
-            <div className="dimension-row" key={name}>
+            <div className={`dimension-row ${activeIndex === index ? "dimension-row--active" : ""}`} key={name}>
               <Icon size={18} weight="light" />
               <span>{name}</span>
-              <AnimatedBar value={value} delay={0.42 + index * 0.1} />
-              <AnimatedNumber value={value} delay={0.48 + index * 0.1} />
+              <AnimatedBar value={value} delay={0} replayKey={`${name}-${activeIndex}`} play={activeIndex === index} />
+              <AnimatedNumber value={value} delay={0} replayKey={`${name}-${activeIndex}`} play={activeIndex === index} />
             </div>
           ))}
         </div>
@@ -889,9 +932,9 @@ function HealthDashboard() {
       <p className="score-disclaimer">Scores shown are illustrative. In your live platform, these update continuously.</p>
       <div className="gia-insight">
         <div className="gia-badge"><Brain size={18} /> GiA insight</div>
-        <div>
-          <strong>Collaboration is limiting the system's evolutionary potential.</strong>
-          <p>People are holding back with managers. Review collaboration and leadership together.</p>
+        <div key={activeDimension.name} className="gia-insight-copy">
+          <strong>{activeInsight.title}</strong>
+          <p>{activeInsight.text}</p>
         </div>
         <button type="button">View insight <ArrowUpRight size={16} /></button>
       </div>

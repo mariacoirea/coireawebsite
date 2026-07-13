@@ -248,9 +248,30 @@ p { line-height: 1.78; }
 .health-score strong { font-family: "Bodoni Moda"; font-size: 48px; font-weight: 400; line-height: 1; }
 .health-score span { font-size: 9px; color: rgba(255,255,255,.62); }
 .dimension-list { align-self: center; display: grid; gap: 14px; }
-.dimension-row { display: grid; grid-template-columns: 20px 84px 1fr 28px; gap: 8px; align-items: center; font-size: 10px; }
+.dimension-row { display: grid; grid-template-columns: 20px 84px 1fr 28px; gap: 8px; align-items: center; padding: 4px 6px; margin: -4px -6px; border-radius: 999px; font-size: 10px; transition: background .42s var(--ease), color .42s var(--ease), transform .42s var(--ease); }
+.dimension-row svg,
+.dimension-row span,
+.dimension-row strong {
+  transition: color .42s var(--ease), opacity .42s var(--ease);
+}
+.dimension-row--active {
+  background: color-mix(in oklch, var(--gold) 12%, transparent);
+  transform: translateX(3px);
+}
+.dimension-row--active svg,
+.dimension-row--active span,
+.dimension-row--active strong {
+  color: var(--white);
+}
 .mini-track { height: 3px; background: rgba(255,255,255,.1); overflow: hidden; }
-.mini-track span { display: block; height: 100%; background: var(--gold); transform-origin: left; }
+.mini-track span { display: block; height: 100%; background: var(--gold); transform-origin: left; transition: background .42s var(--ease), box-shadow .42s var(--ease); }
+.dimension-row--active .mini-track {
+  background: color-mix(in oklch, var(--paper) 18%, transparent);
+}
+.dimension-row--active .mini-track span {
+  background: linear-gradient(90deg, var(--gold), color-mix(in oklch, var(--sage) 76%, var(--gold)));
+  box-shadow: 0 0 14px color-mix(in oklch, var(--gold) 38%, transparent);
+}
 .dimension-row strong { font-size: 12px; color: var(--gold); }
 .score-disclaimer {
   margin: -8px 0 18px;
@@ -263,6 +284,9 @@ p { line-height: 1.78; }
 .gia-badge { color: var(--gold); display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; }
 .gia-insight strong { font-size: 13px; }
 .gia-insight p { margin: 5px 0 0; font-size: 10px; line-height: 1.5; color: rgba(255,255,255,.62); }
+.gia-insight-copy {
+  animation: dashboard-insight-enter .52s var(--ease) both;
+}
 .gia-insight button, .focus-header button { border: 0; background: transparent; color: var(--white); display: flex; gap: 6px; align-items: center; font-size: 10px; cursor: pointer; }
 
 .section {
@@ -3817,6 +3841,10 @@ footer small { grid-column: 1 / -1; color: rgba(255,255,255,.48); font-size: 9px
   0%, 42% { transform: translateX(-125%); opacity: 0; }
   52% { opacity: .8; }
   72%, 100% { transform: translateX(125%); opacity: 0; }
+}
+@keyframes dashboard-insight-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes node-float {
   0%, 100% { translate: 0 0; }
