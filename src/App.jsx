@@ -2773,7 +2773,7 @@ function CurrentPage() {
     return <MigratedBlogPostPage slug={slug} />;
   }
   if (route === "/insights") return <InsightsPage />;
-  if (route === "/conversation") return <ConversationPage />;
+  if (route === "/conversation" || route === "/offerings") return <ConversationPage />;
   if (route === "/about") return <AboutPage />;
   return <HomePage />;
 }
