@@ -917,6 +917,15 @@ function HealthDashboard() {
             <strong>62</strong>
             <span>system score</span>
           </div>
+          <div key={activeDimension.name} className="active-dimension-card">
+            <span>{activeDimension.name}</span>
+            <AnimatedNumber
+              value={activeDimension.value}
+              replayKey={`active-card-${activeDimension.name}-${activeIndex}`}
+              className="active-dimension-score"
+            />
+            <small>{activeDimension.signal}</small>
+          </div>
         </div>
         <div className="dimension-list">
           {dimensions.map(({ name, value, icon: Icon }, index) => (
