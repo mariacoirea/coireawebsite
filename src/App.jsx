@@ -2284,6 +2284,7 @@ function MigratedBlogPostPage({ slug }) {
       },
       articleSection: displayCluster(post.cluster, post.title),
       keywords: (post.tags || []).join(", "),
+      ...(post.direct_answer ? { abstract: post.direct_answer } : {}),
       wordCount: stripHtml(post.body_content).split(/\s+/).filter(Boolean).length,
     });
 
@@ -2351,6 +2352,12 @@ function MigratedBlogPostPage({ slug }) {
           </div>
           {post.featured_image && (
             <img className="migrated-featured-image" src={post.featured_image} alt={`${post.title} featured image`} />
+          )}
+          {post.direct_answer && (
+            <div className="article-definition">
+              <strong>Direct answer</strong>
+              <p>{post.direct_answer}</p>
+            </div>
           )}
           <div
             className="legacy-article-content"
