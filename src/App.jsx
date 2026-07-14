@@ -144,7 +144,7 @@ function isSpanishInput(value = "") {
 
 function chatAnswer(text = "") {
   const normalized = normalizeChatInput(text);
-  const spanish = isSpanishInput(text);
+  const spanish = isSpanishPath() || isSpanishInput(text);
   const includes = (...words) => words.some((word) => normalized.includes(word));
   const actionApply = { label: spanish ? "Hablar con un Steward" : "Book a conversation", href: "/conversation" };
   const actionInsights = { label: spanish ? "Ver insights" : "Explore insights", href: "/insights" };
@@ -815,6 +815,277 @@ function isSpanishPath() {
   return window.location.pathname === "/es" || window.location.pathname.startsWith("/es/");
 }
 
+const spanishTextMap = {
+  "Home": "Inicio",
+  "Insights": "Insights",
+  "About Us": "Sobre COIREA",
+  "Book a Conversation": "Agendar una conversación",
+  "Book a conversation": "Agendar una conversación",
+  "Book a call to see it live": "Agenda una llamada para verlo en vivo",
+  "See how it works": "Ver cómo funciona",
+  "See the system": "Ver el sistema",
+  "The People Operating System": "El People Operating System",
+  "COIREA · The People Operating System": "COIREA · El People Operating System",
+  "The People Operating System for organizations that care.": "El People Operating System para organizaciones que cuidan.",
+  "COIREA helps organizations build cohesive teams, because growth should\n            increase coherence, not deplete capacity. When the People System is aligned,\n            organizations do not just perform better, they regenerate.": "COIREA ayuda a las organizaciones a construir equipos cohesionados, porque el crecimiento deberia aumentar la coherencia, no agotar la capacidad. Cuando el sistema humano esta alineado, las organizaciones no solo rinden mejor: se regeneran.",
+  "AI + Human Wisdom. Grounded in systemic thinking.": "IA + sabiduria humana. Basado en pensamiento sistemico.",
+  "Live system view": "Vista viva del sistema",
+  "People Operating System": "People Operating System",
+  "Updated now": "Actualizado ahora",
+  "system score": "puntaje del sistema",
+  "Scores shown are illustrative. In your live platform, these update continuously.": "Los puntajes son ilustrativos. En la plataforma real se actualizan continuamente.",
+  "GiA insight": "Insight de GiA",
+  "View insight": "Ver insight",
+  "Vision": "Vision",
+  "Leadership": "Liderazgo",
+  "Strategy": "Estrategia",
+  "Collaboration": "Colaboracion",
+  "Well-Being": "Bienestar",
+  "The methodology": "La metodologia",
+  "Five dimensions that determine if your organization can grow without breaking.": "Cinco dimensiones que determinan si tu organizacion puede crecer sin romperse.",
+  "The People Operating System is not a framework to read. It is a living structure to measure, align, and strengthen over time.": "El People Operating System no es un marco para leer. Es una estructura viva para medir, alinear y fortalecer con el tiempo.",
+  "Explore the system": "Explora el sistema",
+  "Watch the system move, or select a dimension to explore.": "Observa como se mueve el sistema o selecciona una dimension para explorar.",
+  "Explore": "Explorar",
+  "signal": "señal",
+  "What this affects": "Lo que afecta",
+  "Reflection question": "Pregunta de reflexion",
+  "Scores are illustrative. In the live platform, they update as the organization evolves.": "Los puntajes son ilustrativos. En la plataforma real se actualizan a medida que la organizacion evoluciona.",
+  "The platform": "La plataforma",
+  "A platform that reads the signals your organization is already sending.": "Una plataforma que lee las señales que tu organizacion ya esta enviando.",
+  "Real scores. Real patterns. Real action. COIREA follows the path from what people feel, to what the system is signaling, to what leaders can do next.": "Puntajes reales. Patrones reales. Accion real. COIREA acompaña el camino desde lo que las personas sienten, hacia lo que el sistema esta señalando, y hacia lo que los lideres pueden hacer despues.",
+  "Listen before friction becomes visible": "Escuchar antes de que la friccion se vuelva visible",
+  "Surveys, reflection, behavior, and context reveal what leaders usually hear too late.": "Encuestas, reflexion, comportamiento y contexto revelan lo que los lideres suelen escuchar demasiado tarde.",
+  "See the pattern beneath the symptom": "Ver el patron debajo del sintoma",
+  "GiA connects signals across vision, leadership, strategy, collaboration, and well-being.": "GiA conecta señales entre vision, liderazgo, estrategia, colaboracion y bienestar.",
+  "Move with human stewardship": "Avanzar con acompañamiento humano",
+  "A Steward helps leaders interpret the signal and choose the right next move.": "Un Steward ayuda a los lideres a interpretar la señal y elegir el siguiente movimiento correcto.",
+  "Measure whether the system is changing": "Medir si el sistema esta cambiando",
+  "OVI shows whether alignment, trust, and execution are improving over time.": "El OVI muestra si la alineacion, la confianza y la ejecucion mejoran con el tiempo.",
+  "COIREA system tour": "Tour del sistema COIREA",
+  "20 sec loop": "Loop de 20 seg",
+  "Sense": "Sentir",
+  "Survey signals arrive": "Llegan señales de encuestas",
+  "Read": "Leer",
+  "GiA detects patterns": "GiA detecta patrones",
+  "Act": "Actuar",
+  "Leaders align next moves": "Los lideres alinean los proximos pasos",
+  "SOIL": "SOIL",
+  "Real platform preview": "Vista real de la plataforma",
+  "Preview the dashboard flow: OVI score, pillar signals, and GiA prompts moving from signal to insight to action.": "Vista previa del flujo del dashboard: puntaje OVI, señales por pilar y prompts de GiA que avanzan de señal a insight y accion.",
+  "Signal detected": "Señal detectada",
+  "Difficulty speaking up with managers appears across multiple responses.": "La dificultad para hablar con managers aparece en multiples respuestas.",
+  "The organization is already talking. COIREA listens for the signals leaders usually hear too late.": "La organizacion ya esta hablando. COIREA escucha las señales que los lideres suelen oir demasiado tarde.",
+  "The hidden tension becomes visible.": "La tension oculta se vuelve visible.",
+  "Insight": "Insight",
+  "Psychological safety is fragile at the leadership interface.": "La seguridad psicologica esta fragil en la interfaz de liderazgo.",
+  "GiA connects the signal across collaboration and leadership, separating isolated comments from a real system pattern.": "GiA conecta la señal entre colaboracion y liderazgo, separando comentarios aislados de un patron real del sistema.",
+  "The symptom becomes a pattern.": "El sintoma se convierte en patron.",
+  "Next action": "Siguiente accion",
+  "Review collaboration and leadership together with a Steward.": "Revisar colaboracion y liderazgo junto a un Steward.",
+  "The platform turns the pattern into a focused next move, supported by human judgment and measurable follow-through.": "La plataforma convierte el patron en un siguiente paso enfocado, apoyado por criterio humano y seguimiento medible.",
+  "Leaders hear the truth earlier.": "Los lideres escuchan la verdad antes.",
+  "View full analysis": "Ver analisis completo",
+  "High": "Alto",
+  "Medium": "Medio",
+  "Low": "Bajo",
+  "Suggested actions": "Acciones sugeridas",
+  "Manager listening ritual": "Ritual de escucha con managers",
+  "Leadership calibration": "Calibracion de liderazgo",
+  "Team norms reset": "Reset de acuerdos del equipo",
+  "High impact": "Alto impacto",
+  "Medium impact": "Impacto medio",
+  "The business impact": "El impacto en el negocio",
+  "Turn hidden friction into visible momentum.": "Convierte friccion oculta en momentum visible.",
+  "Before COIREA, the company may still be moving, but energy leaks through miscommunication, rework, bottlenecks, and invisible capacity strain. COIREA makes those patterns visible, then helps leaders convert them into aligned action.": "Antes de COIREA, la empresa puede seguir moviendose, pero pierde energia en mala comunicacion, retrabajo, cuellos de botella y desgaste invisible. COIREA hace visibles esos patrones y ayuda a los lideres a convertirlos en accion alineada.",
+  "Before COIREA": "Antes de COIREA",
+  "The system is working, but leaking energy.": "El sistema funciona, pero pierde energia.",
+  "unclear center": "centro poco claro",
+  "The same decision, postponed again": "La misma decision, postergada otra vez",
+  "The same meeting, every other week": "La misma reunion, semana por medio",
+  "Good people who quietly disengage": "Buenas personas que se desconectan en silencio",
+  "With COIREA": "Con COIREA",
+  "The system connects and starts moving in rhythm.": "El sistema se conecta y empieza a moverse en ritmo.",
+  "living signal": "señal viva",
+  "Shared visibility": "Visibilidad compartida",
+  "Aligned decisions": "Decisiones alineadas",
+  "Focused execution": "Ejecucion enfocada",
+  "Sustained capacity": "Capacidad sostenible",
+  "Early signals": "Señales tempranas",
+  "Leadership aligned on the same signal": "Liderazgo alineado sobre la misma señal",
+  "Issues visible before they become crises": "Problemas visibles antes de convertirse en crisis",
+  "Teams that move without constant realignment": "Equipos que avanzan sin realineacion constante",
+  "sees itself": "se ve a si mismo",
+  "The system": "El sistema",
+  "How COIREA works": "Como funciona COIREA",
+  "From signal to aligned action.": "De señal a accion alineada.",
+  "COIREA does not start by adding more pressure. It starts by helping the organization see itself clearly, then translates that clarity into a rhythm of action, learning, and regeneration.": "COIREA no empieza agregando mas presion. Empieza ayudando a la organizacion a verse con claridad y luego traduce esa claridad en un ritmo de accion, aprendizaje y regeneracion.",
+  "GiA does not give generic answers. It reads your organization and helps you reflect.": "GiA no entrega respuestas genericas. Lee tu organizacion y ayuda a reflexionar.",
+  "GiA means Guided Intelligence for Alignment. Instead of external models, it learns from your organization's own signals and turns them into specific, contextual guidance.": "GiA significa Guided Intelligence for Alignment. En lugar de modelos externos, aprende de las señales de tu propia organizacion y las convierte en orientacion especifica y contextual.",
+  "AI + Human Wisdom": "IA + sabiduria humana",
+  "Question": "Pregunta",
+  "What environment could you create so people feel safe enough to tell the truth early?": "Que entorno podrias crear para que las personas se sientan lo suficientemente seguras para decir la verdad antes?",
+  "Is COIREA for you?": "Es COIREA para ti?",
+  "Start with a signal, not a sales pitch.": "Empieza con una señal, no con un discurso de venta.",
+  "Answer three prompts and see which part of your People Operating System may be asking for attention.": "Responde tres preguntas y mira que parte de tu People Operating System podria estar pidiendo atencion.",
+  "Starting signal": "Señal inicial",
+  "Apply to work with COIREA": "Postular para trabajar con COIREA",
+  "Try again": "Intentar de nuevo",
+  "Ready for next step": "Listo para el siguiente paso",
+  "Keep going": "Sigue avanzando",
+  "Questions leaders ask": "Preguntas que hacen los lideres",
+  "Clear answers about COIREA and the People Operating System.": "Respuestas claras sobre COIREA y el People Operating System.",
+  "These answers are written for leaders evaluating COIREA, and structured clearly so search engines and AI assistants can understand the concept without guessing.": "Estas respuestas estan escritas para lideres que evaluan COIREA y estructuradas para que buscadores y asistentes de IA entiendan el concepto sin adivinar.",
+  "Read the full People Operating System article": "Leer el articulo completo sobre People Operating System",
+  "Is Your Organization Ready to See Itself Clearly?": "Esta tu organizacion lista para verse con claridad?",
+  "COIREA is not for every organization. It is for the ones that sense something needs to shift, and are ready to look at it honestly, with the right support alongside them.": "COIREA no es para todas las organizaciones. Es para aquellas que sienten que algo necesita moverse y estan listas para mirarlo honestamente, con el apoyo correcto a su lado.",
+  "Every organization enters with a Steward. This is not a software subscription. It is an accompanied transformation. Applications are reviewed personally.": "Cada organizacion entra con un Steward. Esto no es una suscripcion de software. Es una transformacion acompañada. Las solicitudes se revisan personalmente.",
+  "Start with fit, not pressure.": "Empieza con encaje, no con presion.",
+  "COIREA is for organizations that sense something needs to shift, and are ready to look at it honestly with the right support alongside them.": "COIREA es para organizaciones que sienten que algo necesita cambiar y estan listas para mirarlo honestamente con el apoyo correcto.",
+  "Complete the application below. If there is a genuine fit, COIREA will reach out within 5 business days.": "Completa la solicitud abajo. Si hay un encaje real, COIREA se pondra en contacto dentro de 5 dias habiles.",
+  "Who you are": "Quien eres",
+  "Your name": "Tu nombre",
+  "Email address": "Correo electronico",
+  "Organization name": "Nombre de la organizacion",
+  "Your role": "Tu rol",
+  "Your system": "Tu sistema",
+  "Where does your organization feel the most friction right now? Select what resonates.": "Donde siente mas friccion tu organizacion ahora? Selecciona lo que resuene.",
+  "Our direction isn't as shared as it needs to be": "Nuestra direccion no esta tan compartida como deberia",
+  "Leadership doesn't always move as one": "El liderazgo no siempre se mueve como uno",
+  "Our strategy doesn't translate into how we actually work day to day": "Nuestra estrategia no se traduce en como trabajamos dia a dia",
+  "There are communication gaps between teams or levels": "Hay brechas de comunicacion entre equipos o niveles",
+  "The pace we're working at isn't sustainable": "El ritmo al que estamos trabajando no es sostenible",
+  "What would shift in your organization if this changed?": "Que cambiaria en tu organizacion si esto se moviera?",
+  "2-3 sentences is enough": "2-3 frases son suficientes",
+  "Context": "Contexto",
+  "Team size": "Tamaño del equipo",
+  "Send my application": "Enviar mi solicitud",
+  "Sending...": "Enviando...",
+  "A Steward reads every application personally. If there is a genuine fit, we will reach out within 5 business days.": "Un Steward lee cada solicitud personalmente. Si hay un encaje real, responderemos dentro de 5 dias habiles.",
+  "About": "Sobre COIREA",
+  "Organizations don't fail from lack of strategy. They fail when people can't sustain it.": "Las organizaciones no fallan por falta de estrategia. Fallan cuando las personas no pueden sostenerla.",
+  "COIREA was founded to close the gap between how organizations are designed and how people actually experience them. Not through restructuring. Through coherence.": "COIREA nace para cerrar la brecha entre como se diseñan las organizaciones y como las personas realmente las viven. No a traves de reestructuracion. A traves de coherencia.",
+  "Inspired by nature": "Inspirado en la naturaleza",
+  "COIREA is inspired by the intelligence of living systems.": "COIREA se inspira en la inteligencia de los sistemas vivos.",
+  "Forests, mycelium, rivers, and ecosystems show us that resilience is relational. Nothing evolves alone. The same is true inside organizations.": "Bosques, micelio, rios y ecosistemas nos muestran que la resiliencia es relacional. Nada evoluciona solo. Lo mismo ocurre dentro de las organizaciones.",
+  "Living systems": "Sistemas vivos",
+  "Regeneration": "Regeneracion",
+  "Distributed intelligence": "Inteligencia distribuida",
+  "Why we exist": "Por que existimos",
+  "Organizations are living systems. When they're well-designed, people don't just work, they grow.": "Las organizaciones son sistemas vivos. Cuando estan bien diseñadas, las personas no solo trabajan: crecen.",
+  "Our mission is to help purpose-driven organizations measure and strengthen the conditions that allow both business and people to regenerate. We call this the People Operating System, five pillars that determine whether an organization can grow without breaking.": "Nuestra mision es ayudar a organizaciones con proposito a medir y fortalecer las condiciones que permiten que el negocio y las personas se regeneren. A esto le llamamos People Operating System: cinco pilares que determinan si una organizacion puede crecer sin romperse.",
+  "What we believe": "Lo que creemos",
+  "Frequently asked questions": "Preguntas frecuentes",
+  "The concepts behind COIREA, clarified.": "Los conceptos detras de COIREA, aclarados.",
+  "Every organization enters with a Steward. Applications are reviewed personally so the first conversation begins with context, care, and honesty.": "Cada organizacion entra con un Steward. Las solicitudes se revisan personalmente para que la primera conversacion comience con contexto, cuidado y honestidad.",
+  "A Steward reads every application personally.": "Un Steward lee cada solicitud personalmente.",
+  "If there is a genuine fit, COIREA will reach out within 5 business days.": "Si hay un encaje real, COIREA respondera dentro de 5 dias habiles.",
+  "Thinking for organizations ready to evolve.": "Ideas para organizaciones listas para evolucionar.",
+  "Featured": "Destacado",
+  "The Five Pillars of the People Operating System": "Los cinco pilares del People Operating System",
+  "A guide to the five dimensions that determine how well your organization functions as a living system, and what to strengthen first.": "Una guia sobre las cinco dimensiones que determinan que tan bien funciona tu organizacion como sistema vivo, y que fortalecer primero.",
+  "Read more": "Leer mas",
+  "Explore by theme": "Explorar por tema",
+  "Search insights...": "Buscar insights...",
+  "Loading posts...": "Cargando posts...",
+  "insights available.": "insights disponibles.",
+  "No insights match that search yet. Try another theme or keyword.": "Todavia no hay insights que coincidan. Prueba otro tema o palabra clave.",
+  "Load more insights": "Cargar mas insights",
+  "Organizational intelligence for growth that builds capacity.": "Inteligencia organizacional para un crecimiento que construye capacidad.",
+  "Concept prototype. Selected claims and data are illustrative pending owner confirmation.": "Prototipo conceptual. Algunas afirmaciones y datos son ilustrativos hasta confirmacion de la dueña.",
+  "Ask GiA": "Preguntale a GiA",
+  "Questions, clarity, or a human next step": "Preguntas, claridad o un siguiente paso humano",
+  "Friendly guide, not a replacement for a human": "Guia cercana, no reemplazo de una persona",
+  "Ask about COIREA, OVI, GiA...": "Pregunta sobre COIREA, OVI, GiA...",
+  "Hi, I'm GiA. Think of me as a friendly guide inside COIREA. I can clarify doubts, help you explore what your organization may be sensing, and point you toward a Steward when a real conversation would be better.": "Hola, soy GiA. Piensame como una guia cercana dentro de COIREA. Puedo aclarar dudas, ayudarte a explorar lo que tu organizacion podria estar sintiendo y orientarte hacia un Steward cuando una conversacion humana sea mejor.",
+  "Could COIREA help us?": "Podria COIREA ayudarnos?",
+  "What does the platform do?": "Que hace la plataforma?",
+  "Who is GiA?": "Quien es GiA?",
+  "Can I talk to someone?": "Puedo hablar con alguien?",
+  "How does the first step work?": "Como funciona el primer paso?",
+  "What should I ask a Steward?": "Que deberia preguntarle a un Steward?",
+  "Show me something to read": "Muestrame algo para leer"
+};
+
+function translateSpanishText(text = "") {
+  const compact = text.replace(/\s+/g, " ").trim();
+  if (!compact) return text;
+  if (spanishTextMap[text]) return spanishTextMap[text];
+  if (spanishTextMap[compact]) return spanishTextMap[compact];
+  let translated = compact;
+  Object.entries(spanishTextMap).forEach(([source, target]) => {
+    const sourceCompact = source.replace(/\s+/g, " ").trim();
+    if (sourceCompact && translated.includes(sourceCompact)) {
+      translated = translated.split(sourceCompact).join(target);
+    }
+  });
+  return translated === compact ? text : translated;
+}
+
+function SpanishCopyLayer() {
+  useEffect(() => {
+    if (!isSpanishPath()) return undefined;
+
+    const translateNode = (node) => {
+      if (!node || node.nodeType !== Node.TEXT_NODE) return;
+      const parent = node.parentElement;
+      if (!parent || ["SCRIPT", "STYLE", "NOSCRIPT", "TEXTAREA", "INPUT"].includes(parent.tagName)) return;
+      const next = translateSpanishText(node.nodeValue);
+      if (next !== node.nodeValue) node.nodeValue = next;
+    };
+
+    const translateAttributes = (root = document.body) => {
+      root.querySelectorAll("[placeholder], [aria-label], [alt], [title]").forEach((element) => {
+        ["placeholder", "aria-label", "alt", "title"].forEach((attr) => {
+          const value = element.getAttribute(attr);
+          if (!value) return;
+          const next = translateSpanishText(value);
+          if (next !== value) element.setAttribute(attr, next);
+        });
+      });
+    };
+
+    const translateAll = () => {
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(translateNode);
+      translateAttributes();
+      document.body.querySelectorAll("a[href^='/']").forEach((anchor) => {
+        const href = anchor.getAttribute("href");
+        if (!href || href === "/es" || href.startsWith("/es/") || href.startsWith("/assets/")) return;
+        anchor.setAttribute("href", localizedPath(href, true));
+      });
+      document.documentElement.lang = "es";
+    };
+
+    translateAll();
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.TEXT_NODE) translateNode(node);
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+            const nodes = [];
+            while (walker.nextNode()) nodes.push(walker.currentNode);
+            nodes.forEach(translateNode);
+            translateAttributes(node);
+            node.querySelectorAll?.("a[href^='/']").forEach((anchor) => {
+              const href = anchor.getAttribute("href");
+              if (!href || href === "/es" || href.startsWith("/es/") || href.startsWith("/assets/")) return;
+              anchor.setAttribute("href", localizedPath(href, true));
+            });
+          }
+        });
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
+  return null;
+}
+
 function localizedPath(path, isEs = isSpanishPath()) {
   if (path === "/") return isEs ? "/es" : "/";
   return isEs ? `/es${path}` : path;
@@ -884,6 +1155,34 @@ const seoByRoute = {
   },
 };
 
+const spanishSeoByRoute = {
+  "/": {
+    title: "COIREA - El People Operating System para organizaciones que cuidan",
+    description:
+      "COIREA ayuda a lideres a medir la salud organizacional y convertir señales invisibles en accion alineada.",
+  },
+  "/about": {
+    title: "Sobre COIREA - People Operating System e historia fundadora",
+    description:
+      "Conoce por que existe COIREA y los principios de sistemas vivos detras del People Operating System.",
+  },
+  "/insights": {
+    title: "Insights - COIREA",
+    description:
+      "Ideas para organizaciones listas para evolucionar: liderazgo consciente, cultura, bienestar y sistemas organizacionales.",
+  },
+  "/conversation": {
+    title: "Agendar una conversacion - COIREA",
+    description:
+      "Comparte donde tu organizacion siente friccion y solicita una conversacion con un Steward de COIREA.",
+  },
+  "/insights/what-is-a-people-operating-system": {
+    title: "Que es un People Operating System? - COIREA",
+    description:
+      "Un People Operating System es la infraestructura humana detras de como una organizacion decide, colabora, ejecuta estrategia y sostiene energia.",
+  },
+};
+
 const defaultShareImage = "https://www.coirea.com/assets/coirea-social-card.png";
 
 function absolutePublicUrl(url = defaultShareImage) {
@@ -908,7 +1207,7 @@ function SEOManager() {
     const path = window.location.pathname;
     const isEs = path === "/es" || path.startsWith("/es/");
     const route = path === "/es" ? "/" : path.replace(/^\/es/, "") || "/";
-    const seo = seoByRoute[route] || seoByRoute["/"];
+    const seo = isEs ? (spanishSeoByRoute[route] || spanishSeoByRoute["/"]) : (seoByRoute[route] || seoByRoute["/"]);
     const canonicalPath = isEs ? path : route;
     const canonicalHref = `https://www.coirea.com${canonicalPath === "/" ? "/" : canonicalPath}`;
 
@@ -3097,6 +3396,7 @@ export function App() {
   return (
     <>
       <SEOManager />
+      <SpanishCopyLayer />
       <Header />
       <CurrentPage />
       <Footer />
