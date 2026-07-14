@@ -1,4 +1,5 @@
 const REQUIRED_FIELDS = ["name", "email", "organization", "role", "desired_shift", "team_size"];
+const DEFAULT_APPLICATION_RECIPIENTS = ["hello@coirea.com", "mjose.fadaros@gmail.com"];
 
 function escapeHtml(value = "") {
   return String(value)
@@ -78,7 +79,8 @@ export default async function handler(request, response) {
     return response.status(503).json({ error: "Email service is not configured yet." });
   }
 
-  const recipients = parseRecipients(process.env.APPLICATION_TO_EMAIL || "hello@coirea.com");
+  const configuredRecipients = parseRecipients(process.env.APPLICATION_TO_EMAIL);
+  const recipients = configuredRecipients.length > 0 ? configuredRecipients : DEFAULT_APPLICATION_RECIPIENTS;
   const from = process.env.RESEND_FROM_EMAIL || "COIREA <onboarding@resend.dev>";
   const frictionList = data.friction.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   const submittedAt = new Date().toISOString();
@@ -125,7 +127,19 @@ export default async function handler(request, response) {
   const result = await resendResponse.json().catch(() => ({}));
 
   if (!resendResponse.ok) {
-    return response.status(502).json({ error: result.message || "Email could not be sent." });
+    const resendError =
+      result.message ||
+      result.error?.message ||
+      result.error ||
+      result.name ||
+      "Email could not be sent.";
+    console.error("Resend COIREA application email failed", {
+      status: resendResponse.status,
+      error: resendError,
+      recipients,
+      from,
+    });
+    return response.status(502).json({ error: resendError });
   }
 
   return response.status(200).json({ ok: true, id: result.id });
