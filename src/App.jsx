@@ -460,6 +460,251 @@ const migratedBlogClusters = [
   "Stories",
 ];
 
+const spanishClusterLabels = {
+  All: "Todos",
+  "Workplace Evolution": "Evolución del trabajo",
+  "Leadership Consciousness": "Liderazgo consciente",
+  "People Operating System": "People Operating System",
+  Stories: "Historias",
+};
+
+const spanishPostFallbacks = {
+  "coirea-evolution": {
+    title: "De lo lineal a lo regenerativo: el camino detrás de COIREA",
+    preview: "Una mirada al origen de COIREA y al cambio de paradigma que invita a ver las organizaciones como sistemas vivos, no como máquinas.",
+    body: `<article>
+      <p>COIREA nace de una intuición muy simple: las organizaciones no son máquinas. Son sistemas vivos. Cuando se las gestiona solo desde control, velocidad y eficiencia, empiezan a aparecer señales conocidas: desconexión, agotamiento, decisiones lentas y equipos que trabajan mucho pero pierden coherencia.</p>
+      <p>El paso de una organización lineal a una organización regenerativa no ocurre agregando más herramientas. Ocurre cuando el sistema aprende a observarse, a escuchar sus señales y a transformar la tensión en aprendizaje.</p>
+      <h2>De control a coherencia</h2>
+      <p>La lógica lineal busca predecir, controlar y corregir. La lógica regenerativa busca entender relaciones, ritmos y condiciones. En lugar de preguntar únicamente “qué está fallando”, pregunta “qué está intentando mostrar el sistema”.</p>
+      <h2>La evolución de COIREA</h2>
+      <p>COIREA fue creada para hacer visible esa capa humana del rendimiento: propósito, liderazgo, estrategia, colaboración y bienestar. Su trabajo no es reemplazar la intuición humana, sino darle estructura, evidencia y acompañamiento.</p>
+      <p>Por eso COIREA combina plataforma, inteligencia guiada y Stewards humanos. La tecnología ayuda a leer patrones; las personas ayudan a interpretarlos con contexto, cuidado y criterio.</p>
+    </article>`,
+  },
+  "five-pillars-regenerative-business": {
+    title: "El sistema operativo de COIREA: los cinco pilares de las organizaciones regenerativas",
+    preview: "Una guía práctica sobre los cinco pilares que sostienen la salud organizacional: propósito, liderazgo, colaboración, bienestar y estructura.",
+    body: `<article>
+      <p>En un contexto de cambio constante, el éxito ya no puede medirse solo por crecimiento, eficiencia o resultados trimestrales. También depende de la resiliencia, la coherencia y la vitalidad del sistema humano que sostiene la organización.</p>
+      <p>En COIREA observamos cada empresa como un sistema vivo. Como cualquier ecosistema, su salud depende de la relación entre sus partes fundamentales.</p>
+      <h2>Los cinco pilares</h2>
+      <ul>
+        <li><strong>Cultura y propósito:</strong> el suelo donde las decisiones toman raíz.</li>
+        <li><strong>Liderazgo:</strong> la energía que da forma al comportamiento del sistema.</li>
+        <li><strong>Colaboración:</strong> la capacidad de coordinarse con confianza y claridad.</li>
+        <li><strong>Bienestar:</strong> la condición que permite sostener rendimiento sin agotamiento.</li>
+        <li><strong>Estructura organizacional:</strong> el ritmo que ordena roles, decisiones y ejecución.</li>
+      </ul>
+      <h2>Por qué no se trabajan por separado</h2>
+      <p>Una tensión en colaboración puede tener raíz en liderazgo. Un problema de bienestar puede venir de una estructura confusa. Una estrategia clara puede fallar si la cultura no la encarna. Por eso COIREA mira el sistema completo.</p>
+      <p>El futuro del trabajo no se trata de más control. Se trata de más coherencia: estructuras más humanas, decisiones más claras y crecimiento que no destruya la capacidad de las personas.</p>
+    </article>`,
+  },
+  "businesses-need-renewal": {
+    title: "Por qué las empresas necesitan ciclos de renovación, no solo crecimiento lineal",
+    preview: "Las organizaciones vivas no crecen siempre en línea recta. Necesitan pausas, lectura del sistema y ciclos de renovación para sostener su evolución.",
+    body: `<article>
+      <p>Muchas empresas operan como si crecer significara avanzar siempre más rápido. Pero los sistemas vivos no funcionan así. Crecen, descansan, integran, se adaptan y vuelven a moverse con nueva energía.</p>
+      <p>Cuando una organización ignora sus ciclos de renovación, el rendimiento puede continuar por un tiempo, pero empieza a depender de desgaste acumulado.</p>
+      <h2>Las señales de un sistema sin renovación</h2>
+      <ul>
+        <li>Decisiones que se repiten sin resolverse.</li>
+        <li>Equipos que trabajan más pero avanzan menos.</li>
+        <li>Liderazgos que contienen demasiada tensión.</li>
+        <li>Estrategias que pierden conexión con la experiencia diaria.</li>
+      </ul>
+      <h2>Renovar no es detenerse</h2>
+      <p>Renovar es recuperar claridad. Es mirar qué está drenando energía, qué necesita cambiar de forma y qué capacidades deben fortalecerse antes de seguir escalando.</p>
+      <p>COIREA ayuda a leer esos momentos para que el crecimiento construya capacidad en lugar de consumirla.</p>
+    </article>`,
+  },
+  "cultural-reset": {
+    title: "Señales de que tu empresa necesita un reinicio cultural y cómo empezar",
+    preview: "Un reinicio cultural no empieza con un manifiesto nuevo. Empieza cuando la organización se atreve a mirar lo que está repitiendo.",
+    body: `<article>
+      <p>La cultura no es lo que una organización declara. Es lo que las personas hacen cuando nadie está mirando, especialmente bajo presión.</p>
+      <p>Un reinicio cultural se vuelve necesario cuando los comportamientos reales ya no sostienen el propósito, la estrategia o el bienestar del sistema.</p>
+      <h2>Señales frecuentes</h2>
+      <ul>
+        <li>Valores que se nombran, pero no guían decisiones.</li>
+        <li>Conversaciones difíciles que se evitan.</li>
+        <li>Equipos que se protegen en silos.</li>
+        <li>Confianza erosionada por incoherencias repetidas.</li>
+      </ul>
+      <h2>Cómo empezar</h2>
+      <p>El primer paso no es imponer una nueva cultura. Es escuchar la cultura que ya existe. ¿Qué premia? ¿Qué castiga? ¿Qué permite? ¿Qué silencios mantiene?</p>
+      <p>COIREA convierte esas señales en un mapa para que líderes y equipos puedan trabajar la cultura desde evidencia, no desde intuiciones aisladas.</p>
+    </article>`,
+  },
+  "tealorganizations": {
+    title: "El futuro del trabajo es teal: por qué las organizaciones con propósito llegaron para quedarse",
+    preview: "Las organizaciones teal invitan a repensar liderazgo, autonomía y propósito desde una mirada más viva y distribuida.",
+    body: `<article>
+      <p>Las organizaciones teal proponen una forma distinta de entender el trabajo: menos control jerárquico, más propósito vivo, más autonomía responsable y mayor conciencia del sistema completo.</p>
+      <p>No se trata de eliminar estructura. Se trata de diseñar una estructura que permita que la inteligencia distribuida aparezca.</p>
+      <h2>Qué cambia en una organización teal</h2>
+      <ul>
+        <li>El liderazgo se vuelve más distribuido.</li>
+        <li>Las decisiones se acercan al lugar donde vive la información.</li>
+        <li>El propósito guía más que el control.</li>
+        <li>La confianza deja de ser un valor decorativo y se vuelve diseño organizacional.</li>
+      </ul>
+      <h2>El desafío real</h2>
+      <p>La autogestión sin claridad puede convertirse en confusión. La libertad sin acuerdos puede generar desgaste. Por eso las organizaciones teal necesitan un sistema operativo humano que haga visible la coherencia, las tensiones y la capacidad real.</p>
+      <p>COIREA acompaña esa transición mirando el sistema vivo detrás de la estructura.</p>
+    </article>`,
+  },
+  "delegation-without-burnout": {
+    title: "Delegar sin quemarse: prácticas holacráticas para el liderazgo moderno",
+    preview: "Delegar no es soltar tareas al azar. Es diseñar claridad, autoridad y confianza para que el trabajo pueda moverse sin depender de una sola persona.",
+    body: `<article>
+      <p>Muchos líderes quieren delegar, pero terminan sosteniendo el sistema desde el centro. Revisan todo, desbloquean todo y cargan con decisiones que podrían vivir en otros lugares.</p>
+      <p>La delegación saludable necesita más que buena intención. Necesita roles claros, límites, acuerdos y confianza operativa.</p>
+      <h2>Delegar no es desaparecer</h2>
+      <p>Delegar significa crear condiciones para que otras personas puedan decidir con contexto. Requiere claridad sobre propósito, autoridad, expectativas y mecanismos de feedback.</p>
+      <h2>Prácticas útiles</h2>
+      <ul>
+        <li>Definir roles por responsabilidad, no solo por cargo.</li>
+        <li>Nombrar decisiones que pueden tomarse sin aprobación.</li>
+        <li>Crear ritmos de revisión sin microgestión.</li>
+        <li>Hacer visible cuándo una decisión vuelve innecesariamente al centro.</li>
+      </ul>
+      <p>COIREA ayuda a identificar dónde la delegación está bloqueada y qué dimensión del sistema necesita fortalecerse para distribuir liderazgo sin aumentar el caos.</p>
+    </article>`,
+  },
+  "culture-is-what-you-do-when-no-one-s-watching": {
+    title: "La cultura es lo que haces cuando nadie está mirando",
+    preview: "La cultura real aparece en las decisiones pequeñas, en los silencios, en lo que se tolera y en lo que se repite bajo presión.",
+    body: `<article>
+      <p>La cultura no vive en una presentación. Vive en el calendario, en las conversaciones, en los criterios invisibles de decisión y en la forma en que las personas se tratan cuando hay presión.</p>
+      <p>Por eso una organización puede declarar colaboración, pero operar desde silos. Puede declarar bienestar, pero premiar el agotamiento. Puede declarar propósito, pero decidir solo desde urgencia.</p>
+      <h2>Mirar la cultura real</h2>
+      <p>Para transformar la cultura, primero hay que verla sin maquillaje. ¿Qué comportamientos se repiten? ¿Qué conversaciones se evitan? ¿Qué señales dan los líderes, incluso sin querer?</p>
+      <h2>De valores a comportamiento</h2>
+      <p>Los valores solo importan cuando se vuelven criterios de acción. COIREA ayuda a conectar lo declarado con lo vivido para que la cultura deje de ser aspiracional y se convierta en estructura.</p>
+    </article>`,
+  },
+  "company-as-a-body-safety-nervous-system": {
+    title: "Si tu empresa fuera un cuerpo, ¿se sentiría segura?",
+    preview: "Una organización también tiene sistema nervioso: señales de amenaza, protección, tensión, regulación y confianza.",
+    body: `<article>
+      <p>Si una empresa fuera un cuerpo, podríamos preguntarnos: ¿respira? ¿descansa? ¿se tensa frente a ciertas conversaciones? ¿se protege demasiado? ¿puede decir la verdad temprano?</p>
+      <p>Las organizaciones tienen patrones parecidos a un sistema nervioso. Cuando no hay seguridad psicológica, las personas se adaptan: callan, suavizan, evitan, esperan permiso o se desconectan.</p>
+      <h2>La seguridad como condición de rendimiento</h2>
+      <p>La seguridad no significa comodidad permanente. Significa que el sistema puede procesar información difícil sin colapsar, castigar o negar lo que aparece.</p>
+      <h2>Qué observa COIREA</h2>
+      <p>COIREA lee señales de colaboración, liderazgo y bienestar para entender si la organización puede sostener conversaciones honestas. Porque una verdad que llega tarde suele costar mucho más que una verdad escuchada a tiempo.</p>
+    </article>`,
+  },
+  "what-s-missing-in-company-culture-today": {
+    title: "Qué falta hoy en la cultura de las empresas",
+    preview: "A muchas culturas organizacionales no les falta inspiración. Les falta coherencia entre lo que dicen, lo que miden y lo que sostienen.",
+    body: `<article>
+      <p>Hoy muchas empresas hablan de cultura, propósito y bienestar. Pero las personas sienten rápidamente cuándo esas palabras no están conectadas con la experiencia diaria.</p>
+      <p>Lo que suele faltar no es más lenguaje. Es coherencia.</p>
+      <h2>La brecha cultural</h2>
+      <p>La brecha aparece cuando una organización dice valorar la colaboración, pero recompensa la competencia interna; dice valorar la innovación, pero castiga el error; dice cuidar a las personas, pero diseña ritmos imposibles de sostener.</p>
+      <h2>La cultura como sistema</h2>
+      <p>La cultura se fortalece cuando propósito, liderazgo, estructura y bienestar se alinean. COIREA ayuda a ver dónde esa alineación se rompe y qué patrón conviene trabajar primero.</p>
+    </article>`,
+  },
+  "conscious-companies-and-leaders-keys-to-sustainable-success": {
+    title: "Empresas y líderes conscientes: claves para un éxito sostenible",
+    preview: "El liderazgo consciente no es suavidad. Es presencia, responsabilidad y capacidad de leer el impacto que las decisiones tienen en todo el sistema.",
+    body: `<article>
+      <p>Una empresa consciente entiende que rendimiento y humanidad no son fuerzas opuestas. El éxito sostenible aparece cuando la organización puede crecer sin desconectarse de las personas que la hacen posible.</p>
+      <h2>Qué distingue a un liderazgo consciente</h2>
+      <ul>
+        <li>Observa su impacto en el sistema.</li>
+        <li>Toma decisiones con claridad y responsabilidad.</li>
+        <li>Puede sostener conversaciones difíciles sin perder presencia.</li>
+        <li>Diseña condiciones para que otros también lideren.</li>
+      </ul>
+      <h2>Sostenibilidad humana</h2>
+      <p>El liderazgo consciente no busca hacer más con menos hasta agotar el sistema. Busca crear coherencia: dirección clara, confianza suficiente, estrategia aterrizada y capacidad sostenible.</p>
+      <p>COIREA convierte estas dimensiones en señales visibles para que los líderes puedan actuar antes de que la tensión se transforme en crisis.</p>
+    </article>`,
+  },
+  "10-well-being-programs": {
+    title: "Programas de bienestar laboral: 10 ejemplos clave para tu empresa",
+    preview: "El bienestar no debería ser un beneficio aislado. Debe integrarse al diseño real del trabajo, los ritmos y la cultura.",
+    body: `<article>
+      <p>El bienestar organizacional no se resuelve solo con actividades puntuales. Un programa de bienestar funciona cuando toca la forma en que el trabajo está diseñado.</p>
+      <h2>Ejemplos de prácticas útiles</h2>
+      <ul>
+        <li>Pulsos de energía y carga de trabajo.</li>
+        <li>Rituales de cierre y recuperación después de proyectos intensos.</li>
+        <li>Revisión de reuniones y foco.</li>
+        <li>Espacios de conversación segura.</li>
+        <li>Prácticas de regulación antes de decisiones complejas.</li>
+        <li>Claridad de prioridades para reducir urgencia artificial.</li>
+        <li>Diseño de roles que evite sobrecarga invisible.</li>
+        <li>Medición de riesgo de burnout.</li>
+        <li>Feedback temprano sobre tensiones del sistema.</li>
+        <li>Acompañamiento de liderazgo para sostener cambios.</li>
+      </ul>
+      <p>COIREA mira el bienestar como una dimensión estructural del rendimiento, no como un accesorio.</p>
+    </article>`,
+  },
+  "strategic-leadership-retreats-": {
+    title: "Retiros estratégicos de liderazgo: un catalizador para la transformación",
+    preview: "Un retiro bien diseñado no es una pausa decorativa. Puede ser el espacio donde el sistema logra verse y decidir distinto.",
+    body: `<article>
+      <p>Los equipos de liderazgo suelen estar tan dentro de la operación que pierden perspectiva del sistema completo. Un retiro estratégico crea distancia suficiente para observar patrones, tensiones y decisiones que la urgencia diaria tapa.</p>
+      <h2>Qué hace poderoso a un retiro</h2>
+      <ul>
+        <li>Claridad sobre las preguntas que importan.</li>
+        <li>Seguridad para nombrar tensiones reales.</li>
+        <li>Datos y señales que eviten conversaciones abstractas.</li>
+        <li>Acuerdos concretos para volver a la operación con nuevo ritmo.</li>
+      </ul>
+      <h2>De inspiración a acción</h2>
+      <p>El valor no está solo en el encuentro, sino en lo que cambia después. COIREA puede preparar el terreno leyendo señales del sistema antes del retiro y ayudando a convertir la claridad en seguimiento.</p>
+    </article>`,
+  },
+  "regenerative-business-restoring-planet-and-society": {
+    title: "Negocios regenerativos: restaurar planeta, sociedad y organizaciones",
+    preview: "Lo regenerativo no es solo impacto externo. También implica diseñar organizaciones que restauren capacidad humana y relacional.",
+    body: `<article>
+      <p>Un negocio regenerativo no se conforma con reducir daño. Busca restaurar capacidad: en el planeta, en las comunidades y también dentro de la propia organización.</p>
+      <p>Muchas empresas con propósito cuidan su impacto externo mientras internamente sostienen ritmos que agotan a las personas. Esa contradicción termina debilitando la misión.</p>
+      <h2>Regenerar desde dentro</h2>
+      <p>La regeneración empieza por mirar cómo se toman decisiones, cómo se distribuye la carga, cómo se cuida la energía y cómo se sostiene la colaboración.</p>
+      <h2>El rol de COIREA</h2>
+      <p>COIREA ayuda a organizaciones con propósito a medir y fortalecer las condiciones internas que permiten que el impacto sea sostenible en el tiempo.</p>
+    </article>`,
+  },
+  "ancient-tools-modern-performance": {
+    title: "Bienestar en el trabajo: herramientas antiguas para equipos modernos",
+    preview: "Respiración, pausa, presencia y escucha no son prácticas blandas. Son capacidades operativas para sistemas bajo presión.",
+    body: `<article>
+      <p>En un mundo de trabajo acelerado, algunas herramientas antiguas vuelven a tener sentido: respiración, pausa, silencio, presencia, escucha profunda y regulación del cuerpo.</p>
+      <p>No son prácticas decorativas. Ayudan a que las personas tomen mejores decisiones, escuchen señales tempranas y respondan con más claridad bajo presión.</p>
+      <h2>Rendimiento y regulación</h2>
+      <p>Un sistema desregulado se vuelve reactivo. Interpreta tensión como amenaza, evita conversaciones difíciles y consume energía en protección. La regulación permite abrir espacio entre estímulo y respuesta.</p>
+      <h2>Integrar sin forzar</h2>
+      <p>El bienestar real no exige convertir la empresa en un retiro espiritual. Requiere insertar pequeñas prácticas en momentos clave del trabajo: antes de reuniones difíciles, después de cierres intensos y durante ciclos de alta exigencia.</p>
+    </article>`,
+  },
+  "conscious-leadership-practice": {
+    title: "Liderazgo consciente en la práctica",
+    preview: "El liderazgo consciente se demuestra en cómo una persona decide, escucha, regula su energía y sostiene conversaciones difíciles.",
+    body: `<article>
+      <p>El liderazgo consciente no es una identidad. Es una práctica. Aparece en momentos pequeños y repetidos: cuando algo sale mal, cuando alguien desafía una decisión, cuando el sistema necesita verdad y no solo tranquilidad.</p>
+      <h2>Prácticas concretas</h2>
+      <ul>
+        <li>Pausar antes de responder desde reactividad.</li>
+        <li>Preguntar qué señal trae una tensión antes de cerrarla.</li>
+        <li>Nombrar expectativas con claridad.</li>
+        <li>Escuchar cómo las decisiones impactan al sistema completo.</li>
+        <li>Revisar incoherencias entre discurso y comportamiento.</li>
+      </ul>
+      <p>COIREA ayuda a líderes y equipos a hacer visibles esas dinámicas para que el liderazgo deje de depender solo de intención y se vuelva una capacidad del sistema.</p>
+    </article>`,
+  },
+};
+
 function sortBlogPosts(posts = []) {
   return [...posts].sort((a, b) => {
     if (a.featured !== b.featured) return a.featured ? -1 : 1;
@@ -485,9 +730,9 @@ function normalizeAuthor(author) {
   return author?.trim() || "María José Figueroa";
 }
 
-function formatPostDate(dateString, withDay = false) {
+function formatPostDate(dateString, withDay = false, locale = "en-US") {
   if (!dateString) return "";
-  return new Date(dateString).toLocaleDateString("en-US", {
+  return new Date(dateString).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     ...(withDay ? { day: "numeric" } : {}),
@@ -528,6 +773,35 @@ function displayCluster(cluster = "", title = "") {
   if (normalized.includes("stories")) return "Stories";
   if (normalized.includes("business pillars") || normalized.includes("operating system") || normalized.includes("well-being")) return "People Operating System";
   return "Workplace Evolution";
+}
+
+function localizedCluster(cluster = "", title = "", spanish = isSpanishPath()) {
+  const label = displayCluster(cluster, title);
+  return spanish ? spanishClusterLabels[label] || label : label;
+}
+
+function localizedPost(post, spanish = isSpanishPath()) {
+  if (!post) return post;
+  if (!spanish) return post;
+  const fallback = spanishPostFallbacks[post.slug] || {};
+  const title = post.title_es || fallback.title || translateSpanishText(post.title);
+  const preview = post.preview_snippet_es || fallback.preview || translateSpanishText(post.preview_snippet);
+  const body = post.body_content_es || fallback.body || translateSpanishText(post.body_content);
+  const directAnswer = post.direct_answer_es || translateSpanishText(post.direct_answer || "");
+  return {
+    ...post,
+    title,
+    preview_snippet: preview,
+    body_content: body,
+    direct_answer: directAnswer || post.direct_answer,
+    seo_title: post.seo_title_es || (title ? `${title} | COIREA Insights` : post.seo_title),
+    meta_description: post.meta_description_es || preview || post.meta_description,
+    tags: (post.tags_es || post.tags || []).map((tag) => translateSpanishText(tag)),
+  };
+}
+
+function localizedPosts(posts = [], spanish = isSpanishPath()) {
+  return posts.map((post) => localizedPost(post, spanish));
 }
 
 function clusterClass(cluster = "") {
@@ -1004,7 +1278,118 @@ const spanishTextMap = {
   "Can I talk to someone?": "Puedo hablar con alguien?",
   "How does the first step work?": "Como funciona el primer paso?",
   "What should I ask a Steward?": "Que deberia preguntarle a un Steward?",
-  "Show me something to read": "Muestrame algo para leer"
+  "Show me something to read": "Muestrame algo para leer",
+  "Shared direction that acts as a structural force.": "Direccion compartida que actua como una fuerza estructural.",
+  "Direction is present, but it may not yet guide every decision under pressure.": "La direccion esta presente, pero quizas todavia no guia cada decision bajo presion.",
+  "Prioritization": "Priorizacion",
+  "Decision speed": "Velocidad de decision",
+  "Cultural alignment": "Alineacion cultural",
+  "Do people know what matters most when no leader is in the room?": "Las personas saben que es lo mas importante cuando ningun lider esta en la sala?",
+  "The quality of decisions, presence, and alignment between what leaders say and how the organization moves.": "La calidad de las decisiones, la presencia y la alineacion entre lo que los lideres dicen y como se mueve la organizacion.",
+  "Leadership energy is visible, but the system may be receiving mixed signals.": "La energia de liderazgo es visible, pero el sistema podria estar recibiendo señales mixtas.",
+  "Ownership": "Responsabilidad",
+  "Trust": "Confianza",
+  "Escalation patterns": "Patrones de escalamiento",
+  "Where are people waiting for permission instead of moving with clarity?": "Donde estan las personas esperando permiso en vez de moverse con claridad?",
+  "The degree to which priorities are clear, shared, and connected to day-to-day execution.": "El grado en que las prioridades son claras, compartidas y conectadas con la ejecucion diaria.",
+  "Strategic intent is active, but daily work may still be pulling attention in too many directions.": "La intencion estrategica esta activa, pero el trabajo diario puede estar dispersando la atencion en demasiadas direcciones.",
+  "Focus": "Foco",
+  "Execution rhythm": "Ritmo de ejecucion",
+  "Resource allocation": "Asignacion de recursos",
+  "Which priority is absorbing energy without moving the system forward?": "Que prioridad esta absorbiendo energia sin mover el sistema hacia adelante?",
+  "How well teams communicate, coordinate, and build trust across roles and levels.": "Que tan bien los equipos se comunican, coordinan y construyen confianza entre roles y niveles.",
+  "The strongest friction is relational: information may be arriving late, softened, or fragmented.": "La friccion mas fuerte es relacional: la informacion puede estar llegando tarde, suavizada o fragmentada.",
+  "Feedback loops": "Ciclos de feedback",
+  "Cross-team trust": "Confianza entre equipos",
+  "Rework": "Retrabajo",
+  "What truth is the organization learning too late?": "Que verdad esta aprendiendo la organizacion demasiado tarde?",
+  "The structural conditions that allow people to perform sustainably without depleting capacity.": "Las condiciones estructurales que permiten rendir de forma sostenible sin agotar capacidad.",
+  "Capacity is holding, but the system may be relying on personal resilience more than healthy structure.": "La capacidad se sostiene, pero el sistema podria estar dependiendo mas de resiliencia personal que de una estructura sana.",
+  "Burnout risk": "Riesgo de burnout",
+  "Retention": "Retencion",
+  "Sustainable performance": "Rendimiento sostenible",
+  "Where is performance being maintained by exhaustion?": "Donde se esta sosteniendo el rendimiento a costa del agotamiento?",
+  "Vision is present, but not yet guiding every decision.": "La vision esta presente, pero aun no guia cada decision.",
+  "GiA is seeing moments where priorities may still depend on leadership interpretation instead of shared direction.": "GiA observa momentos donde las prioridades todavia pueden depender de la interpretacion del liderazgo en vez de una direccion compartida.",
+  "Leadership signals are active, but alignment may be uneven.": "Las señales de liderazgo estan activas, pero la alineacion puede ser desigual.",
+  "GiA suggests reviewing where ownership, permission, and decision rights are slowing the system down.": "GiA sugiere revisar donde la responsabilidad, el permiso y los derechos de decision estan ralentizando el sistema.",
+  "Strategy has momentum, but focus may be spreading too thin.": "La estrategia tiene momentum, pero el foco puede estar demasiado disperso.",
+  "GiA is detecting a gap between strategic intent and what teams are actually protecting day to day.": "GiA detecta una brecha entre la intencion estrategica y lo que los equipos realmente protegen dia a dia.",
+  "Collaboration is limiting the system's evolutionary potential.": "La colaboracion esta limitando el potencial evolutivo del sistema.",
+  "People are holding back with managers. Review collaboration and leadership together.": "Las personas se estan guardando cosas con sus managers. Revisa colaboracion y liderazgo en conjunto.",
+  "Well-Being is holding, but capacity may depend on personal resilience.": "El bienestar se sostiene, pero la capacidad puede depender de resiliencia personal.",
+  "GiA recommends checking whether sustainable performance is designed into the system or carried by individuals.": "GiA recomienda revisar si el rendimiento sostenible esta diseñado en el sistema o si lo cargan las personas.",
+  "When something goes wrong, people in my organization know instinctively what the right call is, without needing to ask me.": "Cuando algo sale mal, las personas en mi organizacion saben instintivamente cual es la decision correcta, sin tener que preguntarme.",
+  "My leadership team has the difficult conversations about what isn't working, not just about what is.": "Mi equipo de liderazgo tiene conversaciones dificiles sobre lo que no esta funcionando, no solo sobre lo que si funciona.",
+  "The priorities we agreed on three months ago still reflect what people are actually working on today.": "Las prioridades que acordamos hace tres meses todavia reflejan lo que las personas realmente estan trabajando hoy.",
+  "People in my organization speak up when they see something going wrong, even when it's uncomfortable to do so.": "Las personas en mi organizacion hablan cuando ven que algo va mal, incluso cuando hacerlo es incomodo.",
+  "My highest performers are also the most sustainable in how they work, I'm not worried about losing them.": "Mis personas de mayor rendimiento tambien trabajan de forma sostenible; no me preocupa perderlas.",
+  "60-second system signal check": "Chequeo de señales del sistema en 60 segundos",
+  "Answer honestly. This is not a scorecard. It is a first signal of how your organization behaves under pressure.": "Responde con honestidad. Esto no es una evaluacion final. Es una primera señal de como se comporta tu organizacion bajo presion.",
+  "Five dimensions": "Cinco dimensiones",
+  "One starting signal": "Una señal inicial",
+  "Clear next step": "Siguiente paso claro",
+  "OVI tiers": "Niveles OVI",
+  "Systemic Coherence": "Coherencia sistemica",
+  "Emerging Alignment": "Alineacion emergente",
+  "Fragile Stability": "Estabilidad fragil",
+  "Structural Risk": "Riesgo estructural",
+  "OVI scoring tiers": "Niveles de puntaje OVI",
+  "Diagnostic progress": "Progreso del diagnostico",
+  "of": "de",
+  "Choose the number that feels most true today.": "Elige el numero que se sienta mas verdadero hoy.",
+  "Rate from strongly disagree to strongly agree": "Califica desde muy en desacuerdo hasta muy de acuerdo",
+  "Signal captured": "Señal capturada",
+  "Strongly disagree": "Muy en desacuerdo",
+  "Strongly agree": "Muy de acuerdo",
+  "Starting system signal": "Señal inicial del sistema",
+  "Pattern emerging": "Patron emergente",
+  "Early signal": "Señal temprana",
+  "Awaiting first signal": "Esperando la primera señal",
+  "Your system may be carrying hidden friction.": "Tu sistema podria estar cargando friccion oculta.",
+  "A full COIREA diagnostic would help identify where energy is leaking and which dimension needs attention first.": "Un diagnostico completo de COIREA ayudaria a identificar donde se esta filtrando energia y que dimension necesita atencion primero.",
+  "Your system shows potential, but alignment may be inconsistent.": "Tu sistema muestra potencial, pero la alineacion puede ser inconsistente.",
+  "There are useful signals here. COIREA can help connect them across the five dimensions before friction becomes structural.": "Hay señales utiles aqui. COIREA puede ayudar a conectarlas entre las cinco dimensiones antes de que la friccion se vuelva estructural.",
+  "Your system may already have strong coherence.": "Tu sistema podria tener una coherencia fuerte.",
+  "COIREA can help protect that coherence as the organization grows, adds complexity, or enters a new strategic phase.": "COIREA puede ayudar a proteger esa coherencia mientras la organizacion crece, suma complejidad o entra en una nueva etapa estrategica.",
+  "What is COIREA?": "Que es COIREA?",
+  "COIREA is a People Operating System for organizations that care. It helps leaders measure and strengthen the human system behind performance across Vision, Leadership, Strategy, Collaboration, and Well-Being.": "COIREA es un People Operating System para organizaciones que cuidan. Ayuda a los lideres a medir y fortalecer el sistema humano detras del rendimiento en Vision, Liderazgo, Estrategia, Colaboracion y Bienestar.",
+  "What is a People Operating System?": "Que es un People Operating System?",
+  "A People Operating System is the living structure behind how people make decisions, collaborate, execute strategy, and sustain performance. It makes the invisible patterns of an organization visible enough to improve.": "Un People Operating System es la estructura viva detras de como las personas deciden, colaboran, ejecutan estrategia y sostienen rendimiento. Hace visibles los patrones invisibles de una organizacion para poder mejorarlos.",
+  "Is COIREA a platform or a consultancy?": "COIREA es una plataforma o una consultoria?",
+  "COIREA is both a platform and a strategic support system. The platform measures organizational health, while stewardship helps leaders interpret signals and turn insight into action.": "COIREA es una plataforma y tambien un sistema de acompañamiento estrategico. La plataforma mide salud organizacional, mientras el stewardship ayuda a interpretar señales y convertir insight en accion.",
+  "What does COIREA measure?": "Que mide COIREA?",
+  "COIREA measures organizational health through five pillars: Vision, Leadership, Strategy, Collaboration, and Well-Being. Together, these pillars show whether the organization is coherent, aligned, and able to perform sustainably.": "COIREA mide la salud organizacional a traves de cinco pilares: Vision, Liderazgo, Estrategia, Colaboracion y Bienestar. Juntos muestran si la organizacion esta coherente, alineada y puede rendir de forma sostenible.",
+  "What is OVI?": "Que es OVI?",
+  "OVI means Organizational Vitality Index. It is COIREA's diagnostic view of how healthy and coherent an organization is across the five pillars of its People Operating System.": "OVI significa Organizational Vitality Index. Es la mirada diagnostica de COIREA sobre que tan sana y coherente esta una organizacion en los cinco pilares de su People Operating System.",
+  "What is GiA?": "Que es GiA?",
+  "GiA means Guided Intelligence for Alignment. It is COIREA's intelligence layer that turns organizational signals into questions, insights, and suggested next actions for leaders.": "GiA significa Guided Intelligence for Alignment. Es la capa de inteligencia de COIREA que convierte señales organizacionales en preguntas, insights y siguientes acciones sugeridas para lideres.",
+  "Show more insights": "Mostrar mas insights",
+  "min read": "min de lectura",
+  "By": "Por",
+  "Direct answer": "Respuesta directa",
+  "COIREA context": "Contexto COIREA",
+  "Connect this insight to the system": "Conecta este insight con el sistema",
+  "Keep reading": "Seguir leyendo",
+  "Related insights": "Insights relacionados",
+  "Back to Insights": "Volver a Insights",
+  "Loading article...": "Cargando articulo...",
+  "Preparing this COIREA insight.": "Preparando este insight de COIREA.",
+  "Loading the article...": "Cargando el articulo...",
+  "Post not found": "Articulo no encontrado",
+  "This article could not be found.": "Este articulo no se pudo encontrar.",
+  "The post may have moved or may not be published.": "El articulo puede haber cambiado de lugar o no estar publicado.",
+  "COIREA insight": "Insight COIREA",
+  "Select one": "Selecciona una opcion",
+  "Thank you. Your application was sent to COIREA. A Steward will review it personally.": "Gracias. Tu solicitud fue enviada a COIREA. Un Steward la revisara personalmente.",
+  "The application form is ready, but the email service still needs to be connected. Please email hello@coirea.com directly for now.": "El formulario esta listo, pero el servicio de email todavia necesita conectarse. Por ahora, escribe directamente a hello@coirea.com.",
+  "Something went wrong. Please try again.": "Algo salio mal. Intentalo nuevamente.",
+  "Something went wrong. Please email hello@coirea.com directly.": "Algo salio mal. Por favor escribe directamente a hello@coirea.com.",
+  "The core COIREA concept behind organizational coherence.": "El concepto central de COIREA detras de la coherencia organizacional.",
+  "Apply to explore whether COIREA is the right fit.": "Postula para explorar si COIREA es el encaje correcto.",
+  "The Organizational Vitality Index across COIREA's five dimensions.": "El Organizational Vitality Index a traves de las cinco dimensiones de COIREA.",
+  "Guided Intelligence for Alignment turns signals into next actions.": "Guided Intelligence for Alignment convierte señales en siguientes acciones.",
+  "More essays on leadership, culture, and organizational evolution.": "Mas ensayos sobre liderazgo, cultura y evolucion organizacional."
 };
 
 function translateSpanishText(text = "") {
@@ -1020,6 +1405,10 @@ function translateSpanishText(text = "") {
     }
   });
   return translated === compact ? text : translated;
+}
+
+function t(text = "", spanish = isSpanishPath()) {
+  return spanish ? translateSpanishText(text) : text;
 }
 
 function SpanishCopyLayer() {
@@ -1367,9 +1756,14 @@ function Header() {
 
 function HealthDashboard() {
   const reduced = useReducedMotion();
+  const spanish = isSpanishPath();
   const [activeIndex, setActiveIndex] = useState(0);
   const activeDimension = dimensions[activeIndex];
   const activeInsight = dashboardInsights[activeDimension.name];
+  const localizedRadarData = useMemo(() => radarData.map((item) => ({
+    ...item,
+    subject: t(item.subject, spanish),
+  })), [spanish]);
 
   useEffect(() => {
     if (reduced) return undefined;
@@ -1390,15 +1784,15 @@ function HealthDashboard() {
     >
       <div className="dashboard-topline">
         <div>
-          <span className="eyebrow">Live system view</span>
-          <h2>People Operating System</h2>
+          <span className="eyebrow">{t("Live system view", spanish)}</span>
+          <h2>{t("People Operating System", spanish)}</h2>
         </div>
-        <div className="live-status"><span /> Updated now</div>
+        <div className="live-status"><span /> {t("Updated now", spanish)}</div>
       </div>
       <div className="dashboard-grid">
         <div className="radar-wrap">
           <ResponsiveContainer width="100%" height="100%" minWidth={220} minHeight={260}>
-            <RadarChart data={radarData} outerRadius="70%">
+            <RadarChart data={localizedRadarData} outerRadius="70%">
               <PolarGrid stroke="rgba(245,241,229,.22)" radialLines={false} />
               <PolarAngleAxis
                 dataKey="subject"
@@ -1424,10 +1818,10 @@ function HealthDashboard() {
           </ResponsiveContainer>
           <div className="health-score">
             <strong>62</strong>
-            <span>system score</span>
+            <span>{t("system score", spanish)}</span>
           </div>
           <div key={activeDimension.name} className="radar-tooltip radar-tooltip--auto">
-            <span>{activeDimension.name}</span>
+            <span>{t(activeDimension.name, spanish)}</span>
             <AnimatedNumber
               value={activeDimension.value}
               replayKey={`active-tooltip-${activeDimension.name}-${activeIndex}`}
@@ -1438,21 +1832,21 @@ function HealthDashboard() {
           {dimensions.map(({ name, value, icon: Icon }, index) => (
             <div className={`dimension-row ${activeIndex === index ? "dimension-row--active" : ""}`} key={name}>
               <Icon size={18} weight="light" />
-              <span>{name}</span>
+              <span>{t(name, spanish)}</span>
               <AnimatedBar value={value} delay={0} replayKey={`${name}-${activeIndex}`} play={activeIndex === index} />
               <AnimatedNumber value={value} delay={0} replayKey={`${name}-${activeIndex}`} play={activeIndex === index} />
             </div>
           ))}
         </div>
       </div>
-      <p className="score-disclaimer">Scores shown are illustrative. In your live platform, these update continuously.</p>
+      <p className="score-disclaimer">{t("Scores shown are illustrative. In your live platform, these update continuously.", spanish)}</p>
       <div className="gia-insight">
-        <div className="gia-badge"><Brain size={18} /> GiA insight</div>
+        <div className="gia-badge"><Brain size={18} /> {t("GiA insight", spanish)}</div>
         <div key={activeDimension.name} className="gia-insight-copy">
-          <strong>{activeInsight.title}</strong>
-          <p>{activeInsight.text}</p>
+          <strong>{t(activeInsight.title, spanish)}</strong>
+          <p>{t(activeInsight.text, spanish)}</p>
         </div>
-        <button type="button">View insight <ArrowUpRight size={16} /></button>
+        <button type="button">{t("View insight", spanish)} <ArrowUpRight size={16} /></button>
       </div>
     </motion.div>
   );
@@ -1501,6 +1895,7 @@ function Methodology() {
   const [active, setActive] = useState(dimensions[0]);
   const [hasUserSelectedPillar, setHasUserSelectedPillar] = useState(false);
   const ActiveIcon = active.icon;
+  const spanish = isSpanishPath();
 
   useEffect(() => {
     if (hasUserSelectedPillar) return undefined;
@@ -1524,15 +1919,15 @@ function Methodology() {
   return (
     <section className="methodology section" id="methodology">
       <Reveal className="methodology-copy">
-        <span className="eyebrow">The methodology</span>
-        <h2>Five dimensions that determine if your organization can grow without breaking.</h2>
-        <p>The People Operating System is not a framework to read. It is a living structure to measure, align, and strengthen over time.</p>
+        <span className="eyebrow">{t("The methodology", spanish)}</span>
+        <h2>{t("Five dimensions that determine if your organization can grow without breaking.", spanish)}</h2>
+        <p>{t("The People Operating System is not a framework to read. It is a living structure to measure, align, and strengthen over time.", spanish)}</p>
       </Reveal>
       <Reveal className="pillar-system" delay={0.1}>
         <div className="pillar-orbit">
           <div className="pillar-instruction">
-            <span>Explore the system</span>
-            <small>Watch the system move, or select a dimension to explore.</small>
+            <span>{t("Explore the system", spanish)}</span>
+            <small>{t("Watch the system move, or select a dimension to explore.", spanish)}</small>
           </div>
           {dimensions.map(({ name, accent }, index) => (
             <button
@@ -1543,11 +1938,11 @@ function Methodology() {
               type="button"
               style={{ "--i": index }}
             >
-              <span>{name}</span>
-              <small>Explore</small>
+              <span>{t(name, spanish)}</span>
+              <small>{t("Explore", spanish)}</small>
             </button>
           ))}
-          <div className="core-pulse"><Leaf size={30} weight="light" /><span>People<br />Operating<br />System</span></div>
+          <div className="core-pulse"><Leaf size={30} weight="light" /><span>{t("People", spanish)}<br />Operating<br />System</span></div>
         </div>
         <div className="pillar-detail">
           <AnimatePresence mode="wait">
@@ -1560,20 +1955,20 @@ function Methodology() {
               transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
             >
               <ActiveIcon size={34} weight="light" />
-              <span>{active.name} signal</span>
+              <span>{t(active.name, spanish)} {t("signal", spanish)}</span>
               <AnimatedNumber key={active.name} value={active.value} className="pillar-score" />
-              <p>{active.signal}</p>
+              <p>{t(active.signal, spanish)}</p>
               <div className="pillar-symptoms">
-                <small>What this affects</small>
+                <small>{t("What this affects", spanish)}</small>
                 <div>
-                  {active.affects.map((item) => <b key={item}>{item}</b>)}
+                  {active.affects.map((item) => <b key={item}>{t(item, spanish)}</b>)}
                 </div>
               </div>
               <div className="pillar-question">
-                <small>Reflection question</small>
-                <p>{active.question}</p>
+                <small>{t("Reflection question", spanish)}</small>
+                <p>{t(active.question, spanish)}</p>
               </div>
-              <em>Scores are illustrative. In the live platform, they update as the organization evolves.</em>
+              <em>{t("Scores are illustrative. In the live platform, they update as the organization evolves.", spanish)}</em>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -1966,6 +2361,7 @@ function GiaSection() {
 }
 
 function FitCheck() {
+  const spanish = isSpanishPath();
   const [question, setQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [selectedValue, setSelectedValue] = useState(null);
@@ -1977,25 +2373,25 @@ function FitCheck() {
   const complete = question >= fitQuestions.length;
   const signalScore = Math.min(score, 92);
   const journeyState = complete
-    ? "Starting system signal"
+    ? t("Starting system signal", spanish)
     : answers.length >= 3
-      ? "Pattern emerging"
+      ? t("Pattern emerging", spanish)
       : answers.length > 0
-        ? "Early signal"
-        : "Awaiting first signal";
+        ? t("Early signal", spanish)
+        : t("Awaiting first signal", spanish);
   const result = signalScore < 60
-    ? {
-        title: "Your system may be carrying hidden friction.",
-        text: "A full COIREA diagnostic would help identify where energy is leaking and which dimension needs attention first.",
+      ? {
+        title: t("Your system may be carrying hidden friction.", spanish),
+        text: t("A full COIREA diagnostic would help identify where energy is leaking and which dimension needs attention first.", spanish),
       }
     : signalScore < 80
       ? {
-          title: "Your system shows potential, but alignment may be inconsistent.",
-          text: "There are useful signals here. COIREA can help connect them across the five dimensions before friction becomes structural.",
+          title: t("Your system shows potential, but alignment may be inconsistent.", spanish),
+          text: t("There are useful signals here. COIREA can help connect them across the five dimensions before friction becomes structural.", spanish),
         }
       : {
-          title: "Your system may already have strong coherence.",
-          text: "COIREA can help protect that coherence as the organization grows, adds complexity, or enters a new strategic phase.",
+          title: t("Your system may already have strong coherence.", spanish),
+          text: t("COIREA can help protect that coherence as the organization grows, adds complexity, or enters a new strategic phase.", spanish),
         };
 
   const choose = (value) => {
@@ -2017,30 +2413,30 @@ function FitCheck() {
   return (
     <section className="diagnostic diagnostic--journey section" id="diagnostic">
       <Reveal className="diagnostic-intro">
-        <span className="eyebrow">60-second system signal check</span>
-        <h2>Is COIREA for you?</h2>
-        <p>Answer honestly. This is not a scorecard. It is a first signal of how your organization behaves under pressure.</p>
+        <span className="eyebrow">{t("60-second system signal check", spanish)}</span>
+        <h2>{t("Is COIREA for you?", spanish)}</h2>
+        <p>{t("Answer honestly. This is not a scorecard. It is a first signal of how your organization behaves under pressure.", spanish)}</p>
         <div className="diagnostic-guide">
-          <span><Check size={15} weight="bold" /> Five dimensions</span>
-          <span><Check size={15} weight="bold" /> One starting signal</span>
-          <span><Check size={15} weight="bold" /> Clear next step</span>
+          <span><Check size={15} weight="bold" /> {t("Five dimensions", spanish)}</span>
+          <span><Check size={15} weight="bold" /> {t("One starting signal", spanish)}</span>
+          <span><Check size={15} weight="bold" /> {t("Clear next step", spanish)}</span>
         </div>
-        <div className="ovi-tiers" aria-label="OVI scoring tiers">
-          <span>OVI tiers</span>
-          <small>80-100 Systemic Coherence</small>
-          <small>60-79 Emerging Alignment</small>
-          <small>40-59 Fragile Stability</small>
-          <small>0-39 Structural Risk</small>
+        <div className="ovi-tiers" aria-label={t("OVI scoring tiers", spanish)}>
+          <span>{t("OVI tiers", spanish)}</span>
+          <small>80-100 {t("Systemic Coherence", spanish)}</small>
+          <small>60-79 {t("Emerging Alignment", spanish)}</small>
+          <small>40-59 {t("Fragile Stability", spanish)}</small>
+          <small>0-39 {t("Structural Risk", spanish)}</small>
         </div>
       </Reveal>
       <Reveal className="diagnostic-panel" delay={0.1}>
-        <div className="diagnostic-steps" aria-label="Diagnostic progress">
+        <div className="diagnostic-steps" aria-label={t("Diagnostic progress", spanish)}>
           {fitQuestions.map((item, index) => (
             <span
               className={`${index < answers.length ? "is-complete" : ""} ${index === question && !complete ? "is-current" : ""}`}
               key={item.dimension}
             >
-              {item.dimension}
+              {t(item.dimension, spanish)}
             </span>
           ))}
         </div>
@@ -2054,12 +2450,12 @@ function FitCheck() {
               transition={{ duration: 0.24 }}
             >
               <div className="question-meta">
-                <span>Question {question + 1} of {fitQuestions.length}</span>
-                <strong>{current.dimension}</strong>
+                <span>{t("Question", spanish)} {question + 1} {t("of", spanish)} {fitQuestions.length}</span>
+                <strong>{t(current.dimension, spanish)}</strong>
               </div>
-              <h3>{current.prompt}</h3>
-              <p className="question-helper">Choose the number that feels most true today.</p>
-              <div className="rating-row" role="group" aria-label="Rate from strongly disagree to strongly agree">
+              <h3>{t(current.prompt, spanish)}</h3>
+              <p className="question-helper">{t("Choose the number that feels most true today.", spanish)}</p>
+              <div className="rating-row" role="group" aria-label={t("Rate from strongly disagree to strongly agree", spanish)}>
                 {[1, 2, 3, 4, 5].map((value) => (
                   <button
                     className={selectedValue === value ? "is-selected" : ""}
@@ -2081,11 +2477,11 @@ function FitCheck() {
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.18 }}
                   >
-                    <Check size={15} weight="bold" /> Signal captured
+                    <Check size={15} weight="bold" /> {t("Signal captured", spanish)}
                   </motion.div>
                 )}
               </AnimatePresence>
-              <div className="rating-labels"><span>Strongly disagree</span><span>Strongly agree</span></div>
+              <div className="rating-labels"><span>{t("Strongly disagree", spanish)}</span><span>{t("Strongly agree", spanish)}</span></div>
               <div className="progress-track"><span style={{ width: `${(answers.length / fitQuestions.length) * 100}%` }} /></div>
             </motion.div>
           ) : (
@@ -2096,12 +2492,12 @@ function FitCheck() {
               animate={{ opacity: 1, scale: 1 }}
             >
               <div className="result-check"><Check size={25} weight="bold" /></div>
-              <span className="eyebrow">Starting signal</span>
+              <span className="eyebrow">{t("Starting signal", spanish)}</span>
               <h3>{result.title}</h3>
               <p>{result.text}</p>
               <div className="result-actions">
-                <a className="button button--primary" href="/conversation">Apply to work with COIREA <ArrowRight size={17} /></a>
-                <button className="text-button" onClick={restart} type="button">Try again <ArrowRight /></button>
+                <a className="button button--primary" href={localizedPath("/conversation", spanish)}>{t("Apply to work with COIREA", spanish)} <ArrowRight size={17} /></a>
+                <button className="text-button" onClick={restart} type="button">{t("Try again", spanish)} <ArrowRight /></button>
               </div>
             </motion.div>
           )}
@@ -2110,13 +2506,14 @@ function FitCheck() {
       <Reveal className="score-orbit" delay={0.2}>
         <span>{journeyState}</span>
         <AnimatedNumber value={signalScore} />
-        <small>{complete ? "Ready for next step" : "Keep going"}</small>
+        <small>{complete ? t("Ready for next step", spanish) : t("Keep going", spanish)}</small>
       </Reveal>
     </section>
   );
 }
 
 function AnswerEngineFaq() {
+  const spanish = isSpanishPath();
   useEffect(() => {
     upsertJsonLd("coirea-faqpage", {
       "@context": "https://schema.org",
@@ -2124,34 +2521,34 @@ function AnswerEngineFaq() {
       "@id": "https://www.coirea.com/#faq",
       mainEntity: aiSeoFaqs.map(([question, answer]) => ({
         "@type": "Question",
-        name: question,
+        name: t(question, spanish),
         acceptedAnswer: {
           "@type": "Answer",
-          text: answer,
+          text: t(answer, spanish),
         },
       })),
     });
     return () => removeJsonLd("coirea-faqpage");
-  }, []);
+  }, [spanish]);
 
   return (
     <section className="answer-faq section" id="faq">
       <Reveal className="answer-faq-intro">
-        <span className="eyebrow">Questions leaders ask</span>
-        <h2>Clear answers about COIREA and the People Operating System.</h2>
-        <p>These answers are written for leaders evaluating COIREA, and structured clearly so search engines and AI assistants can understand the concept without guessing.</p>
+        <span className="eyebrow">{t("Questions leaders ask", spanish)}</span>
+        <h2>{t("Clear answers about COIREA and the People Operating System.", spanish)}</h2>
+        <p>{t("These answers are written for leaders evaluating COIREA, and structured clearly so search engines and AI assistants can understand the concept without guessing.", spanish)}</p>
       </Reveal>
       <div className="answer-faq-grid">
         {aiSeoFaqs.map(([question, answer], index) => (
           <Reveal className="answer-faq-card" delay={index * 0.05} key={question}>
-            <h3>{question}</h3>
-            <p>{answer}</p>
+            <h3>{t(question, spanish)}</h3>
+            <p>{t(answer, spanish)}</p>
           </Reveal>
         ))}
       </div>
       <Reveal className="answer-faq-link" delay={0.12}>
-        <a className="text-button" href="/insights/what-is-a-people-operating-system">
-          Read the full People Operating System article <ArrowRight />
+        <a className="text-button" href={localizedPath("/insights/what-is-a-people-operating-system", spanish)}>
+          {t("Read the full People Operating System article", spanish)} <ArrowRight />
         </a>
       </Reveal>
     </section>
@@ -2174,6 +2571,7 @@ function Closing() {
 }
 
 function ApplicationForm() {
+  const spanish = isSpanishPath();
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
 
@@ -2204,16 +2602,16 @@ function ApplicationForm() {
       const result = await response.json().catch(() => ({}));
       if (!response.ok) {
         const errorMessage = result.error === "Email service is not configured yet."
-          ? "The application form is ready, but the email service still needs to be connected. Please email hello@coirea.com directly for now."
-          : result.error || "Something went wrong. Please try again.";
+          ? t("The application form is ready, but the email service still needs to be connected. Please email hello@coirea.com directly for now.", spanish)
+          : t(result.error || "Something went wrong. Please try again.", spanish);
         throw new Error(errorMessage);
       }
       form.reset();
       setStatus("success");
-      setMessage("Thank you. Your application was sent to COIREA. A Steward will review it personally.");
+      setMessage(t("Thank you. Your application was sent to COIREA. A Steward will review it personally.", spanish));
     } catch (error) {
       setStatus("error");
-      setMessage(error.message || "Something went wrong. Please email hello@coirea.com directly.");
+      setMessage(error.message || t("Something went wrong. Please email hello@coirea.com directly.", spanish));
     }
   };
 
@@ -2225,60 +2623,60 @@ function ApplicationForm() {
           <input name="website" tabIndex={-1} autoComplete="off" />
         </label>
         <fieldset>
-          <legend>Who you are</legend>
+          <legend>{t("Who you are", spanish)}</legend>
           <div className="application-field-grid">
             <label>
-              <span>Your name</span>
+              <span>{t("Your name", spanish)}</span>
               <input name="name" type="text" required />
             </label>
             <label>
-              <span>Email address</span>
+              <span>{t("Email address", spanish)}</span>
               <input name="email" type="email" required />
             </label>
             <label>
-              <span>Organization name</span>
+              <span>{t("Organization name", spanish)}</span>
               <input name="organization" type="text" required />
             </label>
             <label>
-              <span>Your role</span>
+              <span>{t("Your role", spanish)}</span>
               <input name="role" type="text" required />
             </label>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>Your system</legend>
-          <p className="field-help">Where does your organization feel the most friction right now? Select what resonates.</p>
+          <legend>{t("Your system", spanish)}</legend>
+          <p className="field-help">{t("Where does your organization feel the most friction right now? Select what resonates.", spanish)}</p>
           <div className="friction-options">
             {applicationFrictionOptions.map((option) => (
               <label className="choice-card" key={option}>
                 <input name="friction" type="checkbox" value={option} />
-                <span>{option}</span>
+                <span>{t(option, spanish)}</span>
               </label>
             ))}
           </div>
           <label className="contact-message">
-            <span>What would shift in your organization if this changed?</span>
-            <textarea name="desired_shift" rows={4} placeholder="2-3 sentences is enough" required />
+            <span>{t("What would shift in your organization if this changed?", spanish)}</span>
+            <textarea name="desired_shift" rows={4} placeholder={t("2-3 sentences is enough", spanish)} required />
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>Context</legend>
+          <legend>{t("Context", spanish)}</legend>
           <label>
-            <span>Team size</span>
+            <span>{t("Team size", spanish)}</span>
             <select name="team_size" required defaultValue="">
-              <option value="" disabled>Select one</option>
+              <option value="" disabled>{t("Select one", spanish)}</option>
               {teamSizeOptions.map((size) => <option value={size} key={size}>{size}</option>)}
             </select>
           </label>
         </fieldset>
 
         <button className="button button--primary" type="submit" disabled={status === "submitting"}>
-          {status === "submitting" ? "Sending..." : "Send my application"} <ArrowRight size={17} />
+          {status === "submitting" ? t("Sending...", spanish) : t("Send my application", spanish)} <ArrowRight size={17} />
         </button>
         {message && <p className={`application-status application-status--${status}`}>{message}</p>}
-        <p className="application-note">A Steward reads every application personally. If there is a genuine fit, we will reach out within 5 business days.</p>
+        <p className="application-note">{t("A Steward reads every application personally. If there is a genuine fit, we will reach out within 5 business days.", spanish)}</p>
       </form>
     </Reveal>
   );
@@ -2630,12 +3028,14 @@ function StewardsPage() {
 
 function InsightsPage() {
   const { posts, loading, error } = useMigratedBlogPosts();
+  const spanish = isSpanishPath();
+  const visiblePosts = useMemo(() => localizedPosts(posts, spanish), [posts, spanish]);
   const [activeCluster, setActiveCluster] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleCount, setVisibleCount] = useState(9);
 
   const filteredPosts = useMemo(() => {
-    return posts.filter((post) => {
+    return visiblePosts.filter((post) => {
       const visibleCluster = displayCluster(post.cluster, post.title);
       const matchesCluster = activeCluster === "All" || visibleCluster === activeCluster;
       const search = searchTerm.trim().toLowerCase();
@@ -2643,7 +3043,7 @@ function InsightsPage() {
       const haystack = `${post.title} ${post.preview_snippet} ${visibleCluster} ${post.cluster} ${(post.tags || []).join(" ")}`.toLowerCase();
       return matchesCluster && haystack.includes(search);
     });
-  }, [activeCluster, posts, searchTerm]);
+  }, [activeCluster, searchTerm, visiblePosts]);
 
   useEffect(() => {
     setVisibleCount(9);
@@ -2653,60 +3053,60 @@ function InsightsPage() {
   const hasMorePosts = filteredPosts.length > visibleCount;
 
   useEffect(() => {
-    if (loading || error || posts.length === 0) {
+    if (loading || error || visiblePosts.length === 0) {
       removeJsonLd("coirea-insights-itemlist");
       return;
     }
     upsertJsonLd("coirea-insights-itemlist", {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: "COIREA Insights",
-      url: "https://www.coirea.com/insights",
-      numberOfItems: posts.length,
-      itemListElement: posts.slice(0, 25).map((post, index) => ({
+      name: spanish ? "COIREA Insights en español" : "COIREA Insights",
+      url: spanish ? "https://www.coirea.com/es/insights" : "https://www.coirea.com/insights",
+      numberOfItems: visiblePosts.length,
+      itemListElement: visiblePosts.slice(0, 25).map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://www.coirea.com/insights/${post.slug}`,
+        url: `https://www.coirea.com${localizedPath(`/insights/${post.slug}`, spanish)}`,
         name: post.title,
       })),
     });
     return () => removeJsonLd("coirea-insights-itemlist");
-  }, [error, loading, posts]);
+  }, [error, loading, spanish, visiblePosts]);
 
   return (
     <main>
       <PageHero
-        eyebrow="Insights"
-        title="Insights"
-        text="Thinking for organizations ready to evolve."
+        eyebrow={t("Insights", spanish)}
+        title={t("Insights", spanish)}
+        text={t("Thinking for organizations ready to evolve.", spanish)}
         variant="insights"
       />
       <section className="insights-page section">
         <Reveal className="featured-insight">
           <div className="featured-insight-copy">
-            <span className="eyebrow">Featured</span>
+            <span className="eyebrow">{t("Featured", spanish)}</span>
             <div className="article-meta">
-              <span className="category-tag category-tag--people-operating-system">People Operating System</span>
+              <span className="category-tag category-tag--people-operating-system">{t("People Operating System", spanish)}</span>
               <small>Mar&iacute;a Jos&eacute; Figueroa</small>
             </div>
-            <h2>The Five Pillars of the People Operating System</h2>
-            <p>A guide to the five dimensions that determine how well your organization functions as a living system, and what to strengthen first.</p>
-            <a className="text-button" href="/insights/five-pillars-regenerative-business">Read more <ArrowRight /></a>
+            <h2>{spanish ? spanishPostFallbacks["five-pillars-regenerative-business"].title : "The Five Pillars of the People Operating System"}</h2>
+            <p>{spanish ? spanishPostFallbacks["five-pillars-regenerative-business"].preview : "A guide to the five dimensions that determine how well your organization functions as a living system, and what to strengthen first."}</p>
+            <a className="text-button" href={localizedPath("/insights/five-pillars-regenerative-business", spanish)}>{t("Read more", spanish)} <ArrowRight /></a>
           </div>
-          <a className="featured-insight-image" href="/insights/five-pillars-regenerative-business" aria-label="Read The Five Pillars of the People Operating System">
+          <a className="featured-insight-image" href={localizedPath("/insights/five-pillars-regenerative-business", spanish)} aria-label={`${t("Read more", spanish)} ${spanish ? spanishPostFallbacks["five-pillars-regenerative-business"].title : "The Five Pillars of the People Operating System"}`}>
             <img src="/assets/insights/five-pillars-regenerative-business.svg" alt="" />
           </a>
         </Reveal>
         <div className="insight-grid">
           <Reveal className="resource-filter">
-            <span className="eyebrow">Explore by theme</span>
+            <span className="eyebrow">{t("Explore by theme", spanish)}</span>
             <label className="search-shell search-shell--active">
               <input
                 type="search"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="Search insights..."
-                aria-label="Search insights"
+                placeholder={t("Search insights...", spanish)}
+                aria-label={t("Search insights", spanish)}
               />
             </label>
             <div>
@@ -2717,11 +3117,11 @@ function InsightsPage() {
                   key={item}
                   onClick={() => setActiveCluster(item)}
                 >
-                  {item}
+                  {spanish ? spanishClusterLabels[item] || item : item}
                 </button>
               ))}
             </div>
-            <p>{loading ? "Loading posts..." : `${filteredPosts.length} insights available.`}</p>
+            <p>{loading ? t("Loading posts...", spanish) : `${filteredPosts.length} ${t("insights available.", spanish)}`}</p>
           </Reveal>
           {error && (
             <Reveal className="insights-status">
@@ -2745,14 +3145,14 @@ function InsightsPage() {
           ))}
           {!loading && !error && filteredPosts.length === 0 && (
             <Reveal className="insights-status">
-              <p>No insights match that search yet. Try another theme or keyword.</p>
+              <p>{t("No insights match that search yet. Try another theme or keyword.", spanish)}</p>
             </Reveal>
           )}
           {!loading && !error && cardPosts.map((item, index) => {
             const image = item.featured_image || extractFirstImage(item.body_content);
             return (
               <Reveal className="insight-card-wrap" delay={(index % 9) * 0.04} key={item.id}>
-                <a className="insight-card" href={`/insights/${item.slug}`} aria-label={`Read ${item.title}`}>
+                <a className="insight-card" href={localizedPath(`/insights/${item.slug}`, spanish)} aria-label={`${t("Read more", spanish)} ${item.title}`}>
                   {image ? (
                     <span className="insight-card-image">
                       <img src={image} alt="" loading="lazy" />
@@ -2764,12 +3164,12 @@ function InsightsPage() {
                       <i />
                     </span>
                   )}
-                  <span className={`category-tag ${clusterClass(displayCluster(item.cluster, item.title))}`}>{displayCluster(item.cluster, item.title)}</span>
+                  <span className={`category-tag ${clusterClass(displayCluster(item.cluster, item.title))}`}>{localizedCluster(item.cluster, item.title, spanish)}</span>
                   <h3>{item.title}</h3>
                   <p>{item.preview_snippet}</p>
                   <div className="card-footer">
-                    <small><span>{formatPostDate(item.created_at)}</span><span>{estimateReadingTime(item.body_content)} min read</span></small>
-                    <span className="card-read-more">Read more <ArrowRight size={14} /></span>
+                    <small><span>{formatPostDate(item.created_at, false, spanish ? "es-ES" : "en-US")}</span><span>{estimateReadingTime(item.body_content)} {t("min read", spanish)}</span></small>
+                    <span className="card-read-more">{t("Read more", spanish)} <ArrowRight size={14} /></span>
                   </div>
                 </a>
               </Reveal>
@@ -2778,7 +3178,7 @@ function InsightsPage() {
           {hasMorePosts && (
             <Reveal className="insights-load-more">
               <button className="button button--outline" type="button" onClick={() => setVisibleCount((count) => count + 9)}>
-                Show more insights <ArrowRight />
+                {t("Show more insights", spanish)} <ArrowRight />
               </button>
             </Reveal>
           )}
@@ -2862,13 +3262,16 @@ function InsightArticlePage() {
 }
 
 function MigratedBlogPostPage({ slug }) {
-  const { post, posts, loading, error } = useMigratedBlogPost(slug);
+  const { post: rawPost, posts: rawPosts, loading, error } = useMigratedBlogPost(slug);
+  const spanish = isSpanishPath();
+  const post = useMemo(() => localizedPost(rawPost, spanish), [rawPost, spanish]);
+  const posts = useMemo(() => localizedPosts(rawPosts, spanish), [rawPosts, spanish]);
 
   useEffect(() => {
     if (!post) return;
     const title = post.seo_title || `${post.title} | COIREA Insights`;
     const description = post.meta_description || post.preview_snippet || stripHtml(post.body_content).slice(0, 155);
-    const postUrl = `https://www.coirea.com/insights/${post.slug}`;
+    const postUrl = `https://www.coirea.com${localizedPath(`/insights/${post.slug}`, spanish)}`;
     const postImage = absolutePublicUrl(post.featured_image || extractFirstImage(post.body_content) || defaultShareImage);
     document.title = title;
     ensureMeta('meta[name="description"]', { name: "description" }).setAttribute("content", description);
@@ -2916,7 +3319,7 @@ function MigratedBlogPostPage({ slug }) {
         "@type": "WebPage",
         "@id": postUrl,
       },
-      articleSection: displayCluster(post.cluster, post.title),
+      articleSection: localizedCluster(post.cluster, post.title, spanish),
       keywords: (post.tags || []).join(", "),
       ...(post.direct_answer ? { abstract: post.direct_answer } : {}),
       mentions: getArticleConceptLinks(post).map((item) => ({
@@ -2928,7 +3331,7 @@ function MigratedBlogPostPage({ slug }) {
     });
 
     return () => removeJsonLd("coirea-blogposting");
-  }, [post]);
+  }, [post, spanish]);
 
   const relatedPosts = useMemo(() => {
     if (!post) return [];
@@ -2946,14 +3349,19 @@ function MigratedBlogPostPage({ slug }) {
       .slice(0, 3);
   }, [post, posts]);
 
-  const conceptLinks = useMemo(() => getArticleConceptLinks(post), [post]);
+  const conceptLinks = useMemo(() => getArticleConceptLinks(post).map((item) => ({
+    ...item,
+    label: t(item.label, spanish),
+    text: t(item.text, spanish),
+    href: localizedPath(item.href, spanish),
+  })), [post, spanish]);
 
   if (loading) {
     return (
       <main>
-        <PageHero eyebrow="Insights" title="Loading article..." text="Preparing this COIREA insight." variant="insights" />
+        <PageHero eyebrow={t("Insights", spanish)} title={t("Loading article...", spanish)} text={t("Preparing this COIREA insight.", spanish)} variant="insights" />
         <section className="article-page section">
-          <Reveal className="article-shell"><p className="article-lede">Loading the article...</p></Reveal>
+          <Reveal className="article-shell"><p className="article-lede">{t("Loading the article...", spanish)}</p></Reveal>
         </section>
       </main>
     );
@@ -2962,11 +3370,11 @@ function MigratedBlogPostPage({ slug }) {
   if (error || !post) {
     return (
       <main>
-        <PageHero eyebrow="Insights" title="Post not found" text="This article could not be found." variant="insights" />
+        <PageHero eyebrow={t("Insights", spanish)} title={t("Post not found", spanish)} text={t("This article could not be found.", spanish)} variant="insights" />
         <section className="article-page section">
           <Reveal className="article-shell">
-            <p className="article-lede">{error || "The post may have moved or may not be published."}</p>
-            <a className="button button--primary" href="/insights">Back to Insights <ArrowRight /></a>
+            <p className="article-lede">{error ? t(error, spanish) : t("The post may have moved or may not be published.", spanish)}</p>
+            <a className="button button--primary" href={localizedPath("/insights", spanish)}>{t("Back to Insights", spanish)} <ArrowRight /></a>
           </Reveal>
         </section>
       </main>
@@ -2976,7 +3384,7 @@ function MigratedBlogPostPage({ slug }) {
   return (
     <main>
       <PageHero
-        eyebrow="COIREA insight"
+        eyebrow={t("COIREA insight", spanish)}
         title={post.title}
         text={post.preview_snippet}
         variant="insights"
@@ -2984,19 +3392,19 @@ function MigratedBlogPostPage({ slug }) {
       <article className="article-page section">
         <Reveal className="article-shell">
           <div className="article-kicker">
-            <span className={`category-tag ${clusterClass(displayCluster(post.cluster, post.title))}`}>{displayCluster(post.cluster, post.title)}</span>
-            <small>{formatPostDate(post.created_at, true)}</small>
+            <span className={`category-tag ${clusterClass(displayCluster(post.cluster, post.title))}`}>{localizedCluster(post.cluster, post.title, spanish)}</span>
+            <small>{formatPostDate(post.created_at, true, spanish ? "es-ES" : "en-US")}</small>
           </div>
           <div className="migrated-post-meta">
-            <span>By {normalizeAuthor(post.author)}</span>
-            <span>{estimateReadingTime(post.body_content)} min read</span>
+            <span>{t("By", spanish)} {normalizeAuthor(post.author)}</span>
+            <span>{estimateReadingTime(post.body_content)} {t("min read", spanish)}</span>
           </div>
           {post.featured_image && (
-            <img className="migrated-featured-image" src={post.featured_image} alt={`${post.title} featured image`} />
+            <img className="migrated-featured-image" src={post.featured_image} alt={`${post.title} ${spanish ? "imagen destacada" : "featured image"}`} />
           )}
           {post.direct_answer && (
             <div className="article-definition">
-              <strong>Direct answer</strong>
+              <strong>{t("Direct answer", spanish)}</strong>
               <p>{post.direct_answer}</p>
             </div>
           )}
@@ -3005,15 +3413,15 @@ function MigratedBlogPostPage({ slug }) {
             dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body_content) }}
           />
           {post.tags?.length > 0 && (
-            <div className="article-tags" aria-label="Article tags">
+            <div className="article-tags" aria-label={spanish ? "Etiquetas del articulo" : "Article tags"}>
               {post.tags.map((tag) => <span key={tag}>{tag}</span>)}
             </div>
           )}
           {conceptLinks.length > 0 && (
             <nav className="article-concept-links" aria-labelledby="article-concepts-title">
               <div>
-                <span className="eyebrow">COIREA context</span>
-                <h2 id="article-concepts-title">Connect this insight to the system</h2>
+                <span className="eyebrow">{t("COIREA context", spanish)}</span>
+                <h2 id="article-concepts-title">{t("Connect this insight to the system", spanish)}</h2>
               </div>
               <div className="article-concept-grid">
                 {conceptLinks.map((item) => (
@@ -3028,21 +3436,21 @@ function MigratedBlogPostPage({ slug }) {
           {relatedPosts.length > 0 && (
             <section className="related-insights" aria-labelledby="related-insights-title">
               <div className="related-insights-header">
-                <span className="eyebrow">Keep reading</span>
-                <h2 id="related-insights-title">Related insights</h2>
+                <span className="eyebrow">{t("Keep reading", spanish)}</span>
+                <h2 id="related-insights-title">{t("Related insights", spanish)}</h2>
               </div>
               <div className="related-insights-grid">
                 {relatedPosts.map((item) => (
-                  <a className="related-insight-card" href={`/insights/${item.slug}`} key={item.id}>
-                    <span className={`category-tag ${clusterClass(displayCluster(item.cluster, item.title))}`}>{displayCluster(item.cluster, item.title)}</span>
+                  <a className="related-insight-card" href={localizedPath(`/insights/${item.slug}`, spanish)} key={item.id}>
+                    <span className={`category-tag ${clusterClass(displayCluster(item.cluster, item.title))}`}>{localizedCluster(item.cluster, item.title, spanish)}</span>
                     <h3>{item.title}</h3>
-                    <small>{estimateReadingTime(item.body_content)} min read</small>
+                    <small>{estimateReadingTime(item.body_content)} {t("min read", spanish)}</small>
                   </a>
                 ))}
               </div>
             </section>
           )}
-          <a className="button button--primary" href="/insights">Back to Insights <ArrowRight /></a>
+          <a className="button button--primary" href={localizedPath("/insights", spanish)}>{t("Back to Insights", spanish)} <ArrowRight /></a>
         </Reveal>
       </article>
       <Closing />
