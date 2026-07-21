@@ -786,14 +786,14 @@ function localizedPost(post, spanish = isSpanishPath()) {
   const fallback = spanishPostFallbacks[post.slug] || {};
   const title = post.title_es || fallback.title || translateSpanishText(post.title);
   const preview = post.preview_snippet_es || fallback.preview || translateSpanishText(post.preview_snippet);
-  const body = post.body_content_es || fallback.body || translateSpanishText(post.body_content);
-  const directAnswer = post.direct_answer_es || translateSpanishText(post.direct_answer || "");
+  const body = post.body_content_es || post.body_content;
+  const directAnswer = post.direct_answer_es || "";
   return {
     ...post,
     title,
     preview_snippet: preview,
     body_content: body,
-    direct_answer: directAnswer || post.direct_answer,
+    direct_answer: directAnswer,
     seo_title: post.seo_title_es || (title ? `${title} | COIREA Insights` : post.seo_title),
     meta_description: post.meta_description_es || preview || post.meta_description,
     tags: (post.tags_es || post.tags || []).map((tag) => translateSpanishText(tag)),
@@ -1336,7 +1336,6 @@ const spanishTextMap = {
   "Structural Risk": "Riesgo estructural",
   "OVI scoring tiers": "Niveles de puntaje OVI",
   "Diagnostic progress": "Progreso del diagnostico",
-  "of": "de",
   "Choose the number that feels most true today.": "Elige el numero que se sienta mas verdadero hoy.",
   "Rate from strongly disagree to strongly agree": "Califica desde muy en desacuerdo hasta muy de acuerdo",
   "Signal captured": "Señal capturada",
@@ -1419,6 +1418,7 @@ function SpanishCopyLayer() {
       if (!node || node.nodeType !== Node.TEXT_NODE) return;
       const parent = node.parentElement;
       if (!parent || ["SCRIPT", "STYLE", "NOSCRIPT", "TEXTAREA", "INPUT"].includes(parent.tagName)) return;
+      if (parent.closest(".legacy-article-content")) return;
       const next = translateSpanishText(node.nodeValue);
       if (next !== node.nodeValue) node.nodeValue = next;
     };
@@ -2450,7 +2450,7 @@ function FitCheck() {
               transition={{ duration: 0.24 }}
             >
               <div className="question-meta">
-                <span>{t("Question", spanish)} {question + 1} {t("of", spanish)} {fitQuestions.length}</span>
+                <span>{t("Question", spanish)} {question + 1} {spanish ? "de" : "of"} {fitQuestions.length}</span>
                 <strong>{t(current.dimension, spanish)}</strong>
               </div>
               <h3>{t(current.prompt, spanish)}</h3>
