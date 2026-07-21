@@ -3391,7 +3391,7 @@ function MigratedBlogPostPage({ slug }) {
   return (
     <main>
       <article className="article-page article-page--post section">
-        <Reveal className="article-shell">
+        <div className="article-shell">
           <div className="article-post-heading">
             <span className="eyebrow">{t("COIREA insight", spanish)}</span>
             <h1>{post.title}</h1>
@@ -3466,7 +3466,7 @@ function MigratedBlogPostPage({ slug }) {
             </section>
           )}
           <a className="button button--primary" href={localizedPath("/insights", spanish)}>{t("Back to Insights", spanish)} <ArrowRight /></a>
-        </Reveal>
+        </div>
       </article>
       <Closing />
     </main>
