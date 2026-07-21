@@ -3383,14 +3383,13 @@ function MigratedBlogPostPage({ slug }) {
 
   return (
     <main>
-      <PageHero
-        eyebrow={t("COIREA insight", spanish)}
-        title={post.title}
-        text={post.preview_snippet}
-        variant="insights"
-      />
-      <article className="article-page section">
+      <article className="article-page article-page--post section">
         <Reveal className="article-shell">
+          <div className="article-post-heading">
+            <span className="eyebrow">{t("COIREA insight", spanish)}</span>
+            <h1>{post.title}</h1>
+            <p>{post.preview_snippet}</p>
+          </div>
           <div className="article-kicker">
             <span className={`category-tag ${clusterClass(displayCluster(post.cluster, post.title))}`}>{localizedCluster(post.cluster, post.title, spanish)}</span>
             <small>{formatPostDate(post.created_at, true, spanish ? "es-ES" : "en-US")}</small>
@@ -3399,19 +3398,26 @@ function MigratedBlogPostPage({ slug }) {
             <span>{t("By", spanish)} {normalizeAuthor(post.author)}</span>
             <span>{estimateReadingTime(post.body_content)} {t("min read", spanish)}</span>
           </div>
+          {stripHtml(post.body_content).trim() ? (
+            <div
+              className="legacy-article-content"
+              dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body_content) }}
+            />
+          ) : (
+            <div className="article-definition article-definition--warning">
+              <strong>{spanish ? "Contenido pendiente" : "Content pending"}</strong>
+              <p>{spanish ? "Este artículo existe, pero el cuerpo del texto no se cargó correctamente. Por favor vuelve a Insights e inténtalo nuevamente." : "This article exists, but the body text did not load correctly. Please go back to Insights and try again."}</p>
+            </div>
+          )}
           {post.featured_image && (
-            <img className="migrated-featured-image" src={post.featured_image} alt={`${post.title} ${spanish ? "imagen destacada" : "featured image"}`} />
+            <img className="migrated-featured-image migrated-featured-image--after" src={post.featured_image} alt={`${post.title} ${spanish ? "imagen destacada" : "featured image"}`} />
           )}
           {post.direct_answer && (
-            <div className="article-definition">
+            <div className="article-definition article-definition--after">
               <strong>{t("Direct answer", spanish)}</strong>
               <p>{post.direct_answer}</p>
             </div>
           )}
-          <div
-            className="legacy-article-content"
-            dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body_content) }}
-          />
           {post.tags?.length > 0 && (
             <div className="article-tags" aria-label={spanish ? "Etiquetas del articulo" : "Article tags"}>
               {post.tags.map((tag) => <span key={tag}>{tag}</span>)}
