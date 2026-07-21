@@ -1085,8 +1085,18 @@ const naturePrinciples = [
   ["Distributed intelligence", "Like a forest, an organization already holds information everywhere. COIREA helps leaders listen to it without reducing people to data points."],
 ];
 
-function isSpanishPath() {
-  return window.location.pathname === "/es" || window.location.pathname.startsWith("/es/");
+function getCurrentPathname() {
+  return typeof window === "undefined" ? "/" : window.location.pathname || "/";
+}
+
+function isSpanishPath(pathname = getCurrentPathname()) {
+  return pathname === "/es" || pathname.startsWith("/es/");
+}
+
+function routeFromPath(pathname = getCurrentPathname()) {
+  const path = pathname || "/";
+  if (path === "/es") return "/";
+  return path.replace(/^\/es(?=\/)/, "") || "/";
 }
 
 const spanishTextMap = {
@@ -1440,11 +1450,6 @@ function SpanishCopyLayer() {
       while (walker.nextNode()) nodes.push(walker.currentNode);
       nodes.forEach(translateNode);
       translateAttributes();
-      document.body.querySelectorAll("a[href^='/']").forEach((anchor) => {
-        const href = anchor.getAttribute("href");
-        if (!href || href === "/es" || href.startsWith("/es/") || href.startsWith("/assets/")) return;
-        anchor.setAttribute("href", localizedPath(href, true));
-      });
       document.documentElement.lang = "es";
     };
 
@@ -1459,11 +1464,6 @@ function SpanishCopyLayer() {
             while (walker.nextNode()) nodes.push(walker.currentNode);
             nodes.forEach(translateNode);
             translateAttributes(node);
-            node.querySelectorAll?.("a[href^='/']").forEach((anchor) => {
-              const href = anchor.getAttribute("href");
-              if (!href || href === "/es" || href.startsWith("/es/") || href.startsWith("/assets/")) return;
-              anchor.setAttribute("href", localizedPath(href, true));
-            });
           }
         });
       });
@@ -1476,20 +1476,21 @@ function SpanishCopyLayer() {
 }
 
 function localizedPath(path, isEs = isSpanishPath()) {
-  if (path === "/") return isEs ? "/es" : "/";
-  return isEs ? `/es${path}` : path;
+  if (!path || path === "#") return path || "/";
+  if (/^(https?:|mailto:|tel:)/i.test(path)) return path;
+  const cleanPath = routeFromPath(path);
+  if (cleanPath === "/") return isEs ? "/es" : "/";
+  return isEs ? `/es${cleanPath}` : cleanPath;
 }
 
-function alternateLanguagePath() {
-  const path = window.location.pathname;
-  if (path === "/es") return "/";
-  if (path.startsWith("/es/")) return path.replace(/^\/es/, "") || "/";
-  return path === "/" ? "/es" : `/es${path}`;
+function alternateLanguagePath(pathname = getCurrentPathname()) {
+  const isEs = isSpanishPath(pathname);
+  return localizedPath(routeFromPath(pathname), !isEs);
 }
 
-function BrandMark({ compact = false }) {
+function BrandMark({ compact = false, isEs = isSpanishPath() }) {
   return (
-    <a className={`brand ${compact ? "brand--compact" : ""}`} href={localizedPath("/")} aria-label="COIREA home">
+    <a className={`brand ${compact ? "brand--compact" : ""}`} href={localizedPath("/", isEs)} aria-label="COIREA home">
       <img src="/assets/coirea-logo.png" alt="COIREA" />
     </a>
   );
@@ -1593,9 +1594,9 @@ function ensureMeta(selector, createAttrs) {
 
 function SEOManager() {
   useEffect(() => {
-    const path = window.location.pathname;
-    const isEs = path === "/es" || path.startsWith("/es/");
-    const route = path === "/es" ? "/" : path.replace(/^\/es/, "") || "/";
+    const path = getCurrentPathname();
+    const isEs = isSpanishPath(path);
+    const route = routeFromPath(path);
     const seo = isEs ? (spanishSeoByRoute[route] || spanishSeoByRoute["/"]) : (seoByRoute[route] || seoByRoute["/"]);
     const canonicalPath = isEs ? path : route;
     const canonicalHref = `https://www.coirea.com${canonicalPath === "/" ? "/" : canonicalPath}`;
@@ -1725,19 +1726,21 @@ function ActiveRadarDot(props) {
 
 function Header() {
   const [open, setOpen] = useState(false);
-  const isEs = isSpanishPath();
+  const currentPath = getCurrentPathname();
+  const isEs = isSpanishPath(currentPath);
+  const languageHref = alternateLanguagePath(currentPath);
   const closeAll = () => {
     setOpen(false);
   };
   return (
     <header className="site-header">
       <ScrollProgress />
-      <BrandMark />
+      <BrandMark isEs={isEs} />
       <nav className={open ? "nav nav--open" : "nav"} aria-label="Primary navigation">
         <a href={localizedPath("/", isEs)} onClick={closeAll}>Home</a>
         <a href={localizedPath("/insights", isEs)} onClick={closeAll}>Insights</a>
         <a href={localizedPath("/about", isEs)} onClick={closeAll}>About Us</a>
-        <a className="language-link" href={alternateLanguagePath()}>{isEs ? "EN" : "ES"}</a>
+        <a className="language-link" href={languageHref} hrefLang={isEs ? "en" : "es"} onClick={closeAll}>{isEs ? "EN" : "ES"}</a>
       </nav>
       <a className="button button--outline header-cta" href={localizedPath("/conversation", isEs)}>
         Book a Conversation
@@ -3356,6 +3359,10 @@ function MigratedBlogPostPage({ slug }) {
     href: localizedPath(item.href, spanish),
   })), [post, spanish]);
 
+  const articleHtml = useMemo(() => sanitizeBlogHtml(post?.body_content || rawPost?.body_content || ""), [post?.body_content, rawPost?.body_content]);
+  const articleText = useMemo(() => stripHtml(articleHtml).trim(), [articleHtml]);
+  const articleContentKey = post ? `${post.slug}-${spanish ? "es" : "en"}` : "article";
+
   if (loading) {
     return (
       <main>
@@ -3396,12 +3403,14 @@ function MigratedBlogPostPage({ slug }) {
           </div>
           <div className="migrated-post-meta">
             <span>{t("By", spanish)} {normalizeAuthor(post.author)}</span>
-            <span>{estimateReadingTime(post.body_content)} {t("min read", spanish)}</span>
+            <span>{estimateReadingTime(articleHtml)} {t("min read", spanish)}</span>
           </div>
-          {stripHtml(post.body_content).trim() ? (
+          {articleText ? (
             <div
+              key={articleContentKey}
               className="legacy-article-content"
-              dangerouslySetInnerHTML={{ __html: sanitizeBlogHtml(post.body_content) }}
+              lang={spanish && post.body_content_es ? "es" : "en"}
+              dangerouslySetInnerHTML={{ __html: articleHtml }}
             />
           ) : (
             <div className="article-definition article-definition--warning">
@@ -3793,8 +3802,7 @@ function HomePage() {
 }
 
 function CurrentPage() {
-  const path = window.location.pathname;
-  const route = path === "/es" ? "/" : path.replace(/^\/es/, "") || "/";
+  const route = routeFromPath(getCurrentPathname());
   if (route === "/insights/what-is-a-people-operating-system") return <InsightArticlePage />;
   if (route.startsWith("/insights/")) {
     const slug = decodeURIComponent(route.replace("/insights/", ""));
